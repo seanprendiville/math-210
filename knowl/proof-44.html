@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>
+<p>This is essentially the same argument as that given in the proof of <a href="" class="xref" data-knowl="./knowl/cor-eps-delta-cts.html" title="Proposition 5.19: Epsilon-delta characterisation of continuity">Proposition 5.19</a>.</p>
+<p>We first prove the "<span class="process-math">\(\implies\)</span>" direction. Let <span class="process-math">\((a_n)_n\)</span> be a sequence in <span class="process-math">\((a,b)\setminus\set{x_0}\)</span> such that <span class="process-math">\(a_n \to x_0\)</span> as <span class="process-math">\(n \to \infty\text{.}\)</span> We are required to prove <a href="" class="xref" data-knowl="./knowl/eq-seq-diff.html" title="Equation 6.4">(6.4)</a>, assuming <a href="" class="xref" data-knowl="./knowl/eq-eps-diff.html" title="Equation 6.3">(6.3)</a>. Fix <span class="process-math">\(\eps \gt0\text{.}\)</span> Then by <a href="" class="xref" data-knowl="./knowl/eq-eps-diff.html" title="Equation 6.3">(6.3)</a> there exists <span class="process-math">\(\delta = \delta(\eps) \gt 0\)</span> such that if <span class="process-math">\(x \in (a,b)\)</span> and <span class="process-math">\(0\lt |x-x_0| \leq \delta\)</span> then</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-seq-diff.html ./knowl/eq-eps-diff.html ./knowl/eq-eps-diff.html ./knowl/eq-seq-diff.html">
+\begin{equation*}
+\abs{\frac{f(x)-f(x_0)}{x-x_0} - y}\leq \eps\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Since <span class="process-math">\(a_n \to x_0\)</span> there exists <span class="process-math">\(N = N(\delta)\)</span> such that for all <span class="process-math">\(n\geq N\)</span> we have <span class="process-math">\(0\lt |a_n - x_0| \leq \delta\text{.}\)</span> Hence if <span class="process-math">\(n \geq N(\delta)\)</span> then</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-seq-diff.html ./knowl/eq-eps-diff.html ./knowl/eq-eps-diff.html ./knowl/eq-seq-diff.html">
+\begin{equation*}
+\abs{\frac{f(a_n)-f(x_0)}{a_n-x_0} - y}\leq \eps\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This establishes <a href="" class="xref" data-knowl="./knowl/eq-seq-diff.html" title="Equation 6.4">(6.4)</a>.</p>
+<p>Next we prove the "<span class="process-math">\(\impliedby\)</span>" direction. To do so we prove the contrapositive. Hence, suppose that the negation of <a href="" class="xref" data-knowl="./knowl/eq-eps-diff.html" title="Equation 6.3">(6.3)</a> holds:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-eps-diff.html">
+\begin{align*}
+(\exists \eps \gt 0)(\forall \delta  \gt 0)\amp(\exists x= x(\delta) \in (a,b))\\
+\bigsqbrac{\ 0\lt |x-x_0| \leq \delta\quad \text{and}\quad \abs{\frac{f(x)-f(x_0)}{x-x_0} - y} \gt \eps\ }\text{.}
+\end{align*}
+</div>
+<p class="continuation">Taking <span class="process-math">\(\delta = 1/n\)</span> in the above negation, set <span class="process-math">\(a_1:= x(1)\text{,}\)</span> <span class="process-math">\(a_2:=x(1/2)\text{,}\)</span> <span class="process-math">\(a_3 := x(1/3)\text{,}\)</span> etc. Then <span class="process-math">\(a_n \in (a,b)\setminus\set{x_0}\text{,}\)</span> <span class="process-math">\(|a_n - x_0| \leq 1/n\)</span> and</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-eps-diff.html">
+\begin{equation*}
+\abs{\frac{f(a_n)-f(x_0)}{a_n-x_0} - y} \geq \eps\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Hence <span class="process-math">\((a_n)_n\)</span> is a sequence in <span class="process-math">\((a,b)\setminus\set{x_0}\)</span> with <span class="process-math">\(a_n \to x_0\)</span> and</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-eps-diff.html">
+\begin{equation*}
+\frac{f(a_n)-f(x_0)}{a_n-x_0} \not\to y\text{,}
+\end{equation*}
+</div>
+<p class="continuation">(as required).</p></article><span class="incontext"><a href="week-6.html#proof-44" class="internal">in-context</a></span>
+</body>
+</html>

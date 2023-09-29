@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Week 7</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-article ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\bigset}[1]{\bigl\{ #1 \bigr\}}
+\newcommand{\Bigset}[1]{\Bigl\{ #1 \Bigr\}}
+\newcommand{\biggset}[1]{\biggl\{ #1 \biggr\}}
+\newcommand{\Biggset}[1]{\Biggl\{ #1 \Biggr\}}
+\newcommand{\abs}[1]{\left| #1\right|}
+\newcommand{\bigabs}[1]{\bigl| #1 \bigr|}
+\newcommand{\Bigabs}[1]{\Bigl| #1 \Bigr|}
+\newcommand{\biggabs}[1]{\biggl| #1 \biggr|}
+\newcommand{\Biggabs}[1]{\Biggl| #1 \Biggr|}
+\newcommand{\sqbrac}[1]{\left[ #1 \right]}
+\newcommand{\bigsqbrac}[1]{\bigl[ #1 \bigr]}
+\newcommand{\Bigsqbrac}[1]{\Bigl[ #1 \Bigr]}
+\newcommand{\biggsqbrac}[1]{\biggl[ #1 \biggr]}
+\newcommand{\Biggsqbrac}[1]{\Biggl[ #1 \Biggr]}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\littleceil}[1]{\lceil #1 \rceil}
+\newcommand{\littlefloor}[1]{\lfloor #1 \rfloor}
+\newcommand{\bigfloor}[1]{\bigl\lfloor #1 \bigr\rfloor}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\bigbrac}[1]{\bigl( #1 \bigr)}
+\newcommand{\Bigbrac}[1]{\Bigl( #1 \Bigr)}
+\newcommand{\biggbrac}[1]{\biggl( #1 \biggr)}
+\newcommand{\Biggbrac}[1]{\Biggl( #1 \Biggr)}
+
+\newcommand{\recip}[1]{\frac{1}{#1}}
+\newcommand{\trecip}[1]{\tfrac{1}{#1}}
+
+\newcommand{\intd}{\mathrm{d}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\hash}{\#}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="self-test-210.html"><span class="title">MATH210 Real Analysis:</span> <span class="subtitle">Self-Test Questions</span></a></h1>
+<p class="byline">Sean Prendiville</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="week-6.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="self-test-210.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="week-8.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="week-6.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="self-test-210.html" title="Up">Up</a><a class="next-button button toolbar-item" href="week-8.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Introduction</span></a></li>
+<li class="link"><a href="week-1.html" data-scroll="week-1" class="internal"><span class="codenumber">1</span> <span class="title">Week 1</span></a></li>
+<li class="link"><a href="week-2.html" data-scroll="week-2" class="internal"><span class="codenumber">2</span> <span class="title">Week 2</span></a></li>
+<li class="link"><a href="week-3.html" data-scroll="week-3" class="internal"><span class="codenumber">3</span> <span class="title">Week 3</span></a></li>
+<li class="link"><a href="week-4.html" data-scroll="week-4" class="internal"><span class="codenumber">4</span> <span class="title">Week 4</span></a></li>
+<li class="link"><a href="week-5.html" data-scroll="week-5" class="internal"><span class="codenumber">5</span> <span class="title">Week 5</span></a></li>
+<li class="link"><a href="week-6.html" data-scroll="week-6" class="internal"><span class="codenumber">6</span> <span class="title">Week 6</span></a></li>
+<li class="link active"><a href="week-7.html" data-scroll="week-7" class="internal"><span class="codenumber">7</span> <span class="title">Week 7</span></a></li>
+<li class="link"><a href="week-8.html" data-scroll="week-8" class="internal"><span class="codenumber">8</span> <span class="title">Week 8</span></a></li>
+<li class="link"><a href="week-9.html" data-scroll="week-9" class="internal"><span class="codenumber">9</span> <span class="title">Week 9</span></a></li>
+<li class="link"><a href="week-10.html" data-scroll="week-10" class="internal"><span class="codenumber">10</span> <span class="title">Week 10</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="week-7"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7</span> <span class="title">Week 7</span>
+</h2>
+<article class="exercise exercise-like" id="exercise-28"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-28"><h3 class="heading">
+<span class="type">Lecture</span><span class="space"> </span><span class="codenumber">7.1</span><span class="period">.</span><span class="space"> </span><span class="title">Rules for differentiation.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-28"><article class="exercise exercise-like"><article class="task exercise-like" id="ex-alg-diff"><h4 class="heading"><span class="codenumber">(a)</span></h4>State and prove both the addition and product rules for differentiation.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-72" id="solution-72"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-72"><div class="solution solution-like">
+<article class="proposition theorem-like" id="prop-alg-diff"><h5 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">7.2</span><span class="period">.</span><span class="space"> </span><span class="title">Algebra of differentiation.</span>
+</h5>Let <span class="process-math">\(f,g: (a,b)\to \R\)</span> be differentiable at <span class="process-math">\(x_0 \in (a,b)\text{.}\)</span> Then the sum <span class="process-math">\(f+g\)</span> and product <span class="process-math">\(f\cdot g\)</span> are differentiable at <span class="process-math">\(x_0\text{.}\)</span> Moreover, their derivatives satisfy the identities<div class="displaymath process-math" data-contains-math-knowls="" id="md-11">
+\begin{align*}
+(f+g)'(x_0) \amp = f'(x_0) + g'(x_0), \amp \text{(addition rule)}\\
+(f\cdot g)'(x_0) \amp = f'(x_0)g(x_0) + f(x_0)g'(x_0).\amp \text{(product rule)}
+\end{align*}
+</div></article><article class="hiddenproof" id="proof-46"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-46"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-46"><article class="hiddenproof">We verify both identities using the sequential characterisation of differentiability (<a href="" class="xref" data-knowl="./knowl/prop-seq-diff.html" title="Proposition 6.23: Sequential characterisation of differentiability">Proposition 6.23</a>) together with the addition and product rules for sequence limits (<a href="" class="xref" data-knowl="./knowl/prop-add-rule.html" title="Proposition 2.8: Addition rule">Proposition 2.8</a> and <a href="" class="xref" data-knowl="./knowl/prop-mult-rule.html" title="Proposition 2.10: Multiplication rule">Proposition 2.10</a>). To this end, let <span class="process-math">\((a_n)_n\)</span> be a sequence in <span class="process-math">\((a,b)\setminus\set{x_0}\)</span> with <span class="process-math">\(a_n \to x_0\text{.}\)</span> Then the addition rule follows from the addition rule for sequence limits, since<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-seq-diff.html ./knowl/prop-add-rule.html ./knowl/prop-mult-rule.html ./knowl/prop-mult-rule.html" id="md-12">
+\begin{align*}
+\lim_{n \to \infty} \amp \frac{(f+g)(a_n)-(f+g)(x_0)}{a_n-x_0}\\
+\amp = \lim_{n\to \infty} \frac{f(a_n)-f(x_0)}{a_n-x_0}+ \lim_{n \to \infty} \frac{g(a_n)-g(x_0)}{x-x_0}.
+\end{align*}
+</div>The product rule uses the identity<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-seq-diff.html ./knowl/prop-add-rule.html ./knowl/prop-mult-rule.html ./knowl/prop-mult-rule.html" id="md-13">
+\begin{align*}
+\amp f(a_n)g(a_n) - f(x_0)g(x_0)  = \sqbrac{f(a_n)-f(x_0)}g(a_n) + f(x_0)\sqbrac{g(a_n)-g(x_0)}\\
+\amp =\sqbrac{f(a_n)-f(x_0)}\sqbrac{g(a_n)-g(x_0)} + \sqbrac{f(a_n)-f(x_0)}g(x_0)+ f(x_0)\sqbrac{g(a_n)-g(x_0)}. 
+\end{align*}
+</div>By the multiplication rule for sequence limits (<a href="" class="xref" data-knowl="./knowl/prop-mult-rule.html" title="Proposition 2.10: Multiplication rule">Proposition 2.10</a>), we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-seq-diff.html ./knowl/prop-add-rule.html ./knowl/prop-mult-rule.html ./knowl/prop-mult-rule.html" id="md-14">
+\begin{gather*}
+\lim_{n \to \infty}\frac{\sqbrac{f(a_n)-f(x_0)}g(x_0)}{a_n-x_0} = f'(x_0)g(x_0),\\
+\lim_{n \to \infty}\frac{f(x_0)\sqbrac{g(a_n)-g(x_0)}}{a_n-x_0} = f(x_0)g'(x_0).
+\end{gather*}
+</div>Similarly<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-seq-diff.html ./knowl/prop-add-rule.html ./knowl/prop-mult-rule.html ./knowl/prop-mult-rule.html" id="md-15">
+\begin{align*}
+\amp \lim_{n\to\infty}\frac{\sqbrac{f(a_n)-f(x_0)}\sqbrac{g(a_n)-g(x_0)}}{a_n-x_0}\\
+\amp = \lim_{n\to\infty}\frac{\sqbrac{f(a_n)-f(x_0)}}{a_n-x_0}\lim_{n\to\infty}\frac{\sqbrac{g(a_n)-g(x_0)}}{a_n-x_0}\lim_{n\to\infty}(a_n-x_0)\\
+\amp = f'(x_0)\cdot g'(x_0)\cdot 0 = 0.
+\end{align*}
+</div></article></div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-73"><h4 class="heading"><span class="codenumber">(b)</span></h4>State and prove the chain rule for differentiation.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-73" id="solution-73"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-73"><div class="solution solution-like">
+<article class="theorem theorem-like" id="thm-chain-rule"><h5 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.3</span><span class="period">.</span><span class="space"> </span><span class="title">Chain rule.</span>
+</h5>Let <span class="process-math">\(f : (a,b) \to (c,d)\)</span> and <span class="process-math">\(g:  (c,d) \to \R\text{.}\)</span> Suppose that <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(x_0\)</span> and that <span class="process-math">\(g\)</span> is differentiable at <span class="process-math">\(f(x_0)\text{.}\)</span> Then the composition <span class="process-math">\(g\circ f\)</span> is differentiable at <span class="process-math">\(x_0\text{.}\)</span> Moreover the derivative satisfies the identity<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(g\circ f)'(x_0) = g'\bigbrac{f(x_0)} \cdot f'(x_0).
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-47"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-47"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-47"><article class="hiddenproof">Let <span class="process-math">\((x_n)_{n=1}^\infty\)</span> be a sequence in <span class="process-math">\((a,b) \setminus\set{x_0}\)</span> with <span class="process-math">\(x_n \to x_0\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/prop-seq-diff.html" title="Proposition 6.23: Sequential characterisation of differentiability">Proposition 6.23</a>, we wish to prove that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-seq-diff.html ./knowl/prop-diff-cts.html ./knowl/prop-seq-diff.html ./knowl/prop-mult-rule.html ./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html" id="eq-chain-to-prove">
+\begin{equation}
+\lim_{n\to \infty} \frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{x_n-x_0} = g'\bigbrac{f(x_0)}f'(x_0).\tag{7.1}
+\end{equation}
+</div>We have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-seq-diff.html ./knowl/prop-diff-cts.html ./knowl/prop-seq-diff.html ./knowl/prop-mult-rule.html ./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html" id="eq-chain-alt">
+\begin{equation}
+\frac{g\bigbrac{f( x_n)} - g\bigbrac{f(x_0)}}{ x_n-x_0} = 
+\begin{cases}
+0, \amp \text{if } f( x_n) = f(x_0);\\
+\frac{g\brac{f( x_n)}-g\brac{f(x_0)}}{f( x_n)-f(x_0)}\cdot \frac{f( x_n)-f(x_0)}{ x_n-x_0}, \amp \text{otherwise.}
+\end{cases}\tag{7.2}
+\end{equation}
+</div>
+<p id="p-84">First, let us suppose that <span class="process-math">\(f(x_n) = f(x_0)\)</span> for only finitely many values of <span class="process-math">\(n\text{.}\)</span> Then there exists <span class="process-math">\(N_0\in \N\)</span> such that for all <span class="process-math">\(n \geq N_0\)</span> we have <span class="process-math">\(f(x_n)\neq f(x_0)\text{.}\)</span> Hence for all <span class="process-math">\(n \geq N_0\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/prop-seq-diff.html ./knowl/prop-mult-rule.html">
+\begin{equation*}
+\frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{x_n-x_0} = \frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{f(x_n)-f(x_0)}\cdot \frac{f(x_n)-f(x_0)}{x_n-x_0} . 
+\end{equation*}
+</div>
+<p class="continuation">Since differentiability implies continuity (<a href="" class="xref" data-knowl="./knowl/prop-diff-cts.html" title="Proposition 6.24: Differentiable implies continuous">Proposition 6.24</a>), we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/prop-seq-diff.html ./knowl/prop-mult-rule.html">
+\begin{equation*}
+\lim_{n \to \infty} f(x_n) = f(x_0).
+\end{equation*}
+</div>
+<p class="continuation">Thus by the sequential characterisation of differentiability (<a href="" class="xref" data-knowl="./knowl/prop-seq-diff.html" title="Proposition 6.23: Sequential characterisation of differentiability">Proposition 6.23</a>) we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/prop-seq-diff.html ./knowl/prop-mult-rule.html" id="eq-comp-subseq">
+\begin{equation}
+\lim_{\substack{n\to \infty\\ n \geq N_0}} \frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{f(x_n)-f(x_0)} = g'\bigbrac{f(x_0)}.\tag{7.3}
+\end{equation}
+</div>
+<p class="continuation">We may therefore use the multiplication rule for sequential limits (<a href="" class="xref" data-knowl="./knowl/prop-mult-rule.html" title="Proposition 2.10: Multiplication rule">Proposition 2.10</a>) to deduce that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/prop-seq-diff.html ./knowl/prop-mult-rule.html" id="md-16">
+\begin{align*}
+\lim_{n \to \infty} \frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{x_n-x_0} \amp = \lim_{\substack{n\to \infty\\ n \geq N_0}}\brac{ \frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{f(x_n)-f(x_0)}\cdot \frac{f(x_n)-f(x_0)}{x_n-x_0}}\\
+\amp = \lim_{\substack{n\to \infty\\ n \geq N_0}}\frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{f(x_n)-f(x_0)}\lim_{n\to \infty} \frac{f(x_n)-f(x_0)}{x_n-x_0}\\
+\amp = g'\bigbrac{f(x_0)}f'(x_0).
+\end{align*}
+</div>
+<p id="p-85">Next, let us suppose that <span class="process-math">\(f(x_n)  = f(x_0)\)</span> for infinitely many values of <span class="process-math">\(n\text{.}\)</span> Write <span class="process-math">\(k_1 \lt  k_2 \lt  \dots\)</span> for those indices for which  <span class="process-math">\(f(x_{k_n}) = f(x_0)\text{.}\)</span> Write <span class="process-math">\(\ell_1 \lt  \ell_2 \lt  \dots\)</span> for the (possibly finite) remaining indices with <span class="process-math">\(f(x_{l_n}) \neq f(x_0)\text{.}\)</span> The sequence</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html" id="eq-g-frac-bd">
+\begin{equation}
+n\mapsto \frac{g\bigbrac{f(x_{\ell_n})}-g\bigbrac{f(x_0)}}{f(x_{\ell_n})-f(x_0)}\tag{7.4}
+\end{equation}
+</div>
+<p class="continuation">is either a finite sequence, or converges as in the proof of <a href="" class="xref" data-knowl="./knowl/eq-comp-subseq.html" title="Equation 7.3">(7.3)</a>. In either case, the sequence is bounded, so there exists <span class="process-math">\(M \in \R\)</span> such that for all <span class="process-math">\(\ell_n\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation*}
+\abs{\frac{g\bigbrac{f(x_{\ell_n})}-g\bigbrac{f(x_0)}}{f(x_{\ell_n})-f(x_0)}
+} \leq M.
+\end{equation*}
+</div>
+<p class="continuation">Combining this with <a href="" class="xref" data-knowl="./knowl/eq-chain-alt.html" title="Equation 7.2">(7.2)</a>, for any <span class="process-math">\(n \in \N\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html" id="eq-alt-chain-ineq">
+\begin{equation}
+\abs{\frac{g\bigbrac{f( x_n)} - g\bigbrac{f(x_0)}}{ x_n-x_0}} \leq M\abs{\frac{f(x_{n}) - f(x_0)}{x_{n} - x_0}}.\tag{7.5}
+\end{equation}
+</div>
+<p class="continuation">Since <span class="process-math">\(x_{k_n} \to x_0\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation*}
+f'(x_0) = \lim_{n \to \infty} \frac{f(x_{k_n}) - f(x_0)}{x_{k_n} - x_0} = 0.
+\end{equation*}
+</div>
+<p class="continuation">So it follows that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation*}
+\lim_{n \to \infty} \frac{f(x_{n}) - f(x_0)}{x_{n} - x_0} = f'(x_0) = 0.
+\end{equation*}
+</div>
+<p class="continuation">Combining this with <a href="" class="xref" data-knowl="./knowl/eq-alt-chain-ineq.html" title="Equation 7.5">(7.5)</a> gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation*}
+\lim_{n\to \infty}\abs{\frac{g\bigbrac{f( x_n)} - g\bigbrac{f(x_0)}}{ x_n-x_0}} = 0.
+\end{equation*}
+</div>
+<p class="continuation">Hence <a href="" class="xref" data-knowl="./knowl/eq-chain-to-prove.html" title="Equation 7.1">(7.1)</a> also follows in this case.</p></article></div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-74"><h4 class="heading"><span class="codenumber">(c)</span></h4>State and prove the quotient rule for differentiation.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-74" id="solution-74"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-74"><div class="solution solution-like">
+<article class="corollary theorem-like" id="cor-quotient"><h5 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">7.4</span><span class="period">.</span><span class="space"> </span><span class="title">Quotient rule.</span>
+</h5>Let <span class="process-math">\(f,g : (a,b) \to \R\)</span> both be differentiable at <span class="process-math">\(x_0 \in D\text{.}\)</span> Suppose that <span class="process-math">\(g(x_0) \neq 0\text{.}\)</span> Then the quotient <span class="process-math">\(f/g\)</span> is defined on <span class="process-math">\((x_0-\delta, x_0+\delta)\)</span> for some <span class="process-math">\(\delta \gt 0\)</span> and is differentiable at <span class="process-math">\(x_0\text{.}\)</span> Moreover the derivative satisfies the identity<div class="displaymath process-math" data-contains-math-knowls="" id="eq-quotient">
+\begin{equation}
+(f/g)'(x_0) = \frac{f'(x_0)g(x_0)-f(x_0)g'(x_0)}{g(x_0)^2}.\tag{7.6}
+\end{equation}
+</div></article><article class="hiddenproof" id="proof-48"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-48"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-48"><article class="hiddenproof">Since differentiability implies continuity (<a href="" class="xref" data-knowl="./knowl/prop-diff-cts.html" title="Proposition 6.24: Differentiable implies continuous">Proposition 6.24</a>), the function <span class="process-math">\(g\)</span> is continuous at <span class="process-math">\(x_0\text{.}\)</span> Since <span class="process-math">\(g(x_0) \neq 0\text{,}\)</span> and non-zero points of continuity yield a non-zero neighbourhood (<a href="" class="xref" data-knowl="./knowl/cor-non-zero-cts.html" title="Proposition 5.20: Non-zero point of continuity implies non-zero on a neighbourhood">Proposition 5.20</a>), there exists <span class="process-math">\(\delta \gt0\)</span>  such that <span class="process-math">\(g(x) \neq 0\)</span> for all <span class="process-math">\(x \in  (a,b)\cap (x_0-\delta, x_0+\delta)\text{.}\)</span> Decreasing <span class="process-math">\(\delta\)</span> if necessary, we may assume that <span class="process-math">\((x_0-\delta, x_0+\delta)\subset (a,b)\text{.}\)</span> Hence the quotient <span class="process-math">\(x \mapsto f(x)/g(x)\)</span> is defined on <span class="process-math">\((x_0-\delta, x_0+\delta)\text{.}\)</span> Composing the reciprocal function <span class="process-math">\(y \mapsto 1/y\)</span> with <span class="process-math">\(g\text{,}\)</span> the chain rule (<a href="" class="xref" data-knowl="./knowl/thm-chain-rule.html" title="Theorem 7.3: Chain rule">Theorem 7.3</a>) and <a href="" class="xref" data-knowl="./knowl/eg-recip-diff.html" title="Example 6.27: The reciprocal function is differentiable">Example 6.27</a> together give that the function<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/cor-non-zero-cts.html ./knowl/thm-chain-rule.html ./knowl/eg-recip-diff.html ./knowl/prop-alg-diff.html">
+\begin{equation*}
+x\mapsto \recip{g(x)}
+\end{equation*}
+</div>is differentiable at <span class="process-math">\(x_0\text{.}\)</span> Moreover, the derivative satisfies<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/cor-non-zero-cts.html ./knowl/thm-chain-rule.html ./knowl/eg-recip-diff.html ./knowl/prop-alg-diff.html">
+\begin{equation*}
+\brac{\recip{g(x_0)}}' = -\frac{g'(x_0)}{g(x_0)^2}.
+\end{equation*}
+</div>Hence by the product rule (<a href="" class="xref" data-knowl="./knowl/prop-alg-diff.html" title="Proposition 7.2: Algebra of differentiation">Proposition 7.2</a>) the quotient <span class="process-math">\(f/g = f \cdot\brac{1/g}\)</span> is differentiable at <span class="process-math">\(x_0\)</span> with derivative<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/cor-non-zero-cts.html ./knowl/thm-chain-rule.html ./knowl/eg-recip-diff.html ./knowl/prop-alg-diff.html">
+\begin{equation*}
+\frac{f'(x_0)}{g(x_0)} - \frac{f(x_0)g'(x_0)}{g(x_0)^2}.
+\end{equation*}
+</div>This completes the proof of the quotient rule.</article></div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-75"><h4 class="heading"><span class="codenumber">(d)</span></h4>Using the above, justify why rational functions are differentiable.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-75" id="solution-75"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-75"><div class="solution solution-like">
+<article class="example example-like" id="eg-poly-diff"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-poly-diff"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.5</span><span class="period">.</span><span class="space"> </span><span class="title">Polynomials and rational functions are differentiable.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-poly-diff"><article class="example example-like"> Since the identity function <span class="process-math">\(x \mapsto x\)</span> is differentiable on <span class="process-math">\(\R\text{,}\)</span> the product rule gives that <span class="process-math">\(x \mapsto x^2\)</span> is differentiable on <span class="process-math">\(\R\text{.}\)</span> Using induction and the product rule, it follows that the for any <span class="process-math">\(n \in \N\)</span> the function <span class="process-math">\(x \mapsto x^n = x\cdot x^{n-1}\)</span> is differentiable on <span class="process-math">\(\R\)</span> with derivative<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-alg-diff.html ./knowl/cor-quotient.html ./knowl/def-rational.html">
+\begin{equation*}
+(x^n)' = nx^{n-1}.
+\end{equation*}
+</div>Since constant functions <span class="process-math">\(x \mapsto c\)</span> are differentiable on <span class="process-math">\(\R\text{,}\)</span> with zero derivative, it follows from the product rule that the function <span class="process-math">\(x \mapsto c x^n\)</span> is differentiable on <span class="process-math">\(\R\)</span> with derivative<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-alg-diff.html ./knowl/cor-quotient.html ./knowl/def-rational.html">
+\begin{equation*}
+(cx^n)' = nc x^{n-1}.
+\end{equation*}
+</div>By the addition rule for differentiation (<a href="" class="xref" data-knowl="./knowl/prop-alg-diff.html" title="Proposition 7.2: Algebra of differentiation">Proposition 7.2</a>) it follows that any polynomial<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-alg-diff.html ./knowl/cor-quotient.html ./knowl/def-rational.html">
+\begin{equation*}
+x \mapsto c_0  + c_1 x + \dots + c_n x^n
+\end{equation*}
+</div>is differentiable on <span class="process-math">\(\R\text{,}\)</span> with derivative<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-alg-diff.html ./knowl/cor-quotient.html ./knowl/def-rational.html">
+\begin{equation*}
+c_1  + 2c_2x + \dots + n c_n x^{n-1}.
+\end{equation*}
+</div>By the quotient rule for differentiation (<a href="" class="xref" data-knowl="./knowl/cor-quotient.html" title="Corollary 7.4: Quotient rule">Corollary 7.4</a>) we deduce that any rational function (see <a href="" class="xref" data-knowl="./knowl/def-rational.html" title="Definition 6.5: Rational function">Definition 6.5</a>) is differentiable on its domain of definition.</article></div>
+</div></div>
+</div></article></article></div>
+<article class="exercise exercise-like" id="exercise-29"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-29"><h3 class="heading">
+<span class="type">Lecture</span><span class="space"> </span><span class="codenumber">7.6</span><span class="period">.</span><span class="space"> </span><span class="title">The mean value theorem.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-29"><article class="exercise exercise-like"><article class="task exercise-like" id="task-76"><h4 class="heading"><span class="codenumber">(a)</span></h4>Define a local max/min.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-76" id="solution-76"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-76"><div class="solution solution-like"><article class="definition definition-like" id="def-local-max-min"><h5 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.7</span><span class="period">.</span><span class="space"> </span><span class="title">Local max/min.</span>
+</h5> Let <span class="process-math">\(f : (a,b) \to \R\text{.}\)</span> We say that <span class="process-math">\(x_0 \in (a,b)\)</span> is a <em class="emphasis">local maximum</em> for <span class="process-math">\(f\)</span> if there exists <span class="process-math">\(\delta \gt 0\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(\forall x \in (x_0-\delta, x_0+\delta)) [f(x) \leq f(x_0)].
+\end{equation*}
+</div>We say that <span class="process-math">\(x_0 \in (a,b)\)</span> is a <em class="emphasis">local minimum</em> for <span class="process-math">\(f\)</span> if there exists <span class="process-math">\(\delta \gt 0\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(\forall x \in (x_0-\delta, x_0+\delta)) [f(x) \geq f(x_0)].
+\end{equation*}
+</div></article></div></div>
+</div></article><article class="task exercise-like" id="task-77"><h4 class="heading"><span class="codenumber">(b)</span></h4>State and prove how a derivative must be zero at a local max/min.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-77" id="solution-77"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-77"><div class="solution solution-like">
+<article class="proposition theorem-like" id="lem-zero-deriv"><h5 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">7.8</span><span class="period">.</span><span class="space"> </span><span class="title">The derivative is zero at a local max/min.</span>
+</h5>Suppose that <span class="process-math">\(f : (a,b) \to \R\)</span> is differentiable at <span class="process-math">\(x_0 \in (a,b)\text{.}\)</span> Suppose that <span class="process-math">\(x_0\)</span> is a local maximum or local minimum for <span class="process-math">\(f\text{.}\)</span> Then <span class="process-math">\(f'(x_0) = 0\text{.}\)</span></article><article class="hiddenproof" id="proof-49"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-49"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-49"><article class="hiddenproof">Let us suppose that <span class="process-math">\(x_0\)</span> is a local maximum for <span class="process-math">\(f\text{;}\)</span> the argument for the local minimum is similar. By definition of a local maximum (see <a href="" class="xref" data-knowl="./knowl/def-local-max-min.html" title="Definition 7.7: Local max/min">Definition 7.7</a>) there exists <span class="process-math">\(\delta \gt 0\)</span> such that for all <span class="process-math">\(x \in (x_0-\delta, x_0+\delta)\)</span> we have <span class="process-math">\(f(x_0) \geq f(x)\text{.}\)</span> Hence<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-local-max-min.html ./knowl/prop-seq-diff.html ./knowl/prop-ineq-rule.html">
+\begin{equation*}
+\frac{f(x)-f(x_0)}{x-x_0}  \begin{cases} \geq 0 \amp \text{ if } x_0-\delta \lt  x \lt  x_0,\\
+\leq 0 \amp \text{ if } x_0 \lt  x \lt  x_0+\delta.\end{cases}
+\end{equation*}
+</div>Setting <span class="process-math">\(a_n := x_0-\trecip{n+1}\delta\text{,}\)</span> the sequential characterisation of the derivative (<a href="" class="xref" data-knowl="./knowl/prop-seq-diff.html" title="Proposition 6.23: Sequential characterisation of differentiability">Proposition 6.23</a>) and the inequality rule (<a href="" class="xref" data-knowl="./knowl/prop-ineq-rule.html" title="Proposition 2.2">Proposition 2.2</a>) give that<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-local-max-min.html ./knowl/prop-seq-diff.html ./knowl/prop-ineq-rule.html">
+\begin{equation*}
+f'(x_0) = \lim_{n\to \infty}\frac{f(a_n)-f(x_0)}{a_n-x_0} \geq 0.
+\end{equation*}
+</div>Similarly, setting <span class="process-math">\(b_0:= x_0+\trecip{n+1}\delta\)</span> gives<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-local-max-min.html ./knowl/prop-seq-diff.html ./knowl/prop-ineq-rule.html">
+\begin{equation*}
+f'(x_0) = \lim_{n\to \infty}\frac{f(b_n)-f(x_0)}{a_n-x_0} \leq 0.
+\end{equation*}
+</div>Thus <span class="process-math">\(f'(x_0) = 0\text{.}\)</span></article></div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-78"><h4 class="heading"><span class="codenumber">(c)</span></h4>State and prove Rolle's theorem.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-78" id="solution-78"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-78"><div class="solution solution-like">
+<article class="theorem theorem-like" id="lem-rolle"><h5 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.9</span><span class="period">.</span><span class="space"> </span><span class="title">Rolle's theorem.</span>
+</h5>Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a continuous function which is differentiable on <span class="process-math">\((a,b)\text{,}\)</span> with <span class="process-math">\(a \lt  b\text{.}\)</span> Suppose that <span class="process-math">\(f(a) = f(b)\text{.}\)</span> Then there exists <span class="process-math">\(x_0 \in (a,b)\)</span> such that <span class="process-math">\(f'(x_0) = 0\text{.}\)</span></article><article class="hiddenproof" id="proof-50"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-50"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-50"><article class="hiddenproof">By the extreme value theorem (<a href="" class="xref" data-knowl="./knowl/thm-extreme.html" title="Theorem 6.20: Extreme value theorem">Theorem 6.20</a>), there exists <span class="process-math">\(x_1,x_2 \in [a,b]\)</span> which are minima and maxima (respectively) for <span class="process-math">\(f\)</span> on <span class="process-math">\([a,b]\text{.}\)</span> In particular <span class="process-math">\(x_1\)</span> is a local maximum and <span class="process-math">\(x_2\)</span> is a local minimum. If <span class="process-math">\(x_1 \in (a,b)\)</span> or <span class="process-math">\(x_2 \in (a,b)\text{,}\)</span> then it follows that <span class="process-math">\(f'(x_1) = 0\)</span> or <span class="process-math">\(f'(x_2) = 0\)</span> since local minima/maxima have zero derivative at points of differentiability (<a href="" class="xref" data-knowl="./knowl/lem-zero-deriv.html" title="Proposition 7.8: The derivative is zero at a local max/min">Proposition 7.8</a>). We may therefore assume that <span class="process-math">\(\set{x_1, x_2} \subset \set{a,b}\text{.}\)</span> Hence <span class="process-math">\(f(x_1) = f(x_2)\text{.}\)</span> For any <span class="process-math">\(x \in [a,b]\text{,}\)</span> we have that <span class="process-math">\(f(x)\)</span> is between <span class="process-math">\(f(x_1)\)</span> and <span class="process-math">\(f(x_2)\text{.}\)</span> Since <span class="process-math">\(f(x_1) = f(x_2)\text{,}\)</span> it follows that <span class="process-math">\(f\)</span> is constant on <span class="process-math">\([a,b]\text{.}\)</span> It then follows from <a href="" class="xref" data-knowl="./knowl/eg-const-diff.html" title="Example 6.25: Constant functions are differentiable">Example 6.25</a> that <span class="process-math">\(f'(x)= 0\)</span> at every <span class="process-math">\(x \in (a,b)\text{,}\)</span> e.g. for <span class="process-math">\(x := \frac{a+b}{2}\text{.}\)</span></article></div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-79"><h4 class="heading"><span class="codenumber">(d)</span></h4>State and prove the mean value theorem.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-79" id="solution-79"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-79"><div class="solution solution-like">
+<article class="theorem theorem-like" id="thm-mvt"><h5 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.10</span><span class="period">.</span><span class="space"> </span><span class="title">Mean value theorem.</span>
+</h5>Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a continuous function which is differentiable on <span class="process-math">\((a,b)\text{,}\)</span> with <span class="process-math">\(a \lt  b\text{.}\)</span> Then there exists <span class="process-math">\(x_0 \in (a,b)\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="" id="eq-mvt">
+\begin{equation}
+f(b) - f(a) = f'(x_0)(b-a).\tag{7.7}
+\end{equation}
+</div></article><article class="hiddenproof" id="proof-51"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-51"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-51"><article class="hiddenproof">We deduce this result from Rolle's theorem (<a href="" class="xref" data-knowl="./knowl/lem-rolle.html" title="Theorem 7.9: Rolle's theorem">Theorem 7.9</a>). The idea of the proof is to try and find a continuous function <span class="process-math">\(g:[a,b] \to \R\)</span> which is differentiable on <span class="process-math">\((a,b)\)</span> with <span class="process-math">\(g(a) = g(b)\)</span> and such that the identity <span class="process-math">\(g'(x_0) = 0\)</span> implies <a href="" class="xref" data-knowl="./knowl/eq-mvt.html" title="Equation 7.7">(7.7)</a>. To this end set<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-rolle.html ./knowl/eq-mvt.html ./knowl/eg-const-cts.html ./knowl/eg-id-cts.html ./knowl/prop-alg-cts.html ./knowl/eg-const-diff.html ./knowl/eg-id-diff.html ./knowl/prop-alg-cts.html">
+\begin{equation*}
+g(x) :=f(x) - \frac{f(b)-f(a)}{b-a} (x-a), \qquad (x \in [a,b]).
+\end{equation*}
+</div>This is continuous on <span class="process-math">\([a,b]\)</span> since constant functions are continuous (<a href="" class="xref" data-knowl="./knowl/eg-const-cts.html" title="Example 5.14: Constant functions are continuous">Example 5.14</a>), the identity function is continuous (<a href="" class="xref" data-knowl="./knowl/eg-id-cts.html" title="Example 5.15: The identity function is continuous">Example 5.15</a>) and so is the sum/product of continuous functions (<a href="" class="xref" data-knowl="./knowl/prop-alg-cts.html" title="Proposition 6.2: Algebra of continuity">Proposition 6.2</a>). The function <span class="process-math">\(g\)</span> is differentiable on <span class="process-math">\((a,b)\)</span> since constant functions are differentiable (<a href="" class="xref" data-knowl="./knowl/eg-const-diff.html" title="Example 6.25: Constant functions are differentiable">Example 6.25</a>), the identity function is differentiable (<a href="" class="xref" data-knowl="./knowl/eg-id-diff.html" title="Example 6.26: The identity function is differentiable">Example 6.26</a>) and so is the sum/product of differentiable functions (<a href="" class="xref" data-knowl="./knowl/prop-alg-cts.html" title="Proposition 6.2: Algebra of continuity">Proposition 6.2</a>). We have <span class="process-math">\(g(a) = f(a)\)</span> and <span class="process-math">\(g(b)  = f(a)\text{.}\)</span> We may therefore apply Rolle's theorem to deduce the existence of <span class="process-math">\(x_0 \in (a,b)\)</span> such that <span class="process-math">\(g'(x_0) = 0\text{.}\)</span> Employing the sum/product rules for differentiation, we have that<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-rolle.html ./knowl/eq-mvt.html ./knowl/eg-const-cts.html ./knowl/eg-id-cts.html ./knowl/prop-alg-cts.html ./knowl/eg-const-diff.html ./knowl/eg-id-diff.html ./knowl/prop-alg-cts.html">
+\begin{equation*}
+g'(x_0) = f'(x_0) -\frac{f(b)-f(a)}{b-a}.
+\end{equation*}
+</div>The result follows on re-arranging the identity<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-rolle.html ./knowl/eq-mvt.html ./knowl/eg-const-cts.html ./knowl/eg-id-cts.html ./knowl/prop-alg-cts.html ./knowl/eg-const-diff.html ./knowl/eg-id-diff.html ./knowl/prop-alg-cts.html">
+\begin{equation*}
+0 = f'(x_0) -\frac{f(b)-f(a)}{b-a}. 
+\end{equation*}
+</div></article></div>
+</div></div>
+</div></article><article class="task exercise-like" id="ex-mono-diff"><h4 class="heading"><span class="codenumber">(e)</span></h4>Prove how a function with non-negative derivative is increasing.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-80" id="solution-80"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-80"><div class="solution solution-like">
+<article class="corollary theorem-like" id="cor-mono-diff"><h5 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">7.11</span><span class="period">.</span>
+</h5>Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a continuous function which is differentiable on <span class="process-math">\((a,b)\text{,}\)</span> with <span class="process-math">\(a \lt  b\text{.}\)</span> <ol class="decimal">
+<li id="li-77"><p id="p-derived-li-77">If <span class="process-math">\((\forall x \in (a,b))[f'(x) \geq 0]\)</span> then <span class="process-math">\(f\)</span> is increasing.</p></li>
+<li id="li-78"><p id="p-derived-li-78">If <span class="process-math">\((\forall x \in (a,b))[f'(x) \gt 0]\)</span> then <span class="process-math">\(f\)</span> is strictly increasing.</p></li>
+<li id="li-79"><p id="p-derived-li-79">If <span class="process-math">\((\forall x \in (a,b))[f'(x) \leq 0]\)</span> then <span class="process-math">\(f\)</span> is decreasing.</p></li>
+<li id="li-80"><p id="p-derived-li-80">If <span class="process-math">\((\forall x \in (a,b))[f'(x) \lt  0]\)</span> then <span class="process-math">\(f\)</span> is strictly decreasing.</p></li>
+<li id="li-81"><p id="p-derived-li-81">If <span class="process-math">\((\forall x \in (a,b))[f'(x) = 0]\)</span> then <span class="process-math">\(f\)</span> is constant.</p></li>
+</ol></article><article class="hiddenproof" id="proof-52"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-52"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-52"><article class="hiddenproof">Let us first suppose that <span class="process-math">\((\forall x \in (a,b))[f'(x) \geq 0]\text{.}\)</span> Let <span class="process-math">\(x_1, x_2 \in [a,b]\)</span> with <span class="process-math">\(x_1 \lt  x_2\text{.}\)</span> Our task is to prove that <span class="process-math">\(f(x_1) \leq f(x_2)\text{.}\)</span> Applying the mean value theorem to the function <span class="process-math">\(f: [x_1, x_2] \to \R\text{,}\)</span> there exists <span class="process-math">\(x_0 \in (x_1, x_2)\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x_2)-f(x_1) = f'(x_0)(x_2-x_1) \geq 0,
+\end{equation*}
+</div>as required. Notice that if <span class="process-math">\((\forall x \in (a,b))[f'(x) \gt 0]\)</span> then  <span class="process-math">\(f(x_2) -f(x_1) = f'(x_0)(x_2-x_1) \gt 0\text{,}\)</span> which implies that the function is strictly increasing. The conclusions involving decreasing functions follow on applying the increasing results to <span class="process-math">\(-f\text{.}\)</span> If <span class="process-math">\((\forall x \in (a,b))[f'(x) = 0]\)</span> then <span class="process-math">\(f\)</span> is both increasing and decreasing, hence for all <span class="process-math">\(x \in [a,b]\)</span> we have <span class="process-math">\(f(x) = f(b)\text{.}\)</span> Thus in the latter case <span class="process-math">\(f\)</span> is constant.</article></div>
+</div></div>
+</div></article></article></div>
+<article class="exercise exercise-like" id="exercise-30"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-30"><h3 class="heading">
+<span class="type">Lecture</span><span class="space"> </span><span class="codenumber">7.12</span><span class="period">.</span><span class="space"> </span><span class="title">Taylor's theorem.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-30"><article class="exercise exercise-like"><article class="task exercise-like" id="ex-taylor"><h4 class="heading"><span class="codenumber">(a)</span></h4>State and prove Taylor's theorem.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-81" id="solution-81"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-81"><div class="solution solution-like">
+<article class="theorem theorem-like" id="thm-taylor"><h5 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.13</span><span class="period">.</span>
+</h5>Let <span class="process-math">\(f : (a,b) \to \R\)</span> be a function which is <span class="process-math">\(n\)</span>-times differentiable and let <span class="process-math">\(x_0, x \in (a,b)\text{.}\)</span> Then there exists <span class="process-math">\(x_n\)</span> between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="" id="mdn-11">
+\begin{align}
+\amp \abs{f(x) - \sqbrac{f(x_0) + (x-x_0)f'(x_0) +  \dots + \trecip{(n-1)!} (x-x_0)^{n-1} f^{(n-1)}(x_0)}}\notag\\
+\amp \qquad\qquad\qquad \leq |x-x_0|^n|f^{(n)}(x_n)|.\tag{7.8}
+\end{align}
+</div></article><article class="hiddenproof" id="proof-53"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-53"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-53"><article class="hiddenproof">Set<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html" id="md-17">
+\begin{align*}
+\amp g(x) := f(x) -\\
+\amp  \sqbrac{f(x_0) + (x-x_0)f'(x_0) + \trecip{2} (x-x_0)^2 f''(x_0) + \dots + \trecip{(n-1)!} (x-x_0)^{n-1} f^{(n-1)}(x_0)}\text{.}
+\end{align*}
+</div>Our aim is to prove that there exists <span class="process-math">\(x_n\)</span> between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html" id="eq-taylor-to-prove">
+\begin{equation}
+\abs{g(x)} \leq |x-x_0|^n \abs{g^{(n)}(x_n)}.\tag{7.9}
+\end{equation}
+</div>We do this by induction on <span class="process-math">\(n \geq 0\text{,}\)</span> the base case <span class="process-math">\(n=0\)</span> being automatic. Suppose then that <a href="" class="xref" data-knowl="./knowl/eq-taylor-to-prove.html" title="Equation 7.9">(7.9)</a> holds for <span class="process-math">\(n-1\text{,}\)</span> so that there exists <span class="process-math">\(x_{n-1}\)</span> between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html">
+\begin{equation*}
+\abs{g(x)} \leq |x-x_0|^{n-1} \abs{g^{(n-1)}(x_{n-1})}.
+\end{equation*}
+</div>Applying the mean value theorem to <span class="process-math">\(g^{(n-1)}\text{,}\)</span> there exists <span class="process-math">\(x_{n}\)</span> between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x_{n-1}\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html">
+\begin{equation*}
+g^{(n-1)}(x_{n-1}) = g^{(n-1)}(x_{0}) + (x_{n-1}-x_0) g^{(n)}(x_n) = (x_{n-1}-x_0) g^{(n)}(x_n).
+\end{equation*}
+</div>Since <span class="process-math">\(x_{n-1}\)</span> is between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x\text{,}\)</span> we must have that <span class="process-math">\(x_{n}\)</span> is between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x\)</span> and<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html">
+\begin{equation*}
+|x_{n-1}-x_0|\leq |x-x_0|\text{.}
+\end{equation*}
+</div>Therefore<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html">
+\begin{equation*}
+\abs{g(x)} \leq |x-x_0|^{n-1} \abs{(x_{n-1}-x_0) g^{(n)}(x_n)} \leq |x-x_0|^{n} \abs{g^{(n)}(x_n)},
+\end{equation*}
+</div>as required.</article></div>
+<article class="remark remark-like" id="remark-5"><h5 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">7.14</span><span class="period">.</span><span class="space"> </span><span class="title">Taylor with improved remainder.</span>
+</h5> With a slightly longer proof, one can actually improve our statement of Taylor's theorem to the following. <article class="theorem theorem-like" id="thm-strong-taylor"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.15</span><span class="period">.</span><span class="space"> </span><span class="title">Strong Taylor (non-examinable).</span>
+</h6>Let <span class="process-math">\(f : (a,b) \to \R\)</span> be a function which is <span class="process-math">\(n\)</span>-times differentiable and let <span class="process-math">\(x_0, x \in (a,b)\text{.}\)</span> Then there exists <span class="process-math">\(x_n\)</span> between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="" id="md-18">
+\begin{align*}
+f(x) = f(x_0) + (x-x_0)f'(x_0)  + \dots + \amp \trecip{(n-1)!} (x-x_0)^{n-1} f^{(n-1)}(x_0)\\
+\amp + \trecip{n!}(x-x_0)^nf^{(n)}(x_n).
+\end{align*}
+</div></article></article>
+</div></div>
+</div></article></article></div>
+<article class="exercise exercise-like" id="exercise-31"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-31"><h3 class="heading">
+<span class="type">Lecture</span><span class="space"> </span><span class="codenumber">7.16</span><span class="period">.</span><span class="space"> </span><span class="title">The inverse function theorem.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-31"><article class="exercise exercise-like"><article class="task exercise-like" id="task-82"><h4 class="heading"><span class="codenumber">(a)</span></h4>State and prove how differentiable functions with continuous inverse have a differentiable inverse.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-82" id="solution-82"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-82"><div class="solution solution-like">
+<article class="theorem theorem-like" id="thm-inverse-fn-1"><h5 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.17</span><span class="period">.</span><span class="space"> </span><span class="title">Inverse function theorem.</span>
+</h5>Let <span class="process-math">\(f: (a,b) \to (c,d)\)</span> be a bijective function and let  <span class="process-math">\(x_0 \in (a,b)\text{.}\)</span> Suppose that <span class="process-math">\(f^{-1}\)</span> is continuous at <span class="process-math">\(y_0:=f(x_0)\)</span> and that <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(x_0\)</span> with<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f'(x_0) \neq 0.
+\end{equation*}
+</div>Then <span class="process-math">\(f^{-1}\)</span> is differentiable at <span class="process-math">\(y_0\)</span> with derivative<div class="displaymath process-math" data-contains-math-knowls="" id="eq-inv-formula">
+\begin{equation}
+\brac{f^{-1}}'(y_0) = \recip{f'(x_0)}.\tag{7.10}
+\end{equation}
+</div></article><article class="hiddenproof" id="proof-54"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-54"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-54"><article class="hiddenproof">By the sequential characterisation of differentiability (<a href="" class="xref" data-knowl="./knowl/prop-seq-diff.html" title="Proposition 6.23: Sequential characterisation of differentiability">Proposition 6.23</a>), we are required to prove that if <span class="process-math">\((y_n)_{n=1}^\infty\)</span> is a sequence in <span class="process-math">\((c,d)\setminus\set{y_0}\)</span> with <span class="process-math">\(y_n \to y_0\text{,}\)</span> then<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-seq-diff.html ./knowl/prop-recip-rule.html">
+\begin{equation*}
+\frac{f^{-1}(y_n) - f^{-1}(y_0)}{y_n-y_0} \to \recip{f'(x_0)}.
+\end{equation*}
+</div>Since <span class="process-math">\(f\)</span> is bijective, for each <span class="process-math">\(y_n\in (c,d)\setminus\set{y_0}\)</span> there exists <span class="process-math">\(x_n \in (a,b)\setminus\set{x_0}\)</span> such that <span class="process-math">\(f(x_n) = y_n\text{.}\)</span> Thus <span class="process-math">\((x_n)_{n=1}^\infty\)</span> is a sequence in <span class="process-math">\((a,b)\setminus\set{x_0}\text{.}\)</span> Since <span class="process-math">\(f^{-1}\)</span> is continuous at <span class="process-math">\(y_0\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-seq-diff.html ./knowl/prop-recip-rule.html">
+\begin{equation*}
+x_n = f^{-1}(y_n) \to f^{-1}(y_0) = x_0.
+\end{equation*}
+</div>Since <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(x_0\text{,}\)</span> it follows that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-seq-diff.html ./knowl/prop-recip-rule.html">
+\begin{equation*}
+\frac{f(x_n)-f(x_0)}{x_n-x_0} \to f'(x_0).
+\end{equation*}
+</div>Since <span class="process-math">\(f'(x_0) \neq 0\text{,}\)</span> it follows from the reciprocal rule for limits (<a href="" class="xref" data-knowl="./knowl/prop-recip-rule.html" title="Proposition 2.12: Reciprocal rule">Proposition 2.12</a>) that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-seq-diff.html ./knowl/prop-recip-rule.html">
+\begin{equation*}
+\frac{f^{-1}(y_n)-f^{-1}(y_0)}{y_n-y_0} = \frac{x_n-x_0}{f(x_n)-f(x_0)}\to \recip{f'(x_0)}.
+\end{equation*}
+</div></article></div>
+</div></div>
+</div></article></article></div>
+<article class="exercise exercise-like" id="exercise-32"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-32"><h3 class="heading">
+<span class="type">Lecture</span><span class="space"> </span><span class="codenumber">7.18</span><span class="period">.</span><span class="space"> </span><span class="title">Differentiability of power series.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-32"><article class="exercise exercise-like"><article class="task exercise-like" id="task-83"><h4 class="heading"><span class="codenumber">(a)</span></h4>State and prove how power series are infinitely differentiable within their radius of convergence.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-83" id="solution-83"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-83"><div class="solution solution-like">
+<article class="theorem theorem-like" id="cor-power-diff"><h5 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.19</span><span class="period">.</span><span class="space"> </span><span class="title">Power series are infinitely differentiable within radius of convergence.</span>
+</h5>Let <span class="process-math">\((a_n)_{n=0}^\infty\)</span> be a sequence of real numbers. Let <span class="process-math">\(R \in [0, \infty]\)</span> denote the radius of convergence (see <a href="" class="xref" data-knowl="./knowl/thm-radius.html" title="Theorem 5.5: Existence of radius of convergence">Theorem 5.5</a>) of the corresponding power series:<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-radius.html ./knowl/eq-power-fn-2.html ./knowl/eq-nth-power-deriv.html" id="eq-power-fn-2">
+\begin{equation}
+f(x) := \sum_{n =0}^\infty a_n x^n.\tag{7.11}
+\end{equation}
+</div>Then for any <span class="process-math">\(m \in \Z_{\geq0}\)</span> the function <span class="process-math">\(f : (-R, R) \to \R\)</span> given by <a href="" class="xref" data-knowl="./knowl/eq-power-fn-2.html" title="Equation 7.11">(7.11)</a> is <span class="process-math">\(m\)</span>-times differentiable. Moreover, for any <span class="process-math">\(x_0 \in (-R, R)\)</span> we have the formula<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-radius.html ./knowl/eq-power-fn-2.html ./knowl/eq-nth-power-deriv.html" id="eq-nth-power-deriv">
+\begin{equation}
+f^{(m)}(x_0) = \sum_{n = m}^\infty n(n-1)\dotsm (n-m+1)a_n x_0^{n-m}\tag{7.12}
+\end{equation}
+</div>where the right-hand side of <a href="" class="xref" data-knowl="./knowl/eq-nth-power-deriv.html" title="Equation 7.12">(7.12)</a> is absolutely convergent.</article><article class="hiddenproof" id="proof-55"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-55"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-55"><article class="hiddenproof"><p id="p-86">We prove the result for <span class="process-math">\(m=1\)</span> and note that the general case then follows by re-applying the <span class="process-math">\(m=1\)</span> case <span class="process-math">\(m\)</span> times.</p>
+<p id="p-87">In proving the <span class="process-math">\(m=1\)</span> case, let us first show that the right-hand side of <a href="" class="xref" data-knowl="./knowl/eq-nth-power-deriv.html" title="Equation 7.12">(7.12)</a> is absolutely convergent. Let <span class="process-math">\(r\)</span> be a real number satisfying <span class="process-math">\(|x_0| \lt  r \lt  R\text{.}\)</span> Such a number exists since <span class="process-math">\(|x_0| \lt  R\text{,}\)</span> for instance we could set</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-nth-power-deriv.html ./knowl/prop-exp-poly.html ./knowl/prop-oh-test.html ./knowl/eq-power-fn-2.html ./knowl/eq-squared-series.html ./knowl/prop-oh-test.html">
+\begin{equation*}
+r:=\frac{|x_0|+R}{2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We claim that the following infinite series is  convergent</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-nth-power-deriv.html ./knowl/prop-exp-poly.html ./knowl/prop-oh-test.html ./knowl/eq-power-fn-2.html ./knowl/eq-squared-series.html ./knowl/prop-oh-test.html" id="eq-squared-series">
+\begin{equation}
+\sum_{n=2}^\infty n^2 |a_n| r^{n-2}.\tag{7.13}
+\end{equation}
+</div>
+<p class="continuation">To see this, let <span class="process-math">\(r_1\)</span> be a real satisfying <span class="process-math">\(r \lt  r_1 \lt  R\text{.}\)</span> Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-nth-power-deriv.html ./knowl/prop-exp-poly.html ./knowl/prop-oh-test.html ./knowl/eq-power-fn-2.html ./knowl/eq-squared-series.html ./knowl/prop-oh-test.html">
+\begin{equation*}
+\sum_{n=2}^\infty n^2 |a_n| r^{n-2} \leq r^{-2}\sum_{n=2}^\infty n^2 (r/r_1)^n |a_n| r_1^n.
+\end{equation*}
+</div>
+<p class="continuation">Since exponentials beat polynomials (<a href="" class="xref" data-knowl="./knowl/prop-exp-poly.html" title="Proposition 3.7: Exponential beats polynomial">Proposition 3.7</a>), we have that <span class="process-math">\(n^2 (r/r_1)^n \to 0\text{,}\)</span> in particular the sequence <span class="process-math">\(n^2 (r/r_1)^n\)</span> is bounded. It follows from the comparison test (<a href="" class="xref" data-knowl="./knowl/prop-oh-test.html" title="Proposition 4.9: Comparison test">Proposition 4.9</a>) and absolute convergence of <a href="" class="xref" data-knowl="./knowl/eq-power-fn-2.html" title="Equation 7.11">(7.11)</a> that <a href="" class="xref" data-knowl="./knowl/eq-squared-series.html" title="Equation 7.13">(7.13)</a> converges. Again by the comparison test (<a href="" class="xref" data-knowl="./knowl/prop-oh-test.html" title="Proposition 4.9: Comparison test">Proposition 4.9</a>), this implies absolute convergence of</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-nth-power-deriv.html ./knowl/prop-exp-poly.html ./knowl/prop-oh-test.html ./knowl/eq-power-fn-2.html ./knowl/eq-squared-series.html ./knowl/prop-oh-test.html">
+\begin{equation*}
+\sum_{n=1}^\infty n a_n x^{n-1}.
+\end{equation*}
+</div>
+<p id="p-88">With the above facts on absolute convergence established, we are able to prove the <span class="process-math">\(m=1\)</span> case of <a href="" class="xref" data-knowl="./knowl/eq-nth-power-deriv.html" title="Equation 7.12">(7.12)</a>. By linearity of series (<a href="" class="xref" data-knowl="./knowl/prop-lin-series.html" title="Proposition 4.5: Linearity of series">Proposition 4.5</a>), for <span class="process-math">\(x \in [-r,r]\)</span> with <span class="process-math">\(x\neq x_0\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-nth-power-deriv.html ./knowl/prop-lin-series.html ./knowl/thm-taylor.html ./knowl/def-differentiable.html">
+\begin{equation*}
+\frac{f(x) - f(x_0)}{x-x_0} - \sum_{n=1}^\infty na_n x_0^{n-1} 
+= \recip{x-x_0}\sum_{n=2}^\infty a_n \sqbrac{x^n-x_0^n-(x-x_0)nx_0^{n-1}}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">By Taylor's theorem (<a href="" class="xref" data-knowl="./knowl/thm-taylor.html" title="Theorem 7.13">Theorem 7.13</a>), for each <span class="process-math">\(n\in \N\)</span> there exists <span class="process-math">\(x_n\)</span> between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-nth-power-deriv.html ./knowl/prop-lin-series.html ./knowl/thm-taylor.html ./knowl/def-differentiable.html">
+\begin{equation*}
+\abs{x^n-x_0^n-(x-x_0)nx_0^{n-1}} \leq n(n-1)|x-x_0|^2|x_n|^{n-2}\leq n^2|x-x_0|^2r^{n-2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Therefore</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-nth-power-deriv.html ./knowl/prop-lin-series.html ./knowl/thm-taylor.html ./knowl/def-differentiable.html">
+\begin{equation*}
+\abs{\frac{f(x) - f(x_0)}{x-x_0} - \sum_{n=1}^\infty na_n x_0^{n-1}}
+\leq \abs{x-x_0}\sum_{n=2}^\infty n^2|a_n|r^{n-2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">It follows that <a href="" class="xref" data-knowl="./knowl/def-differentiable.html" title="Definition 6.22: Differentiable">Definition 6.22</a> is satisfied on taking</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-nth-power-deriv.html ./knowl/prop-lin-series.html ./knowl/thm-taylor.html ./knowl/def-differentiable.html">
+\begin{equation*}
+\delta(x_0, \eps) := \min\set{\frac{\eps}{\sum_{n=2}^\infty n^2|a_n|r^{n-2}}, r-|x_0|} \gt 0\text{.}
+\end{equation*}
+</div></article></div>
+</div></div>
+</div></article></article></div>
+<p id="p-89">In this week's <em class="emphasis">workshop</em> you will be asked to write-up (under exam conditions) two of the following:</p>
+<ul class="disc">
+<li id="li-82"><p id="p-derived-li-82">This question is a variant of <a href="" class="xref" data-knowl="./knowl/ex-alg-diff.html" title="Task 7.1.a">Task 7.1.a</a>. Let <span class="process-math">\(f,g :\R\to\R\)</span> be functions which are both differentiable at 0 with <span class="process-math">\(f'(0)=1\)</span> and <span class="process-math">\(g'(0)=0\text{.}\)</span> Without using the product rule for differentiation, prove that the product <span class="process-math">\(fg\)</span> satisfies the definition of differentiability at 0, with <span class="process-math">\((fg)'(0) = g(0)\text{.}\)</span></p></li>
+<li id="li-83"><p id="p-derived-li-83">This question is a variant of <a href="" class="xref" data-knowl="./knowl/ex-mono-diff.html" title="Task 7.6.e">Task 7.6.e</a>. Let <span class="process-math">\(f,g:[0,1]\to \R\)</span> be continuous functions which are differentiable on <span class="process-math">\((a,b)\text{.}\)</span> Suppose that <span class="process-math">\(f'(x) \geq g'(x)\)</span> for all <span class="process-math">\(x\in[0,1]\text{.}\)</span> Use the mean value theorem to prove that <span class="process-math">\(f(1) + g(0) \geq f(0) + g(1)\text{.}\)</span></p></li>
+<li id="li-84"><p id="p-derived-li-84">This question is a variant of <a href="" class="xref" data-knowl="./knowl/ex-taylor.html" title="Task 7.12.a">Task 7.12.a</a>. Let <span class="process-math">\(f:\R\to\R\)</span> be a function which is <span class="process-math">\(n\)</span>-times differentiable and suppose that<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-taylor.html">
+\begin{equation*}
+f(0) = f'(0) = \dots = f^{(n-1)}(0)=0\text{.}
+\end{equation*}
+</div>Without using the statement of Taylor's theorem, but by modifying the proof, prove that for all <span class="process-math">\(x\gt 0\)</span> there exists <span class="process-math">\(x_n \in (0,x)\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-taylor.html">
+\begin{equation*}
+\abs{f(x)} \leq x^n \abs{f^{(n)}(x_n)}.
+\end{equation*}
+</div></p></li>
+</ul></section></div></main>
+</div>
+</body>
+</html>

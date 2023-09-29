@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>Approximating the integral with a Riemann sum (see <a href="" class="xref" data-knowl="./knowl/prop-eps-riemann.html" title="Proposition 8.23: Epsilon characterisation of Riemann integrability">Proposition 8.23</a>), for any <span class="process-math">\(\eps \gt 0\)</span> there exists a subdivision <span class="process-math">\(a = x_0 \lt  \dots \lt  x_N = b\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-eps-riemann.html ./knowl/eq-u-contraction.html ./knowl/prop-alt-sup.html ./knowl/eq-contraction.html ./knowl/eq-u-contraction.html">
+\begin{equation*}
+U(f;x_0, \dots, x_N)-L(f;x_0, \dots, x_N) \leq \eps.
+\end{equation*}
+</div>We claim that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-eps-riemann.html ./knowl/eq-u-contraction.html ./knowl/prop-alt-sup.html ./knowl/eq-contraction.html ./knowl/eq-u-contraction.html">
+\begin{align}
+U(f^+;x_0, \dots, x_N)- \amp L(f^+;x_0, \dots, x_N)\notag\\
+\amp \leq U(f;x_0, \dots, x_N)- L(f;x_0, \dots, x_N),\tag{9.2}
+\end{align}
+</div>from which it follows that <span class="process-math">\(f^+\)</span> is integrable by the existence of arbitrarily close upper and lower Riemann sums (<a href="" class="xref" data-knowl="./knowl/prop-eps-riemann.html" title="Proposition 8.23: Epsilon characterisation of Riemann integrability">Proposition 8.23</a>). To establish our claim <a href="" class="xref" data-knowl="./knowl/eq-u-contraction.html" title="Equation 9.2">(9.2)</a>, we first observe that for <span class="process-math">\(x \geq 0\)</span> and <span class="process-math">\(y \leq 0\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-eps-riemann.html ./knowl/eq-u-contraction.html ./knowl/prop-alt-sup.html ./knowl/eq-contraction.html ./knowl/eq-u-contraction.html">
+\begin{equation}
+|x^+-y^+| = |x| = x \leq x+(-y) = |x-y|.\tag{9.3}
+\end{equation}
+</div>Checking the remaining cases, one may verify that <span class="process-math">\(|x^+-y^+| \leq |x-y|\)</span> for any choice of <span class="process-math">\(x, y \in \R\text{.}\)</span> Since decreasing a supremum gives a non upper bound (see <a href="" class="xref" data-knowl="./knowl/prop-alt-sup.html" title="Proposition 1.7: Epsilon characterisation of the supremum">Proposition 1.7</a>), for any <span class="process-math">\(\eps \gt 0\)</span> there exist <span class="process-math">\(y \in [x_{n-1}, x_n]\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-eps-riemann.html ./knowl/eq-u-contraction.html ./knowl/prop-alt-sup.html ./knowl/eq-contraction.html ./knowl/eq-u-contraction.html">
+\begin{equation*}
+\sup_{ [x_{n-1}, x_n]} f^+ - \eps \leq f^+(y) \leq \sup_{ [x_{n-1}, x_n]} f^+.
+\end{equation*}
+</div>Similarly there exists <span class="process-math">\(z \in [x_{n-1}, x_n]\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-eps-riemann.html ./knowl/eq-u-contraction.html ./knowl/prop-alt-sup.html ./knowl/eq-contraction.html ./knowl/eq-u-contraction.html">
+\begin{equation*}
+\inf_{ [x_{n-1}, x_n]} f^+ \leq f^+(z) \leq \inf_{ [x_{n-1}, x_n]} f^+ +  \eps.
+\end{equation*}
+</div>Hence by the triangle inequality and <a href="" class="xref" data-knowl="./knowl/eq-contraction.html" title="Equation 9.3">(9.3)</a> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-eps-riemann.html ./knowl/eq-u-contraction.html ./knowl/prop-alt-sup.html ./knowl/eq-contraction.html ./knowl/eq-u-contraction.html">
+\begin{align*}
+\sup_{ [x_{n-1}, x_n]} f^+ - \inf_{ [x_{n-1}, x_n]} f^+
+\amp \leq |f^+(y) - f^+(z)| +2\eps\\
+\amp\leq |f(y)-f(z)| + 2\eps\\\\
+\amp\leq \sup_{ [x_{n-1}, x_n]} f - \inf_{ [x_{n-1}, x_n]} f+2\eps.
+\end{align*}
+</div>Since this holds for arbitrary <span class="process-math">\(\eps \gt 0\text{,}\)</span> we deduce <a href="" class="xref" data-knowl="./knowl/eq-u-contraction.html" title="Equation 9.2">(9.2)</a>.</article><span class="incontext"><a href="week-9.html#proof-72" class="internal">in-context</a></span>
+</body>
+</html>

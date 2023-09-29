@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="hiddenproof">Consider the subdivision of <span class="process-math">\([a,b]\)</span> given by <span class="process-math">\(x_n := a + n\)</span> for <span class="process-math">\(n = 0,1,\dots, b-a\text{.}\)</span> Since <span class="process-math">\(f\)</span> is decreasing, for each <span class="process-math">\(1\leq n\leq b-a\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sup_{[x_{n-1}, x_n]} f = f(x_{n-1})\quad \text{and}\quad \inf_{[x_{n-1}, x_n]} f = f(x_{n}).
+\end{equation*}
+</div>Therefore<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+U(f;x_0, \dots, x_{b-a})\amp =  \sum_{n=1}^{b-a} f(a+n-1),\\
+L(f;x_0, \dots, x_{b-a}) \amp =\sum_{n=1}^{b-a} f(a+n).
+\end{align*}
+</div>Taking an infimum gives<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\int_a^b f = U(f;[a,b]) \leq \sum_{n=a}^{b-1} f(n).
+\end{equation*}
+</div>Taking a supremum gives<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\int_a^b f = L(f;[a,b]) \geq \sum_{n=a+1}^{b} f(n).
+\end{equation*}
+</div>The desired inequalities follow.</article></body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="hiddenproof"><p>Since products of Riemann integrable functions are integrable (<a href="" class="xref" data-knowl="./knowl/thm-int-mult.html" title="Theorem 9.13: Riemann integrable functions are closed under multiplication">Theorem 9.13</a>) and indicators of intervals are integrable (<a href="" class="xref" data-knowl="./knowl/prop-indicator-interval.html" title="Proposition 9.18: Indicator of an interval">Proposition 9.18</a>), the function <span class="process-math">\(f1_{(c,d)}\)</span> is Riemann integrable on <span class="process-math">\([a, b]\text{.}\)</span> By Riemann sum approximation (<a href="" class="xref" data-knowl="./knowl/prop-eps-riemann.html" title="Proposition 8.23: Epsilon characterisation of Riemann integrability">Proposition 8.23</a>), for any <span class="process-math">\(\eps \gt 0\)</span> there exists a subdivision <span class="process-math">\(a = x_0 \lt  \dots \lt  x_N = b\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-mult.html ./knowl/prop-indicator-interval.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/prop-int-finite-points.html">
+\begin{equation}
+U(f1_{(c,d)}; x_0, \dots, x_N) - \eps \leq \int_a^bf1_{(c,d)}  \leq L(f1_{(c,d)}; x_0, \dots, x_N) + \eps.\tag{9.6}
+\end{equation}
+</div>
+<p class="continuation">Since refining a subdivision does not increase the upper sum and does not decrease the lower sum (<a href="" class="xref" data-knowl="./knowl/prop-mono-riemann-refine.html" title="Proposition 8.21: Riemann sums are monotone with respect to refinements">Proposition 8.21</a>), we may assume that the subdivision <span class="process-math">\(a = x_0 \lt  \dots \lt  x_N = b\)</span> contains <span class="process-math">\(c\)</span> and <span class="process-math">\(d\text{.}\)</span> Let <span class="process-math">\(m \lt  n\)</span> be such that <span class="process-math">\(x_m = c\)</span> and <span class="process-math">\(x_n = d\text{.}\)</span> Notice that <span class="process-math">\(c= x_m \lt  \dots \lt  x_n = d\)</span> is a subdivision of <span class="process-math">\([c,d]\text{.}\)</span> Moreover</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-mult.html ./knowl/prop-indicator-interval.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/prop-int-finite-points.html">
+\begin{gather*}
+U(f1_{(c,d)}; x_0, \dots, x_N) = U(f1_{(c,d)};x_n, \dots, x_m),\\
+L(f1_{(c,d)}; x_0, \dots, x_N) = L(f1_{(c,d)};x_n, \dots, x_m).
+\end{gather*}
+</div>
+<p class="continuation">Thus for every <span class="process-math">\(\eps \gt 0\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-mult.html ./knowl/prop-indicator-interval.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/prop-int-finite-points.html">
+\begin{equation*}
+U(f1_{(c,d)}; [c,d])-\eps \leq \int_a^b f1_{(c,d)} \leq L(f1_{(c,d)}; [c,d])+\eps
+\end{equation*}
+</div>
+<p class="continuation">Since this holds for every <span class="process-math">\(\eps \gt 0\text{,}\)</span> we deduce that <span class="process-math">\(f1_{(c,d)}\)</span> is Riemann integrable on <span class="process-math">\([c,d]\)</span> with</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-mult.html ./knowl/prop-indicator-interval.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/prop-int-finite-points.html">
+\begin{equation*}
+\int_c^df1_{(c,d)} = \int_a^b f1_{(c,d)}
+\end{equation*}
+</div>
+<p class="continuation">Since altering a function on a finite set of points does not affect the integral (<a href="" class="xref" data-knowl="./knowl/prop-int-finite-points.html" title="Proposition 9.17: Integrals agree up to finite point sets">Proposition 9.17</a>) we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-mult.html ./knowl/prop-indicator-interval.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/prop-int-finite-points.html">
+\begin{equation*}
+\int_a^b f1_{[c,d]} = \int_a^b f1_{(c,d)} = \int_c^d f1_{(c,d)} =  \int_c^d f .
+\end{equation*}
+</div>
+<p>To deduce <a href="" class="xref" data-knowl="./knowl/eq-split-integral.html" title="Equation 9.5">(9.5)</a> we use the above, together with linearity of integration (<a href="" class="xref" data-knowl="./knowl/thm-int-add.html" title="Theorem 9.6: Additivity of integration">Theorem 9.6</a>) and the fact that indicators of points have zero integral (<a href="" class="xref" data-knowl="./knowl/prop-int-finite-points.html" title="Proposition 9.17: Integrals agree up to finite point sets">Proposition 9.17</a>) to yield</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-split-integral.html ./knowl/thm-int-add.html ./knowl/prop-int-finite-points.html">
+\begin{align*}
+\int_a^b f \amp = \int_a^b f(1_{[a,c)} + 1_{[c,b]}) = \int_a^b f1_{[a,c)} + \int_a^b1_{[c,b]}\\
+\amp = \int_a^b f1_{[a,c]} + \int_a^b1_{[c,b]} = \int_a^c f + \int_c^bf. 
+\end{align*}
+</div></article></body>
+</html>

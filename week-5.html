@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Week 5</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-article ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\bigset}[1]{\bigl\{ #1 \bigr\}}
+\newcommand{\Bigset}[1]{\Bigl\{ #1 \Bigr\}}
+\newcommand{\biggset}[1]{\biggl\{ #1 \biggr\}}
+\newcommand{\Biggset}[1]{\Biggl\{ #1 \Biggr\}}
+\newcommand{\abs}[1]{\left| #1\right|}
+\newcommand{\bigabs}[1]{\bigl| #1 \bigr|}
+\newcommand{\Bigabs}[1]{\Bigl| #1 \Bigr|}
+\newcommand{\biggabs}[1]{\biggl| #1 \biggr|}
+\newcommand{\Biggabs}[1]{\Biggl| #1 \Biggr|}
+\newcommand{\sqbrac}[1]{\left[ #1 \right]}
+\newcommand{\bigsqbrac}[1]{\bigl[ #1 \bigr]}
+\newcommand{\Bigsqbrac}[1]{\Bigl[ #1 \Bigr]}
+\newcommand{\biggsqbrac}[1]{\biggl[ #1 \biggr]}
+\newcommand{\Biggsqbrac}[1]{\Biggl[ #1 \Biggr]}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\littleceil}[1]{\lceil #1 \rceil}
+\newcommand{\littlefloor}[1]{\lfloor #1 \rfloor}
+\newcommand{\bigfloor}[1]{\bigl\lfloor #1 \bigr\rfloor}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\bigbrac}[1]{\bigl( #1 \bigr)}
+\newcommand{\Bigbrac}[1]{\Bigl( #1 \Bigr)}
+\newcommand{\biggbrac}[1]{\biggl( #1 \biggr)}
+\newcommand{\Biggbrac}[1]{\Biggl( #1 \Biggr)}
+
+\newcommand{\recip}[1]{\frac{1}{#1}}
+\newcommand{\trecip}[1]{\tfrac{1}{#1}}
+
+\newcommand{\intd}{\mathrm{d}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\hash}{\#}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="self-test-210.html"><span class="title">MATH210 Real Analysis:</span> <span class="subtitle">Self-Test Questions</span></a></h1>
+<p class="byline">Sean Prendiville</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="week-4.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="self-test-210.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="week-6.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="week-4.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="self-test-210.html" title="Up">Up</a><a class="next-button button toolbar-item" href="week-6.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Introduction</span></a></li>
+<li class="link"><a href="week-1.html" data-scroll="week-1" class="internal"><span class="codenumber">1</span> <span class="title">Week 1</span></a></li>
+<li class="link"><a href="week-2.html" data-scroll="week-2" class="internal"><span class="codenumber">2</span> <span class="title">Week 2</span></a></li>
+<li class="link"><a href="week-3.html" data-scroll="week-3" class="internal"><span class="codenumber">3</span> <span class="title">Week 3</span></a></li>
+<li class="link"><a href="week-4.html" data-scroll="week-4" class="internal"><span class="codenumber">4</span> <span class="title">Week 4</span></a></li>
+<li class="link active"><a href="week-5.html" data-scroll="week-5" class="internal"><span class="codenumber">5</span> <span class="title">Week 5</span></a></li>
+<li class="link"><a href="week-6.html" data-scroll="week-6" class="internal"><span class="codenumber">6</span> <span class="title">Week 6</span></a></li>
+<li class="link"><a href="week-7.html" data-scroll="week-7" class="internal"><span class="codenumber">7</span> <span class="title">Week 7</span></a></li>
+<li class="link"><a href="week-8.html" data-scroll="week-8" class="internal"><span class="codenumber">8</span> <span class="title">Week 8</span></a></li>
+<li class="link"><a href="week-9.html" data-scroll="week-9" class="internal"><span class="codenumber">9</span> <span class="title">Week 9</span></a></li>
+<li class="link"><a href="week-10.html" data-scroll="week-10" class="internal"><span class="codenumber">10</span> <span class="title">Week 10</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="week-5"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5</span> <span class="title">Week 5</span>
+</h2>
+<article class="exercise exercise-like" id="exercise-18"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-18"><h3 class="heading">
+<span class="type">Lecture</span><span class="space"> </span><span class="codenumber">5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Multiplying series.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-18"><article class="exercise exercise-like"><article class="task exercise-like" id="task-46"><h4 class="heading"><span class="codenumber">(a)</span></h4>State and prove the "Cauchy product formula" for multiplying two series.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-46" id="solution-46"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-46"><div class="solution solution-like">
+<article class="theorem theorem-like" id="thm-mult-series"><h5 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Multiplying series.</span>
+</h5>
+<p id="p-66">Suppose that the series <span class="process-math">\(\sum_{n=0}^\infty a_n\)</span> and <span class="process-math">\(\sum_{n=0}^\infty b_n\)</span> are both absolutely convergent. Then we have the <em class="emphasis">Cauchy product formula</em></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="eq-mult-series">
+\begin{equation}
+\brac{\sum_{n=0}^\infty a_n}\brac{\sum_{n=0}^\infty b_n} = \sum_{n=0}^\infty \brac{\sum_{r+s = n} a_rb_s}.\tag{5.1}
+\end{equation}
+</div>
+<p class="continuation">Furthermore the right-hand side is absolutely convergent.</p>
+<p id="p-67">Here we are using the notation</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{r+s = n} a_rb_s := \sum_{r=0}^n a_rb_{n-r} = a_0b_n + a_1b_{n-1} + \dots + a_nb_0\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-28"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-28"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-28"><article class="hiddenproof">By the multiplication rule for limits (<a href="" class="xref" data-knowl="./knowl/prop-mult-rule.html" title="Proposition 2.10: Multiplication rule">Proposition 2.10</a>) we have that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html">
+\begin{equation*}
+\brac{\sum_{n=0}^\infty a_n }\brac{\sum_{n=0}^\infty b_n} = \lim_{N\to \infty } \brac{\brac{\sum_{n=0}^N a_n}\brac{\sum_{n=0}^N b_n}}.
+\end{equation*}
+</div>One can check (using the addition rule for limits <a href="" class="xref" data-knowl="./knowl/prop-add-rule.html" title="Proposition 2.8: Addition rule">Proposition 2.8</a>), that it therefore suffices to show that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html" id="cauchy-to-prove">
+\begin{equation}
+\brac{\sum_{n=0}^N a_n}\brac{\sum_{n=0}^N b_n} - \sum_{n=0}^N \brac{\sum_{r+s = n} a_rb_s} \to 0 \quad \text{ as }\quad N \to \infty \text{.}\tag{5.2}
+\end{equation}
+</div>Our proof of <a href="" class="xref" data-knowl="./knowl/cauchy-to-prove.html" title="Equation 5.2">(5.2)</a> starts by multiplying out the partial sums and grouping the terms <span class="process-math">\(a_rb_s\)</span> according to the value of <span class="process-math">\(r+s\text{,}\)</span> as follows<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html" id="md-5">
+\begin{align*}
+\brac{\sum_{n=0}^N a_n}\brac{\sum_{n=0}^N b_n} \amp = \sum_{0\leq r,s\leq N} a_rb_s = \sum_{n=0}^{2N} \ \sum_{\substack{0 \leq r, s \leq N\\ r+s = n}} a_rb_s \\
+\amp = \sum_{n=0}^{N}\ \sum_{r+s = n} a_rb_s + \sum_{n=N+1}^{2N} \ \sum_{\substack{0 \leq r, s \leq N\\ r+s = n}} a_rb_s\text{.}
+\end{align*}
+</div>To prove <a href="" class="xref" data-knowl="./knowl/cauchy-to-prove.html" title="Equation 5.2">(5.2)</a> it therefore suffices to prove that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html">
+\begin{equation*}
+\sum_{n=N+1}^{2N} \ \sum_{\substack{0 \leq r, s \leq N\\ r+s = n}} a_rb_s \to 0 \quad\text{ as } \quad N \to \infty.
+\end{equation*}
+</div>We observe that if <span class="process-math">\(0 \leq r, s \leq N\)</span> and <span class="process-math">\(r+s = n\)</span> for some <span class="process-math">\(n \in (N, 2N]\)</span> then either <span class="process-math">\(r \geq N/2\)</span> or <span class="process-math">\(s \geq N/2\text{.}\)</span> Hence, on writing<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html">
+\begin{equation*}
+A:=\sum_{n=0}^\infty |a_n| \quad \text{and}\quad  B:=\sum_{n=0}^\infty |b_n|,
+\end{equation*}
+</div>the triangle inequality and the inequality rule (<a href="" class="xref" data-knowl="./knowl/prop-ineq-rule.html" title="Proposition 2.2">Proposition 2.2</a>) together give that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html" id="md-6">
+\begin{align*}
+\abs{\sum_{n=N+1}^{2N} \ \sum_{\substack{0 \leq r, s \leq N\\ r+s = n}} a_rb_s}
+\amp \leq \sum_{r = \ceil{\frac{N}{2}}}^N |a_r|\sum_{s=0}^N |b_s|+ \sum_{r=0}^N |a_r|\sum_{s = \ceil{\frac{N}{2}}}^N |b_s|\\
+\amp \leq  B\sum_{r = \ceil{\frac{N}{2}}}^\infty |a_r|+  A\sum_{s = \ceil{\frac{N}{2}}}^\infty |b_s|\text{.}
+\end{align*}
+</div>By absolute convergence we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html">
+\begin{equation*}
+\sum_{r =N}^\infty |a_r| = \sum_{r=0}^\infty|a_r| - \sum_{n=0}^{N-1} |a_r| \to 0 \text{ as } N \to \infty.
+\end{equation*}
+</div>Since convergence is preserved on passing to a subsequence (<a href="" class="xref" data-knowl="./knowl/prop-subseq-conv.html" title="Proposition 3.11: Limits are preserved on passing to subsequences">Proposition 3.11</a>) we deduce that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html">
+\begin{equation*}
+\sum_{r = \ceil{\frac{N}{2}}}^\infty |a_r| \to 0 \text{ as } N \to \infty.
+\end{equation*}
+</div>Therefore, by the multiplication rule for limits (<a href="" class="xref" data-knowl="./knowl/prop-mult-rule.html" title="Proposition 2.10: Multiplication rule">Proposition 2.10</a>) and using the fact that <span class="process-math">\(B = \sum_s |b_s|\)</span> is a fixed finite real number, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html">
+\begin{equation*}
+B\sum_{r = \ceil{\frac{N}{2}}}^\infty |a_r| \to 0 \text{ as } N \to \infty.
+\end{equation*}
+</div>The proof is complete on employing a similar argument to show that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html">
+\begin{equation*}
+A\sum_{s = \ceil{\frac{N}{2}}}^\infty |b_s| \to 0 \text{ as } N \to \infty.
+\end{equation*}
+</div></article></div>
+</div></div>
+</div></article></article></div>
+<article class="exercise exercise-like" id="exercise-19"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-19"><h3 class="heading">
+<span class="type">Lecture</span><span class="space"> </span><span class="codenumber">5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Power series.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-19"><article class="exercise exercise-like"><article class="task exercise-like" id="task-47"><h4 class="heading"><span class="codenumber">(a)</span></h4>Define the <em class="emphasis">power series</em> associated to a real sequence.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-47" id="solution-47"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-47"><div class="solution solution-like"><article class="definition definition-like" id="definition-10"><h5 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.4</span><span class="period">.</span><span class="space"> </span><span class="title">Power series.</span>
+</h5> The <em class="emphasis">power series in <span class="process-math">\(x\)</span></em> associated to the sequence <span class="process-math">\((a_n)_{n=0}^\infty\)</span> is the series<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=0}^\infty a_n x^n,
+\end{equation*}
+</div>provided that this limit exists.</article></div></div>
+</div></article><article class="task exercise-like" id="task-48"><h4 class="heading"><span class="codenumber">(b)</span></h4>State and prove the existence of a <em class="emphasis">radius of convergence</em> for a power series (your statement should include a formula for the radius of convergence).<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-48" id="solution-48"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-48"><div class="solution solution-like">
+<article class="theorem theorem-like" id="thm-radius"><h5 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.5</span><span class="period">.</span><span class="space"> </span><span class="title">Existence of radius of convergence.</span>
+</h5>Let <span class="process-math">\((a_n)_{n=0}^\infty\)</span> be a sequence of real numbers. There exists a unique <span class="process-math">\(R \in [0, \infty]\text{,}\)</span> the <em class="emphasis">radius of convergence</em>, for which both of the following hold. <ol class="decimal">
+<li id="item-power-conv"><p id="p-derived-item-power-conv">If <span class="process-math">\(|x| \lt  R\)</span> then the power series <span class="process-math">\(\displaystyle \sum_{n=0}^\infty a_n x^n\)</span> is absolutely convergent.</p></li>
+<li id="item-power-div"><p id="p-derived-item-power-div">If <span class="process-math">\(|x| \gt R\)</span> then the power series <span class="process-math">\(\displaystyle \sum_{n=0}^\infty a_n x^n\)</span> does not converge.</p></li>
+</ol> Moreover, the radius of convergence <span class="process-math">\(R\)</span> is given by the formula<div class="displaymath process-math" data-contains-math-knowls="" id="eq-radius">
+\begin{equation}
+R= \sup\set{ r \geq 0 : \lim_{n\to \infty} |a_n|r^n = 0}.\tag{5.3}
+\end{equation}
+</div></article><article class="hiddenproof" id="proof-29"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-29"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-29"><article class="hiddenproof"><p id="p-68">Let <span class="process-math">\(R\)</span> denote the quantity in <a href="" class="xref" data-knowl="./knowl/eq-radius.html" title="Equation 5.3">(5.3)</a>. If <span class="process-math">\(|x| \gt R\)</span> then <span class="process-math">\(a_n x^n \not \to 0\text{,}\)</span> hence by the <span class="process-math">\(n\)</span>th term test (<a href="" class="xref" data-knowl="./knowl/prop-tail.html" title="Proposition 4.8: nth term test">Proposition 4.8</a>) the series  <span class="process-math">\(\sum_n a_n x^n\)</span> does not converge.</p>
+<p id="p-69">Suppose that <span class="process-math">\(|x| \lt  R\text{.}\)</span> Since decreasing a supremum gives a non upper bound  (<a href="" class="xref" data-knowl="./knowl/prop-alt-sup.html" title="Proposition 1.7: Epsilon characterisation of the supremum">Proposition 1.7</a>), there exists <span class="process-math">\(r \in (|x|, R]\)</span> for which <span class="process-math">\(|a_n| r^n \to 0\text{.}\)</span> The sequence <span class="process-math">\(|a_n| r^n\)</span> must be bounded, since convergence implies boundedness (<a href="" class="xref" data-knowl="./knowl/prop-conv-bounded.html" title="Proposition 1.15: Convergent sequences are bounded">Proposition 1.15</a>). Hence there exists <span class="process-math">\(M&gt;0\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-alt-sup.html ./knowl/prop-conv-bounded.html ./knowl/eg-geo-series.html ./knowl/prop-oh-test.html">
+\begin{equation*}
+|a_n x^n| = |a_n| r^n \brac{|x|/r}^n \leq M|x|^n/r^n.
+\end{equation*}
+</div>
+<p class="continuation">Since <span class="process-math">\(|x|/r \lt  1\text{,}\)</span> the geometric series <span class="process-math">\(\sum_n M(|x|/r)^n\)</span> is absolutely convergent (<a href="" class="xref" data-knowl="./knowl/eg-geo-series.html" title="Example 4.4: Geometric series">Example 4.4</a>). Hence by the comparison test (<a href="" class="xref" data-knowl="./knowl/prop-oh-test.html" title="Proposition 4.9: Comparison test">Proposition 4.9</a>) the series <span class="process-math">\(\sum_n a_n x^n\)</span> is absolutely convergent.</p>
+<p id="p-70">For uniqueness, suppose that <span class="process-math">\(R_1 \lt  R_2\)</span> both satisfy items <a href="" class="xref" data-knowl="./knowl/item-power-conv.html" title="Item 5.3.1">Item 5.3.1</a> and <a href="" class="xref" data-knowl="./knowl/item-power-div.html" title="Item 5.3.2">Item 5.3.2</a>. Setting <span class="process-math">\(r := \recip 2(R_1+R_2)\)</span> we have <span class="process-math">\(R_1 \lt  r \lt  R_2\text{.}\)</span> Hence by item <a href="" class="xref" data-knowl="./knowl/item-power-conv.html" title="Item 5.3.1">Item 5.3.1</a> we have <span class="process-math">\(\sum_n |a_n|r^n \lt  \infty\)</span> and by item <a href="" class="xref" data-knowl="./knowl/item-power-div.html" title="Item 5.3.2">Item 5.3.2</a> we have <span class="process-math">\(\sum_n |a_n|r^n = \infty\text{,}\)</span> a contradiction.</p></article></div>
+</div></div>
+</div></article></article></div>
+<article class="exercise exercise-like" id="exercise-20"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-20"><h3 class="heading">
+<span class="type">Lecture</span><span class="space"> </span><span class="codenumber">5.6</span><span class="period">.</span><span class="space"> </span><span class="title">The exponential function.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-20"><article class="exercise exercise-like"><article class="task exercise-like" id="ex-exp-def"><h4 class="heading"><span class="codenumber">(a)</span></h4>Define the exponential function in terms of a power series and justify why this power series converges.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-49" id="solution-49"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-49"><div class="solution solution-like">
+<article class="definition definition-like" id="def-exp"><h5 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.7</span><span class="period">.</span><span class="space"> </span><span class="title">Exponential function.</span>
+</h5> The exponential function <span class="process-math">\(\exp : \R \to \R\)</span> is given by the absolutely convergent power series<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\exp(x) := \sum_{n=0}^\infty \frac{x^n}{n!}.
+\end{equation*}
+</div>We define the real number <span class="process-math">\(e \in \R\)</span> via the series<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+e := \exp(1) = \sum_{n=0}^\infty \frac{1}{n!}.
+\end{equation*}
+</div></article><article class="proposition theorem-like" id="prop-exp-radius"><h5 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.8</span><span class="period">.</span><span class="space"> </span><span class="title">Radius of convergence for the exponential function.</span>
+</h5>
+<p id="p-71">The power series</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=0}^\infty \frac{x^n}{n!}
+\end{equation*}
+</div>
+<p class="continuation">has infinite radius of convergence.</p>
+<p id="p-72">In particular, the exponential function <span class="process-math">\(\exp(x)\)</span> is well-defined at all <span class="process-math">\(x \in \R\text{.}\)</span></p></article><article class="hiddenproof" id="proof-30"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-30"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-30"><article class="hiddenproof">We show absolute convergence for all <span class="process-math">\(x \neq 0\)</span>  by applying the ratio test (<a href="" class="xref" data-knowl="./knowl/cor-ratio.html" title="Corollary 4.11: Ratio test">Corollary 4.11</a>) to the positive sequence <span class="process-math">\(a_n := |x|^n/n!\text{.}\)</span> (Absolute convergence when <span class="process-math">\(x = 0\)</span> follows from the fact that the series equals <span class="process-math">\(a_0\text{.}\)</span>) Enacting the ratio test (<a href="" class="xref" data-knowl="./knowl/cor-ratio.html" title="Corollary 4.11: Ratio test">Corollary 4.11</a>), we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-ratio.html ./knowl/cor-ratio.html">
+\begin{equation*}
+\lim_{n\to \infty}\frac{a_{n+1}}{a_n} = \lim_{n\to \infty}\frac{|x|}{n+1} = 0 \lt  1.
+\end{equation*}
+</div></article></div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-50"><h4 class="heading"><span class="codenumber">(b)</span></h4>State and prove the multiplication rule for the exponential function.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-50" id="solution-50"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-50"><div class="solution solution-like">
+<article class="proposition theorem-like" id="prop-exp-add-law"><h5 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.9</span><span class="period">.</span>
+</h5> The exponential function satisfies the identity<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\exp(x+y) = \exp(x)\exp(y), \qquad (\forall x,y \in \R).
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-31"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-31"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-31"><article class="hiddenproof">By the multiplication rule for absolutely convergent series (<a href="" class="xref" data-knowl="./knowl/thm-mult-series.html" title="Theorem 5.2: Multiplying series">Theorem 5.2</a>) we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mult-series.html">
+\begin{equation*}
+\exp(x)\exp(y) = \sum_{n=0}^\infty \sum_{r+s= n} \frac{x^ry^s}{r!s!}
+\end{equation*}
+</div>By the binomial theorem<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mult-series.html">
+\begin{equation*}
+\sum_{r+s = n} \frac{x^ry^s}{r!s!} = \sum_{r=0}^n \frac{x^r y^{n-r}}{r!(n-r)!}= 
+\recip{n!}\sum_{r=0}^n \binom{n}{r}x^r y^{n-r} = \recip{n!} (x+y)^n.
+\end{equation*}
+</div></article></div>
+</div></div>
+</div></article></article></div>
+<article class="exercise exercise-like" id="exercise-21"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-21"><h3 class="heading">
+<span class="type">Lecture</span><span class="space"> </span><span class="codenumber">5.10</span><span class="period">.</span><span class="space"> </span><span class="title">Limits of functions.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-21"><article class="exercise exercise-like"><article class="task exercise-like" id="task-51"><h4 class="heading"><span class="codenumber">(a)</span></h4>Given a real-valued function <span class="process-math">\(f\)</span> on a real domain<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-16" id="fn-16"><sup> 1 </sup></a>, define the meaning of the statement:<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x) \to y \quad \text{as} \quad x \to x_0.
+\end{equation*}
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-51" id="solution-51"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-51"><div class="solution solution-like"><article class="definition definition-like" id="def-fn-lim"><h5 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.11</span><span class="period">.</span><span class="space"> </span><span class="title">Sequential definition of function limit.</span>
+</h5> Given a real-valued function <span class="process-math">\(f\)</span> on a real domain, we write<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x) \to y \quad \text{as} \quad x \to x_0
+\end{equation*}
+</div>if, for any sequence <span class="process-math">\((a_n)_n\)</span> in the domain<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-17" id="fn-17"><sup> 2 </sup></a> of <span class="process-math">\(f\)</span> we have the implication<div class="displaymath process-math" data-contains-math-knowls="" id="eq-seq-cts-def">
+\begin{equation}
+a_n \to x_0 \quad \implies \quad f(a_n) \to y.\tag{5.4}
+\end{equation}
+</div>If there is only <em class="emphasis">one</em> such value of <span class="process-math">\(y\text{,}\)</span> then we write<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y = \lim_{x\to x_0} f(x)
+\end{equation*}
+</div></article></div></div>
+</div></article></article></div>
+<article class="exercise exercise-like" id="exercise-22"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-22"><h3 class="heading">
+<span class="type">Lecture</span><span class="space"> </span><span class="codenumber">5.12</span><span class="period">.</span><span class="space"> </span><span class="title">Continuity.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-22"><article class="exercise exercise-like"><article class="task exercise-like" id="task-52"><h4 class="heading"><span class="codenumber">(a)</span></h4>Define what it means for a real-valued function on a real domain to be continuous at a point. Define what it means for the function to be continuous. Give an example and a non-example.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-52" id="solution-52"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-52"><div class="solution solution-like">
+<article class="definition definition-like" id="def-cts"><h5 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.13</span><span class="period">.</span><span class="space"> </span><span class="title">Continuous.</span>
+</h5> Let <span class="process-math">\(f : D \to \R\)</span> be a real valued function on a real domain <span class="process-math">\(D \subset \R\text{.}\)</span> Let <span class="process-math">\(x_0\in D\text{.}\)</span> We say that <span class="process-math">\(f : D \to \R\)</span> is <em class="emphasis">continuous at <span class="process-math">\(x_0\)</span></em> if <span class="process-math">\(f(x) \to f(x_0)\)</span> as <span class="process-math">\(x \to x_0\text{.}\)</span> We say that <span class="process-math">\(f : D \to \R\)</span> is <em class="emphasis">continuous</em> if it is continuous at all <span class="process-math">\(x_0 \in D_0\text{.}\)</span></article><article class="example example-like" id="eg-const-cts"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-const-cts"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.14</span><span class="period">.</span><span class="space"> </span><span class="title">Constant functions are continuous.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-const-cts"><article class="example example-like"> Let <span class="process-math">\(f : D \to \R\)</span> with <span class="process-math">\(D \subset \R\text{.}\)</span> Suppose that <span class="process-math">\(f\)</span> is constant. In other words, there exists <span class="process-math">\(c \in \R\)</span> such that for all <span class="process-math">\(x \in D\)</span> we have <span class="process-math">\(f(x) = c\text{.}\)</span> Then for any sequence <span class="process-math">\((a_n)_n\)</span> in <span class="process-math">\(D\)</span> we have <span class="process-math">\(f(a_n) \to c\text{,}\)</span> by <a href="" class="xref" data-knowl="./knowl/eg-const-conv.html" title="Example 1.12: Constant sequences are convergent">Example 1.12</a>. Hence <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\(D\text{.}\)</span></article></div>
+<article class="example example-like" id="eg-id-cts"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-id-cts"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.15</span><span class="period">.</span><span class="space"> </span><span class="title">The identity function is continuous.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-id-cts"><article class="example example-like"> Let <span class="process-math">\(D \subset \R\text{.}\)</span> Define <span class="process-math">\(f : D \to \R\)</span> by <span class="process-math">\(f(x) := x\)</span> for all <span class="process-math">\(x \in D\text{.}\)</span> Then for any sequence <span class="process-math">\((a_n)_n\)</span> in <span class="process-math">\(D\)</span> with <span class="process-math">\(a_n \to x_0\)</span> we have <span class="process-math">\(f(a_n) = a_n \to x_0 = f(x_0)\text{.}\)</span> Hence <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\(D\text{.}\)</span></article></div>
+<article class="example example-like" id="eg-abs-cts"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-abs-cts"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.16</span><span class="period">.</span><span class="space"> </span><span class="title">The absolute value function is continuous.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-abs-cts"><article class="example example-like"> By the triangle inequality, for any <span class="process-math">\(x, x_0 \in \R\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-eps-delta-cts.html">
+\begin{equation*}
+|x-x_0| \leq \eps \implies ||x|-|x_0|| \leq \eps.
+\end{equation*}
+</div>Hence <a href="" class="xref" data-knowl="./knowl/eq-eps-delta-cts.html" title="Equation 5.5">(5.5)</a> holds for the function <span class="process-math">\(x \mapsto |x|\)</span> on taking <span class="process-math">\(\delta(x_0, \eps) := \eps\text{.}\)</span></article></div>
+<article class="example example-like" id="eg-dis-cont"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-dis-cont"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.17</span><span class="period">.</span><span class="space"> </span><span class="title">A function discontinuous at a point.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-dis-cont"><article class="example example-like"> Consider the function <span class="process-math">\(f : \R \to \R\)</span> given by<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x) :=
+\begin{cases}
+0 \amp \text{ if } x \leq 0;\\
+1\amp \text{ if } x  \gt0.
+\end{cases}
+\end{equation*}
+</div>We claim that this function is not continuous at <span class="process-math">\(x_0 = 0\text{.}\)</span> In order to have <span class="process-math">\(f(x) \to f(0)\)</span> as <span class="process-math">\(x \to 0\)</span> we need <span class="process-math">\(f(a_n) \to 0\)</span> for <em class="emphasis">all</em> sequences <span class="process-math">\((a_n)_n\)</span> for which <span class="process-math">\(a_n \to 0\text{.}\)</span> Yet <span class="process-math">\(1/n \to 0\)</span> and <span class="process-math">\(f(1/n) \to 1\text{.}\)</span></article></div>
+<article class="example example-like" id="eg-dis-cont-everywhere"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-dis-cont-everywhere"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.18</span><span class="period">.</span><span class="space"> </span><span class="title">A function discontinuous everywhere.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-dis-cont-everywhere"><article class="example example-like"> Consider the function <span class="process-math">\(f : \R \to \R\)</span> given by<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-sandwich.html">
+\begin{equation*}
+f(x) :=
+\begin{cases}
+1 \amp \text{ if } x \in \Q;\\
+0\amp \text{ if } x  \in \R \setminus\Q.
+\end{cases}
+\end{equation*}
+</div>We claim that this function is not continuous at any <span class="process-math">\(x_0 \in \R\text{.}\)</span> Notice, however, that the restrictions<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-18" id="fn-18"><sup> 3 </sup></a><span class="process-math">\(f|_{\Q}\)</span> and <span class="process-math">\(f|_{\R\setminus\Q}\)</span> are both continuous, since they are constant functions. The key observation in establishing our claim is to note that every real number <span class="process-math">\(x_0\)</span> has a sequence of rationals <span class="process-math">\(q_n \in \Q\)</span> such that <span class="process-math">\(q_n \to x_0\text{.}\)</span> For instance, one may take<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-sandwich.html">
+\begin{equation*}
+q_n := \frac{\floor{nx_0}}{n} \in \left(x_0 -\frac{1}{n}, x_0\right]\text{,}
+\end{equation*}
+</div>and employ the two-sided sandwich rule (<a href="" class="xref" data-knowl="./knowl/prop-sandwich.html" title="Proposition 2.6: Sandwich rule">Proposition 2.6</a>). Let us use this to show that our function is not continuous at <span class="process-math">\(x_0\text{.}\)</span> First suppose that <span class="process-math">\(x_0\in \R\setminus\Q\text{.}\)</span> It follows that <span class="process-math">\(f(q_n) = 1 \not\to 0 = f(x_0)\text{.}\)</span> Next suppose that <span class="process-math">\(x_0 \in \Q\text{.}\)</span> This time, let <span class="process-math">\(q_n \in \Q\)</span> be a sequence of rationals such that <span class="process-math">\(q_n \to x_0+ \sqrt{2}\text{.}\)</span> Notice that for any <span class="process-math">\(n \in \N\)</span> we have <span class="process-math">\(q_n-\sqrt{2} \notin \Q\text{,}\)</span> otherwise <span class="process-math">\(\sqrt{2} \in \Q\)</span> (a contradiction). Also <span class="process-math">\(q_n -\sqrt{2} \to x_0\text{.}\)</span> Yet <span class="process-math">\(f(q_n-\sqrt{2}) = 0 \not\to 1 = f(x_0)\text{.}\)</span></article></div>
+</div></div>
+</div></article><article class="task exercise-like" id="ex-eps-delta"><h4 class="heading"><span class="codenumber">(b)</span></h4>State and prove the "epsilon-delta" characterisation of continuity at a point.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-53" id="solution-53"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-53"><div class="solution solution-like">
+<article class="proposition theorem-like" id="cor-eps-delta-cts"><h5 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.19</span><span class="period">.</span><span class="space"> </span><span class="title">Epsilon-delta characterisation of continuity.</span>
+</h5>Let <span class="process-math">\(f : D \to \R\)</span> be a real valued function on a real domain <span class="process-math">\(D \subset \R\)</span> and let <span class="process-math">\(x_0\in D\text{.}\)</span> Then <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0\)</span> if and only if<div class="displaymath process-math" data-contains-math-knowls="" id="mdn-5">
+\begin{align}
+(\forall \eps \gt 0)(\exists \delta=\delta(x_0,\eps)  \gt 0)\amp(\forall x \in D)\notag\\
+\amp \bigsqbrac{\ |x-x_0| \leq \delta \implies |f(x)-f(x_0)| \leq \eps\ }.\tag{5.5}
+\end{align}
+</div></article><article class="hiddenproof" id="proof-32"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-32"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-32"><article class="hiddenproof"><p id="p-73">We first prove the "<span class="process-math">\(\impliedby\)</span>" direction. Let <span class="process-math">\((a_n)_n\)</span> be a sequence in <span class="process-math">\(D\)</span> such that <span class="process-math">\(a_n \to x_0\)</span> as <span class="process-math">\(n \to \infty\text{.}\)</span> We are required to prove that <span class="process-math">\(f(a_n) \to f(x_0)\)</span> as <span class="process-math">\(n \to \infty\text{,}\)</span> assuming <a href="" class="xref" data-knowl="./knowl/eq-eps-delta-cts.html" title="Equation 5.5">(5.5)</a>. Fix <span class="process-math">\(\eps \gt0\text{.}\)</span> Then by <a href="" class="xref" data-knowl="./knowl/eq-eps-delta-cts.html" title="Equation 5.5">(5.5)</a> there exists <span class="process-math">\(\delta = \delta(\eps) \gt 0\)</span> such that if <span class="process-math">\(x \in D\)</span> and <span class="process-math">\(|x-x_0| \leq \delta\)</span> then <span class="process-math">\(|f(x)-f(x_0)|\leq \eps\text{.}\)</span> Since <span class="process-math">\(a_n \to x_0\)</span> there exists <span class="process-math">\(N = N(\delta)\)</span> such that for all <span class="process-math">\(n\geq N\)</span> we have <span class="process-math">\(|a_n - x_0| \leq \delta\text{.}\)</span> Hence if <span class="process-math">\(n \geq N(\delta)\)</span> then <span class="process-math">\(|f(a_n)-f(x_0)| \leq \eps\text{.}\)</span> This establishes that <span class="process-math">\(f(a_n) \to f(x_0)\text{.}\)</span></p>
+<p id="p-74">Next we prove the "<span class="process-math">\(\implies\)</span>" direction. To do so we prove the contrapositive. Hence, suppose that the negation of <a href="" class="xref" data-knowl="./knowl/eq-eps-delta-cts.html" title="Equation 5.5">(5.5)</a> holds:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-eps-delta-cts.html" id="md-7">
+\begin{align*}
+(\exists \eps \gt 0)(\forall \delta  \gt 0)\amp(\exists x= x(\delta) \in D)\\
+\amp \bigsqbrac{\ |x-x_0| \leq \delta\quad \text{and}\quad |f(x)-f(x_0)| \gt \eps\ }.
+\end{align*}
+</div>
+<p class="continuation">Taking <span class="process-math">\(\delta = 1/n\)</span> in the above negation, set <span class="process-math">\(a_1:= x(1)\text{,}\)</span> <span class="process-math">\(a_2:=x(1/2)\text{,}\)</span> <span class="process-math">\(a_3 := x(1/3)\text{,}\)</span> etc. Then <span class="process-math">\(a_n \in D\text{,}\)</span> <span class="process-math">\(|a_n - x_0| \leq 1/n\)</span> and <span class="process-math">\(|f(a_n)-f(x_0)| \geq \eps\text{.}\)</span> Hence <span class="process-math">\((a_n)_n\)</span> is a sequence in <span class="process-math">\(D\)</span> with <span class="process-math">\(a_n \to x_0\)</span> and <span class="process-math">\(f(a_n) \not\to f(x_0)\)</span> (as required).</p></article></div>
+</div></div>
+</div></article><article class="task exercise-like" id="ex-non-zero-cts"><h4 class="heading"><span class="codenumber">(c)</span></h4>State and prove how a function which has a point where it is both continuous and positive inherits positivity on a neighbourhood of that point.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-54" id="solution-54"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-54"><div class="solution solution-like">
+<article class="proposition theorem-like" id="cor-non-zero-cts"><h5 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.20</span><span class="period">.</span><span class="space"> </span><span class="title">Non-zero point of continuity implies non-zero on a neighbourhood.</span>
+</h5>Let <span class="process-math">\(f : D \to \R\)</span> be a real-valued function on a real domain <span class="process-math">\(D \subset \R\text{.}\)</span> Suppose that <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0 \in D\)</span> and <span class="process-math">\(f(x_0)\gt 0\text{.}\)</span>  Then there exists <span class="process-math">\(\delta \gt 0\)</span> such that for all <span class="process-math">\(x \in D\cap(x_0-\delta, x_0+\delta)\)</span> we have <span class="process-math">\(f(x) \gt 0
+\text{.}\)</span></article><article class="hiddenproof" id="proof-33"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-33"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-33"><article class="hiddenproof">Take <span class="process-math">\(\eps := \trecip{2} f(x_0)\)</span> in <a href="" class="xref" data-knowl="./knowl/eq-eps-delta-cts.html" title="Equation 5.5">(5.5)</a>. Then by the triangle inequality, for <span class="process-math">\(x \in D\)</span> satisfying <span class="process-math">\(|x-x_0| \leq \delta = \delta(\eps)\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-eps-delta-cts.html">
+\begin{equation*}
+f(x) = f(x_0) + f(x) - f(x_0) \geq f(x_0)- |f(x)-f(x_0)| \geq f(x_0) - \eps = \trecip{2} f(x_0) \gt 0. 
+\end{equation*}
+</div></article></div>
+</div></div>
+</div></article></article></div>
+<p id="p-75">In this week's workshop you will be asked to write-up (under exam conditions) two of the following.</p>
+<ol class="decimal">
+<li id="li-74"><p id="p-derived-li-74">This question is a variant of <a href="" class="xref" data-knowl="./knowl/ex-exp-def.html" title="Task 5.6.a">Task 5.6.a</a>. Without assuming convergence of the series <span class="process-math">\(\sum_{n=0}^\infty \frac{1}{n!}\text{,}\)</span> justify why we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-exp-def.html">
+\begin{equation*}
+\sum_{n=0}^\infty \frac{1}{\floor{n/2}!} \lt \infty.
+\end{equation*}
+</div></p></li>
+<li id="li-75"><p id="p-derived-li-75">This question is a variant of <a href="" class="xref" data-knowl="./knowl/ex-eps-delta.html" title="Task 5.12.b">Task 5.12.b</a>, and as such, you are not permitted to assume the equivalence of the epsilon-delta characterisation of continuity. Let <span class="process-math">\(f:\R \to \R\)</span> and suppose that<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-eps-delta.html">
+\begin{equation*}
+(\forall \eps \gt 0)(\exists \delta=\delta(\eps)  \gt 0)(\forall x \in \R) \bigsqbrac{\ |x| \leq \delta \implies |f(x)| \leq \eps\ }.
+\end{equation*}
+</div>Prove that <span class="process-math">\(f(1/n) \to 0\)</span> as <span class="process-math">\(n \to \infty\)</span> by verifying the definition of what it means for a sequence to converge to 0.</p></li>
+<li id="li-76"><p id="p-derived-li-76">This question is a variant of <a href="" class="xref" data-knowl="./knowl/ex-non-zero-cts.html" title="Task 5.12.c">Task 5.12.c</a>. Let <span class="process-math">\(f:\R \to \R\)</span> be continuous and suppose that <span class="process-math">\(f(0) \gt 0\text{.}\)</span> Prove that there exists <span class="process-math">\(\delta \gt 0\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-non-zero-cts.html">
+\begin{equation*}
+\inf_{|x| \lt \delta} f(x) \gt 0.
+\end{equation*}
+</div></p></li>
+</ol></section><div class="hidden-content tex2jax_ignore" id="hk-fn-16"><div class="fn">i.e. <span class="process-math">\(f: D\to \R\)</span> for some <span class="process-math">\(D \subset \R\)</span>
+</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-17"><div class="fn">So that <span class="process-math">\(a_n\in D\)</span> for all <span class="process-math">\(n\text{.}\)</span>
+</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-18"><div class="fn">Given a function <span class="process-math">\(f:D\to\R\)</span> and a subset of the domain <span class="process-math">\(D_0 \subset D\text{,}\)</span> we define the <em class="emphasis">restriction of <span class="process-math">\(f\)</span> to <span class="process-math">\(D_0\)</span></em>, denoted <span class="process-math">\(f|_{D_0}\)</span> to be the function <span class="process-math">\(D_0\to\R\)</span> defined at each <span class="process-math">\(x \in D_0\)</span> to equal <span class="process-math">\(f(x)\text{.}\)</span>
+</div></div>
+</div></main>
+</div>
+</body>
+</html>

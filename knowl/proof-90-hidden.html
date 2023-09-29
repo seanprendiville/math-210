@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="hiddenproof">Let <span class="process-math">\(\eps \gt 0\text{.}\)</span> By uniform convergence, there exists <span class="process-math">\(N \in \N\)</span> such that for all <span class="process-math">\(n \geq N\)</span> and all <span class="process-math">\(x \in [a,b]\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-sandwich.html ./knowl/prop-sandwich.html">
+\begin{equation*}
+f_n(x)-\eps \leq f(x) \leq f_n(x) + \eps.
+\end{equation*}
+</div>In particular, since <span class="process-math">\(f_n\)</span> is bounded on <span class="process-math">\([a,b]\text{,}\)</span> so is <span class="process-math">\(f\text{.}\)</span> It follows that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-sandwich.html ./knowl/prop-sandwich.html">
+\begin{align*}
+\int_a^bf_n-\eps(b-a) = \int_a^b(f_n-\eps) \leq L(f;[a,b]) \leq U(f; \amp [a,b]) \leq \int_a^b(f_n+\eps)\\
+\amp = \int_a^bf_n+\eps(b-a) .
+\end{align*}
+</div>Hence by two applications of the sandwich rule (<a href="" class="xref" data-knowl="./knowl/prop-sandwich.html" title="Proposition 2.6: Sandwich rule">Proposition 2.6</a> and <a href="" class="xref" data-knowl="./knowl/prop-sandwich.html" title="Proposition 2.6: Sandwich rule">Proposition 2.6</a>) we deduce that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-sandwich.html ./knowl/prop-sandwich.html">
+\begin{equation*}
+U(f;[a,b]) \leq \lim_{n \to \infty} \int_a^b f_n \leq L(f;[a,b]).
+\end{equation*}
+</div>The claimed result follows.</article></body>
+</html>

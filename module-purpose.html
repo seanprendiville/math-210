@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The purpose of this module</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="MATH210 Real Analysis">
+<meta property="book:author" content="Sean Prendiville">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\bigset}[1]{\bigl\{ #1 \bigr\}}
+\newcommand{\Bigset}[1]{\Bigl\{ #1 \Bigr\}}
+\newcommand{\biggset}[1]{\biggl\{ #1 \biggr\}}
+\newcommand{\Biggset}[1]{\Biggl\{ #1 \Biggr\}}
+\newcommand{\abs}[1]{\left| #1\right|}
+\newcommand{\bigabs}[1]{\bigl| #1 \bigr|}
+\newcommand{\Bigabs}[1]{\Bigl| #1 \Bigr|}
+\newcommand{\biggabs}[1]{\biggl| #1 \biggr|}
+\newcommand{\Biggabs}[1]{\Biggl| #1 \Biggr|}
+\newcommand{\sqbrac}[1]{\left[ #1 \right]}
+\newcommand{\bigsqbrac}[1]{\bigl[ #1 \bigr]}
+\newcommand{\Bigsqbrac}[1]{\Bigl[ #1 \Bigr]}
+\newcommand{\biggsqbrac}[1]{\biggl[ #1 \biggr]}
+\newcommand{\Biggsqbrac}[1]{\Biggl[ #1 \Biggr]}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\littleceil}[1]{\lceil #1 \rceil}
+\newcommand{\littlefloor}[1]{\lfloor #1 \rfloor}
+\newcommand{\bigfloor}[1]{\bigl\lfloor #1 \bigr\rfloor}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\bigbrac}[1]{\bigl( #1 \bigr)}
+\newcommand{\Bigbrac}[1]{\Bigl( #1 \Bigr)}
+\newcommand{\biggbrac}[1]{\biggl( #1 \biggr)}
+\newcommand{\Biggbrac}[1]{\Biggl( #1 \Biggr)}
+
+\newcommand{\recip}[1]{\frac{1}{#1}}
+\newcommand{\trecip}[1]{\tfrac{1}{#1}}
+
+\newcommand{\intd}{\mathrm{d}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\hash}{\#}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="self-test-210.html"><span class="title">MATH210 Real Analysis:</span> <span class="subtitle">Self-Test Questions</span></a></h1>
+<p class="byline">Sean Prendiville</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="workshop-instructions.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="frontmatter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="learning-outcomes.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="workshop-instructions.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="frontmatter.html" title="Up">Up</a><a class="next-button button toolbar-item" href="learning-outcomes.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Introduction</span></a></li>
+<li class="link"><a href="week-1.html" data-scroll="week-1" class="internal"><span class="codenumber">1</span> <span class="title">Week 1</span></a></li>
+<li class="link"><a href="week-2.html" data-scroll="week-2" class="internal"><span class="codenumber">2</span> <span class="title">Week 2</span></a></li>
+<li class="link"><a href="week-3.html" data-scroll="week-3" class="internal"><span class="codenumber">3</span> <span class="title">Week 3</span></a></li>
+<li class="link"><a href="week-4.html" data-scroll="week-4" class="internal"><span class="codenumber">4</span> <span class="title">Week 4</span></a></li>
+<li class="link"><a href="week-5.html" data-scroll="week-5" class="internal"><span class="codenumber">5</span> <span class="title">Week 5</span></a></li>
+<li class="link"><a href="week-6.html" data-scroll="week-6" class="internal"><span class="codenumber">6</span> <span class="title">Week 6</span></a></li>
+<li class="link"><a href="week-7.html" data-scroll="week-7" class="internal"><span class="codenumber">7</span> <span class="title">Week 7</span></a></li>
+<li class="link"><a href="week-8.html" data-scroll="week-8" class="internal"><span class="codenumber">8</span> <span class="title">Week 8</span></a></li>
+<li class="link"><a href="week-9.html" data-scroll="week-9" class="internal"><span class="codenumber">9</span> <span class="title">Week 9</span></a></li>
+<li class="link"><a href="week-10.html" data-scroll="week-10" class="internal"><span class="codenumber">10</span> <span class="title">Week 10</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="preface" id="module-purpose"><h2 class="heading hide-type">
+<span class="type">Preface</span> <span class="codenumber"></span> <span class="title">The purpose of this module</span>
+</h2>
+<p id="p-8">One of the purposes of real analysis is to prove that the laws of calculus are valid. Rather than using the "plausible" geometric reasoning you may have met in school mathematics, real analysis aims to reduce the laws of calculus to simple logical statements which can be verified by a human or even a computer. With this foundation in hand, one can go beyond calculus and give logical answers to questions such as the following:</p>
+<ul class="disc">
+<li id="li-31"><p id="p-derived-li-31">What is the density of rational numbers between 0 and 1?<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 4 </sup></a></p></li>
+<li id="li-32"><p id="p-derived-li-32">What is the density of prime numbers in  <span class="process-math">\(1,2, \dots, N\text{?}\)</span><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 5 </sup></a></p></li>
+<li id="li-33"><p id="p-derived-li-33">If one repeatedly samples a statistic, what shape does the resulting bar chart take?<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 6 </sup></a></p></li>
+</ul>
+<p class="continuation">Although these questions are not answered in this course, we lay the logical foundations which allow one to answer these questions in future courses.</p>
+<p id="p-9">If you would like to refresh you knowledge of logic and proof, I recommend reading the first 20 pages of the following <a class="external" href="https://people.maths.bris.ac.uk/~maxmr/analysis1/notes1.pdf" target="_blank">lecture notes</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 7 </sup></a>.</p></section><div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn">The answer is 0, see MATH314 Lebesgue Integration.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn">The answer is <span class="process-math">\(1/\log N\text{,}\)</span> see see MATH328 Number Theory.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn">This question is answered by the "law of large numbers", see MATH313 Probability Theory.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn"><code class="code-inline tex2jax_ignore">people.maths.bris.ac.uk/~maxmr/analysis1/notes1.pdf</code></div></div>
+</div></main>
+</div>
+</body>
+</html>

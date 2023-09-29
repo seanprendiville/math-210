@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>One consequence of this observation any non-empty open interval contains a rational number, since one may approximate the mid-point by a rational. It follows that if <span class="process-math">\(0 \leq x \lt  y \leq 1\)</span> then  <span class="process-math">\((x,y)\)</span> contains a rational <span class="process-math">\(q\in \Q\)</span> and <span class="process-math">\((x+\sqrt{2},y+\sqrt{2})\)</span> also contains a rational <span class="process-math">\(\tilde q \in \Q\text{.}\)</span> Hence <span class="process-math">\((x,y)\)</span> contains both a rational <span class="process-math">\(q\)</span> and an irrational <span class="process-math">\(q-\sqrt{2}\text{.}\)</span> It follows that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html">
+\begin{equation*}
+\sup_{[x,y]} 1_{\Q\cap [0,1]} = 1 \quad \text{and}\quad \inf_{[x,y]} 1_{\Q\cap [0,1]} = 0.
+\end{equation*}
+</div>
+<p class="continuation">Hence for any subdivision <span class="process-math">\(0 = x_0 \lt  \dots \lt  x_N = 1\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html">
+\begin{equation*}
+U(f;x_0,\dots, x_N) = \sum_{n=1}^N (x_n-x_{n-1}) \sup_{[x_{n-1}, x_n]} 1_{\Q\cap [0,1]} = \sum_{n=1}^N (x_n-x_{n-1}) = 1.
+\end{equation*}
+</div>
+<p class="continuation">Similarly</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html">
+\begin{equation*}
+L(f;x_0, \dots, x_N) = 0.
+\end{equation*}
+</div>
+<p class="continuation">Therefore for any subdivision we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html">
+\begin{equation*}
+U(f;x_0,\dots, x_N) - L(f;x_0, \dots, x_N) \geq 1.
+\end{equation*}
+</div>
+<p class="continuation">By <a href="" class="xref" data-knowl="./knowl/prop-eps-riemann.html" title="Proposition 8.23: Epsilon characterisation of Riemann integrability">Proposition 8.23</a> the function <span class="process-math">\(1_{\Q\cap [0,1]}\)</span> is not Riemann integrable.</p>
+<span class="incontext"><a href="week-9.html#p-101" class="internal">in-context</a></span>
+</body>
+</html>

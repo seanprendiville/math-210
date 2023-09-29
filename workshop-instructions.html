@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Workshop instructions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="MATH210 Real Analysis">
+<meta property="book:author" content="Sean Prendiville">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\bigset}[1]{\bigl\{ #1 \bigr\}}
+\newcommand{\Bigset}[1]{\Bigl\{ #1 \Bigr\}}
+\newcommand{\biggset}[1]{\biggl\{ #1 \biggr\}}
+\newcommand{\Biggset}[1]{\Biggl\{ #1 \Biggr\}}
+\newcommand{\abs}[1]{\left| #1\right|}
+\newcommand{\bigabs}[1]{\bigl| #1 \bigr|}
+\newcommand{\Bigabs}[1]{\Bigl| #1 \Bigr|}
+\newcommand{\biggabs}[1]{\biggl| #1 \biggr|}
+\newcommand{\Biggabs}[1]{\Biggl| #1 \Biggr|}
+\newcommand{\sqbrac}[1]{\left[ #1 \right]}
+\newcommand{\bigsqbrac}[1]{\bigl[ #1 \bigr]}
+\newcommand{\Bigsqbrac}[1]{\Bigl[ #1 \Bigr]}
+\newcommand{\biggsqbrac}[1]{\biggl[ #1 \biggr]}
+\newcommand{\Biggsqbrac}[1]{\Biggl[ #1 \Biggr]}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\littleceil}[1]{\lceil #1 \rceil}
+\newcommand{\littlefloor}[1]{\lfloor #1 \rfloor}
+\newcommand{\bigfloor}[1]{\bigl\lfloor #1 \bigr\rfloor}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\bigbrac}[1]{\bigl( #1 \bigr)}
+\newcommand{\Bigbrac}[1]{\Bigl( #1 \Bigr)}
+\newcommand{\biggbrac}[1]{\biggl( #1 \biggr)}
+\newcommand{\Biggbrac}[1]{\Biggl( #1 \Biggr)}
+
+\newcommand{\recip}[1]{\frac{1}{#1}}
+\newcommand{\trecip}[1]{\tfrac{1}{#1}}
+
+\newcommand{\intd}{\mathrm{d}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\hash}{\#}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="self-test-210.html"><span class="title">MATH210 Real Analysis:</span> <span class="subtitle">Self-Test Questions</span></a></h1>
+<p class="byline">Sean Prendiville</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="assessment.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="frontmatter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="module-purpose.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="assessment.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="frontmatter.html" title="Up">Up</a><a class="next-button button toolbar-item" href="module-purpose.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Introduction</span></a></li>
+<li class="link"><a href="week-1.html" data-scroll="week-1" class="internal"><span class="codenumber">1</span> <span class="title">Week 1</span></a></li>
+<li class="link"><a href="week-2.html" data-scroll="week-2" class="internal"><span class="codenumber">2</span> <span class="title">Week 2</span></a></li>
+<li class="link"><a href="week-3.html" data-scroll="week-3" class="internal"><span class="codenumber">3</span> <span class="title">Week 3</span></a></li>
+<li class="link"><a href="week-4.html" data-scroll="week-4" class="internal"><span class="codenumber">4</span> <span class="title">Week 4</span></a></li>
+<li class="link"><a href="week-5.html" data-scroll="week-5" class="internal"><span class="codenumber">5</span> <span class="title">Week 5</span></a></li>
+<li class="link"><a href="week-6.html" data-scroll="week-6" class="internal"><span class="codenumber">6</span> <span class="title">Week 6</span></a></li>
+<li class="link"><a href="week-7.html" data-scroll="week-7" class="internal"><span class="codenumber">7</span> <span class="title">Week 7</span></a></li>
+<li class="link"><a href="week-8.html" data-scroll="week-8" class="internal"><span class="codenumber">8</span> <span class="title">Week 8</span></a></li>
+<li class="link"><a href="week-9.html" data-scroll="week-9" class="internal"><span class="codenumber">9</span> <span class="title">Week 9</span></a></li>
+<li class="link"><a href="week-10.html" data-scroll="week-10" class="internal"><span class="codenumber">10</span> <span class="title">Week 10</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="preface" id="workshop-instructions"><h2 class="heading hide-type">
+<span class="type">Preface</span> <span class="codenumber"></span> <span class="title">Workshop instructions</span>
+</h2>
+<p id="p-4">Workshops take place every fortnight, in odd-numbered weeks (see your timetable for details of where and when). Each workshop lasts up to two hours. Prior to the workshop, you will be assigned three self-test questions (see, for example, <a href="week-1.html" class="internal" title="Chapter 1: Week 1">Chapter 1</a>), two of which you will answer in your workshop (selected by your workshop tutors).</p>
+<ul class="disc">
+<li id="li-11"><p id="p-derived-li-11"><em class="emphasis">0-30 minutes:</em> During the first 30 minutes of your workshop, you may collaborate with your peers and consult the notes/tutor/internet in order to write-up a solution to the first self-test question selected by your tutor. At the end of this 30 minute period you will swap your solution with another student who will mark your work. If you finish writing your solution before the 30 minutes has passed, you should begin sketching solutions to the remaining two self-test questions.</p></li>
+<li id="li-12"><p id="p-derived-li-12"><em class="emphasis">30-50 minutes:</em> During the next 20 minutes of your workshop, your tutors will give a model solution to the first self-test question and you will mark your peer's answer. The tutor will indicate key elements which should be included in a valid answer.</p></li>
+<li id="li-13"><p id="p-derived-li-13"><em class="emphasis">50-60 minutes:</em> A ten minute comfort break.</p></li>
+<li id="li-14"><p id="p-derived-li-14"><em class="emphasis">60-80 minutes:</em> An opportunity to revise the solutions to the remaining two self-test questions.</p></li>
+<li id="li-15">
+<p id="p-5"><em class="emphasis">80-120 minutes:</em> Your tutor will select one of the remaining two self-test questions and you will write-up a solution under exam conditions.</p>
+<ul class="circle">
+<li id="li-16"><p id="p-derived-li-16">The question should take you about 20 minutes - the extra   time is  for those who require this in exams. However, everyone should feel free to use the extra time if needed.</p></li>
+<li id="li-17"><p id="p-derived-li-17">You may not consult anyone else during the final 40 minutes.</p></li>
+<li id="li-18"><p id="p-derived-li-18">You must include full details of your proofs and calculations.</p></li>
+<li id="li-19"><p id="p-derived-li-19">The only results which you may use without further justification are those contained in the notes or other course materials, provided that you clearly paraphrase them.</p></li>
+<li id="li-20"><p id="p-derived-li-20">Once you are finished, you should hand your attempt to your workshop tutor and leave quietly.</p></li>
+</ul>
+</li>
+</ul>
+<p id="p-6">Each workshop contributes <span class="process-math">\(3\%\)</span> towards your final mark:</p>
+<ul class="disc">
+<li id="li-21"><p id="p-derived-li-21">You will receive full marks for the workshop if you make a  reasonable attempt of the final question, or clearly explain the strategies you have attempted (even if unsuccessful).</p></li>
+<li id="li-22"><p id="p-derived-li-22">You will receive no marks for the workshop if you do not  attempt the question and do not explain the strategies you have attempted.</p></li>
+<li id="li-23"><p id="p-derived-li-23">At your next workshop, your tutor will return your answer with formative feedback.</p></li>
+<li id="li-24">
+<p id="p-7">To help you get a sense of what your answer would achieve in an exam, your workshop tutor will also give you an indicative grade:</p>
+<ul class="circle">
+<li id="li-25"><p id="p-derived-li-25"><em class="emphasis">1st.</em> Complete solution with no gaps or logical errors.</p></li>
+<li id="li-26"><p id="p-derived-li-26"><em class="emphasis">2nd.</em> Almost complete solution, with a small number of gaps or logical errors</p></li>
+<li id="li-27"><p id="p-derived-li-27"><em class="emphasis">3rd.</em> Answer demonstrates some of the relevant knowledge required for a solution.</p></li>
+<li id="li-28"><p id="p-derived-li-28"><em class="emphasis">4th.</em> Answer does not demonstrate any of the relevant knowledge required for a solution.</p></li>
+</ul>
+</li>
+<li id="li-29"><p id="p-derived-li-29">The indicative grade will not count towards your final mark</p></li>
+<li id="li-30"><p id="p-derived-li-30">Do not attend a workshop if you feel ill or are self-isolating.  You can complete your workshop assessment by emailing your workshop tutors to find out which question they have set, then scan and email them your answer.</p></li>
+</ul></section></div></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="hiddenproof">Let us first prove the "if" or "<span class="process-math">\(\implies\)</span>" direction. Suppose that <span class="process-math">\((a_n)_{n=1}^\infty\)</span> is Cauchy. We first claim that the sequence is bounded. Taking <span class="process-math">\(\eps := 1\)</span> in the definition of being Cauchy (<a href="" class="xref" data-knowl="./knowl/def-cauchy.html" title="Definition 3.26: Cauchy sequence">Definition 3.26</a>) there exists <span class="process-math">\(N\)</span> such that for all <span class="process-math">\(n\geq N\)</span> we have <span class="process-math">\(|a_n-a_N| \leq 1\text{.}\)</span> Hence by the triangle inequality, for all <span class="process-math">\(n\geq N\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-cauchy.html ./knowl/cor-bolzano.html ./knowl/def-cauchy.html ./knowl/lem-inc-bound.html ./knowl/def-seq-limit.html">
+\begin{equation*}
+|a_n|  = | (a_n-a_N) + a_N| \leq 1 + |a_N|.
+\end{equation*}
+</div>Setting<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-cauchy.html ./knowl/cor-bolzano.html ./knowl/def-cauchy.html ./knowl/lem-inc-bound.html ./knowl/def-seq-limit.html">
+\begin{equation*}
+M:=  \max\set{|a_1|, \dots, |a_{N-1}|, |a_N| + 1}
+\end{equation*}
+</div>we deduce that <span class="process-math">\(|a_n| \leq M\)</span> for all <span class="process-math">\(n \in \N\text{,}\)</span> so the sequence is bounded. By the Bolzano-Weierstrass theorem (<a href="" class="xref" data-knowl="./knowl/cor-bolzano.html" title="Corollary 3.24: Bolzano-Weierstrass theorem">Corollary 3.24</a>) there exists a subsequence <span class="process-math">\((a_{k_n})_{n=1}^\infty\)</span> which converges to  a real number <span class="process-math">\(a\text{.}\)</span> Let us show that <span class="process-math">\(a_n \to a\)</span> as <span class="process-math">\(n \to \infty\text{,}\)</span> or in other words<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-cauchy.html ./knowl/cor-bolzano.html ./knowl/def-cauchy.html ./knowl/lem-inc-bound.html ./knowl/def-seq-limit.html">
+\begin{equation}
+(\forall \eps \gt 0)(\exists N \in \N)(\forall n \geq N)[|a_n-a| \leq \eps].\tag{3.9}
+\end{equation}
+</div>Fix <span class="process-math">\(\eps \gt 0\text{.}\)</span> Since <span class="process-math">\(a_{k_n} \to a\)</span> there exists <span class="process-math">\(N_1 = N_1(\eps/2) \in \N\)</span> such that for all <span class="process-math">\(n \geq N_1\)</span> we have <span class="process-math">\(|a_{k_n} - a| \leq \eps/2\text{.}\)</span> Since <span class="process-math">\((a_n)_{n=1}^\infty\)</span> is Cauchy (<a href="" class="xref" data-knowl="./knowl/def-cauchy.html" title="Definition 3.26: Cauchy sequence">Definition 3.26</a>) there exists <span class="process-math">\(N_2 =  N_2(\eps/2) \in \N\)</span> such that for all <span class="process-math">\(n, m\geq N_2\)</span> we have <span class="process-math">\(|a_n-a_m| \leq \eps/2\text{.}\)</span> Since the <span class="process-math">\((k_n)_n\)</span> are a strictly increasing sequence of integers,  if <span class="process-math">\(n\geq N_2\)</span> then <span class="process-math">\(k_n \geq n \geq N_2\)</span> also (see <a href="" class="xref" data-knowl="./knowl/lem-inc-bound.html" title="Remark 3.20">Remark 3.20</a>). Setting <span class="process-math">\(N(\eps) := \max\set{N_1, N_2}\text{,}\)</span> if <span class="process-math">\(n \geq N\)</span> then the triangle inequality gives that<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-cauchy.html ./knowl/cor-bolzano.html ./knowl/def-cauchy.html ./knowl/lem-inc-bound.html ./knowl/def-seq-limit.html">
+\begin{equation*}
+|a_n -a| \leq |a_n - a_{k_n}| + |a_{k_n}-a| \leq \eps.
+\end{equation*}
+</div>This establishes that <span class="process-math">\(a_n \to a\text{.}\)</span> Next let us  prove the "only if" or "<span class="process-math">\(\impliedby\)</span>" direction. Fix <span class="process-math">\(\eps \gt 0\text{.}\)</span> By definition of convergence (<a href="" class="xref" data-knowl="./knowl/def-seq-limit.html" title="Definition 1.23: Limit of convergent sequence">Definition 1.23</a>) there exists <span class="process-math">\(N = N(\eps/2) \in \N\)</span> such that for all <span class="process-math">\(n \geq N\)</span> we have <span class="process-math">\(|a_n - a| \leq \eps/2\text{.}\)</span> Thus by the triangle inequality, if <span class="process-math">\(n, m\geq N\)</span> then<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-cauchy.html ./knowl/cor-bolzano.html ./knowl/def-cauchy.html ./knowl/lem-inc-bound.html ./knowl/def-seq-limit.html">
+\begin{equation*}
+|a_n -a_m| \leq |a_n-a| + |a-a_m| \leq \eps/2 + \eps/2 = \eps.
+\end{equation*}
+</div>Hence the sequence is Cauchy.</article></body>
+</html>

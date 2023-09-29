@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>First, let us suppose that <span class="process-math">\(f(x_n) = f(x_0)\)</span> for only finitely many values of <span class="process-math">\(n\text{.}\)</span> Then there exists <span class="process-math">\(N_0\in \N\)</span> such that for all <span class="process-math">\(n \geq N_0\)</span> we have <span class="process-math">\(f(x_n)\neq f(x_0)\text{.}\)</span> Hence for all <span class="process-math">\(n \geq N_0\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/prop-seq-diff.html ./knowl/prop-mult-rule.html">
+\begin{equation*}
+\frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{x_n-x_0} = \frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{f(x_n)-f(x_0)}\cdot \frac{f(x_n)-f(x_0)}{x_n-x_0} . 
+\end{equation*}
+</div>
+<p class="continuation">Since differentiability implies continuity (<a href="" class="xref" data-knowl="./knowl/prop-diff-cts.html" title="Proposition 6.24: Differentiable implies continuous">Proposition 6.24</a>), we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/prop-seq-diff.html ./knowl/prop-mult-rule.html">
+\begin{equation*}
+\lim_{n \to \infty} f(x_n) = f(x_0).
+\end{equation*}
+</div>
+<p class="continuation">Thus by the sequential characterisation of differentiability (<a href="" class="xref" data-knowl="./knowl/prop-seq-diff.html" title="Proposition 6.23: Sequential characterisation of differentiability">Proposition 6.23</a>) we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/prop-seq-diff.html ./knowl/prop-mult-rule.html">
+\begin{equation}
+\lim_{\substack{n\to \infty\\ n \geq N_0}} \frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{f(x_n)-f(x_0)} = g'\bigbrac{f(x_0)}.\tag{7.3}
+\end{equation}
+</div>
+<p class="continuation">We may therefore use the multiplication rule for sequential limits (<a href="" class="xref" data-knowl="./knowl/prop-mult-rule.html" title="Proposition 2.10: Multiplication rule">Proposition 2.10</a>) to deduce that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/prop-seq-diff.html ./knowl/prop-mult-rule.html">
+\begin{align*}
+\lim_{n \to \infty} \frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{x_n-x_0} \amp = \lim_{\substack{n\to \infty\\ n \geq N_0}}\brac{ \frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{f(x_n)-f(x_0)}\cdot \frac{f(x_n)-f(x_0)}{x_n-x_0}}\\
+\amp = \lim_{\substack{n\to \infty\\ n \geq N_0}}\frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{f(x_n)-f(x_0)}\lim_{n\to \infty} \frac{f(x_n)-f(x_0)}{x_n-x_0}\\
+\amp = g'\bigbrac{f(x_0)}f'(x_0).
+\end{align*}
+</div>
+<span class="incontext"><a href="week-7.html#p-84" class="internal">in-context</a></span>
+</body>
+</html>

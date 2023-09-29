@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="hiddenproof">We verify both identities using the sequential characterisation of differentiability (<a href="" class="xref" data-knowl="./knowl/prop-seq-diff.html" title="Proposition 6.23: Sequential characterisation of differentiability">Proposition 6.23</a>) together with the addition and product rules for sequence limits (<a href="" class="xref" data-knowl="./knowl/prop-add-rule.html" title="Proposition 2.8: Addition rule">Proposition 2.8</a> and <a href="" class="xref" data-knowl="./knowl/prop-mult-rule.html" title="Proposition 2.10: Multiplication rule">Proposition 2.10</a>). To this end, let <span class="process-math">\((a_n)_n\)</span> be a sequence in <span class="process-math">\((a,b)\setminus\set{x_0}\)</span> with <span class="process-math">\(a_n \to x_0\text{.}\)</span> Then the addition rule follows from the addition rule for sequence limits, since<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-seq-diff.html ./knowl/prop-add-rule.html ./knowl/prop-mult-rule.html ./knowl/prop-mult-rule.html">
+\begin{align*}
+\lim_{n \to \infty} \amp \frac{(f+g)(a_n)-(f+g)(x_0)}{a_n-x_0}\\
+\amp = \lim_{n\to \infty} \frac{f(a_n)-f(x_0)}{a_n-x_0}+ \lim_{n \to \infty} \frac{g(a_n)-g(x_0)}{x-x_0}.
+\end{align*}
+</div>The product rule uses the identity<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-seq-diff.html ./knowl/prop-add-rule.html ./knowl/prop-mult-rule.html ./knowl/prop-mult-rule.html">
+\begin{align*}
+\amp f(a_n)g(a_n) - f(x_0)g(x_0)  = \sqbrac{f(a_n)-f(x_0)}g(a_n) + f(x_0)\sqbrac{g(a_n)-g(x_0)}\\
+\amp =\sqbrac{f(a_n)-f(x_0)}\sqbrac{g(a_n)-g(x_0)} + \sqbrac{f(a_n)-f(x_0)}g(x_0)+ f(x_0)\sqbrac{g(a_n)-g(x_0)}. 
+\end{align*}
+</div>By the multiplication rule for sequence limits (<a href="" class="xref" data-knowl="./knowl/prop-mult-rule.html" title="Proposition 2.10: Multiplication rule">Proposition 2.10</a>), we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-seq-diff.html ./knowl/prop-add-rule.html ./knowl/prop-mult-rule.html ./knowl/prop-mult-rule.html">
+\begin{gather*}
+\lim_{n \to \infty}\frac{\sqbrac{f(a_n)-f(x_0)}g(x_0)}{a_n-x_0} = f'(x_0)g(x_0),\\
+\lim_{n \to \infty}\frac{f(x_0)\sqbrac{g(a_n)-g(x_0)}}{a_n-x_0} = f(x_0)g'(x_0).
+\end{gather*}
+</div>Similarly<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-seq-diff.html ./knowl/prop-add-rule.html ./knowl/prop-mult-rule.html ./knowl/prop-mult-rule.html">
+\begin{align*}
+\amp \lim_{n\to\infty}\frac{\sqbrac{f(a_n)-f(x_0)}\sqbrac{g(a_n)-g(x_0)}}{a_n-x_0}\\
+\amp = \lim_{n\to\infty}\frac{\sqbrac{f(a_n)-f(x_0)}}{a_n-x_0}\lim_{n\to\infty}\frac{\sqbrac{g(a_n)-g(x_0)}}{a_n-x_0}\lim_{n\to\infty}(a_n-x_0)\\
+\amp = f'(x_0)\cdot g'(x_0)\cdot 0 = 0.
+\end{align*}
+</div></article></body>
+</html>

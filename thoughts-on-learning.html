@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Some thoughts on learning mathematics</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="MATH210 Real Analysis">
+<meta property="book:author" content="Sean Prendiville">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\bigset}[1]{\bigl\{ #1 \bigr\}}
+\newcommand{\Bigset}[1]{\Bigl\{ #1 \Bigr\}}
+\newcommand{\biggset}[1]{\biggl\{ #1 \biggr\}}
+\newcommand{\Biggset}[1]{\Biggl\{ #1 \Biggr\}}
+\newcommand{\abs}[1]{\left| #1\right|}
+\newcommand{\bigabs}[1]{\bigl| #1 \bigr|}
+\newcommand{\Bigabs}[1]{\Bigl| #1 \Bigr|}
+\newcommand{\biggabs}[1]{\biggl| #1 \biggr|}
+\newcommand{\Biggabs}[1]{\Biggl| #1 \Biggr|}
+\newcommand{\sqbrac}[1]{\left[ #1 \right]}
+\newcommand{\bigsqbrac}[1]{\bigl[ #1 \bigr]}
+\newcommand{\Bigsqbrac}[1]{\Bigl[ #1 \Bigr]}
+\newcommand{\biggsqbrac}[1]{\biggl[ #1 \biggr]}
+\newcommand{\Biggsqbrac}[1]{\Biggl[ #1 \Biggr]}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\littleceil}[1]{\lceil #1 \rceil}
+\newcommand{\littlefloor}[1]{\lfloor #1 \rfloor}
+\newcommand{\bigfloor}[1]{\bigl\lfloor #1 \bigr\rfloor}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\brac}[1]{\left( #1 \right)}
+\newcommand{\bigbrac}[1]{\bigl( #1 \bigr)}
+\newcommand{\Bigbrac}[1]{\Bigl( #1 \Bigr)}
+\newcommand{\biggbrac}[1]{\biggl( #1 \biggr)}
+\newcommand{\Biggbrac}[1]{\Biggl( #1 \Biggr)}
+
+\newcommand{\recip}[1]{\frac{1}{#1}}
+\newcommand{\trecip}[1]{\tfrac{1}{#1}}
+
+\newcommand{\intd}{\mathrm{d}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\hash}{\#}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="self-test-210.html"><span class="title">MATH210 Real Analysis:</span> <span class="subtitle">Self-Test Questions</span></a></h1>
+<p class="byline">Sean Prendiville</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="learning-outcomes.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="frontmatter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="pdf-link.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="learning-outcomes.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="frontmatter.html" title="Up">Up</a><a class="next-button button toolbar-item" href="pdf-link.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Introduction</span></a></li>
+<li class="link"><a href="week-1.html" data-scroll="week-1" class="internal"><span class="codenumber">1</span> <span class="title">Week 1</span></a></li>
+<li class="link"><a href="week-2.html" data-scroll="week-2" class="internal"><span class="codenumber">2</span> <span class="title">Week 2</span></a></li>
+<li class="link"><a href="week-3.html" data-scroll="week-3" class="internal"><span class="codenumber">3</span> <span class="title">Week 3</span></a></li>
+<li class="link"><a href="week-4.html" data-scroll="week-4" class="internal"><span class="codenumber">4</span> <span class="title">Week 4</span></a></li>
+<li class="link"><a href="week-5.html" data-scroll="week-5" class="internal"><span class="codenumber">5</span> <span class="title">Week 5</span></a></li>
+<li class="link"><a href="week-6.html" data-scroll="week-6" class="internal"><span class="codenumber">6</span> <span class="title">Week 6</span></a></li>
+<li class="link"><a href="week-7.html" data-scroll="week-7" class="internal"><span class="codenumber">7</span> <span class="title">Week 7</span></a></li>
+<li class="link"><a href="week-8.html" data-scroll="week-8" class="internal"><span class="codenumber">8</span> <span class="title">Week 8</span></a></li>
+<li class="link"><a href="week-9.html" data-scroll="week-9" class="internal"><span class="codenumber">9</span> <span class="title">Week 9</span></a></li>
+<li class="link"><a href="week-10.html" data-scroll="week-10" class="internal"><span class="codenumber">10</span> <span class="title">Week 10</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="preface" id="thoughts-on-learning"><h2 class="heading hide-type">
+<span class="type">Preface</span> <span class="codenumber"></span> <span class="title">Some thoughts on learning mathematics</span>
+</h2>
+<p id="p-15"><em class="emphasis">Reading versus writing:</em> When reading mathematics, do not try to understand every line.  To try and follow  all the details is hard and is not engaging. Mathematics is something you construct, like writing code, baking a cake or solving a puzzle; it is hard to passively follow someone else doing it.</p>
+<p id="p-16">It is better to get a sense of what is being discussed in the solutions, then challenge yourself to write-up the precise mathematics yourself. You will almost always have to immediately consult the solution again. However, when you read mathematics <em class="emphasis">after</em> trying to write it yourself,  you are far more primed to engage with the details. It is like reading the solution to a problem you are stuck on - you really see what you were missing if you have tried the problem first.  Often one  reads until one spots the information previously missed or misunderstood, then has another attempt at writing-up.</p>
+<p id="p-17">This way of proceeding appears more time consuming than believing that your reading is complete once your eyes have passed over each word/symbol. However in my experience, writing  mathematics yourself is far more fun, and beneficial to your understanding, than trying to decode what someone else has written.  View the solutions as a set of prompts, which one can use to check the validity of your own write-up.</p>
+<p id="p-18"><em class="emphasis">Memorisation versus reconstruction:</em> One can memorise every proof in this course for the purpose of the exam, however this is not a good idea for the following reasons:</p>
+<ul class="disc">
+<li id="li-51"><p id="p-derived-li-51">We have limited memory, and it is therefore very hard to memorise such a large amount of information<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-10" id="fn-10"><sup> 10 </sup></a>.</p></li>
+<li id="li-52"><p id="p-derived-li-52">Mathematicians are lazy - most of us do not like memorising large amounts of material. Successful mathematicians learn a few strategies which allow them to reconstruct  proofs from first principles. On occasion one has to memorise a key "trick" or "idea", which it may be hard to think of yourself (particularly under exam conditions). However, memorising a handful of key "tricks" is much easier than memorising 100 pages of notes.</p></li>
+<li id="li-53"><p id="p-derived-li-53">Our intended learning outcomes (see previous section) of "writing proofs" and "constructing counterexamples" are not met through memorisation. These learning outcomes are  skills which can be acquired, and are useful in other situations, in mathematics and beyond.</p></li>
+<li id="li-54"><p id="p-derived-li-54">In your assessment, you will be given statements to prove which are similar but not identical to those in the notes. Understanding how to construct a proof allows you to answer these questions, whereas memorising the proofs in the notes does not.</p></li>
+</ul></section><div class="hidden-content tex2jax_ignore" id="hk-fn-10"><div class="fn">I do not know any of the proofs in this course from memory.</div></div>
+</div></main>
+</div>
+</body>
+</html>

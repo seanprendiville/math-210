@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="hiddenproof">Let us suppose that <span class="process-math">\([a,b] = [0, 1]\text{,}\)</span> the general case being similar. Since <span class="process-math">\(f\)</span> is a continuous function on a closed interval, it is uniformly continuous (<a href="" class="xref" data-knowl="./knowl/thm-unif-cts.html" title="Theorem 6.14: Continuous on closed interval implies uniformly continuous">Theorem 6.14</a>). Hence by definition of uniform continuity (<a href="" class="xref" data-knowl="./knowl/def-unif-cts.html" title="Definition 6.11: Uniformly continuous">Definition 6.11</a>):<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-unif-cts.html ./knowl/def-unif-cts.html ./knowl/prop-eps-riemann.html">
+\begin{equation*}
+(\forall \eps \gt 0)(\exists \delta = \delta(\eps) \gt 0)(\forall x,y\in [a,b]) 
+[|x-y| \leq \delta \implies |f(x)-f(y)| \leq \eps].
+\end{equation*}
+</div>Set<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-unif-cts.html ./knowl/def-unif-cts.html ./knowl/prop-eps-riemann.html">
+\begin{equation*}
+\delta := \delta\brac{\eps} \qquad \text{and} \qquad N := \ceil{\delta^{-1}}.
+\end{equation*}
+</div>Then for any <span class="process-math">\(n\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-unif-cts.html ./knowl/def-unif-cts.html ./knowl/prop-eps-riemann.html">
+\begin{equation*}
+\sup_{[\frac{n-1}{N}, \frac{n}{N}]} f - \inf_{[\frac{n-1}{N}, \frac{n}{N}]} f \leq \eps.
+\end{equation*}
+</div>Hence with respect to the subdivision <span class="process-math">\(0/N \lt  1/N \lt  \dots \lt  N/N\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-unif-cts.html ./knowl/def-unif-cts.html ./knowl/prop-eps-riemann.html">
+\begin{equation*}
+U\brac{f;\tfrac{0}{N}, \tfrac{1}{N} , \dots , \tfrac{N}{N}} - L\brac{f;\tfrac{0}{N}, \tfrac{1}{N} , \dots , \tfrac{N}{N}} \leq  \sum_{n=1}^N \tfrac{\eps}{N} = \eps.
+\end{equation*}
+</div>It follows that <span class="process-math">\(f\)</span> is integrable by <a href="" class="xref" data-knowl="./knowl/prop-eps-riemann.html" title="Proposition 8.23: Epsilon characterisation of Riemann integrability">Proposition 8.23</a>.</article></body>
+</html>

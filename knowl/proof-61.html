@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>Let <span class="process-math">\(x_0\in (0, \infty)\text{.}\)</span> Using the epsilon-delta characterisation of continuity (<a href="" class="xref" data-knowl="./knowl/cor-eps-delta-cts.html" title="Proposition 5.19: Epsilon-delta characterisation of continuity">Proposition 5.19</a>), we are required to prove that for each <span class="process-math">\(\eps \gt 0\)</span> there exists <span class="process-math">\(\delta = \delta(x_0,\eps) \gt 0\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/thm-mvt.html ./knowl/eq-log-cts-to-prove.html ./knowl/eq-log-cts-mvt.html">
+\begin{equation*}
+|x-x_0| \leq \delta \quad \implies \quad |\log(x) - \log(x_0)| \leq \eps.
+\end{equation*}
+</div>Writing <span class="process-math">\(y:=\log(x)\)</span> and <span class="process-math">\(y_0:=\log(x_0)\)</span> this is equivalent to showing that<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/thm-mvt.html ./knowl/eq-log-cts-to-prove.html ./knowl/eq-log-cts-mvt.html">
+\begin{equation}
+|\exp(y)-\exp(y_0)| \leq \delta \quad \implies \quad |y - y_0| \leq \eps.\tag{8.2}
+\end{equation}
+</div>By the mean value theorem (<a href="" class="xref" data-knowl="./knowl/thm-mvt.html" title="Theorem 7.10: Mean value theorem">Theorem 7.10</a>), there exists <span class="process-math">\(y_1\)</span> between <span class="process-math">\(y\)</span> and <span class="process-math">\(y_0\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/thm-mvt.html ./knowl/eq-log-cts-to-prove.html ./knowl/eq-log-cts-mvt.html">
+\begin{equation}
+|\exp(y)-\exp(y_0)| = \exp(y_1)|y-y_0|.						\tag{8.3}
+\end{equation}
+</div>Since <span class="process-math">\(\exp\)</span> is increasing, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/thm-mvt.html ./knowl/eq-log-cts-to-prove.html ./knowl/eq-log-cts-mvt.html">
+\begin{equation*}
+\exp(y_1) \geq \exp\brac{\min\set{y_0,y}} = \min\set{x_0,x}\text{.}
+\end{equation*}
+</div>Hence we derive <a href="" class="xref" data-knowl="./knowl/eq-log-cts-to-prove.html" title="Equation 8.2">(8.2)</a> on taking<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/thm-mvt.html ./knowl/eq-log-cts-to-prove.html ./knowl/eq-log-cts-mvt.html">
+\begin{equation*}
+\delta(x_0,\eps) :=\min\set{\frac{x_0}{2}, \frac{\eps x_0}{2}},
+\end{equation*}
+</div>since with this choice we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/thm-mvt.html ./knowl/eq-log-cts-to-prove.html ./knowl/eq-log-cts-mvt.html">
+\begin{equation*}
+\exp(y_1) \geq  \min\set{x_0,x_0-\tfrac{x_0}{2}}=\tfrac{x_0}{2}\text{,}
+\end{equation*}
+</div>which yields the required implication on substitution into <a href="" class="xref" data-knowl="./knowl/eq-log-cts-mvt.html" title="Equation 8.3">(8.3)</a>.</article><span class="incontext"><a href="week-8.html#proof-61" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>For <span class="process-math">\(n \gt d\text{,}\)</span> we may use the binomial theorem to deduce that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-weak-bernoulli-2.html ./knowl/eq-weak-bernoulli-2.html ./knowl/eq-binom-inc-lower.html ./knowl/prop-inf-scaling.html ./knowl/cor-sandwich.html">
+\begin{equation}
+x^n = (1 + (x-1))^n \geq \binom{n}{d+1} (x-1)^{d+1}\tag{3.5}
+\end{equation}
+</div>With inequality <a href="" class="xref" data-knowl="./knowl/eq-weak-bernoulli-2.html" title="Equation 3.5">(3.5)</a> in hand, there are many ways to proceed (try it yourself!). What follows is one possible argument. By <a href="" class="xref" data-knowl="./knowl/eq-weak-bernoulli-2.html" title="Equation 3.5">(3.5)</a> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-weak-bernoulli-2.html ./knowl/eq-weak-bernoulli-2.html ./knowl/eq-binom-inc-lower.html ./knowl/prop-inf-scaling.html ./knowl/cor-sandwich.html">
+\begin{equation*}
+\frac{x^n}{n^d} \geq \frac{(x-1)^{d+1}}{(d+1)!}\times \frac{n(n-1)\dots (n-d)} { n^d}\geq \frac{(x-1)^{d+1}}{(d+1)!}\times \frac{n(n-d)^d}{ n^d}  .
+\end{equation*}
+</div>For <span class="process-math">\(n \geq 2d\)</span> we have <span class="process-math">\(1-\frac{d}{n} \geq 1/2\text{,}\)</span> therefore<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-weak-bernoulli-2.html ./knowl/eq-weak-bernoulli-2.html ./knowl/eq-binom-inc-lower.html ./knowl/prop-inf-scaling.html ./knowl/cor-sandwich.html">
+\begin{equation*}
+\frac{(n-d)^d}{n^d} = \brac{1 - \frac{d}{n}}^d\geq  (1/2)^d.
+\end{equation*}
+</div>Thus for all <span class="process-math">\(n \geq 2d\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-weak-bernoulli-2.html ./knowl/eq-weak-bernoulli-2.html ./knowl/eq-binom-inc-lower.html ./knowl/prop-inf-scaling.html ./knowl/cor-sandwich.html">
+\begin{equation}
+\frac{x^n}{n^d}  \geq  \frac{(x-1)^{d+1}}{(d+1)!2^d}\times n.\tag{3.6}
+\end{equation}
+</div>Since the factor<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-weak-bernoulli-2.html ./knowl/eq-weak-bernoulli-2.html ./knowl/eq-binom-inc-lower.html ./knowl/prop-inf-scaling.html ./knowl/cor-sandwich.html">
+\begin{equation*}
+\frac{(x-1)^{d+1}}{(d+1)!2^d}
+\end{equation*}
+</div>is independent of <span class="process-math">\(n\text{,}\)</span> the sequence on the right-hand side of <a href="" class="xref" data-knowl="./knowl/eq-binom-inc-lower.html" title="Equation 3.6">(3.6)</a> takes the form <span class="process-math">\(cn\)</span> for some fixed <span class="process-math">\(c\gt 0\text{.}\)</span> Thus the scaling rule (<a href="" class="xref" data-knowl="./knowl/prop-inf-scaling.html" title="Proposition 3.8">Proposition 3.8</a>) gives that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-weak-bernoulli-2.html ./knowl/eq-weak-bernoulli-2.html ./knowl/eq-binom-inc-lower.html ./knowl/prop-inf-scaling.html ./knowl/cor-sandwich.html">
+\begin{equation*}
+\frac{(x-1)^{d+1}}{(d+1)!2^d}\times n \to \infty \quad \text{as} \quad  n \to \infty.
+\end{equation*}
+</div>Hence by the one-sided sandwich rule (<a href="" class="xref" data-knowl="./knowl/cor-sandwich.html" title="Proposition 3.6: One-sided sandwich">Proposition 3.6</a>) we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-weak-bernoulli-2.html ./knowl/eq-weak-bernoulli-2.html ./knowl/eq-binom-inc-lower.html ./knowl/prop-inf-scaling.html ./knowl/cor-sandwich.html">
+\begin{equation*}
+\frac{x^n}{n^d} \to \infty \quad\text{as} \quad n \to \infty.
+\end{equation*}
+</div></article><span class="incontext"><a href="week-3.html#proof-25" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.18</span><span class="period">.</span><span class="space"> </span><span class="title">A function discontinuous everywhere.</span>
+</h5> Consider the function <span class="process-math">\(f : \R \to \R\)</span> given by<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-sandwich.html">
+\begin{equation*}
+f(x) :=
+\begin{cases}
+1 \amp \text{ if } x \in \Q;\\
+0\amp \text{ if } x  \in \R \setminus\Q.
+\end{cases}
+\end{equation*}
+</div>We claim that this function is not continuous at any <span class="process-math">\(x_0 \in \R\text{.}\)</span> Notice, however, that the restrictions<a href="" class="fn-knowl original" data-knowl="./knowl/fn-18-hidden.html" title="Footnote 5.3"><sup> 3 </sup></a><span class="process-math">\(f|_{\Q}\)</span> and <span class="process-math">\(f|_{\R\setminus\Q}\)</span> are both continuous, since they are constant functions. The key observation in establishing our claim is to note that every real number <span class="process-math">\(x_0\)</span> has a sequence of rationals <span class="process-math">\(q_n \in \Q\)</span> such that <span class="process-math">\(q_n \to x_0\text{.}\)</span> For instance, one may take<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-sandwich.html">
+\begin{equation*}
+q_n := \frac{\floor{nx_0}}{n} \in \left(x_0 -\frac{1}{n}, x_0\right]\text{,}
+\end{equation*}
+</div>and employ the two-sided sandwich rule (<a href="" class="xref" data-knowl="./knowl/prop-sandwich.html" title="Proposition 2.6: Sandwich rule">Proposition 2.6</a>). Let us use this to show that our function is not continuous at <span class="process-math">\(x_0\text{.}\)</span> First suppose that <span class="process-math">\(x_0\in \R\setminus\Q\text{.}\)</span> It follows that <span class="process-math">\(f(q_n) = 1 \not\to 0 = f(x_0)\text{.}\)</span> Next suppose that <span class="process-math">\(x_0 \in \Q\text{.}\)</span> This time, let <span class="process-math">\(q_n \in \Q\)</span> be a sequence of rationals such that <span class="process-math">\(q_n \to x_0+ \sqrt{2}\text{.}\)</span> Notice that for any <span class="process-math">\(n \in \N\)</span> we have <span class="process-math">\(q_n-\sqrt{2} \notin \Q\text{,}\)</span> otherwise <span class="process-math">\(\sqrt{2} \in \Q\)</span> (a contradiction). Also <span class="process-math">\(q_n -\sqrt{2} \to x_0\text{.}\)</span> Yet <span class="process-math">\(f(q_n-\sqrt{2}) = 0 \not\to 1 = f(x_0)\text{.}\)</span></article><span class="incontext"><a href="week-5.html#eg-dis-cont-everywhere" class="internal">in-context</a></span>
+</body>
+</html>

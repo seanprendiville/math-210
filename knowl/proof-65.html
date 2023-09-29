@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>
+<p>First suppose that <span class="process-math">\(f\)</span> is Riemann integrable. Since decreasing the supremum gives a non-upper bound (<a href="" class="xref" data-knowl="./knowl/prop-alt-sup.html" title="Proposition 1.7: Epsilon characterisation of the supremum">Proposition 1.7</a>), there exists a subdivision <span class="process-math">\(a = y_0 \lt  \dots \lt  y_M = b\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-alt-sup.html ./knowl/prop-alt-sup.html ./knowl/prop-mono-riemann-refine.html">
+\begin{equation*}
+L(f;y_0, \dots, y_N) \geq \int_a^b f - \trecip{2}\eps.
+\end{equation*}
+</div>
+<p class="continuation">Since increasing the infimum gives a non lower bound (<a href="" class="xref" data-knowl="./knowl/prop-alt-sup.html" title="Proposition 1.7: Epsilon characterisation of the supremum">Proposition 1.7</a>), there exists a subdivision <span class="process-math">\(a = z_0 \lt  \dots \lt  z_T = b\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-alt-sup.html ./knowl/prop-alt-sup.html ./knowl/prop-mono-riemann-refine.html">
+\begin{equation*}
+U(f;z_0, \dots, z_T) \leq \int_a^b f + \trecip{2}\eps.
+\end{equation*}
+</div>
+<p class="continuation">Let <span class="process-math">\(a= x_0 \lt  \dots \lt  x_N = b\)</span> denote the common refinement of <span class="process-math">\((y_0, \dots, y_M)\)</span> and <span class="process-math">\((z_0, \dots, z_T)\text{.}\)</span> The required inequalities now follow from the monotonicty of Riemann sums with respect to refinements ( <a href="" class="xref" data-knowl="./knowl/prop-mono-riemann-refine.html" title="Proposition 8.21: Riemann sums are monotone with respect to refinements">Proposition 8.21</a>).</p>
+<p>Next we prove the converse direction. Observe that for any subdivision <span class="process-math">\(a = x_0 \lt  \dots \lt  x_N\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-up-low-finite.html">
+\begin{equation*}
+U(f;[a,b]) \leq U(f;x_0, \dots, x_N) \quad \text{and} \quad L(f;[a,b]) \geq L(f;x_0, \dots, x_N) .
+\end{equation*}
+</div>
+<p class="continuation">Hence by our assumption, for any <span class="process-math">\(\eps \gt 0\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-up-low-finite.html">
+\begin{equation*}
+U(f;[a,b]) -L(f;[a,b]) \leq \eps.
+\end{equation*}
+</div>
+<p class="continuation">Since this holds for all <span class="process-math">\(\eps \gt 0\)</span> we deduce that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-up-low-finite.html">
+\begin{equation*}
+U(f;[a,b]) \leq L(f;[a,b]).
+\end{equation*}
+</div>
+<p class="continuation">The reverse inequality follows from <a href="" class="xref" data-knowl="./knowl/cor-up-low-finite.html" title="Equation 8.6">(8.6)</a>. Hence <span class="process-math">\(U(f;[a,b]) = L(f;[a,b])\text{,}\)</span> as required.</p></article><span class="incontext"><a href="week-8.html#proof-65" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>Since differentiability implies continuity (<a href="" class="xref" data-knowl="./knowl/prop-diff-cts.html" title="Proposition 6.24: Differentiable implies continuous">Proposition 6.24</a>), the function <span class="process-math">\(g\)</span> is continuous at <span class="process-math">\(x_0\text{.}\)</span> Since <span class="process-math">\(g(x_0) \neq 0\text{,}\)</span> and non-zero points of continuity yield a non-zero neighbourhood (<a href="" class="xref" data-knowl="./knowl/cor-non-zero-cts.html" title="Proposition 5.20: Non-zero point of continuity implies non-zero on a neighbourhood">Proposition 5.20</a>), there exists <span class="process-math">\(\delta \gt0\)</span>  such that <span class="process-math">\(g(x) \neq 0\)</span> for all <span class="process-math">\(x \in  (a,b)\cap (x_0-\delta, x_0+\delta)\text{.}\)</span> Decreasing <span class="process-math">\(\delta\)</span> if necessary, we may assume that <span class="process-math">\((x_0-\delta, x_0+\delta)\subset (a,b)\text{.}\)</span> Hence the quotient <span class="process-math">\(x \mapsto f(x)/g(x)\)</span> is defined on <span class="process-math">\((x_0-\delta, x_0+\delta)\text{.}\)</span> Composing the reciprocal function <span class="process-math">\(y \mapsto 1/y\)</span> with <span class="process-math">\(g\text{,}\)</span> the chain rule (<a href="" class="xref" data-knowl="./knowl/thm-chain-rule.html" title="Theorem 7.3: Chain rule">Theorem 7.3</a>) and <a href="" class="xref" data-knowl="./knowl/eg-recip-diff.html" title="Example 6.27: The reciprocal function is differentiable">Example 6.27</a> together give that the function<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/cor-non-zero-cts.html ./knowl/thm-chain-rule.html ./knowl/eg-recip-diff.html ./knowl/prop-alg-diff.html">
+\begin{equation*}
+x\mapsto \recip{g(x)}
+\end{equation*}
+</div>is differentiable at <span class="process-math">\(x_0\text{.}\)</span> Moreover, the derivative satisfies<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/cor-non-zero-cts.html ./knowl/thm-chain-rule.html ./knowl/eg-recip-diff.html ./knowl/prop-alg-diff.html">
+\begin{equation*}
+\brac{\recip{g(x_0)}}' = -\frac{g'(x_0)}{g(x_0)^2}.
+\end{equation*}
+</div>Hence by the product rule (<a href="" class="xref" data-knowl="./knowl/prop-alg-diff.html" title="Proposition 7.2: Algebra of differentiation">Proposition 7.2</a>) the quotient <span class="process-math">\(f/g = f \cdot\brac{1/g}\)</span> is differentiable at <span class="process-math">\(x_0\)</span> with derivative<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/cor-non-zero-cts.html ./knowl/thm-chain-rule.html ./knowl/eg-recip-diff.html ./knowl/prop-alg-diff.html">
+\begin{equation*}
+\frac{f'(x_0)}{g(x_0)} - \frac{f(x_0)g'(x_0)}{g(x_0)^2}.
+\end{equation*}
+</div>This completes the proof of the quotient rule.</article><span class="incontext"><a href="week-7.html#proof-48" class="internal">in-context</a></span>
+</body>
+</html>

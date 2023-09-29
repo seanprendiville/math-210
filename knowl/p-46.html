@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>By definition of the limit (<a href="" class="xref" data-knowl="./knowl/def-seq-limit.html" title="Definition 1.23: Limit of convergent sequence">Definition 1.23</a>,) we have that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-seq-limit.html ./knowl/eq-lim-def-4.html ./knowl/eq-lim-def-5.html">
+\begin{align}
+\amp\forall \eps \gt 0\ \exists N_1 = N_1(\eps)\ \forall n \geq N_1 \text{ we have } \abs{a - a_n} \leq \eps,\tag{2.1}\\
+\amp\forall \eps \gt 0\ \exists N_2 = N_2(\eps)\ \forall n \geq N_2 \text{ we have } \abs{b - b_n} \leq \eps .\tag{2.2}
+\end{align}
+</div>
+<p class="continuation">Set</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-seq-limit.html ./knowl/eq-lim-def-4.html ./knowl/eq-lim-def-5.html">
+\begin{equation*}
+\eps:= \trecip 3 (a-b) \gt 0 \qquad \text{and} \qquad n := \max\set{N_1(\eps),  N_2(\eps)}.
+\end{equation*}
+</div>
+<p class="continuation">Then by <a href="" class="xref" data-knowl="./knowl/eq-lim-def-4.html" title="Equation 2.1">(2.1)</a>,  <a href="" class="xref" data-knowl="./knowl/eq-lim-def-5.html" title="Equation 2.2">(2.2)</a> and the triangle inequality</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-seq-limit.html ./knowl/eq-lim-def-4.html ./knowl/eq-lim-def-5.html">
+\begin{align*}
+a_n = a + (a_n-a)\amp = b + (a-b) + (a_n-a)\\
+\amp = b_n + (b-b_n) + (a-b) + (a_n-a)\\
+\amp \geq  b_n +(a-b) - |b-b_n| - |a_n-a|\\
+\amp \geq b_n + 3 \eps - \eps - \eps\\
+\amp \gt b_n.
+\end{align*}
+</div>
+<p class="continuation">This contradicts our assumption that <span class="process-math">\(a_n \leq b_n\)</span> for all <span class="process-math">\(n\text{,}\)</span> completing our proof.</p>
+<span class="incontext"><a href="week-2.html#p-46" class="internal">in-context</a></span>
+</body>
+</html>

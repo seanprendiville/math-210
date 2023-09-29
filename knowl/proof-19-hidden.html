@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="hiddenproof"> Let <span class="process-math">\(\displaystyle a : = \lim_{n \to \infty}a_n\text{.}\)</span> We wish to prove that<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-seq-limit.html ./knowl/eq-lim-def-3.html">
+\begin{equation}
+\forall \eps \gt 0\ \exists N = N(\eps)\ \forall n \geq N \text{ we have } |a^{-1}-a_n^{-1}| \leq \eps.\tag{2.9}
+\end{equation}
+</div>We observe the key identity<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-seq-limit.html ./knowl/eq-lim-def-3.html">
+\begin{equation*}
+a^{-1} - a_n^{-1}  = \frac{a_n-a}{aa_n}.
+\end{equation*}
+</div>By definition of the limit (<a href="" class="xref" data-knowl="./knowl/def-seq-limit.html" title="Definition 1.23: Limit of convergent sequence">Definition 1.23</a>), we know that<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-seq-limit.html ./knowl/eq-lim-def-3.html">
+\begin{equation*}
+\forall \eps \gt 0\ \exists N_1 = N_1(\eps)\ \forall n \geq N_1 \text{ we have } \abs{a - a_n} \leq \eps.
+\end{equation*}
+</div>By the triangle inequality<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-seq-limit.html ./knowl/eq-lim-def-3.html">
+\begin{equation*}
+|a_n| = |a-(a-a_n)| \geq |a| - |a-a_n|.
+\end{equation*}
+</div>Hence if <span class="process-math">\(|a-a_n| \leq |a|/2\)</span> then <span class="process-math">\(|a_n| \geq |a|/2 \gt 0\text{.}\)</span> Setting <span class="process-math">\(N_0 := N_1(|a|/2)\text{,}\)</span> it follows that for all <span class="process-math">\(n \geq N_0\)</span> we have <span class="process-math">\(|a_n| \geq |a|/2 \gt 0\text{,}\)</span> in particular we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-seq-limit.html ./knowl/eq-lim-def-3.html">
+\begin{equation*}
+\abs{a^{-1} - a_n^{-1}}  = \frac{|a_n-a|}{|aa_n|} \leq \frac{|a_n-a|}{|a|^2/2}\text{.}
+\end{equation*}
+</div>Hence if <span class="process-math">\(n \geq N_0\)</span> and <span class="process-math">\(|a - a_n| \leq \eps\)</span> then<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-seq-limit.html ./knowl/eq-lim-def-3.html">
+\begin{equation*}
+\abs{a^{-1} - a_n^{-1}}  = \frac{|a_n-a|}{|aa_n|} \leq \frac{\eps}{|a|^2/2} = \frac{2\eps}{|a|^2}.
+\end{equation*}
+</div>We therefore obtain <a href="" class="xref" data-knowl="./knowl/eq-lim-def-3.html" title="Equation 2.9">(2.9)</a> on setting<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-seq-limit.html ./knowl/eq-lim-def-3.html">
+\begin{equation*}
+N(\eps) := \max\set{N_0, N_1\brac{\trecip{2}|a|^{2}\eps}}.
+\end{equation*}
+</div></article></body>
+</html>

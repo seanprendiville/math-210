@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.28</span><span class="period">.</span><span class="space"> </span><span class="title">A continuous function which is not differentiable.</span>
+</h5> The function <span class="process-math">\(x \mapsto |x|\)</span>  is an example of a function which is continuous at a point, but not differentiable there (namely at <span class="process-math">\(x_0 = 0\)</span>). Hence continuity does not imply differentiability. To see that this function is not differentiable at <span class="process-math">\(x_0=0\text{,}\)</span> we must prove the negation of <a href="" class="xref" data-knowl="./knowl/def-differentiable.html" title="Definition 6.22: Differentiable">Definition 6.22</a>, namely<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-differentiable.html ./knowl/diff-negation-to-prove.html">
+\begin{align}
+(\forall y \in \R)(\exists \eps \gt 0)(\forall \delta\gt 0)\amp(\exists x \in \R)\notag\\
+\amp\sqbrac{0\lt |x-0| \leq \delta \text{ and } \abs{\frac{|x|-|0|}{x-0}-y} \gt \eps}\text{.}\tag{6.6}
+\end{align}
+</div>Simplifying, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-differentiable.html ./knowl/diff-negation-to-prove.html">
+\begin{equation*}
+\frac{|x|-|0|}{x-0} = \begin{cases} 1 \amp \text{ if } x \gt 0,\\ -1\amp \text{ if } x \lt 0.\end{cases}
+\end{equation*}
+</div>Hence, for fixed <span class="process-math">\(y\in \R\)</span> we let <span class="process-math">\(\eps := 1/2\)</span> and for any <span class="process-math">\(\delta &gt; 0\)</span> we let<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-differentiable.html ./knowl/diff-negation-to-prove.html">
+\begin{equation*}
+x = x(y,\delta) = \begin{cases} -\delta \amp \text{ if } y \geq 0,\\ \delta \amp \text{ if } y \lt 0.\end{cases}
+\end{equation*}
+</div>Then <span class="process-math">\(|x-0| = \delta\)</span> and<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-differentiable.html ./knowl/diff-negation-to-prove.html">
+\begin{equation*}
+\abs{\frac{|x|-|0|}{x-0}-y} = 1+|y| \geq 1\gt \eps\text{.}
+\end{equation*}
+</div>This yields <a href="" class="xref" data-knowl="./knowl/diff-negation-to-prove.html" title="Equation 6.6">(6.6)</a></article><span class="incontext"><a href="week-6.html#abs-not-diff" class="internal">in-context</a></span>
+</body>
+</html>

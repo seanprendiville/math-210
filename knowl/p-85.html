@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Next, let us suppose that <span class="process-math">\(f(x_n)  = f(x_0)\)</span> for infinitely many values of <span class="process-math">\(n\text{.}\)</span> Write <span class="process-math">\(k_1 \lt  k_2 \lt  \dots\)</span> for those indices for which  <span class="process-math">\(f(x_{k_n}) = f(x_0)\text{.}\)</span> Write <span class="process-math">\(\ell_1 \lt  \ell_2 \lt  \dots\)</span> for the (possibly finite) remaining indices with <span class="process-math">\(f(x_{l_n}) \neq f(x_0)\text{.}\)</span> The sequence</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation}
+n\mapsto \frac{g\bigbrac{f(x_{\ell_n})}-g\bigbrac{f(x_0)}}{f(x_{\ell_n})-f(x_0)}\tag{7.4}
+\end{equation}
+</div>
+<p class="continuation">is either a finite sequence, or converges as in the proof of <a href="" class="xref" data-knowl="./knowl/eq-comp-subseq.html" title="Equation 7.3">(7.3)</a>. In either case, the sequence is bounded, so there exists <span class="process-math">\(M \in \R\)</span> such that for all <span class="process-math">\(\ell_n\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation*}
+\abs{\frac{g\bigbrac{f(x_{\ell_n})}-g\bigbrac{f(x_0)}}{f(x_{\ell_n})-f(x_0)}
+} \leq M.
+\end{equation*}
+</div>
+<p class="continuation">Combining this with <a href="" class="xref" data-knowl="./knowl/eq-chain-alt.html" title="Equation 7.2">(7.2)</a>, for any <span class="process-math">\(n \in \N\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation}
+\abs{\frac{g\bigbrac{f( x_n)} - g\bigbrac{f(x_0)}}{ x_n-x_0}} \leq M\abs{\frac{f(x_{n}) - f(x_0)}{x_{n} - x_0}}.\tag{7.5}
+\end{equation}
+</div>
+<p class="continuation">Since <span class="process-math">\(x_{k_n} \to x_0\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation*}
+f'(x_0) = \lim_{n \to \infty} \frac{f(x_{k_n}) - f(x_0)}{x_{k_n} - x_0} = 0.
+\end{equation*}
+</div>
+<p class="continuation">So it follows that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation*}
+\lim_{n \to \infty} \frac{f(x_{n}) - f(x_0)}{x_{n} - x_0} = f'(x_0) = 0.
+\end{equation*}
+</div>
+<p class="continuation">Combining this with <a href="" class="xref" data-knowl="./knowl/eq-alt-chain-ineq.html" title="Equation 7.5">(7.5)</a> gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation*}
+\lim_{n\to \infty}\abs{\frac{g\bigbrac{f( x_n)} - g\bigbrac{f(x_0)}}{ x_n-x_0}} = 0.
+\end{equation*}
+</div>
+<p class="continuation">Hence <a href="" class="xref" data-knowl="./knowl/eq-chain-to-prove.html" title="Equation 7.1">(7.1)</a> also follows in this case.</p>
+<span class="incontext"><a href="week-7.html#p-85" class="internal">in-context</a></span>
+</body>
+</html>

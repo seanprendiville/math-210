@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>To show that <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0\)</span> it suffices to establish that<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(\forall \eps \gt 0)(\exists \delta= \delta(\eps) \gt 0)(\forall x \in D)[|x-x_0|\leq \delta \implies |f(x)-f(x_0)| \leq \eps].
+\end{equation*}
+</div>Since <span class="process-math">\(f_n\)</span> converges to <span class="process-math">\(f\)</span> uniformly, there exists <span class="process-math">\(n\)</span> for which<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sup_D |f_n-f| \leq \trecip{3} \eps.
+\end{equation*}
+</div>Since <span class="process-math">\(f_n\)</span> is continuous at <span class="process-math">\(x_0\text{,}\)</span> there exists <span class="process-math">\(\delta \gt 0\)</span> such that if <span class="process-math">\(x \in D\)</span> satisfies <span class="process-math">\(|x-x_0| \leq \delta\)</span> then <span class="process-math">\(|f_n(x)-f_n(x_0)| \leq \trecip{3}\eps\text{.}\)</span> Hence<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+|f(x)-f(x_0)| \amp \leq |f(x)-f_n(x)| + |f_n(x)-f_n(x_0)| + |f_n(x_0) - f(x_0)|\\
+\amp \leq \sup_D |f_n-f| + |f_n(x)-f_n(x_0)| + \sup_D |f_n-f|\\
+\amp \leq \trecip{3} \eps +\trecip{3} \eps +\trecip{3} \eps = \eps. 
+\end{align*}
+</div></article><span class="incontext"><a href="week-10.html#proof-89" class="internal">in-context</a></span>
+</body>
+</html>
