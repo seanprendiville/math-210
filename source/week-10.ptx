@@ -1,0 +1,348 @@
+<?xml version='1.0' encoding="utf-8"?>
+<!--
+% !TEX TS-program = PreTeXt-HTML
+-->
+<section xml:id="week-10" xmlns:xi="http://www.w3.org/2001/XInclude">
+			<title>Week 10</title>
+			<exercise>
+				<title>The fundamental theorem of calculus</title>
+				<task>
+					<statement>State and prove the "derivative of integral" version of the fundamental theorem of calculus.</statement>
+					<solution>
+							<theorem xml:id="thm-ftc-deriv-of-int">
+<title>Fundamental theorem of calculus - derivative of integral</title>
+<statement>
+ Let <m>a, b \in \R</m> with <m>a \lt  b</m>.
+ Let <m>f : [a,b] \to \R</m> be Riemann integrable.
+ Define the function <m>F : [a,b] \to \R</m> at <m>x \in [a,b]</m> by<fn>Here we interpret <m>\int_a^a f</m> as 0.</fn>
+<me>
+F(x) := \int_a^x f.
+</me>
+ Then <m>F</m> is continuous on <m>[a,b]</m>
+ Moreover, if <m>f</m> is continuous at <m>x_0 \in (a,b)</m> then <m>F</m> is differentiable at <m>x_0</m> and we have
+<me>
+F'(x_0) = f(x_0).
+</me>
+</statement>
+<proof>
+ For <m>x,y \in [a,b]</m> with <m>x \lt  y</m>, the interval additivity property (<xref ref="prop-int-subinterval"/>) gives that
+<me>
+\abs{\int_a^x f - \int_a^{y} f} = \abs{\int_x^y f}.
+</me>
+ By the trivial upper bound for the integral (<xref ref="cor-up-low-finite"/>) and the integral triangle inequality (<xref ref="prop-int-ineq"/>) we have
+<me>
+\abs{\int_x^y f} \leq \int_x^y \abs{f} \leq (y-x)\sup_{[x,y]} |f|.
+</me>
+ It follows that for <m>x, x_0 \in [a,b]</m> we have
+<me>
+|F(x)-F(x_0)| \leq \abs{x-x_0} \sup_{[a,b]} |f|.
+</me>
+ Since <m>\sup_{[a,b]} |f| \lt  \infty</m>, the sandwich rule (<xref ref="prop-sandwich"/>) gives that
+<me>
+|F(x)-F(x_0)| \to 0 \quad \text{as}\quad   x \to x_0 \quad \text{through} \quad [a,b].
+</me> 
+ Thus <m>F</m> is continuous at <m>x_0</m>.
+ Next, suppose that <m>f </m> is continuous at <m>x_0 \in (a,b)</m>.
+ Letting <m>\eps \gt 0</m>, there exists <m>\delta = \delta(\eps) \gt 0</m> such that if <m>x \in [a,b]</m> and <m>|x-x_0| \leq \delta</m> then <m>|f(x)-f(x_0)| \leq \eps</m>.
+ Notice that for <m>h \gt0</m> we have
+<me>
+h^{-1} \int_{x_0}^{x_0+h} f(x_0) \intd x = f(x_0)h^{-1} \int_{x_0}^{x_0+h} 1 = f(x_0).
+</me>
+ It follows that if <m>0 \lt  h \leq \delta</m> then by linearity of integration (<xref ref="thm-int-add"/>) and the integral triangle inequality (<xref ref="prop-int-ineq"/>) we have
+<md>
+<mrow>
+\abs{\frac{\int_a^{x_0+h} f - \int_a^{x_0}f}{h} - f(x_0)}\amp \leq h^{-1}\int_{x_0}^{x_0+h} \abs{f(x)-f(x_0)}\intd x 
+</mrow>
+<mrow>
+\amp \leq h^{-1}\int_{x_0}^{x_0+h}\eps  = \eps.
+</mrow>
+</md>
+ Hence for <m>0 \lt  h \leq \delta</m> we have
+<me>
+\abs{\frac{F(x_0 + h)-F(x_0)}{h} - f(x_0)} \leq \eps.
+</me>
+ A similar argument proves the same inequality when <m>-\delta \lt  h \lt  0</m>.
+ It follows from the definition of differentiability (<xref ref="def-differentiable"/>) that <m>F'(x_0) = f(x_0)</m>.
+</proof>
+</theorem>			
+					</solution>
+				</task>
+				<task>
+					<statement>State and prove the "integral of derivative" version of the fundamental theorem of calculus.</statement>
+					<solution>
+<theorem xml:id="thm-ftc-int-of-deriv">
+<title>Fundamental theorem of calculus - integral of derivative</title>
+<statement>
+ Let <m>f : (a,b) \to \R</m>.
+ Suppose that <m>f</m> is differentiable on <m>(a,b)</m>.
+ Given <m>x,y \in (a,b)</m> with <m>x \lt  y</m>, suppose that <m>f'</m> is Riemann integrable on <m>[x,y]</m>.
+ Then
+<me>
+\int_x^y f' = f(y) - f(x). 
+</me>
+</statement>
+<proof>
+ Let <m>x = x_0 \lt  \dots \lt  x_N = y</m> denote a subdivision of <m>[x,y]</m>.
+ For each <m>n</m>, the mean value theorem (<xref ref="thm-mvt"/>) gives <m>y_n \in (x_{n-1}, x_n)</m> such that 
+<me>
+f(x_n) - f(x_{n-1})  = f'(y_n)(x_n-x_{n-1}).
+</me>
+ Hence
+<me>
+f(y) - f(x) = \sum_{n=1}^N \sqbrac{f(x_n)-f(x_{n-1})} = \sum_{n=1}^N (x_n-x_{n-1})f'(y_n).
+</me>
+ Thus
+<me>
+L(f';x_0, \dots, x_N) \leq f(y)-f(x) \leq U(f';x_0, \dots, x_N).
+</me>
+ Since this holds for all subdivisions <m>x = x_0 \lt  \dots \lt  x_N = y</m>, it follows from the definition of the upper and lower Riemann integrals (<xref ref="def-up-low-riemann-integral"/>) that
+<me>
+L(f'; [a,b]) \leq f(y)-f(x) \leq U(f';[a,b]).
+</me>
+ Since <m>f'</m> is Riemann integrable on <m>[x,y]</m>, we have <m>L(f';[x,y]) = U(f';[x,y]) = \int_x^y f'</m>.
+ We deduce that <m>f(y)-f(x) = \int_x^y f'</m>.
+</proof>
+</theorem>
+					</solution>
+				</task>
+				<task>
+					<statement>Using the fundamental theorem of calculus, state and prove  the integration by parts formula.</statement>
+					<solution>
+					<corollary>
+					<title>Integration by parts</title>
+					<statement>
+ Let <m>f ,g: (a,b) \to \R</m>.
+ Suppose that <m>f</m> and <m>g</m> are differentiable on <m>(a,b)</m>.
+ Given <m>x,y \in (a,b)</m> with <m>x \lt  y</m>, suppose that both <m>f'</m> and <m>g'</m> are Riemann integrable on <m>[x,y]</m>.
+ Then
+<me>
+\int_x^y f'g = f(y)g(y) - f(x)g(x) - \int_x^y fg'. 
+</me>
+</statement>
+<proof>
+ By the product rule for differentiation (<xref ref="prop-alg-diff"/>) we have <m>(fg)' = f'g + fg'</m>.
+ Both <m>f'g</m> and <m>fg'</m> are integrable on <m>[x,y]</m>, as they are products of Riemann integrable functions (<xref ref="thm-int-mult"/>).
+ Therefore <m>(fg)'</m> is also integrable on <m>[x,y]</m>, by linearity of integration (<xref ref="thm-int-add"/>).
+ Hence by the fundamental theorem of calculus (<xref ref="thm-ftc-int-of-deriv"/>), we have 
+<me>
+\int_x^y \brac{f'g + fg'} = \int_x^y \brac{fg}' = f(y)g(y) - f(x)g(x).
+</me>
+ The result now follows from linearity of integration (<xref ref="thm-int-add"/>).
+</proof></corollary>					</solution>
+				</task>
+				<task>
+					<statement>Using the fundamental theorem of calculus, state and prove  the change of variables formula, also known as integration by substitution.
+					</statement>
+					<solution>
+					<corollary>
+					<titlte>Change of variables formula<fn>Also known as "integration by substitution".</fn></titlte>
+					<statement>
+ Let <m>\phi: (a,b) \to (c,d)</m> be a differentiable function with continuous derivative <m>\phi'</m>.
+ Let <m>f : (c,d) \to \R</m> be continuous.
+ Given <m>x,y \in (a,b)</m> we have<fn>Recall that if <m>a \lt  b</m> then we write <m>\int_b^a</m> for <m>-\int_a^b</m>.</fn>
+<me>
+\int_{\phi(x)}^{\phi(y)} f = \int_x^y \brac{f\circ \phi} \phi'.
+</me>
+</statement>
+<proof>
+ The function <m>f\circ \phi</m> is integrable on any closed interval in <m>(a,b)</m>, since the composition of continuous functions is continuous (<xref ref="prop-comp-cts"/>).
+ Hence the function <m>(f\circ \phi)\phi'</m> is integrable on any closed interval in <m>(a,b)</m>, as it is the product of Riemann integrable functions (<xref ref="thm-int-mult"/>).
+ Define the functions
+<me>
+F(s):=\int_{\phi(x)}^{s} f \quad\text{and}\quad G(t) :=\int_x^t \brac{f\circ \phi}\phi'.
+</me>
+ We would like to show that <m>F(\phi(y)) = G(y)</m>.
+ By the fundamental theorem of calculus (<xref ref="thm-ftc-deriv-of-int"/>)  we have
+<me>
+F'(s) = f(s) \quad \text{and} \quad  G'(t) = f(\phi(t))\phi'(t).
+</me>
+ By the chain rule (<xref ref="thm-chain-rule"/>) we have
+<me>
+(F\circ\phi)'(t) = f(\phi(t))\phi'(t).
+</me>
+ Since functions on an interval with zero derivative are constant (<xref ref="cor-mono-diff"/>) there exists <m>C \in \R</m> such that for all <m>t\in (a,b)</m> we have
+<me>
+(F\circ\phi)(t)-G(t) = C.
+</me>
+ Since <m>(F\circ \phi) (x) = 0</m> and <m>G(x) = 0</m>, we deduce that <m>C = 0</m>.
+ The required identity follows.
+</proof>
+</corollary>
+					</solution>
+				</task>
+			</exercise>
+			<exercise>
+				<title>Uniform convergence</title>
+				<task>
+					<statement>Define what it means for a sequence of functions to converge pointwise.</statement>
+					<solution>
+					<definition xml:id="def-ptws-conv">
+<title>Pointwise convergence</title>
+ For each <m>n \in \N</m> let <m>f_n:S \to \R</m> be a real-valued function with domain <m>S</m> (not necessarily a set of real numbers).
+ Let <m>f : S \to \R</m>.
+ We say that the sequence of functions <m>(f_n)_{n=1}^\infty</m> <em>converges pointwise to <m>f</m> on <m>S</m></em> if 
+<me>
+(\forall x \in S)\sqbrac{\lim_{n\to \infty} f_n(x) = f(x)}.
+</me>
+</definition>					</solution>
+				</task>
+				<task>
+					<statement>Define what it means for a sequence of functions to converge uniformly.</statement>
+					<solution>
+					<definition xml:id="def-unif-conv">
+<title>Uniform convergence</title>
+ For each <m>n \in \N</m> let <m>f_n:S \to \R</m> be a real-valued function with domain <m>S</m> (not necessarily a set of real numbers).
+ Let <m>f : S \to \R</m>.
+ We say that the sequence of functions <m>(f_n)_{n=1}^\infty</m> <em>converges uniformly to <m>f</m> on <m>S</m></em> if 
+<me>
+\lim_{n\to \infty} \sup_{S}| f-f_n| = 0.
+</me>
+</definition>					</solution>
+				</task>
+				<task>
+					<statement>State and prove how uniform convergence implies pointwise convergence.</statement>
+					<solution>
+					<proposition>
+					<title>Uniform convergence implies pointwise convergence</title>
+					<statement>
+ Suppose that the <m>f_n</m> converge uniformly to <m>f</m> on <m>S</m>.
+ Then the <m>f_n</m> converge pointwise to <m>f</m> on <m>S</m>.
+</statement>
+<proof>
+ Fix <m>x \in S</m>.
+ Then 
+<me>
+|f_n(x) - f(x)| \leq \sup_{S} |f_n-f| \to 0 \quad \text{as} \quad n \to \infty.
+</me>
+ Hence by the sandwich rule (<xref ref="cor-sandwich"/>) we have <m>f_n(x) \to f(x)</m> as <m>n \to \infty</m>.
+</proof></proposition>
+					</solution>
+				</task>
+				<task>
+					<statement>Give an example to show that pointwise convergence does not necessarily imply uniform convergence.</statement>
+					<solution>
+					<example>
+					<title>Pointwise convergence does not imply uniform convergence</title>
+ Define <m>f_n : (0, 1) \to \R</m> by
+<me>
+f_n(x) = 1_{[\frac{1}{n}, 1)}.
+</me>
+ Then the <m>f_n</m> converge pointwise to <m>1_{(0,1)}</m>, but not uniformly.
+</example>
+<proof>
+ Fix <m>x \in (0,1)</m>.
+ Setting <m>N = N(x) := \ceil{1/x}</m>, if <m>n \geq N</m> then <m>1/n \leq x</m> so
+<me>
+f_n(x) = 1 = 1_{(0,1)}(x).
+</me>
+ Thus <m>f_n(x) \to 1_{(0,1)}(x)</m> as <m>n \to \infty</m>.
+ For any <m>n \in \N</m>, setting <m>x_n := 1/(2n)</m> gives <m>f_n(x_n) = 0</m> and <m>1_{(0,1)}(x_n) = 1</m>.
+ Therefore, for any <m>n \in \N</m> we have
+<me>
+\sup_{(0,1)} |f_n-1_{(0,1)}| = 1.
+</me>
+ This supremum does not tend to 0 as <m>n \to \infty</m>.
+</proof>
+					</solution>
+				</task>
+				<task>
+					<statement>State and prove how continuity is preserved under uniform convergence.</statement>
+					<solution>
+					<proposition>
+					<title>Continuity is preserved under uniform convergence</title>
+<statement>
+  Let <m>f, f_1, f_2, \dots:D \to \R</m> be real-valued functions on a real domain <m>D \subset \R</m>.
+ Suppose that the <m>f_n</m> converge uniformly to <m>f</m> on <m>D</m>.
+ Suppose that each <m>f_n</m> is continuous at  <m>x_0 \in D</m>.
+ Then <m>f</m> is continuous at <m>x_0</m>.
+</statement>
+<proof>
+ To show that <m>f</m> is continuous at <m>x_0</m> it suffices to establish that
+<me>
+(\forall \eps \gt 0)(\exists \delta= \delta(\eps) \gt 0)(\forall x \in D)[|x-x_0|\leq \delta \implies |f(x)-f(x_0)| \leq \eps].
+</me>
+ Since <m>f_n</m> converges to <m>f</m> uniformly, there exists <m>n</m> for which 
+<me>
+\sup_D |f_n-f| \leq \trecip{3} \eps.
+</me>
+ Since <m>f_n</m> is continuous at <m>x_0</m>, there exists <m>\delta \gt 0</m> such that if <m>x \in D</m> satisfies <m>|x-x_0| \leq \delta</m> then <m>|f_n(x)-f_n(x_0)| \leq \trecip{3}\eps</m>.
+ Hence
+<md>
+<mrow>
+|f(x)-f(x_0)| \amp \leq |f(x)-f_n(x)| + |f_n(x)-f_n(x_0)| + |f_n(x_0) - f(x_0)|
+</mrow>
+<mrow>
+\amp \leq \sup_D |f_n-f| + |f_n(x)-f_n(x_0)| + \sup_D |f_n-f|
+</mrow>
+<mrow>
+\amp \leq \trecip{3} \eps +\trecip{3} \eps +\trecip{3} \eps = \eps. 
+</mrow>
+</md>
+</proof>
+</proposition>
+					</solution>
+				</task>
+				<task>
+					<statement>State and prove how Riemann integrability is preserved under uniform convergence.</statement>
+					<solution>
+					<proposition>
+					<title>Integrability is preserved under uniform convergence</title>
+					<statement>
+  Let <m>f, f_1, f_2, \dots:[a,b] \to \R</m>.
+ Suppose that the <m>f_n</m> converge uniformly to <m>f</m> on <m>[a,b]</m>.
+ Suppose that each <m>f_n</m> is Riemann integrable on <m>[a,b]</m>.
+ Then <m>f</m> is Riemann integrable on <m>[a,b]</m>.
+ Furthermore 
+<me>
+\int_a^b f = \lim_{n\to \infty} \int_a^b f_n.
+</me> 
+</statement>
+<proof>
+ Let <m>\eps \gt 0</m>.
+ By uniform convergence, there exists <m>N \in \N</m> such that for all <m>n \geq N</m> and all <m>x \in [a,b]</m> we have
+<me>
+f_n(x)-\eps \leq f(x) \leq f_n(x) + \eps.
+</me>
+ In particular, since <m>f_n</m> is bounded on <m>[a,b]</m>, so is <m>f</m>.
+ It follows that
+<md>
+<mrow>
+\int_a^bf_n-\eps(b-a) = \int_a^b(f_n-\eps) \leq L(f;[a,b]) \leq U(f; \amp [a,b]) \leq \int_a^b(f_n+\eps)
+</mrow>
+<mrow>
+\amp = \int_a^bf_n+\eps(b-a) .
+</mrow>
+</md>
+ Hence by two applications of the sandwich rule (<xref ref="prop-sandwich"/> and <xref ref="prop-sandwich"/>) we deduce that
+<me>
+U(f;[a,b]) \leq \lim_{n \to \infty} \int_a^b f_n \leq L(f;[a,b]).
+</me>
+ The claimed result follows.
+</proof></proposition>
+					</solution>
+				</task>
+				<task>
+					<statement>Give an example of a sequence of Riemann integrable functions which converge pointwise, but for which the limit is not Riemann integrable.</statement>
+					<solution>
+					<example>
+ Let <m>q_1, q_2, \dots</m> be an enumeration<fn>Recall that the set <m>\Q</m> is <url href="https://en.wikipedia.org/wiki/Countable_set" visual="en.wikipedia.org/wiki/Countable_set">countable</url></fn> of the rationals in <m>[0,1]</m>.
+ The sequence of functions <m>f_n := 1_{\set{q_1, \dots, q_n}} : [0,1] \to \R</m> converges pointwise to <m>f := 1_{\Q \cap [0,1]}</m> on <m>[0,1]</m>.
+ Each <m>f_n</m> is Riemann integrable on <m>[0,1]</m> by <xref ref="eg-indicator-point"/> and linearity of the integral (<xref ref="thm-int-add"/>).  Moreover <m>\int_0^1 f_n = 0</m>.
+ Yet by <xref ref="eg-non-int"/>, the function <m>f= 1_{\Q \cap [0,1]}</m> is not Riemann integrable on <m>[0,1]</m>.
+ This example shows that, unlike uniform convergence, pointwise convergence is not sufficient to ensure Riemann integrability of the limit.
+</example>
+<proof>
+ It suffices to show that the <m>f_n</m> converge pointwise to <m>f</m> on <m>[0,1]</m>.
+ Let <m>x \in [0,1]</m>.
+ If <m>x \notin \Q</m> then <m>f_n(x) = 0</m> for all <m>n</m> and <m>f(x) = 0</m>.
+ Hence <m>f_n(x) \to f(x)</m> as <m>n \to \infty</m> when <m>x \notin \Q</m>.
+ Next suppose that <m>x \in \Q</m>.
+ Then <m>x = q_N</m> for some <m>N \in \N</m>.
+ Hence <m>f_n(x) = 1</m> for all <m>n \geq N</m>.
+ Also <m>f(x) = 1</m>.
+ Therefore <m>f_n(x) \to f(x)</m> as <m>n \to \infty</m> when <m>x \in \Q</m>.
+</proof>
+					</solution>
+				</task>
+			</exercise>
+		</section>

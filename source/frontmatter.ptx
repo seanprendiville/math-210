@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding="utf-8"?>
+<!--
+% !TEX TS-program = PreTeXt-HTML
+-->
+<frontmatter xml:id="frontmatter" xmlns:xi="http://www.w3.org/2001/XInclude">
+		<title>Introduction</title>
+			<titlepage>
+				<author>
+					<personname>Sean Prendiville</personname>
+					<institution>Lancaster University</institution>
+					<email>s.prendiville@lancaster.ac.uk</email>
+				</author>
+				<date><today /></date>
+            		</titlepage>
+			<preface xml:id="study-instructions">
+				<title>How to study this module</title>
+				<p>
+				There are no lecture notes for this course. Instead, each week  you are expected to work through the relevant chapter of <em>self-test questions</em>. These questions are designed to allow you to actively learn the material by writing it up  yourself. Material is examinable if and only if it is written in the solutions to the self-test question.
+				</p>
+				<p>
+				It may seem odd to ask you to answer questions without first showing you the relevant material in lecture notes. I have a number of reasons for doing this:
+				<ul>
+					<li>
+					You have seen the majority of this material before, in MATH111-114. Sometimes our definitions will differ from those given in MATH111-114, see for instance our definition of "upper Riemann integral" (<xref ref="def-up-low-riemann-integral"/>). This often happens in mathematics<fn>For instance, do the natural numbers <m>\N</m> contain 0? In this course, they do <em>not</em>, we take <m>\N:=\set{1,2,3,\dots}</m>, the set of positive integers. However, in other courses/books you may see 0 included as a natural number.</fn>; no confusion should arise provided that one is consistent. In this course, the examinable definition is that given in the solutions to the self-test questions.
+					</li>
+					<li>
+					Mathematics is <em>hard</em> to read and to listen to. It is much more fun to write-up mathematics oneself, as this active process is closer to the puzzle-solving which draws many of us to the subject.
+					</li>
+					<li>
+					Evidence from educational psychology suggests that we understand and remember material more effectively if we first <em>get it wrong</em>. That is to say, we obtain better learning outcomes if we attempt a question, get it wrong, look up the solution, then write-up a correct answer.
+					</li>
+				</ul>
+				</p>
+	<p>
+	Here is how I suggest that you work through the self-test questions:
+	<ul>
+		<li>
+	 Attempt the self-test questions in the order in which they are presented. Almost immediately, it is likely that you will  find yourself unsure about what you are writing. That is okay! For example, if trying to define a uniformly continuous function (<xref ref="ex-unif-cts"/>), you may begin:
+	<blockquote>
+	We say that <m>f</m> is uniformly continuous if <m>(\forall \eps > 0)\dots</m> ??
+	</blockquote>	
+	As you are writing this, some questions may occur to you: What should the domain of <m>f</m> be? What about the co-domain? What comes after <m>(\forall \eps >0)</m>? Is it <m>(\exists \delta > 0)</m> or is it <m>(\forall x,y\dots)</m>?
+	</li>
+	<li> As soon as you are stuck, you should look at the solution, reading until your query is answered.
+	</li>
+	<li> Once your query is answered, cover up the solution and resume answering the self-test question. It is likely that you will shortly find yourself stuck once more. That is okay - simply repeat the above procedure!
+	</li>
+	<li> Proceeding in this manner, one ends up reading the notes (which are in effect, the solutions to the questions) in detail, but when one does engage with the details, one is primed to understand and remember them.
+	</li>
+	</ul>
+	In our lectures we discuss the solutions to the self-test questions. Unlike some of your other courses, we will not present a summary of the material in our lectures, nor will I write up notes on the board for you to copy down<fn>As an undergraduate, I rarely understood the mathematics in presentation-style lectures. My main reason in attending such lectures was to write down the notes from the board, so that I could go away and try and understand them in my own time. The copying down part does not seem like a good use of time. Indeed, evidence from cognitive science demonstrates that interactive lectures promote more learning, although students often feel like they are learning less! See <url href="https://www.pnas.org/content/116/39/19251" visual="www.pnas.org/content/116/39/19251">this article</url>.</fn>. Instead our lectures comprise a series of activities which allow you to gauge, clarify and review your understanding of the solutions to the self-test questions.
+	</p>
+			</preface>
+			<preface xml:id="assessment">
+			<title>Assessment</title>
+			<ul>
+			<li> <em>Summer Examination</em>. Worth <m>70\%</m> of your final mark. All examination questions are variants of self-test questions.
+			</li>
+			<li> Participation in <em>Workshops</em>. Worth <m>15\%</m> of your final mark. Workshops take place every fortnight, in odd-numbered weeks (see your timetable for details of where and when). Each workshop therefore counts towards <m>3\%</m> of your final mark. You will receive full marks for the workshop if you make a  reasonable attempt at the self-test question which your tutor asks you to submit for feedback. If you are unable to answer this question, you will still receive full marks if you are able to clearly explain the unsuccessful strategies you have attempted. You will receive no marks if you do not attempt the question and do not explain the strategies attempted. If you cannot attend a workshop simply email your tutors to ask them which question they set, then write up your answer, scan it (e.g. with Microsoft Lens) and send it to them.
+			</li>
+			<li> Fortnightly multiple choice <em>Moodle Quiz</em>. Worth <m>15\%</m> of your final mark. Moodle quizzes take place every fortnight, in even-numbered weeks. Each quiz therefore counts towards <m>3\%</m> of your final mark. These assess your knowledge of the week's self-test questions. The quiz closes at 6pm Friday of the week in question. See the Moodle page for links to the quizzes.</li>
+			</ul>
+			</preface>
+			<preface xml:id="workshop-instructions">
+			<title>Workshop instructions</title>
+			<p>
+			Workshops take place every fortnight, in odd-numbered weeks (see your timetable for details of where and when). Each workshop lasts up to two hours. Prior to the workshop, you will be assigned three self-test questions (see, for example, <xref ref="week-1"/>), two of which you will answer in your workshop (selected by your workshop tutors).
+			</p>
+<ul>
+<li> 
+<em>0-30 minutes:</em> During the first 30 minutes of your workshop, you may collaborate with your peers and consult the notes/tutor/internet in order to write-up a solution to the first self-test question selected by your tutor. At the end of this 30 minute period you will swap your solution with another student who will mark your work. If you finish writing your solution before the 30 minutes has passed, you should begin sketching solutions to the remaining two self-test questions.
+</li>
+<li>
+<em>30-50 minutes:</em> During the next 20 minutes of your workshop, your tutors will give a model solution to the first self-test question and you will mark your peer's answer. The tutor will indicate key elements which should be included in a valid answer. 
+ </li>
+ <li>
+ <em>50-60 minutes:</em> A ten minute comfort break.
+ </li>
+  <li>
+ <em>60-80 minutes:</em> An opportunity to revise the solutions to the remaining two self-test questions.
+ </li>
+   <li>
+   <p>
+ <em>80-120 minutes:</em> Your tutor will select one of the remaining two self-test questions and you will write-up a solution under exam conditions.
+ </p>
+ 		<ul>
+ 		<li>The question should take you about 20 minutes - the extra   time is  for those who require this in exams. However, everyone should feel free to use the extra time if needed.</li>
+		<li>You may not consult anyone else during the final 40 minutes.</li>
+	<li>You must include full details of your proofs and calculations. </li>
+	<li>The only results which you may use without further justification are those contained in the notes or other course materials, provided that you clearly paraphrase them.</li>
+	<li>Once you are finished, you should hand your attempt to your workshop tutor and leave quietly.</li>
+	</ul>
+	</li>
+	</ul>
+	<p>
+Each workshop contributes <m>3\%</m> towards your final mark:
+</p>
+	<ul>
+	<li> You will receive full marks for the workshop if you make a  reasonable attempt of the final question, or clearly explain the strategies you have attempted (even if unsuccessful).</li>
+	<li> You will receive no marks for the workshop if you do not  attempt the question and do not explain the strategies you have attempted.</li>
+	<li> At your next workshop, your tutor will return your answer with formative feedback.</li>
+	<li> <p>To help you get a sense of what your answer would achieve in an exam, your workshop tutor will also give you an indicative grade:
+	</p>
+		<ul>
+		<li> <em>1st.</em> Complete solution with no gaps or logical errors.</li>
+		<li> <em>2nd.</em> Almost complete solution, with a small number of gaps or logical errors</li>
+		<li> <em>3rd.</em> Answer demonstrates some of the relevant knowledge required for a solution.</li>
+		<li> <em>4th.</em> Answer does not demonstrate any of the relevant knowledge required for a solution.</li>
+</ul></li>
+	<li> The indicative grade will not count towards your final mark</li>
+<li> Do not attend a workshop if you feel ill or are self-isolating.  You can complete your workshop assessment by emailing your workshop tutors to find out which question they have set, then scan and email them your answer. </li>
+</ul>
+			</preface>
+			<preface xml:id="module-purpose">
+				<title>The purpose of this module</title>
+				<p>
+				One of the purposes of real analysis is to prove that the laws of calculus are valid. Rather than using the "plausible" geometric reasoning you may have met in school mathematics, real analysis aims to reduce the laws of calculus to simple logical statements which can be verified by a human or even a computer. With this foundation in hand, one can go beyond calculus and give logical answers to questions such as the following:
+				<ul>
+					<li>What is the density of rational numbers between 0 and 1?<fn>The answer is 0, see MATH314 Lebesgue Integration.</fn></li>
+					<li>What is the density of prime numbers in  <m>1,2, \dots, N</m>?<fn>The answer is <m>1/\log N</m>, see see MATH328 Number Theory.</fn></li>
+					<li>If one repeatedly samples a statistic, what shape does the resulting bar chart take?<fn>This question is answered by the "law of large numbers", see MATH313 Probability Theory.</fn></li>
+				</ul>
+Although these questions are not answered in this course, we lay the logical foundations which allow one to answer these questions in future courses. 
+</p>
+<p>
+ If you would like to refresh you knowledge of logic and proof, I recommend reading the first 20 pages of the following <url
+href="https://people.maths.bris.ac.uk/~maxmr/analysis1/notes1.pdf" visual="people.maths.bris.ac.uk/~maxmr/analysis1/notes1.pdf">lecture notes</url>.
+</p>
+</preface>
+<preface xml:id="learning-outcomes">
+<title>Learning outcomes</title>
+<p>
+Having worked through this course, you should be able to:
+<ul>
+	<li>
+	<p>
+	Give rigorous logical <em>definitions</em> of concepts from calculus, such as "limit", "continuous", "differentiable". For instance:
+		<ul>
+			<li>
+			Define the supremum of a set of real numbers.
+			</li>
+			<li>Define what it means for a real number to be the limit of a sequence of real numbers.
+			</li>
+			<li>Define what it means for a real-valued function on an open interval to be continuous.
+			</li>
+		</ul>
+	</p>
+	</li>
+	<li>
+	<p>
+	Use logical <em>proof</em> to establish properties of the above concepts, for example:
+		<ul>
+			<li>
+	Prove that every differentiable function on an open interval is continuous.
+			</li>
+			<li>
+	Prove that every continuous function on a closed interval is uniformly continuous.
+			</li>
+			<li>
+	Show that if <m>S \subset \R</m> is non-empty and bounded then
+				<me>
+	(\forall n \in \N)(\exists a_n \in S)\sqbrac{a_n + \tfrac{1}{n} \geq \sup S }.
+				</me>
+			</li>
+		</ul>
+	</p>
+	</li>
+	<li>
+	<p>
+	Construct <em>counterexamples</em> to illustrate why certain assumptions are necessary, for instance:
+		<ul>
+			<li>
+	Construct a continuous function on an open interval which is not differentiable.
+			</li>
+			<li>
+	Construct a continuous function on an open interval which is not uniformly continuous.
+			</li>
+			<li>
+	Construct a set <m>S \subset \R</m> which is non-empty, but for which
+				<me>
+	(\exists n \in \N)(\forall a \in S)\sqbrac{ a  + \tfrac{1}{n} \lt \sup S }.
+				</me>
+			</li>
+		</ul>
+	</p>
+	</li>
+</ul>
+</p>
+<p>
+We will consider few, if any, "calculation" questions. This is because our learning outcomes (see above) are concerned with becoming fluent in the  rigour and logic required to articulate definitions and proofs in analysis, they are not about performing computations. Unfortunately, this is also one of the reasons why analysis can be hard to learn, at least initially. There are a number of reasons why it is important to become proficient in this rigour and logic:
+<ul>
+	<li>The rigour and logic of analysis underlies much of mathematics; without it we may convince ourselves that <m>1=2</m>, and this would have consequences for those subjects which rely on the accuracy of mathematics<fn>It is often argued that without mathematics, engineers would not be able to guarantee the safety of their bridges.</fn>.
+	</li>
+	<li>
+	Many of your future modules in mathematics build on the foundation laid down in real analysis: learning this foundation now makes your future courses <em>much</em> easier.
+	</li>
+	<li>
+	As a mathematician, you should want to know whether you have proved something or not: if one believes one has proved the Riemann hypothesis<fn>Perhaps the most famous unsolved problem in mathematics, with a \$1,000,000 reward.</fn> then one would like to be able to check your argument before telling the world about it.
+	</li>
+	<li>
+	In order to understand your ideas, other mathematicians need to be able to read and verify your work.
+	</li>
+	<li>
+	In your future work, your employer may hire you on your ability as a mathematician to construct logical arguments.
+	</li>
+</ul>
+</p>
+			</preface>
+			<preface xml:id="thoughts-on-learning">
+			<title>Some thoughts on learning mathematics</title>
+<p><em>Reading versus writing:</em>
+When reading mathematics, do not try to understand every line.  To try and follow  all the details is hard and is not engaging. Mathematics is something you construct, like writing code, baking a cake or solving a puzzle; it is hard to passively follow someone else doing it.
+</p>
+<p>
+It is better to get a sense of what is being discussed in the solutions, then challenge yourself to write-up the precise mathematics yourself. You will almost always have to immediately consult the solution again. However, when you read mathematics <em>after</em> trying to write it yourself,  you are far more primed to engage with the details. It is like reading the solution to a problem you are stuck on - you really see what you were missing if you have tried the problem first.  Often one  reads until one spots the information previously missed or misunderstood, then has another attempt at writing-up. 
+</p>
+<p>
+This way of proceeding appears more time consuming than believing that your reading is complete once your eyes have passed over each word/symbol. However in my experience, writing  mathematics yourself is far more fun, and beneficial to your understanding, than trying to decode what someone else has written.  View the solutions as a set of prompts, which one can use to check the validity of your own write-up.
+</p>
+<p>
+<em>Memorisation versus reconstruction:</em> One can memorise every proof in this course for the purpose of the exam, however this is not a good idea for the following reasons:
+	<ul>
+		<li> We have limited memory, and it is therefore very hard to memorise such a large amount of information<fn>I do not know any of the proofs in this course from memory.</fn>.
+		</li>
+		<li>Mathematicians are lazy - most of us do not like memorising large amounts of material. Successful mathematicians learn a few strategies which allow them to reconstruct  proofs from first principles. On occasion one has to memorise a key "trick" or "idea", which it may be hard to think of yourself (particularly under exam conditions). However, memorising a handful of key "tricks" is much easier than memorising 100 pages of notes.</li>
+		<li>Our intended learning outcomes (see previous section) of "writing proofs" and "constructing counterexamples" are not met through memorisation. These learning outcomes are  skills which can be acquired, and are useful in other situations, in mathematics and beyond.</li>
+	<li> In your assessment, you will be given statements to prove which are similar but not identical to those in the notes. Understanding how to construct a proof allows you to answer these questions, whereas memorising the proofs in the notes does not.</li>
+</ul>
+</p>
+	</preface>
+			<preface xml:id="pdf-link">
+				<title>Questions in pdf format</title>
+				<p>	
+				<url href="http://lancaster.ac.uk/~prendivs/real-analysis/main.pdf" visual="lancaster.ac.uk/~prendivs/real-analysis/main.pdf">Alternative pdf of these questions</url>
+				</p>
+		</preface>
+        		</frontmatter>

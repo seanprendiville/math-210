@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding="utf-8"?>
+<!--
+% !TEX TS-program = PreTeXt-HTML
+-->
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<docinfo>
+		<rename element="inlineexercise">-</rename>
+		<macros>
+		\newcommand{\N}{\mathbb{N}}
+		\newcommand{\Z}{\mathbb{Z}}
+		\newcommand{\Q}{\mathbb{Q}}
+		\newcommand{\R}{\mathbb{R}}
+		
+		\newcommand{\set}[1]{\left\{#1\right\}}
+		\newcommand{\bigset}[1]{\bigl\{ #1 \bigr\}}
+		\newcommand{\Bigset}[1]{\Bigl\{ #1 \Bigr\}}
+		\newcommand{\biggset}[1]{\biggl\{ #1 \biggr\}}
+		\newcommand{\Biggset}[1]{\Biggl\{ #1 \Biggr\}}
+		\newcommand{\abs}[1]{\left| #1\right|}
+		\newcommand{\bigabs}[1]{\bigl| #1 \bigr|}
+		\newcommand{\Bigabs}[1]{\Bigl| #1 \Bigr|}
+		\newcommand{\biggabs}[1]{\biggl| #1 \biggr|}
+		\newcommand{\Biggabs}[1]{\Biggl| #1 \Biggr|}
+		\newcommand{\sqbrac}[1]{\left[ #1 \right]}
+		\newcommand{\bigsqbrac}[1]{\bigl[ #1 \bigr]}
+		\newcommand{\Bigsqbrac}[1]{\Bigl[ #1 \Bigr]}
+		\newcommand{\biggsqbrac}[1]{\biggl[ #1 \biggr]}
+		\newcommand{\Biggsqbrac}[1]{\Biggl[ #1 \Biggr]}
+		\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+		\newcommand{\littleceil}[1]{\lceil #1 \rceil}
+		\newcommand{\littlefloor}[1]{\lfloor #1 \rfloor}
+		\newcommand{\bigfloor}[1]{\bigl\lfloor #1 \bigr\rfloor}
+		\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+		\newcommand{\brac}[1]{\left( #1 \right)}
+		\newcommand{\bigbrac}[1]{\bigl( #1 \bigr)}
+		\newcommand{\Bigbrac}[1]{\Bigl( #1 \Bigr)}
+		\newcommand{\biggbrac}[1]{\biggl( #1 \biggr)}
+		\newcommand{\Biggbrac}[1]{\Biggl( #1 \Biggr)}
+		
+		\newcommand{\recip}[1]{\frac{1}{#1}}
+		\newcommand{\trecip}[1]{\tfrac{1}{#1}}
+		
+		\newcommand{\intd}{\mathrm{d}}
+		\newcommand{\eps}{\varepsilon}
+		\newcommand{\hash}{\#}
+		</macros>
+	</docinfo>
+	
+	<article xml:id="self-test-210">
+		<title>MATH210 Real Analysis</title>
+		<subtitle>Self-Test Questions</subtitle>
+<!--
+		<xi:include href="./frontmatter.ptx" />
+-->
+		<xi:include href="./week-1.ptx" />
+		<xi:include href="./week-2.ptx" />			
+		<xi:include href="./week-3.ptx" />
+<!--		
+		<xi:include href="./week-4.ptx" />
+		<xi:include href="./week-5.ptx" />
+		<xi:include href="./week-6.ptx" />
+		<xi:include href="./week-7.ptx" />
+		<xi:include href="./week-8.ptx" />
+		<xi:include href="./week-9.ptx" />	
+		<xi:include href="./week-10.ptx" />
+-->		
+		<xi:include href="./exam-backmatter.ptx" />
+
+	</article>
+</pretext>

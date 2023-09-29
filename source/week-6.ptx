@@ -1,0 +1,592 @@
+<?xml version='1.0' encoding="utf-8"?>
+<!--
+% !TEX TS-program = PreTeXt-HTML
+-->
+<section xml:id="week-6" xmlns:xi="http://www.w3.org/2001/XInclude">
+			<title>Week 6</title>
+			<exercise>
+				<title>Classes of continuous functions</title>
+				<task>
+					<statement>
+					State and prove how continuity is preserved under addition, multiplication and taking reciprocals.
+					</statement>
+					<solution>
+					<proposition xml:id="prop-alg-cts">
+					<title>Algebra of continuity</title>
+					<p>
+					 Let <m>f, g : D \to \R</m> with <m>D \subset \R</m>.
+ Let <m>x_0 \in D</m>.
+ Suppose that <m>f</m> and <m>g</m> are continuous at <m>x_0</m>.
+ Then the sum <m>f+g</m> and product <m>f\cdot g</m> are both continuous at <m>x_0</m>.
+ </p>
+ <p>
+If in addition <m>g(x_0) \neq 0</m>, then the quotient <m>f/g</m> is continuous at <m>x_0</m> (the quotient may not be defined on all of <m>D</m>, but it is defined on <m>D \cap (x_0-\delta, x_0+\delta)</m> for some <m>\delta \gt 0</m>, see <xref ref="cor-non-zero-cts"/>).
+</p>
+<proof>
+We prove the result for the sum, the remaining arguments being similar (and left to the reader). By definition of function limits (<xref ref="def-fn-lim"/>) and definition of continuity (<xref ref="def-cts"/>), we are required to show that if <m>(a_n)_n</m> is a sequence in <m>D</m> with <m>a_n\to x_0</m> then <m>f(a_n)+g(a_n)\to f(x_0)+g(x_0)</m> as <m>n\to\infty</m>. Since both <m>f</m> and <m>g</m> are continuous at <m>x_0</m>, we have <m>f(a_n)\to f(x_0)</m> and <m>g(a_n)\to g(x_0)</m> as <m>n\to\infty</m>. Thus by the addition rule for sequential limits (<xref ref="prop-add-rule"/>) we have
+<me>
+\lim_{n\to \infty} \brac{f(a_n)+g(a_n)} = \lim_{n\to \infty} f(a_n)+\lim_{n\to \infty} g(a_n) = f(x_0) + g(x_0)
+</me>,
+as required.
+</proof>
+</proposition>
+					</solution>
+				</task>
+				<task>
+					<statement>
+					Define what it means to be a polynomial function, and prove that they are continuous.
+					</statement>
+					<solution>
+					<definition>
+					<title>Polynomial</title>
+ Let <m>D \subset \R</m>.
+ We say that a function <m>f : D \to \R</m> is a <em>polynomial with real coefficients</em> if there exist <m>c_0, c_1, \dots, c_n \in \R</m> such that for all <m>x \in D</m> we have
+<me>
+f(x) = c_0 + c_1 x + \dots + c_n x^n.
+</me>  
+ We call <m>n</m> the <em>degree</em> of the polynomial.
+ </definition>
+ <proposition xml:id="prop-poly-cts">
+ <statement>
+Polynomials are continuous functions.
+</statement>
+<proof>
+ The identity function <m>x \mapsto x</m> is continuous, since denoting this function by <m>f</m>, we have <m>a_n \to x_0</m> implies <m>f(a_n) \to f(x_0)</m>.
+ By the multiplication rule (<xref ref="prop-mult-rule"/>) it follows that <m>x^2</m> is continuous.
+ Iterating this argument, we see that <m>x^3 = x\cdot x^2</m> is continuous.
+ It follows from induction that <m>x^n</m> is continuous for any <m>n \in \N</m>.
+ Since constant functions are continuous (<xref ref="eg-const-cts"/>), it again follows from the multiplication rule that <m>c_n x^n</m> is continuous for any <m>c_n \in \R</m>.
+ By the addition rule (<xref ref="prop-add-rule"/>), the sum
+<me>
+c_0 + c_1x+ \dots + c_n x^n
+</me>
+is continuous.
+ Hence polynomials are continuous.
+</proof>
+</proposition>
+					</solution>
+				</task>
+				<task>
+					<statement>Define what it means to be a rational function, and prove that they are continuous.</statement>
+					<solution>
+					<definition xml:id="def-rational">
+					<title>Rational function</title>
+ Let <m>D \subset \R</m>.
+ We say that <m>f : D \to \R</m> is a <em>rational</em> function if there exist polynomials <m>P, Q : D\to \R</m> such that:
+	
+	 <m>(\forall x \in D)[Q(x) \neq 0]</m>;
+	 <m>(\forall x \in D)\sqbrac{f(x) = \frac{P(x)}{Q(x)}}</m>.
+	</definition>
+<proposition xml:id="prop-rational">
+<statement>
+Rational functions are continuous.
+</statement>
+<proof>
+ This follows from the fact that polynomials are continuous and the fact that continuity is preserved on taking quotients, provided that the denominator is non-zero (<xref ref="prop-alg-cts"/>). The fact that the denominator is not zero at any point in the domain of a rational function follows from <xref ref="def-rational"/> (the rational function would not be defined at a point at which the denominator is zero).
+</proof>
+</proposition>
+
+					</solution>
+				</task>
+				<task>
+					<statement>State and prove how continuity is preserved under composition of functions.
+					</statement>
+					<solution>
+					<proposition xml:id="prop-comp-cts">
+					<title>Composition preserves continuity</title>
+					<statement>
+					Let <m>f_1 : D_1 \to D_2</m> with <m>D_1, D_2 \subset \R</m>. Let <m>f_2 : D_2 \to \R</m>. Suppose that <m>f_1</m> is continuous at <m>x_0 \in D_1</m>.
+ Suppose that <m>f_2</m> is continuous at <m>f_1(x_0)</m>.
+ Then the composition<fn>This is defined by <m>f_2\circ f_1 (x) := f_2(f_1(x))</m> for each <m>x \in D_1</m>.</fn> <m>f_2 \circ f_1</m> is continuous at <m>x_0</m>. 
+ </statement>
+<proof>
+Let <m>(a_n)_n</m> be a sequence in <m>D_1</m> which tends to <m>x_0</m>. By definition of the function limit (<xref ref="def-fn-lim"/>), we are required to prove that <m>f_2 \circ f_1(a_n)\to f_2 \circ f_1(x_0)</m> as <m>n\to\infty</m>. 
+ Since <m>f_1</m> is continuous at <m>x_0</m> we have <m> f_1(a_n)\to  f_1(x_0)</m> as <m>n\to\infty</m>. The continuity of <m>f_2</m> at <m>f_1(x_0)</m> then gives that <m>f_2 \brac{f_1(a_n)}\to f_2 \brac{ f_1(x_0)}</m> as <m>n\to\infty</m>, as required.
+</proof>
+</proposition>
+					</solution>
+				</task>
+				<task>
+					<statement>State and prove how continuity is preserved under taking absolute values and min/max.
+					</statement>
+					<solution>
+										<proposition xml:id="cor-abs-cts">
+					<statement>
+ Let <m>f : D \to \R</m> with <m>D \subset \R</m>.
+ Suppose that <m>f</m> is continuous at <m>x_0 \in D</m>.
+ Then <m>|f|</m> is continuous at <m>x_0 \in D</m>.
+ </statement>
+ <proof>
+ This follows from the fact that continuity is preserved under composition of functions (<xref ref="prop-comp-cts"/>), and the fact that the absolute value function <m>x\mapsto |x|</m> is continuous on <m>\R</m> (<xref ref="eg-abs-cts"/>).
+ </proof>
+</proposition>
+<proposition>
+<title>Min/max of two continuous functions is continuous</title>
+<statement>
+ Let <m>f, g: D \to \R</m> be real valued functions on a real domain <m>D \subset \R</m>.
+ Suppose that both <m>f</m> and <m>g</m> are continuous at <m>x_0 \in D</m>.
+ Then both <m>\min\set{f,g}</m> and <m>\max\set{f,g}</m> are continuous at <m>x_0 \in D</m>.
+</statement>
+<proof>
+We first observe that
+<me>
+\max\set{f, 0} = \frac{ f+ |f|}{2}.
+</me>
+ The latter function is continuous at <m>x_0</m> on combining <xref ref="prop-alg-cts"/> and <xref ref="cor-abs-cts"/>.
+ Next observe that
+<me>
+\max\set{f,g}= \max\set{f-g,0} + g.
+</me>
+ The latter function is continuous at <m>x_0</m> on combining our previous observation with the fact that the sum of two continuous functions is continuous (<xref ref="prop-alg-cts"/>). 
+ The argument for <m>\min</m> is similar.
+</proof>
+					</proposition>
+					</solution>
+				</task>
+			</exercise>
+			<exercise>
+				<title>Uniform continuity</title>
+				<task xml:id="ex-unif-cts">
+					<statement>Define what it means for a real-valued function on a real domain to be <em>uniformly</em> continuous.
+				</statement>
+					<solution>
+					<definition xml:id="def-unif-cts">
+					<title>Uniformly continuous</title>
+ Let <m>f : D \to \R</m> be a real valued function on a real domain <m>D \subset \R</m>.
+ We say that <m>f</m> is <em>uniformly continuous on <m>D</m></em> if 
+ <mdn>
+ <mrow number="no">
+(\forall \eps \gt 0)(\exists \delta = \delta(\eps) \gt 0)\amp (\forall x_1,x_2 \in D)
+</mrow>
+<mrow xml:id="eq-unif-cts">
+\amp\bigsqbrac{\ |x_1-x_2| \leq \delta \implies |f(x_1)-f(x_2)| \leq \eps\ }.
+</mrow>
+</mdn>
+</definition>					</solution>
+				</task>
+				<task>
+					<statement>
+					Justify why uniform continuity implies continuity, but not vice versa.
+					</statement>
+					<solution>
+					<remark>
+					<title>Uniform continuity implies continuity</title>
+ It is important to compare the definition of uniform continuity <xref ref="eq-unif-cts"/> with that of continuity <xref ref="eq-eps-delta-cts"/>, the latter being: 
+<mdn>
+<mrow number="no">
+(\forall x_0 \in D)(\forall \eps \gt 0)(\exists \delta = \delta(x_0,\eps) \gt 0)\amp (\forall x \in D)
+</mrow>
+<mrow xml:id="eq-eps-delta-cts-2">
+\bigsqbrac{\ |x-x_0| \leq \delta \implies |f(x)-f(x_0)| \leq \eps\ }.
+</mrow>
+</mdn>
+The only difference is the order of the quantifiers: for continuity <xref ref="eq-eps-delta-cts-2"/> the parameter <m>\delta= \delta(x_0, \eps)</m>  is allowed to depend on the point of continuity <m>x_0</m>, however for uniformity continuity <xref ref="eq-unif-cts"/> the same <m>\delta = \delta(\eps)</m> has to work for <em>all</em> points <m>x_0</m> in the domain <m>D</m>.
+ If <m>f</m> is uniformly continuous then it is therefore continuous, on taking <m>\delta(x_0, \eps) := \delta(\eps)</m> for any <m>x_0 \in D</m>.
+ However, the <url href="https://en.wikipedia.org/wiki/Converse_(logic)" visual="en.wikipedia.org/wiki/Converse_(logic)">converse</url> is not always true, as the next example illustrates.
+</remark>
+<example>
+<title>Continuity does not imply uniform continuity</title>
+ Define <m>f : \R \to \R</m> at each <m>x \in \R</m> by <m>f(x) := x^2</m>.
+ Then <m>f</m> is a polynomial, so is continuous on <m>\R</m> by <xref ref="prop-poly-cts"/>.
+ By way of contradiction, suppose that <m>f</m> were uniformly continuous on <m>\R</m>. 
+ Taking <m>\eps := 1</m> in the definition of uniform continuity (<xref ref="def-unif-cts"/>),  there exists <m>\delta \gt 0</m> such that if <m>|x_1 - x_2| \leq \delta</m> then <m>|x_1^2 - x_2^2| \leq 1</m>.
+ Setting <m>x_2 := x_1 + \delta</m>, we deduce that for any <m>x_1 \gt 0</m> we have 
+<me>
+1 \geq |x_1^2 - x_2^2| = |x_1-x_2||x_1+x_2| = \delta (2x_1+\delta) \geq \delta x_1.
+</me>
+ Taking, say, <m>x_1 = 2/\delta</m> then yields a contradiction.
+ The domain of a function is important for uniform continuity: the function <m>f(x) = x^2</m> is not uniformly continuous on <m>\R</m>, yet one can show that it is uniformly continuous on any closed interval <m>[a,b]</m> (see <xref ref="thm-unif-cts"/>).
+</example>					</solution>
+				</task>
+				<task>
+					<statement>State and prove how a continuous function on a closed interval is uniformly continuous.
+					</statement>
+					<solution>
+					<theorem xml:id="thm-unif-cts">
+<title>Continuous on closed interval implies uniformly continuous</title>
+<statement>
+ Let <m>f : [a,b] \to \R</m> be a real valued function on a <em>closed interval</em>  <m>[a,b] \subset \R</m>.
+ Suppose that <m>f</m> is continuous on <m>[a,b]</m>.
+ Then <m>f</m> is uniformly continuous on <m>[a,b]</m>.
+</statement>
+
+<proof>
+ By way of contradiction, suppose that <m>f</m> is not uniformly continuous on <m>[a,b]</m>.
+ Negating the definition of uniform continuity <xref ref="eq-unif-cts"/>, we deduce that
+<me xml:id="eq-unif-cts-not">
+(\exists \eps \gt 0)(\forall \delta  \gt 0)(\exists x,y \in [a,b])
+\bigsqbrac{\ |x-y| \leq \delta \quad \text{and} \quad |f(x)-f(y)| \gt \eps\ }.
+</me>
+ Taking <m>\delta := 1/n</m>, we have 
+<me>
+(\forall n  \in \N)(\exists x_n,y_n \in [a,b])
+\bigsqbrac{\ |x_n-y_n| \leq \trecip{n} \quad \text{and} \quad |f(x_n)-f(y_n)| \gt \eps\ }.
+</me>
+ By the Bolzano-Weierstrass theorem (<xref ref="cor-bolzano"/>) and the inequality rule for limits (<xref ref="prop-ineq-rule"/>) there exists <m>x_0\in [a,b]</m> and  <m>k(1) \lt  k(2) \lt  \dots</m> such that <m>x_{k(n)} \to x_0</m> as <m>n \to \infty</m>.
+  Applying the same argument to the sequence <m>(y_{k(n)})_n</m>, there exists <m>y_0\in [a,b]</m> and  <m>\ell_1 \lt  \ell_2 \lt  \dots</m> such that <m>y_{k(\ell_n)} \to y_0</m> as <m>n \to \infty</m>.
+ Since subsequences of convergent sequence tend to the same limit (<xref ref="prop-subseq-conv"/>), we also have <m>x_{k(\ell_n)} \to x_0</m> as <m>n \to \infty</m>.
+ Notice that
+<md>
+<mrow>
+|x_0 - y_0| \amp \leq |x_0-x_{k(\ell_n)}| + |x_{k(\ell_n)}- y_{k(\ell_n)}| + |y_{k(\ell_n)} -y_0|
+</mrow>
+<mrow>
+\amp \leq |x_0-x_{k(\ell_n)}| + \recip{k(\ell_n)} + |y_{k(\ell_n)} -y_0|
+</mrow>
+<mrow>
+\amp \to 0 \quad \text{as}\quad n \to \infty.
+</mrow>
+</md>
+ Therefore <m>x_0 = y_0</m>.
+ Yet continuity of <m>f</m>, continuity of the absolute value and the addition rule (<xref ref="prop-add-rule"/>) together give that
+<me>
+\eps \lt  |f(x_{k(\ell_n)}) - f(y_{k(\ell_n)})| \to |f(x_0)-f(y_0)| = 0.
+</me>
+ Since this is a contradiction, it follows that <m>f</m> must indeed be uniformly continuous.
+</proof>
+</theorem>					</solution>
+				</task>
+			</exercise>
+			<exercise>
+				<title>The intermediate value theorem</title>
+				<task>
+					<statement>
+					State and prove the intermediate value theorem.
+					</statement>
+					<solution>
+					<theorem xml:id="thm-IVT">
+<title>Intermediate value theorem</title>
+<statement>
+ Let <m>f : [a,b] \to \R</m> be a continuous function on a closed interval <m>[a,b] \subset \R</m>.
+ For any real number <m>y</m> between<fn>i.e. if <m>f(a) \leq f(b)</m> then <m>f(a) \leq y \leq f(b)</m>, whilst if <m>f(a) \gt f(b)</m> then <m>f(a) \geq y \geq f(b)</m>.</fn> <m>f(a)</m> and <m>f(b)</m>, there exists <m>x \in [a,b]</m> such that <m>f(x) = y</m>.
+</statement>
+<proof>
+<p>
+We prove the result assuming that <m>f(a) \leq y \leq f(b)</m>; if <m>f(a) \geq y \geq f(b)</m> then we reduce to the former case on considering <m> -f</m>.
+ Set
+<me>
+x := \sup\set{t \in [a,b] : f(t) \leq y}.
+</me>
+ The above supremum exists because the set is non-empty (it contains <m>a</m>) and is bounded above by <m>b</m>. In particular, <m>a \leq x \leq b</m>.
+ We claim that <m>f(x) = y</m>.
+ </p>
+ <p>
+ We first observe that for any <m>n\in \N</m> the number <m>x-1/n</m> is smaller than the supremum, so cannot be an upper bound. Hence there exists <m>t_n \in [a,b]</m> with <m>f(t_n) \leq y</m> and <m>x-1/n \lt t_n \leq x</m>. By the sandwich rule we have <m>t_n \to x</m> as <m>n\to\infty</m>, so by continuity and the inequality rule, we get that <m>f(x)= \lim_{n\to \infty} f(t_n) \leq y</m>. 
+ </p>
+ <p>
+ It remains to show that <m>f(x_0) \geq y</m>. By way of contradiction, suppose that <m>f(x_0) \lt y</m>.
+  Then <m>x_0 \lt b</m> (since <m>f(b) \geq y </m>).
+ Continuous functions which are positive at a point are positive on a neighbourhood of that point (see <xref ref="cor-non-zero-cts"/>). 
+ Hence there exists <m>\delta \gt 0</m> such that for all <m>x\in [a,b]\cap(x_0-\delta, x_0+\delta)</m> we have <m> y-f(x) \gt 0</m>.
+On setting  
+<me>
+\eps := \min\set{b-x_0, \delta/2} \gt 0,
+</me>
+we obtain <m>x+\eps \in [a,b]</m> with <m>f(x+\eps) \leq y</m>. Yet, since <m>x+\eps</m> exceeds <m>x</m>, this contradicts the definition of <m>x</m> as the least upper bound of the set of <m>t \in [a,b]</m> with <m>f(t) \leq y</m>.
+</p>
+</proof>
+	</theorem>				</solution>
+				</task>
+				<task>
+					<statement>
+					Use the intermediate value theorem to state and prove the existence of positive <m>n</m>th roots.</statement>
+					<solution>
+					<corollary xml:id="cor-exist-roots">
+<title>Existence of roots</title>
+<statement>
+ Let <m>n \in \N</m>.
+ Let <m>a \in [0, \infty)</m>.
+ Then there exists a unique <m>x \in [0, \infty)</m> such that 
+<me>
+x^n = a.
+</me>
+</statement>
+<proof>
+ The function <m>x \mapsto x^n</m> is continuous on the closed interval <m>[0, 1+a]</m>, by <xref ref="prop-poly-cts"/>.
+ One can check that
+<me>
+0^n \leq a \leq (1+a)^n.
+</me>
+ Hence by the intermediate value theorem (<xref ref="thm-IVT"/>), there exists <m>x \in [0, 1+a]</m> such that <m>x^n = a</m>.
+ For uniqueness, suppose that <m>\tilde x \in [0,\infty)</m> also satisfies <m>\tilde x^n = a</m>.
+ Factorising, we have
+<me>
+(x-\tilde x)(x^{n-1} + x^{n-2}\tilde x + \dots + x \tilde x^{n-2} + \tilde x^{n-1}) = x^n - \tilde x^n = 0.
+</me>
+ If <m>x \neq \tilde x</m> then the factor <m>x^{n-1}  + \dots  + \tilde x^{n-1}</m> must be zero.
+ Since <m>x, \tilde x \geq 0</m>, the only way this can happen is if <m>x = \tilde x</m>.
+</proof>
+</corollary>
+<definition xml:id="def-root">
+<title><m>n</m>th root function</title>
+ Let <m>n \in \N</m>.
+  We define the function <m>\sqrt[n]{} : [0, \infty) \to [0, \infty)</m> by setting <m>\sqrt[n]{a}</m> to be the unique non-negative real number <m>x \in [0, \infty)</m> such that <m>x^n= a</m>.
+ The existence and uniqueness of <m>x</m> are guaranteed by <xref ref="cor-exist-roots"/>.
+</definition>
+					</solution>
+				</task>
+				</exercise>
+				<exercise>
+								<title>The extreme value theorem</title>
+
+				<task>
+					<statement>
+					State and prove the extreme value theorem.
+					</statement>
+					<solution>
+					<theorem xml:id="thm-extreme">
+<title>Extreme value theorem</title>
+<statement>
+ Let <m>f : [a,b] \to \R</m> be a continuous function.
+ Then there exist <m>x_1,x_2 \in [a,b]</m> such that
+<me>
+f(x_1) = \inf_{[a,b]} f \quad \text{and} \quad f(x_2) = \sup_{[a,b]} f.
+</me>
+ In particular, a continuous function on a closed interval is bounded.
+ </statement>
+
+<proof>
+ We prove the result for the supremum, the argument for the infimum being similar.
+ Notice that the supremum <m>
+ \sup_{[a,b]} f
+</m>
+is either real or equal to <m>\infty</m>. We first discount the latter situation.
+ If <m>\sup_{[a,b]} f = \infty</m> then for any <m>n \in \N</m> there exist <m>x_n \in [a,b]</m> with <m>f(x_n) \gt n</m> (otherwise <m>n</m> is a finite upper bound for <m>f</m>).
+ By the Bolzano-Weierstrass theorem, there exists <m>k_1 \lt  k_2 \lt  \dots</m> such that the subsequence <m>x_{k_n}</m> tends to a real limit <m>x_0</m> for some <m>x_0 \in \R</m>.
+ By the inequality rule (<xref ref="prop-ineq-rule"/>) we have <m>x_0 \in [a,b]</m>.
+ By continuity (<xref ref="def-cts"/>) and the inequality rule (<xref ref="prop-ineq-rule"/>) we have
+<me>
+f(x_0) = \lim_{n \to \infty} f(x_{k_n}) \geq \lim_{n \to \infty} k_n = \infty.
+</me>
+ This is a contradiction, since <m>f(x_0)</m> is a real number.
+ It follows that the supremum is finite.
+ Since decreasing a supremum gives a non upper bound (<xref ref="prop-alt-sup"/>), for each <m>n \in \N</m> there exists <m>x_n \in [a,b]</m> such that 
+<me xml:id="eq-sup-sand">
+\brac{\sup_{[a,b]} f}-\recip n \lt  f(x_n) \leq \sup_{[a,b]} f.
+</me>
+ Since the set <m>[a,b]</m> is bounded, the Bolzano-Weierstrass theorem (<xref ref="cor-bolzano"/>) gives the existence of <m>k_1 \lt  k_2 \lt  k_3 \lt  \dots</m> such that the subsequence <m>x_{k_n}</m> converges to some <m>x_0 \in [a,b]</m>.
+ Since <m>f</m> is continuous at <m>x_0</m>, the sequential definition of continuity (<xref ref="def-cts"/>) gives that
+<me>
+f(x_0) = \lim_{n\to \infty} f(x_{k_n}).
+</me>
+ By the sandwich rule (<xref ref="prop-sandwich"/>), we deduce that
+<me>
+f(x_0) = \sup_{[a,b]} f.
+</me>
+</proof></theorem>
+					</solution>
+				</task>
+			</exercise>
+			<exercise>
+				<title>Differentiability</title>
+				<task>
+					<statement>
+					Define what it means for a real-valued function on an open interval to be <em>differentiable</em> at a point and define the <em>derivative</em> at that point. State what it means for such a function to be differentiable.
+					</statement>
+					<solution>
+					<definition xml:id="def-differentiable">
+<title>Differentiable</title>
+					Let <m>f : (a,b)\to \R</m> and <m>x_0 \in (a,b)</m>. We say that <m>f</m> is <em>differentiable</em> at <m>x_0</m> if 
+					<mdn>
+					<mrow number="no">
+					(\exists y \in \R)(\forall \eps \gt 0)\amp(\exists \delta\gt 0)(\forall x \in (a,b))
+					</mrow>
+					<mrow xml:id="eq-eps-diff">
+					\amp\sqbrac{0\lt |x-x_0| \leq \delta \implies \abs{\frac{f(x)-f(x_0)}{x-x_0}-y} \leq \eps}.
+					</mrow>
+					</mdn>
+	Should such a value of <m>y</m> exist, one can check that it is unique, and we call it the <em>derivative</em> of <m>f</m> at <m>x_0</m>, denoted <m>f'(x_0)</m>.
+	</definition>
+					</solution>
+				</task>
+				<task>
+					<statement>
+					State and prove the "sequential characterisation" of differentiability.
+					</statement>
+					<solution>
+					<proposition xml:id="prop-seq-diff">
+<title>Sequential characterisation of differentiability</title>
+<statement>
+ Let <m>f : (a,b) \to \R</m> and <m>x_0 \in (a,b)</m>. 
+ Then <m>f</m> is differentiable at <m>x_0</m> with derivative <m>y</m> if and only if for any sequence <m>(a_n)_n</m> in <m>(a,b)\setminus\set{x_0}</m> with <m>a_n\to x_0</m> we have
+ <men xml:id="eq-seq-diff">
+ \frac{f(a_n)-f(x_0)}{a_n-x_0} \to y \text{ as } n \to \infty
+ </men>.
+</statement>
+<proof>
+<p>
+This is essentially the same argument as that given in the proof of <xref ref="cor-eps-delta-cts"/>.
+</p>
+<p>
+ We first prove the "<m>\implies</m>" direction.
+ Let <m>(a_n)_n</m> be a sequence in <m>(a,b)\setminus\set{x_0}</m> such that <m>a_n \to x_0</m> as <m>n \to \infty</m>.
+ We are required to prove <xref ref="eq-seq-diff"/>, assuming <xref ref="eq-eps-diff"/>.
+ Fix <m>\eps \gt0</m>.
+ Then by <xref ref="eq-eps-diff"/> there exists <m>\delta = \delta(\eps) \gt 0</m> such that if <m>x \in (a,b)</m> and <m>0\lt |x-x_0| \leq \delta</m> then 
+ <me>
+ \abs{\frac{f(x)-f(x_0)}{x-x_0} - y}\leq \eps
+ </me>.
+ Since <m>a_n \to x_0</m> there exists <m>N = N(\delta)</m> such that for all <m> n\geq N</m> we have <m>0\lt |a_n - x_0| \leq \delta</m>.
+ Hence if <m>n \geq N(\delta)</m> then 
+  <me>
+ \abs{\frac{f(a_n)-f(x_0)}{a_n-x_0} - y}\leq \eps
+ </me>.
+ This establishes <xref ref="eq-seq-diff"/>.
+ </p>
+ <p>
+ Next we prove the "<m>\impliedby</m>" direction. To do so we prove the contrapositive.
+ Hence, suppose that the negation of <xref ref="eq-eps-diff"/> holds:
+<md>
+<mrow>
+(\exists \eps \gt 0)(\forall \delta  \gt 0)\amp(\exists x= x(\delta) \in (a,b))
+</mrow>
+<mrow>
+\bigsqbrac{\ 0\lt |x-x_0| \leq \delta\quad \text{and}\quad \abs{\frac{f(x)-f(x_0)}{x-x_0} - y} \gt \eps\ }
+</mrow>
+</md>.
+
+ Taking <m>\delta = 1/n</m> in the above negation, set <m>a_1:= x(1)</m>, <m>a_2:=x(1/2)</m>, <m>a_3 := x(1/3)</m>, etc.
+ Then <m>a_n \in (a,b)\setminus\set{x_0}</m>, <m>|a_n - x_0| \leq 1/n</m> and 
+ <me>
+ \abs{\frac{f(a_n)-f(x_0)}{a_n-x_0} - y} \geq \eps
+ </me>.
+ Hence <m>(a_n)_n</m> is a sequence in <m>(a,b)\setminus\set{x_0}</m> with <m>a_n \to x_0</m> and 
+ <me>
+ \frac{f(a_n)-f(x_0)}{a_n-x_0} \not\to y
+ </me>, (as required).
+ </p>
+</proof>
+</proposition>
+					</solution>
+				</task>
+				<task>
+					<statement>
+					State and prove how a function which is differentiable at a point is continuous at that point.
+					</statement>
+					<solution>
+					<proposition xml:id="prop-diff-cts">
+<title>Differentiable implies continuous</title>
+<statement>
+ Let <m>f : (a,b) \to \R</m> be differentiable at <m>x_0 \in (a,b)</m>.
+ Then <m>f</m> is continuous at <m>x_0</m>.
+</statement>
+<proof>
+By the epsilon-delta definition of continuity (see <xref ref="cor-eps-delta-cts"/>) we are required to verify that
+<mdn>
+<mrow number="no">
+(\forall \eps \gt 0)(\exists \delta_1 = \delta_1(x_0,\eps) \gt 0)\amp(\forall x \in (a,b))
+</mrow>
+<mrow xml:id="eq-cts-to-verify">
+\amp \bigsqbrac{\ |x-x_0| \leq \delta_1 \implies |f(x)-f(x_0)| \leq \eps\ }.
+</mrow>
+</mdn>
+By the definition of differentiability (see <xref ref="def-differentiable"/>) we have that 
+<md>
+<mrow>
+(\forall \eps \gt 0)(\exists \delta_2 = \delta_2(x_0,\eps) \gt 0)\amp (\forall x \in (a,b))
+</mrow>
+<mrow>
+\sqbrac{\ 0\lt |x-x_0| \leq \delta_2 \implies \abs{\frac{f(x)-f(x_0)}{x-x_0}-f'(x_0)} \leq \eps\ }.
+</mrow>
+</md>
+ In particular, if <m>x \in (a,b) </m> and <m>0\lt|x-x_0| \leq \delta_2</m> then
+<me>
+\abs{f(x)-f(x_0)} \leq \eps \abs{x-x_0} + \abs{f'(x_0)}|x-x_0|.
+</me>
+ Let us assume that <m>f'(x_0) \neq 0</m>, the remaining case being simpler.
+  We therefore obtain <xref ref="eq-cts-to-verify"/> on taking 
+<me>
+\delta_1(\eps) := \min\set{\delta_2(\eps), \recip{2}, \frac{\eps}{2\abs{f'(x_0)}}}.
+</me>
+</proof>
+</proposition>
+					</solution>
+				</task>
+				<task>
+					<statement>
+					Give examples (with proof) of differentiable and non-differentiable functions.
+					</statement>
+					<solution>
+					<example xml:id="eg-const-diff">
+<title>Constant functions are differentiable</title>
+ Let <m>f : (a,b) \to \R</m>.
+ Suppose that <m>f</m> is constant.
+ In other words, there exists <m>c \in \R</m> such that for all <m>x \in (a,b)</m> we have <m>f(x) = c</m>.
+ Then for <m>h\neq 0</m> and <m>x \in (a,b)</m> we have
+<me>
+\frac{f(x+h)-f(x)}{h} = \frac{c-c}{h} = 0 \to 0 \quad \text{as} \quad h \to 0.
+</me> 
+ Hence <m>f</m> is differentiable on <m>(a,b)</m>.
+ Moreover <m>f' = 0</m> on <m>(a,b)</m>.
+</example>
+
+<example xml:id="eg-id-diff">
+<title>The identity function is differentiable</title>
+ Let <m>f : (a,b) \to \R</m> be given by <m>f(x):=x</m> for all <m>x \in (a,b)</m>.
+ Then for <m>h\neq 0</m> and <m>x \in (a,b)</m> we have
+<me>
+\frac{f(x+h)-f(x)}{h} = \frac{(x+h)-x}{h} = 1 \to 1 \quad \text{as} \quad h \to 0.
+</me> 
+ Hence <m>f</m> is differentiable on <m>(a,b)</m>.
+ Moreover <m>f' =1</m> on <m>(a,b)</m>.
+</example>
+<example xml:id="eg-recip-diff">
+<title>The reciprocal function is differentiable</title>
+ Let <m>f : \R\setminus\set{0} \to \R</m> be given by <m>f(x):=1/x</m> for all <m>x \in \R\setminus\set{0}</m>.
+ Then for <m>h\neq 0</m> and <m>x \in \R\setminus\set{0}</m> we have
+<me>
+\frac{f(x+h)-f(x)}{h} = \frac{\recip{x+h}-\recip{x}}{h} =  -\recip{(x+h)x}  \to -\recip{x^2} \quad \text{as} \quad h \to 0.
+</me> 
+ Hence <m>f</m> is differentiable on <m>\R\setminus\set{0}</m>.
+ Moreover <m>f'(x) =-1/x^2</m> on <m>\R\setminus\set{0}</m>.
+</example>
+Since differentiable functions are continuous, any example of a non-continuous function is also an example of a non-differentiable function. For instance, the function <xref ref="eg-dis-cont"/> is discontinuous at <m>x=0</m>, so is not differentiable at <m>x=0</m>. Similarly, <xref ref="eg-dis-cont-everywhere"/> is discontinuous everywhere, so is also nowhere differentiable.
+					</solution>
+				</task>
+				<task>
+					<statement>Give an example (with proof) of a function which is continuous at a point, but not differentiable there.</statement>
+					<solution>
+					<example xml:id="abs-not-diff">
+					<title>A continuous function which is not differentiable</title>
+ The function <m>x \mapsto |x|</m>  is an example of a function which is continuous at a point, but not differentiable there (namely at <m>x_0 = 0</m>). Hence continuity does not imply differentiability. To see that this function is not differentiable at <m>x_0=0</m>, we must prove the negation of <xref ref="def-differentiable"/>, namely
+ <mdn>
+					<mrow number="no">
+					(\forall y \in \R)(\exists \eps \gt 0)(\forall \delta\gt 0)\amp(\exists x \in \R)
+					</mrow>
+					<mrow xml:id="diff-negation-to-prove">
+					\amp\sqbrac{0\lt |x-0| \leq \delta \text{ and } \abs{\frac{|x|-|0|}{x-0}-y} \gt \eps}
+					</mrow>
+					</mdn>.
+					Simplifying, we have
+					<me>
+					\frac{|x|-|0|}{x-0} = \begin{cases} 1 \amp \text{ if } x \gt 0,\\ -1\amp \text{ if } x \lt 0.\end{cases}
+					</me>
+					Hence, for fixed <m>y\in \R</m> we let <m>\eps := 1/2</m> and for any <m>\delta > 0</m> we let 
+					<me>
+					x = x(y,\delta) = \begin{cases} -\delta \amp \text{ if } y \geq 0,\\ \delta \amp \text{ if } y \lt 0.\end{cases}
+					</me>
+					Then <m>|x-0| = \delta</m> and 
+					<me>
+					\abs{\frac{|x|-|0|}{x-0}-y} = 1+|y| \geq 1\gt \eps
+					</me>.
+					This yields <xref ref="diff-negation-to-prove"/>
+ </example>
+ 					</solution>
+				</task>
+				<task>
+					<statement>Give and example of a function which is differentiable at a point, but not twice differentiable at that point.
+					</statement>
+					<solution>
+					<example>
+					<title>A function which is once but not twice differentiable</title>
+ Define <m>f : \R \to \R</m>  at <m>x \in \R</m> by <m>f(x) := \trecip{2}x|x|</m>. 
+ One can check that this function is differentiable on <m>\R</m>.
+ Moreover, for all <m>x \in \R</m> we have (check this!)
+<me>
+f'(x) = |x|.
+</me>
+ Hence <m>f^{(2)}(x)</m> exists at all <m>x \in \R\setminus\set{0}</m>, but not at <m>x = 0</m> by <xref ref="abs-not-diff"/>.
+</example>					</solution>
+				</task>
+			</exercise>
+		</section>

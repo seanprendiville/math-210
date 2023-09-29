@@ -1,0 +1,755 @@
+<?xml version='1.0' encoding="utf-8"?>
+<!--
+% !TEX TS-program = PreTeXt-HTML
+-->
+<section xml:id="week-1" xmlns:xi="http://www.w3.org/2001/XInclude">
+			<title>Week 1</title>
+<subsection>
+<title>Self-test questions</title>			
+			<exercise xml:id="ex-bounds">
+				<title>Upper and lower bounds</title>
+				
+				<task xml:id="task-upper-lower">
+					<statement><p>
+						Define what it means to be an <em>upper/lower bound</em> for a set/function.
+					</p></statement>
+					<solution>
+						<definition xml:id="def-upper-bound">
+						<title>Upper/lower bound</title>
+						<p>
+						We say that <m>M \in \R</m> is an <em>upper bound</em> for the set <m>S\subset \R</m> if
+							<men xml:id="eq-def-upper-bound">
+								(\forall x \in S)[x \leq M].
+							</men>
+						<m>M</m> is a <em>lower bound</em> for <m>S</m> if
+							<me>
+								(\forall x \in S)[x \geq M].
+							</me>
+						<m>M</m> is an upper/lower bound for the function <m>f:D\to \R</m> if it is an upper/lower bound for the image set
+							<me>
+								f(D) := \set{f(x) : x \in D}.
+							</me>
+							(The notation "<m>:=</m>" should be read as "<em>defined to equal</em>".)
+						</p>
+						</definition>
+						<example>
+							<ul>
+							<li>
+							If <m>S =\set{1,2}</m> then 3 is an upper bound for <m>S</m>.
+							<proof>
+							We must check that for every <m>x\in S</m> we have <m> x \leq 3</m>. The only elements of <m>S</m> are 1 and 2, and both of the inequalities <m>1\leq 3</m> and <m>2\leq 3</m> hold. We have therefore verified that the defining condition <xref ref="eq-def-upper-bound"/> of being an upper bound holds.
+							</proof>
+							</li>
+							<li>
+							If <m>S= \set{0,1}</m> then 1 is an upper bound for <m>S</m>.
+							<proof>
+							We have <m>0\leq1</m> and <m>1\leq 1</m>. So for all <m>x \in S</m> we have <m> x \leq 1</m>.
+							</proof>
+							</li>
+							<li>
+							If <m>S= (0, \infty)</m> then 0 is a lower bound for <m>S</m>.
+							<proof>
+							If <m>x \in S</m> then by definition <m> x \geq 0</m>.
+							</proof>
+							</li>
+							<li>
+							If <m>S= (-\infty,0)</m> then <m>-1</m> is not an upper bound for <m>S</m>.
+							<proof>
+							Negating the definition <xref ref="eq-def-upper-bound"/> of being an upper bound, we must show that for <m>M = -1</m> we have
+							<men xml:id="eq-negate-upper-bound">
+							(\exists x \in S)[x \gt M].
+							</men>
+							This holds since, for instance, <m>x:= -1/2 \in S </m> satisfies <m> x > -1</m>.
+							</proof>
+							</li>
+						</ul>
+					<!--
+						<p>
+							Consider the function <m>f:\set{1,2}\to\R</m> given by <m>f(1):=1</m> and <m>f(2):=2</m>. Then 3 is an upper bound for both the set <m>\set{1,2}</m> and the function <m>f</m> (notice that <m>\set{1,2} = f(\set{1,2})</m>. To prove this, we must check that <m>3\geq x</m> for all <m>x\in \set{1,2}</m>, which is indeed true since <m>3\geq1</m> and <m>3\geq2</m>.  
+						</p>
+						<p>
+							A similar argument shows that the number 1 is a lower bound for both the set <m>\set{1,2}</m> and the function <m>f</m>. Yet 1 is not an upper bound for either, since it is not the case that <m>1\geq x</m> for all <m>x\in \set{1,2}</m> (because it is not the case that <m>1\geq2</m>).
+						</p>
+						<p>
+							The function <m>g : \R \to \R</m> given by <m>g(x) := 1</m> for all <m>x \in \R</m> has 1 as both an upper bound and a lower bound.
+						</p>
+					-->
+						</example>
+					</solution>
+				</task>
+				<task xml:id="task-bd">
+					<statement><p>
+						Define what it means for a set/function to be <em>bounded above, bounded below and bounded</em>.
+					</p></statement>
+					<solution>
+						<definition>
+						<title>Bounded above/below</title>
+						<p>
+							We say that a set <m>S\subset\R</m> is <em>bounded above</em> if it has an upper bound, that is
+							<men xml:id="eq-upper-bound">
+								(\exists M \in \R)(\forall x \in S)[x \leq M].
+							</men>
+							Similarly, a function <m>f : D \to \R</m> is <em>bounded above</em> if it has an upper bound, that is
+							<me>
+								(\exists M \in \R)(\forall x \in D)[f(x) \leq M].
+							</me>
+							A set/function is <em>bounded below</em> if it has a lower bound.
+						</p>
+						<p>
+							A set/function is <em>bounded</em> if it is both bounded above and bounded below. For sets, this is equivalent to:
+								<men xml:id="eq-lower-bound">
+									(\exists M \in \R)(\forall x \in S)[|x| \leq M].
+								</men>
+							For functions, this is equivalent to:
+								<me>
+									(\exists M \in \R)(\forall x \in D)[|f(x)| \leq M].
+								</me>
+						</p>
+						</definition>
+					</solution>
+				</task>
+			</exercise>
+			<exercise>
+				<title>Supremum and infimum</title>
+				<task xml:id="task-sup-inf">
+					<statement><p>
+						Define what it means to be a <em>supremum</em> or <em>infimum</em> for a set of real numbers.
+					</p></statement>
+					<solution>
+						<definition xml:id="def-sup">
+							<title>Supremum</title>
+							<p>
+							<m>M \in \R</m> is a <em>supremum</em> for <m>S \subset \R</m> if <m>M</m> is an upper bound for <m>S</m> and any any other upper bound <m>\tilde M</m> for <m>S</m> is larger, so that <m>\tilde M \geq  M</m>.
+							</p>
+						</definition>
+						<p>
+							In other words, <m>M</m> is the <em>least upper bound</em> for <m>S</m>, and we denote this quantity <m>\sup S</m> (if it exists).
+						</p>
+						<definition xml:id="def-inf">
+						<title>Infimum</title>
+							<p>
+							<m>M \in \R</m> is an <em>infimum</em> for <m>S \subset \R</m> if <m>M</m> is a lower bound for <m>S</m> and any any other lower bound <m>\tilde M</m> for <m>S</m> is smaller, so that <m>\tilde M \leq  M</m>.
+							</p>
+						</definition>
+						<p>
+							In other words, <m>M</m> is the <em>greatest lower bound</em> for <m>S</m>, and we denote this quantity <m>\inf S</m> (if it exists).
+						</p>
+						<example>
+						<ul>
+						<li> <m>\sup\set{1,2,3} = 3.</m>
+						<proof>
+						3 is an upper bound for <m>\set{1,2,3}</m>. We must show it is the least upper bound. Suppose that <m>M</m> is another upper bound for <m>\set{1,2,3}</m>. Then by definition of being an upper bound and the fact that 3 lies in our set, we have that <m>3 \leq M</m>. Thus 3 is smaller than any other upper bound, thereby satisfies the definition (<xref ref="def-sup"/>) of being a supremum.
+						</proof>
+						</li>
+						<li> <m> \sup (-\infty, 1) = 1.</m>
+						<proof>
+						By definition <m> (-\infty, 1) = \set{x\in \R : x \lt 1}</m>, so 1 is certainly an upper bound for the set. It remains to show that 1 is the smallest upper bound. To this end, suppose that <m>M</m> is another upper bound for <m> (-\infty, 1)</m>. Notice that if <m> M \lt 1</m>, then any element strictly between <m>M</m> and 1 (for instance the midpoint <m>(M+1)/2</m> will be an element of <m>(-\infty, 1)</m> which exceeds the upper bound <m>M</m> (a contradiction). Therefore we must have <m> M\geq 1</m>, so that 1 is the least upper bound (as claimed).
+						</proof>
+						<p>
+						Notice that this example shows that <em>the supremum does not always lie in the set</em>. When the supremum lies in the set we call it the <em>maximum</em> (see <xref ref="def-max"/>).
+						</p>
+						</li>
+						<li>
+						<m>\sup \emptyset</m> does not exist.
+						<proof>
+						Every <m>M\in \R</m> is an upper bound for <m>S = \emptyset</m>, since the negation <xref ref="eq-negate-upper-bound"/> does not hold (we say that a statement of the form <m>(\forall x \in \emptyset)[\dots]</m> is true "vacuously", since the negation cannot hold due to there being no elements in the empty set). No real <m>M</m> can be the least upper bound for the empty set, since <m>M-1</m> is a smaller upper bound.
+						</proof>
+						This means that we can only take the supremum of a <em>non-empty set</em>.
+						</li>
+						<li>
+						<p>
+						If <m>S\subset \R</m> is <em>not bounded above</em> (for instance <m>S=\R</m>) then <m>S</m> has no upper bound, in particular no <em>least</em> upper bound. Thus <m>\sup S</m> does not exist. 
+						</p>
+						<p>
+						This means that we can only take the supremum of a set which is <em>bounded above</em>.
+						</p>
+						<p>
+						The <em>completeness principle</em> (<xref ref="completeness-principle"/>) says that if <m>S</m> is non-empty and bounded above, then <m>\sup S</m> exists.
+						</p>
+						</li>
+						<!--
+						<li> <m>\sup [0,1) = 1.</m></li>
+						<li>
+						<p>
+							For a non-example, we observe that 2 is not a supremum for the set
+								<me>
+									\set{\recip{n}: n \in \N}.
+								</me>
+							Although 2  <em>is</em> an upper bound for this set, it is not a supremum because there exists a <em>smaller</em> upper bound (e.g. 1).
+						</p>
+						<p>
+							For an example of a set without a supremum, consider
+								<me>
+									\N := \set{1,2,3,\dots}.
+								</me>
+							This set does not have a smallest upper bound because it does not have any upper bounds (if <m>M\in \R</m> were a purported upper bound for <m>\N</m> then we would have a contradiction, since the natural number 
+							<me>
+								\max\set{1,\ceil{M}+1}
+							</me>
+						is strictly bigger than <m>x</m>. (The notation "<m>\ceil{M}</m>" means the smallest integer greater than or equal to <m>M</m>.)
+						</p>
+						</li>
+						-->
+						</ul>
+						</example>
+					</solution>
+				</task>
+				<task> 
+					<statement><p>
+						Given a function <m>f:D\to\R</m>, define the notation <m> \sup_S f</m> and <m> \inf_S f</m> (when these quantities exist).
+					</p></statement>
+					<solution>
+					<p>
+						Given a function <m>f:D\to \R</m> and a set <m>S\subset D</m> we write 
+						<me>
+							\sup_S f = \sup_{x\in S} f(x) := \sup\set{f(x) : x \in S}.
+						</me>
+						This supremum exists if and only if <m>f</m> is bounded above on <m>S</m> and <m>S</m> is non-empty.
+					</p>
+					<p>
+					We write 
+						<me>
+							\inf_S f = \inf_{x\in S} f(x) := \inf\set{f(x) : x \in S}.
+						</me>
+						This infimum exists if and only if <m>f</m> is bounded below on <m>S</m> and <m>S</m> is non-empty.
+					</p>
+					</solution>
+				</task>
+				<task xml:id="task-non-up">
+				<statement>
+				State and prove how decreasing a supremum gives a non-upper bound. 
+				</statement>
+				<solution>
+				<lemma xml:id="prop-alt-sup">
+				<title>Decreasing a sup gives a non-upper bound</title>
+				<statement>
+				Let <m>S \subset \R</m> be non-empty and bounded above. Then 
+					<me>
+					(\forall \eps > 0)(\exists x \in S)[x> \sup S-\eps].
+					</me>
+				</statement>
+				<proof>
+				Let <m>\eps\gt0</m> be arbitrary; we are required to find <m>x\in S</m> such that <m>x\gt \sup S-\eps</m>. Aiming for a contradiction, let us suppose that this does not hold, so that for all <m>x\in S</m> we have <m>x\leq \sup S-\eps</m>. But then <m>\sup S-\eps</m> is an upper bound for <m>S</m> which is strictly smaller than <m>\sup S</m>. Since <m>\sup S</m> is the smallest upper bound for <m>S</m>, we have obtained our desired contradiction.
+				</proof>
+				</lemma>
+				</solution>
+				</task>
+			</exercise> 	
+			<exercise xml:id="ex-max-min">
+			<title>Maximum and minimum</title>
+				<task>
+				<statement>
+				Define the <em>maximum</em> and <em>minimum</em> for a set of real numbers (when these quantities exist).
+				</statement>
+				<solution>
+				<definition xml:id="def-max">
+				<title>Maximum</title>
+				<p>
+				We say that a set of real numbers <m>S \subset \R</m> has a <em>maximum</em> if <m>\sup S</m> exists and <m>\sup S \in S</m>. In this situation, we write <m>\max S</m> for <m>\sup S</m> and call it the <em>maximum</em>.
+				</p>
+				</definition>
+				<definition>
+				<title>Minimum</title>
+				<p>
+				We say that a set of real numbers <m>S \subset \R</m> has a <em>minimum</em> if <m>\inf S</m> exists and <m>\inf S \in S</m>. In this situation, we write <m>\min S</m> for <m>\inf S</m> and call it the <em>minimum</em>.
+				</p>
+				</definition>
+				<example>
+				<ul>
+				<li> <m>\max \set{1,2,3} = 3</m>.</li>
+				<li> <m>\max (-\infty, 1)</m> does not exist.</li>
+				<li> For any <em>finite</em> non-empty set, both <m> \max S</m> and <m>\min S</m> exist.</li>
+				</ul>
+				</example>
+				</solution>
+				</task>
+				<task>
+				<statement>
+				Define the <em>maximum</em> and <em>minimum</em> for a real-valued function <m>f : D \to \R</m> (when these quantities exist).
+				</statement>
+				<solution>
+				<p>
+				Given a set <m>S \subset D</m>, we write
+				<me>
+							\max_S f = \max_{x\in S} f(x) := \max\set{f(x) : x \in S},
+				</me>
+				provided that this quantity exists (i.e. provided that the set <m>\set{f(x) : x \in S}</m> has a supremum which belongs to the set).
+				</p>
+				<p>
+				Similarly, we write
+				<me>
+							\min_S f = \min_{x\in S} f(x) := \min\set{f(x) : x \in S},
+				</me>
+				provided that this quantity exists.
+				</p>
+				</solution>
+				</task>
+			</exercise>
+			<exercise>
+			<title>Completeness principle</title>
+					<statement><p>
+						State (but don't prove) the "<em>completeness principle</em>" for the real numbers.
+					</p></statement>
+					<solution>
+						<theorem xml:id="completeness-principle">
+						<title>The completeness principle</title>
+						<p>
+						Suppose that a set of real numbers <m>S\subset \R</m> is
+							<ul>
+								<li>
+									non-empty
+								</li>
+								<li>
+									bounded above,
+								</li>
+							</ul>
+						then <m>S</m> has a supremum, <m>\sup S\in \R</m>.
+						</p>
+						<p>
+						In other words, any set with an upper bound has a <em>least</em> upper bound (provided that the set is non-empty).
+						</p>
+						<proof>
+						<em>NON-EXAMINABLE</em>. The proof depends on how one constructs the real numbers, of which there are many alternative constructions (e.g. Dedekind cuts of rationals, decimal expansions, equivalence classes of Cauchy sequences, etc). See <url href="https://en.wikipedia.org/wiki/Completeness_of_the_real_numbers" visual="https://en.wikipedia.org/wiki/Completeness_of_the_real_numbers">en.wikipedia.org/wiki/Completeness_of_the_real_numbers</url>.
+						</proof>
+						</theorem>
+						<remark>
+						In this course, the completeness principle is the main result we use (repeatedly, sometimes in a hidden manner) in order to show that certain limits exist. For instance all of the following involve a limit in their construction, and the existence of this limit is guaranteed (under certain conditions) by the completeness principle:
+						<me>
+						\lim_{n\to\infty} a_n, \qquad \sum_{n=1}^\infty a_n, \qquad \lim_{x\to x_0} f(x),\qquad f'(x_0), \qquad \int_a^b f.
+						</me>
+						</remark>
+						<remark>
+						The completeness principle is equivalent to the following statement involving the <em>infimum</em>:
+						<corollary>
+						<p>
+						Suppose that a set of real numbers <m>S\subset \R</m> is
+							<ul>
+								<li>
+									non-empty
+								</li>
+								<li>
+									bounded below,
+								</li>
+							</ul>
+						then <m>S</m> has an infimum, <m>\inf S\in \R</m>.
+						</p>
+						<p>
+						In other words, any set with a lower bound has a <em>greatest</em> lower bound (provided that the set is non-empty).
+						</p>
+						</corollary>
+						The second statement can be derived from the first by reflecting the set through zero to obtain <m>-S:=\set{-x: x\in S}</m>, then observing that <m>\sup(-S) = -\inf S</m>.
+						</remark>
+						<example>
+						<p>
+						As an example of how the completeness principle can be used, we outline how to construct a square-root of two from the rational numbers. 
+						</p>
+						<p>
+						First observe that the set
+						<me>
+						\set{a/b \in \Q : (a/b)^2 \leq 2}
+						</me>
+						is bounded above (e.g. by 100) and non-empty (e.g. it contains 1). Hence by the completeness principle, it has a supremum 
+						<me>
+						x :=\sup\set{a/b \in \Q : (a/b)^2 \leq 2}.
+						</me>
+						We leave it as an exercise for the enthusiastic reader to demonstrate that <m>x^2 = 2</m>, so that <m>x</m> is a square-root of two.
+						</p>
+						</example>
+					</solution>
+			</exercise>
+			
+			<exercise>
+				<title>Sequences</title>
+				<task xml:id="task-seq-def">
+					<statement><p>
+					Define what it means to be a <em>sequence</em> of real numbers.			 		
+					</p></statement>
+					<solution>
+					<p>
+					A <em>sequence of real numbers</em>
+ is a function <m>f : \N \to \R</m>. 
+ 					</p>
+					<remark>
+					<p>
+					Rather than using function notation <m>f:\N\to \R</m>, we usually write a sequence as 
+ 						<me>
+						(a_n)_{n=1}^\infty = (a_1, a_2, a_3, \dots)
+						</me>
+					where <m>a_n := f(n)</m>.
+ 					</p>
+					<p>
+					We may also write <m>(a_n)_{n\in \N}</m> or <m>(a_n)_n</m> or simply <m>(a_n)</m>. We may also change the starting point of the sequence, for instance: <m>(a_n)_{n=0}^\infty</m> or <m>(a_n)_{n=100}^\infty</m>, etc.
+					</p>
+					</remark>
+					</solution>
+				</task>
+				<task>
+				<statement> State what it means for a sequence to be <em>in</em> a set of real numbers.
+				</statement>
+				<solution>
+					<p>
+ 					Given <m>S \subset \R</m>, we say that a sequence <m>(a_n)_{n=1}^\infty</m> is <em>in</em> <m>S</m> if for all <m>n \in \N</m> we have <m>a_n \in S</m>.
+					</p>
+				</solution>
+				</task>
+				<task> 
+				<statement>
+				Define the "<m>n</m>th <em>term</em>" of a sequence.
+				</statement>
+				<solution>
+					<p>
+					The "<m>n</m>th <em>term</em>" of the sequence <m>(a_n)_n</m> is the number <m>a_n</m>.
+					</p>
+				</solution>
+				</task>
+				<task>
+				<statement>
+				Give some examples and non-examples of sequences. In particular, give an example of a function and a set which are <em>not</em> sequences (i.e. demonstrate your knowledge of the difference between a set, a function and a sequence). 
+				</statement>
+				<solution> 
+					<p> 
+					Some examples of sequences include:
+						<ul>
+							<li> 
+							The enumeration of the even numbers in increasing order
+								<me>
+								(2n)_{n=1}^\infty = (2, 4, 6, 8, \dots)
+								</me>.
+							</li>
+							<li> 
+							An enumeration of the even numbers in a different order
+								<me>
+								(4,2,8,6,12,10, \dots)
+								</me>.
+							Notice that this is a different sequence to our first example, since they have different 1st term. The order of a sequence matters.
+							</li>
+							<li> A constant sequence, consisting of the same real number repeated at every term, e.g.
+								<me>
+								(\pi, \pi, \pi, \dots)
+								</me>,
+							so that <m>a_n = \pi</m> for all <m>n \in \N</m>.
+							</li>
+							<li>
+							The sequence of values of the <m>\sin</m> function evaluated at positive integers
+								<me>
+								(\sin(n))_{n=1}^\infty = (\sin(1), \sin(2), \sin(3), \dots)
+								</me>.
+							</li>
+						</ul>
+					</p>
+					<p> 
+					Some non-examples of sequences include:
+						<ul>
+							<li> 
+							The sine function <m>\sin:\R\to\R</m>. The problem is that the domain of this function is not a countable set.
+							</li>
+							<li> 
+							The set of even numbers
+								<me>
+								\set{2, 4, 6, \dots} = \set{4,2,8,6,12,10,\dots}
+								</me>.
+							The problem here is that there is no ordering associated with a set. It is not clear what the <m>n</m>th term of a set is.
+							</li>
+							<li> 
+							The set
+								<me>
+								\set{\pi, \pi, \pi, \dots} = \set{\pi}
+								</me>.
+							For a sequence, different <em>terms</em> may take the same <em>value</em>. It makes sense to say that the value <m>\pi</m> occurs infinitely often in a sequence. However, there are no repetitions of elements in a set: an element either belongs once or not at all.
+							</li>
+						</ul>
+					</p>
+					</solution>
+				</task>
+			</exercise>
+			<exercise>
+			<title>Convergent sequences</title>
+				<task xml:id="task-conv-def">
+					<statement><p>
+					Define what it means for a sequence of real numbers to converge to a real limit.
+					</p></statement>
+					<solution>
+					<definition xml:id="def-seq-limit">
+							<title>Limit of convergent sequence</title>
+						We say that a sequence of real numbers <m>(a_n)_{n=1}^\infty</m> <em>converges</em> to <m>a \in \R</m>, and write <m>a_n \to a</m> as <m>n\to \infty</m> or <m>\lim_{n\to\infty} a_n = a</m>, if
+							<men xml:id="eq-seq-limit">
+							(\forall \eps \gt 0)( \exists N = N(\eps))( \forall n \geq N)[ |a_n-a| \leq \eps].
+							</men>
+					</definition>
+					<remark>
+					<ul>
+					<li> Typically, one takes <m>N = N(\eps)</m> to be a positive integer, so <m>N \in \N</m> denotes the <m>N</m>th term of the sequence, after which all remaining terms of the sequence lie in the "<m>\eps</m>-neighbourhood of <m>a</m>":
+					<men xml:id="eps-nbhd">
+					[a-\eps, a+\eps] = \set{x \in \R : |x-a| \leq \eps}.
+					</men>
+					However, it sometimes convenient not to have to worry about whether <m>N</m> is an integer or positive, so we allow for <m>N \in \R</m> in our definition (the two definitions are equivalent).
+					</li>
+					<li>
+					One can paraphrase "convergence to <m>a</m>" as "every <m>\eps</m>-neighbourhood of <m>a</m> contains all  terms of the sequence from some point onwards".
+					</li>
+					<li>
+					You may have seen strict inequality "<m>[ |a_n-a| \lt \eps]</m>" in the definition of convergence. Again, the two definitions are equivalent.
+					</li>
+					</ul>
+					</remark>
+					</solution>
+					</task>
+					<task xml:id="task-conv-eg">
+					<statement>
+					Give examples of sequences which converge and which don't converge.
+					</statement>
+					<solution>
+						<example xml:id="eg-const-conv">
+							<title>Constant sequences are convergent</title>
+						Fix a real number <m>a \in \R</m>, say <m>a = 100</m>. For each <m>n \in \N</m> set <m>a_n := a</m>. Then we claim that <m>a_n \to a</m>. To prove this, we must verify that <xref ref="eq-seq-limit"/> holds. To this end, fix <m>\eps \gt 0</m>. We must find <m>N = N(\eps)</m> such that 
+							<men xml:id="eq-const-to-prove">
+							n \geq N(\eps)\implies |a_n-a| \leq \eps.
+							</men>
+							For this particular sequence, we have <m>|a_n-a| = |a-a| = 0</m> for all <m>n</m>. Hence <xref ref="eq-const-to-prove"/> holds on taking <m>N(\eps) :=1</m>.
+						</example>
+						<example xml:id="eg-reciprocal-conv">
+							<title>The reciprocals of the naturals converge to 0</title>
+						<m>1/n \to 0</m> as <m>n\to \infty</m>
+						<proof> 
+						We must verify <xref ref="eq-seq-limit"/>. Fixing <m>\eps \gt 0</m>, this constitutes showing that, from some point onwards, all terms lie in the <m>\eps</m>-neighbourhood of zero <m>[-\eps,\eps]</m>. In other words, we want to find <m>N = N(\eps)</m> such that 
+							<me>
+							n \geq N(\eps)\implies 1/n \in [-\eps, \eps].
+							</me>
+							Setting <m>N(\eps):= 1/\eps</m> we see that if <m>n\geq N(\eps) = 1/\eps</m> then re-arranging the inequality gives <m>1/n \leq \eps</m>, and so <m>|\recip{n}-0|\leq \eps</m> (as required).
+						</proof>
+						</example>
+						<example>
+						<title>A non-convergent sequence</title>
+						We claim that the sequence <m>(a_n)_n</m> defined by <m>a_n:=n</m> for all <m>n</m> does not converge to any real number <m>a \in \R</m>. If <m>a\in \R</m> were the limit of this sequence, then taking <m>\eps:=1/3</m> in <xref ref="eq-seq-limit"/> gives the existence of <m>N</m> such that for all <m>n\geq N</m> we have <m>|a-n| \leq 1/3</m>. In particular, by the triangle inequality we have
+						<me>
+						1 = |(N+1)-N| \leq |(N+1)-a|+|a-N| \leq 2/3.
+						</me>
+						This is a contradiction.
+						</example>
+						<example xml:id="eg-alt-seq">
+						<title>Another non-convergent sequence</title>
+						We claim that the sequence 
+							<me>
+							((-1)^n)_{n=1}^\infty = (-1,1,-1,1,\dots)
+							</me> 
+							does not converge to any real number <m>a \in \R</m>. If <m>a\in \R</m> were the limit of this sequence, then taking <m>\eps:=1/2</m> in <xref ref="eq-seq-limit"/> gives the existence of <m>N</m> such that for all <m>n\geq N</m> we have <m>|a-(-1)^n| \leq 1/2</m>. In particular, by the triangle inequality we have
+						<me>
+						2 = |(-1)^{N+1}-(-1)^N| \leq |(-1)^{N+1}-a|+|a-(-1)^N| \leq 1/2 + 1/2 = 1.
+						</me>
+						This is a contradiction.
+						</example>
+ 					</solution>
+				</task>
+			</exercise>
+			<exercise>
+			<title>Convergent sequences are bounded</title>
+				<task xml:id="ex-convergent-bounded">
+					<statement><p>
+					State and prove how convergent sequences are bounded.
+					</p></statement>
+					<solution>
+						<proposition xml:id="prop-conv-bounded">
+							<title>Convergent sequences are bounded</title>
+							<statement><p>
+						Suppose that <m>(a_n)</m> is a convergent sequence of reals. Then <m>(a_n)</m> is a bounded sequence.
+							</p></statement>
+						<proof>
+						By definition of a bounded function (<xref ref="def-upper-bound"/>) we must show that
+<me>
+(\exists M \in \R)(\forall n \in \N)[|a_n| \leq M].
+</me>
+Since the sequence is convergent, there exists <m>a \in \R</m> such that <m>a_n \to a</m>.
+Taking <m>\eps :=1</m> in the definition of the limit (<xref ref="def-seq-limit"/>), there exists <m>N = N(1)</m> such that for all <m>n \geq N</m> we have <m>|a_n - a| \leq 1</m>. Therefore, when <m>n \geq N</m>, the triangle inequality gives
+<me>
+|a_n| = |a_n - a + a| \leq |a_n-a| + |a| \leq 1 + |a|.
+</me>
+Rounding up if necessary, we may assume that <m>N \in \N</m>, so we can set
+<me>
+M:= \max\set{|a_1|, \dots, |a_{N}|, 1+|a|}.
+</me>
+ Then for all <m>n \in \N</m> we have <m>|a_n| \leq M</m>.
+							</proof>
+						</proposition>
+					</solution>
+				</task>
+				<task>
+				<statement>
+				Give an example of a sequence which is bounded but not convergent.
+				</statement>
+				<solution>
+				The alternating sequence <m>(-1,1,-1,1,-1, \dots)</m> is bounded but not convergent (see <xref ref="eg-alt-seq"/>).
+				</solution>
+				</task>
+			</exercise>
+		</subsection>
+<subsection>
+<title>Workshop questions</title>
+<exercise>
+<title>
+True/false workshop quiz
+</title>
+<p>
+In your workshop, you will vote on whether you think each of the following statements is true (thumbs up) or false (thumbs down). For each question, your workshop tutor will ask one of you to briefly justify your vote. This justification can involve giving a counterexample (if false) or outlining which definition/theorem the statement  follows from (if true).
+</p>
+	<task>
+	<statement> If <m>M\in \R</m> is <em>not</em> an upper bound for <m>S\subset \R</m> then 
+	<me>
+	(\forall x \in S)[x > M].
+	</me>
+	</statement>
+	</task>
+	<task>
+	<statement>There exists a set for which 0 is both an upper bound and lower bound.</statement>
+	</task>
+	<task>
+	<statement>If a function <m>f: \R \to \R</m> is bounded above, then it is also bounded below.</statement>
+	</task>
+	<task>
+	<statement><m>M\in \R</m> is a supremum for <m>S\subset \R</m> if it is smaller than any other upper bound.</statement>
+	</task>
+	<task>
+	<statement>If <m>f: [0,1] \to \R</m> is given by <m>f(x) = 2x</m> then <m>\sup_{[0,1]} f= 2</m>.</statement>
+	</task>
+	<task>
+	<statement>If 0 is an infimum for <m>S\subset \R</m>, then <m>S</m> contains an element smaller than <m>0.00000001</m>.</statement>
+	</task>
+	<task>
+	<statement>A sequence which is bounded above has a maximum.</statement>
+	</task>
+	<task>
+	<statement>One consequence of the completeness principle is that a non-empty set of negative real numbers has a supremum.</statement>
+	</task>
+	<task>
+	<statement>If a set has a supremum then it is bounded.</statement>
+	</task>
+	<task>
+	<statement>The function <m>f(x) = x^2</m> is a sequence.</statement>
+	</task>
+	<task>
+	<statement>The natural numbers are a sequence.</statement>
+	</task>
+	<task>
+	<statement>If a sequence converges to 0, then all of the terms lie in the neighbourhood <m>[-0.01, 0.01]</m>.</statement>
+	</task>
+	<task>
+	<statement>If a sequence <m>(a_n)_{n=1}^\infty</m> converges to <m>a\in \R</m>, then 
+	<me>
+	(\exists N \in \N)(\forall \eps \gt 0)(\forall n \geq N)[|a_n-a|\leq \eps].
+	</me>
+	</statement>
+	</task>
+	<task>
+	<statement>The sequence <m>a_n:=\frac{n}{n+1}</m> converges to 1 as <m>n \to\infty</m>.
+	</statement>
+	</task>
+	<task>
+	<statement>If a sequence converges then it has a supremum.
+	</statement>
+	</task>
+</exercise>
+<exercise>
+<title>Exam-style self-test question for workshop</title>
+<!--
+	<task>
+		<statement>
+		Define what it means for 1 to be a upper bound for <m>S\subset \R</m>.
+		</statement>
+		<solution>
+		This is a special case of <xref ref="task-upper-lower"/>, with <m>M = 1</m>.
+		</solution>
+	</task>
+-->
+	<task>
+		<statement>
+		Define what it means for 0 to be an infimum for <m>S\subset \R</m>.
+		</statement>
+		<solution>
+		This is a special case of <xref ref="task-sup-inf"/>, with <m>M = 0</m>.
+		</solution>
+	</task>
+	<task>
+		<statement>
+		Justify why a set has a supremum if it contains at least one negative number and no positive numbers.
+		</statement>
+		<solution>
+		This is a special case of <xref ref="completeness-principle"/>.
+		</solution>
+	</task>
+	<!--
+	<task>
+			<statement>
+			Define what it means for <m>S</m> to have a maximum.
+			</statement>
+					<solution>
+		See <xref ref="ex-max-min"/>.
+		</solution>
+	</task>
+	-->
+	<task>
+			<statement>
+			Give an example of a set which contains at least one negative number, no positive numbers and which does not have a maximum.
+			</statement>
+			<solution>
+		See <xref ref="ex-max-min"/>.
+		</solution>
+	</task>
+	<task>
+		<statement>
+		Prove that if <m>\sup S = 100</m> then <m>S</m> contains a number greater than 99.
+		</statement>
+		<solution>
+		This is <xref ref="task-non-up"/> with <m>\sup S = 100</m> and <m>\eps = 1</m>.
+		</solution>
+	</task>
+</exercise>
+	<exercise> 
+	<title>Exam-style self-test question for workshop</title>
+		<task xml:id="task-converge-to-one">
+		<statement>
+		Define what it means for the sequence <m>(a_n)_{n=1}^\infty</m> to converge to 1.
+		</statement>
+		<solution>
+		This is <xref ref="task-conv-def"/> with <m>a = 1</m>.
+		</solution>
+		</task>
+		<task>
+		<statement>
+		Setting <men xml:id="eq-seq-to-one">a_n:= \frac{n^2}{n^2+1},</men> find a value of <m>N</m> for which all subsequent terms <m>a_N, a_{N+1}, \dots</m> lie in the neighbourhood <m>[\frac{100}{101},\frac{102}{101}]</m>.
+		</statement>
+		<solution>
+		This is similar to <xref ref="task-conv-eg"/>.
+		</solution>
+		</task>
+		<task>
+		<statement>
+		Prove that the sequence <xref ref="eq-seq-to-one"/> satisfies the definition of <m>a_n\to 1</m> as <m>n\to \infty</m>, as described in part (a)<!--<xref ref="task-converge-to-one"/>-->.
+		</statement>
+		<solution>
+		This is similar to <xref ref="task-conv-eg"/>.
+		</solution>
+		</task>
+	</exercise>
+	<exercise>
+	<title>Exam-style self-test question for workshop</title>
+		<task>
+		<statement>
+		Define what it means for a sequence <m>(a_n)_{n=1}^\infty</m> to be bounded.
+		</statement>
+		<solution>
+		This combines the definition of a sequence as a function (<xref ref="task-seq-def"/>) with what it means for a function to be a bounded (<xref ref="task-bd"/>).
+		</solution>
+		</task>
+		<task>
+		<statement>
+		Suppose that <m>a_n\to 1</m> as <m>n\to\infty</m>. Prove that for infinitely many values of <m>n</m> we have
+		<m>
+		a_n \leq 2.
+		</m>
+		</statement>
+		<solution>
+		This appears to be an "unseen" question, but really it is a special case of <xref ref="ex-convergent-bounded"/>. In particular, arguing exactly as in the first half of the proof of <xref ref="prop-conv-bounded"/> with <m>a=1</m>, we find that there exists <m>N \in \N</m> such that for all <m>n\geq N</m> we have <m>a_n \leq 2</m>.
+		</solution>
+		</task>
+	</exercise>
+	</subsection>
+		</section>	

@@ -1,0 +1,803 @@
+<?xml version='1.0' encoding="utf-8"?>
+<!--
+% !TEX TS-program = PreTeXt-HTML
+-->
+<section xml:id="week-9" xmlns:xi="http://www.w3.org/2001/XInclude">
+			<title>Week 9</title>
+			<exercise>
+				<title>Linearity of integration</title>
+				<task>
+					<statement>State and prove how suprema/infima of functions behave under scalar multiplication.
+					</statement>
+					<solution>
+					<lemma xml:id="lem-dilation-sup">
+					<title>Scaling rule for suprema and infima</title>
+					<statement>
+ Let <m>f : S \to \R</m> be a bounded function on an arbitrary non-empty set <m>S</m>.
+ Let <m>c \in \R</m>.
+ Then:
+<me>
+\sup_{S} \brac{cf}  =
+\begin{cases}
+\displaystyle c \sup_{ S} f \amp \text{ if } c \geq 0, \\
+\displaystyle c \inf_{ S} f \amp \text{ if } c \lt  0.
+\end{cases}
+</me>
+ Similarly
+<me>
+\inf_{ S} \brac{cf}  =
+\begin{cases}
+\displaystyle c \inf_{ S} f \amp \text{ if } c \geq 0, \\
+\displaystyle c \sup_{ S} f \amp \text{ if } c \lt  0.
+\end{cases}
+</me>
+</statement>
+<proof> 
+<p>
+ If <m>c \gt 0</m> then both claims follows from the fact that 
+<me>
+\set{M : M \text{ is an upper bound for } cf} = \set{cM : M \text{ is an upper bound for } f},
+</me> 
+and similarly for lower bounds.
+</p>
+<p>
+ For <m>c \lt  0</m> we use the result for <m>c\gt0</m> as follows 
+<me>
+\sup_{S} \brac{cf} = \sup_{S} \brac{-(-c)f} = -\inf_S \brac{(-c) f} = -(-c)\inf_S f = c\inf_S f,
+</me>
+ and similarly for the infimum.
+ </p>
+</proof>				
+</lemma>	
+</solution>
+				</task>
+				<task>
+					<statement>State and prove how the Riemann integral respects scaling.
+					</statement>
+					<solution>
+					<theorem xml:id="thm-int-scale">
+<title>The Riemann integral scales appropriately</title>
+<statement>
+ Let <m>a, b\in \R</m> with <m>a\lt  b</m>.
+ Let <m>f: [a,b] \to \R</m> be Riemann integrable on <m>[a,b]</m>.
+ Let <m>c \in \R</m>.
+ Then <m>cf</m> is  Riemann integrable on <m>[a,b]</m>.
+ Moreover
+<me>
+\int_a^b cf = c\int_a^b f. \qquad \text{[scaling rule]}
+</me>
+</statement>
+<proof>
+ We first employ the scaling rule for suprema/infima (<xref ref="lem-dilation-sup"/>) to deduce that
+<me>
+U(cf;x_0,\dots, x_N) = 
+\begin{cases} 
+c U(f;x_0,\dots, x_N) \amp \text{ if } c \geq 0,\\
+c L(f;x_0,\dots, x_N) \amp \text{ if } c \lt  0.
+\end{cases}
+</me>
+ Similarly
+<me>
+L(cf;x_0,\dots, x_N) = 
+\begin{cases} 
+c L(f;x_0,\dots, x_N) \amp \text{ if } c \geq 0,\\
+c U(f;x_0,\dots, x_N) \amp \text{ if } c \lt  0.
+\end{cases}
+</me>
+ Employing the scaling rule (<xref ref="lem-dilation-sup"/>) a second time, as we take sup/inf over all subdivisions, we obtain
+<me>
+U(cf;[a,b]) = 
+\begin{cases} 
+c U(f;[a,b]) \amp \text{ if } c \geq 0,\\
+c L(f;[a,b]) \amp \text{ if } c \lt  0.
+\end{cases}
+</me>
+ Similarly
+<me>
+L(cf;[a,b]) = 
+\begin{cases} 
+c L(f;[a,b]) \amp \text{ if } c \geq 0,\\
+c U(f;[a,b]) \amp \text{ if } c \lt  0.
+\end{cases}
+</me>
+ Regardless of whether <m>c \geq 0</m> or <m>c \lt  0</m>, the fact that <m>U(f;[a,b]) = L(f;[a,b])</m> gives that 
+<me>
+U(cf;[a,b]) = L(cf;[a,b]) = c\int_a^b f.
+</me>
+</proof>
+</theorem>					</solution>
+				</task>
+				<task>
+					<statement>State and prove how suprema/infima of functions behave under addition.
+					</statement>
+					<solution>
+					<lemma xml:id="lem-sub-add-sup">
+<title>Subadditivity of sup and inf</title>
+ Let <m>f,g : S \to \R</m> be bounded functions on an arbitrary non-empty set <m>S</m>.
+ <md>
+<mrow>
+\sup_{ S} \brac{f + g}\amp \leq \sup_{ S} f +\sup_{ S}  g;
+</mrow>
+<mrow>
+\inf_{ S} \brac{f + g} \amp \geq \inf_{ S} f +\inf_{ S}  g.
+</mrow>
+</md>
+<proof> If <m>x_0 \in S</m> then we have that
+<me>
+f(x_0) \leq \sup_{ S} f\quad \text{and} \quad g(x_0) \leq \sup_{S} g.
+</me>
+ Hence the sum
+<me>
+\sup_{S} f +\sup_{ S}  g
+</me>
+is an upper bound for the set
+<me>
+\set{f(x_0) + g(x_0) : x_0 \in S}.
+</me>
+ By definition of the supremum as the least upper bound (<xref ref="def-sup"/>) we deduce the subadditivity of the supremum.
+ The argument for the infimum is analogous. 
+</proof></lemma>					</solution>
+				</task>
+				<task>
+					<statement>State and prove how Riemann sums behave under addition of functions.
+					</statement>
+					<solution>
+					<corollary xml:id="cor-sub-add">
+<title>Subadditivity of Riemann sums</title>
+<statement>
+ Let <m>a, b\in \R</m> with <m>a\lt  b</m>.
+ Let <m>f,g : [a,b] \to \R</m> be bounded.
+ Let <m>a = x_0 \lt  \dots \lt  x_N = b</m> be a subdivision of <m>[a,b]</m>.
+ Then 
+<me>
+U(f+g; x_0, \dots, x_N) \leq U(f;x_0, \dots, x_N) + U(g;x_0, \dots, x_N)
+</me>
+and
+<me>
+ L(f+g; x_0, \dots, x_N) \geq L(f;x_0, \dots, x_N) + L(g;x_0, \dots, x_N) . 
+</me>
+</statement>
+<proof>
+This is a direct consequence of sub-additivity of suprema and infima (<xref ref="lem-sub-add-sup"/>).
+</proof>
+</corollary>
+</solution>		
+				</task>		
+				<task>
+					<statement>State and prove how the Riemann integral respects addition.</statement>
+					<solution>
+					<theorem xml:id="thm-int-add">
+<title>Additivity of integration</title>
+<statement>
+ Let <m>a, b\in \R</m> with <m>a\lt  b</m>.
+ Let <m>f,g : [a,b] \to \R</m> be functions which are Riemann integrable on <m>[a,b]</m>.
+ Then  <m>f+g</m> is  Riemann integrable on <m>[a,b]</m>.
+ Moreover
+<me>
+\int_a^b\brac{f+g}= \int_a^bf+\int_a^bg\qquad\text{[addition rule]}
+</me>.
+</statement>
+<proof>
+Fix <m>\eps \gt 0</m>.
+ By the epsilon characterisation of Riemann integrability, (<xref ref="prop-eps-riemann"/>) there exists a subdivision <m>a= y_0 \lt  \dots \lt  y_M = b</m> such that 
+<me>
+U(f;y_0, \dots, y_M) -\trecip{2}\eps \leq \int_a^b f \leq L(f;y_0, \dots, y_M)+\trecip{2}\eps.
+</me>
+ Similarly there exists a subdivision <m>a= z_0 \lt  \dots \lt  z_T = b</m> such that 
+<me>
+U(g;z_0, \dots, z_T) -\trecip{2}\eps \leq \int_a^b g \leq L(g;z_0, \dots, z_T)+\trecip{2}\eps.
+</me>
+ Let <m>a= x_0 \lt  \dots \lt  x_N = b</m> denote the common refinement of <m>(y_0, \dots, y_M)</m> and <m>(z_0, \dots, z_T)</m>.
+  Then by monotonicty of Riemann sums under refinements (<xref ref="prop-mono-riemann-refine"/>) we have
+ <me>
+U(f;x_0, \dots, x_N) -\trecip{2}\eps \leq \int_a^b f \leq L(f;x_0, \dots, x_N)+\trecip{2}\eps
+</me>
+and
+<me>
+U(g;x_0, \dots, x_N) -\trecip{2}\eps \leq \int_a^b g \leq L(g;x_0, \dots, x_N)+\trecip{2}\eps.
+</me>
+ Adding inequalities together and employing the subadditivity of Riemann sums (<xref ref="cor-sub-add"/>) we deduce that
+<me>
+U(f+g;x_0, \dots, x_N) -\eps \leq \int_a^b f + \int_a^b g \leq L(f+g;x_0, \dots, x_N) +\eps.
+</me>
+ Thus 
+<me>
+U(f+g;[a,b]) -\eps \leq \int_a^b f + \int_a^b g \leq L(f+g;[a,b]) +\eps.
+</me>
+ Since this holds for all <m>\eps \gt 0</m>, we conclude that
+<me>
+U(f+g;[a,b]) \leq \int_a^b f + \int_a^b g \leq L(f+g;[a,b]).
+</me>
+ Since lower Riemann sums are always bounded above by upper Riemann sums <xref ref="cor-up-low-finite"/> we have <m>L(f+g; [a,b]) \leq U(f+g;[a,b])</m>, so we must have
+<me>
+U(f+g;[a,b]) =  \int_a^b f + \int_a^b g = L(f+g;[a,b]).
+</me>
+ This establishes the addition rule.
+ </proof>
+ </theorem>
+					</solution>
+				</task>
+				<task>
+					<statement>Deduce how the Riemann integral respects pointwise inequalities.</statement>
+					<solution>
+					<corollary xml:id="cor-int-ineq">
+<title>Inequality rule</title>
+<statement>
+ Let <m>a, b\in \R</m> with <m>a\lt  b</m>.
+ Let <m>f,g : [a,b] \to \R</m> be functions which are Riemann integrable on <m>[a,b]</m>.
+ Suppose that <m>f \leq g</m> everywhere on <m>[a,b]</m>.
+ Then 
+<me>
+\int_a^bf\leq \int_a^bg.
+</me>
+</statement>
+<proof>
+ By the addition and scaling rules (<xref ref="thm-int-scale"/> and <xref ref="thm-int-add"/>) the function <m>g-f</m> is Riemann integrable.
+ Using the addition and scaling rules, and the trivial lower bound for the integral <xref ref="cor-up-low-finite"/>, we have
+<me>
+\int_a^bg - \int_a^bf =\int_a^b(g-f) \geq (b-a)\inf_{[a,b]} (g-f). 
+</me>
+ Since <m>g-f\geq 0</m> on <m>[a,b]</m>, we have 
+<me>
+(b-a)\inf_{[a,b]} (g-f) \geq 0.
+</me>
+ This yields the required inequality.
+</proof>
+</corollary>					</solution>
+				</task>
+			</exercise>
+		
+			<exercise>
+				<title>Riemann integrable functions are closed under multiplication</title>
+				<task>
+					<statement>Define the positive and negative part of a real number.</statement>
+					<solution>
+					<definition xml:id="def-positive-part">
+<title>Positive and negative parts</title>
+ Given a real number <m>x \in \R</m> define the <em>positive part</em> by
+<me>
+x^+ := \max\set{0, x}.
+</me>
+ Using this notation, define the <em>negative part</em> by
+<me>
+x^-:= -\min\set{x,0} = |\min\set{x,0}| = (-x)^+.
+</me>
+ One may check that
+<men xml:id="eq-positive-part">
+x = x^+ - x^- \quad\text{and}\quad |x| = x^+ + x^-.
+</men>
+</definition>
+					</solution>
+				</task>
+				<task>
+					<statement>State and prove how being Riemann integrable is preserved under taking positive parts.</statement>
+					<solution>
+					<lemma xml:id="lem-int-ineq">
+<title>Integrability is preserved under taking positive parts</title>
+<statement>
+ Let <m>a, b\in \R</m> with <m>a\lt  b</m>.
+ Let <m>f : [a,b] \to \R</m> be Riemann integrable.
+ Then <m>f^+</m> is Riemann integrable on <m>[a,b]</m>:
+</statement>
+<proof>
+ Approximating the integral with a Riemann sum (see <xref ref="prop-eps-riemann"/>), for any <m>\eps \gt 0</m> there exists a subdivision <m>a = x_0 \lt  \dots \lt  x_N = b</m> such that
+<me>
+U(f;x_0, \dots, x_N)-L(f;x_0, \dots, x_N) \leq \eps.
+</me>
+ We claim that 
+<mdn>
+<mrow number="no">
+U(f^+;x_0, \dots, x_N)- \amp L(f^+;x_0, \dots, x_N)
+</mrow>
+<mrow xml:id="eq-u-contraction">
+\amp \leq U(f;x_0, \dots, x_N)- L(f;x_0, \dots, x_N),
+</mrow>
+</mdn>
+from which it follows that <m>f^+</m> is integrable by the existence of arbitrarily close upper and lower Riemann sums (<xref ref="prop-eps-riemann"/>).
+ To establish our claim <xref ref="eq-u-contraction"/>, we first observe that for <m>x \geq 0</m> and <m>y \leq 0</m> we have
+<men xml:id="eq-contraction">
+|x^+-y^+| = |x| = x \leq x+(-y) = |x-y|.
+</men>
+ Checking the remaining cases, one may verify that <m>|x^+-y^+| \leq |x-y|</m> for any choice of <m>x, y \in \R</m>.
+ Since decreasing a supremum gives a non upper bound (see <xref ref="prop-alt-sup"/>), for any <m>\eps \gt 0</m> there exist <m>y \in [x_{n-1}, x_n]</m> such that
+<me>
+\sup_{ [x_{n-1}, x_n]} f^+ - \eps \leq f^+(y) \leq \sup_{ [x_{n-1}, x_n]} f^+.
+</me>
+ Similarly there exists <m>z \in [x_{n-1}, x_n]</m> such that
+<me>
+\inf_{ [x_{n-1}, x_n]} f^+ \leq f^+(z) \leq \inf_{ [x_{n-1}, x_n]} f^+ +  \eps.
+</me>
+Hence by the triangle inequality and <xref ref="eq-contraction"/> we have
+<md>
+<mrow>\sup_{ [x_{n-1}, x_n]} f^+ - \inf_{ [x_{n-1}, x_n]} f^+
+\amp \leq |f^+(y) - f^+(z)| +2\eps
+</mrow>
+<mrow>
+ \amp\leq |f(y)-f(z)| + 2\eps\\
+ </mrow>
+<mrow>
+\amp\leq \sup_{ [x_{n-1}, x_n]} f - \inf_{ [x_{n-1}, x_n]} f+2\eps.
+</mrow>
+</md>
+ Since this holds for arbitrary <m>\eps \gt 0</m>, we deduce <xref ref="eq-u-contraction"/>.
+</proof></lemma>					</solution>
+				</task>
+				<task>
+					<statement>State and prove how being Riemann integrable is preserved under taking min, max and absolute values.</statement>
+					<solution>
+					<proposition xml:id="prop-int-ineq">
+<title>Integrability is preserved under taking min, max and absolute values</title>
+<statement>
+ Let <m>a, b\in \R</m> with <m>a\lt  b</m>.
+ Let <m>f,g : [a,b] \to \R</m> be functions which are Riemann integrable on <m>[a,b]</m>.
+ Then the following functions are all Riemann integrable on <m>[a,b]</m>:
+<me>
+\max\set{f,g}, \qquad\min\set{f,g},\qquad f^+,\qquad f^-,\qquad |f|.
+</me>
+ Moreover we have the integral triangle inequality
+<me>
+\abs{\int_a^bf}\leq  \int_a^b|f|.
+</me>
+</statement>
+<proof>
+ We have <m>\max\set{f, g} = (f-g)^+ + g</m>.
+ This sum is Riemann integrable by linearity of integration (<xref ref="thm-int-add"/>).
+ Since <m>\min\set{f,g} = -\max\set{-f,-g}</m>, we deduce that this is also Riemann integrable using the scaling rule (<xref ref="thm-int-add"/>).
+ Similarly, we have Riemann integrability of <m>f^- = -\max\set{-f, 0}</m>.
+ Finally <m>|f| = f^+ + f^-</m> is integrable by the previous results and the addition rule (<xref ref="thm-int-add"/>).
+ For the triangle inequality, linearity of integration (<xref ref="thm-int-add"/>) gives
+<me>
+\abs{\int_a^b f} = \abs{\int_a^b f^+ - \int_a^b f^-} \leq \int_a^b f^+ + \int_a^b f^-
+=  \int_a^b\brac{ f^+ +  f^-}  = \int_a^b\abs{ f} .
+</me>
+</proof>
+</proposition>
+					</solution>
+				</task>
+				<task>
+					<statement>State and prove the sub-multiplicativity of suprema/infima.</statement>
+					<solution>
+					<lemma xml:id="lem-sub-mult-sup">
+<title>Sub-multiplicativity of <m>\sup</m> and <m>\inf</m></title>
+<statement>
+ Let <m>f,g : S \to [0,\infty)</m> be bounded <em>non-negative</em> functions on an arbitrary set <m>S</m>.
+ Then:
+<md>
+<mrow>
+\sup_{ S} \brac{f \cdot g} \amp\leq \sup_{ S} f \cdot \sup_{ S}  g;
+</mrow>
+<mrow>
+\inf_{ S} \brac{f \cdot g}\amp \geq \inf_{ S} f \cdot \inf_{ S}  g.
+</mrow>
+</md>
+</statement>
+<proof>
+The argument is analogous to the proof of sub-additivity (<xref ref="lem-sub-add-sup"/>) and is left to the reader.
+</proof></lemma>
+					</solution>
+				</task>
+				<task>
+					<statement>State and prove how the set of Riemann integrable functions is closed under multiplication.</statement>
+					<solution>
+					<theorem xml:id="thm-int-mult">
+<title>Riemann integrable functions are closed under multiplication</title>
+<statement>
+ Let <m>a, b\in \R</m> with <m>a\lt  b</m>.
+ Let <m>f,g : [a,b] \to \R</m> be functions which are Riemann integrable on <m>[a,b]</m>. Then <m>f\cdot g</m> is Riemann integrable on <m>[a,b]</m>.
+</statement>
+<proof>
+ Splitting into positive and negative parts, we have that
+<me>
+f g = (f^+-f^-)(g^+-g^-) = f^+g^+ + f^-g^- - f^+g^- - f^-g^+.
+</me>
+ Using linearity of integration (<xref ref="thm-int-add"/>) and the fact that integrability is preserved under taking positive/negative parts (<xref ref="prop-int-ineq"/>), it therefore suffices to establish that <m>f g</m> is Riemann integrable when <m>f</m> and <m>g</m> are non-negative.
+ Let us therefore assume that  for all <m>x\in [a,b]</m> we have <m>f(x)\geq 0</m> and <m>g(x) \geq 0</m>.
+ Write
+<me>
+S := \sup_{ [a,b]} f\quad \text{and}\quad T:= \sup_{ [a,b]} g. 
+</me>
+ Fix <m>\eps  \gt 0</m>.
+ Since a Riemann integral can be approximated by Riemann sums (<xref ref="prop-eps-riemann"/>) there exists a subdivision <m>a= y_0 \lt  \dots \lt  y_M = b</m> such that 
+<me>
+U(f;y_0, \dots, y_M) -\trecip{2}\eps \leq \int_a^b f \leq L(f;y_0, \dots, y_M)+\trecip{2}\eps.
+</me>
+ Similarly there exists a subdivision <m>a= z_0 \lt  \dots \lt  z_T = b</m> such that 
+<me>
+U(g;z_0, \dots, z_T) -\trecip{2}\eps \leq \int_a^b g \leq L(g;z_0, \dots, z_T)+\trecip{2}\eps.
+</me>
+ Let <m>a= x_0 \lt  \dots \lt  x_N = b</m> denote the common refinement of <m>(y_0, \dots, y_M)</m> and <m>(z_0, \dots, z_T)</m>.
+  Then by monotonicty of Riemann sums under refinements (<xref ref="prop-mono-riemann-refine"/>) we have
+ <me>
+U(f;x_0, \dots, x_N) -\trecip{2}\eps \leq \int_a^b f \leq L(f;x_0, \dots, x_N)+\trecip{2}\eps
+</me>
+and
+<me>
+U(g;x_0, \dots, x_N) -\trecip{2}\eps \leq \int_a^b g \leq L(g;x_0, \dots, x_N)+\trecip{2}\eps.
+</me> To ease notation, write
+<md alignment="gather">
+<mrow>
+s_i := \inf_{ [x_{i-1}, x_i]} f, \quad S_i := \sup_{[x_{i-1}, x_i]} f,
+</mrow>
+<mrow>
+ t_i := \inf_{ [x_{i-1}, x_i]} g, \quad T_i := \sup_{[x_{i-1}, x_i]} g.
+</mrow>
+</md>
+ Then for each <m>i</m> we have
+<me>
+S_iT_i - s_it_i = (S_i-s_i)T_i + s_i(T_i-t_i) \leq (S_i-s_i)T + S(T_i-t_i).
+</me>
+ By sub-multiplicativity of <m>\sup</m> and <m>\inf</m> (<xref ref="lem-sub-mult-sup"/>) we see that
+<me>
+\sup_{ [x_{i-1}, x_i]} (fg)\leq S_i T_i \quad \text{and}\quad \inf_{ [x_{i-1}, x_i]} (fg) \geq s_i t_i.
+</me>
+ Hence 
+<md>
+<mrow>
+\amp U(fg;x_0, \dots, x_N) - L(fg;x_0,\dots, x_N) \leq \sum_{i=1}^N  \brac{S_iT_i - s_it_i} (x_i-x_{i-1})
+</mrow>
+<mrow>
+\amp \leq T \sum_{i=1}^N \brac{S_i - s_i} (x_i-x_{i-1}) + S \sum_{i=1}^N \brac{T_i - t_i} (x_i-x_{i-1})
+\leq \eps.
+</mrow>
+</md>
+</proof></theorem>
+					</solution>
+				</task>
+			</exercise>
+			<exercise>
+				<title>Integrating on a sub-interval</title>
+				<task>
+					<statement>Define an indicator function.</statement>
+					<solution>
+					<definition xml:id="def-indicator">
+<title>Indicator function</title>
+Given a set <m>S\subset \R</m> we define the indicator function <m>1_S : \R \to \R</m> by
+<me>
+1_S(x) :=
+\begin{cases}
+1 \amp \text{ if } x \in S;\\
+0 \amp \text{ if } x \notin S.
+\end{cases}
+</me>
+</definition>					</solution>
+				</task>
+				<task>
+					<statement>Prove that the indicator function of a set with one element is Riemann integrable.</statement>
+					<solution>
+					<example xml:id="eg-indicator-point">
+<title>Indicator of a point</title>
+
+ Let <m>a, b\in \R</m> with <m>a\lt  b</m>.
+ Let <m>c \in (a,b)</m>  and consider the indicator function <m>1_{\set{c}} :[a,b]\to\R</m>. We will show that  <m>1_{\set{c}}</m> is Riemann integrable on <m>[a,b]</m> with integral 0.
+ For any <m>0 \lt  \eps \lt  \min\set{c-a, b-c}</m> we have a subdivision <m>a \lt  c-\eps  \lt  c+\eps \lt  b</m> satisfying
+<me>
+U(f;[a,b]) \leq U(1_{\set{c}};a , c-\eps  ,c+\eps , b) = 2\eps.
+</me>
+ Letting <m>\eps \to 0</m>, we deduce that <m>U(1_{\set{c}}; [a,b]) =0</m>.
+ Since <m>1_{\set{c}}</m> is non-negative everywhere, it follows that 
+<me>
+0 \leq L(1_{\set{c}}; [a,b])  \leq U(1_{\set{c}}; [a,b]) =0.
+</me>
+ Thus
+<men xml:id="eq-point-int-0">
+\int_a^b 1_{\set{c}}= 0.
+</men>
+ A similar argument yields <xref ref="eq-point-int-0"/> in the case when <m>c=a</m> or <m>c = b</m>.
+ </example>
+					</solution>
+				</task>
+				<task>
+					<statement>State and prove how altering a function on a finite set does not affect the value of its integral.</statement>
+					<solution>
+					<proposition xml:id="prop-int-finite-points">
+<title>Integrals agree up to finite point sets</title>
+<statement>
+ Let <m>a, b\in \R</m> with <m>a\lt  b</m>.
+ Let <m>f,g : [a,b] \to \R</m> be functions which are Riemann integrable on <m>[a,b]</m>.
+ Suppose that <m>f</m> and <m>g</m> differ at only finitely many points, so that the set
+<me>
+\set{x \in [a,b] : f(x) \neq g(x)}
+</me>
+is finite.
+ Then <me>\int_a^b f = \int_a^b g.</me>
+</statement>
+<proof> Our hypothesis implies that there exist finitely many points <m>x_1, \dots, x_n \in [a,b]</m> and <m>c_1, \dots, c_n \in \R</m> such that
+<me>
+f-g = \sum_{i=1}^n c_i 1_{\set{x_i}}.
+</me>
+ By linearity of the integral we deduce that
+<me>
+\int_a^b f - \int_a^b g = \sum_{i=1}^n c_i \int_a^b1_{\set{x_i}} =\sum_{i=1}^n c_i \cdot 0 =  0.
+</me>
+</proof>
+</proposition>					</solution>
+				</task>
+				<task>
+				<statement>
+				State and prove how the indicator function of an interval is Riemann integrable.
+				</statement>
+				<solution>
+				<proposition xml:id="prop-indicator-interval">
+<title>Indicator of an interval</title>
+<statement>
+ Let <m>a, b\in \R</m> with <m>a\lt  b</m>.
+ Let <m>c, d \in [a,b]</m> with <m>c \leq d</m>.
+ For any interval 
+<me>
+I \in \set{(c,d), [c,d), (c,d], [c,d]}
+</me>
+we have
+<me>
+\int_a^b 1_I = d- c = \mathrm{Length}(I).
+</me> 
+</statement>
+<proof>
+ We prove the result when <m>a \lt  c\lt  d\lt  b</m>, the remaining cases being similar.
+ We may also assume that <m>I = (c,d)</m>, since  we can change the value of a function on a finite set of points without affecting the integral (<xref ref="prop-int-finite-points"/>).
+ Consider the subdivision <m>a \lt  c \lt  d \lt  b</m>.
+ Then
+<me>
+U(1_{(c,d)}; a,c,d,b) = (c-a)\cdot 0 + (d-c)\cdot 1 + (b-d)\cdot 0 = d-c .
+</me>
+ Similarly 
+<me>
+L(1_{(c,d)}; a,c,d,b) = d-c.
+</me>
+ It therefore follows that <m>1_{(c,d)}</m> is Riemann integrable on <m>[a,b]</m> with integral <m>d-c</m>.
+</proof>
+</proposition>
+				</solution>
+				</task>
+				<task>
+					<statement>State and prove how the Riemann integral behaves on restricting to a sub-interval.</statement>
+					<solution>
+					<proposition xml:id="prop-int-subinterval">
+<title>Restricting to a sub-interval preserves integrability</title>
+<statement>
+ Let <m>a, b\in \R</m> with <m>a\lt  b</m>.
+ Let <m>c, d \in [a,b]</m> with <m>c \lt  d</m>.
+ Let <m>f: [a,b] \to \R</m> be functions which is Riemann integrable on <m>[a,b]</m>.
+ Then <m>f</m> is also Riemann integrable on <m>[c,d]</m> and
+<me>
+\int_c^d f = \int_a^b f1_{[c,d]}.
+</me>
+ Furthermore, if <m>c \in (a,b)</m> then we have the <em>interval additivity</em> property
+<men xml:id="eq-split-integral">
+\int_a^b f = \int_a^c f+ \int_c^b f.
+</men>
+</statement>
+<proof>
+<p>
+ Since products of Riemann integrable functions are integrable (<xref ref="thm-int-mult"/>) and indicators of intervals are integrable (<xref ref="prop-indicator-interval"/>), the function <m>f1_{(c,d)}</m> is Riemann integrable on <m>[a, b]</m>.
+ By Riemann sum approximation (<xref ref="prop-eps-riemann"/>), for any <m>\eps \gt 0</m> there exists a subdivision <m>a = x_0 \lt  \dots \lt  x_N = b</m> such that
+<men xml:id="eq-up-low-eps">
+U(f1_{(c,d)}; x_0, \dots, x_N) - \eps \leq \int_a^bf1_{(c,d)}  \leq L(f1_{(c,d)}; x_0, \dots, x_N) + \eps.
+</men> Since refining a subdivision does not increase the upper sum and does not decrease the lower sum (<xref ref="prop-mono-riemann-refine"/>), we may assume that the subdivision <m>a = x_0 \lt  \dots \lt  x_N = b</m> contains <m>c</m> and <m>d</m>.
+ Let <m>m \lt  n</m> be such that <m>x_m = c</m> and <m>x_n = d</m>.
+ Notice that <m>c= x_m \lt  \dots \lt  x_n = d</m> is a subdivision of <m>[c,d]</m>.
+ Moreover
+<md alignment="gather">
+<mrow>
+  U(f1_{(c,d)}; x_0, \dots, x_N) = U(f1_{(c,d)};x_n, \dots, x_m),
+  </mrow>
+  <mrow>
+     L(f1_{(c,d)}; x_0, \dots, x_N) = L(f1_{(c,d)};x_n, \dots, x_m).
+     </mrow>
+     </md>
+  Thus for every <m>\eps \gt 0</m> we have
+ <me>
+ U(f1_{(c,d)}; [c,d])-\eps \leq \int_a^b f1_{(c,d)} \leq L(f1_{(c,d)}; [c,d])+\eps
+ </me>
+  Since this holds for every <m>\eps \gt 0</m>, we deduce that <m>f1_{(c,d)}</m> is Riemann integrable on <m>[c,d]</m> with
+ <me>
+ \int_c^df1_{(c,d)} = \int_a^b f1_{(c,d)}
+ </me>
+ Since altering a function on a finite set of points does not affect the integral (<xref ref="prop-int-finite-points"/>) we have 
+<me>
+\int_a^b f1_{[c,d]} = \int_a^b f1_{(c,d)} = \int_c^d f1_{(c,d)} =  \int_c^d f .
+</me>
+</p>
+<p>
+ To deduce <xref ref="eq-split-integral"/> we use the above, together with linearity of integration (<xref ref="thm-int-add"/>) and the fact that indicators of points have zero integral (<xref ref="prop-int-finite-points"/>) to yield
+ <md>
+ <mrow>
+\int_a^b f \amp = \int_a^b f(1_{[a,c)} + 1_{[c,b]}) = \int_a^b f1_{[a,c)} + \int_a^b1_{[c,b]}
+</mrow>
+<mrow>
+ \amp = \int_a^b f1_{[a,c]} + \int_a^b1_{[c,b]} = \int_a^c f + \int_c^bf. 
+</mrow>
+</md>
+</p>
+</proof>
+</proposition>
+
+					</solution>
+				</task>
+			</exercise>
+			<exercise>
+				<title>Classes of Riemann integrable functions</title>
+				<task xml:id="ex-mono-riemann">
+					<statement> State and prove how a monotone function on a closed interval is integrable.</statement>
+					<solution>
+						<proposition xml:id="prop-mono-riemann">
+							<title>Monotone functions are integrable</title>
+							<statement>
+ Let <m>a, b\in \R</m> with <m>a \lt  b</m>.
+ Let <m>f : [a,b] \to \R</m> be a monotone function.
+ Then <m>f</m> is Riemann integrable on <m>[a,b]</m>.
+							</statement>
+							<proof>
+ Let us suppose that <m>f</m> is increasing and that <m>[a,b] = [0,1]</m>, the  general case being similar.
+ Since <m>f</m> is increasing, for any sub-interval <m>[c,d]\subset [0,1]</m> we have
+<me>
+\sup_{[c,d]} f = f(d) \quad \text{and}\quad \inf_{[c,d]} f= f(c).
+</me>
+ In particular, <m>f</m> is bounded on <m>[0,1]</m>, with <m>\sup_{[0,1]} f = f(1)</m> and <m>\inf_{[0,1]}f= f(0)</m>.
+ For any <m>N \in \N</m> consider the subdivision
+<me>
+\frac{0}{N} \lt  \frac{1}{N} \lt  \frac{2}{N} \lt  \dots \lt  \frac{N}{N}.
+</me>
+ For this subdivision, we have
+<md>
+<mrow>
+U\brac{f; \tfrac{0}{N}, \tfrac{1}{N}, \dots, \tfrac{N}{N}} - \amp L\brac{f; \tfrac{0}{N}, \tfrac{1}{N}, \dots, \tfrac{N}{N}} 
+</mrow>
+<mrow>
+\amp = \sum_{n=1}^N \frac{f\brac{\frac{n}{N}}}{N} - \sum_{n=1}^{N} \frac{f\brac{\frac{n-1}{N}}}{N}
+</mrow>
+<mrow>
+\amp = \frac{f\brac{1}}{N} - \frac{f\brac{0}}{N} .
+</mrow>
+</md>
+ Since the latter quantity tends to zero as <m>N \to \infty</m>, we have that <m>f</m> is integrable by <xref ref="prop-eps-riemann"/>.
+</proof>
+</proposition>
+					</solution>
+				</task>
+								<task>
+					<statement>State and prove the integral test for finite series.</statement>
+					<solution>
+						<proposition xml:id="prop-int-test-2">
+							<title>Integral test</title>
+							<statement>
+ Let <m>a,b \in \Z</m> with <m>a \lt  b</m>.
+ Let <m>f : [a,b] \to \R</m> be a decreasing function, hence Riemann integrable by <xref ref="prop-mono-riemann"/>.
+ Then
+<me>
+f(a)+ \int_a^b f(n) \geq    \sum_{n=a}^b f(n) \geq f(b)+ \int_a^b f(n).
+</me>
+</statement>
+<proof>
+ Consider the subdivision of <m>[a,b]</m> given by <m>x_n := a + n</m> for <m>n = 0,1,\dots, b-a</m>.
+ Since <m>f</m> is decreasing, for each <m>1\leq n\leq b-a</m> we have
+<me>
+\sup_{[x_{n-1}, x_n]} f = f(x_{n-1})\quad \text{and}\quad \inf_{[x_{n-1}, x_n]} f = f(x_{n}).
+</me>
+ Therefore
+<md>
+<mrow>
+U(f;x_0, \dots, x_{b-a})\amp =  \sum_{n=1}^{b-a} f(a+n-1),
+</mrow>
+<mrow>
+L(f;x_0, \dots, x_{b-a}) \amp =\sum_{n=1}^{b-a} f(a+n).
+</mrow>
+</md>
+ Taking an infimum gives
+<me>
+\int_a^b f = U(f;[a,b]) \leq \sum_{n=a}^{b-1} f(n).
+</me>
+ Taking a supremum gives
+<me>
+\int_a^b f = L(f;[a,b]) \geq \sum_{n=a+1}^{b} f(n).
+</me>
+ The desired inequalities follow.
+</proof>
+</proposition>
+					</solution>
+				</task>
+				<task xml:id="ex-cts-riemann">
+					<statement>State and prove that a continuous function on a closed interval is integrable.</statement>
+					<solution>
+					<proposition xml:id="prop-cts-riemann">
+<title>Continuous functions are integrable</title>
+<statement>
+ Let <m>a, b\in \R</m> with <m>a \lt  b</m>.
+ Let <m>f : [a,b] \to \R</m> be a continuous function.
+ Then <m>f</m> is Riemann integrable on <m>[a,b]</m>.
+</statement>
+<proof>
+ Let us suppose that <m>[a,b] = [0, 1]</m>, the general case being similar.
+ Since <m>f</m> is a continuous function on a closed interval, it is uniformly continuous (<xref ref="thm-unif-cts"/>).
+ Hence by definition of uniform continuity (<xref ref="def-unif-cts"/>):
+<me>
+(\forall \eps \gt 0)(\exists \delta = \delta(\eps) \gt 0)(\forall x,y\in [a,b]) 
+[|x-y| \leq \delta \implies |f(x)-f(y)| \leq \eps].
+</me>
+ Set 
+<me>
+\delta := \delta\brac{\eps} \qquad \text{and} \qquad N := \ceil{\delta^{-1}}.
+</me>
+ Then for any <m>n</m> we have
+<me>
+\sup_{[\frac{n-1}{N}, \frac{n}{N}]} f - \inf_{[\frac{n-1}{N}, \frac{n}{N}]} f \leq \eps.
+</me>
+ Hence with respect to the subdivision <m>0/N \lt  1/N \lt  \dots \lt  N/N</m> we have
+<me>
+U\brac{f;\tfrac{0}{N}, \tfrac{1}{N} , \dots , \tfrac{N}{N}} - L\brac{f;\tfrac{0}{N}, \tfrac{1}{N} , \dots , \tfrac{N}{N}} \leq  \sum_{n=1}^N \tfrac{\eps}{N} = \eps.
+</me>
+ It follows that <m>f</m> is integrable by <xref ref="prop-eps-riemann"/>.
+</proof>
+</proposition>
+					</solution>
+				</task>
+				<task>
+					<statement>Give an example of a bounded function on a closed interval which is not Riemann integrable. Justify this.</statement>
+					<solution>
+					<proposition xml:id="eg-non-int">
+					<statement>
+The function <m>1_{\Q \cap [0,1]}</m> is not Riemann integrable on <m>[0,1]</m>.
+</statement>
+<proof>
+<p>
+As in <xref ref="eg-dis-cont-everywhere"/>, the key observation in establishing our claim is to note that every real number <m>x_0</m> has a sequence of rationals <m>q_n \in \Q</m> such that <m>q_n \to x_0</m>. For instance, one may take
+ <me>
+ q_n := \frac{\floor{nx_0}}{n} \in \left(x_0 -\frac{1}{n}, x_0\right]
+ </me>,
+ and employ the two-sided sandwich rule (<xref ref="prop-sandwich"/>).
+ </p>
+<p>
+ One consequence of this observation any non-empty open interval contains a rational number, since one may approximate the mid-point by a rational.
+ It follows that if <m>0 \leq x \lt  y \leq 1</m> then  <m>(x,y)</m> contains a rational <m>q\in \Q</m> and <m>(x+\sqrt{2},y+\sqrt{2})</m> also contains a rational <m>\tilde q \in \Q</m>.
+ Hence <m>(x,y)</m> contains both a rational <m>q</m> and an irrational <m>q-\sqrt{2}</m>.
+ It follows that
+<me>
+\sup_{[x,y]} 1_{\Q\cap [0,1]} = 1 \quad \text{and}\quad \inf_{[x,y]} 1_{\Q\cap [0,1]} = 0.
+</me>
+ Hence for any subdivision <m>0 = x_0 \lt  \dots \lt  x_N = 1</m> we have
+<me>
+U(f;x_0,\dots, x_N) = \sum_{n=1}^N (x_n-x_{n-1}) \sup_{[x_{n-1}, x_n]} 1_{\Q\cap [0,1]} = \sum_{n=1}^N (x_n-x_{n-1}) = 1.
+</me>
+ Similarly
+<me>
+L(f;x_0, \dots, x_N) = 0.
+</me>
+ Therefore for any subdivision we have
+<me>
+U(f;x_0,\dots, x_N) - L(f;x_0, \dots, x_N) \geq 1.
+</me>
+ By <xref ref="prop-eps-riemann"/> the function <m>1_{\Q\cap [0,1]}</m> is not Riemann integrable.
+ </p>
+</proof>
+</proposition>
+					</solution>
+				</task>
+			</exercise>
+			<p>
+			In this week's <em>workshop</em> you will be asked to write-up (under exam conditions) two of the following:
+				<ul>
+					<li>
+					The following is a variant of <xref ref="ex-eps-riemann"/>. By modifying the proof of <xref ref="ex-eps-riemann"/>, prove that if <m>f:[0,1]\to\R</m> is bounded then there exist subdivisions <m>0=a_0 \lt a_1 \lt \dots \lt a_P = 1</m> and  <m>0=b_0 \lt b_1 \lt \dots \lt b_Q = 1</m> such that 
+					<md>
+					<mrow>
+					L(f;[0,1]) - 0.05 \leq L(f;a_0, \dots, a_P),
+					</mrow>
+					<mrow>
+					U(f;b_0, \dots, b_Q) \leq U(f;[0,1]) + 0.05.
+					</mrow>
+					</md>
+					Explain how this implies that, if <m>f:[0,1]\to\R</m> is Riemann integrable, then there exists a subdivision <m>0=x_0 \lt \dots \lt x_N = 1</m> such that
+					<me>
+					|U(f;x_0, \dots, x_N) - L(f;x_0, \dots, x_N)| \leq 0.1.
+					</me>
+					</li>
+					<li>
+					The following is a variant of <xref ref="ex-mono-riemann"/>. Let <m>f : [0,1] \to \R</m> be a decreasing function. By modifying the proof of <xref ref="ex-mono-riemann"/>, prove that <m>f</m> is Riemann integrable on <m>[0,1]</m>.
+					</li>
+					<li>
+					The following is a variant of <xref ref="ex-cts-riemann"/>. Let <m>f : [0,1] \to \R</m> be a function satisfying the following
+					<me>
+					(\forall x_1, x_2 \in [0,1])[|f(x_1)-f(x_2)| \leq 9|x_1-x_2|]
+					</me>. By modifying the proof of  <xref ref="ex-cts-riemann"/>, prove that <m>f</m> is Riemann integrable on <m>[0,1]</m>.					</li>
+				</ul>
+			</p>
+			</section>

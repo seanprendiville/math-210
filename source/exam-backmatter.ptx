@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding="utf-8"?>
+<!--
+% !TEX TS-program = PreTeXt-HTML
+-->
+<appendix xml:id="exam-backmatter" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Exam information sheet</title>
+<p>
+The following key information will be included in your summer examination paper.
+</p>
+<p>
+<ul>
+<li> <em>Notation</em>
+	<ul>
+	<li> "<m>P \iff Q</m>": "the proposition <m>P</m> holds if and only if the proposition <m>Q</m> holds".
+	</li>
+	<li> "<m>\neg P</m>": "the proposition <m>P</m> does not hold".</li>
+	<li> "<m>P \implies Q</m>": "it is not the case that the proposition <m>P</m> holds and the proposition <m>Q</m> does not hold", equivalently <m>\neg(P\&amp; \neg Q)</m>.</li>
+	<li> "<m>x \in A</m>": "<m>x</m> is an element of the set <m>A</m>".</li>
+	<li> "<m>\forall x \in A</m>": "for all <m>x \in A</m>".</li>
+	<li> "<m>\exists x \in A</m>": "there exists <m>x \in A</m>".</li>
+	<li> <m>\N := \set{1,2, 3, \dots}</m>.</li>
+	<li> <m>\Z := \set{\dots, -3,-2,-1,0,1,2, 3, \dots}</m>.</li>
+	<li> Non-negative integers <m>:= \set{0,1,2,3, \dots}</m>.</li>
+	<li> <m>\Q := \set{\frac{a}{b} : a \in \Z,\ q\in \N}</m>.</li>
+	<li> <m>\R := \text{the set of real numbers}</m>.</li>
+	<li> Non-negative reals <m>:= \set{x \in \R : x \geq 0}</m>.</li>
+	<li> Positive reals <m>:= \set{x \in \R : x \gt 0}</m>.</li>
+	<li> Negative reals <m>:= \set{x \in \R : x \lt 0}</m>.</li>
+	<li> <m>A\cup B := \set{x : x \in A \text{ or } x\in B}</m>.</li>
+	<li> <m>A\cap B := \set{x : x \in A \text{ and } x\in B}</m>.</li>
+	<li> <m>A\setminus B := \set{x : x \in A \text{ and } x\notin B}</m>.</li>
+	<li> <m>\displaystyle\bigcup_{i=1}^n A_i := \set{x : x \in A_i \text{ for some } i =1, \dots, n}</m>.</li>
+	<li> <m>\displaystyle\bigcap_{i=1}^n A_i := \set{x : x \in A_i \text{ for all } i =1, \dots, n}</m>.</li>
+	<li> <m>\displaystyle(a,b) := \set{x \in \R : a \lt x \lt b}</m>.</li>
+	<li> <m>\displaystyle(a,b]  := \set{x \in  \R : a \lt x \leq b}</m>.</li>
+	<li> <m>\displaystyle[a,b)  := \set{x \in  \R : a \leq x \lt b}</m>.</li>
+	<li> <m>\displaystyle[a,b]  := \set{x \in  \R : a \leq x \leq b}</m>.</li>
+	</ul>
+</li>	
+</ul>
+<ul>
+<li> <em>Key properties of <m>\R</m></em>
+	<ul>
+	<li> <em>Additive axioms:</em>
+		<ul>
+		<li> Additive closure: <m>(\forall x,y \in \R)[x+y \in \R]</m>.</li>
+		<li>Additive associativity: <m>(\forall x,y,z \in \R)[(x+y)+z = x+(y+z) \in \R]</m>.</li>
+		<li>Additive identity: <m>(\exists 0 \in \R)(\forall x \in \R)[0+x = x]</m>.</li>
+		<li>Additive inverses: <m>(\forall x \in \R)(\exists -x \in \R)[x+(-x) = 0]</m>.</li>
+		<li>Addition is commutative: <m>(\forall x,y \in \R)[x+y = y+x]</m>.</li>
+		</ul>
+		</li>
+		<li> <em>Multiplicative axioms:</em>
+		<ul>
+		<li> Multiplicative closure: <m>(\forall x, y \in \R)[x\cdot y \in \R]</m>.</li>
+		<li> Multiplicative associativity: <m>(\forall x,y,z \in \R)[(x\cdot y)\cdot z = x\cdot (y\cdot z) \in \R]</m>.</li>
+		<li> Multiplicative identity: <m>(\exists 1 \in \R\setminus\set{0})(\forall x \in \R)[1\cdot x = x]</m>.</li>
+		<li> Multiplicative inverses: <m>(\forall x \in \R\setminus\set{0})(\exists x^{-1} \in \R\setminus\set{0})[x\cdot x^{-1} = 1]</m>.</li>
+		<li> Multiplication is commutative: <m>(\forall x,y \in \R)[x\cdot y = y\cdot x]</m>.</li>
+		</ul></li>
+	<li> <em>Interaction of addition and multiplication:</em>
+		<ul>
+		<li> Distributivity: <m>(\forall x,y,z \in \R)[x\cdot(y+z) = xy + xz]</m>.</li>
+		</ul></li>
+		<li> <em>Order axioms:</em>
+		<ul>
+		<li> Reflexivity: <m>(\forall x \in \R)[x \leq x]</m>.</li>
+		<li> Anti-symmetry: <m>(\forall x, y \in \R)\sqbrac{(x \leq y\ \&amp;\ y \leq x)\implies x = y}</m>.</li>
+		<li> Transitivity: <m>(\forall x, y, z\in \R)\sqbrac{(x \leq y\ \&amp;\ y \leq z)\implies x \leq z}</m>.</li>
+		<li> Totality: <m>(\forall x, y \in \R)[x\leq y \text{ or } y \leq x]</m>.</li>
+		</ul>	</li>
+		<li> <em>Interaction of order and addition/multiplication:</em>
+		<ul>
+		<li> Additive invariance: <m>(\forall x, y, z \in \R)[ x \leq y \implies x+z \leq y + z]</m>.</li>
+		<li> Non-negative multiplicative invariance:\\ <m>(\forall x, y, z \in \R)[(x \leq y \ \&amp; \ 0 \leq z) \implies xz \leq yz]</m>.</li>
+		</ul>	
+		</li>
+	</ul>
+</li>
+</ul>
+<ul>
+<li> <em>Triangle inequalities</em>
+	<ul>
+	<li> <m>(\forall x, y \in \R)[\ |x\pm y| \leq |x| + |y|\ ]</m>.</li>
+	<li> <m>(\forall x, y \in \R)[\ |x\pm y| \geq |x| - |y|\ ]</m>.</li>
+	</ul>
+</li>	
+</ul>
+</p>
+</appendix>

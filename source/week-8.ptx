@@ -1,0 +1,583 @@
+<?xml version='1.0' encoding="utf-8"?>
+<!--
+% !TEX TS-program = PreTeXt-HTML
+-->
+<section xml:id="week-8" xmlns:xi="http://www.w3.org/2001/XInclude">
+			<title>Week 8</title>
+			<exercise>
+				<title>The exponential function</title>
+				<task>
+					<statement>Prove that the exponential function is infinitely differentiable and calculate its derivative.
+					</statement>
+					<solution>
+					<proposition xml:id="prop-exp-properties">
+					<statement>
+ The exponential function <m>\exp : \R \to \R</m>, given by 
+<me>
+\exp(x) := \sum_{n=0}^\infty \frac{x^n}{n!}
+</me>
+is infinitely differentiable with first derivative
+<men xml:id="eq-exp-deriv">
+\exp'(x) = \exp(x).
+</men>
+</statement>
+<proof>
+ The infinite radius of convergence of the power series is proved in <xref ref="prop-exp-radius"/>.
+ Infinite differentiability and the formula <xref ref="eq-exp-deriv"/> then both follow from <xref ref="cor-power-diff"/>.
+ </proof>
+</proposition>
+	</solution>
+				</task>
+				<task>
+					<statement>
+					State and prove a formula for the reciprocal of the exponential function.
+					</statement>
+					<solution>
+					<proposition xml:id="prop-exp-properties-2">
+					<statement>
+ For all  <m> x \in \R</m> we have the formula 
+ <me>
+ \exp(-x) = \recip{\exp(x)}.
+ </me>
+</statement>
+<proof>
+ The addition law <m> \exp(x+y) = \exp(x)\exp(y)</m> is established in <xref ref="prop-exp-add-law"/>. 
+ From the addition law, it follows that
+<me>
+\exp(x)\exp(-x) = \exp(0) = 1.
+</me>
+Thus <m>\exp(-x) = 1/\exp(x)</m>.
+ </proof>
+</proposition>
+					</solution>
+				</task>
+				<task>
+					<statement>
+					Justify why the exponential function is positive everywhere.</statement>
+					<solution>
+					By the inequality rule for sequences (<xref ref="prop-ineq-rule"/>), when <m>x \geq 0</m> we have
+<me>
+\exp(x) = \lim_{N\to \infty} \brac{1 + x + \trecip{2} x^2 + \dots + \trecip{N!} x^N} \geq 1 + x.
+</me>
+ Hence <m>\exp(x) \gt 0</m> when <m>x \geq 0</m>.
+ Again if <m>x \geq 0</m> then <m>\exp(-x) = \recip{\exp(x)} \gt0</m>.
+ Thus for all <m>x \in \R</m> we have <m>\exp(x) \gt 0</m>.
+					</solution>
+				</task>
+				<task>
+					<statement>State and prove the limit of the exponential function as its argument tends to infinity.
+					</statement>
+					<solution>
+					<m>\exp(x) \to \infty</m> as <m>x\to \infty</m>.
+						<proof>
+						By the definition of function limits (<xref ref="def-fn-lim"/>), we are required to show that if <m>a_n\to \infty</m> then <m>\exp(a_n)\to \infty</m>. We note that by definition of tending to infinity (<xref ref="def-seq-div-inf"/>) there exists <m>N\in \N</m> such that for all <m>n\geq N</m> we have <m>a_n\geq 0</m>. For <m>n\geq N</m> we therefore have the inequality
+<me>
+\exp(a_n) = 1+a_n+\trecip{2} a_n^2 + \dots \geq  a_n .
+</me>
+Since <m>a_n\to \infty</m> the one-sided sandwich rule for sequence limits (<xref ref="cor-sandwich"/>) gives that <m>\exp(a_n)\to \infty</m>.
+						</proof>
+					</solution>
+				</task>
+				<task>
+					<statement>Justify why the exponential function is strictly increasing.
+					</statement>
+					<solution>
+					Since <m>\exp'(x) = \exp(x) \gt0</m> and functions with positive derivative are strictly increasing (<xref ref="cor-mono-diff"/>), we deduce that <m>\exp</m> is strictly increasing on <m>\R</m>.
+					</solution>
+				</task>
+				<task>
+					<statement>
+					State and prove how the exponential function is a bijection onto its image.
+					</statement>
+					<solution>
+					<proposition xml:id="prop-exp-bij">
+					<statement>
+					<m>\exp</m> is a bijection from <m>\R</m> to <m>(0, \infty)</m>.
+					</statement>
+					<proof>
+					Strictly increasing functions are injective, hence to show that <m>\exp</m> is bijective <m>\R \to (0, \infty)</m>, we must establish that every <m>y\gt 0</m> can be represented as <m>y = \exp(x)</m> for some <m>x \in \R</m>.
+ Since <m>\exp(x) \to \infty</m> as <m>x \to \infty</m>, we have <m>\exp(-x) = 1/\exp(x) \to 0</m> as <m>x \to \infty</m>.
+ Thus, for any <m>y \in (0, \infty)</m>, there exists <m>x_1 \lt  x_2</m> such that 
+<me>
+\exp(x_1) \leq y\leq \exp(x_2).
+</me>
+ Since differentiable functions are continuous, we may apply the intermediate value theorem to deduce the existence of <m>x \in [x_1, x_2]</m> such that <m>\exp(x) = y</m>.
+ </proof>
+ </proposition>
+					</solution>
+				</task>
+			</exercise>
+			<exercise>
+				<title>The logarithm function</title>
+				<task>
+					<statement>Define the logarithm function and justify why this definition is valid.
+					</statement>
+					<solution>
+					<definition>
+					<title>Logarithm</title>
+Since the exponential function <m>\exp : \R \to (0, \infty)</m> is bijective (<xref ref="prop-exp-bij"/>), it has a well-defined inverse <m>(0, \infty) \to \R</m> which we denote by <m> \log x</m> for <m>x \in (0, \infty)</m>.
+</definition>					</solution>
+				</task>
+				<task>
+					<statement>State and prove how the logarithm is a strictly increasing function, which is bijective onto its image.
+					</statement>
+					<solution>
+					<proposition>
+					<statement>
+					<m>\log</m> is a strictly increasing bijection from <m>(0,\infty)</m> to <m>\R</m>.
+					</statement>
+					<proof>
+					<p>
+					The fact that <m>\log</m> is a bijection from <m>(0,\infty)</m> to <m>\R</m> follows from its definition as the inverse of the bijection <m>\exp : \R \to (0,\infty)</m>.
+					</p>
+					<p> To prove that it is strictly increasing, we argue by contradiction. 
+ Let <m>x_1, x_2 \in (0, \infty)</m> with <m>x_1 \lt  x_2</m> and suppose that <m>\log(x_1) \geq \log(x_2)</m>. The increasing nature of the exponential function (<xref ref="prop-exp-properties"/>) gives that
+<me>
+x_1 = \exp\brac{\log x_1} \geq \exp\brac{\log x_2} = x_2.
+</me>
+ This is a contradiction, hence the logarithm is strictly increasing.
+ </p>
+					</proof>
+					</proposition>
+					</solution>
+				</task>
+				<task>
+					<statement> State and prove how the logarithm function is continuous.
+					</statement>
+					<solution>
+					<proposition xml:id="prop-log-cts">
+					<statement>
+					<m>\log</m> is continuous on <m>(0,\infty)</m>.
+					</statement>
+					<proof>
+					Let <m>x_0\in (0, \infty)</m>. Using the epsilon-delta characterisation of continuity (<xref ref="cor-eps-delta-cts"/>), we are required to prove that for each <m>\eps \gt 0</m> there exists <m>\delta = \delta(x_0,\eps) \gt 0</m> such that 
+					<me>
+					|x-x_0| \leq \delta \quad \implies \quad |\log(x) - \log(x_0)| \leq \eps.
+					</me>
+					Writing <m>y:=\log(x)</m> and <m>y_0:=\log(x_0)</m> this is equivalent to showing that
+					<men xml:id="eq-log-cts-to-prove">
+					|\exp(y)-\exp(y_0)| \leq \delta \quad \implies \quad |y - y_0| \leq \eps.
+					</men>
+					By the mean value theorem (<xref ref="thm-mvt"/>), there exists <m>y_1</m> between <m>y</m> and <m>y_0</m> such that					
+					<men xml:id="eq-log-cts-mvt">
+					|\exp(y)-\exp(y_0)| = \exp(y_1)|y-y_0|.						</men>
+					Since <m>\exp</m> is increasing, we have
+					<me>
+					\exp(y_1) \geq \exp\brac{\min\set{y_0,y}} = \min\set{x_0,x}
+					</me>.
+					Hence we derive <xref ref="eq-log-cts-to-prove"/> on taking
+					<me>
+					\delta(x_0,\eps) :=\min\set{\frac{x_0}{2}, \frac{\eps x_0}{2}},
+					</me>
+					since with this choice we have
+					<me>
+					\exp(y_1) \geq  \min\set{x_0,x_0-\tfrac{x_0}{2}}=\tfrac{x_0}{2}
+					</me>,
+					which yields the required implication on substitution into <xref ref="eq-log-cts-mvt"/>.
+					</proof>
+					</proposition>
+					</solution>
+				</task>
+				<task>
+					<statement>State and prove how the logarithm function is differentiable.
+					</statement>
+					<solution>
+					<proposition>
+					<statement>
+					<m>\log</m> is differentiable on <m>(0,\infty)</m> with derivative
+<me>
+\log'(x) = \recip{x}.
+</me>
+					</statement>
+					<proof>
+					This follows from the inverse function theorem (<xref ref="thm-inverse-fn-1"/>) with <m>f := \exp</m>, since the hypotheses of that theorem are met, namely:
+					<ul>
+						<li>
+						<m>\exp : \R \to (0,\infty)</m> is bijective  (this follows from <xref ref="prop-exp-bij"/>).
+						</li>
+						<li>
+						<m>\exp^{-1}= \log</m> is continuous at every <m> x_0 \in (0,\infty)</m> (this follows from <xref ref="prop-log-cts"/>).
+						</li>
+						<li>
+						<m>\exp</m> is differentiable at every <m>x_0\in \R</m> with non-zero derivative (this follows from <xref ref="prop-exp-properties"/>).
+						</li>
+					</ul>
+					</proof>
+					</proposition>
+					</solution>
+				</task>
+				<task>
+					<statement>State and prove the limit of the logarithm function as its argument tends to infinity.
+					</statement>
+					<solution>
+					<proposition>
+					<statement>
+					<m>\log x \to \infty</m> as <m>x\to\infty</m>.
+					</statement>
+					<proof>	
+					By the definition of function limits (<xref ref="def-fn-lim"/>), we are required to show that if <m>a_n\to \infty</m> then <m>\log(a_n)\to \infty</m>. Let <m> M \gt 0</m>. We note that by definition of tending to infinity (<xref ref="def-seq-div-inf"/>) there exists <m>N\in \N</m> such that for all <m>n\geq N</m> we have <m>a_n\geq \exp M</m>. Since <m>\log</m> is increasing this gives <m>\log a_n \geq M</m> for <m>n\geq N</m>. It follows that <m>\log(a_n)\to \infty</m> by the sequential definition of tending to infinity (<xref ref="def-seq-div-inf"/>).
+					</proof>
+					</proposition>
+					</solution>
+				</task>
+				<!--
+				<task>
+					<statement>State and prove the Mercator series for the logarithm function.
+					</statement>
+					<solution>
+					<proposition>
+					<title>Mercator series for log</title>
+<statement>
+ Suppose that <m>|x| \lt  1</m>.
+ Then we have the following power series expansion for the logarithm
+<me>
+\log(1+x) = \sum_{n=1}^\infty \frac{(-1)^{n-1}}{n} x^n.
+</me>
+</statement>
+<proof>
+ Iteratively differentiating the logarithm, we see that for <m>n \in \N</m> and <m>x \in (0,\infty)</m> we have
+<me>
+\log^{(n)}(x) = (-1)^{n-1} (n-1)! x^{-n}.
+</me>
+ Hence by Taylor's theorem (<xref ref="thm-taylor"/>), when <m>|x| \lt  1</m> there exists <m>x_n</m> between <m>x</m> and <m>0</m> such that <md>
+ <mrow>
+\abs{\log(1+x) - \sum_{n=1}^{N-1} \frac{(-1)^{n-1}}{n} x^n}\amp  \leq N! |x|^N  |1+x_n|^{-N}
+</mrow>
+<mrow>
+\amp \leq \frac{N!|x|^N}{(1-|x|)^N}
+= \frac{N!}{(|x|^{-1} -1)^N}.
+</mrow>
+</md>
+THE PROOF BREAKS DOWN HERE. IT'S CLEAR THAT ONE NEEDS THE STRONGER FORM OF TAYLOR'S APPROXIMATION FOR THIS ARGUMENT TO WORK. GOING TO LEAVE OUT OF THIS YEAR'S NOTES
+</proof></proposition>					</solution>
+				</task>
+				-->
+			</exercise>
+			<exercise>
+				<title>Exponentiation to an arbitrary real</title>
+				<task>
+					<statement>Prove the identities:
+	<mdn alignment="gather">
+	<mrow xml:id="prop-log-properties-4">
+	(\forall a \in (0,\infty))(\forall n \in \Z)[a^n = \exp(n\log a)].
+	</mrow>
+	<mrow xml:id="prop-log-properties-5">
+	(\forall a \in (0,\infty))(\forall n \in \N)[\sqrt[n]{a} = \exp\brac{\trecip{n}\log a}].
+	</mrow>
+	</mdn>
+					</statement>
+					<solution>
+					By our conventions for integer powers, if <m>a \in (0,\infty)</m> and <m>n \in \Z</m> then the addition rule <m>\exp(x)\exp(y) = \exp(x+y)</m> gives <m>\exp(x)^n = \exp(nx)</m>, hence
+<me>
+a^n = \brac{\exp(\log a)}^n = \exp(n\log a).
+</me>
+ We observe that <m>\exp\brac{\recip{n} \log a}^n = \exp(\log a) = a</m>.
+ Hence <m>\exp\brac{\recip{n} \log a}</m> is a positive <m>n</m>th root of <m>a</m>.
+ By uniqueness of positive roots (<xref ref="cor-exist-roots"/>) we have <m>\sqrt[n]{a} = \exp\brac{\recip{n} \log a}</m>.
+					</solution>
+				</task>
+				<task>
+					<statement>Define exponentiation to an arbitrary real and the logarithm to an arbitrary base.
+					</statement>
+					<solution>
+					<definition xml:id="def-exp-base">
+<title>Exponentiation to an arbitrary real</title>
+ Given <m>a \in (0, \infty)</m> and <m>x \in \R</m> we define
+<me>
+a^x := \exp(x\log a).
+</me>
+ We have previously defined <m>a^n</m> when <m>n \in \Z</m>, and <xref ref="prop-log-properties-4"/> shows that our two definitions coincide when <m>x = n \in \Z</m>. <xref ref="prop-log-properties-5"/> also shows that
+<m>
+a^{1/n} = \sqrt[n]{a}
+</m>, as we would expect.
+</definition>
+<definition>
+<title>Logarithm to an arbitrary base</title>
+ Given <m>a \in (0, \infty)</m> with <m>a \neq 1</m> and <m>x \in \R</m> we define
+<me>
+\log_a(x) := \frac{\log x}{\log a}.
+</me>
+</definition>					</solution>
+				</task>
+				<task>
+					<statement>Justify why <m>a^x = b</m> if and only if <m>\log_a b = x</m>.
+					</statement>
+					<solution>
+					Since <m>\log</m> is injective on <m>(0,\infty)</m>, we have 
+<me>
+a^x = b \iff \log(a^x) = \log(b).
+</me>
+ By definition we have <m>a^x := \exp(x\log a)</m>.
+ Since <m>\log = \exp^{-1}</m> we deduce that
+<me>
+a^x = b \iff x\log a = \log b.
+</me>
+ Since <m>a \neq 1</m>, we have <m>\log a\neq0</m>, thus we may divide by <m>\log a</m> to conclude that
+<me>
+a^x = b \iff x = \frac{\log b}{\log a}.
+</me>
+ By definition <m>\log_a b = \log b / \log a</m>, establishing the claim.
+					</solution>
+				</task>
+				<task>
+					<statement>For <m>a >0</m> and <m>x,y \in \R</m>, prove the identities 
+					<md alignment="gather">
+					<mrow>
+					\log(a^x) = x\log a,
+					</mrow>
+					<mrow>
+					\brac{a^x}^y = a^{x y}.
+					</mrow>
+					</md>
+					</statement>
+					<solution>
+					<p>
+					By definition of exponentiation and the fact that <m>\log = \exp^{-1}</m>, we have
+<me>
+\log(a^x) = \log\brac{\exp(x\log a)} = x \log a.
+</me>
+This establishes the first identity.
+</p>
+<p>  
+ Taking logarithms, the identity <m>\brac{a^x}^y = a^{x y}</m> is equivalent to 
+<me>
+\log\brac{\brac{a^x}^y} = \log\brac{a^{x y}}.
+</me>
+ This holds on applying our first identity to both sides (twice on the left-hand side).					
+ </p>
+ </solution>
+				</task>
+			</exercise>
+			<exercise>
+				<title>Definition of the Riemann integral</title>
+				<task>
+					<statement>
+					Define a subdivision of a closed interval.
+					</statement>
+					<solution>
+					<definition xml:id="def-subdiv">
+<title>Subdivision</title>
+ Let <m>a,b\in \R</m> with <m>a\lt  b</m>.
+ A <em>subdivision</em> of the interval <m>[a,b]</m> is a strictly increasing finite sequence of the form
+<me>
+a= x_0 \lt  x_1 \lt  \dots \lt  x_N = b
+</me>
+for some <m>N \in \N</m>.
+ We sometimes denote such a subdivision by <m>(x_n)_{n=0}^N = (x_0, x_1, \dots, x_N)</m>.
+</definition>
+					</solution>
+				</task>
+				<task>
+					<statement>
+					Define the upper/lower Riemann sums of a function with respect to a subdivision.
+					</statement>
+					<solution>
+					<definition xml:id="def-riemann-sum">
+<title>Riemann sum</title>
+ Let <m>a, b\in \R</m> with <m>a\lt  b</m>.
+ Let <m>f : [a,b] \to \R</m> be a bounded<fn>See <xref ref="def-upper-bound"/>.</fn> function.
+ Let <m>a = x_0 \lt  x_1\lt  \dots \lt  x_N = b</m> be a subdivision of <m>[a,b]</m>.
+ We define the <em>upper Riemann sum</em> of <m>f</m> with respect to this subdivision by 
+<me>
+U(f; x_0, \dots, x_N) := \sum_{n=1}^N (x_n-x_{n-1}) \sup_{ [x_{n-1}, x_n]} f.
+</me>
+ We define the <em>lower Riemann sum</em> of <m>f</m> with respect to this subdivision by 
+<me>
+L(f; x_0, \dots, x_N) := \sum_{n=1}^N (x_n-x_{n-1}) \inf_{ [x_{n-1}, x_n]} f.
+</me>
+ Notice that both the upper and lower Riemann sums are finite real numbers, since the fact that  <m>f</m> is bounded implies that 
+<mdn>
+<mrow number="no">
+-\infty \amp \lt (b-a)\inf_{[a,b]} f = \sum_{n=1}^N (x_n-x_{n-1}) \inf_{ [a,b]} f
+</mrow>
+<mrow number="no">
+\amp \leq \sum_{n=1}^N (x_n-x_{n-1}) \inf_{ [x_{n-1}, x_n]} f = L(f; x_0, \dots, x_N)
+</mrow>
+<mrow number="no">
+\amp\leq  \sum_{n=1}^N (x_n-x_{n-1}) \sup_{ [x_{n-1}, x_n]} f = U(f; x_0, \dots, x_N)
+</mrow>
+<mrow number="no">
+\amp \leq  \sum_{n=1}^N (x_n-x_{n-1}) \sup_{ [a,b]} f 
+</mrow>
+<mrow xml:id="cor-up-low-finite">
+\amp = (b-a)\sup_{[a,b]} f\lt  \infty.
+</mrow>
+</mdn>
+</definition>					</solution>
+				</task>
+				<task>
+					<statement>
+					Define the upper/lower Riemann integrals of a function.
+					</statement>
+					<solution>
+					<definition xml:id="def-up-low-riemann-integral">
+<title>Upper/lower Riemann integral</title>
+ Let <m>a, b\in \R</m> with <m>a\lt  b</m>.
+ Let <m>f : [a,b] \to \R</m> be a bounded function.
+ We define the <em>upper Riemann integral</em> of <m>f</m> to be the infimum of the upper Riemann sum over all possible subdivisions:  
+<me>
+U(f;[a,b]) 
+:= \inf\set{U(f;x_0,\dots, x_N): a= x_0 \lt  \dots \lt  x_N = b,\ N \in \N}.
+</me>
+ We define the <em>lower Riemann integral</em> of <m>f</m> to be the supremum of the lower Riemann sum over all possible subdivisions: 
+<me>
+L(f;[a,b]) 
+:= \sup\set{L(f;x_0,\dots, x_N): a= x_0 \lt  \dots \lt  x_N = b,\ N \in \N}.
+</me>
+</definition>					</solution>
+				</task>
+				<task>
+					<statement>Define what it means for a function to be Riemann integrable and define the Riemann integral.
+					</statement>
+					<solution>
+					<definition xml:id="def-riemann-integral">
+<title>Riemann integrable and Riemann integral</title>
+ Let <m>a, b\in \R</m> with <m>a\lt  b</m>.
+ Let <m>f : [a,b] \to \R</m> be a bounded function.
+ We say that <m>f</m> is <em>Riemann</em><fn>On occasion, we may say <em>"<m>f</m> is integrable"</em>, by which we mean that <m>f</m> is <em>Riemann</em> integrable.</fn> <em>integrable on <m>[a,b]</m>}</em> if the upper and lower Riemann integrals coincide, so that
+<me>
+U(f;[a,b]) = L(f;[a,b]).
+</me>
+ In this case we define the <em>Riemann integral of <m>f</m> on <m>[a,b]</m></em> to be this common value, denoted
+<me>
+\int_a^b f \qquad \text{or} \qquad \int_a^b f(x) \intd x.
+</me>
+ We also define
+<me>
+\int_b^a f := -\int_a^b f.
+</me>
+</definition>					</solution>
+				</task>
+			</exercise>
+
+			<exercise>
+				<title>Refining a subdivision</title>
+				<task>
+					<statement>Define what it means to be a refinement of a subdivision.
+					</statement>
+					<solution>
+					<definition xml:id="def-refinement">
+<title>Refinement of a subdivision</title>
+ Let <m>a, b\in \R</m> with <m>a\lt  b</m>.
+ We say that the subdivision <m>a = y_0 \lt  \dots \lt  y_{M} = b</m> is a <em>refinement</em> of the subdivision <m>a =  x_0 \lt  \dots \lt   x_{ N} = b</m> if
+<me>
+\set{x_0, x_1, \dots, x_N} \subset \set{y_0, y_1,\dots, y_{M}}.
+</me>
+ Given subdivisions <m>a =  x_0 \lt  \dots \lt   x_{ N} = b</m> and <m>a = y_0 \lt  \dots \lt  y_{M} = b</m>  (not necessarily refinements of each other) their <em>common refinement</em> is the subdivision <m>a = z_0 \lt  \dots \lt  z_T = b</m> obtained by ordering the union
+<me>
+\set{x_0, \dots , x_N} \cup \set{y_0, \dots, y_M}  = \set{z_0, \dots, z_T}.
+</me>
+</definition>					</solution>
+				</task>
+				<task>
+					<statement>State and prove how Riemann sums are monotone with respect to refinements.
+					</statement>
+					<solution>
+					<proposition xml:id="prop-mono-riemann-refine">
+<title>Riemann sums are monotone with respect to refinements</title>
+<statement>
+ Let <m>a, b\in \R</m> with <m>a\lt  b</m>.
+ Let <m>f : [a,b] \to \R</m> be a bounded function.
+ Let <m>a = y_0 \lt  \dots \lt  y_M = b</m>  be a refinement of <m>a= x_0 \lt  \dots \lt  x_N = b</m>.
+  Then
+<md>
+<mrow>
+L(f;x_0,\dots, x_N)\amp \leq L(f; y_0, \dots, y_M)
+</mrow>
+<mrow>
+\amp \leq U(f; y_0, \dots, y_M) \leq U(f;x_0,\dots, x_N).
+</mrow>
+</md>
+</statement>
+<proof> Let <m>x_1, x_2, x_3 \in [a,b]</m> with <m>x_1 \lt  x_2 \lt  x_3</m>.
+ Since taking a supremum over a larger set does not decrease the supremum, we have 
+<me>
+\sup_{t \in [x_1, x_2]} f(t) \leq \sup_{t \in [x_1, x_3]} f(t) \quad \text{and} \quad \sup_{t \in [x_2, x_3]} f(t) \leq \sup_{t \in [x_1, x_3]} f(t).
+</me>
+ Therefore
+<md>
+<mrow>
+\amp(x_2 - x_1) \sup_{t \in [x_1, x_2]} f(t) + (x_3 - x_2)  \sup_{t \in [x_2, x_3]} f(t)
+</mrow>
+<mrow>
+\amp\leq (x_2 - x_1) \sup_{t \in [x_1, x_3]} f(t) + (x_3 - x_2) \sup_{t \in [x_1, x_3]} f(t)
+=
+(x_3 - x_1) \sup_{t \in [x_1, x_3]} f(t).
+</mrow>
+</md>
+ It follows that adding a point to a subdivision does not increase the value of the upper Riemann sum.
+ Repeatedly applying this fact a finite number of times, we deduce that adding a finite number of points to a subdivision does not increase the value of the corresponding Riemann sum.
+ This proves the inequality
+<me>
+U(f; y_0, \dots, y_M) \leq U(f;x_0,\dots, x_N).
+</me>
+ The argument for the inequality 
+<me>
+L(f;x_0,\dots, x_N)\leq L(f; y_0, \dots, y_M)
+</me>
+is similar (try it!).
+ The inequality 
+<me>
+L(f; y_0, \dots, y_M) \leq U(f; y_0, \dots, y_M)
+</me>
+follows from the fact that
+<me>
+\inf_{ [y_{n-1}, y_n]} f \leq \sup_{ [y_{n-1}, y_n]} f.
+</me>
+</proof>
+</proposition>
+					</solution>
+				</task>
+			</exercise>
+			<exercise>
+				<title>The "epsilon characterisation" of Riemann integrability</title>
+				<task xml:id="ex-eps-riemann">
+					<statement>State and prove the "epsilon characterisation" of Riemann integrability.
+					</statement>
+					<solution>
+						<proposition xml:id="prop-eps-riemann">
+						<title>Epsilon characterisation of Riemann integrability</title>
+						<statement>
+ 						Let <m>f : [a,b] \to \R</m> be a bounded function. Then <m>f</m> is Riemann integrable if and only if for every <m>\eps > 0</m> there exists a subdivision <m>a= x_0 \lt \dots \lt x_N = b</m> such that 
+<me>
+U(f;x_0, \dots, x_N) - L(f;x_0, \dots, x_N)\leq \eps.
+</me>
+						</statement>
+						<proof>
+						<p>
+						First suppose that <m>f</m> is Riemann integrable. Since decreasing the supremum gives a non-upper bound (<xref ref="prop-alt-sup"/>), there exists a subdivision <m>a = y_0 \lt  \dots \lt  y_M = b</m> such that 
+ <me>
+ L(f;y_0, \dots, y_N) \geq \int_a^b f - \trecip{2}\eps.
+ </me>
+  Since increasing the infimum gives a non lower bound (<xref ref="prop-alt-sup"/>), there exists a subdivision <m>a = z_0 \lt  \dots \lt  z_T = b</m> such that 
+ <me>
+ U(f;z_0, \dots, z_T) \leq \int_a^b f + \trecip{2}\eps.
+ </me>
+  Let <m>a= x_0 \lt  \dots \lt  x_N = b</m> denote the common refinement of <m>(y_0, \dots, y_M)</m> and <m>(z_0, \dots, z_T)</m>.
+  The required inequalities now follow from the monotonicty of Riemann sums with respect to refinements (
+  <xref ref="prop-mono-riemann-refine"/>).
+  </p>
+  <p>
+  Next we prove the converse direction.
+ Observe that for any subdivision <m>a = x_0 \lt  \dots \lt  x_N</m> we have 
+<me>
+U(f;[a,b]) \leq U(f;x_0, \dots, x_N) \quad \text{and} \quad L(f;[a,b]) \geq L(f;x_0, \dots, x_N) .
+</me>
+ Hence by our assumption, for any <m>\eps \gt 0</m> we have
+<me>
+U(f;[a,b]) -L(f;[a,b]) \leq \eps.
+</me>
+ Since this holds for all <m>\eps \gt 0</m> we deduce that 
+<me>
+U(f;[a,b]) \leq L(f;[a,b]).
+</me>
+ The reverse inequality follows from <xref ref="cor-up-low-finite"/>.
+ Hence <m>U(f;[a,b]) = L(f;[a,b])</m>, as required.
+ </p>
+</proof>
+					</proposition>
+									
+					</solution>
+				</task>
+			</exercise>
+		</section>

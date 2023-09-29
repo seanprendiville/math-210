@@ -1,0 +1,540 @@
+<?xml version='1.0' encoding="utf-8"?>
+<!--
+% !TEX TS-program = PreTeXt-HTML
+-->
+<section xml:id="week-2" xmlns:xi="http://www.w3.org/2001/XInclude">
+			<title>Week 2</title>
+		<subsection>
+<title>Self-test questions</title>
+			<exercise>
+				<title>Monotone convergence principle</title>
+				<task>
+					<statement>
+					Define what it means for a real-valued function/sequence to be increasing/decreasing.
+					</statement>
+					<solution>
+						<definition xml:id="def-monotone">
+							<title>Increasing/decreasing/monotone</title>
+							<statement>
+							<p>
+							Let <m>f : D \to\R</m> be a real-valued function with domain <m>D\subset \R</m>.
+	 We say that <m>f</m> is <em>increasing on <m>D</m></em> if 
+	<me>
+	(\forall x, y \in D)[x \leq y \implies f(x) \leq f(y)]
+	</me>
+	 We say that <m>f</m> is <em>strictly increasing on <m>D</m></em> if 
+	<me>
+	(\forall x, y \in D)[x \lt  y \implies f(x) \lt  f(y)]
+	</me>
+	 We say that <m>f</m> is <em>decreasing on <m>D</m></em> if 
+	<me>
+	(\forall x, y \in D)[x \leq y \implies f(x) \geq f(y)]
+	</me>
+	 We say that <m>f</m> is <em>strictly decreasing on <m>D</m></em> if 
+	<me>
+	(\forall x, y \in D)[x \lt  y \implies f(x) \gt f(y)]
+	</me>
+	 We say that <m>f</m> is <em>monotone</em> if it is either increasing or decreasing.
+	</p>
+	<p>
+	Recall that a sequence of reals <m>(a_n)_{n=1}^\infty</m> is a function <m>f : \N \to \R</m> where <m>f(n) := a_n</m> for each <m>n \in \N</m>. 
+ One can check that such a  sequence <m>(a_n)_{n=1}^\infty</m> is increasing (as defined above) if and only if 
+<me>
+(\forall n \in \N)[a_n \leq a_{n+1}].
+</me>
+A similar characterisation holds for decreasing sequences.
+								</p>
+							</statement>
+						</definition>
+					</solution>
+				</task>
+				<task xml:id="ex-mono-conv">
+					<statement>
+					State and prove the monotone convergence principle.
+					</statement>
+					<solution>
+						<proposition xml:id="prop-mono-lim">
+							<title>Monotone convergence principle</title>
+							<statement>
+	Let <m>(a_n)_{n=1}^\infty</m> be a sequence of real numbers. Suppose that the sequence is <em>increasing</em> and <em>bounded above</em>. Then the sequence converges.
+							</statement>
+							<proof>
+									Since the sequence is bounded above, the set <m>\set{a_n: n \in \N}</m> is bounded above. It is also non-empty (containing, e.g., <m>a_1</m>), hence has a supremum <m>a = \sup_{n \in \N} a_n  \in \R</m> by the completeness principle (see <xref ref="completeness-principle"/>). 
+ We claim that <m>a_n \to a</m>.
+ According to the definition of a real limit (<xref ref="def-seq-limit"/>), we must verify that <xref ref="eq-seq-limit"/> holds.
+ To this end, let <m>\eps \gt 0</m> be arbitrary.
+ Since decreasing the supremum gives a non-upper bound (<xref ref="prop-alt-sup"/>) there exists <m>a_N \in \set{a_n : n \in \N}</m> such that <m>a_N \gt a - \eps</m>.
+ Since the sequence is increasing, if <m>n \geq N</m> then <m>a_n \gt a -\eps</m>.
+ As <m>a = \sup_n a_n</m> is an upper bound, we deduce that for all <m>n \geq N</m> we have
+<me>
+a-\eps \leq a_n \leq a.
+</me>
+ In particular
+<me>
+n \geq N \implies |a-a_n| \leq \eps.
+</me>
+ Therefore <m>a_n \to a</m> by definition (see <xref ref="eq-seq-limit"/>), completing our proof.
+							</proof>
+						</proposition>
+					</solution>
+				</task>
+			</exercise>
+
+			<exercise>
+				<title>Inequality rule</title>
+				
+					<statement>
+					State and prove how inequalities are preserved under taking limits.
+					</statement>
+					<solution>
+						<proposition xml:id="prop-ineq-rule">
+							<statement>
+							<p>
+							Let <m>(a_n)_n</m> and <m>(b_n)_n</m> be sequences of real numbers such that <m>a_n\to a</m> and <m>b_n\to b</m> as <m>n\to\infty</m>. Suppose that  <m>a_n \leq b_n</m> for all <m>n</m>. Then <m>a \leq b</m>.
+							</p>
+							<p>
+							The conclusion of this result still holds if one relaxes the assumption <em>"<m>a_n \leq b_n</m> for all <m>n</m>''</em> to <em>"<m>a_n \leq b_n</m> for all but finitely<fn>i.e. there exists <m>N\in \N</m> such that for all <m>n\geq N</m> we have <m>a_n\leq b_n</m>.</fn> many <m>n</m>''</em>.
+							</p>
+							</statement>
+							<proof>
+							<p>
+							We shall derive a contradiction from the assumption that <m>a \gt b</m>.
+							</p>
+								<p>
+								By definition of the limit (<xref ref="def-seq-limit"/>,) we have that
+									<mdn>
+										<mrow xml:id="eq-lim-def-4">
+										\amp\forall \eps \gt 0\ \exists N_1 = N_1(\eps)\ \forall n \geq N_1 \text{ we have } \abs{a - a_n} \leq \eps,
+										</mrow>
+										<mrow xml:id="eq-lim-def-5">
+										\amp\forall \eps \gt 0\ \exists N_2 = N_2(\eps)\ \forall n \geq N_2 \text{ we have } \abs{b - b_n} \leq \eps .
+										</mrow>
+									</mdn>
+								Set 
+									<me>
+									\eps:= \trecip 3 (a-b) \gt 0 \qquad \text{and} \qquad n := \max\set{N_1(\eps),  N_2(\eps)}.
+									</me>
+								Then by <xref ref="eq-lim-def-4"/>,  <xref ref="eq-lim-def-5"/> and the triangle inequality
+									<md>
+									<mrow>
+									a_n = a + (a_n-a)\amp = b + (a-b) + (a_n-a)
+									</mrow>
+									<mrow> \amp = b_n + (b-b_n) + (a-b) + (a_n-a)
+									</mrow>
+									<mrow>
+									\amp \geq  b_n +(a-b) - |b-b_n| - |a_n-a|
+									</mrow>
+									<mrow>
+									\amp \geq b_n + 3 \eps - \eps - \eps
+									</mrow>
+									<mrow>
+									\amp \gt b_n.
+									</mrow>
+									</md>
+								This contradicts our assumption that <m>a_n \leq b_n</m> for all <m>n</m>, completing our proof.
+								</p>
+							</proof>
+						</proposition>
+						<example>
+						<title>An example of using the inequality rule</title>
+						If <m>(a_n)_{n=1}^\infty</m> is a convergent sequence of negative numbers, then <m>\lim_{n\to \infty} a_n \leq 0</m>.
+						<proof>
+						Set <m>b_n:=0</m> for all <m>n \in \N</m>. Then <m>b_n\to 0</m> as <m>n\to \infty</m>, and for all <m>n\in \N</m> we have <m>a_n\leq b_n</m>. Thus by the inequality rule 
+						<me>
+						\lim_{n\to \infty} a_n \leq \lim_{n\to \infty} b_n = 0.
+						</me>
+						</proof>
+						</example>
+						<example>
+						<title>Limits may not respect strict inequalities</title>
+						If <m>a_n:=0</m> and <m>b_n:=1/n</m> for all <m>n\in \N</m>, then we have convergent sequences satisfying <m>a_n \lt b_n</m> for all <m>n</m>, yet we don't have 
+						<me>
+						\lim_{n\to\infty} a_n \lt \lim_{n\to \infty} b_n.
+						</me>
+						</example>
+						<example>
+						<title>The converse to the inequality rule may not hold</title>
+						We can have  
+						<me>
+						\lim_{n\to\infty} a_n \leq \lim_{n\to \infty} b_n.
+						</me>
+						without having that <m>a_n \leq b_n</m> for all <m>n</m>. For instance take <m>a_n := 1/n</m> and <m>b_n:=-1/n</m>.
+						</example>
+					</solution>
+				
+			</exercise>
+			<exercise>
+				<title>Sandwich rule</title>
+				
+					<statement>
+					State and prove the "sandwich rule" for sequence limits.
+					</statement>
+					<solution>
+						<proposition xml:id="prop-sandwich">
+							<title>Sandwich rule</title>
+							<statement>
+							Let <m>(a_n)_{n=1}^\infty</m>, <m>(b_n)_{n=1}^\infty</m> and <m>(c_n)_{n=1}^\infty</m> be sequences of real numbers. Suppose that for all <m>n \in \N</m> we have 
+								<me>
+								a_n \leq b_n \leq c_n
+								</me>. 
+								If <m>a_n \to a</m> and <m>c_n \to a</m>, then <m>b_n \to a</m>.
+							</statement>
+							<proof>
+							By definition of the limit <xref ref="def-seq-limit"/>, we have that
+								<md>
+								<mrow>
+								\amp\forall \eps \gt 0\ \exists N_1 = N_1(\eps)\ \forall n \geq N_1 \text{ we have } a_n \in [a-\eps,a+\eps],
+								</mrow>
+								<mrow>
+\amp\forall \eps \gt 0\ \exists N_2 = N_2(\eps)\ \forall n \geq N_2 \text{ we have }  c_n \in [a-\eps,a+\eps] .
+								</mrow>
+								</md>
+							Fixing <m>\eps \gt 0</m>, take
+<me>
+N(\eps) := \max\set{N_1(\eps), N_2(\eps)}.
+</me> 
+Then for any <m>n \geq N(\eps)</m> we have <m>n \geq N_2(\eps)</m> and so
+<me>
+b_n \leq c_n \leq a+ \eps.
+</me>
+Similarly, if <m>n \geq N(\eps)</m> then <m>n \geq N_1(\eps)</m>, hence
+<me>
+b_n \geq a_n \geq a -\eps.
+</me>
+Thus for any <m>n \geq N(\eps)</m> we have
+<me>
+b_n \in [a-\eps, a+\eps].
+</me>
+Equivalently, for any <m>n \geq N(\eps)</m> we have 
+<m>
+ |b_n -a| \leq \eps.
+</m>
+Therefore <m>b_n \to a </m> as <m>n \to \infty</m>.
+							</proof>
+						</proposition>
+						<example>
+						<title>An example of using the sandwich rule</title>
+						Define
+						<me>
+						b_n := \frac{(-1)^{n\text{th digit of }\pi}}{n},
+						</me>
+						so that <m>b_1 = -1</m>, <m>b_2 = -1/2</m>, <m>b_3 = 1/3</m>, etc. The terms of this sequence oscillate between positive and negative in a seemingly arbitrary manner. Yet
+						<me>
+						-1/n \leq b_n \leq 1/n \qquad (\forall n \in \N),
+						</me>
+						and 
+						<me>
+						\lim_{n\to\infty} (1/n) = \lim_{n\to\infty} (-1/n) = 0.
+						</me>
+						(The latter by the scaling rule combined with convergence of <m>1/n</m>.) Hence by the sandwich rule, we have
+						<me>
+						\lim_{n\to \infty} b_n = 0.
+						</me>
+						</example>
+						<remark>
+						The conclusion of the sandwich rule still holds if the inequalities <m>a_n\leq b_n\leq c_n</m> only hold for all but finitely<fn>So that there exists <m>N \in \N</m> such that for all <m>n\geq N</m> we have <m>a_n\leq b_n\leq c_n</m>.</fn> many values of <m>n</m>. For instance, the second inequality in
+						<me>
+						0 \leq 100/n^2 \leq 1/n
+						</me>
+						doesn't hold for <m>n \lt 100</m>. Yet since these inequalities hold for all <m>n\geq 100</m>, we can still use the sandwich rule to conclude that <m>100/n^2 \to 0</m> as <m>n\to\infty</m>.
+						</remark>
+					</solution>
+				
+			</exercise>
+			<exercise>
+				<title>Addition rule</title>
+				
+					<statement>
+					State and prove the "addition rule" for limits of convergent sequences.
+					</statement>
+					<solution>
+						<proposition xml:id="prop-add-rule">
+							<title>Addition rule</title>
+							<statement>
+Let <m>(a_n)_{n=1}^\infty</m> and <m>(b_n)_{n =1}^\infty</m>  be convergent sequences of real numbers. Then 
+<me>
+\lim_{n \to \infty} (a_n+b_n) = \lim_{n \to \infty} a_n+\lim_{n \to \infty} b_n.
+</me>
+							</statement>
+							<proof>
+ Let <m>\displaystyle a : = \lim_{n \to \infty}a_n</m> and <m>\displaystyle b := \lim_{n \to \infty}b_n</m>.
+ By definition of the limit (<xref ref="def-seq-limit"/>), we are required to prove that
+<men xml:id="eq-add-rtp">
+\forall \eps \gt 0\ \exists N = N(\eps)\ \forall n \geq N \text{ we have } \abs{(a+b) - (a_n+b_n)} \leq \eps .
+</men>
+ Since the limits <m>\displaystyle \lim_{n \to \infty} a_n</m> and <m>\displaystyle \lim_{n \to \infty} b_n</m> both exist, we know that
+<mdn>
+<mrow xml:id="eq-lim-def-1">
+\amp \forall \eps \gt 0\ \exists N_1 = N_1(\eps)\ \forall n \geq N_1 \text{ we have } \abs{a - a_n} \leq \eps,
+</mrow>
+<mrow xml:id="eq-lim-def-1-5">
+\amp \forall \eps \gt 0\ \exists N_2 = N_2(\eps)\ \forall n \geq N_2 \text{ we have } \abs{b - b_n} \leq \eps .
+</mrow>
+</mdn>
+ We have the key identity
+<me>
+(a+b) - (a_n+b_n) =  (a- a_n)+(b - b_n).
+</me>
+ Notice that, by the triangle inequality, if <m>|a - a_n| \leq \eps</m> and <m>|b - b_n| \leq \eps</m> then
+<me>
+\abs{(a+b) - (a_n+b_n)} =  \abs{(a- a_n)+(b - b_n)} \leq \abs{a- a_n}+\abs{b - b_n}\leq   2\eps.
+</me>
+ Writing <m>N_1(\eps)</m> and <m>N_2(\eps)</m> for the functions appearing in <xref ref="eq-lim-def-1"/> and <xref ref="eq-lim-def-1-5"/>, set
+<me>
+N_0(\eps) := \max\set{N_1(\eps), N_2(\eps)}.
+</me>
+ Then we have proved that
+<me>
+\forall \eps \gt 0\ \exists N_0 = N_0(\eps)\ \forall n \geq N_0 \text{ we have } \abs{(a+b) - (a_n+b_n)} \leq 2\eps .
+</me>
+ Taking <m>N(\eps) := N_0(\eps/2)</m> then yields <xref ref="eq-add-rtp"/>.
+							</proof>
+						</proposition>
+						<example>
+						<title>An example of using the addition rule</title>
+						If <m>a_n\to a</m> as <m>n\to \infty</m> then 
+						<me>
+						a_n + \frac{1}{n} \to a + 0 = a\quad \text{as} \quad n \to \infty.
+						</me> 
+						</example>				
+					</solution>
+				
+			</exercise>
+<!--			
+			<exercise>
+				<title>Scaling rule</title>
+				
+					<statement>
+					State and prove the "scaling rule" for limits of convergent sequences.
+					</statement>
+					<solution>
+						<proposition xml:id="prop-scaling-rule">
+							<title>Scaling rule</title>
+							<statement>
+							Let <m>(a_n)_{n=1}^\infty</m> be a convergent sequence of real numbers and let <m>M \in \R</m>. Then 
+<me>
+\lim_{n \to \infty} (Ma_n) = M\lim_{n \to \infty} a_n.
+</me>
+							</statement>
+							<proof>
+							Let <m>\displaystyle a : = \lim_{n \to \infty}a_n</m>.
+ By definition of the limit  (<xref ref="def-seq-limit"/>), we wish to prove that
+<men xml:id="eq-scaling-rtp">
+\forall \eps \gt 0\ \exists N = N(\eps)\ \forall n \geq N \text{ we have } |Ma-Ma_n| \leq \eps.
+</men>
+If <m>M = 0</m> then <xref ref="eq-scaling-rtp"/> holds, since <m>|Ma-Ma_n| = 0</m>. We may henceforth suppose that <m>M \neq 0</m>, so that
+<me>
+|Ma-Ma_n| \leq \eps \qquad \text{if} \qquad |a-a_n| \leq \frac{\eps}{|M|}.
+</me>
+We know that
+<me>
+\forall \eps \gt 0\ \exists N_1 = N_1(\eps)\ \forall n \geq N_1 \text{ we have } \abs{a - a_n} \leq \eps,
+</me>
+so setting
+<me>
+N(\eps) := N_1\brac{\tfrac{\eps}{|M|}},
+</me>
+ we see that if <m>n\geq N(\eps)</m> then <m>|Ma-Ma_n| \leq \eps</m>. This establishes <xref ref="eq-scaling-rtp"/>.
+ 							</proof>
+						</proposition>
+						<example>
+						<title>Example of using the scaling rule</title>
+						<ol>
+						<li> <m>100/n= 100\times 1/n\to100\times 0 = 0</m> as <m>n\to\infty</m>, by the scaling rule.</li>
+						<li> <m>-2(n+1)/n= -2\times(1+\frac{1}{n})\to -2 \times (1+0) = -2</m> as <m>n\to\infty</m>, by the scaling rule and the addition rule.</li>
+						</ol>
+						</example>
+					</solution>
+				
+			</exercise>
+			<exercise>
+				<title>Multiplication rule</title>
+				
+					<statement>
+					State and prove the "multiplication rule" for limits of convergent sequences.
+					</statement>
+					<solution>
+						<proposition xml:id="prop-mult-rule">
+							<title>Multiplication rule</title>
+							<statement>
+							Let <m>(a_n)_{n=1}^\infty</m> and <m>(b_n)_{n =1}^\infty</m>  be convergent sequences of real numbers. Then 
+<me>
+\lim_{n \to \infty} (a_n\cdot b_n) = \brac{\lim_{n \to \infty} a_n}\cdot \brac{\lim_{n \to \infty} b_n}.
+</me>
+							</statement>
+							<proof>
+							Let <m>\displaystyle a : = \lim_{n \to \infty}a_n</m> and <m>\displaystyle b := \lim_{n \to \infty}b_n</m>.
+ We have the inequality 
+<md>
+<mrow> |ab - a_nb_n|  \amp = |ab-a_nb + a_nb -  a_nb_n| </mrow>
+<mrow> \amp \leq |ab-a_nb| + |a_nb- a_nb_n| = |a-a_n||b| + |a_n||b-b_n|.</mrow>
+</md>
+Since convergent sequences are bounded (<xref ref="prop-conv-bounded"/>), there exists <m>M \in \R</m> such that for all <m>n</m> we have <m>|a_n| \leq M</m>. Thus 
+<men xml:id="eq-mult-ineq">
+|ab - a_nb_n| \leq |a-a_n||b| + M|b -  b_n|.
+</men>
+We observe that the statement that <m>a_n \to a</m> as <m>n \to \infty</m> is equivalent to the statement that 
+<me>
+|a-a_n| \to 0 \quad \text{as} \quad n \to \infty.
+</me>
+So by the scaling rule (<xref ref="prop-scaling-rule"/>)
+<me>
+|a-a_n||b| \to 0 \quad \text{and} \quad M|b -  b_n|\to 0 \quad \text{as} \quad n \to \infty.
+</me>
+Thus by the addition rule (<xref ref="prop-add-rule"/>)
+<me>
+|a-a_n||b| + M|b -  b_n|\to 0 \quad \text{as} \quad n \to \infty.
+</me> 
+Finally, by the sandwich rule (<xref ref="prop-sandwich"/>) and <xref ref="eq-mult-ineq"/> we have
+<me>
+|ab - a_nb_n| \to 0 \quad \text{as} \quad n \to \infty.
+</me>
+Or equivalently, <m>a_nb_n \to ab</m> as <m>n\to\infty</m>. 							
+</proof>
+						</proposition>
+					</solution>
+				
+			</exercise>
+-->
+<exercise>
+				<title>Multiplication rule</title>
+				
+					<statement>
+					State the "multiplication rule" for limits of convergent sequences (the proof is non-examinable).
+					</statement>
+					<solution>
+						<proposition xml:id="prop-mult-rule">
+							<title>Multiplication rule</title>
+							<statement>
+							Let <m>(a_n)_{n=1}^\infty</m> and <m>(b_n)_{n =1}^\infty</m>  be convergent sequences of real numbers. Then 
+<me>
+\lim_{n \to \infty} (a_n\cdot b_n) = \brac{\lim_{n \to \infty} a_n}\cdot \brac{\lim_{n \to \infty} b_n}.
+</me>
+							</statement>
+							<proof>
+							<title>Non-examinable proof</title>
+							Let <m>\displaystyle a : = \lim_{n \to \infty}a_n</m> and <m>\displaystyle b := \lim_{n \to \infty}b_n</m>.
+ By definition of the limit  (<xref ref="def-seq-limit"/>), we wish to prove that
+<me>
+\forall \eps \gt 0\ \exists N = N(\eps)\ \forall n \geq N \text{ we have } |ab-a_nb_n| \leq \eps.
+</me>
+Since the limits <m>\displaystyle \lim_{n \to \infty} a_n</m> and <m>\displaystyle \lim_{n \to \infty} b_n</m> both exist and are finite, we know that
+<mdn>
+<mrow xml:id="eq-lim-def-2">
+\amp\forall \eps \gt 0\ \exists N_1 = N_1(\eps)\ \forall n \geq N_1 \text{ we have } \abs{a - a_n} \leq \eps,
+</mrow>
+<mrow xml:id="eq-lim-def-2-5">
+\amp\forall \eps \gt 0\ \exists N_2 = N_2(\eps)\ \forall n \geq N_2 \text{ we have } \abs{b - b_n} \leq \eps .
+</mrow>
+</mdn>
+ We observe the key identity
+<me>
+ab - a_nb_n  = ab-a_nb +a_nb-a_nb_n = (a-a_n)b + a_n(b -  b_n).
+</me>
+Since convergent sequences are bounded (<xref ref="prop-conv-bounded"/>), there exists <m>M\in\R</m> such that for all <m>n</m> we have <m>|a_n| \leq M</m>. Thus if <m>|a - a_n| \leq \eps</m> and <m>|b - b_n| \leq \eps</m> then
+<me>
+|ab - a_nb_n| \leq |a-a_n||b| + M|b -  b_n| \leq (|b|+M)\eps.
+</me>
+ Writing <m>N_1(\eps)</m> and <m>N_2(\eps)</m> for the functions appearing in <xref ref="eq-lim-def-2"/> and <xref ref="eq-lim-def-2-5"/>, set
+<me>
+N(\eps) := \max\set{N_1\brac{\tfrac{\eps}{|b|+M}}, N_2\brac{\tfrac{\eps}{|b|+M}}}.
+</me>
+ Then we have proved that
+<me>
+\forall \eps \gt 0\ \exists N = N(\eps)\ \forall n \geq N \text{ we have } \abs{ab - a_nb_n} \leq \brac{|b|+M}\frac{\eps}{|b|+M} = \eps .
+</me>
+ Thus <m>a_nb_n\to ab</m>.
+ 							</proof>
+						</proposition>
+					</solution>
+				
+			</exercise>
+			<exercise>
+				<title>Non-zero limit gives a non-zero sequence, eventually</title>
+				<statement>
+				State and prove how a convergent sequence with  non-zero limit has all terms non-zero from some point onwards.
+				</statement>
+				<solution>
+				<proposition xml:id="prop-eventually-non-zero">
+				<statement>
+				<p>
+				Let <m>(a_n)_{n=1}^\infty</m> be a convergent sequence with <m>\lim_{n\to\infty} a_n \neq 0</m>. Then there exists <m>N \in \N</m> such that for all <m>n\geq N</m> we have <m>a_n\neq 0</m>. 
+				</p>
+				<p>
+				Furthermore, if <m>\lim_{n\to\infty} a_n \gt 0</m> then the terms are (eventually) uniformly bounded away from zero, in that
+				<me>
+				(\exists \eps \gt 0)(\exists N \in \N)(\forall n\geq N)[a_n\geq \eps]
+				</me>.
+				</p>
+				</statement>
+				<proof>
+				<p>
+				Set <m>a:= \lim_{n\to\infty} a_n</m>. Taking <m>\eps := |a|/2 \gt 0</m> in the definition of convergence (<xref ref="def-seq-limit"/>), there exists <m>N = N(\eps)</m> such that for all <m>n\geq N</m> we have <m> a_n \in [a-\eps, a+\eps]</m>. We claim that this neighbourhood of <m>a</m> does not contain 0. We prove this by splitting into cases, depending on whether <m>a\gt 0</m> or <m>a\lt 0</m>. We give details for the former case and leave the latter case to the reader.
+				</p>
+				<p>
+				Supposing that <m>a\gt 0</m>, we have that 
+				<me>a-\eps = a-\frac{|a|}{2}=a-\frac{a}{2} = \frac{a}{2} = \eps > 0.</me>
+				Therefore for all <m> n\geq N(\eps)</m> we have <m>a_n \geq \eps > 0</m>, proving the both claims made in <xref ref="prop-eventually-non-zero"/> in this case.
+				</p>
+				</proof>
+				</proposition>
+				</solution>
+			</exercise>
+			<exercise>
+				<title>Reciprocal rule</title>
+				
+					<statement>
+					State the "reciprocal rule" for sequence limits (the proof is not examinable).
+					</statement>
+					<solution>
+						<proposition xml:id="prop-recip-rule">
+							<title>Reciprocal rule</title>
+							<statement>
+							Let <m>(a_n)_{n=1}^\infty</m> be a sequence of real numbers which converge to a non-zero limit. Then
+								<men xml:id="eq-recip-rule">
+ 								\lim_{n \to \infty} \brac{\frac{1}{a_n}} = 
+									\frac{1}{\displaystyle \lim_{n\to \infty} a_n}.													</men>
+							</statement>
+							<remark> 
+							<title>
+							No need to assume all terms non-zero
+							</title>
+							Strictly speaking, <xref ref="eq-recip-rule"/> only makes sense if we know that <m>a_n \neq 0</m> for all <m>n \in \N</m>, so that the reciprocal <m>1/a_n</m> is well-defined for <em>all</em> values of <m>n</m>. However, the limiting value of a sequence does not depend on a finite number of initial terms: if you alter a finite number of terms of a sequence, you do not change the value of the limit. When the limit is non-zero, <xref ref="prop-eventually-non-zero"/> tells us that <m>a_n = 0</m> for only a finite number of <m>n</m>, so we may discard a finite number of initial terms in order for the expression <xref ref="eq-recip-rule"/> to make sense.							</remark>
+							<proof>
+							<title>Non-examinable proof</title>
+							Let <m>\displaystyle a : = \lim_{n \to \infty}a_n</m>.
+								We wish to prove that
+<men xml:id="eq-lim-def-3">
+\forall \eps \gt 0\ \exists N = N(\eps)\ \forall n \geq N \text{ we have } |a^{-1}-a_n^{-1}| \leq \eps.
+</men>
+We observe the key identity
+<me>
+a^{-1} - a_n^{-1}  = \frac{a_n-a}{aa_n}.
+</me>
+By definition of the limit (<xref ref="def-seq-limit"/>), we know that
+<me>
+\forall \eps \gt 0\ \exists N_1 = N_1(\eps)\ \forall n \geq N_1 \text{ we have } \abs{a - a_n} \leq \eps.
+</me>
+								By the triangle inequality
+<me>
+|a_n| = |a-(a-a_n)| \geq |a| - |a-a_n|.
+</me>
+ Hence if <m>|a-a_n| \leq |a|/2</m> then <m>|a_n| \geq |a|/2 \gt 0</m>. Setting <m>N_0 := N_1(|a|/2)</m>, it follows that for all <m>n \geq N_0</m> we have <m>|a_n| \geq |a|/2 \gt 0</m>, in particular we have
+ <me>
+\abs{a^{-1} - a_n^{-1}}  = \frac{|a_n-a|}{|aa_n|} \leq \frac{|a_n-a|}{|a|^2/2}
+</me>.
+  Hence if <m>n \geq N_0</m> and <m>|a - a_n| \leq \eps</m> then
+<me>
+\abs{a^{-1} - a_n^{-1}}  = \frac{|a_n-a|}{|aa_n|} \leq \frac{\eps}{|a|^2/2} = \frac{2\eps}{|a|^2}.
+</me>
+We therefore obtain <xref ref="eq-lim-def-3"/> on setting
+<me>
+N(\eps) := \max\set{N_0, N_1\brac{\trecip{2}|a|^{2}\eps}}.
+</me>
+							</proof>
+						</proposition>
+					</solution>
+				
+			</exercise>
+					</subsection>
+		</section>

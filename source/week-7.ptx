@@ -1,0 +1,588 @@
+<?xml version='1.0' encoding="utf-8"?>
+<!--
+% !TEX TS-program = PreTeXt-HTML
+-->
+<section xml:id="week-7" xmlns:xi="http://www.w3.org/2001/XInclude">
+			<title>Week 7</title>
+			<exercise>
+				<title>Rules for differentiation</title>
+				<task xml:id="ex-alg-diff">
+					<statement>
+					State and prove both the addition and product rules for differentiation.
+					</statement>
+					<solution>
+					<proposition xml:id="prop-alg-diff">
+<title>Algebra of differentiation</title>
+<statement>
+ Let <m>f,g: (a,b)\to \R</m> be differentiable at <m>x_0 \in (a,b)</m>.
+ Then the sum <m>f+g</m> and product <m>f\cdot g</m> are differentiable at <m>x_0</m>.
+ Moreover, their derivatives satisfy the identities
+<md>
+<mrow>
+	(f+g)'(x_0) \amp = f'(x_0) + g'(x_0), \amp \text{(addition rule)}
+</mrow>
+<mrow>
+	(f\cdot g)'(x_0) \amp = f'(x_0)g(x_0) + f(x_0)g'(x_0).\amp \text{(product rule)}
+	</mrow>
+</md>
+</statement>
+<proof>
+ We verify both identities using the sequential characterisation of differentiability (<xref ref="prop-seq-diff"/>) together with the addition and product rules for sequence limits (<xref ref="prop-add-rule"/> and <xref ref="prop-mult-rule"/>). To this end, let <m>(a_n)_n</m> be a sequence in <m>(a,b)\setminus\set{x_0}</m> with <m>a_n \to x_0</m>. Then the addition rule follows from the addition rule for sequence limits, since 
+ <md>
+ <mrow>
+\lim_{n \to \infty} \amp \frac{(f+g)(a_n)-(f+g)(x_0)}{a_n-x_0}
+</mrow>
+<mrow>
+\amp = \lim_{n\to \infty} \frac{f(a_n)-f(x_0)}{a_n-x_0}+ \lim_{n \to \infty} \frac{g(a_n)-g(x_0)}{x-x_0}.
+</mrow>
+</md>
+ The product rule uses the identity
+ <md>
+ <mrow>
+ \amp f(a_n)g(a_n) - f(x_0)g(x_0)  = \sqbrac{f(a_n)-f(x_0)}g(a_n) + f(x_0)\sqbrac{g(a_n)-g(x_0)}
+ </mrow>
+ <mrow>
+\amp =\sqbrac{f(a_n)-f(x_0)}\sqbrac{g(a_n)-g(x_0)} + \sqbrac{f(a_n)-f(x_0)}g(x_0)+ f(x_0)\sqbrac{g(a_n)-g(x_0)}. 
+</mrow>
+</md>
+ By the multiplication rule for sequence limits (<xref ref="prop-mult-rule"/>), we have
+<md alignment="gather">
+<mrow>
+\lim_{n \to \infty}\frac{\sqbrac{f(a_n)-f(x_0)}g(x_0)}{a_n-x_0} = f'(x_0)g(x_0),
+</mrow>
+<mrow>
+\lim_{n \to \infty}\frac{f(x_0)\sqbrac{g(a_n)-g(x_0)}}{a_n-x_0} = f(x_0)g'(x_0).
+</mrow>
+</md>
+ Similarly
+<md>
+<mrow>
+\amp \lim_{n\to\infty}\frac{\sqbrac{f(a_n)-f(x_0)}\sqbrac{g(a_n)-g(x_0)}}{a_n-x_0}
+</mrow>
+<mrow>
+\amp = \lim_{n\to\infty}\frac{\sqbrac{f(a_n)-f(x_0)}}{a_n-x_0}\lim_{n\to\infty}\frac{\sqbrac{g(a_n)-g(x_0)}}{a_n-x_0}\lim_{n\to\infty}(a_n-x_0)
+</mrow>
+<mrow>
+\amp = f'(x_0)\cdot g'(x_0)\cdot 0 = 0.
+</mrow>
+</md>
+</proof>
+</proposition>
+					</solution>
+				</task>
+				<task>
+					<statement>
+					State and prove the chain rule for differentiation.
+					</statement>
+					<solution>
+					<theorem xml:id="thm-chain-rule">
+<title>Chain rule</title>
+<statement>
+ Let <m>f : (a,b) \to (c,d)</m> and <m>g:  (c,d) \to \R</m>.
+ Suppose that <m>f</m> is differentiable at <m>x_0</m> and that <m>g</m> is differentiable at <m>f(x_0)</m>.
+ Then the composition <m>g\circ f</m> is differentiable at <m>x_0</m>.
+ Moreover the derivative satisfies the identity
+<me>
+(g\circ f)'(x_0) = g'\bigbrac{f(x_0)} \cdot f'(x_0).
+</me>
+</statement>
+<proof>
+ Let <m>(x_n)_{n=1}^\infty</m> be a sequence in <m>(a,b) \setminus\set{x_0}</m> with <m>x_n \to x_0</m>.
+ By <xref ref="prop-seq-diff"/>, we wish to prove that
+<men xml:id="eq-chain-to-prove">
+\lim_{n\to \infty} \frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{x_n-x_0} = g'\bigbrac{f(x_0)}f'(x_0).
+</men>
+ We have
+<men xml:id="eq-chain-alt">
+\frac{g\bigbrac{f( x_n)} - g\bigbrac{f(x_0)}}{ x_n-x_0} = 
+\begin{cases}
+0, \amp \text{if } f( x_n) = f(x_0);\\
+\frac{g\brac{f( x_n)}-g\brac{f(x_0)}}{f( x_n)-f(x_0)}\cdot \frac{f( x_n)-f(x_0)}{ x_n-x_0}, \amp \text{otherwise.}
+\end{cases}
+</men> 
+<p>
+First, let us suppose that <m>f(x_n) = f(x_0)</m> for only finitely many values of <m>n</m>.
+ Then there exists <m>N_0\in \N</m> such that for all <m>n \geq N_0</m> we have <m>f(x_n)\neq f(x_0)</m>.
+ Hence for all <m>n \geq N_0</m> we have
+<me>
+\frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{x_n-x_0} = \frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{f(x_n)-f(x_0)}\cdot \frac{f(x_n)-f(x_0)}{x_n-x_0} . 
+</me>
+ Since differentiability implies continuity (<xref ref="prop-diff-cts"/>), we have 
+<me>
+\lim_{n \to \infty} f(x_n) = f(x_0).
+</me>
+ Thus by the sequential characterisation of differentiability (<xref ref="prop-seq-diff"/>) we have
+<men xml:id="eq-comp-subseq">
+\lim_{\substack{n\to \infty\\ n \geq N_0}} \frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{f(x_n)-f(x_0)} = g'\bigbrac{f(x_0)}.
+</men>
+ We may therefore use the multiplication rule for sequential limits (<xref ref="prop-mult-rule"/>) to deduce that 
+<md>
+<mrow>
+\lim_{n \to \infty} \frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{x_n-x_0} \amp = \lim_{\substack{n\to \infty\\ n \geq N_0}}\brac{ \frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{f(x_n)-f(x_0)}\cdot \frac{f(x_n)-f(x_0)}{x_n-x_0}}
+</mrow>
+<mrow>
+\amp = \lim_{\substack{n\to \infty\\ n \geq N_0}}\frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{f(x_n)-f(x_0)}\lim_{n\to \infty} \frac{f(x_n)-f(x_0)}{x_n-x_0}
+</mrow>
+<mrow>
+\amp = g'\bigbrac{f(x_0)}f'(x_0).
+</mrow>
+</md>
+</p>
+<p>
+ Next, let us suppose that <m>f(x_n)  = f(x_0)</m> for infinitely many values of <m>n</m>.
+ Write <m>k_1 \lt  k_2 \lt  \dots</m> for those indices for which  <m>f(x_{k_n}) = f(x_0)</m>.
+ Write <m>\ell_1 \lt  \ell_2 \lt  \dots</m> for the (possibly finite) remaining indices with <m>f(x_{l_n}) \neq f(x_0)</m>.
+ The sequence
+<men xml:id="eq-g-frac-bd">
+n\mapsto \frac{g\bigbrac{f(x_{\ell_n})}-g\bigbrac{f(x_0)}}{f(x_{\ell_n})-f(x_0)}
+</men>
+is either a finite sequence, or converges as in the proof of <xref ref="eq-comp-subseq"/>.
+ In either case, the sequence is bounded, so there exists <m>M \in \R</m> such that for all <m>\ell_n</m> we have
+<me>
+\abs{\frac{g\bigbrac{f(x_{\ell_n})}-g\bigbrac{f(x_0)}}{f(x_{\ell_n})-f(x_0)}
+} \leq M.
+</me>
+ Combining this with <xref ref="eq-chain-alt"/>, for any <m>n \in \N</m> we have
+<men xml:id="eq-alt-chain-ineq">
+\abs{\frac{g\bigbrac{f( x_n)} - g\bigbrac{f(x_0)}}{ x_n-x_0}} \leq M\abs{\frac{f(x_{n}) - f(x_0)}{x_{n} - x_0}}.
+</men>
+ Since <m>x_{k_n} \to x_0</m> we have 
+<me>
+f'(x_0) = \lim_{n \to \infty} \frac{f(x_{k_n}) - f(x_0)}{x_{k_n} - x_0} = 0.
+</me>
+ So it follows that
+<me>
+\lim_{n \to \infty} \frac{f(x_{n}) - f(x_0)}{x_{n} - x_0} = f'(x_0) = 0.
+</me>
+ Combining this with <xref ref="eq-alt-chain-ineq"/> gives
+<me>
+\lim_{n\to \infty}\abs{\frac{g\bigbrac{f( x_n)} - g\bigbrac{f(x_0)}}{ x_n-x_0}} = 0.
+</me>
+ Hence <xref ref="eq-chain-to-prove"/> also follows in this case.
+ </p>
+ </proof>
+</theorem>
+					</solution>
+				</task>
+				<task>
+					<statement>State and prove the quotient rule for differentiation.
+					</statement>
+					<solution>
+					<corollary xml:id="cor-quotient">
+<title>Quotient rule</title>
+<statement>
+ Let <m>f,g : (a,b) \to \R</m> both be differentiable at <m>x_0 \in D</m>.
+ Suppose that <m>g(x_0) \neq 0</m>.
+ Then the quotient <m>f/g</m> is defined on <m>(x_0-\delta, x_0+\delta)</m> for some <m>\delta \gt 0</m> and is differentiable at <m>x_0</m>.
+ Moreover the derivative satisfies the identity
+<men xml:id="eq-quotient">
+(f/g)'(x_0) = \frac{f'(x_0)g(x_0)-f(x_0)g'(x_0)}{g(x_0)^2}.
+</men>
+</statement>
+<proof>
+ Since differentiability implies continuity (<xref ref="prop-diff-cts"/>), the function <m>g</m> is continuous at <m>x_0</m>.
+ Since <m>g(x_0) \neq 0</m>, and non-zero points of continuity yield a non-zero neighbourhood (<xref ref="cor-non-zero-cts"/>), there exists <m>\delta \gt0</m>  such that <m>g(x) \neq 0</m> for all <m>x \in  (a,b)\cap (x_0-\delta, x_0+\delta)</m>. Decreasing <m>\delta</m> if necessary, we may assume that <m> (x_0-\delta, x_0+\delta)\subset (a,b)</m>.
+ Hence the quotient <m>x \mapsto f(x)/g(x)</m> is defined on <m>(x_0-\delta, x_0+\delta)</m>.
+ Composing the reciprocal function <m>y \mapsto 1/y</m> with <m>g</m>, the chain rule (<xref ref="thm-chain-rule"/>) and <xref ref="eg-recip-diff"/> together give that the function 
+<me>
+x\mapsto \recip{g(x)}
+</me>
+is differentiable at <m>x_0</m>. 
+ Moreover, the derivative satisfies
+<me>
+\brac{\recip{g(x_0)}}' = -\frac{g'(x_0)}{g(x_0)^2}.
+</me>
+ Hence by the product rule (<xref ref="prop-alg-diff"/>) the quotient <m>f/g = f \cdot\brac{1/g}</m> is differentiable at <m>x_0</m> with derivative
+<me>
+\frac{f'(x_0)}{g(x_0)} - \frac{f(x_0)g'(x_0)}{g(x_0)^2}.
+</me> 
+ This completes the proof of the quotient rule.
+</proof>
+</corollary>
+					</solution>
+				</task>
+				<task>
+					<statement>Using the above, justify why rational functions are differentiable.
+					</statement>
+					<solution>
+					<example xml:id="eg-poly-diff">
+<title>Polynomials and rational functions are differentiable</title>
+ Since the identity function <m>x \mapsto x</m> is differentiable on <m>\R</m>, the product rule gives that <m>x \mapsto x^2</m> is differentiable on <m>\R</m>.
+ Using induction and the product rule, it follows that the for any <m>n \in \N</m> the function <m>x \mapsto x^n = x\cdot x^{n-1}</m> is differentiable on <m>\R</m> with derivative
+<me>
+(x^n)' = nx^{n-1}.
+</me>
+ Since constant functions <m>x \mapsto c</m> are differentiable on <m>\R</m>, with zero derivative, it follows from the product rule that the function <m>x \mapsto c x^n</m> is differentiable on <m>\R</m> with derivative
+<me>
+(cx^n)' = nc x^{n-1}.
+</me>
+ By the addition rule for differentiation (<xref ref="prop-alg-diff"/>) it follows that any polynomial
+<me>
+x \mapsto c_0  + c_1 x + \dots + c_n x^n
+</me>
+is differentiable on <m>\R</m>, with derivative
+<me>
+c_1  + 2c_2x + \dots + n c_n x^{n-1}.
+</me>
+ By the quotient rule for differentiation (<xref ref="cor-quotient"/>) we deduce that any rational function (see <xref ref="def-rational"/>) is differentiable on its domain of definition.
+</example>
+					</solution>
+				</task>
+			</exercise>
+			<exercise>
+				<title>The mean value theorem</title>
+				<task>
+					<statement>
+					Define a local max/min.
+					</statement>
+					<solution>
+					<definition xml:id="def-local-max-min">
+<title>Local max/min</title>
+ Let <m>f : (a,b) \to \R</m>.
+ We say that <m>x_0 \in (a,b)</m> is a <em>local maximum</em> for <m>f</m> if there exists <m>\delta \gt 0</m> such that 
+<me>
+(\forall x \in (x_0-\delta, x_0+\delta)) [f(x) \leq f(x_0)].
+</me>
+ We say that <m>x_0 \in (a,b)</m> is a <em>local minimum</em> for <m>f</m> if there exists <m>\delta \gt 0</m> such that 
+<me>
+(\forall x \in (x_0-\delta, x_0+\delta)) [f(x) \geq f(x_0)].
+</me>
+</definition>
+					</solution>
+				</task>
+				<task>
+					<statement>
+					State and prove how a derivative must be zero at a local max/min.
+					</statement>
+					<solution>
+					<proposition xml:id="lem-zero-deriv">
+					<title>The derivative is zero at a local max/min</title>
+					<statement>
+ Suppose that <m>f : (a,b) \to \R</m> is differentiable at <m>x_0 \in (a,b)</m>.
+ Suppose that <m>x_0</m> is a local maximum or local minimum for <m>f</m>.
+ Then <m>f'(x_0) = 0</m>.
+</statement>
+<proof>
+ Let us suppose that <m>x_0</m> is a local maximum for <m>f</m>; the argument for the local minimum is similar.
+ By definition of a local maximum (see <xref ref="def-local-max-min"/>) there exists <m>\delta \gt 0</m> such that for all <m>x \in (x_0-\delta, x_0+\delta)</m> we have <m>f(x_0) \geq f(x)</m>. Hence
+ <me>
+\frac{f(x)-f(x_0)}{x-x_0}  \begin{cases} \geq 0 \amp \text{ if } x_0-\delta \lt  x \lt  x_0,\\
+							\leq 0 \amp \text{ if } x_0 \lt  x \lt  x_0+\delta.\end{cases}
+</me>
+Setting <m>a_n := x_0-\trecip{n+1}\delta</m>, the sequential characterisation of the derivative (<xref ref="prop-seq-diff"/>) and the inequality rule (<xref ref="prop-ineq-rule"/>) give that
+<me>
+f'(x_0) = \lim_{n\to \infty}\frac{f(a_n)-f(x_0)}{a_n-x_0} \geq 0.
+</me>
+ Similarly, setting <m>b_0:= x_0+\trecip{n+1}\delta</m> gives
+<me>
+f'(x_0) = \lim_{n\to \infty}\frac{f(b_n)-f(x_0)}{a_n-x_0} \leq 0.
+</me>
+ Thus <m>f'(x_0) = 0</m>.
+</proof>
+</proposition>
+					</solution>
+				</task>
+				<task>
+					<statement>State and prove Rolle's theorem.</statement>
+					<solution>
+					<theorem xml:id="lem-rolle">
+<title>Rolle's theorem</title>
+<statement>
+ Let <m>f : [a,b] \to \R</m> be a continuous function which is differentiable on <m>(a,b)</m>, with <m>a \lt  b</m>.
+ Suppose that <m>f(a) = f(b)</m>.
+ Then there exists <m>x_0 \in (a,b)</m> such that <m>f'(x_0) = 0</m>.
+</statement>
+<proof>
+By the extreme value theorem (<xref ref="thm-extreme"/>), there exists <m>x_1,x_2 \in [a,b]</m> which are minima and maxima (respectively) for <m>f</m> on <m>[a,b]</m>.
+ In particular <m>x_1</m> is a local maximum and <m>x_2</m> is a local minimum.
+ If <m>x_1 \in (a,b)</m> or <m>x_2 \in (a,b)</m>, then it follows that <m>f'(x_1) = 0</m> or <m>f'(x_2) = 0</m> since local minima/maxima have zero derivative at points of differentiability (<xref ref="lem-zero-deriv"/>).
+ We may therefore assume that <m>\set{x_1, x_2} \subset \set{a,b}</m>.
+ Hence <m>f(x_1) = f(x_2)</m>.
+ For any <m>x \in [a,b]</m>, we have that <m>f(x)</m> is between <m>f(x_1)</m> and <m>f(x_2)</m>.
+ Since <m>f(x_1) = f(x_2)</m>, it follows that <m>f</m> is constant on <m>[a,b]</m>.
+ It then follows from <xref ref="eg-const-diff"/> that <m>f'(x)= 0</m> at every <m>x \in (a,b)</m>, e.g. for <m>x := \frac{a+b}{2}</m>.
+</proof>
+</theorem>					</solution>
+				</task>
+				<task>
+					<statement>State and prove the mean value theorem.</statement>
+					<solution>
+					<theorem xml:id="thm-mvt">
+<title>Mean value theorem</title>
+<statement>
+ Let <m>f : [a,b] \to \R</m> be a continuous function which is differentiable on <m>(a,b)</m>, with <m>a \lt  b</m>.
+ Then there exists <m>x_0 \in (a,b)</m> such that 
+<men xml:id="eq-mvt">
+f(b) - f(a) = f'(x_0)(b-a).
+</men>
+</statement>
+<proof>
+ We deduce this result from Rolle's theorem (<xref ref="lem-rolle"/>).
+ The idea of the proof is to try and find a continuous function <m>g:[a,b] \to \R</m> which is differentiable on <m>(a,b)</m> with <m>g(a) = g(b)</m> and such that the identity <m>g'(x_0) = 0</m> implies <xref ref="eq-mvt"/>.
+ To this end set 
+<me>
+g(x) :=f(x) - \frac{f(b)-f(a)}{b-a} (x-a), \qquad (x \in [a,b]).
+</me>
+ This is continuous on <m>[a,b]</m> since constant functions are continuous (<xref ref="eg-const-cts"/>), the identity function is continuous (<xref ref="eg-id-cts"/>) and so is the sum/product of continuous functions (<xref ref="prop-alg-cts"/>).
+ The function <m>g</m> is differentiable on <m>(a,b)</m> since constant functions are differentiable (<xref ref="eg-const-diff"/>), the identity function is differentiable (<xref ref="eg-id-diff"/>) and so is the sum/product of differentiable functions (<xref ref="prop-alg-cts"/>).
+ We have <m>g(a) = f(a)</m> and <m>g(b)  = f(a)</m>.
+ We may therefore apply Rolle's theorem to deduce the existence of <m>x_0 \in (a,b)</m> such that <m>g'(x_0) = 0</m>.
+ Employing the sum/product rules for differentiation, we have that
+<me>
+g'(x_0) = f'(x_0) -\frac{f(b)-f(a)}{b-a}.
+</me>
+ The result follows on re-arranging the identity
+<me>
+0 = f'(x_0) -\frac{f(b)-f(a)}{b-a}. 
+</me>
+</proof>
+</theorem>					</solution>
+				</task>
+				<task xml:id="ex-mono-diff">
+					<statement>Prove how a function with non-negative derivative is increasing.</statement>
+					<solution>
+					<corollary xml:id="cor-mono-diff">
+					<statement>
+ Let <m>f : [a,b] \to \R</m> be a continuous function which is differentiable on <m>(a,b)</m>, with <m>a \lt  b</m>.
+ <ol>
+ 	<li>
+ If <m>(\forall x \in (a,b))[f'(x) \geq 0]</m> then <m>f</m> is increasing.
+ 	</li>
+	<li>
+ If <m>(\forall x \in (a,b))[f'(x) \gt 0]</m> then <m>f</m> is strictly increasing.
+ </li>
+	<li>
+ If <m>(\forall x \in (a,b))[f'(x) \leq 0]</m> then <m>f</m> is decreasing.
+ </li>
+	<li>
+ If <m>(\forall x \in (a,b))[f'(x) \lt  0]</m> then <m>f</m> is strictly decreasing.
+ </li>
+	<li>
+ If <m>(\forall x \in (a,b))[f'(x) = 0]</m> then <m>f</m> is constant.
+ </li>
+</ol>
+</statement>
+<proof> Let us first suppose that <m>(\forall x \in (a,b))[f'(x) \geq 0]</m>.
+ Let <m>x_1, x_2 \in [a,b]</m> with <m>x_1 \lt  x_2</m>.
+ Our task is to prove that <m>f(x_1) \leq f(x_2)</m>.
+ Applying the mean value theorem to the function <m>f: [x_1, x_2] \to \R</m>, there exists <m>x_0 \in (x_1, x_2)</m> such that
+<me>
+f(x_2)-f(x_1) = f'(x_0)(x_2-x_1) \geq 0,
+</me>
+as required.
+ Notice that if <m>(\forall x \in (a,b))[f'(x) \gt 0]</m> then  <m>f(x_2) -f(x_1) = f'(x_0)(x_2-x_1) \gt 0</m>, which implies that the function is strictly increasing.
+ The conclusions involving decreasing functions follow on applying the increasing results to <m>-f</m>.
+ If <m>(\forall x \in (a,b))[f'(x) = 0]</m> then <m>f</m> is both increasing and decreasing, hence for all <m>x \in [a,b]</m> we have <m>f(x) = f(b)</m>. 
+ Thus in the latter case <m>f</m> is constant.
+</proof>
+</corollary>					</solution>
+				</task>
+			</exercise>
+			<exercise>
+				<title>Taylor's theorem</title>
+				<task xml:id="ex-taylor">
+					<statement>State and prove Taylor's theorem.
+					</statement>
+					<solution>
+					<theorem xml:id="thm-taylor">
+					<statement>
+					Let <m>f : (a,b) \to \R</m> be a function which is <m>n</m>-times differentiable and let <m>x_0, x \in (a,b)</m>. Then there exists <m>x_n</m> between <m>x_0</m> and <m>x</m> such that
+<mdn>
+<mrow number="no">
+\amp \abs{f(x) - \sqbrac{f(x_0) + (x-x_0)f'(x_0) +  \dots + \trecip{(n-1)!} (x-x_0)^{n-1} f^{(n-1)}(x_0)}}
+</mrow>
+<mrow xml:id="eq-taylor">
+\amp \qquad\qquad\qquad \leq |x-x_0|^n|f^{(n)}(x_n)|.
+</mrow>
+</mdn>
+</statement>
+<proof>
+Set
+<md>
+<mrow>
+\amp g(x) := f(x) -
+</mrow>
+<mrow>
+\amp  \sqbrac{f(x_0) + (x-x_0)f'(x_0) + \trecip{2} (x-x_0)^2 f''(x_0) + \dots + \trecip{(n-1)!} (x-x_0)^{n-1} f^{(n-1)}(x_0)}
+</mrow>
+</md>.
+Our aim is to prove that there exists <m>x_n</m> between <m>x_0</m> and <m>x</m> such that
+<men xml:id="eq-taylor-to-prove">
+\abs{g(x)} \leq |x-x_0|^n \abs{g^{(n)}(x_n)}.
+</men>
+We do this by induction on <m>n \geq 0</m>, the base case <m>n=0</m> being automatic. Suppose then that <xref ref="eq-taylor-to-prove"/> holds for <m>n-1</m>, so that there exists <m>x_{n-1}</m> between <m>x_0</m> and <m>x</m> such that
+<me>
+\abs{g(x)} \leq |x-x_0|^{n-1} \abs{g^{(n-1)}(x_{n-1})}.
+</me>
+Applying the mean value theorem to <m>g^{(n-1)}</m>, there exists <m>x_{n}</m> between <m>x_0</m> and <m>x_{n-1}</m> such that
+<me>
+g^{(n-1)}(x_{n-1}) = g^{(n-1)}(x_{0}) + (x_{n-1}-x_0) g^{(n)}(x_n) = (x_{n-1}-x_0) g^{(n)}(x_n).
+</me>
+Since <m>x_{n-1}</m> is between <m>x_0</m> and <m>x</m>, we must have that <m>x_{n}</m> is between <m>x_0</m> and <m>x</m> and
+<me>
+|x_{n-1}-x_0|\leq |x-x_0|
+</me>.
+Therefore
+<me>
+\abs{g(x)} \leq |x-x_0|^{n-1} \abs{(x_{n-1}-x_0) g^{(n)}(x_n)} \leq |x-x_0|^{n} \abs{g^{(n)}(x_n)},
+</me>
+as required.
+</proof>
+</theorem>
+<remark>
+<title>Taylor with improved remainder</title>
+With a slightly longer proof, one can actually improve our statement of Taylor's theorem to the following.
+<theorem xml:id="thm-strong-taylor">
+<title>Strong Taylor (non-examinable)</title>
+					<statement>
+					Let <m>f : (a,b) \to \R</m> be a function which is <m>n</m>-times differentiable and let <m>x_0, x \in (a,b)</m>. Then there exists <m>x_n</m> between <m>x_0</m> and <m>x</m> such that
+<md>
+<mrow>
+f(x) = f(x_0) + (x-x_0)f'(x_0)  + \dots + \amp \trecip{(n-1)!} (x-x_0)^{n-1} f^{(n-1)}(x_0)
+</mrow>
+<mrow>
+\amp + \trecip{n!}(x-x_0)^nf^{(n)}(x_n).
+</mrow>
+</md>
+</statement>
+</theorem>
+</remark>
+					</solution>
+				</task>
+			</exercise>
+			<exercise>
+				<title>The inverse function theorem</title>
+				<task>
+					<statement>State and prove how differentiable functions with continuous inverse have a differentiable inverse.</statement>
+					<solution>
+					<theorem xml:id="thm-inverse-fn-1">
+<title>Inverse function theorem</title>
+<statement>
+ Let <m>f: (a,b) \to (c,d)</m> be a bijective function and let  <m>x_0 \in (a,b)</m>. Suppose that <m>f^{-1}</m> is continuous at <m>y_0:=f(x_0)</m> and that <m>f</m> is differentiable at <m>x_0</m> with 
+<me>
+f'(x_0) \neq 0.
+</me>
+ Then <m>f^{-1}</m> is differentiable at <m>y_0</m> with derivative
+<men xml:id="eq-inv-formula">
+\brac{f^{-1}}'(y_0) = \recip{f'(x_0)}.
+</men>
+</statement>
+<proof>
+By the sequential characterisation of differentiability (<xref ref="prop-seq-diff"/>), we are required to prove that if <m>(y_n)_{n=1}^\infty</m> is a sequence in <m>(c,d)\setminus\set{y_0}</m> with <m>y_n \to y_0</m>, then
+<me>
+\frac{f^{-1}(y_n) - f^{-1}(y_0)}{y_n-y_0} \to \recip{f'(x_0)}.
+</me>
+ Since <m>f</m> is bijective, for each <m>y_n\in (c,d)\setminus\set{y_0}</m> there exists <m>x_n \in (a,b)\setminus\set{x_0}</m> such that <m>f(x_n) = y_n</m>.
+ Thus <m>(x_n)_{n=1}^\infty</m> is a sequence in <m>(a,b)\setminus\set{x_0}</m>.
+ Since <m>f^{-1}</m> is continuous at <m>y_0</m> we have
+<me>
+x_n = f^{-1}(y_n) \to f^{-1}(y_0) = x_0.
+</me>
+ Since <m>f</m> is differentiable at <m>x_0</m>, it follows that
+<me>
+\frac{f(x_n)-f(x_0)}{x_n-x_0} \to f'(x_0).
+</me>
+ Since <m>f'(x_0) \neq 0</m>, it follows from the reciprocal rule for limits (<xref ref="prop-recip-rule"/>) that 
+<me>
+\frac{f^{-1}(y_n)-f^{-1}(y_0)}{y_n-y_0} = \frac{x_n-x_0}{f(x_n)-f(x_0)}\to \recip{f'(x_0)}.
+</me>
+</proof>
+</theorem>
+					</solution>
+				</task>
+			</exercise>
+			<exercise>
+				<title>Differentiability of power series</title>
+				<task>
+					<statement>State and prove how power series are infinitely differentiable within their radius of convergence.</statement>
+					<solution>
+					<theorem xml:id="cor-power-diff">
+					<title>Power series are infinitely differentiable within radius of convergence</title>
+					<statement>
+ Let <m>(a_n)_{n=0}^\infty</m> be a sequence of real numbers.
+ Let <m>R \in [0, \infty]</m> denote the radius of convergence (see <xref ref="thm-radius"/>) of the corresponding power series:
+<men xml:id="eq-power-fn-2">
+f(x) := \sum_{n =0}^\infty a_n x^n.
+</men>
+ Then for any <m>m \in \Z_{\geq0}</m> the function <m>f : (-R, R) \to \R</m> given by <xref ref="eq-power-fn-2"/> is <m>m</m>-times differentiable.
+ Moreover, for any <m>x_0 \in (-R, R)</m> we have the formula
+<men xml:id="eq-nth-power-deriv">
+f^{(m)}(x_0) = \sum_{n = m}^\infty n(n-1)\dotsm (n-m+1)a_n x_0^{n-m}
+</men>
+where the right-hand side of <xref ref="eq-nth-power-deriv"/> is absolutely convergent.
+</statement>
+<proof>
+<p>
+ We prove the result for <m>m=1</m> and note that the general case then follows by re-applying the <m>m=1</m> case <m>m</m> times.
+ </p>
+<p>
+In proving the <m>m=1</m> case, let us first show that the right-hand side of <xref ref="eq-nth-power-deriv"/> is absolutely convergent. 
+ Let <m>r</m> be a real number satisfying 
+ <m>|x_0| \lt  r \lt  R</m>.
+ Such a number exists since <m>|x_0| \lt  R</m>, for instance we could set
+ <me>
+ r:=\frac{|x_0|+R}{2}
+ </me>.
+ We claim that the following infinite series is  convergent
+<men xml:id="eq-squared-series">
+\sum_{n=2}^\infty n^2 |a_n| r^{n-2}.
+</men>
+ To see this, let <m>r_1</m> be a real satisfying <m>r \lt  r_1 \lt  R</m>.
+ Then 
+<me>
+\sum_{n=2}^\infty n^2 |a_n| r^{n-2} \leq r^{-2}\sum_{n=2}^\infty n^2 (r/r_1)^n |a_n| r_1^n.
+</me> 
+ Since exponentials beat polynomials (<xref ref="prop-exp-poly"/>), we have that <m>n^2 (r/r_1)^n \to 0</m>, in particular the sequence <m>n^2 (r/r_1)^n</m> is bounded.
+ It follows from the comparison test (<xref ref="prop-oh-test"/>) and absolute convergence of <xref ref="eq-power-fn-2"/> that <xref ref="eq-squared-series"/> converges.
+ Again by the comparison test (<xref ref="prop-oh-test"/>), this implies absolute convergence of
+<me>
+\sum_{n=1}^\infty n a_n x^{n-1}.
+</me>
+</p>
+<p>
+With the above facts on absolute convergence established, we are able to prove the <m>m=1</m> case of <xref ref="eq-nth-power-deriv"/>. By linearity of series (<xref ref="prop-lin-series"/>), for <m>x \in [-r,r]</m> with <m>x\neq x_0</m> we have
+<me>
+\frac{f(x) - f(x_0)}{x-x_0} - \sum_{n=1}^\infty na_n x_0^{n-1} 
+ = \recip{x-x_0}\sum_{n=2}^\infty a_n \sqbrac{x^n-x_0^n-(x-x_0)nx_0^{n-1}}
+ </me>.
+ By Taylor's theorem (<xref ref="thm-taylor"/>), for each <m>n\in \N</m> there exists <m>x_n</m> between <m>x_0</m> and <m>x</m> such that
+ <me>
+ \abs{x^n-x_0^n-(x-x_0)nx_0^{n-1}} \leq n(n-1)|x-x_0|^2|x_n|^{n-2}\leq n^2|x-x_0|^2r^{n-2}
+ </me>.
+ Therefore
+ <me>
+\abs{\frac{f(x) - f(x_0)}{x-x_0} - \sum_{n=1}^\infty na_n x_0^{n-1}}
+ \leq \abs{x-x_0}\sum_{n=2}^\infty n^2|a_n|r^{n-2}
+ </me>.
+ It follows that <xref ref="def-differentiable"/> is satisfied on taking
+ <me>
+ \delta(x_0, \eps) := \min\set{\frac{\eps}{\sum_{n=2}^\infty n^2|a_n|r^{n-2}}, r-|x_0|} \gt 0
+ </me>.
+ </p>
+</proof>
+</theorem>
+					</solution>
+				</task>
+			</exercise>
+			<p>
+			In this week's <em>workshop</em> you will be asked to write-up (under exam conditions) two of the following:
+				<ul>
+					<li>
+					This question is a variant of <xref ref="ex-alg-diff"/>. Let <m>f,g :\R\to\R</m> be functions which are both differentiable at 0 with <m>f'(0)=1</m> and <m>g'(0)=0</m>. Without using the product rule for differentiation, prove that the product <m>fg</m> satisfies the definition of differentiability at 0, with <m>(fg)'(0) = g(0)</m>.
+					</li>
+					<li>
+					This question is a variant of <xref ref="ex-mono-diff"/>. Let <m>f,g:[0,1]\to \R</m> be continuous functions which are differentiable on <m>(a,b)</m>. Suppose that <m>f'(x) \geq g'(x)</m> for all <m>x\in[0,1]</m>. Use the mean value theorem to prove that <m>f(1) + g(0) \geq f(0) + g(1)</m>.
+					</li>
+					<li>
+					This question is a variant of <xref ref="ex-taylor"/>. Let <m>f:\R\to\R</m> be a function which is <m>n</m>-times differentiable and suppose that
+					<me>
+					f(0) = f'(0) = \dots = f^{(n-1)}(0)=0
+					</me>.
+					Without using the statement of Taylor's theorem, but by modifying the proof, prove that for all <m>x\gt 0</m> there exists <m>x_n \in (0,x)</m> such that
+					<me>
+					\abs{f(x)} \leq x^n \abs{f^{(n)}(x_n)}.
+					</me>
+					</li>
+				</ul>
+			</p>
+		</section>

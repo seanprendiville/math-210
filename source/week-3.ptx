@@ -1,0 +1,721 @@
+<?xml version='1.0' encoding="utf-8"?>
+<!--
+% !TEX TS-program = PreTeXt-HTML
+-->
+<section xml:id="week-3" xmlns:xi="http://www.w3.org/2001/XInclude">
+			<title>Week 3</title>
+			<subsection>
+<title>Self-test questions</title>
+</subsection>
+			<exercise>
+			<title>Sequences tending to infinity</title>
+				<task xml:id="ex-def-tend-infty">
+					<statement>
+					Define what it means for a sequence of real numbers to tend to positive infinity.
+					</statement>
+					<solution>
+						<definition xml:id="def-seq-div-inf">
+							<title>Tending to <m>\pm\infty</m></title>
+						Given a sequence of real numbers <m>(a_n)_{n=1}^\infty</m> we write 
+						<me>
+						a_n \to \infty\text{ as } n \to \infty
+						</me>,  
+						or 
+						<me>
+						\lim_{n\to \infty} a_n = \infty
+						</me>,
+						if 
+							<men xml:id="eq-seq-div-inf">
+							(\forall M >0)( \exists N = N(M))( \forall n \geq N)[a_n \geq M].
+							</men>
+						We write 
+						<me>
+						a_n \to -\infty\text{ as } n \to \infty
+						</me>,  
+						if 
+							<me>
+							(\forall M >0)( \exists N =N(M))( \forall n \geq N)[a_n \leq -M].
+							</me>
+						</definition>
+						<example xml:id="eg-arch-seq">
+							<title>A sequence tending to <m>\infty</m></title>
+						Set <m>a_n: = n</m> for each <m>n \in \N</m>. Then we claim that <m>a_n \to \infty</m> as <m>n \to \infty</m>. To prove this, we must verify that <xref ref="eq-seq-div-inf"/> holds. To this end, fix <m>M \gt 0</m>. We must find <m>N = N(M) \in \N</m> such that 
+						<men xml:id="eq-const-to-prove-1">
+						n \geq N(M)\implies a_n\geq M
+						</men>.
+						Since <m>a_n =n \geq N</m>, we may take <m>
+N(M) :=\ceil{M}</m> to yield <xref ref="eq-const-to-prove-1"/>.
+						</example>
+						<example>
+							<title>An unbounded sequence which does not tend to <m>\infty</m></title>
+						Set <m>a_n:=(-1)^n n</m> for each <m>n</m>. The sequence has no upper bound, since for any <m>M\in \R</m>, taking <m>n:=\max\set{2\ceil{M},2}</m> gives an even positive integer satisfying
+							<me>a_n = (-1)^{n}n= n\gt M
+							</me>. 
+							We claim that it is not the case that <m>a_n\to\infty</m> as <m>n\to\infty</m>. To establish this we must show that <xref ref="eq-seq-div-inf"/> does not hold, i.e. that
+						<me>
+						(\exists M >0)(\forall N \in \N)(\exists n = n(N) \geq N)[a_n \lt M]
+						</me>.
+						To this end, set <m>M:=1\gt0</m> and let <m>N\in \N</m> be arbitrary. Then taking <m>n=n(N):= 2N+1</m> we have
+						<me>
+						a_n = -(2N+1) \lt 1 = M
+						</me>,
+						as required.
+						</example>
+					</solution>
+				</task>
+			</exercise>
+			<exercise>
+				<title>(One-sided) sandwich rule</title>
+					<statement>
+					State and prove the "one-sided sandwich rule" for sequence limits.
+					</statement>
+					<solution>
+						<proposition xml:id="cor-sandwich">
+							<title>One-sided sandwich</title>
+							<statement>
+							Let <m>(a_n)_{n=1}^\infty</m> and <m>(b_n)_{n=1}^\infty</m> be sequences of real numbers. Suppose that for all <m>n \in \N</m> we have <m>a_n \leq b_n </m> and that <m>a_n \to \infty</m>. Then <m>b_n \to \infty</m>.
+							</statement>
+							<proof>
+							By definition of tending to infinity (<xref ref="def-seq-div-inf"/>), we are required to prove that
+							<men xml:id="eq-seq-div-inf-bn">
+							(\forall M >0)( \exists N_1 = N_1(M) \in \N)( \forall n \geq N_1)[b_n \geq M]
+							</men>.
+							Since <m>a_n\to\infty</m>, we know that
+							<me>
+							(\forall M >0)( \exists N_2 = N_2(M) \in \N)( \forall n \geq N_2)[a_n \geq M]
+							</me>.
+							We also know that <m>b_n\geq a_n</m> for all <m>n</m>. Setting <m>N_1(M) := N_2(M)</m>, we deduce that for <m>n\geq N_1(M)</m> we have 
+							<me>
+							b_n \geq a_n \geq M
+							</me>.
+							This yields <xref ref="eq-seq-div-inf-bn"/>.
+							</proof>
+						</proposition>
+					</solution>
+				</exercise>
+			<exercise>
+			<title>Rules for combining sequences tending to infinity</title>
+			<task>
+			<statement>
+			State and prove a "scaling rule" for sequences tending to infinity.
+			</statement>
+			<solution>
+			<proposition xml:id="prop-inf-scaling">
+			<statement>
+			If <m>(a_n)_{n=1}^\infty</m> is a sequence of real numbers with <m>a_n\to \infty</m> as <m>n \to \infty</m>, then for any <m> c>0</m> we have <m> ca_n\to \infty</m> as <m>n\to \infty</m>.
+			</statement>
+			<proof>
+			By definition of tending to infinity (<xref ref="def-seq-div-inf"/>), given <m>M\gt 0</m> we must find <m>N = N(M)</m> such that if <m>n\geq N(M)</m> then <m>ca_n\geq M</m>. Since <m>c\gt 0</m>, the latter is equivalent to <m>a_n\geq M/c</m>. Since <m>a_n\to\infty</m>, we can find <m>N_1 = N_1(M/c)</m> such that if <m>n\geq N_1(M/c)</m> then <m>a_n \geq M/c</m>. Hence the proof is complete on setting <m>N(M) := N_1(M/c)</m>.
+			</proof>
+			</proposition>
+			</solution>
+			</task>
+			<task>
+			<statement>
+			State and prove a "multiplication rule" where at least one of the sequences tends to infinity.
+			</statement>
+			<solution>
+			<proposition>
+			<statement>
+			Let <m>(a_n)_{n=1}^\infty</m> and <m>(b_n)_{n=1}^\infty</m> be sequences of reals. Suppose that <m>a_n\to \infty</m> as <m>n\to \infty</m>. Suppose also that <m>(b_n)_{n=1}^\infty</m> is eventually bounded away from zero<fn>For example, if <m>b_n \to b</m> for some <m> b \gt 0</m>.</fn>, in that
+			<men xml:id="eq-unif-below">
+			(\exists \delta \gt 0)(\exists N \in \N)(\forall n \geq N)[b_n \geq \delta].
+			</men>
+			Then <m>a_nb_n \to \infty</m> as <m>n\to \infty</m>.
+			</statement>
+			<proof>
+			Since <m>a_n \to \infty</m>, the sequence is eventually positive, in that there is some <m>N_1</m> such that if <m>n\geq N_1</m> then <m>a_n\gt 0</m>. If <m>N</m> denotes the quantity appearing in <xref ref="eq-unif-below"/>, then for all <m> n\geq \max\set{N_1, N}</m> we have
+			<m>
+			a_nb_n \geq a_n\delta
+			</m>. By the scaling rule (<xref ref="prop-inf-scaling"/>) we have <m>a_n\delta \to \infty</m>, so by the (one-sided) sandwich rule (<xref ref="cor-sandwich"/>) we have <m>a_nb_n\to \infty</m>.
+			</proof>
+			</proposition>
+			</solution>
+			</task>
+			<task>
+			<statement>
+			State and prove an "addition rule" where at least one of the sequences tends to infinity.
+			</statement>
+			<solution>
+			<proposition>
+			<statement>
+			Let <m>(a_n)_{n=1}^\infty</m> and <m>(b_n)_{n=1}^\infty</m> be sequences of reals. Suppose that <m>a_n\to \infty</m> as <m>n\to \infty</m>. Suppose also that <m>(b_n)_{n=1}^\infty</m> is  bounded below. Then <m>a_n+b_n \to \infty</m> as <m>n\to \infty</m>.
+			</statement>
+			<proof>
+			<p>
+			Given <m>M \gt 0</m>, we would like to find <m>N=N(M)</m> such that if <m>n \geq N(M)</m> then <m>a_n+b_n \geq M</m>. 
+			</p>
+			<p>
+			We know both of the following hold:
+			<me>
+			(\forall M \gt 0)(\exists N_1 = N_1(M))(\forall n\geq N_1)[a_n\geq M]
+			</me>,
+			<me>
+			(\exists M_1 \in \R)(\forall n \in \N)[b_n \geq M_1].
+			</me>
+			Thus for all <m>n\in \N</m> we have <m> a_n + b_n \geq a_n + M_1</m>, so that if <m>n \geq N_1(M-M_1)</m> we have 
+			<m>
+			a_n+b_n \geq (M-M_1) + M_1 = M.
+			</m>
+			Thus the result follows on taking <m>N(M):=N_1(M-M_1)</m>. 
+			</p>
+			<p>
+			(Notice that this implicitly assumes that <m>M\gt M_1</m>. The proof can be easily modified if this is not the case. Try it!)
+			</p>
+			</proof>
+			</proposition>
+			</solution>
+			</task>
+			<task>
+					<statement>
+					State and prove a "reciprocal rule" for sequences of positive numbers which tend to infinity.
+					</statement>
+					<solution>
+						<proposition xml:id="prop-inf-recip-rule">
+							<title>Infinite reciprocal rule</title>
+							<statement>
+							Let <m>(a_n)_{n=1}^\infty</m> be a sequence of <em>positive</em> real numbers. Suppose that  <m>\displaystyle \lim_{n \to \infty} a_n</m>
+ exists. Then
+								<me>
+ 								\lim_{n \to \infty} \brac{\frac{1}{a_n}} = 
+									\begin{cases} \infty \amp \text{if }\quad \lim_{n\to \infty} a_n = 0,\\
+									0 \amp \text{if }\quad  \lim_{n\to \infty} a_n = \infty.
+									\end{cases}
+								</me>
+							</statement>
+							<proof>
+							Let <m>\displaystyle a : = \lim_{n \to \infty}a_n</m>.
+								<case>
+									<title> Case 1 (<m>a = 0</m>)</title>
+								Fix <m>M \gt 0</m> and set <m>\eps := \recip{M} \gt 0</m>.
+ Then by <xref ref="def-seq-limit"/> there exists <m>N = N(\eps)</m> such that for all <m>n \geq N</m> we have <m>a_n = |a_n| \leq \eps</m>.
+ Hence if <m>n \geq N(\eps)</m> then 
+<me>
+\trecip{a_n} \geq \trecip{\eps} = M.
+</me>
+ It follows that <m>1/a_n \to \infty</m> according to <xref ref="def-seq-div-inf"/>.
+								</case>
+							
+								<case>
+									<title>Case 2 (<m>a=\infty</m>)</title>
+ Fix <m>\eps \gt 0</m> and set <m>M := 1/\eps</m>. 
+ Then by <xref ref="def-seq-div-inf"/> there exists <m>N(M) \in \N</m> such that for all <m>n \geq N(M)</m> we have <m>a_n \geq M</m>.
+ Hence for all <m>n \geq N(M)</m> we have <m>|1/a_n| = 1/a_n \leq 1/M = \eps</m>.
+ It follows that <m>1/a_n \to 0</m> according to <xref ref="def-seq-limit"/>.
+								</case>
+							</proof>
+						</proposition>
+						<example>
+						<title>A sequence tending to zero whose reciprocal does not tend to infinity</title>
+						<xref ref="prop-inf-recip-rule"/> requires us to assume that the terms of the sequence are positive because of examples like <m> a_n := (-1)^n/n</m>. This gives a sequence with <m>a_n\to0</m>, yet <m>1/a_n \not\to \pm \infty</m>.
+						</example>
+					</solution>
+				</task>
+			</exercise>
+			<exercise>
+				<title>Exponential "beats" polynomial</title>
+					<statement>
+					State and prove how exponential sequences "beat" polynomial sequences.
+					</statement>
+					<solution>
+					<proposition xml:id="prop-exp-poly">
+							<title>Exponential beats polynomial</title>
+							<statement>
+							Let <m>d \in \N</m> and <m>x \in (1, \infty)</m>. Then
+								<me>
+								\frac{x^n}{n^d} \to \infty \quad \text{ as }\quad n \to \infty.
+								</me>
+							</statement>
+							<proof>
+ 							For <m>n \gt d</m>, we may use the binomial theorem to deduce that
+								<men xml:id="eq-weak-bernoulli-2">
+								x^n = (1 + (x-1))^n \geq \binom{n}{d+1} (x-1)^{d+1}
+								</men>
+ 							With inequality <xref ref="eq-weak-bernoulli-2"/> in hand, there are many ways to proceed (try it yourself!). What follows is one possible argument. By <xref ref="eq-weak-bernoulli-2"/> we have 
+								<me>
+								\frac{x^n}{n^d} \geq \frac{(x-1)^{d+1}}{(d+1)!}\times \frac{n(n-1)\dots (n-d)} { n^d}\geq \frac{(x-1)^{d+1}}{(d+1)!}\times \frac{n(n-d)^d}{ n^d}  .
+								</me>
+							For <m>n \geq 2d</m> we have <m>1-\frac{d}{n} \geq 1/2</m>, therefore
+								<me>
+								\frac{(n-d)^d}{n^d} = \brac{1 - \frac{d}{n}}^d\geq  (1/2)^d.
+								</me>
+							Thus for all <m>n \geq 2d</m> we have
+								<men xml:id="eq-binom-inc-lower">
+								\frac{x^n}{n^d}  \geq  \frac{(x-1)^{d+1}}{(d+1)!2^d}\times n.
+								</men>
+							Since the factor 
+								<me>
+								\frac{(x-1)^{d+1}}{(d+1)!2^d}
+								</me>
+							is independent of <m>n</m>, the sequence on the right-hand side of <xref ref="eq-binom-inc-lower"/> takes the form <m>cn</m> for some fixed <m>c\gt 0</m>. Thus the scaling rule (<xref ref="prop-inf-scaling"/>) gives that 
+								<me>
+								\frac{(x-1)^{d+1}}{(d+1)!2^d}\times n \to \infty \quad \text{as} \quad  n \to \infty.
+								</me>
+							Hence by the one-sided sandwich rule (<xref ref="cor-sandwich"/>) we have
+								<me>
+								\frac{x^n}{n^d} \to \infty \quad\text{as} \quad n \to \infty.
+								</me>
+							</proof>
+						</proposition>
+					</solution>
+			</exercise>
+			<exercise>
+				<title>Monotone divergence principle</title>
+					<statement>
+					State and prove a monotone divergence principle.
+					</statement>
+					<solution>
+						<proposition xml:id="prop-mono-div">
+							<title>Monotone divergence principle</title>
+							<statement>
+	Let <m>(a_n)_{n=1}^\infty</m> be a sequence of real numbers. Suppose that the sequence is <em>increasing</em> and <em>not</em> bounded above. Then <m>a_n \to \infty</m> as <m>n\to \infty</m>.
+							</statement>
+							<proof>
+							Negating the definition of bounded above (<xref ref="def-upper-bound"/>) gives
+<me>
+(\forall M \in \R)(\exists N = N(M) \in \N)[a_N \gt M].
+</me> 
+ Since the sequence is increasing, if <m>n \geq N(M)</m>  then <m>a_n \geq a_N \geq M</m>.
+ We therefore conclude that
+<me>
+(\forall M >0)(\exists N = N(M) \in \N)(\forall n \geq N)[a_n \geq M].
+</me> 
+ Hence by definition we have <m>a_n \to \infty</m> (see <xref ref="def-seq-div-inf"/>).
+							</proof>
+						</proposition>
+						
+					</solution>
+			</exercise>
+
+			<exercise>
+				<title>Subsequences</title>
+				<task>
+					<statement>
+					Define what it means to be a <em>subsequence</em> of a sequence.
+					</statement>
+					<solution>
+						<definition>
+							<title>Subsequence</title>
+							<statement>
+								<p>
+								Let <m>(a_n)_{n=1}^\infty</m> and <m>(b_n)_{n=1}^\infty</m> be real sequences.
+ We say that <m>(b_n)_{n=1}^\infty</m> is a subsequence of <m>(a_n)_{n=1}^\infty</m> if there exists a strictly increasing (see <xref ref="def-monotone"/>) function <m>k : \N \to \N</m> such that
+<me>
+(\forall n \in \N)[b_n = a_{k(n)}].
+</me>
+								</p>
+								<p>
+ We often write <em>"let <m>(a_{k(n)})_{n =1}^\infty</m> be a subsequence of <m>(a_n)_{n=1}^\infty</m>"</em> to mean that <m>k : \N \to \N</m> is a strictly increasing function.
+ </p>
+ <p>
+ To save on brackets (at the cost of multiple subscripts) we may also write  <em>"let <m>(a_{k_n})_{n =1}^\infty</m> be a subsequence of <m>(a_n)_{n=1}^\infty</m>"</em> to mean that the function <m>\N \to \N</m> given by <m>n \mapsto k_n</m> is strictly increasing, so that
+<me>
+ k_1 \lt  k_2 \lt  k_3 \lt  \dots
+</me>
+</p>
+</statement>
+</definition>
+<remark xml:id="lem-inc-bound">
+If <m>k_1 \lt  k_2 \lt  k_3 \lt  \dots</m> is a strictly increasing sequence of natural numbers, then 
+<me>
+(\forall n \in \N)[k_n \geq n].
+</me>
+<proof>
+ We proceed by induction on <m>n</m>.
+ The base case <m>k_1 \geq 1</m> is true because <m>k_1 \in \N</m>.
+ As induction hypothesis, suppose that <m>k_{n-1} \geq n-1</m>.
+ Since <m>k_n \gt k_{n-1}</m> we have that <m>k_n \geq k_{n-1} +1 \geq (n-1) + 1 = n</m>.
+ This proves the induction step, completing the proof. 
+</proof>
+</remark>
+					</solution>
+				</task>
+				<task xml:id="ex-subseq-limit">
+					<statement>
+					State and prove how limits are preserved on passing to subsequences.
+					</statement>
+					<solution>
+						<proposition xml:id="prop-subseq-conv">
+							<title>Limits are preserved on passing to subsequences</title>
+							 <statement>
+							 Let <m>(a_n)_{n=1}^\infty</m> be a real sequence with <m>a_n \to a</m>.
+ Suppose that <m>(k_n)_{n=1}^\infty</m> is a sequence of positive integers (not necessarily strictly increasing) such that <m>k_n \to \infty</m>.
+ Then <m>a_{k_n} \to a</m> as <m>n \to \infty</m>.
+ In particular, any subsequence  <m>(a_{k_n})_{n =1}^\infty</m> of  <m>(a_n)_{n=1}^\infty</m> tends to the same limit.
+ 							</statement>
+							<proof>
+ We prove the result for <m>a \in \R</m> and leave the cases in which <m>a = \pm \infty</m> to the reader.
+ We know that 
+<me>
+(\forall \eps \gt 0)(\exists N_1 = N_1(\eps) \in \N)(\forall n \geq N_1)[|a-a_n| \leq \eps].
+</me>
+ We are required to prove that 
+<me>
+(\forall \eps \gt 0)(\exists N_2 = N_2(\eps) \in \N)(\forall n \geq N_2)[|a-a_{k_n}| \leq \eps].
+</me>
+ Since <m>k_n \to \infty</m>, for any <m>N \in \N</m> there exists <m>N_0  = N_0(N)</m> such that <m>n \geq N_0</m> implies <m>k_n \geq N</m>.
+ We therefore obtain the required <m>N_2</m> on setting
+<me>
+N_2(\eps) := N_0\bigbrac{N_1(\eps)}. 
+</me>
+</proof>
+</proposition>
+<example>
+<title>Sequences may not have the same limit as their subsequences</title>
+If a subsequence tends to a limit <m>a_{k_n} \to a</m>, it may not be the case that <m>a_n\to a</m>. For instance, the sequence <m>a_n:=(-1)^n</m> has a  subsequence tending to 1, but is not itself convergent.
+</example>
+					</solution>
+				</task>
+				<task xml:id="cor-last-case">
+					<statement>
+						Prove that for <m>x \leq -1</m> the limit <m>\lim_{n\to \infty} x^n</m> does not exist.
+					</statement>
+					<solution>
+					By way of contradiction, suppose that <m>x^n \to a</m> as <m>n \to \infty</m>.
+ Since passing to a subsequence does not change the limit, we have
+<me>
+\lim_{n\to \infty} x^{2n +1} = a = \lim_{n \to \infty} x^{2n}.
+</me>
+ Yet for even exponents, we have
+<me>
+x^{2n} = |x|^{2n} \geq 1.
+</me>
+ Similarly odd exponents give that
+<me>
+x^{2n+1} = -|x|^{2n+1}\leq -1.
+</me>
+ Hence by the inequality rule (<xref ref="prop-ineq-rule"/>) we have the contradiction that
+<me>
+a \leq -1 \lt  1 \leq a.
+</me>
+
+					</solution>
+				</task>
+			</exercise>
+			<exercise>
+				<title>Erdős-Szekeres and Bolzano-Weierstrass</title>
+				<task>
+					<statement>
+					State the <em>Erdős-Szekeres</em> theorem (the proof is non-examinable).
+					</statement>
+					<solution>
+						<theorem xml:id="thm-erd-sz">
+							<title>Erdős-Szekeres</title>
+							<statement>
+							Every sequence of real numbers has a monotonic subsequence.
+							</statement>
+							<proof>
+							<title>Non-examinable proof</title>
+							<p>
+							A useful trick in proving this theorem is to define a notion that we call being a "viewpoint":
+							</p>
+							<p>
+ We say that <m>k \in \N</m> is a <em>viewpoint</em><fn>Think of the <m>a_n</m> as marking out the height of a mountain located at <m>n</m>; a viewpoint is precisely a summit whose view rightwards is not impeded by any other mountains.</fn> if <m>(\forall n \geq k)[a_k\geq a_n]</m>.
+ If there are infinitely many viewpoints <m>k_1 \lt  k_2 \lt  k_3 \lt  \dots</m> then the subsequence <m>(a_{k_n})_{n=1}^\infty</m> is decreasing.
+ We may therefore suppose that there are only finitely many viewpoints.
+ In particular, there exists <m>k_0\geq 0</m> such that no <m>n \gt k_0</m> is a viewpoint, so that there exists a higher point <m>a_m</m> to the right of <m>a_n</m>. More precisely:
+<me>
+(\forall n \gt k_0)(\exists m(n) \gt n)[ a_{m(n)} \gt a_n  ].
+</me>
+ Let us recursively define <m>k_n</m> as follows: <m>k_1 := k_0+1</m> and if <m>k_n</m> has been defined then we set <m>k_{n+1} := m(k_n)</m>.
+ Then <m>k_1 \lt  k_2 \lt  \dots</m> is strictly increasing and for each <m>n\in \N</m> we have
+<me>
+a_{k_{n+1}} = a_{m(k_n)} \gt a_{k_n}.
+</me>
+ Hence <m>(a_{k_n})_{n=1}^\infty</m> is an increasing sequence.
+</p>
+</proof>
+</theorem>
+					</solution>
+				</task>
+				<task>
+					<statement>
+					State and prove the <em>Bolzano-Weierstrass</em> theorem as a corollary.
+					</statement>
+					<solution>
+						<corollary xml:id="cor-bolzano">
+							<title>Bolzano-Weierstrass theorem</title>
+							<statement>
+Every bounded sequence of real numbers has a convergent subsequence.
+</statement>
+</corollary>
+						<proof>
+ Let <m>(a_n)_{n =1}^\infty</m> be a bounded sequence of real numbers.
+ By the definition of convergence (<xref ref="def-seq-limit"/>), we are required to demonstrate the existence of a real number <m>a</m> and a subsequence <m>(a_{k_n})_{n = 1}^\infty</m> such that <m>a_{k_n} \to a</m> as <m>n \to \infty</m>.
+ By the Erdős-Szekeres theorem (<xref ref="thm-erd-sz"/>) there exists a monotonic subsequence <m>(a_{k_n})_{n = 1}^\infty</m>.
+ Since this subsequence is bounded and monotonic, it tends to a real number <m>a \in \R</m> by the monotone convergence principle (<xref ref="prop-mono-lim"/>).
+ 						</proof>
+					</solution>
+				</task>
+			</exercise>
+			<exercise>
+				<title>Cauchy Sequences</title>
+				<task>
+					<statement>
+					Define a <em>Cauchy sequence</em>.
+					</statement>
+					<solution>
+						<definition xml:id="def-cauchy">
+						<title>Cauchy sequence</title>
+We say that a sequence of real numbers <m>(a_n)_{n=1}^\infty</m> is <em>Cauchy</em> if 
+<me>
+(\forall \eps \gt 0)(\exists N = N(\eps))(\forall m,n \geq N)[|a_m-a_n| \leq \eps].
+</me>
+</definition>
+					</solution>
+				</task>
+				<task xml:id="ex-cauchy">
+					<statement>
+					State how being a Cauchy sequence is equivalent to being convergent, and prove that convergence implies being Cauchy (the proof that Cauchy implies convergence is non-examinable).
+					</statement>
+					<solution>
+					<proposition xml:id="prop-cauchy">
+						<title>Cauchy is equivalent to convergence</title>
+						<statement>
+A sequence of real numbers <m>(a_n)_{n=1}^\infty</m> is Cauchy (<xref ref="def-cauchy"/>) if and only if it is convergent (<xref ref="def-seq-limit"/>).
+						</statement>
+						<proof>
+						<p>
+ Let us first prove the "only if" or "<m>\impliedby</m>" direction. 
+ Fix <m>\eps \gt 0</m>.
+ By definition of convergence (<xref ref="def-seq-limit"/>) there exists <m>N = N(\eps/2) \in \N</m> such that for all <m>n \geq N</m> we have <m>|a_n - a| \leq \eps/2</m>.
+ Thus by the triangle inequality, if <m>n, m\geq N</m> then 
+<me>
+|a_n -a_m| \leq |a_n-a| + |a-a_m| \leq \eps/2 + \eps/2 = \eps.
+</me>
+ Hence the sequence is Cauchy.
+ </p>
+ <p>
+ <em>Non-examinable:</em> Next, let us first prove the "if" or "<m>\implies</m>" direction. Suppose that <m>(a_n)_{n=1}^\infty</m> is Cauchy.
+ We first claim that the sequence is bounded.
+ Taking <m>\eps := 1</m> in the definition of being Cauchy (<xref ref="def-cauchy"/>) there exists <m>N</m> such that for all <m>n\geq N</m> we have <m>|a_n-a_N| \leq 1</m>.
+ Hence by the triangle inequality, for all <m>n\geq N</m> we have 
+<me>
+|a_n|  = | (a_n-a_N) + a_N| \leq 1 + |a_N|.
+</me>
+ Setting 
+<me>
+M:=  \max\set{|a_1|, \dots, |a_{N-1}|, |a_N| + 1}
+</me>
+we deduce that <m>|a_n| \leq M</m> for all <m>n \in \N</m>, so the sequence is bounded.
+ By the Bolzano-Weierstrass theorem (<xref ref="cor-bolzano"/>) there exists a subsequence <m>(a_{k_n})_{n=1}^\infty</m> which converges to  a real number <m>a</m>. 
+ Let us show that <m>a_n \to a</m> as <m>n \to \infty</m>, or in other words
+<men xml:id="eq-cau-implies-conv-1">
+(\forall \eps \gt 0)(\exists N \in \N)(\forall n \geq N)[|a_n-a| \leq \eps].
+</men>
+ Fix <m>\eps \gt 0</m>. 
+ Since <m>a_{k_n} \to a</m> there exists <m>N_1 = N_1(\eps/2) \in \N</m> such that for all <m>n \geq N_1</m> we have <m>|a_{k_n} - a| \leq \eps/2</m>.
+ Since <m>(a_n)_{n=1}^\infty</m> is Cauchy (<xref ref="def-cauchy"/>) there exists <m>N_2 =  N_2(\eps/2) \in \N</m> such that for all <m>n, m\geq N_2</m> we have <m>|a_n-a_m| \leq \eps/2</m>.
+ Since the <m>(k_n)_n</m> are a strictly increasing sequence of integers,  if <m>n\geq N_2</m> then <m>k_n \geq n \geq N_2</m> also (see <xref ref="lem-inc-bound"/>).
+ Setting <m>N(\eps) := \max\set{N_1, N_2}</m>, if <m>n \geq N</m> then the triangle inequality gives that
+<me>
+ |a_n -a| \leq |a_n - a_{k_n}| + |a_{k_n}-a| \leq \eps.
+</me>
+ This establishes that <m>a_n \to a</m>.
+ </p>
+</proof>
+</proposition>
+					</solution>
+				</task>
+			</exercise>
+<subsection>
+<title>Workshop questions</title>
+<exercise>
+<title>
+True/false workshop quiz
+</title>
+<p>
+In your workshop, you will vote on whether you think each of the following statements is true (thumbs up) or false (thumbs down). For each question, your workshop tutor will ask one of you to briefly justify your vote. This justification can involve giving a counterexample (if false) or outlining which definition/theorem the statement  follows from (if true).
+</p>
+	<task>
+	<statement> The monotone convergence principle states that an increasing and bounded sequence is convergent.  
+	</statement>
+	</task>
+	<task>
+	<statement>One consequence of the inequality rule is that a convergent sequence of positive reals has positive limit.</statement>
+	</task>
+	<task>
+	<statement>The multiplication rule states that the product of two convergent sequences converges to the product of their limits.</statement>
+	</task>
+	<task>
+	<statement>If <m>a_n \to 1</m>, then <m>\exists N</m> such that for all <m>n\geq N</m> we have <m>a_n\geq 1/2</m>.</statement>
+	</task>
+	<task>
+	<statement>For any sequence <m>(a_n)_n</m> with a limit, we have 
+	<me>
+	\lim_{n\to\infty} \recip{a_n} = \recip{\lim_{n\to\infty} a_n}
+	</me>,
+	provided we interpret <m>\recip{\pm\infty} =0</m> and <m>\recip{0} = \infty</m>.
+	</statement>
+	</task>
+	<task>
+	<statement>We have <m>a_n\to \infty</m> if
+	<me>
+	(\forall M > 0)(\exists N = N(M))[a_N\geq M].
+	</me>
+	</statement>
+	</task>
+	<task>
+	<statement>
+	If <m>a_n\to \infty</m> then <m>(a_n)_n</m> is an increasing sequence.
+	</statement>
+	</task>
+	<task>
+	<statement>
+	If <m>a_n \to \infty</m> and all <m>b_n</m> are positive, then <m>a_nb_n \to \infty</m>.
+	</statement>
+	</task>
+	<task>
+	<statement>
+	If <m>a_n \to \infty</m> and all <m>b_n</m> are positive, then <m>a_n+b_n \to \infty</m>.
+	</statement>
+	</task>
+	<task>
+	<statement>
+	By the binomial theorem
+	<me>
+	2^n = (1+1)^n \geq \binom{n}{2} = \trecip{2}n(n-1) \qquad (\forall n \geq 2)
+	</me>.
+	Therefore, for <m> n\geq 2</m> we have
+	<me>
+	\frac{2^n}{n} \geq \trecip{2}(n-1) \to \infty.
+	</me>
+	Hence <m>\frac{2^n}{n}\to \infty</m> by the (one-sided) sandwich rule.
+	</statement>
+	</task>
+	<task>
+	<statement>There exists a sequence <m>(a_n)_n</m> which is bounded below and for which <m>a_n \to \infty</m>.
+	</statement>
+	</task>
+	<task>
+	<statement>
+	The sequence <m>(1,1,2,2,3,3,\dots)</m> is a subsequence of the sequence <m>(1,2,3,4,5,6,\dots)</m>.
+	</statement>
+	</task>
+	<task>
+	<statement>
+	Sequences have the same limit as their subsequences.
+	</statement>
+	</task>
+	<task>
+	<statement>
+	There exist unbounded sequences none of whose subsequences have a limit.
+	</statement>
+	</task>
+	<task>
+	<statement>
+	One consequence of the Bolzano-Weierstrass theorem is that any sequence in <m>(0,1)</m> has a convergent subsequence.
+	</statement>
+	</task>
+	<task>
+	<statement>
+	If <m>(a_n)_n</m> is a Cauchy sequence, then there exists <m>n</m> with <m>a_{n+1}-a_n \in [-0.0001, 0.1]</m>.
+	</statement>
+	</task>
+</exercise>
+<exercise>
+<title>Exam-style self-test question for workshop</title>
+<!--
+	<task>
+		<statement>
+		Define what it means for 1 to be a upper bound for <m>S\subset \R</m>.
+		</statement>
+		<solution>
+		This is a special case of <xref ref="task-upper-lower"/>, with <m>M = 1</m>.
+		</solution>
+	</task>
+-->
+	<task>
+		<statement>
+		Define what it means for 0 to be an infimum for <m>S\subset \R</m>.
+		</statement>
+		<solution>
+		This is a special case of <xref ref="task-sup-inf"/>, with <m>M = 0</m>.
+		</solution>
+	</task>
+	<task>
+		<statement>
+		Justify why a set has a supremum if it contains at least one negative number and no positive numbers.
+		</statement>
+		<solution>
+		This is a special case of <xref ref="completeness-principle"/>.
+		</solution>
+	</task>
+	<!--
+	<task>
+			<statement>
+			Define what it means for <m>S</m> to have a maximum.
+			</statement>
+					<solution>
+		See <xref ref="ex-max-min"/>.
+		</solution>
+	</task>
+	-->
+	<task>
+			<statement>
+			Give an example of a set which contains at least one negative number, no positive numbers and which does not have a maximum.
+			</statement>
+			<solution>
+		See <xref ref="ex-max-min"/>.
+		</solution>
+	</task>
+	<task>
+		<statement>
+		Prove that if <m>\sup S = 100</m> then <m>S</m> contains a number greater than 99.
+		</statement>
+		<solution>
+		This is <xref ref="task-non-up"/> with <m>\sup S = 100</m> and <m>\eps = 1</m>.
+		</solution>
+	</task>
+</exercise>
+	<exercise> 
+	<title>Exam-style self-test question for workshop</title>
+		<task>
+		<statement>
+		Define what it means for the sequence <m>(a_n)_{n=1}^\infty</m> to converge to 1.
+		</statement>
+		<solution>
+		This is <xref ref="task-conv-def"/> with <m>a = 1</m>.
+		</solution>
+		</task>
+		<task>
+		<statement>
+		Setting <men>a_n:= \frac{n^2}{n^2+1},</men> find a value of <m>N</m> for which all subsequent terms <m>a_N, a_{N+1}, \dots</m> lie in the neighbourhood <m>[\frac{100}{101},\frac{102}{101}]</m>.
+		</statement>
+		<solution>
+		This is similar to <xref ref="task-conv-eg"/>.
+		</solution>
+		</task>
+		<task>
+		<statement>
+		Prove that the sequence <xref ref="eq-seq-to-one"/> satisfies the definition of <m>a_n\to 1</m> as <m>n\to \infty</m>, as described in part (a)<!--<xref ref="task-converge-to-one"/>-->.
+		</statement>
+		<solution>
+		This is similar to <xref ref="task-conv-eg"/>.
+		</solution>
+		</task>
+	</exercise>
+	<exercise>
+	<title>Exam-style self-test question for workshop</title>
+		<task>
+		<statement>
+		Define what it means for a sequence <m>(a_n)_{n=1}^\infty</m> to be bounded.
+		</statement>
+		<solution>
+		This combines the definition of a sequence as a function (<xref ref="task-seq-def"/>) with what it means for a function to be a bounded (<xref ref="task-bd"/>).
+		</solution>
+		</task>
+		<task>
+		<statement>
+		Suppose that <m>a_n\to 1</m> as <m>n\to\infty</m>. Prove that for infinitely many values of <m>n</m> we have
+		<m>
+		a_n \leq 2.
+		</m>
+		</statement>
+		<solution>
+		This appears to be an "unseen" question, but really it is a special case of <xref ref="ex-convergent-bounded"/>. In particular, arguing exactly as in the first half of the proof of <xref ref="prop-conv-bounded"/> with <m>a=1</m>, we find that there exists <m>N \in \N</m> such that for all <m>n\geq N</m> we have <m>a_n \leq 2</m>.
+		</solution>
+		</task>
+	</exercise>
+	</subsection>
+		</section>

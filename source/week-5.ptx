@@ -1,0 +1,430 @@
+<?xml version='1.0' encoding="utf-8"?>
+<!--
+% !TEX TS-program = PreTeXt-HTML
+-->
+<section xml:id="week-5" xmlns:xi="http://www.w3.org/2001/XInclude">
+			<title>Week 5</title>
+			<exercise>
+				<title>Multiplying series</title>
+				<task>
+					<statement>
+					State and prove the "Cauchy product formula" for multiplying two series.
+					</statement>
+					<solution>
+						<theorem xml:id="thm-mult-series">
+							<title>Multiplying series</title>
+							<statement>
+							<p>
+							Suppose that the series <m>\sum_{n=0}^\infty a_n</m> and <m>\sum_{n=0}^\infty b_n</m> are both absolutely convergent.
+Then we have the <em>Cauchy product formula</em>
+<men xml:id="eq-mult-series">
+\brac{\sum_{n=0}^\infty a_n}\brac{\sum_{n=0}^\infty b_n} = \sum_{n=0}^\infty \brac{\sum_{r+s = n} a_rb_s}.
+</men>
+Furthermore the right-hand side is absolutely convergent. 
+</p>
+<p>
+Here we are using the notation
+<me>
+\sum_{r+s = n} a_rb_s := \sum_{r=0}^n a_rb_{n-r} = a_0b_n + a_1b_{n-1} + \dots + a_nb_0
+</me>.
+</p>
+</statement>
+<proof>
+ By the multiplication rule for limits (<xref ref="prop-mult-rule"/>) we have that 
+<me>
+\brac{\sum_{n=0}^\infty a_n }\brac{\sum_{n=0}^\infty b_n} = \lim_{N\to \infty } \brac{\brac{\sum_{n=0}^N a_n}\brac{\sum_{n=0}^N b_n}}.
+</me>
+One can check (using the addition rule for limits <xref ref="prop-add-rule"/>), that it therefore suffices to show that
+<men xml:id="cauchy-to-prove">
+\brac{\sum_{n=0}^N a_n}\brac{\sum_{n=0}^N b_n} - \sum_{n=0}^N \brac{\sum_{r+s = n} a_rb_s} \to 0 \quad \text{ as }\quad N \to \infty 
+</men>.
+ Our proof of <xref ref="cauchy-to-prove"/> starts by multiplying out the partial sums and grouping the terms <m>a_rb_s</m> according to the value of <m>r+s</m>, as follows
+<md>
+<mrow>
+\brac{\sum_{n=0}^N a_n}\brac{\sum_{n=0}^N b_n} \amp = \sum_{0\leq r,s\leq N} a_rb_s = \sum_{n=0}^{2N} \ \sum_{\substack{0 \leq r, s \leq N\\ r+s = n}} a_rb_s 
+</mrow>
+<mrow>
+\amp = \sum_{n=0}^{N}\ \sum_{r+s = n} a_rb_s + \sum_{n=N+1}^{2N} \ \sum_{\substack{0 \leq r, s \leq N\\ r+s = n}} a_rb_s
+</mrow>
+</md>.
+To prove <xref ref="cauchy-to-prove"/> it therefore suffices to prove that
+<me>
+\sum_{n=N+1}^{2N} \ \sum_{\substack{0 \leq r, s \leq N\\ r+s = n}} a_rb_s \to 0 \quad\text{ as } \quad N \to \infty.
+</me>
+ We observe that if <m>0 \leq r, s \leq N</m> and <m>r+s = n</m> for some <m>n \in (N, 2N]</m> then either <m>r \geq N/2</m> or <m>s \geq N/2</m>. 
+ Hence, on writing
+<me>
+ A:=\sum_{n=0}^\infty |a_n| \quad \text{and}\quad  B:=\sum_{n=0}^\infty |b_n|,
+</me>  the triangle inequality and the inequality rule (<xref ref="prop-ineq-rule"/>) together give that
+<md>
+<mrow>
+\abs{\sum_{n=N+1}^{2N} \ \sum_{\substack{0 \leq r, s \leq N\\ r+s = n}} a_rb_s}
+ \amp \leq \sum_{r = \ceil{\frac{N}{2}}}^N |a_r|\sum_{s=0}^N |b_s|+ \sum_{r=0}^N |a_r|\sum_{s = \ceil{\frac{N}{2}}}^N |b_s|
+</mrow>
+<mrow>
+\amp \leq  B\sum_{r = \ceil{\frac{N}{2}}}^\infty |a_r|+  A\sum_{s = \ceil{\frac{N}{2}}}^\infty |b_s|
+</mrow>
+</md>.
+By absolute convergence we have
+<me>
+\sum_{r =N}^\infty |a_r| = \sum_{r=0}^\infty|a_r| - \sum_{n=0}^{N-1} |a_r| \to 0 \text{ as } N \to \infty.
+</me>
+Since convergence is preserved on passing to a subsequence (<xref ref="prop-subseq-conv"/>) we deduce that
+<me>
+\sum_{r = \ceil{\frac{N}{2}}}^\infty |a_r| \to 0 \text{ as } N \to \infty.
+</me>
+Therefore, by the multiplication rule for limits (<xref ref="prop-mult-rule"/>) and using the fact that <m> B = \sum_s |b_s|</m> is a fixed finite real number, we have
+<me>
+ B\sum_{r = \ceil{\frac{N}{2}}}^\infty |a_r| \to 0 \text{ as } N \to \infty.
+</me>
+The proof is complete on employing a similar argument to show that
+<me>
+ A\sum_{s = \ceil{\frac{N}{2}}}^\infty |b_s| \to 0 \text{ as } N \to \infty.
+</me>
+</proof>
+</theorem>					</solution>
+				</task>
+			</exercise>
+			<exercise>
+				<title>Power series</title>
+				<task>
+					<statement>
+					Define the <em>power series</em> associated to a real sequence.
+					</statement>
+					<solution>
+						<definition>
+							<title>Power series</title>
+		 					The <em>power series in <m>x</m></em> associated to the sequence <m>(a_n)_{n=0}^\infty</m> is the series 
+<me>
+\sum_{n=0}^\infty a_n x^n,
+</me>
+provided that this limit exists.
+</definition>
+					</solution>
+				</task>
+				<task>
+					<statement>
+					State and prove the existence of a <em>radius of convergence</em> for a power series (your statement should include a formula for the radius of convergence).
+					</statement>
+					<solution>
+						<theorem xml:id="thm-radius">
+							<title>Existence of radius of convergence</title>
+							<statement>
+Let <m>(a_n)_{n=0}^\infty</m> be a sequence of real numbers.
+ There exists a unique <m>R \in [0, \infty]</m>, the <em>radius of convergence</em>, for which both of the following hold.
+ <ol>
+ 	<li xml:id="item-power-conv">
+	If <m>|x| \lt  R</m> then the power series <m>\displaystyle \sum_{n=0}^\infty a_n x^n</m> is absolutely convergent.
+	</li>
+	<li xml:id="item-power-div"> 
+	If <m>|x| \gt R</m> then the power series <m>\displaystyle \sum_{n=0}^\infty a_n x^n</m> does not converge.
+	</li>
+</ol>
+  Moreover, the radius of convergence <m>R</m> is given by the formula
+ <men xml:id="eq-radius">
+R= \sup\set{ r \geq 0 : \lim_{n\to \infty} |a_n|r^n = 0}.
+</men> 
+</statement>
+<proof>
+<p>
+ Let <m>R</m> denote the quantity in <xref ref="eq-radius"/>.
+ If <m>|x| \gt R</m> then <m>a_n x^n \not \to 0</m>, hence by the <m>n</m>th term test (<xref ref="prop-tail"/>) the series  <m>\sum_n a_n x^n</m> does not converge.
+ </p>
+ <p>
+ Suppose that <m>|x| \lt  R</m>. 
+ Since decreasing a supremum gives a non upper bound  (<xref ref="prop-alt-sup"/>), there exists <m>r \in (|x|, R]</m> for which <m>|a_n| r^n \to 0</m>.
+ The sequence <m>|a_n| r^n</m> must be bounded, since convergence implies boundedness (<xref ref="prop-conv-bounded"/>).
+ Hence there exists <m>M>0</m> such that 
+<me>
+|a_n x^n| = |a_n| r^n \brac{|x|/r}^n \leq M|x|^n/r^n.
+</me>
+ Since <m>|x|/r \lt  1</m>, the geometric series <m>\sum_n M(|x|/r)^n</m> is absolutely convergent (<xref ref="eg-geo-series"/>).
+ Hence by the comparison test (<xref ref="prop-oh-test"/>) the series <m>\sum_n a_n x^n</m> is absolutely convergent.
+ </p>
+ <p>
+ For uniqueness, suppose that <m>R_1 \lt  R_2</m> both satisfy items <xref ref="item-power-conv"/> and <xref ref="item-power-div"/>.
+ Setting <m>r := \recip 2(R_1+R_2)</m> we have <m>R_1 \lt  r \lt  R_2</m>.
+ Hence by item <xref ref="item-power-conv"/> we have <m>\sum_n |a_n|r^n \lt  \infty</m> and by item <xref ref="item-power-div"/> we have <m>\sum_n |a_n|r^n = \infty</m>, a contradiction. 
+ </p>
+</proof>
+</theorem>
+					</solution>
+				</task>
+			</exercise>
+			<exercise>
+				<title>The exponential function</title>
+				<task xml:id="ex-exp-def">
+					<statement>
+					Define the exponential function in terms of a power series and justify why this power series converges.
+					</statement>
+					<solution>
+						<definition xml:id="def-exp">
+						<title>Exponential function</title>
+The exponential function <m>\exp : \R \to \R</m> is given by the absolutely convergent power series
+<me>
+\exp(x) := \sum_{n=0}^\infty \frac{x^n}{n!}.
+</me>
+We define the real number <m>e \in \R</m> via the series
+<me>
+e := \exp(1) = \sum_{n=0}^\infty \frac{1}{n!}.
+</me>
+</definition>					
+<proposition xml:id="prop-exp-radius">
+<title>Radius of convergence for the exponential function</title>
+<statement>
+<p>
+The power series
+<me>
+\sum_{n=0}^\infty \frac{x^n}{n!}
+</me>
+has infinite radius of convergence.
+</p>
+<p>
+In particular, the exponential function <m>\exp(x)</m> is well-defined at all <m>x \in \R</m>.
+</p>
+</statement>
+<proof>
+ We show absolute convergence for all <m>x \neq 0</m>  by applying the ratio test (<xref ref="cor-ratio"/>) to the positive sequence <m>a_n := |x|^n/n!</m>.
+ (Absolute convergence when <m>x = 0</m> follows from the fact that the series equals <m>a_0</m>.)
+ Enacting the ratio test (<xref ref="cor-ratio"/>), we have
+<me>
+\lim_{n\to \infty}\frac{a_{n+1}}{a_n} = \lim_{n\to \infty}\frac{|x|}{n+1} = 0 \lt  1.
+</me>
+</proof>
+</proposition>
+					</solution>
+				</task>
+				<task>
+					<statement>
+					State and prove the multiplication rule for the exponential function.
+					</statement>
+					<solution>
+					<proposition xml:id="prop-exp-add-law">
+						<statement>
+						<title>Multiplication rule for the exponential function</title>
+ The exponential function satisfies the identity
+<me>
+\exp(x+y) = \exp(x)\exp(y), \qquad (\forall x,y \in \R).
+</me>
+</statement>
+<proof>
+ By the multiplication rule for absolutely convergent series (<xref ref="thm-mult-series"/>) we have
+<me>
+\exp(x)\exp(y) = \sum_{n=0}^\infty \sum_{r+s= n} \frac{x^ry^s}{r!s!}
+</me>
+By the binomial theorem
+<me>
+\sum_{r+s = n} \frac{x^ry^s}{r!s!} = \sum_{r=0}^n \frac{x^r y^{n-r}}{r!(n-r)!}= 
+\recip{n!}\sum_{r=0}^n \binom{n}{r}x^r y^{n-r} = \recip{n!} (x+y)^n.
+</me>
+</proof>
+</proposition>
+					</solution>
+				</task>
+			</exercise>
+			<exercise>
+				<title>Limits of functions</title>
+				<task>
+					<statement>
+					Given a real-valued function <m>f</m> on a real domain<fn>i.e. <m>f: D\to \R</m> for some <m>D \subset \R</m></fn>, define the meaning of the statement:
+	<me>
+	f(x) \to y \quad \text{as} \quad x \to x_0.
+	</me>
+					</statement>
+					<solution>
+						<definition xml:id="def-fn-lim">
+							<title>Sequential definition of function limit</title>
+	Given a real-valued function <m>f</m> on a real domain, we write
+	<me>
+	f(x) \to y \quad \text{as} \quad x \to x_0
+	</me>
+	if, for any sequence <m>(a_n)_n</m> in the domain<fn>So that <m>a_n\in D</m> for all <m>n</m>.</fn> of <m>f</m> we have the implication
+	<men xml:id="eq-seq-cts-def">
+	a_n \to x_0 \quad \implies \quad f(a_n) \to y.
+	</men>
+	If there is only <em>one</em> such value of <m>y</m>, then we write
+<me>
+y = \lim_{x\to x_0} f(x)
+</me>
+
+	</definition>
+					</solution>
+				</task>
+			</exercise>
+			<exercise>
+				<title>Continuity</title>
+				<task>
+					<statement>
+					Define what it means for a real-valued function on a real domain to be continuous at a point. Define what it means for the function to be continuous. Give an example and a non-example.
+					</statement>
+					<solution>
+						<definition xml:id="def-cts">
+							<title>Continuous</title>
+ Let <m>f : D \to \R</m> be a real valued function on a real domain <m>D \subset \R</m>.
+ Let <m>x_0\in D</m>.
+ We say that <m>f : D \to \R</m> is <em>continuous at <m>x_0</m></em> if <m>f(x) \to f(x_0)</m> as <m>x \to x_0</m>.
+ We say that <m>f : D \to \R</m> is <em>continuous</em> if it is continuous at all <m>x_0 \in D_0</m>.
+</definition>
+<example xml:id="eg-const-cts">
+						<title>Constant functions are continuous</title>
+ Let <m>f : D \to \R</m> with <m>D \subset \R</m>.
+ Suppose that <m>f</m> is constant.
+ In other words, there exists <m>c \in \R</m> such that for all <m>x \in D</m> we have <m>f(x) = c</m>.
+ Then for any sequence <m>(a_n)_n</m> in <m>D</m> we have <m>f(a_n) \to c</m>, by <xref ref="eg-const-conv"/>.
+ Hence <m>f</m> is continuous on <m>D</m>.
+	</example>
+	<example xml:id="eg-id-cts">
+		<title>The identity function is continuous</title>
+ Let <m>D \subset \R</m>.
+ Define <m>f : D \to \R</m> by <m>f(x) := x</m> for all <m>x \in D</m>.
+ Then for any sequence <m>(a_n)_n</m> in <m>D</m> with <m>a_n \to x_0</m> we have <m>f(a_n) = a_n \to x_0 = f(x_0)</m>.
+ Hence <m>f</m> is continuous on <m>D</m>.
+</example>
+<example xml:id="eg-abs-cts">
+<title>The absolute value function is continuous</title>
+ By the triangle inequality, for any <m>x, x_0 \in \R</m> we have
+<me>
+|x-x_0| \leq \eps \implies ||x|-|x_0|| \leq \eps.
+</me>
+ Hence <xref ref="eq-eps-delta-cts"/> holds for the function <m>x \mapsto |x|</m> on taking <m>\delta(x_0, \eps) := \eps</m>.
+</example>
+<example xml:id="eg-dis-cont">
+<title>A function discontinuous at a point</title>
+ Consider the function <m>f : \R \to \R</m> given by 
+<me>
+f(x) :=
+\begin{cases}
+0 \amp \text{ if } x \leq 0;\\
+1\amp \text{ if } x  \gt0.
+\end{cases}
+</me>
+ We claim that this function is not continuous at <m>x_0 = 0</m>.
+ In order to have <m>f(x) \to f(0)</m> as <m>x \to 0</m> we need <m>f(a_n) \to 0</m> for <em>all</em> sequences <m>(a_n)_n</m> for which <m>a_n \to 0</m>.
+ Yet <m>1/n \to 0</m> and <m>f(1/n) \to 1</m>.
+</example>
+<example xml:id="eg-dis-cont-everywhere">
+<title>A function discontinuous everywhere</title>
+Consider the function <m>f : \R \to \R</m> given by 
+<me>
+f(x) :=
+\begin{cases}
+1 \amp \text{ if } x \in \Q;\\
+0\amp \text{ if } x  \in \R \setminus\Q.
+\end{cases}
+</me>
+ We claim that this function is not continuous at any <m>x_0 \in \R</m>.
+ Notice, however, that the restrictions<fn>Given a function <m>f:D\to\R</m> and a subset of the domain <m>D_0 \subset D</m>, we define the <em>restriction of <m>f</m> to <m>D_0</m></em>, denoted <m>f|_{D_0}</m> to be the function <m>D_0\to\R</m> defined at each <m>x \in D_0</m> to equal <m>f(x)</m>.</fn> <m>f|_{\Q}</m> and <m>f|_{\R\setminus\Q}</m> are both continuous, since they are constant functions. The key observation in establishing our claim is to note that every real number <m>x_0</m> has a sequence of rationals <m>q_n \in \Q</m> such that <m>q_n \to x_0</m>. For instance, one may take
+ <me>
+ q_n := \frac{\floor{nx_0}}{n} \in \left(x_0 -\frac{1}{n}, x_0\right]
+ </me>,
+ and employ the two-sided sandwich rule (<xref ref="prop-sandwich"/>).
+ Let us use this to show that our function is not continuous at <m>x_0</m>. 
+ First suppose that <m>x_0\in \R\setminus\Q</m>.
+ It follows that <m>f(q_n) = 1 \not\to 0 = f(x_0)</m>.
+ Next suppose that <m>x_0 \in \Q</m>.
+ This time, let <m>q_n \in \Q</m> be a sequence of rationals such that <m>q_n \to x_0+ \sqrt{2}</m>. 
+ Notice that for any <m>n \in \N</m> we have <m>q_n-\sqrt{2} \notin \Q</m>, otherwise <m>\sqrt{2} \in \Q</m> (a contradiction).
+ Also <m>q_n -\sqrt{2} \to x_0</m>.
+ Yet <m>f(q_n-\sqrt{2}) = 0 \not\to 1 = f(x_0)</m>.
+ </example>
+
+					</solution>
+				</task>
+				<task xml:id="ex-eps-delta">
+					<statement>
+					State and prove the "epsilon-delta" characterisation of continuity at a point.
+					</statement>
+					<solution>
+					<proposition xml:id="cor-eps-delta-cts">
+					<title>Epsilon-delta characterisation of continuity</title>
+					<statement>
+					Let <m>f : D \to \R</m> be a real valued function on a real domain <m>D \subset \R</m> and let <m>x_0\in D</m>.
+ Then <m>f</m> is continuous at <m>x_0</m> if and only if 
+<mdn> 
+<mrow number="no">
+(\forall \eps \gt 0)(\exists \delta=\delta(x_0,\eps)  \gt 0)\amp(\forall x \in D)
+</mrow>
+<mrow xml:id="eq-eps-delta-cts">
+\amp \bigsqbrac{\ |x-x_0| \leq \delta \implies |f(x)-f(x_0)| \leq \eps\ }.
+</mrow>
+</mdn>
+</statement>
+<proof>
+<p>
+ We first prove the "<m>\impliedby</m>" direction.
+ Let <m>(a_n)_n</m> be a sequence in <m>D</m> such that <m>a_n \to x_0</m> as <m>n \to \infty</m>.
+ We are required to prove that <m>f(a_n) \to f(x_0)</m> as <m>n \to \infty</m>, assuming <xref ref="eq-eps-delta-cts"/>.
+ Fix <m>\eps \gt0</m>.
+ Then by <xref ref="eq-eps-delta-cts"/> there exists <m>\delta = \delta(\eps) \gt 0</m> such that if <m>x \in D</m> and <m>|x-x_0| \leq \delta</m> then <m>|f(x)-f(x_0)|\leq \eps</m>.
+ Since <m>a_n \to x_0</m> there exists <m>N = N(\delta)</m> such that for all <m> n\geq N</m> we have <m>|a_n - x_0| \leq \delta</m>.
+ Hence if <m>n \geq N(\delta)</m> then <m>|f(a_n)-f(x_0)| \leq \eps</m>.
+ This establishes that <m>f(a_n) \to f(x_0)</m>.
+ </p>
+ <p>
+ Next we prove the "<m>\implies</m>" direction. To do so we prove the contrapositive.
+ Hence, suppose that the negation of <xref ref="eq-eps-delta-cts"/> holds:
+<md>
+<mrow>
+(\exists \eps \gt 0)(\forall \delta  \gt 0)\amp(\exists x= x(\delta) \in D)
+</mrow>
+<mrow>
+\amp \bigsqbrac{\ |x-x_0| \leq \delta\quad \text{and}\quad |f(x)-f(x_0)| \gt \eps\ }.
+</mrow>
+</md>
+ Taking <m>\delta = 1/n</m> in the above negation, set <m>a_1:= x(1)</m>, <m>a_2:=x(1/2)</m>, <m>a_3 := x(1/3)</m>, etc.
+ Then <m>a_n \in D</m>, <m>|a_n - x_0| \leq 1/n</m> and <m>|f(a_n)-f(x_0)| \geq \eps</m>.
+ Hence <m>(a_n)_n</m> is a sequence in <m>D</m> with <m>a_n \to x_0</m> and <m>f(a_n) \not\to f(x_0)</m> (as required).
+ </p>
+</proof>					
+</proposition>
+</solution>
+				</task>
+				<task xml:id="ex-non-zero-cts">
+					<statement>
+					State and prove how a function which has a point where it is both continuous and positive inherits positivity on a neighbourhood of that point.
+					</statement>
+					<solution>
+					<proposition xml:id="cor-non-zero-cts">
+						<title>Non-zero point of continuity implies non-zero on a neighbourhood</title>
+						<statement>
+						Let <m>f : D \to \R</m> be a real-valued function on a real domain <m>D \subset \R</m>.
+ Suppose that <m>f</m> is continuous at <m>x_0 \in D</m> and <m>f(x_0)\gt 0</m>.  Then there exists <m>\delta \gt 0</m> such that for all <m>x \in D\cap(x_0-\delta, x_0+\delta)</m> we have
+<m>
+f(x) \gt 0
+</m>.
+</statement>
+<proof>
+ Take <m>\eps := \trecip{2} f(x_0)</m> in <xref ref="eq-eps-delta-cts"/>.
+ Then by the triangle inequality, for <m>x \in D</m> satisfying <m>|x-x_0| \leq \delta = \delta(\eps)</m> we have
+<me>
+f(x) = f(x_0) + f(x) - f(x_0) \geq f(x_0)- |f(x)-f(x_0)| \geq f(x_0) - \eps = \trecip{2} f(x_0) \gt 0. 
+</me>
+</proof>
+</proposition>					</solution>
+				</task>
+			</exercise>
+			<p>
+			In this week's workshop you will be asked to write-up (under exam conditions) two of the following.
+				<ol>
+					<li>
+					This question is a variant of <xref ref="ex-exp-def"/>. Without assuming convergence of the series <m>\sum_{n=0}^\infty \frac{1}{n!}</m>, justify why we have
+					<me>
+					\sum_{n=0}^\infty \frac{1}{\floor{n/2}!} \lt \infty.
+					</me>
+					</li>
+					<li>
+					This question is a variant of <xref ref="ex-eps-delta"/>, and as such, you are not permitted to assume the equivalence of the epsilon-delta characterisation of continuity. Let <m> f:\R \to \R</m> and suppose that 
+					<me> 
+(\forall \eps \gt 0)(\exists \delta=\delta(\eps)  \gt 0)(\forall x \in \R) \bigsqbrac{\ |x| \leq \delta \implies |f(x)| \leq \eps\ }.
+					</me>
+Prove that <m>f(1/n) \to 0</m> as <m>n \to \infty</m> by verifying the definition of what it means for a sequence to converge to 0.
+					</li>
+					<li>
+					This question is a variant of <xref ref="ex-non-zero-cts"/>. Let <m> f:\R \to \R</m> be continuous and suppose that <m>f(0) \gt 0</m>. Prove that there exists <m>\delta \gt 0</m> such that 
+					<me>
+					\inf_{|x| \lt \delta} f(x) \gt 0.
+					</me>
+					</li>
+				</ol>
+			</p>
+		</section>
