@@ -11,27 +11,63 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Next we prove the "<span class="process-math">\(\impliedby\)</span>" direction. To do so we prove the contrapositive. Hence, suppose that the negation of <a href="" class="xref" data-knowl="./knowl/eq-eps-diff.html" title="Equation 6.3">(6.3)</a> holds:</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-eps-diff.html">
-\begin{align*}
-(\exists \eps \gt 0)(\forall \delta  \gt 0)\amp(\exists x= x(\delta) \in (a,b))\\
-\bigsqbrac{\ 0\lt |x-x_0| \leq \delta\quad \text{and}\quad \abs{\frac{f(x)-f(x_0)}{x-x_0} - y} \gt \eps\ }\text{.}
-\end{align*}
-</div>
-<p class="continuation">Taking <span class="process-math">\(\delta = 1/n\)</span> in the above negation, set <span class="process-math">\(a_1:= x(1)\text{,}\)</span> <span class="process-math">\(a_2:=x(1/2)\text{,}\)</span> <span class="process-math">\(a_3 := x(1/3)\text{,}\)</span> etc. Then <span class="process-math">\(a_n \in (a,b)\setminus\set{x_0}\text{,}\)</span> <span class="process-math">\(|a_n - x_0| \leq 1/n\)</span> and</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-eps-diff.html">
-\begin{equation*}
-\abs{\frac{f(a_n)-f(x_0)}{a_n-x_0} - y} \geq \eps\text{.}
-\end{equation*}
-</div>
-<p class="continuation">Hence <span class="process-math">\((a_n)_n\)</span> is a sequence in <span class="process-math">\((a,b)\setminus\set{x_0}\)</span> with <span class="process-math">\(a_n \to x_0\)</span> and</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-eps-diff.html">
-\begin{equation*}
-\frac{f(a_n)-f(x_0)}{a_n-x_0} \not\to y\text{,}
-\end{equation*}
-</div>
-<p class="continuation">(as required).</p>
-<span class="incontext"><a href="week-6.html#p-83" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<ul class="disc"><li><p><em class="emphasis">Notation</em><ul class="circle">
+<li><p>"<span class="process-math">\(P \iff Q\)</span>": "the proposition <span class="process-math">\(P\)</span> holds if and only if the proposition <span class="process-math">\(Q\)</span> holds".</p></li>
+<li><p>"<span class="process-math">\(\neg P\)</span>": "the proposition <span class="process-math">\(P\)</span> does not hold".</p></li>
+<li><p>"<span class="process-math">\(P \implies Q\)</span>": "it is not the case that the proposition <span class="process-math">\(P\)</span> holds and the proposition <span class="process-math">\(Q\)</span> does not hold", equivalently <span class="process-math">\(\neg(P\&amp; \neg Q)\text{.}\)</span></p></li>
+<li><p>"<span class="process-math">\(x \in A\)</span>": "<span class="process-math">\(x\)</span> is an element of the set <span class="process-math">\(A\)</span>".</p></li>
+<li><p>"<span class="process-math">\(\forall x \in A\)</span>": "for all <span class="process-math">\(x \in A\)</span>".</p></li>
+<li><p>"<span class="process-math">\(\exists x \in A\)</span>": "there exists <span class="process-math">\(x \in A\)</span>".</p></li>
+<li><p><span class="process-math">\(\N := \set{1,2, 3, \dots}\text{.}\)</span></p></li>
+<li><p><span class="process-math">\(\Z := \set{\dots, -3,-2,-1,0,1,2, 3, \dots}\text{.}\)</span></p></li>
+<li><p>Non-negative integers <span class="process-math">\(:= \set{0,1,2,3, \dots}\text{.}\)</span></p></li>
+<li><p><span class="process-math">\(\Q := \set{\frac{a}{b} : a \in \Z,\ q\in \N}\text{.}\)</span></p></li>
+<li><p><span class="process-math">\(\R := \text{the set of real numbers}\text{.}\)</span></p></li>
+<li><p>Non-negative reals <span class="process-math">\(:= \set{x \in \R : x \geq 0}\text{.}\)</span></p></li>
+<li><p>Positive reals <span class="process-math">\(:= \set{x \in \R : x \gt 0}\text{.}\)</span></p></li>
+<li><p>Negative reals <span class="process-math">\(:= \set{x \in \R : x \lt 0}\text{.}\)</span></p></li>
+<li><p><span class="process-math">\(A\cup B := \set{x : x \in A \text{ or } x\in B}\text{.}\)</span></p></li>
+<li><p><span class="process-math">\(A\cap B := \set{x : x \in A \text{ and } x\in B}\text{.}\)</span></p></li>
+<li><p><span class="process-math">\(A\setminus B := \set{x : x \in A \text{ and } x\notin B}\text{.}\)</span></p></li>
+<li><p><span class="process-math">\(\displaystyle\bigcup_{i=1}^n A_i := \set{x : x \in A_i \text{ for some } i =1, \dots, n}\text{.}\)</span></p></li>
+<li><p><span class="process-math">\(\displaystyle\bigcap_{i=1}^n A_i := \set{x : x \in A_i \text{ for all } i =1, \dots, n}\text{.}\)</span></p></li>
+<li><p><span class="process-math">\(\displaystyle(a,b) := \set{x \in \R : a \lt x \lt b}\text{.}\)</span></p></li>
+<li><p><span class="process-math">\(\displaystyle(a,b]  := \set{x \in  \R : a \lt x \leq b}\text{.}\)</span></p></li>
+<li><p><span class="process-math">\(\displaystyle[a,b)  := \set{x \in  \R : a \leq x \lt b}\text{.}\)</span></p></li>
+<li><p><span class="process-math">\(\displaystyle[a,b]  := \set{x \in  \R : a \leq x \leq b}\text{.}\)</span></p></li>
+</ul></p></li></ul>
+<ul class="disc"><li><p><em class="emphasis">Key properties of <span class="process-math">\(\R\)</span></em><ul class="circle">
+<li><p><em class="emphasis">Additive axioms:</em><ul class="square">
+<li><p>Additive closure: <span class="process-math">\((\forall x,y \in \R)[x+y \in \R]\text{.}\)</span></p></li>
+<li><p>Additive associativity: <span class="process-math">\((\forall x,y,z \in \R)[(x+y)+z = x+(y+z) \in \R]\text{.}\)</span></p></li>
+<li><p>Additive identity: <span class="process-math">\((\exists 0 \in \R)(\forall x \in \R)[0+x = x]\text{.}\)</span></p></li>
+<li><p>Additive inverses: <span class="process-math">\((\forall x \in \R)(\exists -x \in \R)[x+(-x) = 0]\text{.}\)</span></p></li>
+<li><p>Addition is commutative: <span class="process-math">\((\forall x,y \in \R)[x+y = y+x]\text{.}\)</span></p></li>
+</ul></p></li>
+<li><p><em class="emphasis">Multiplicative axioms:</em><ul class="square">
+<li><p>Multiplicative closure: <span class="process-math">\((\forall x, y \in \R)[x\cdot y \in \R]\text{.}\)</span></p></li>
+<li><p>Multiplicative associativity: <span class="process-math">\((\forall x,y,z \in \R)[(x\cdot y)\cdot z = x\cdot (y\cdot z) \in \R]\text{.}\)</span></p></li>
+<li><p>Multiplicative identity: <span class="process-math">\((\exists 1 \in \R\setminus\set{0})(\forall x \in \R)[1\cdot x = x]\text{.}\)</span></p></li>
+<li><p>Multiplicative inverses: <span class="process-math">\((\forall x \in \R\setminus\set{0})(\exists x^{-1} \in \R\setminus\set{0})[x\cdot x^{-1} = 1]\text{.}\)</span></p></li>
+<li><p>Multiplication is commutative: <span class="process-math">\((\forall x,y \in \R)[x\cdot y = y\cdot x]\text{.}\)</span></p></li>
+</ul></p></li>
+<li><p><em class="emphasis">Interaction of addition and multiplication:</em><ul class="square"><li><p>Distributivity: <span class="process-math">\((\forall x,y,z \in \R)[x\cdot(y+z) = xy + xz]\text{.}\)</span></p></li></ul></p></li>
+<li><p><em class="emphasis">Order axioms:</em><ul class="square">
+<li><p>Reflexivity: <span class="process-math">\((\forall x \in \R)[x \leq x]\text{.}\)</span></p></li>
+<li><p>Anti-symmetry: <span class="process-math">\((\forall x, y \in \R)\sqbrac{(x \leq y\ \&amp;\ y \leq x)\implies x = y}\text{.}\)</span></p></li>
+<li><p>Transitivity: <span class="process-math">\((\forall x, y, z\in \R)\sqbrac{(x \leq y\ \&amp;\ y \leq z)\implies x \leq z}\text{.}\)</span></p></li>
+<li><p>Totality: <span class="process-math">\((\forall x, y \in \R)[x\leq y \text{ or } y \leq x]\text{.}\)</span></p></li>
+</ul></p></li>
+<li><p><em class="emphasis">Interaction of order and addition/multiplication:</em><ul class="square">
+<li><p>Additive invariance: <span class="process-math">\((\forall x, y, z \in \R)[ x \leq y \implies x+z \leq y + z]\text{.}\)</span></p></li>
+<li><p>Non-negative multiplicative invariance:\\ <span class="process-math">\((\forall x, y, z \in \R)[(x \leq y \ \&amp; \ 0 \leq z) \implies xz \leq yz]\text{.}\)</span></p></li>
+</ul></p></li>
+</ul></p></li></ul>
+<ul class="disc"><li><p><em class="emphasis">Triangle inequalities</em><ul class="circle">
+<li><p><span class="process-math">\((\forall x, y \in \R)[\ |x\pm y| \leq |x| + |y|\ ]\text{.}\)</span></p></li>
+<li><p><span class="process-math">\((\forall x, y \in \R)[\ |x\pm y| \geq |x| - |y|\ ]\text{.}\)</span></p></li>
+</ul></p></li></ul>
+<span class="incontext"><a href="exam-backmatter.html#p-83" class="internal">in-context</a></span>
 </body>
 </html>
