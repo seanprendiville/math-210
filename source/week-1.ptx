@@ -285,7 +285,7 @@
 				</solution>
 				</task>
 			</exercise>
-			<exercise>
+			<exercise xml:id="ex-complete">
 			<title>Completeness principle</title>
 					<statement><p>
 						State (but don't prove) the "<em>completeness principle</em>" for the real numbers.

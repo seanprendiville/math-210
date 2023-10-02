@@ -615,107 +615,57 @@ In your workshop, you will vote on whether you think each of the following state
 </exercise>
 <exercise>
 <title>Exam-style self-test question for workshop</title>
-<!--
-	<task>
-		<statement>
-		Define what it means for 1 to be a upper bound for <m>S\subset \R</m>.
-		</statement>
-		<solution>
-		This is a special case of <xref ref="task-upper-lower"/>, with <m>M = 1</m>.
-		</solution>
-	</task>
--->
-	<task>
-		<statement>
-		Define what it means for 0 to be an infimum for <m>S\subset \R</m>.
-		</statement>
-		<solution>
-		This is a special case of <xref ref="task-sup-inf"/>, with <m>M = 0</m>.
-		</solution>
-	</task>
-	<task>
-		<statement>
-		Justify why a set has a supremum if it contains at least one negative number and no positive numbers.
-		</statement>
-		<solution>
-		This is a special case of <xref ref="completeness-principle"/>.
-		</solution>
-	</task>
-	<!--
-	<task>
+	<p>
+		The purpose of this question is to prove a special case of the monotone convergence principle. Let <m>(a_n)_{n=1}^\infty</m> be an increasing sequence of negative real numbers.
+		</p>
+		<task>
 			<statement>
-			Define what it means for <m>S</m> to have a maximum.
-			</statement>
-					<solution>
-		See <xref ref="ex-max-min"/>.
-		</solution>
-	</task>
-	-->
-	<task>
-			<statement>
-			Give an example of a set which contains at least one negative number, no positive numbers and which does not have a maximum.
+				<p>
+				Justify why <m>\sup_{n\in \N} a_n</m> exists.
+				</p>
 			</statement>
 			<solution>
-		See <xref ref="ex-max-min"/>.
-		</solution>
-	</task>
-	<task>
-		<statement>
-		Prove that if <m>\sup S = 100</m> then <m>S</m> contains a number greater than 99.
-		</statement>
-		<solution>
-		This is <xref ref="task-non-up"/> with <m>\sup S = 100</m> and <m>\eps = 1</m>.
-		</solution>
-	</task>
+				<p>
+					This is a special case of <xref ref="ex-complete"/>.
+				</p>
+			</solution>
+		</task>
+		<task>
+			<statement>
+				<p>
+				Writing <m>a:= \sup_{n\in \N} a_n</m>, justify why, for any <m>\eps \gt 0</m>, there exists <m>N= N(\eps)</m> such that <m>a_N \gt a-\eps</m>.
+				</p>
+			</statement>
+			<solution>
+				<p>
+					This is a special case of <xref ref="task-non-up"/>.
+				</p>
+			</solution>
+		</task>
+		<task>
+			<statement>
+				<p>
+				Hence prove that for any <m>\eps \gt 0</m> there exists <m>N= N(\eps)</m> such that for all <m>n\geq N</m> we have <me>  a-\eps\lt a_n \leq a</me>.
+				</p>
+			</statement>
+			<solution>
+				<p>
+					This uses the previous part and <xref ref="task-increasing"/>.
+				</p>
+			</solution>
+		</task>
+		<task>
+			<statement>
+				<p>
+				Using the previous part, show how the sequence <m>(a_n)_n</m> satisfies the definition of converging to a real limit.
+				</p>
+			</statement>
+			<solution>
+				<p>
+					Re-arrange the inequalities from the previous part and use <xref ref="task-conv-def"/>.
+				</p>
+			</solution>
+		</task>
 </exercise>
-	<exercise> 
-	<title>Exam-style self-test question for workshop</title>
-		<task>
-		<statement>
-		Define what it means for the sequence <m>(a_n)_{n=1}^\infty</m> to converge to 1.
-		</statement>
-		<solution>
-		This is <xref ref="task-conv-def"/> with <m>a = 1</m>.
-		</solution>
-		</task>
-		<task>
-		<statement>
-		Setting <men>a_n:= \frac{n^2}{n^2+1},</men> find a value of <m>N</m> for which all subsequent terms <m>a_N, a_{N+1}, \dots</m> lie in the neighbourhood <m>[\frac{100}{101},\frac{102}{101}]</m>.
-		</statement>
-		<solution>
-		This is similar to <xref ref="task-conv-eg"/>.
-		</solution>
-		</task>
-		<task>
-		<statement>
-		Prove that the sequence <xref ref="eq-seq-to-one"/> satisfies the definition of <m>a_n\to 1</m> as <m>n\to \infty</m>, as described in part (a)<!--<xref ref="task-converge-to-one"/>-->.
-		</statement>
-		<solution>
-		This is similar to <xref ref="task-conv-eg"/>.
-		</solution>
-		</task>
-	</exercise>
-	<exercise>
-	<title>Exam-style self-test question for workshop</title>
-		<task>
-		<statement>
-		Define what it means for a sequence <m>(a_n)_{n=1}^\infty</m> to be bounded.
-		</statement>
-		<solution>
-		This combines the definition of a sequence as a function (<xref ref="task-seq-def"/>) with what it means for a function to be a bounded (<xref ref="task-bd"/>).
-		</solution>
-		</task>
-		<task>
-		<statement>
-		Suppose that <m>a_n\to 1</m> as <m>n\to\infty</m>. Prove that for infinitely many values of <m>n</m> we have
-		<m>
-		a_n \leq 2.
-		</m>
-		</statement>
-		<solution>
-		This appears to be an "unseen" question, but really it is a special case of <xref ref="ex-convergent-bounded"/>. In particular, arguing exactly as in the first half of the proof of <xref ref="prop-conv-bounded"/> with <m>a=1</m>, we find that there exists <m>N \in \N</m> such that for all <m>n\geq N</m> we have <m>a_n \leq 2</m>.
-		</solution>
-		</task>
-	</exercise>
 	</subsection>
-		</section>
+</section>
