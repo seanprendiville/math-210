@@ -11,38 +11,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Since products of Riemann integrable functions are integrable (<a href="" class="xref" data-knowl="./knowl/thm-int-mult.html" title="Theorem 9.13: Riemann integrable functions are closed under multiplication">Theorem 9.13</a>) and indicators of intervals are integrable (<a href="" class="xref" data-knowl="./knowl/prop-indicator-interval.html" title="Proposition 9.18: Indicator of an interval">Proposition 9.18</a>), the function <span class="process-math">\(f1_{(c,d)}\)</span> is Riemann integrable on <span class="process-math">\([a, b]\text{.}\)</span> By Riemann sum approximation (<a href="" class="xref" data-knowl="./knowl/prop-eps-riemann.html" title="Proposition 8.23: Epsilon characterisation of Riemann integrability">Proposition 8.23</a>), for any <span class="process-math">\(\eps \gt 0\)</span> there exists a subdivision <span class="process-math">\(a = x_0 \lt  \dots \lt  x_N = b\)</span> such that</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-mult.html ./knowl/prop-indicator-interval.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/prop-int-finite-points.html">
-\begin{equation}
-U(f1_{(c,d)}; x_0, \dots, x_N) - \eps \leq \int_a^bf1_{(c,d)}  \leq L(f1_{(c,d)}; x_0, \dots, x_N) + \eps.\tag{9.6}
-\end{equation}
-</div>
-<p class="continuation">Since refining a subdivision does not increase the upper sum and does not decrease the lower sum (<a href="" class="xref" data-knowl="./knowl/prop-mono-riemann-refine.html" title="Proposition 8.21: Riemann sums are monotone with respect to refinements">Proposition 8.21</a>), we may assume that the subdivision <span class="process-math">\(a = x_0 \lt  \dots \lt  x_N = b\)</span> contains <span class="process-math">\(c\)</span> and <span class="process-math">\(d\text{.}\)</span> Let <span class="process-math">\(m \lt  n\)</span> be such that <span class="process-math">\(x_m = c\)</span> and <span class="process-math">\(x_n = d\text{.}\)</span> Notice that <span class="process-math">\(c= x_m \lt  \dots \lt  x_n = d\)</span> is a subdivision of <span class="process-math">\([c,d]\text{.}\)</span> Moreover</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-mult.html ./knowl/prop-indicator-interval.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/prop-int-finite-points.html">
-\begin{gather*}
-U(f1_{(c,d)}; x_0, \dots, x_N) = U(f1_{(c,d)};x_n, \dots, x_m),\\
-L(f1_{(c,d)}; x_0, \dots, x_N) = L(f1_{(c,d)};x_n, \dots, x_m).
-\end{gather*}
-</div>
-<p class="continuation">Thus for every <span class="process-math">\(\eps \gt 0\)</span> we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-mult.html ./knowl/prop-indicator-interval.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/prop-int-finite-points.html">
-\begin{equation*}
-U(f1_{(c,d)}; [c,d])-\eps \leq \int_a^b f1_{(c,d)} \leq L(f1_{(c,d)}; [c,d])+\eps
-\end{equation*}
-</div>
-<p class="continuation">Since this holds for every <span class="process-math">\(\eps \gt 0\text{,}\)</span> we deduce that <span class="process-math">\(f1_{(c,d)}\)</span> is Riemann integrable on <span class="process-math">\([c,d]\)</span> with</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-mult.html ./knowl/prop-indicator-interval.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/prop-int-finite-points.html">
-\begin{equation*}
-\int_c^df1_{(c,d)} = \int_a^b f1_{(c,d)}
-\end{equation*}
-</div>
-<p class="continuation">Since altering a function on a finite set of points does not affect the integral (<a href="" class="xref" data-knowl="./knowl/prop-int-finite-points.html" title="Proposition 9.17: Integrals agree up to finite point sets">Proposition 9.17</a>) we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-mult.html ./knowl/prop-indicator-interval.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/prop-int-finite-points.html">
-\begin{equation*}
-\int_a^b f1_{[c,d]} = \int_a^b f1_{(c,d)} = \int_c^d f1_{(c,d)} =  \int_c^d f .
-\end{equation*}
-</div>
-<span class="incontext"><a href="week-9.html#p-98" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p><em class="emphasis">Memorisation versus reconstruction:</em> One can memorise every proof in this course for the purpose of the exam, however this is not a good idea for the following reasons:</p>
+<ul class="disc">
+<li><p>We have limited memory, and it is therefore very hard to memorise such a large amount of information<a href="" class="fn-knowl original" data-knowl="./knowl/fn-8-hidden.html" title="Footnote C.1"><sup> 1 </sup></a>.</p></li>
+<li><p>Mathematicians are lazy - most of us do not like memorising large amounts of material. Successful mathematicians learn a few strategies which allow them to reconstruct  proofs from first principles. On occasion one has to memorise a key "trick" or "idea", which it may be hard to think of yourself (particularly under exam conditions). However, memorising a handful of key "tricks" is much easier than memorising 100 pages of notes.</p></li>
+<li><p>Our intended learning outcomes (see <a href="module-purpose.html" class="internal" title="Appendix D: The purpose of this module">Appendix D</a>) of "writing proofs" and "constructing counterexamples" are not met through memorisation. These learning outcomes are  skills which can be acquired, and are useful in other situations, in mathematics and beyond.</p></li>
+<li><p>In your assessment, you will be given statements to prove which are similar but not identical to those in the notes. Understanding how to construct a proof allows you to answer these questions, whereas memorising the proofs in the notes does not.</p></li>
+</ul>
+<span class="incontext"><a href="study-instructions.html#p-98" class="internal">in-context</a></span>
 </body>
 </html>
