@@ -13,15 +13,24 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.8.g.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.32.a.1</span><span class="period">.</span>
 </h4>
-<article class="proposition theorem-like"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.16</span><span class="period">.</span><span class="space"> </span><span class="title">Integral test, proof deferred.</span>
-</h5>Let <span class="process-math">\(a,b \in \Z\)</span> with <span class="process-math">\(a \lt  b\text{.}\)</span> Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a decreasing function<a href="" class="fn-knowl original" data-knowl="./knowl/fn-8-hidden.html" title="Footnote 4.3"><sup> 3 </sup></a>. Then<div class="displaymath process-math" data-contains-math-knowls="">
+<article class="theorem theorem-like"><h5 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.33</span><span class="period">.</span><span class="space"> </span><span class="title">Multiplying series.</span>
+</h5>
+<p>Suppose that the series <span class="process-math">\(\sum_{n=0}^\infty a_n\)</span> and <span class="process-math">\(\sum_{n=0}^\infty b_n\)</span> are both absolutely convergent. Then we have the <em class="emphasis">Cauchy product formula</em></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation}
-f(a)+ \int_a^b f(t)\intd t \geq    \sum_{n=a}^b f(n) \geq f(b)+ \int_a^b f(t)\intd t.\tag{4.3}
+\brac{\sum_{n=0}^\infty a_n}\brac{\sum_{n=0}^\infty b_n} = \sum_{n=0}^\infty \brac{\sum_{r+s = n} a_rb_s}.\tag{4.4}
 \end{equation}
-</div></article>
+</div>
+<p class="continuation">Furthermore the right-hand side is absolutely convergent.</p>
+<p>Here we are using the notation</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{r+s = n} a_rb_s := \sum_{r=0}^n a_rb_{n-r} = a_0b_n + a_1b_{n-1} + \dots + a_nb_0\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-44-hidden.html" title="Proof 4.33.1"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article>
 </div>
 <span class="incontext"><a href="week-4.html#solution-70" class="internal">in-context</a></span>
 </body>

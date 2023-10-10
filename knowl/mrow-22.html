@@ -11,13 +11,12 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-alt-test.html ./knowl/eq-alt-key-ineq.html ./knowl/def-cauchy.html ./knowl/prop-cauchy.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html">
 \begin{align*}
-\abs{\sum_{n=1}^N(-1)^{n+1} a_n -\sum_{n=1}^M(-1)^{n+1} a_n } \amp= \abs{ \sum_{n=M+1}^N (-1)^{n+1} a_n}\\
-\amp = a_{M+1} - a_{M+2} + \dots + (-1)^{N-M+1} a_N\\
-\amp \leq a_{M+1}.
+\brac{\sum_{n=0}^N a_n}\brac{\sum_{n=0}^N b_n} \amp = \sum_{0\leq r,s\leq N} a_rb_s = \sum_{n=0}^{2N} \ \sum_{\substack{0 \leq r, s \leq N\\ r+s = n}} a_rb_s \\
+\amp = \sum_{n=0}^{N}\ \sum_{r+s = n} a_rb_s + \sum_{n=N+1}^{2N} \ \sum_{\substack{0 \leq r, s \leq N\\ r+s = n}} a_rb_s
 \end{align*}
 </div>
-<span class="incontext"><a href="week-4.html#md-4" class="internal">in-context</a></span>
+<span class="incontext"><a href="week-4.html#md-5" class="internal">in-context</a></span>
 </body>
 </html>

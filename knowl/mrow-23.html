@@ -13,10 +13,11 @@
 <body class="ignore-math">
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html">
 \begin{align*}
-\brac{\sum_{n=0}^N a_n}\brac{\sum_{n=0}^N b_n} \amp = \sum_{0\leq r,s\leq N} a_rb_s = \sum_{n=0}^{2N} \ \sum_{\substack{0 \leq r, s \leq N\\ r+s = n}} a_rb_s \\
-\amp = \sum_{n=0}^{N}\ \sum_{r+s = n} a_rb_s + \sum_{n=N+1}^{2N} \ \sum_{\substack{0 \leq r, s \leq N\\ r+s = n}} a_rb_s
+\abs{\sum_{n=N+1}^{2N} \ \sum_{\substack{0 \leq r, s \leq N\\ r+s = n}} a_rb_s}
+\amp \leq \sum_{r = \ceil{\frac{N}{2}}}^N |a_r|\sum_{s=0}^N |b_s|+ \sum_{r=0}^N |a_r|\sum_{s = \ceil{\frac{N}{2}}}^N |b_s|\\
+\amp \leq  B\sum_{r = \ceil{\frac{N}{2}}}^\infty |a_r|+  A\sum_{s = \ceil{\frac{N}{2}}}^\infty |b_s|
 \end{align*}
 </div>
-<span class="incontext"><a href="week-5.html#md-5" class="internal">in-context</a></span>
+<span class="incontext"><a href="week-4.html#md-6" class="internal">in-context</a></span>
 </body>
 </html>
