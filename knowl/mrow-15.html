@@ -11,12 +11,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-seq-limit.html ./knowl/eq-lim-def-2.html ./knowl/eq-lim-def-2-5.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-add-rule.html ./knowl/prop-mult-rule.html">
 \begin{align*}
-ab - a_nb_n \amp = (a-a_n)b + a_n(b -  b_n)\\
-\amp  = (a-a_n)b + (a_n-a)(b-b_n) + a(b-b_n)
+\sum_{n=1}^\infty (\lambda a_n + \mu b_n) \amp = \lim_{N \to \infty} \sum_{n=1}^N (\lambda a_n + \mu b_n)\qquad \text{[definition of series]}\\
+\amp = \lim_{N \to \infty}\brac{ \lambda {\sum_{n=1}^N a_n} + \mu{\sum_{n=1}^N b_n}}\qquad \text{[linearity of finite sums]}\\
+\amp =  \lim_{N \to \infty}\brac{ \lambda\sum_{n=1}^N a_n} + \lim_{N \to \infty}\brac{\mu\sum_{n=1}^N b_n} \qquad \text{[addition rule]}\\
+\amp = \lambda \lim_{N \to \infty}\sum_{n=1}^N a_n + \mu \lim_{N \to \infty}\sum_{n=1}^N b_n\qquad \text{[multiplication rule]}.
 \end{align*}
 </div>
-<span class="incontext"><a href="section-2.html#md-3" class="internal">in-context</a></span>
+<span class="incontext"><a href="week-4.html#md-3" class="internal">in-context</a></span>
 </body>
 </html>

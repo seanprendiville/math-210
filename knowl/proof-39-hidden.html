@@ -10,13 +10,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof">We first observe that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-alg-cts.html ./knowl/cor-abs-cts.html ./knowl/prop-alg-cts.html">
+<body class="ignore-math"><article class="hiddenproof"> Applying the inequality <a href="" class="xref" data-knowl="./knowl/eq-alt-key-ineq.html" title="Equation 4.3">(4.3)</a>, for any <span class="process-math">\(N \gt M\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-alt-test.html ./knowl/eq-alt-key-ineq.html ./knowl/def-cauchy.html ./knowl/prop-cauchy.html">
+\begin{align*}
+\abs{\sum_{n=1}^N(-1)^{n+1} a_n -\sum_{n=1}^M(-1)^{n+1} a_n } \amp= \abs{ \sum_{n=M+1}^N (-1)^{n+1} a_n}\\
+\amp = a_{M+1} - a_{M+2} + \dots + (-1)^{N-M+1} a_N\\
+\amp \leq a_{M+1}.
+\end{align*}
+</div>Since <span class="process-math">\(a_{n} \to 0\)</span> as <span class="process-math">\(n \to \infty\)</span> there exists <span class="process-math">\(N_0 = N_0(\eps)\)</span> such that for all <span class="process-math">\(n \geq N_0(\eps)\)</span> we have <span class="process-math">\(a_{n} \leq \eps\text{.}\)</span> In particular, if <span class="process-math">\(N \gt M \geq N_0(\eps)\)</span> then<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-alt-test.html ./knowl/eq-alt-key-ineq.html ./knowl/def-cauchy.html ./knowl/prop-cauchy.html">
 \begin{equation*}
-\max\set{f, 0} = \frac{ f+ |f|}{2}.
+\abs{\sum_{n=1}^N(-1)^{n+1} a_n -\sum_{n=1}^M(-1)^{n+1} a_n  }  \leq a_{M+1} \leq \eps.
 \end{equation*}
-</div>The latter function is continuous at <span class="process-math">\(x_0\)</span> on combining <a href="" class="xref" data-knowl="./knowl/prop-alg-cts.html" title="Proposition 6.2: Algebra of continuity">Proposition 6.2</a> and <a href="" class="xref" data-knowl="./knowl/cor-abs-cts.html" title="Proposition 6.8">Proposition 6.8</a>. Next observe that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-alg-cts.html ./knowl/cor-abs-cts.html ./knowl/prop-alg-cts.html">
+</div>It follows that the sequence of partial sums<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-alt-test.html ./knowl/eq-alt-key-ineq.html ./knowl/def-cauchy.html ./knowl/prop-cauchy.html">
 \begin{equation*}
-\max\set{f,g}= \max\set{f-g,0} + g.
+\sum_{n=1}^N (-1)^{n+1} a_n
 \end{equation*}
-</div>The latter function is continuous at <span class="process-math">\(x_0\)</span> on combining our previous observation with the fact that the sum of two continuous functions is continuous (<a href="" class="xref" data-knowl="./knowl/prop-alg-cts.html" title="Proposition 6.2: Algebra of continuity">Proposition 6.2</a>). The argument for <span class="process-math">\(\min\)</span> is similar.</article></body>
+</div>is a Cauchy sequence (<a href="" class="xref" data-knowl="./knowl/def-cauchy.html" title="Definition 3.27: Cauchy sequence">Definition 3.27</a>), hence convergent (see <a href="" class="xref" data-knowl="./knowl/prop-cauchy.html" title="Proposition 3.28: Cauchy is equivalent to convergence">Proposition 3.28</a>).</article></body>
 </html>

@@ -11,14 +11,13 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-add-rule.html ./knowl/prop-mult-rule.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-alt-test.html ./knowl/eq-alt-key-ineq.html ./knowl/def-cauchy.html ./knowl/prop-cauchy.html">
 \begin{align*}
-\sum_{n=1}^\infty (\lambda a_n + \mu b_n) \amp = \lim_{N \to \infty} \sum_{n=1}^N (\lambda a_n + \mu b_n)\qquad \text{[definition of series]}\\
-\amp = \lim_{N \to \infty}\brac{ \lambda {\sum_{n=1}^N a_n} + \mu{\sum_{n=1}^N b_n}}\qquad \text{[linearity of finite sums]}\\
-\amp =  \lim_{N \to \infty}\brac{ \lambda\sum_{n=1}^N a_n} + \lim_{N \to \infty}\brac{\mu\sum_{n=1}^N b_n} \qquad \text{[addition rule]}\\
-\amp = \lambda \lim_{N \to \infty}\sum_{n=1}^N a_n + \mu \lim_{N \to \infty}\sum_{n=1}^N b_n\qquad \text{[multiplication rule]}.
+\abs{\sum_{n=1}^N(-1)^{n+1} a_n -\sum_{n=1}^M(-1)^{n+1} a_n } \amp= \abs{ \sum_{n=M+1}^N (-1)^{n+1} a_n}\\
+\amp = a_{M+1} - a_{M+2} + \dots + (-1)^{N-M+1} a_N\\
+\amp \leq a_{M+1}.
 \end{align*}
 </div>
-<span class="incontext"><a href="week-4.html#md-3" class="internal">in-context</a></span>
+<span class="incontext"><a href="week-4.html#md-4" class="internal">in-context</a></span>
 </body>
 </html>

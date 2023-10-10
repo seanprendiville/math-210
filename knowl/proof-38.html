@@ -11,6 +11,22 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>This follows from the fact that continuity is preserved under composition of functions (<a href="" class="xref" data-knowl="./knowl/prop-comp-cts.html" title="Proposition 6.7: Composition preserves continuity">Proposition 6.7</a>), and the fact that the absolute value function <span class="process-math">\(x\mapsto |x|\)</span> is continuous on <span class="process-math">\(\R\)</span> (<a href="" class="xref" data-knowl="./knowl/eg-abs-cts.html" title="Example 5.16: The absolute value function is continuous">Example 5.16</a>).</article><span class="incontext"><a href="week-6.html#proof-38" class="internal">in-context</a></span>
+<article class="hiddenproof"><h4 class="heading"><span class="title">Proof of Lemma 4.19.</span></h4> We prove this by induction on <span class="process-math">\(n\text{,}\)</span> the number of terms in the sequence. The basis case, when <span class="process-math">\(n=1\text{,}\)</span> follows from the inequalities<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-alt-ineq.html">
+\begin{equation*}
+0 \leq b_1 \leq b_1.
+\end{equation*}
+</div>For the inductive step, we may suppose that<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-alt-ineq.html">
+\begin{equation*}
+0 \leq b_2 -b_3 + \dots + (-1)^n b_{n} \leq b_2.
+\end{equation*}
+</div>It follows that<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-alt-ineq.html">
+\begin{equation*}
+b_1 - b_2 + \dots + (-1)^{n+1} b_n = b_1- \brac{b_2 -b_3+ \dots + (-1)^{n} b_n} \geq b_1-b_2 \geq 0
+\end{equation*}
+</div>and that<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-alt-ineq.html">
+\begin{equation*}
+b_1 - b_2 + \dots + (-1)^{n+1} b_n = b_1- \brac{b_2 -b_3+ \dots + (-1)^{n} b_n} \leq b_1- 0= b_1.
+\end{equation*}
+</div></article><span class="incontext"><a href="week-4.html#proof-38" class="internal">in-context</a></span>
 </body>
 </html>

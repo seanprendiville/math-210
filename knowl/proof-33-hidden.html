@@ -10,9 +10,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof">Take <span class="process-math">\(\eps := \trecip{2} f(x_0)\)</span> in <a href="" class="xref" data-knowl="./knowl/eq-eps-delta-cts.html" title="Equation 5.5">(5.5)</a>. Then by the triangle inequality, for <span class="process-math">\(x \in D\)</span> satisfying <span class="process-math">\(|x-x_0| \leq \delta = \delta(\eps)\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-eps-delta-cts.html">
+<body class="ignore-math"><article class="hiddenproof">Since <span class="process-math">\(a_n \geq 0\)</span> for all <span class="process-math">\(n\in \N\text{,}\)</span> the sequence of partial sums<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-lim.html">
 \begin{equation*}
-f(x) = f(x_0) + f(x) - f(x_0) \geq f(x_0)- |f(x)-f(x_0)| \geq f(x_0) - \eps = \trecip{2} f(x_0) \gt 0. 
+a_1 \quad \leq\quad a_1 + a_2 \quad \leq\quad a_1 + a_2 + a_3 \quad \leq\quad \dots 
 \end{equation*}
-</div></article></body>
+</div>is an increasing sequence of real numbers. Hence by the monotone convergence principle (<a href="" class="xref" data-knowl="./knowl/prop-mono-lim.html" title="Proposition 2.3: Monotone convergence principle">Proposition 2.3</a>), the limit<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-lim.html">
+\begin{equation*}
+\sum_{n=1}^\infty a_n = \lim_{N\to \infty} \sum_{n=1}^Na_n
+\end{equation*}
+</div>always exists, but is possibly <span class="process-math">\(\infty\text{.}\)</span></article></body>
 </html>

@@ -11,10 +11,26 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>We prove the result for the sum, the remaining arguments being similar (and left to the reader). By definition of function limits (<a href="" class="xref" data-knowl="./knowl/def-fn-lim.html" title="Definition 5.11: Sequential definition of function limit">Definition 5.11</a>) and definition of continuity (<a href="" class="xref" data-knowl="./knowl/def-cts.html" title="Definition 5.13: Continuous">Definition 5.13</a>), we are required to show that if <span class="process-math">\((a_n)_n\)</span> is a sequence in <span class="process-math">\(D\)</span> with <span class="process-math">\(a_n\to x_0\)</span> then <span class="process-math">\(f(a_n)+g(a_n)\to f(x_0)+g(x_0)\)</span> as <span class="process-math">\(n\to\infty\text{.}\)</span> Since both <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are continuous at <span class="process-math">\(x_0\text{,}\)</span> we have <span class="process-math">\(f(a_n)\to f(x_0)\)</span> and <span class="process-math">\(g(a_n)\to g(x_0)\)</span> as <span class="process-math">\(n\to\infty\text{.}\)</span> Thus by the addition rule for sequential limits (<a href="" class="xref" data-knowl="./knowl/prop-add-rule.html" title="Proposition 2.8: Addition rule">Proposition 2.8</a>) we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-fn-lim.html ./knowl/def-cts.html ./knowl/prop-add-rule.html">
+<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>
+<p>Recall that the limit <span class="process-math">\(\sum_n |a_n|\)</span> always exists (but is possibly infinite), by the monotone convergence principle (<a href="" class="xref" data-knowl="./knowl/prop-mono-lim.html" title="Proposition 2.3: Monotone convergence principle">Proposition 2.3</a>), as in <a href="" class="xref" data-knowl="./knowl/rem-non-neg-seq.html" title="Proposition 4.7: Series of non-negative terms always exist">Proposition 4.7</a>. To prove that the series <span class="process-math">\(\sum_n a_n\)</span> converges, it suffices to prove that the sequence of partial sums <span class="process-math">\(\sum_{n=1}^N a_n\)</span> is a Cauchy sequence (<a href="" class="xref" data-knowl="./knowl/def-cauchy.html" title="Definition 3.27: Cauchy sequence">Definition 3.27</a>), since Cauchy sequences converge (<a href="" class="xref" data-knowl="./knowl/prop-cauchy.html" title="Proposition 3.28: Cauchy is equivalent to convergence">Proposition 3.28</a>). To this end, let <span class="process-math">\(\eps \gt 0\text{.}\)</span> Since we are assuming that <span class="process-math">\(\sum_{n=1}^N |a_n|\)</span> tends to a real limit as <span class="process-math">\(N \to \infty\text{,}\)</span> we know that this is a Cauchy sequence (<a href="" class="xref" data-knowl="./knowl/prop-cauchy.html" title="Proposition 3.28: Cauchy is equivalent to convergence">Proposition 3.28</a>). Hence there exists <span class="process-math">\(N_0 \in \N\)</span> such that for all <span class="process-math">\(M\gt N \geq N_0\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-lim.html ./knowl/rem-non-neg-seq.html ./knowl/def-cauchy.html ./knowl/prop-cauchy.html ./knowl/prop-cauchy.html">
 \begin{equation*}
-\lim_{n\to \infty} \brac{f(a_n)+g(a_n)} = \lim_{n\to \infty} f(a_n)+\lim_{n\to \infty} g(a_n) = f(x_0) + g(x_0)\text{,}
+\eps \geq \abs{\sum_{n=1}^M |a_n| - \sum_{n=1}^N |a_n|} = \sum_{n=N+1}^M |a_n|.
 \end{equation*}
-</div>as required.</article><span class="incontext"><a href="week-6.html#proof-34" class="internal">in-context</a></span>
+</div>
+<p class="continuation">By the triangle inequality, for all <span class="process-math">\(M \gt N \geq N_0\)</span> we have that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-lim.html ./knowl/rem-non-neg-seq.html ./knowl/def-cauchy.html ./knowl/prop-cauchy.html ./knowl/prop-cauchy.html">
+\begin{equation*}
+\abs{ \sum_{n=1}^M a_n - \sum_{n=1}^N a_n} = \abs{\sum_{n=N+1}^M a_n} \leq \sum_{n=N+1}^M |a_n| \leq \eps.
+\end{equation*}
+</div>
+<p class="continuation">This establishes the Cauchy property, as claimed.</p>
+<p>To prove the infinite triangle inequality <a href="" class="xref" data-knowl="./knowl/item-inf-tri.html" title="Equation 4.1">(4.1)</a> we first observe the finite triangle inequality</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/item-inf-tri.html ./knowl/prop-ineq-rule.html">
+\begin{equation*}
+-\sum_{n=1}^N |a_n| \leq \sum_{n=1}^N a_n \leq \sum_{n=1}^N |a_n|
+\end{equation*}
+</div>
+<p class="continuation">The infinite triangle inequality follows on letting <span class="process-math">\(N \to \infty\)</span> and applying  the inequality rule for limits (<a href="" class="xref" data-knowl="./knowl/prop-ineq-rule.html" title="Proposition 2.5">Proposition 2.5</a>) to either side of the above.</p></article><span class="incontext"><a href="week-4.html#proof-34" class="internal">in-context</a></span>
 </body>
 </html>

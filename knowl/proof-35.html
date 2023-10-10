@@ -11,10 +11,13 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>The identity function <span class="process-math">\(x \mapsto x\)</span> is continuous, since denoting this function by <span class="process-math">\(f\text{,}\)</span> we have <span class="process-math">\(a_n \to x_0\)</span> implies <span class="process-math">\(f(a_n) \to f(x_0)\text{.}\)</span> By the multiplication rule (<a href="" class="xref" data-knowl="./knowl/prop-mult-rule.html" title="Proposition 2.10: Multiplication rule">Proposition 2.10</a>) it follows that <span class="process-math">\(x^2\)</span> is continuous. Iterating this argument, we see that <span class="process-math">\(x^3 = x\cdot x^2\)</span> is continuous. It follows from induction that <span class="process-math">\(x^n\)</span> is continuous for any <span class="process-math">\(n \in \N\text{.}\)</span> Since constant functions are continuous (<a href="" class="xref" data-knowl="./knowl/eg-const-cts.html" title="Example 5.14: Constant functions are continuous">Example 5.14</a>), it again follows from the multiplication rule that <span class="process-math">\(c_n x^n\)</span> is continuous for any <span class="process-math">\(c_n \in \R\text{.}\)</span> By the addition rule (<a href="" class="xref" data-knowl="./knowl/prop-add-rule.html" title="Proposition 2.8: Addition rule">Proposition 2.8</a>), the sum<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/eg-const-cts.html ./knowl/prop-add-rule.html">
-\begin{equation*}
-c_0 + c_1x+ \dots + c_n x^n
-\end{equation*}
-</div>is continuous. Hence polynomials are continuous.</article><span class="incontext"><a href="week-6.html#proof-35" class="internal">in-context</a></span>
+<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>This is an application of the addition and multiplication rules for sequences (<a href="" class="xref" data-knowl="./knowl/prop-add-rule.html" title="Proposition 2.14: Addition rule">Proposition 2.14</a> and <a href="" class="xref" data-knowl="./knowl/prop-mult-rule.html" title="Proposition 2.17: Multiplication rule">Proposition 2.17</a>), as follows:<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-add-rule.html ./knowl/prop-mult-rule.html">
+\begin{align*}
+\sum_{n=1}^\infty (\lambda a_n + \mu b_n) \amp = \lim_{N \to \infty} \sum_{n=1}^N (\lambda a_n + \mu b_n)\qquad \text{[definition of series]}\\
+\amp = \lim_{N \to \infty}\brac{ \lambda {\sum_{n=1}^N a_n} + \mu{\sum_{n=1}^N b_n}}\qquad \text{[linearity of finite sums]}\\
+\amp =  \lim_{N \to \infty}\brac{ \lambda\sum_{n=1}^N a_n} + \lim_{N \to \infty}\brac{\mu\sum_{n=1}^N b_n} \qquad \text{[addition rule]}\\
+\amp = \lambda \lim_{N \to \infty}\sum_{n=1}^N a_n + \mu \lim_{N \to \infty}\sum_{n=1}^N b_n\qquad \text{[multiplication rule]}.
+\end{align*}
+</div></article><span class="incontext"><a href="week-4.html#proof-35" class="internal">in-context</a></span>
 </body>
 </html>

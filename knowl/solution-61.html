@@ -13,19 +13,21 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">6.10.b.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.9.b.1</span><span class="period">.</span>
 </h4>
-<article class="remark remark-like"><h5 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">6.12</span><span class="period">.</span><span class="space"> </span><span class="title">Uniform continuity implies continuity.</span>
-</h5> It is important to compare the definition of uniform continuity <a href="" class="xref" data-knowl="./knowl/eq-unif-cts.html" title="Equation 6.1">(6.1)</a> with that of continuity <a href="" class="xref" data-knowl="./knowl/eq-eps-delta-cts.html" title="Equation 5.5">(5.5)</a>, the latter being:<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-unif-cts.html ./knowl/eq-eps-delta-cts.html ./knowl/eq-eps-delta-cts-2.html ./knowl/eq-unif-cts.html">
-\begin{align}
-(\forall x_0 \in D)(\forall \eps \gt 0)(\exists \delta = \delta(x_0,\eps) \gt 0)\amp (\forall x \in D)\notag\\
-\bigsqbrac{\ |x-x_0| \leq \delta \implies |f(x)-f(x_0)| \leq \eps\ }.\tag{6.2}
-\end{align}
-</div>The only difference is the order of the quantifiers: for continuity <a href="" class="xref" data-knowl="./knowl/eq-eps-delta-cts-2.html" title="Equation 6.2">(6.2)</a> the parameter <span class="process-math">\(\delta= \delta(x_0, \eps)\)</span>  is allowed to depend on the point of continuity <span class="process-math">\(x_0\text{,}\)</span> however for uniformity continuity <a href="" class="xref" data-knowl="./knowl/eq-unif-cts.html" title="Equation 6.1">(6.1)</a> the same <span class="process-math">\(\delta = \delta(\eps)\)</span> has to work for <em class="emphasis">all</em> points <span class="process-math">\(x_0\)</span> in the domain <span class="process-math">\(D\text{.}\)</span> If <span class="process-math">\(f\)</span> is uniformly continuous then it is therefore continuous, on taking <span class="process-math">\(\delta(x_0, \eps) := \delta(\eps)\)</span> for any <span class="process-math">\(x_0 \in D\text{.}\)</span> However, the <a class="external" href="https://en.wikipedia.org/wiki/Converse_(logic)" target="_blank">converse</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-20-hidden.html" title="Footnote 6.2"><sup> 2 </sup></a> is not always true, as the next example illustrates.</article><article class="example example-like"><a href="" class="example-knowl original" data-knowl="./knowl/example-12-hidden.html" title="Example 6.13: Continuity does not imply uniform continuity"><h5 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.13</span><span class="period">.</span><span class="space"> </span><span class="title">Continuity does not imply uniform continuity.</span>
-</h5></a></article>
+<article class="proposition theorem-like"><h5 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.11</span><span class="period">.</span><span class="space"> </span><span class="title">Absolute convergence implies convergence.</span>
+</h5>
+<p>Let <span class="process-math">\((a_n)_{n=1}^\infty\)</span> be a sequence of real numbers.  If <span class="process-math">\(\displaystyle
+\sum_{n=1}^\infty |a_n| \lt  \infty\)</span> then the series <span class="process-math">\(\displaystyle
+\sum_{n=1}^\infty a_n\)</span> converges to a finite real number.</p>
+<p>In addition, we have the infinite triangle inequality</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation}
+\abs{\sum_{n=1}^\infty a_n }\leq \sum_{n=1}^\infty |a_n|.\tag{4.1}
+\end{equation}
+</div></article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-34-hidden.html" title="Proof 4.11.1"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article>
 </div>
-<span class="incontext"><a href="week-6.html#solution-61" class="internal">in-context</a></span>
+<span class="incontext"><a href="week-4.html#solution-61" class="internal">in-context</a></span>
 </body>
 </html>

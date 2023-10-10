@@ -11,13 +11,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-lim.html">
-\begin{align}
-x^n \amp = [1+ (x-1)]^n\tag{3.5}\\
-\amp = 1 + n (x-1) + \binom{n}{2} (x-1)^2 + \dots + (x-1)^n
-\geq n(x-1).\tag{3.6}
-\end{align}
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-add-rule.html ./knowl/prop-mult-rule.html">
+\begin{align*}
+\sum_{n=1}^\infty (\lambda a_n + \mu b_n) \amp = \lim_{N \to \infty} \sum_{n=1}^N (\lambda a_n + \mu b_n)\qquad \text{[definition of series]}\\
+\amp = \lim_{N \to \infty}\brac{ \lambda {\sum_{n=1}^N a_n} + \mu{\sum_{n=1}^N b_n}}\qquad \text{[linearity of finite sums]}\\
+\amp =  \lim_{N \to \infty}\brac{ \lambda\sum_{n=1}^N a_n} + \lim_{N \to \infty}\brac{\mu\sum_{n=1}^N b_n} \qquad \text{[addition rule]}\\
+\amp = \lambda \lim_{N \to \infty}\sum_{n=1}^N a_n + \mu \lim_{N \to \infty}\sum_{n=1}^N b_n\qquad \text{[multiplication rule]}.
+\end{align*}
 </div>
-<span class="incontext"><a href="week-3.html#mdn-4" class="internal">in-context</a></span>
+<span class="incontext"><a href="week-4.html#md-3" class="internal">in-context</a></span>
 </body>
 </html>
