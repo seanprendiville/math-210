@@ -11,14 +11,48 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>By the multiplication rule for absolutely convergent series (<a href="" class="xref" data-knowl="./knowl/thm-mult-series.html" title="Theorem 4.33: Multiplying series">Theorem 4.33</a>) we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mult-series.html">
+<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>By the multiplication rule for limits (<a href="" class="xref" data-knowl="./knowl/prop-mult-rule.html" title="Proposition 2.17: Multiplication rule">Proposition 2.17</a>) we have that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html">
 \begin{equation*}
-\exp(x)\exp(y) = \sum_{n=0}^\infty \sum_{r+s= n} \frac{x^ry^s}{r!s!}
+\brac{\sum_{n=0}^\infty a_n }\brac{\sum_{n=0}^\infty b_n} = \lim_{N\to \infty } \brac{\brac{\sum_{n=0}^N a_n}\brac{\sum_{n=0}^N b_n}}.
 \end{equation*}
-</div>By the binomial theorem<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mult-series.html">
+</div>One can check (using the addition rule for limits <a href="" class="xref" data-knowl="./knowl/prop-add-rule.html" title="Proposition 2.14: Addition rule">Proposition 2.14</a>), that it therefore suffices to show that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html">
+\begin{equation}
+\brac{\sum_{n=0}^N a_n}\brac{\sum_{n=0}^N b_n} - \sum_{n=0}^N \brac{\sum_{r+s = n} a_rb_s} \to 0 \quad \text{ as }\quad N \to \infty \text{.}\tag{4.5}
+\end{equation}
+</div>Our proof of <a href="" class="xref" data-knowl="./knowl/cauchy-to-prove.html" title="Equation 4.5">(4.5)</a> starts by multiplying out the partial sums and grouping the terms <span class="process-math">\(a_rb_s\)</span> according to the value of <span class="process-math">\(r+s\text{,}\)</span> as follows<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html">
+\begin{align*}
+\brac{\sum_{n=0}^N a_n}\brac{\sum_{n=0}^N b_n} \amp = \sum_{0\leq r,s\leq N} a_rb_s = \sum_{n=0}^{2N} \ \sum_{\substack{0 \leq r, s \leq N\\ r+s = n}} a_rb_s \\
+\amp = \sum_{n=0}^{N}\ \sum_{r+s = n} a_rb_s + \sum_{n=N+1}^{2N} \ \sum_{\substack{0 \leq r, s \leq N\\ r+s = n}} a_rb_s\text{.}
+\end{align*}
+</div>To prove <a href="" class="xref" data-knowl="./knowl/cauchy-to-prove.html" title="Equation 4.5">(4.5)</a> it therefore suffices to prove that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html">
 \begin{equation*}
-\sum_{r+s = n} \frac{x^ry^s}{r!s!} = \sum_{r=0}^n \frac{x^r y^{n-r}}{r!(n-r)!}= 
-\recip{n!}\sum_{r=0}^n \binom{n}{r}x^r y^{n-r} = \recip{n!} (x+y)^n.
+\sum_{n=N+1}^{2N} \ \sum_{\substack{0 \leq r, s \leq N\\ r+s = n}} a_rb_s \to 0 \quad\text{ as } \quad N \to \infty.
+\end{equation*}
+</div>We observe that if <span class="process-math">\(0 \leq r, s \leq N\)</span> and <span class="process-math">\(r+s = n\)</span> for some <span class="process-math">\(n \in (N, 2N]\)</span> then either <span class="process-math">\(r \geq N/2\)</span> or <span class="process-math">\(s \geq N/2\text{.}\)</span> Hence, on writing<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html">
+\begin{equation*}
+A:=\sum_{n=0}^\infty |a_n| \quad \text{and}\quad  B:=\sum_{n=0}^\infty |b_n|,
+\end{equation*}
+</div>the triangle inequality and the inequality rule (<a href="" class="xref" data-knowl="./knowl/prop-ineq-rule.html" title="Proposition 2.5">Proposition 2.5</a>) together give that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html">
+\begin{align*}
+\abs{\sum_{n=N+1}^{2N} \ \sum_{\substack{0 \leq r, s \leq N\\ r+s = n}} a_rb_s}
+\amp \leq \sum_{r = \ceil{\frac{N}{2}}}^N |a_r|\sum_{s=0}^N |b_s|+ \sum_{r=0}^N |a_r|\sum_{s = \ceil{\frac{N}{2}}}^N |b_s|\\
+\amp \leq  B\sum_{r = \ceil{\frac{N}{2}}}^\infty |a_r|+  A\sum_{s = \ceil{\frac{N}{2}}}^\infty |b_s|\text{.}
+\end{align*}
+</div>By absolute convergence we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html">
+\begin{equation*}
+\sum_{r =N}^\infty |a_r| = \sum_{r=0}^\infty|a_r| - \sum_{n=0}^{N-1} |a_r| \to 0 \text{ as } N \to \infty.
+\end{equation*}
+</div>Since convergence is preserved on passing to a subsequence (<a href="" class="xref" data-knowl="./knowl/prop-subseq-conv.html" title="Proposition 3.20: Limits are preserved on passing to subsequences">Proposition 3.20</a>) we deduce that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html">
+\begin{equation*}
+\sum_{r = \ceil{\frac{N}{2}}}^\infty |a_r| \to 0 \text{ as } N \to \infty.
+\end{equation*}
+</div>Therefore, by the multiplication rule for limits (<a href="" class="xref" data-knowl="./knowl/prop-mult-rule.html" title="Proposition 2.17: Multiplication rule">Proposition 2.17</a>) and using the fact that <span class="process-math">\(B = \sum_s |b_s|\)</span> is a fixed finite real number, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html">
+\begin{equation*}
+B\sum_{r = \ceil{\frac{N}{2}}}^\infty |a_r| \to 0 \text{ as } N \to \infty.
+\end{equation*}
+</div>The proof is complete on employing a similar argument to show that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html">
+\begin{equation*}
+A\sum_{s = \ceil{\frac{N}{2}}}^\infty |b_s| \to 0 \text{ as } N \to \infty.
 \end{equation*}
 </div></article><span class="incontext"><a href="week-4.html#proof-43" class="internal">in-context</a></span>
 </body>

@@ -445,23 +445,23 @@ a_n := \begin{cases} 2^{-n} \amp \text{if } n \text{ odd};\\
 <p id="p-95">For uniqueness, suppose that <span class="process-math">\(R_1 \lt  R_2\)</span> both satisfy items <a href="" class="xref" data-knowl="./knowl/item-power-conv.html" title="Item 4.24.1">Item 4.24.1</a> and <a href="" class="xref" data-knowl="./knowl/item-power-div.html" title="Item 4.24.2">Item 4.24.2</a>. Setting <span class="process-math">\(r := \recip 2(R_1+R_2)\)</span> we have <span class="process-math">\(R_1 \lt  r \lt  R_2\text{.}\)</span> Hence by item <a href="" class="xref" data-knowl="./knowl/item-power-conv.html" title="Item 4.24.1">Item 4.24.1</a> we have <span class="process-math">\(\sum_n |a_n|r^n \lt  \infty\)</span> and by item <a href="" class="xref" data-knowl="./knowl/item-power-div.html" title="Item 4.24.2">Item 4.24.2</a> we have <span class="process-math">\(\sum_n |a_n|r^n = \infty\text{,}\)</span> a contradiction.</p></article></div>
 </div></div>
 </div></article></article></div>
-<article class="exercise exercise-like" id="exercise-39"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-39"><h3 class="heading">
+<article class="exercise exercise-like" id="ex-exp-def"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-exp-def"><h3 class="heading">
 <span class="type">-</span><span class="space"> </span><span class="codenumber">4.28</span><span class="period">.</span><span class="space"> </span><span class="title">The exponential function.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-39"><article class="exercise exercise-like"><article class="task exercise-like" id="ex-exp-def"><h4 class="heading"><span class="codenumber">(a)</span></h4>Define the exponential function in terms of a power series and justify why this power series converges.<div class="solutions">
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-exp-def"><article class="exercise exercise-like">Define the exponential function in terms of a power series and justify why this power series converges.<div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-68" id="solution-68"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-68"><div class="solution solution-like">
-<article class="definition definition-like" id="def-exp"><h5 class="heading">
+<article class="definition definition-like" id="def-exp"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.29</span><span class="period">.</span><span class="space"> </span><span class="title">Exponential function.</span>
-</h5> The exponential function <span class="process-math">\(\exp : \R \to \R\)</span> is given by the absolutely convergent power series<div class="displaymath process-math" data-contains-math-knowls="">
+</h4> The exponential function <span class="process-math">\(\exp : \R \to \R\)</span> is given by the power series<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-\exp(x) := \sum_{n=0}^\infty \frac{x^n}{n!}.
+\exp(x) := \sum_{n=0}^\infty \frac{x^n}{n!},
 \end{equation*}
-</div>We define the real number <span class="process-math">\(e \in \R\)</span> via the series<div class="displaymath process-math" data-contains-math-knowls="">
+</div>when this exists. We define the real number <span class="process-math">\(e \in \R\)</span> via the series<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 e := \exp(1) = \sum_{n=0}^\infty \frac{1}{n!}.
 \end{equation*}
-</div></article><article class="proposition theorem-like" id="prop-exp-radius"><h5 class="heading">
+</div></article><article class="proposition theorem-like" id="prop-exp-radius"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.30</span><span class="period">.</span><span class="space"> </span><span class="title">Radius of convergence for the exponential function.</span>
-</h5>
+</h4>
 <p id="p-96">The power series</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
@@ -469,38 +469,23 @@ e := \exp(1) = \sum_{n=0}^\infty \frac{1}{n!}.
 \end{equation*}
 </div>
 <p class="continuation">has infinite radius of convergence.</p>
-<p id="p-97">In particular, the exponential function <span class="process-math">\(\exp(x)\)</span> is well-defined at all <span class="process-math">\(x \in \R\text{.}\)</span></p></article><article class="hiddenproof" id="proof-42"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-42"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-42"><article class="hiddenproof">We show absolute convergence for all <span class="process-math">\(x \neq 0\)</span>  by applying the ratio test (<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "cor-ratio" missing or not unique]</code>) to the positive sequence <span class="process-math">\(a_n := |x|^n/n!\text{.}\)</span> (Absolute convergence when <span class="process-math">\(x = 0\)</span> follows from the fact that the series equals <span class="process-math">\(a_0\text{.}\)</span>) Enacting the ratio test (<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "cor-ratio" missing or not unique]</code>), we have<div class="displaymath process-math" data-contains-math-knowls=" ">
+<p id="p-97">In particular, the exponential function <span class="process-math">\(\exp(x)\)</span> is well-defined at all <span class="process-math">\(x \in \R\text{.}\)</span></p></article><article class="hiddenproof" id="proof-42"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-42"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-42"><article class="hiddenproof">Let <span class="process-math">\(N\geq 2|x|\text{.}\)</span> Then for any <span class="process-math">\(n\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-\lim_{n\to \infty}\frac{a_{n+1}}{a_n} = \lim_{n\to \infty}\frac{|x|}{n+1} = 0 \lt  1.
+\frac{|x|^{N+n}}{(N+n)!} \leq \frac{|x|^{N}}{N!} \times \frac{|x|^n}{N^n} \leq \frac{|x|^{N}}{N!}\times \brac{\frac{1}{2}}^n.
+\end{equation*}
+</div>Absolute convergence then follows from the comparison test, as in the following:<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=0}^\infty \frac{|x|^n}{n!} = \sum_{n=0}^N \frac{|x|^n}{n!} + \sum_{n=1}^\infty \frac{|x|^{N+n}}{(N+n)!} \leq \sum_{n=0}^N \frac{|x|^n}{n!} +\frac{|x|^N}{N!} \sum_{n=1}^\infty 2^{-n} \lt \infty.
 \end{equation*}
 </div></article></div>
 </div></div>
-</div></article><article class="task exercise-like" id="task-84"><h4 class="heading"><span class="codenumber">(b)</span></h4>State and prove the multiplication rule for the exponential function.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-69" id="solution-69"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-69"><div class="solution solution-like">
-<article class="proposition theorem-like" id="prop-exp-add-law"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.31</span><span class="period">.</span>
-</h5> The exponential function satisfies the identity<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\exp(x+y) = \exp(x)\exp(y), \qquad (\forall x,y \in \R).
-\end{equation*}
-</div></article><article class="hiddenproof" id="proof-43"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-43"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-43"><article class="hiddenproof">By the multiplication rule for absolutely convergent series (<a href="" class="xref" data-knowl="./knowl/thm-mult-series.html" title="Theorem 4.33: Multiplying series">Theorem 4.33</a>) we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mult-series.html">
-\begin{equation*}
-\exp(x)\exp(y) = \sum_{n=0}^\infty \sum_{r+s= n} \frac{x^ry^s}{r!s!}
-\end{equation*}
-</div>By the binomial theorem<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mult-series.html">
-\begin{equation*}
-\sum_{r+s = n} \frac{x^ry^s}{r!s!} = \sum_{r=0}^n \frac{x^r y^{n-r}}{r!(n-r)!}= 
-\recip{n!}\sum_{r=0}^n \binom{n}{r}x^r y^{n-r} = \recip{n!} (x+y)^n.
-\end{equation*}
 </div></article></div>
-</div></div>
-</div></article></article></div>
 <article class="exercise exercise-like" id="exercise-40"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-40"><h3 class="heading">
-<span class="type">-</span><span class="space"> </span><span class="codenumber">4.32</span><span class="period">.</span><span class="space"> </span><span class="title">Multiplying series.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-40"><article class="exercise exercise-like"><article class="task exercise-like" id="task-85"><h4 class="heading"><span class="codenumber">(a)</span></h4>State and prove the "Cauchy product formula" for multiplying two series.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-70" id="solution-70"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-70"><div class="solution solution-like">
+<span class="type">-</span><span class="space"> </span><span class="codenumber">4.31</span><span class="period">.</span><span class="space"> </span><span class="title">Multiplying series.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-40"><article class="exercise exercise-like"><article class="task exercise-like" id="task-83"><h4 class="heading"><span class="codenumber">(a)</span></h4>State and prove the "Cauchy product formula" for multiplying two series.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-69" id="solution-69"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-69"><div class="solution solution-like">
 <article class="theorem theorem-like" id="thm-mult-series"><h5 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.33</span><span class="period">.</span><span class="space"> </span><span class="title">Multiplying series.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.32</span><span class="period">.</span><span class="space"> </span><span class="title">Multiplying series.</span>
 </h5>
 <p id="p-98">Suppose that the series <span class="process-math">\(\sum_{n=0}^\infty a_n\)</span> and <span class="process-math">\(\sum_{n=0}^\infty b_n\)</span> are both absolutely convergent. Then we have the <em class="emphasis">Cauchy product formula</em></p>
 <div class="displaymath process-math" data-contains-math-knowls="" id="eq-mult-series">
@@ -514,7 +499,7 @@ e := \exp(1) = \sum_{n=0}^\infty \frac{1}{n!}.
 \begin{equation*}
 \sum_{r+s = n} a_rb_s := \sum_{r=0}^n a_rb_{n-r} = a_0b_n + a_1b_{n-1} + \dots + a_nb_0\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-44"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-44"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-44"><article class="hiddenproof">By the multiplication rule for limits (<a href="" class="xref" data-knowl="./knowl/prop-mult-rule.html" title="Proposition 2.17: Multiplication rule">Proposition 2.17</a>) we have that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html">
+</div></article><article class="hiddenproof" id="proof-43"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-43"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-43"><article class="hiddenproof">By the multiplication rule for limits (<a href="" class="xref" data-knowl="./knowl/prop-mult-rule.html" title="Proposition 2.17: Multiplication rule">Proposition 2.17</a>) we have that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html">
 \begin{equation*}
 \brac{\sum_{n=0}^\infty a_n }\brac{\sum_{n=0}^\infty b_n} = \lim_{N\to \infty } \brac{\brac{\sum_{n=0}^N a_n}\brac{\sum_{n=0}^N b_n}}.
 \end{equation*}
@@ -556,6 +541,25 @@ B\sum_{r = \ceil{\frac{N}{2}}}^\infty |a_r| \to 0 \text{ as } N \to \infty.
 </div>The proof is complete on employing a similar argument to show that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/prop-add-rule.html ./knowl/cauchy-to-prove.html ./knowl/cauchy-to-prove.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-mult-rule.html">
 \begin{equation*}
 A\sum_{s = \ceil{\frac{N}{2}}}^\infty |b_s| \to 0 \text{ as } N \to \infty.
+\end{equation*}
+</div></article></div>
+</div></div>
+</div></article><article class="task exercise-like" id="task-84"><h4 class="heading"><span class="codenumber">(b)</span></h4>State and prove the multiplication rule for the exponential function.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-70" id="solution-70"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-70"><div class="solution solution-like">
+<article class="proposition theorem-like" id="prop-exp-add-law"><h5 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.33</span><span class="period">.</span>
+</h5> The exponential function satisfies the identity<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\exp(x+y) = \exp(x)\exp(y), \qquad (\forall x,y \in \R).
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-44"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-44"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-44"><article class="hiddenproof">By the Cauchy product formula for multiplying absolutely convergent series (<a href="" class="xref" data-knowl="./knowl/thm-mult-series.html" title="Theorem 4.32: Multiplying series">Theorem 4.32</a>) we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mult-series.html">
+\begin{equation*}
+\exp(x)\exp(y) = \sum_{n=0}^\infty \sum_{r+s= n} \frac{x^ry^s}{r!s!}
+\end{equation*}
+</div>By the binomial theorem<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mult-series.html">
+\begin{equation*}
+\sum_{r+s = n} \frac{x^ry^s}{r!s!} = \sum_{r=0}^n \frac{x^r y^{n-r}}{r!(n-r)!}= 
+\recip{n!}\sum_{r=0}^n \binom{n}{r}x^r y^{n-r} = \recip{n!} (x+y)^n.
 \end{equation*}
 </div></article></div>
 </div></div>
