@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -13,6 +13,42 @@
 <body class="ignore-math">
 <article class="exercise exercise-like"><h3 class="heading">
 <span class="type">-</span><span class="space"> </span><span class="codenumber">3.13</span><span class="period">.</span><span class="space"> </span><span class="title">Exponential "beats" polynomial.</span>
-</h3>State and prove how exponential sequences "beat" polynomial sequences.<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-40-hidden.html" title="Solution 3.13.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><span class="incontext"><a href="week-3.html#exercise-22" class="internal">in-context</a></span>
+</h3>State and prove how exponential sequences "beat" polynomial sequences.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="proposition theorem-like"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.14</span><span class="period">.</span><span class="space"> </span><span class="title">Exponential beats polynomial.</span>
+</h4>Let <span class="process-math">\(d \in \N\)</span> and <span class="process-math">\(x \in (1, \infty)\text{.}\)</span> Then<div class="displaymath process-math">
+\begin{equation*}
+\frac{x^n}{n^d} \to \infty \quad \text{ as }\quad n \to \infty.
+\end{equation*}
+</div></article><details class="hiddenproof"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof">For <span class="process-math">\(n \gt d\text{,}\)</span> we may use the binomial theorem to deduce that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-weak-bernoulli-2.html ./knowl/eq-weak-bernoulli-2.html ./knowl/eq-binom-inc-lower.html ./knowl/prop-inf-scaling.html ./knowl/cor-sandwich.html">
+\begin{equation}
+x^n = (1 + (x-1))^n \geq \binom{n}{d+1} (x-1)^{d+1}\tag{3.5}
+\end{equation}
+</div>With inequality <a href="" class="xref" data-knowl="./knowl/eq-weak-bernoulli-2.html" title="Equation 3.5">(3.5)</a> in hand, there are many ways to proceed (try it yourself!). What follows is one possible argument. By <a href="" class="xref" data-knowl="./knowl/eq-weak-bernoulli-2.html" title="Equation 3.5">(3.5)</a> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-weak-bernoulli-2.html ./knowl/eq-weak-bernoulli-2.html ./knowl/eq-binom-inc-lower.html ./knowl/prop-inf-scaling.html ./knowl/cor-sandwich.html">
+\begin{equation*}
+\frac{x^n}{n^d} \geq \frac{(x-1)^{d+1}}{(d+1)!}\times \frac{n(n-1)\dots (n-d)} { n^d}\geq \frac{(x-1)^{d+1}}{(d+1)!}\times \frac{n(n-d)^d}{ n^d}  .
+\end{equation*}
+</div>For <span class="process-math">\(n \geq 2d\)</span> we have <span class="process-math">\(1-\frac{d}{n} \geq 1/2\text{,}\)</span> therefore<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-weak-bernoulli-2.html ./knowl/eq-weak-bernoulli-2.html ./knowl/eq-binom-inc-lower.html ./knowl/prop-inf-scaling.html ./knowl/cor-sandwich.html">
+\begin{equation*}
+\frac{(n-d)^d}{n^d} = \brac{1 - \frac{d}{n}}^d\geq  (1/2)^d.
+\end{equation*}
+</div>Thus for all <span class="process-math">\(n \geq 2d\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-weak-bernoulli-2.html ./knowl/eq-weak-bernoulli-2.html ./knowl/eq-binom-inc-lower.html ./knowl/prop-inf-scaling.html ./knowl/cor-sandwich.html">
+\begin{equation}
+\frac{x^n}{n^d}  \geq  \frac{(x-1)^{d+1}}{(d+1)!2^d}\times n.\tag{3.6}
+\end{equation}
+</div>Since the factor<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-weak-bernoulli-2.html ./knowl/eq-weak-bernoulli-2.html ./knowl/eq-binom-inc-lower.html ./knowl/prop-inf-scaling.html ./knowl/cor-sandwich.html">
+\begin{equation*}
+\frac{(x-1)^{d+1}}{(d+1)!2^d}
+\end{equation*}
+</div>is independent of <span class="process-math">\(n\text{,}\)</span> the sequence on the right-hand side of <a href="" class="xref" data-knowl="./knowl/eq-binom-inc-lower.html" title="Equation 3.6">(3.6)</a> takes the form <span class="process-math">\(cn\)</span> for some fixed <span class="process-math">\(c\gt 0\text{.}\)</span> Thus the scaling rule (<a href="" class="xref" data-knowl="./knowl/prop-inf-scaling.html" title="Proposition 3.8">Proposition 3.8</a>) gives that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-weak-bernoulli-2.html ./knowl/eq-weak-bernoulli-2.html ./knowl/eq-binom-inc-lower.html ./knowl/prop-inf-scaling.html ./knowl/cor-sandwich.html">
+\begin{equation*}
+\frac{(x-1)^{d+1}}{(d+1)!2^d}\times n \to \infty \quad \text{as} \quad  n \to \infty.
+\end{equation*}
+</div>Hence by the one-sided sandwich rule (<a href="" class="xref" data-knowl="./knowl/cor-sandwich.html" title="Proposition 3.6: One-sided sandwich">Proposition 3.6</a>) we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-weak-bernoulli-2.html ./knowl/eq-weak-bernoulli-2.html ./knowl/eq-binom-inc-lower.html ./knowl/prop-inf-scaling.html ./knowl/cor-sandwich.html">
+\begin{equation*}
+\frac{x^n}{n^d} \to \infty \quad\text{as} \quad n \to \infty.
+\end{equation*}
+</div></article></details>
+</div></details></div></article><span class="incontext"><a class="internal" href="week-3.html#exercise-22">in-context</a></span>
 </body>
 </html>

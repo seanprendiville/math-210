@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -13,30 +13,40 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h3 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.28.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.5.1</span><span class="period">.</span>
 </h3>
 <article class="definition definition-like"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.29</span><span class="period">.</span><span class="space"> </span><span class="title">Exponential function.</span>
-</h4> The exponential function <span class="process-math">\(\exp : \R \to \R\)</span> is given by the power series<div class="displaymath process-math" data-contains-math-knowls="">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.6</span><span class="period">.</span><span class="space"> </span><span class="title">Exponential function.</span>
+</h4> The exponential function <span class="process-math">\(\exp : \R \to \R\)</span> is given by the power series<div class="displaymath process-math">
 \begin{equation*}
 \exp(x) := \sum_{n=0}^\infty \frac{x^n}{n!},
 \end{equation*}
-</div>when this exists. We define the real number <span class="process-math">\(e \in \R\)</span> via the series<div class="displaymath process-math" data-contains-math-knowls="">
+</div>when this exists. We define the real number <span class="process-math">\(e \in \R\)</span> via the series<div class="displaymath process-math">
 \begin{equation*}
 e := \exp(1) = \sum_{n=0}^\infty \frac{1}{n!}.
 \end{equation*}
-</div></article><article class="proposition theorem-like"><h4 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.30</span><span class="period">.</span><span class="space"> </span><span class="title">Radius of convergence for the exponential function.</span>
+</div></article> <article class="proposition theorem-like"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.7</span><span class="period">.</span><span class="space"> </span><span class="title">Radius of convergence for the exponential function.</span>
 </h4>
-<p>The power series</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para logical">
+<div class="para">The power series</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \sum_{n=0}^\infty \frac{x^n}{n!}
 \end{equation*}
 </div>
-<p class="continuation">has infinite radius of convergence.</p>
-<p>In particular, the exponential function <span class="process-math">\(\exp(x)\)</span> is well-defined at all <span class="process-math">\(x \in \R\text{.}\)</span></p></article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-42-hidden.html" title="Proof 4.30.1"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article>
+<div class="para">has infinite radius of convergence.</div>
+</div> <div class="para">In particular, the exponential function <span class="process-math">\(\exp(x)\)</span> is well-defined at all <span class="process-math">\(x \in \R\text{.}\)</span>
+</div></article><details class="hiddenproof"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof">Let <span class="process-math">\(N\geq 2|x|\text{.}\)</span> Then for any <span class="process-math">\(n\)</span> we have<div class="displaymath process-math">
+\begin{equation*}
+\frac{|x|^{N+n}}{(N+n)!} \leq \frac{|x|^{N}}{N!} \times \frac{|x|^n}{N^n} \leq \frac{|x|^{N}}{N!}\times \brac{\frac{1}{2}}^n.
+\end{equation*}
+</div>Absolute convergence then follows from the comparison test, as in the following:<div class="displaymath process-math">
+\begin{equation*}
+\sum_{n=0}^\infty \frac{|x|^n}{n!} = \sum_{n=0}^N \frac{|x|^n}{n!} + \sum_{n=1}^\infty \frac{|x|^{N+n}}{(N+n)!} \leq \sum_{n=0}^N \frac{|x|^n}{n!} +\frac{|x|^N}{N!} \sum_{n=1}^\infty 2^{-n} \lt \infty.
+\end{equation*}
+</div></article></details>
 </div>
-<span class="incontext"><a href="week-4.html#solution-68" class="internal">in-context</a></span>
+<span class="incontext"><a class="internal" href="week-5.html#solution-68">in-context</a></span>
 </body>
 </html>

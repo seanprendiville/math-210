@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -13,10 +13,14 @@
 <body class="ignore-math">
 <article class="proposition theorem-like"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.15</span><span class="period">.</span><span class="space"> </span><span class="title">Comparison test.</span>
-</h4>Let <span class="process-math">\((a_n)_{n=1}^\infty\)</span> and <span class="process-math">\((b_n)_{n=1}^\infty\)</span> be sequences of real numbers. Suppose that there exists a constant <span class="process-math">\(C\)</span> such that for all <span class="process-math">\(n\)</span> we have <span class="process-math">\(|a_n| \leq Cb_n\text{.}\)</span> If<div class="displaymath process-math" data-contains-math-knowls="">
+</h4>Let <span class="process-math">\((a_n)_{n=1}^\infty\)</span> and <span class="process-math">\((b_n)_{n=1}^\infty\)</span> be sequences of real numbers. Suppose that there exists a constant <span class="process-math">\(C\)</span> such that for all <span class="process-math">\(n\)</span> we have <span class="process-math">\(|a_n| \leq Cb_n\text{.}\)</span> If<div class="displaymath process-math">
 \begin{equation*}
 \sum_{n=1}^\infty b_n  \lt  \infty.
 \end{equation*}
-</div>Then <span class="process-math">\(\displaystyle \sum_{n=1}^\infty a_n\)</span> converges absolutely.</article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-36-hidden.html" title="Proof 4.15.1"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><span class="incontext"><a href="week-4.html#prop-oh-test" class="internal">in-context</a></span>
+</div>Then <span class="process-math">\(\displaystyle \sum_{n=1}^\infty a_n\)</span> converges absolutely.</article><details class="hiddenproof"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof">Notice that we must have <span class="process-math">\(b_n \geq 0\)</span> for all <span class="process-math">\(n\text{.}\)</span> Hence for any <span class="process-math">\(N\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-lim.html ./knowl/prop-abs-conv.html">
+\begin{equation*}
+\sum_{n=1}^N |a_n| \leq \sum_{n=1}^N Cb_n \leq  C\sum_{n=1}^\infty b_n.
+\end{equation*}
+</div>Therefore the sequence of partial sums <span class="process-math">\(\displaystyle \sum_{n=1}^N |a_n|\)</span> is an increasing sequence bounded above by the real number <span class="process-math">\(\displaystyle C \sum_{n=1}^\infty b_n\text{.}\)</span> Hence, by the monotone convergence principle (<a href="" class="xref" data-knowl="./knowl/prop-mono-lim.html" title="Proposition 2.3: Monotone convergence principle">Proposition 2.3</a>), the sequence of partial sums <span class="process-math">\(\displaystyle \sum_{n=1}^N |a_n|\)</span> converges to a real number. This proves absolute convergence (and hence convergence by <a href="" class="xref" data-knowl="./knowl/prop-abs-conv.html" title="Proposition 4.11: Absolute convergence implies convergence">Proposition 4.11</a>).</article></details><span class="incontext"><a class="internal" href="week-4.html#prop-oh-test">in-context</a></span>
 </body>
 </html>

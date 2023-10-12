@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -13,16 +13,25 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.31.b.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.8.b.1</span><span class="period">.</span>
 </h4>
 <article class="proposition theorem-like"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.33</span><span class="period">.</span>
-</h5> The exponential function satisfies the identity<div class="displaymath process-math" data-contains-math-knowls="">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.10</span><span class="period">.</span>
+</h5> The exponential function satisfies the identity<div class="displaymath process-math">
 \begin{equation*}
 \exp(x+y) = \exp(x)\exp(y), \qquad (\forall x,y \in \R).
 \end{equation*}
-</div></article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-44-hidden.html" title="Proof 4.33.1"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article>
+</div></article><details class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof">By the Cauchy product formula for multiplying absolutely convergent series (<a href="" class="xref" data-knowl="./knowl/thm-mult-series.html" title="Theorem 5.9: Multiplying series">Theorem 5.9</a>) we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mult-series.html">
+\begin{equation*}
+\exp(x)\exp(y) = \sum_{n=0}^\infty \sum_{r+s= n} \frac{x^ry^s}{r!s!}
+\end{equation*}
+</div>By the binomial theorem<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mult-series.html">
+\begin{equation*}
+\sum_{r+s = n} \frac{x^ry^s}{r!s!} = \sum_{r=0}^n \frac{x^r y^{n-r}}{r!(n-r)!}= 
+\recip{n!}\sum_{r=0}^n \binom{n}{r}x^r y^{n-r} = \recip{n!} (x+y)^n.
+\end{equation*}
+</div></article></details>
 </div>
-<span class="incontext"><a href="week-4.html#solution-70" class="internal">in-context</a></span>
+<span class="incontext"><a class="internal" href="week-5.html#solution-70">in-context</a></span>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -17,16 +17,30 @@
 </h5>
 <article class="definition definition-like"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Supremum.</span>
-</h6>
-<p><span class="process-math">\(M \in \R\)</span> is a <em class="emphasis">supremum</em> for <span class="process-math">\(S \subset \R\)</span> if <span class="process-math">\(M\)</span> is an upper bound for <span class="process-math">\(S\)</span> and any any other upper bound <span class="process-math">\(\tilde M\)</span> for <span class="process-math">\(S\)</span> is larger, so that <span class="process-math">\(\tilde M \geq  M\text{.}\)</span></p></article><p>In other words, <span class="process-math">\(M\)</span> is the <em class="emphasis">least upper bound</em> for <span class="process-math">\(S\text{,}\)</span> and we denote this quantity <span class="process-math">\(\sup S\)</span> (if it exists).</p>
-<article class="definition definition-like"><h6 class="heading">
+</h6> <div class="para">
+<span class="process-math">\(M \in \R\)</span> is a <em class="emphasis">supremum</em> for <span class="process-math">\(S \subset \R\)</span> if <span class="process-math">\(M\)</span> is an upper bound for <span class="process-math">\(S\)</span> and any any other upper bound <span class="process-math">\(\tilde M\)</span> for <span class="process-math">\(S\)</span> is larger, so that <span class="process-math">\(\tilde M \geq  M\text{.}\)</span>
+</div></article> <div class="para">In other words, <span class="process-math">\(M\)</span> is the <em class="emphasis">least upper bound</em> for <span class="process-math">\(S\text{,}\)</span> and we denote this quantity <span class="process-math">\(\sup S\)</span> (if it exists).</div> <article class="definition definition-like"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Infimum.</span>
-</h6>
-<p><span class="process-math">\(M \in \R\)</span> is an <em class="emphasis">infimum</em> for <span class="process-math">\(S \subset \R\)</span> if <span class="process-math">\(M\)</span> is a lower bound for <span class="process-math">\(S\)</span> and any any other lower bound <span class="process-math">\(\tilde M\)</span> for <span class="process-math">\(S\)</span> is smaller, so that <span class="process-math">\(\tilde M \leq  M\text{.}\)</span></p></article><p>In other words, <span class="process-math">\(M\)</span> is the <em class="emphasis">greatest lower bound</em> for <span class="process-math">\(S\text{,}\)</span> and we denote this quantity <span class="process-math">\(\inf S\)</span> (if it exists).</p>
-<article class="example example-like"><a href="" class="example-knowl original" data-knowl="./knowl/example-2-hidden.html" title="Example 1.8"><h6 class="heading">
+</h6> <div class="para">
+<span class="process-math">\(M \in \R\)</span> is an <em class="emphasis">infimum</em> for <span class="process-math">\(S \subset \R\)</span> if <span class="process-math">\(M\)</span> is a lower bound for <span class="process-math">\(S\)</span> and any any other lower bound <span class="process-math">\(\tilde M\)</span> for <span class="process-math">\(S\)</span> is smaller, so that <span class="process-math">\(\tilde M \leq  M\text{.}\)</span>
+</div></article> <div class="para">In other words, <span class="process-math">\(M\)</span> is the <em class="emphasis">greatest lower bound</em> for <span class="process-math">\(S\text{,}\)</span> and we denote this quantity <span class="process-math">\(\inf S\)</span> (if it exists).</div> <details class="example example-like"><summary><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span>
-</h6></a></article>
+</h6></summary><article class="example example-like"><ul class="disc">
+<li><div class="para">
+<span class="process-math">\(\sup\set{1,2,3} = 3.\)</span> <details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">3 is an upper bound for <span class="process-math">\(\set{1,2,3}\text{.}\)</span> We must show it is the least upper bound. Suppose that <span class="process-math">\(M\)</span> is another upper bound for <span class="process-math">\(\set{1,2,3}\text{.}\)</span> Then by definition of being an upper bound and the fact that 3 lies in our set, we have that <span class="process-math">\(3 \leq M\text{.}\)</span> Thus 3 is smaller than any other upper bound, thereby satisfies the definition (<a href="" class="xref" data-knowl="./knowl/def-sup.html" title="Definition 1.6: Supremum">Definition 1.6</a>) of being a supremum.</article></details>
+</div></li>
+<li>
+<span class="process-math">\(\sup (-\infty, 1) = 1.\)</span><details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">By definition <span class="process-math">\((-\infty, 1) = \set{x\in \R : x \lt 1}\text{,}\)</span> so 1 is certainly an upper bound for the set. It remains to show that 1 is the smallest upper bound. To this end, suppose that <span class="process-math">\(M\)</span> is another upper bound for <span class="process-math">\((-\infty, 1)\text{.}\)</span> Notice that if <span class="process-math">\(M \lt 1\text{,}\)</span> then any element strictly between <span class="process-math">\(M\)</span> and 1 (for instance the midpoint <span class="process-math">\((M+1)/2\)</span> will be an element of <span class="process-math">\((-\infty, 1)\)</span> which exceeds the upper bound <span class="process-math">\(M\)</span> (a contradiction). Therefore we must have <span class="process-math">\(M\geq 1\text{,}\)</span> so that 1 is the least upper bound (as claimed).</article></details><div class="para">Notice that this example shows that <em class="emphasis">the supremum does not always lie in the set</em>. When the supremum lies in the set we call it the <em class="emphasis">maximum</em> (see <a href="" class="xref" data-knowl="./knowl/def-max.html" title="Definition 1.11: Maximum">Definition 1.11</a>).</div>
+</li>
+<li><div class="para">
+<span class="process-math">\(\sup \emptyset\)</span> does not exist. <details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">Every <span class="process-math">\(M\in \R\)</span> is an upper bound for <span class="process-math">\(S = \emptyset\text{,}\)</span> since the negation <a href="" class="xref" data-knowl="./knowl/eq-negate-upper-bound.html" title="Equation 1.2">(1.2)</a> does not hold (we say that a statement of the form <span class="process-math">\((\forall x \in \emptyset)[\dots]\)</span> is true "vacuously", since the negation cannot hold due to there being no elements in the empty set). No real <span class="process-math">\(M\)</span> can be the least upper bound for the empty set, since <span class="process-math">\(M-1\)</span> is a smaller upper bound.</article></details> This means that we can only take the supremum of a <em class="emphasis">non-empty set</em>.</div></li>
+<li>
+<div class="para">If <span class="process-math">\(S\subset \R\)</span> is <em class="emphasis">not bounded above</em> (for instance <span class="process-math">\(S=\R\)</span>) then <span class="process-math">\(S\)</span> has no upper bound, in particular no <em class="emphasis">least</em> upper bound. Thus <span class="process-math">\(\sup S\)</span> does not exist.</div>
+<div class="para">This means that we can only take the supremum of a set which is <em class="emphasis">bounded above</em>.</div>
+<div class="para">The <em class="emphasis">completeness principle</em> (<a href="" class="xref" data-knowl="./knowl/completeness-principle.html" title="Theorem 1.15: The completeness principle">Theorem 1.15</a>) says that if <span class="process-math">\(S\)</span> is non-empty and bounded above, then <span class="process-math">\(\sup S\)</span> exists.</div>
+</li>
+</ul></article></details>
 </div>
-<span class="incontext"><a href="week-1.html#solution-3" class="internal">in-context</a></span>
+<span class="incontext"><a class="internal" href="week-1.html#solution-3">in-context</a></span>
 </body>
 </html>

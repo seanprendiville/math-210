@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,8 +11,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<p><em class="emphasis">90-120 minutes:</em> Your tutor will select one of the remaining two exam-style self-test questions and you will write-up a solution under exam conditions. The purpose of this is for you to receive  feedback on how to improve your answers in real analysis.</p>
-<span class="incontext"><a href="workshop-instructions.html#p-101" class="internal">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<div class="para logical">
+<div class="para">Next we prove the "<span class="process-math">\(\implies\)</span>" direction. To do so we prove the contrapositive. Hence, suppose that the negation of <a href="" class="xref" data-knowl="./knowl/eq-eps-delta-cts.html" title="Equation 5.4">(5.4)</a> holds:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-eps-delta-cts.html">
+\begin{align*}
+(\exists \eps \gt 0)(\forall \delta  \gt 0)\amp(\exists x= x(\delta) \in D)\\
+\amp \bigsqbrac{\ |x-x_0| \leq \delta\quad \text{and}\quad |f(x)-f(x_0)| \gt \eps\ }.
+\end{align*}
+</div>
+<div class="para">Taking <span class="process-math">\(\delta = 1/n\)</span> in the above negation, set <span class="process-math">\(a_1:= x(1)\text{,}\)</span> <span class="process-math">\(a_2:=x(1/2)\text{,}\)</span> <span class="process-math">\(a_3 := x(1/3)\text{,}\)</span> etc. Then <span class="process-math">\(a_n \in D\text{,}\)</span> <span class="process-math">\(|a_n - x_0| \leq 1/n\)</span> and <span class="process-math">\(|f(a_n)-f(x_0)| \geq \eps\text{.}\)</span> Hence <span class="process-math">\((a_n)_n\)</span> is a sequence in <span class="process-math">\(D\)</span> with <span class="process-math">\(a_n \to x_0\)</span> and <span class="process-math">\(f(a_n) \not\to f(x_0)\)</span> (as required).</div>
+</div>
+<span class="incontext"><a class="internal" href="week-5.html#p-101">in-context</a></span>
 </body>
 </html>

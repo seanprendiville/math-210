@@ -10,23 +10,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof">By the epsilon-delta definition of continuity (see <a href="" class="xref" data-knowl="./knowl/cor-eps-delta-cts.html" title="Proposition 5.19: Epsilon-delta characterisation of continuity">Proposition 5.19</a>) we are required to verify that<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/def-differentiable.html ./knowl/eq-cts-to-verify.html">
-\begin{align}
-(\forall \eps \gt 0)(\exists \delta_1 = \delta_1(x_0,\eps) \gt 0)\amp(\forall x \in (a,b))\notag\\
-\amp \bigsqbrac{\ |x-x_0| \leq \delta_1 \implies |f(x)-f(x_0)| \leq \eps\ }.\tag{6.5}
-\end{align}
-</div>By the definition of differentiability (see <a href="" class="xref" data-knowl="./knowl/def-differentiable.html" title="Definition 6.22: Differentiable">Definition 6.22</a>) we have that<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/def-differentiable.html ./knowl/eq-cts-to-verify.html">
+<body class="ignore-math"><article class="hiddenproof"><p>We first prove the "<span class="process-math">\(\impliedby\)</span>" direction. Let <span class="process-math">\((a_n)_n\)</span> be a sequence in <span class="process-math">\(D\)</span> such that <span class="process-math">\(a_n \to x_0\)</span> as <span class="process-math">\(n \to \infty\text{.}\)</span> We are required to prove that <span class="process-math">\(f(a_n) \to f(x_0)\)</span> as <span class="process-math">\(n \to \infty\text{,}\)</span> assuming <a href="" class="xref" data-knowl="./knowl/eq-eps-delta-cts.html" title="Equation 5.4">(5.4)</a>. Fix <span class="process-math">\(\eps \gt0\text{.}\)</span> Then by <a href="" class="xref" data-knowl="./knowl/eq-eps-delta-cts.html" title="Equation 5.4">(5.4)</a> there exists <span class="process-math">\(\delta = \delta(\eps) \gt 0\)</span> such that if <span class="process-math">\(x \in D\)</span> and <span class="process-math">\(|x-x_0| \leq \delta\)</span> then <span class="process-math">\(|f(x)-f(x_0)|\leq \eps\text{.}\)</span> Since <span class="process-math">\(a_n \to x_0\)</span> there exists <span class="process-math">\(N = N(\delta)\)</span> such that for all <span class="process-math">\(n\geq N\)</span> we have <span class="process-math">\(|a_n - x_0| \leq \delta\text{.}\)</span> Hence if <span class="process-math">\(n \geq N(\delta)\)</span> then <span class="process-math">\(|f(a_n)-f(x_0)| \leq \eps\text{.}\)</span> This establishes that <span class="process-math">\(f(a_n) \to f(x_0)\text{.}\)</span></p>
+<p>Next we prove the "<span class="process-math">\(\implies\)</span>" direction. To do so we prove the contrapositive. Hence, suppose that the negation of <a href="" class="xref" data-knowl="./knowl/eq-eps-delta-cts.html" title="Equation 5.4">(5.4)</a> holds:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-eps-delta-cts.html">
 \begin{align*}
-(\forall \eps \gt 0)(\exists \delta_2 = \delta_2(x_0,\eps) \gt 0)\amp (\forall x \in (a,b))\\
-\sqbrac{\ 0\lt |x-x_0| \leq \delta_2 \implies \abs{\frac{f(x)-f(x_0)}{x-x_0}-f'(x_0)} \leq \eps\ }.
+(\exists \eps \gt 0)(\forall \delta  \gt 0)\amp(\exists x= x(\delta) \in D)\\
+\amp \bigsqbrac{\ |x-x_0| \leq \delta\quad \text{and}\quad |f(x)-f(x_0)| \gt \eps\ }.
 \end{align*}
-</div>In particular, if <span class="process-math">\(x \in (a,b) \)</span> and <span class="process-math">\(0\lt|x-x_0| \leq \delta_2\)</span> then<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/def-differentiable.html ./knowl/eq-cts-to-verify.html">
-\begin{equation*}
-\abs{f(x)-f(x_0)} \leq \eps \abs{x-x_0} + \abs{f'(x_0)}|x-x_0|.
-\end{equation*}
-</div>Let us assume that <span class="process-math">\(f'(x_0) \neq 0\text{,}\)</span> the remaining case being simpler. We therefore obtain <a href="" class="xref" data-knowl="./knowl/eq-cts-to-verify.html" title="Equation 6.5">(6.5)</a> on taking<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/def-differentiable.html ./knowl/eq-cts-to-verify.html">
-\begin{equation*}
-\delta_1(\eps) := \min\set{\delta_2(\eps), \recip{2}, \frac{\eps}{2\abs{f'(x_0)}}}.
-\end{equation*}
-</div></article></body>
+</div>
+<p class="continuation">Taking <span class="process-math">\(\delta = 1/n\)</span> in the above negation, set <span class="process-math">\(a_1:= x(1)\text{,}\)</span> <span class="process-math">\(a_2:=x(1/2)\text{,}\)</span> <span class="process-math">\(a_3 := x(1/3)\text{,}\)</span> etc. Then <span class="process-math">\(a_n \in D\text{,}\)</span> <span class="process-math">\(|a_n - x_0| \leq 1/n\)</span> and <span class="process-math">\(|f(a_n)-f(x_0)| \geq \eps\text{.}\)</span> Hence <span class="process-math">\((a_n)_n\)</span> is a sequence in <span class="process-math">\(D\)</span> with <span class="process-math">\(a_n \to x_0\)</span> and <span class="process-math">\(f(a_n) \not\to f(x_0)\)</span> (as required).</p></article></body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -13,6 +13,31 @@
 <body class="ignore-math">
 <article class="task exercise-like"><h4 class="heading">
 <span class="type">Task</span><span class="space"> </span><span class="codenumber">3.17.a</span><span class="period">.</span>
-</h4>Define what it means to be a <em class="emphasis">subsequence</em> of a sequence.<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-42-hidden.html" title="Solution 3.17.a.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><span class="incontext"><a href="week-3.html#task-def-subseq" class="internal">in-context</a></span>
+</h4>Define what it means to be a <em class="emphasis">subsequence</em> of a sequence.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="definition definition-like"><h5 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.18</span><span class="period">.</span><span class="space"> </span><span class="title">Subsequence.</span>
+</h5> <div class="para logical">
+<div class="para">Let <span class="process-math">\((a_n)_{n=1}^\infty\)</span> and <span class="process-math">\((b_n)_{n=1}^\infty\)</span> be real sequences. We say that <span class="process-math">\((b_n)_{n=1}^\infty\)</span> is a subsequence of <span class="process-math">\((a_n)_{n=1}^\infty\)</span> if there exists a strictly increasing (see <a href="" class="xref" data-knowl="./knowl/def-monotone.html" title="Definition 2.2: Increasing/decreasing/monotone">Definition 2.2</a>) function <span class="process-math">\(k : \N \to \N\)</span> such that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-monotone.html">
+\begin{equation*}
+(\forall n \in \N)[b_n = a_{k(n)}].
+\end{equation*}
+</div>
+</div> <div class="para">We often write <em class="emphasis">"let <span class="process-math">\((a_{k(n)})_{n =1}^\infty\)</span> be a subsequence of <span class="process-math">\((a_n)_{n=1}^\infty\)</span>"</em> to mean that <span class="process-math">\(k : \N \to \N\)</span> is a strictly increasing function.</div> <div class="para logical">
+<div class="para">To save on brackets (at the cost of multiple subscripts) we may also write  <em class="emphasis">"let <span class="process-math">\((a_{k_n})_{n =1}^\infty\)</span> be a subsequence of <span class="process-math">\((a_n)_{n=1}^\infty\)</span>"</em> to mean that the function <span class="process-math">\(\N \to \N\)</span> given by <span class="process-math">\(n \mapsto k_n\)</span> is strictly increasing, so that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+k_1 \lt  k_2 \lt  k_3 \lt  \dots
+\end{equation*}
+</div>
+</div></article> <article class="remark remark-like"><h5 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.19</span><span class="period">.</span>
+</h5>If <span class="process-math">\(k_1 \lt  k_2 \lt  k_3 \lt  \dots\)</span> is a strictly increasing sequence of natural numbers, then<div class="displaymath process-math">
+\begin{equation*}
+(\forall n \in \N)[k_n \geq n].
+\end{equation*}
+</div>
+<details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">We proceed by induction on <span class="process-math">\(n\text{.}\)</span> The base case <span class="process-math">\(k_1 \geq 1\)</span> is true because <span class="process-math">\(k_1 \in \N\text{.}\)</span> As induction hypothesis, suppose that <span class="process-math">\(k_{n-1} \geq n-1\text{.}\)</span> Since <span class="process-math">\(k_n \gt k_{n-1}\)</span> we have that <span class="process-math">\(k_n \geq k_{n-1} +1 \geq (n-1) + 1 = n\text{.}\)</span> This proves the induction step, completing the proof.</article></details></article>
+</div></details></div></article><span class="incontext"><a class="internal" href="week-3.html#task-def-subseq">in-context</a></span>
 </body>
 </html>

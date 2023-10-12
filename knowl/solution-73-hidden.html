@@ -11,12 +11,13 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<article class="theorem theorem-like"><h5 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.3</span><span class="period">.</span><span class="space"> </span><span class="title">Chain rule.</span>
-</h5>Let <span class="process-math">\(f : (a,b) \to (c,d)\)</span> and <span class="process-math">\(g:  (c,d) \to \R\text{.}\)</span> Suppose that <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(x_0\)</span> and that <span class="process-math">\(g\)</span> is differentiable at <span class="process-math">\(f(x_0)\text{.}\)</span> Then the composition <span class="process-math">\(g\circ f\)</span> is differentiable at <span class="process-math">\(x_0\text{.}\)</span> Moreover the derivative satisfies the identity<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-(g\circ f)'(x_0) = g'\bigbrac{f(x_0)} \cdot f'(x_0).
-\end{equation*}
-</div></article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-47-hidden.html" title="Proof 7.3.1"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article>
+<article class="proposition theorem-like"><h5 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.20</span><span class="period">.</span><span class="space"> </span><span class="title">Epsilon-delta characterisation of continuity.</span>
+</h5>Let <span class="process-math">\(f : D \to \R\)</span> be a real valued function on a real domain <span class="process-math">\(D \subset \R\)</span> and let <span class="process-math">\(x_0\in D\text{.}\)</span> Then <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0\)</span> if and only if<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align}
+(\forall \eps \gt 0)(\exists \delta=\delta(x_0,\eps)  \gt 0)\amp(\forall x \in D)\notag\\
+\amp \bigsqbrac{\ |x-x_0| \leq \delta \implies |f(x)-f(x_0)| \leq \eps\ }.\tag{5.4}
+\end{align}
+</div></article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-45-hidden.html" title="Proof 5.20.1"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article>
 </div></body>
 </html>

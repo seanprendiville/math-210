@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -17,14 +17,35 @@
 </h3>
 <article class="proposition theorem-like"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.15</span><span class="period">.</span><span class="space"> </span><span class="title">Comparison test.</span>
-</h4>Let <span class="process-math">\((a_n)_{n=1}^\infty\)</span> and <span class="process-math">\((b_n)_{n=1}^\infty\)</span> be sequences of real numbers. Suppose that there exists a constant <span class="process-math">\(C\)</span> such that for all <span class="process-math">\(n\)</span> we have <span class="process-math">\(|a_n| \leq Cb_n\text{.}\)</span> If<div class="displaymath process-math" data-contains-math-knowls="">
+</h4>Let <span class="process-math">\((a_n)_{n=1}^\infty\)</span> and <span class="process-math">\((b_n)_{n=1}^\infty\)</span> be sequences of real numbers. Suppose that there exists a constant <span class="process-math">\(C\)</span> such that for all <span class="process-math">\(n\)</span> we have <span class="process-math">\(|a_n| \leq Cb_n\text{.}\)</span> If<div class="displaymath process-math">
 \begin{equation*}
 \sum_{n=1}^\infty b_n  \lt  \infty.
 \end{equation*}
-</div>Then <span class="process-math">\(\displaystyle \sum_{n=1}^\infty a_n\)</span> converges absolutely.</article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-36-hidden.html" title="Proof 4.15.1"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><article class="example example-like"><a href="" class="example-knowl original" data-knowl="./knowl/example-21-hidden.html" title="Example 4.16: An example of applying the comparison test"><h4 class="heading">
+</div>Then <span class="process-math">\(\displaystyle \sum_{n=1}^\infty a_n\)</span> converges absolutely.</article><details class="hiddenproof"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof">Notice that we must have <span class="process-math">\(b_n \geq 0\)</span> for all <span class="process-math">\(n\text{.}\)</span> Hence for any <span class="process-math">\(N\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-lim.html ./knowl/prop-abs-conv.html">
+\begin{equation*}
+\sum_{n=1}^N |a_n| \leq \sum_{n=1}^N Cb_n \leq  C\sum_{n=1}^\infty b_n.
+\end{equation*}
+</div>Therefore the sequence of partial sums <span class="process-math">\(\displaystyle \sum_{n=1}^N |a_n|\)</span> is an increasing sequence bounded above by the real number <span class="process-math">\(\displaystyle C \sum_{n=1}^\infty b_n\text{.}\)</span> Hence, by the monotone convergence principle (<a href="" class="xref" data-knowl="./knowl/prop-mono-lim.html" title="Proposition 2.3: Monotone convergence principle">Proposition 2.3</a>), the sequence of partial sums <span class="process-math">\(\displaystyle \sum_{n=1}^N |a_n|\)</span> converges to a real number. This proves absolute convergence (and hence convergence by <a href="" class="xref" data-knowl="./knowl/prop-abs-conv.html" title="Proposition 4.11: Absolute convergence implies convergence">Proposition 4.11</a>).</article></details> <details class="example example-like"><summary><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.16</span><span class="period">.</span><span class="space"> </span><span class="title">An example of applying the comparison test.</span>
-</h4></a></article>
+</h4></summary><article class="example example-like"> We claim that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-oh-test.html ./knowl/eq-comp-eg.html">
+\begin{equation*}
+\sum_{n=1}^\infty \frac{100n}{3^n} \lt \infty.
+\end{equation*}
+</div>To establish this we employ the comparison test (<a href="" class="xref" data-knowl="./knowl/prop-oh-test.html" title="Proposition 4.15: Comparison test">Proposition 4.15</a>) with <span class="process-math">\(a_n := \frac{100n}{3^n}\text{,}\)</span> <span class="process-math">\(b_n := \brac{\frac{2}{3}}^n\)</span> and <span class="process-math">\(C:= \frac{50}{3}\text{,}\)</span> so that it suffices to establish the inequality<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-oh-test.html ./knowl/eq-comp-eg.html">
+\begin{equation}
+\frac{100n}{3^n} \leq 50 \times \brac{\frac{2}{3}}^n \qquad (n \in \N).\tag{4.2}
+\end{equation}
+</div>To this end, we first observe that for <span class="process-math">\(n\geq 1\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-oh-test.html ./knowl/eq-comp-eg.html">
+\begin{equation*}
+a_{n+1} = \frac{100(n+1)}{3^{n+1}} \leq \frac{100(n+n)}{3\times3^{n}} = \frac{2}{3}\times \frac{100n}{3^{n}} = \frac{2}{3} a_n.
+\end{equation*}
+</div>It follows that for all <span class="process-math">\(n\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-oh-test.html ./knowl/eq-comp-eg.html">
+\begin{equation*}
+a_n \leq \frac{2}{3} a_{n-1} \leq \brac{\frac{2}{3}}^2 a_{n-2} \leq \dots \leq 
+\brac{\frac{2}{3}}^{n-1} a_{1} = 50 \brac{\frac{2}{3}}^{n}.
+\end{equation*}
+</div>The claimed inequality <a href="" class="xref" data-knowl="./knowl/eq-comp-eg.html" title="Equation 4.2">(4.2)</a> follows.</article></details>
 </div>
-<span class="incontext"><a href="week-4.html#solution-63" class="internal">in-context</a></span>
+<span class="incontext"><a class="internal" href="week-4.html#solution-63">in-context</a></span>
 </body>
 </html>

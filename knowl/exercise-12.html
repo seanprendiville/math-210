@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -14,6 +14,54 @@
 <article class="exercise exercise-like"><h4 class="heading">
 <span class="type">-</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Monotone convergence principle.</span>
 </h4>
-<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>Define what it means for a real-valued function/sequence to be increasing/decreasing.<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-26-hidden.html" title="Solution 2.1.a.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>State and prove the monotone convergence principle.<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-27-hidden.html" title="Solution 2.1.b.1"><span class="type">Solution</span><span class="period">.</span></a></div></article></article><span class="incontext"><a href="week-2.html#exercise-12" class="internal">in-context</a></span>
+<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>Define what it means for a real-valued function/sequence to be increasing/decreasing.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><article class="definition definition-like"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Increasing/decreasing/monotone.</span>
+</h6> <div class="para logical">
+<div class="para">Let <span class="process-math">\(f : D \to\R\)</span> be a real-valued function with domain <span class="process-math">\(D\subset \R\text{.}\)</span> We say that <span class="process-math">\(f\)</span> is <em class="emphasis">increasing on <span class="process-math">\(D\)</span></em> if</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\forall x, y \in D)[x \leq y \implies f(x) \leq f(y)]
+\end{equation*}
+</div>
+<div class="para">We say that <span class="process-math">\(f\)</span> is <em class="emphasis">strictly increasing on <span class="process-math">\(D\)</span></em> if</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\forall x, y \in D)[x \lt  y \implies f(x) \lt  f(y)]
+\end{equation*}
+</div>
+<div class="para">We say that <span class="process-math">\(f\)</span> is <em class="emphasis">decreasing on <span class="process-math">\(D\)</span></em> if</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\forall x, y \in D)[x \leq y \implies f(x) \geq f(y)]
+\end{equation*}
+</div>
+<div class="para">We say that <span class="process-math">\(f\)</span> is <em class="emphasis">strictly decreasing on <span class="process-math">\(D\)</span></em> if</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\forall x, y \in D)[x \lt  y \implies f(x) \gt f(y)]
+\end{equation*}
+</div>
+<div class="para">We say that <span class="process-math">\(f\)</span> is <em class="emphasis">monotone</em> if it is either increasing or decreasing.</div>
+</div> <div class="para logical">
+<div class="para">Recall that a sequence of reals <span class="process-math">\((a_n)_{n=1}^\infty\)</span> is a function <span class="process-math">\(f : \N \to \R\)</span> where <span class="process-math">\(f(n) := a_n\)</span> for each <span class="process-math">\(n \in \N\text{.}\)</span> One can check that such a  sequence <span class="process-math">\((a_n)_{n=1}^\infty\)</span> is increasing (as defined above) if and only if</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\forall n \in \N)[a_n \leq a_{n+1}].
+\end{equation*}
+</div>
+<div class="para">A similar characterisation holds for decreasing sequences.</div>
+</div></article></div></details></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>State and prove the monotone convergence principle.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="proposition theorem-like"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Monotone convergence principle.</span>
+</h6>Let <span class="process-math">\((a_n)_{n=1}^\infty\)</span> be a sequence of real numbers. Suppose that the sequence is <em class="emphasis">increasing</em> and <em class="emphasis">bounded above</em>. Then the sequence converges.</article><details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">Since the sequence is bounded above, the set <span class="process-math">\(\set{a_n: n \in \N}\)</span> is bounded above. It is also non-empty (containing, e.g., <span class="process-math">\(a_1\)</span>), hence has a supremum <span class="process-math">\(a = \sup_{n \in \N} a_n  \in \R\)</span> by the completeness principle (see <a href="" class="xref" data-knowl="./knowl/completeness-principle.html" title="Theorem 1.15: The completeness principle">Theorem 1.15</a>). We claim that <span class="process-math">\(a_n \to a\text{.}\)</span> According to the definition of a real limit (<a href="" class="xref" data-knowl="./knowl/def-seq-limit.html" title="Definition 1.23: Limit of convergent sequence">Definition 1.23</a>), we must verify that <a href="" class="xref" data-knowl="./knowl/eq-seq-limit.html" title="Equation 1.5">(1.5)</a> holds. To this end, let <span class="process-math">\(\eps \gt 0\)</span> be arbitrary. Since decreasing the supremum gives a non-upper bound (<a href="" class="xref" data-knowl="./knowl/prop-alt-sup.html" title="Lemma 1.9: Decreasing a sup gives a non-upper bound">Lemma 1.9</a>) there exists <span class="process-math">\(a_N \in \set{a_n : n \in \N}\)</span> such that <span class="process-math">\(a_N \gt a - \eps\text{.}\)</span> Since the sequence is increasing, if <span class="process-math">\(n \geq N\)</span> then <span class="process-math">\(a_n \gt a -\eps\text{.}\)</span> As <span class="process-math">\(a = \sup_n a_n\)</span> is an upper bound, we deduce that for all <span class="process-math">\(n \geq N\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/completeness-principle.html ./knowl/def-seq-limit.html ./knowl/eq-seq-limit.html ./knowl/prop-alt-sup.html ./knowl/eq-seq-limit.html">
+\begin{equation*}
+a-\eps \leq a_n \leq a.
+\end{equation*}
+</div>In particular<div class="displaymath process-math" data-contains-math-knowls="./knowl/completeness-principle.html ./knowl/def-seq-limit.html ./knowl/eq-seq-limit.html ./knowl/prop-alt-sup.html ./knowl/eq-seq-limit.html">
+\begin{equation*}
+n \geq N \implies |a-a_n| \leq \eps.
+\end{equation*}
+</div>Therefore <span class="process-math">\(a_n \to a\)</span> by definition (see <a href="" class="xref" data-knowl="./knowl/eq-seq-limit.html" title="Equation 1.5">(1.5)</a>), completing our proof.</article></details>
+</div></details></div></article></article><span class="incontext"><a class="internal" href="week-2.html#exercise-12">in-context</a></span>
 </body>
 </html>

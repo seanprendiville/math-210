@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -12,7 +12,24 @@
 </head>
 <body class="ignore-math">
 <article class="task exercise-like"><h4 class="heading">
-<span class="type">Task</span><span class="space"> </span><span class="codenumber">4.31.b</span><span class="period">.</span>
-</h4>State and prove the multiplication rule for the exponential function.<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-70-hidden.html" title="Solution 4.31.b.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><span class="incontext"><a href="week-4.html#task-84" class="internal">in-context</a></span>
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">5.8.b</span><span class="period">.</span>
+</h4>State and prove the multiplication rule for the exponential function.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="proposition theorem-like"><h5 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.10</span><span class="period">.</span>
+</h5> The exponential function satisfies the identity<div class="displaymath process-math">
+\begin{equation*}
+\exp(x+y) = \exp(x)\exp(y), \qquad (\forall x,y \in \R).
+\end{equation*}
+</div></article><details class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof">By the Cauchy product formula for multiplying absolutely convergent series (<a href="" class="xref" data-knowl="./knowl/thm-mult-series.html" title="Theorem 5.9: Multiplying series">Theorem 5.9</a>) we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mult-series.html">
+\begin{equation*}
+\exp(x)\exp(y) = \sum_{n=0}^\infty \sum_{r+s= n} \frac{x^ry^s}{r!s!}
+\end{equation*}
+</div>By the binomial theorem<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mult-series.html">
+\begin{equation*}
+\sum_{r+s = n} \frac{x^ry^s}{r!s!} = \sum_{r=0}^n \frac{x^r y^{n-r}}{r!(n-r)!}= 
+\recip{n!}\sum_{r=0}^n \binom{n}{r}x^r y^{n-r} = \recip{n!} (x+y)^n.
+\end{equation*}
+</div></article></details>
+</div></details></div></article><span class="incontext"><a class="internal" href="week-5.html#task-84">in-context</a></span>
 </body>
 </html>

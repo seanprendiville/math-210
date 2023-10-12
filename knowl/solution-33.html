@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -17,7 +17,7 @@
 </h4>
 <article class="proposition theorem-like"><h5 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.21</span><span class="period">.</span><span class="space"> </span><span class="title">Reciprocal rule.</span>
-</h5>Let <span class="process-math">\((a_n)_{n=1}^\infty\)</span> be a sequence of real numbers which converge to a non-zero limit. Then<div class="displaymath process-math" data-contains-math-knowls="">
+</h5>Let <span class="process-math">\((a_n)_{n=1}^\infty\)</span> be a sequence of real numbers which converge to a non-zero limit. Then<div class="displaymath process-math">
 \begin{equation}
 \lim_{n \to \infty} \brac{\frac{1}{a_n}} = 
 \frac{1}{\displaystyle \lim_{n\to \infty} a_n}.													\tag{2.8}
@@ -25,8 +25,36 @@
 </div>
 <article class="remark remark-like"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.22</span><span class="period">.</span><span class="space"> </span><span class="title">No need to assume all terms non-zero.</span>
-</h6> Strictly speaking, <a href="" class="xref" data-knowl="./knowl/eq-recip-rule.html" title="Equation 2.8">(2.8)</a> only makes sense if we know that <span class="process-math">\(a_n \neq 0\)</span> for all <span class="process-math">\(n \in \N\text{,}\)</span> so that the reciprocal <span class="process-math">\(1/a_n\)</span> is well-defined for <em class="emphasis">all</em> values of <span class="process-math">\(n\text{.}\)</span> However, the limiting value of a sequence does not depend on a finite number of initial terms: if you alter a finite number of terms of a sequence, you do not change the value of the limit. When the limit is non-zero, <a href="" class="xref" data-knowl="./knowl/prop-eventually-non-zero.html" title="Proposition 2.19">Proposition 2.19</a> tells us that <span class="process-math">\(a_n = 0\)</span> for only a finite number of <span class="process-math">\(n\text{,}\)</span> so we may discard a finite number of initial terms in order for the expression <a href="" class="xref" data-knowl="./knowl/eq-recip-rule.html" title="Equation 2.8">(2.8)</a> to make sense.</article></article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-19-hidden.html" title="Proof 2.21.1: Non-examinable proof"><h5 class="heading"><span class="title">Non-examinable proof.</span></h5></a></article>
+</h6> Strictly speaking, <a href="" class="xref" data-knowl="./knowl/eq-recip-rule.html" title="Equation 2.8">(2.8)</a> only makes sense if we know that <span class="process-math">\(a_n \neq 0\)</span> for all <span class="process-math">\(n \in \N\text{,}\)</span> so that the reciprocal <span class="process-math">\(1/a_n\)</span> is well-defined for <em class="emphasis">all</em> values of <span class="process-math">\(n\text{.}\)</span> However, the limiting value of a sequence does not depend on a finite number of initial terms: if you alter a finite number of terms of a sequence, you do not change the value of the limit. When the limit is non-zero, <a href="" class="xref" data-knowl="./knowl/prop-eventually-non-zero.html" title="Proposition 2.19">Proposition 2.19</a> tells us that <span class="process-math">\(a_n = 0\)</span> for only a finite number of <span class="process-math">\(n\text{,}\)</span> so we may discard a finite number of initial terms in order for the expression <a href="" class="xref" data-knowl="./knowl/eq-recip-rule.html" title="Equation 2.8">(2.8)</a> to make sense.</article></article><details class="hiddenproof"><summary><h5 class="heading"><span class="title">Non-examinable proof.</span></h5></summary><article class="hiddenproof"> Let <span class="process-math">\(\displaystyle a : = \lim_{n \to \infty}a_n\text{.}\)</span> We wish to prove that<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-seq-limit.html ./knowl/eq-lim-def-3.html">
+\begin{equation}
+\forall \eps \gt 0\ \exists N = N(\eps)\ \forall n \geq N \text{ we have } |a^{-1}-a_n^{-1}| \leq \eps.\tag{2.9}
+\end{equation}
+</div>We observe the key identity<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-seq-limit.html ./knowl/eq-lim-def-3.html">
+\begin{equation*}
+a^{-1} - a_n^{-1}  = \frac{a_n-a}{aa_n}.
+\end{equation*}
+</div>By definition of the limit (<a href="" class="xref" data-knowl="./knowl/def-seq-limit.html" title="Definition 1.23: Limit of convergent sequence">Definition 1.23</a>), we know that<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-seq-limit.html ./knowl/eq-lim-def-3.html">
+\begin{equation*}
+\forall \eps \gt 0\ \exists N_1 = N_1(\eps)\ \forall n \geq N_1 \text{ we have } \abs{a - a_n} \leq \eps.
+\end{equation*}
+</div>By the triangle inequality<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-seq-limit.html ./knowl/eq-lim-def-3.html">
+\begin{equation*}
+|a_n| = |a-(a-a_n)| \geq |a| - |a-a_n|.
+\end{equation*}
+</div>Hence if <span class="process-math">\(|a-a_n| \leq |a|/2\)</span> then <span class="process-math">\(|a_n| \geq |a|/2 \gt 0\text{.}\)</span> Setting <span class="process-math">\(N_0 := N_1(|a|/2)\text{,}\)</span> it follows that for all <span class="process-math">\(n \geq N_0\)</span> we have <span class="process-math">\(|a_n| \geq |a|/2 \gt 0\text{,}\)</span> in particular we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-seq-limit.html ./knowl/eq-lim-def-3.html">
+\begin{equation*}
+\abs{a^{-1} - a_n^{-1}}  = \frac{|a_n-a|}{|aa_n|} \leq \frac{|a_n-a|}{|a|^2/2}\text{.}
+\end{equation*}
+</div>Hence if <span class="process-math">\(n \geq N_0\)</span> and <span class="process-math">\(|a - a_n| \leq \eps\)</span> then<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-seq-limit.html ./knowl/eq-lim-def-3.html">
+\begin{equation*}
+\abs{a^{-1} - a_n^{-1}}  = \frac{|a_n-a|}{|aa_n|} \leq \frac{\eps}{|a|^2/2} = \frac{2\eps}{|a|^2}.
+\end{equation*}
+</div>We therefore obtain <a href="" class="xref" data-knowl="./knowl/eq-lim-def-3.html" title="Equation 2.9">(2.9)</a> on setting<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-seq-limit.html ./knowl/eq-lim-def-3.html">
+\begin{equation*}
+N(\eps) := \max\set{N_0, N_1\brac{\trecip{2}|a|^{2}\eps}}.
+\end{equation*}
+</div></article></details>
 </div>
-<span class="incontext"><a href="week-2.html#solution-33" class="internal">in-context</a></span>
+<span class="incontext"><a class="internal" href="week-2.html#solution-33">in-context</a></span>
 </body>
 </html>

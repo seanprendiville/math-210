@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -12,8 +12,45 @@
 </head>
 <body class="ignore-math">
 <article class="exercise exercise-like"><h3 class="heading">
-<span class="type">-</span><span class="space"> </span><span class="codenumber">4.24</span><span class="period">.</span><span class="space"> </span><span class="title">Power series.</span>
+<span class="type">-</span><span class="space"> </span><span class="codenumber">5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Power series.</span>
 </h3>
-<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>Define the <em class="emphasis">power series</em> associated to a real sequence.<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-66-hidden.html" title="Solution 4.24.a.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>State the existence of a <em class="emphasis">radius of convergence</em> for a power series (the proof is non-examinable).<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-67-hidden.html" title="Solution 4.24.b.1"><span class="type">Solution</span><span class="period">.</span></a></div></article></article><span class="incontext"><a href="week-4.html#exercise-38" class="internal">in-context</a></span>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>Define the <em class="emphasis">power series</em> associated to a real sequence.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="definition definition-like"><h5 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Power series and radius of convergence.</span>
+</h5> Given <span class="process-math">\(x \in \R\text{,}\)</span> the <em class="emphasis">power series</em> associated to the sequence <span class="process-math">\((a_n)_{n=0}^\infty\)</span> is the series<div class="displaymath process-math">
+\begin{equation*}
+\sum_{n=0}^\infty a_n x^n,
+\end{equation*}
+</div>provided that this limit exists.</article> <details class="example example-like"><summary><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3</span><span class="period">.</span><span class="space"> </span><span class="title">The geometric power series.</span>
+</h5></summary><article class="example example-like"> The power series associated to the constant sequence <span class="process-math">\(a_n :=1\)</span> is<div class="displaymath process-math">
+\begin{equation*}
+\sum_{n=0}^\infty x^n.
+\end{equation*}
+</div>This converges absolutely (and is equal to <span class="process-math">\((1-x)^{-1}\)</span>) when <span class="process-math">\(|x|\lt 1\text{.}\)</span> It does not converge when <span class="process-math">\(|x| \geq 1\text{.}\)</span></article></details>
+</div></details></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>State the existence of a <em class="emphasis">radius of convergence</em> for a power series (the proof is non-examinable).<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="theorem theorem-like"><h5 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.4</span><span class="period">.</span><span class="space"> </span><span class="title">Existence of radius of convergence.</span>
+</h5>Let <span class="process-math">\((a_n)_{n=0}^\infty\)</span> be a sequence of real numbers. There exists <span class="process-math">\(R \in [0, \infty]\text{,}\)</span> the <em class="emphasis">radius of convergence</em>, for which both of the following hold. <ol class="decimal">
+<li><div class="para">If <span class="process-math">\(|x| \lt  R\)</span> then the power series <span class="process-math">\(\displaystyle \sum_{n=0}^\infty a_n x^n\)</span> is absolutely convergent.</div></li>
+<li><div class="para">If <span class="process-math">\(|x| \gt R\)</span> then the power series <span class="process-math">\(\displaystyle \sum_{n=0}^\infty a_n x^n\)</span> does not converge.</div></li>
+</ol> </article><details class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof"><div class="para logical">
+<div class="para">Notice that the set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\set{x \in \R : \sum_{n=0}^\infty a_n x^n \text{ converges}}
+\end{equation*}
+</div>
+<div class="para">is non-empty, as it contains <span class="process-math">\(x=0\text{.}\)</span> If this set <em class="emphasis">is not</em> bounded above, set <span class="process-math">\(R:=\infty\text{.}\)</span> If this set <em class="emphasis">is</em> bounded above, we can use the completeness principle to take <span class="process-math">\(R\)</span> to be its supremum.</div>
+</div> <div class="para">If <span class="process-math">\(|x| \gt R\)</span> then <span class="process-math">\(a_n x^n \not \to 0\text{,}\)</span> hence by the <span class="process-math">\(n\)</span>th term test (<a href="" class="xref" data-knowl="./knowl/prop-tail.html" title="Proposition 4.23: nth term test">Proposition 4.23</a>) the series  <span class="process-math">\(\sum_n a_n x^n\)</span> does not converge.</div> <div class="para logical">
+<div class="para">Suppose that <span class="process-math">\(|x| \lt  R\text{.}\)</span> Since decreasing a supremum gives a non upper bound  (<a href="" class="xref" data-knowl="./knowl/prop-alt-sup.html" title="Lemma 1.9: Decreasing a sup gives a non-upper bound">Lemma 1.9</a>), there exists <span class="process-math">\(r \in (|x|, R]\)</span> for which <span class="process-math">\(|a_n| r^n \to 0\text{.}\)</span> The sequence <span class="process-math">\(|a_n| r^n\)</span> must be bounded, since convergence implies boundedness (<a href="" class="xref" data-knowl="./knowl/prop-conv-bounded.html" title="Proposition 1.30: Convergent sequences are bounded">Proposition 1.30</a>). Hence there exists <span class="process-math">\(M&gt;0\)</span> such that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-alt-sup.html ./knowl/prop-conv-bounded.html ./knowl/eg-geo-series.html ./knowl/prop-oh-test.html">
+\begin{equation*}
+|a_n x^n| = |a_n| r^n \brac{|x|/r}^n \leq M|x|^n/r^n.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(|x|/r \lt  1\text{,}\)</span> the geometric series <span class="process-math">\(\sum_n M(|x|/r)^n\)</span> is absolutely convergent (<a href="" class="xref" data-knowl="./knowl/eg-geo-series.html" title="Example 4.3: Geometric series">Example 4.3</a>). Hence by the comparison test (<a href="" class="xref" data-knowl="./knowl/prop-oh-test.html" title="Proposition 4.15: Comparison test">Proposition 4.15</a>) the series <span class="process-math">\(\sum_n a_n x^n\)</span> is absolutely convergent.</div>
+</div> <div class="para">For uniqueness, suppose that <span class="process-math">\(R_1 \lt  R_2\)</span> both satisfy items <a href="" class="xref" data-knowl="./knowl/item-power-conv.html" title="Item 5.1.1">Item 5.1.1</a> and <a href="" class="xref" data-knowl="./knowl/item-power-div.html" title="Item 5.1.2">Item 5.1.2</a>. Setting <span class="process-math">\(r := \recip 2(R_1+R_2)\)</span> we have <span class="process-math">\(R_1 \lt  r \lt  R_2\text{.}\)</span> Hence by item <a href="" class="xref" data-knowl="./knowl/item-power-conv.html" title="Item 5.1.1">Item 5.1.1</a> we have <span class="process-math">\(\sum_n |a_n|r^n \lt  \infty\)</span> and by item <a href="" class="xref" data-knowl="./knowl/item-power-div.html" title="Item 5.1.2">Item 5.1.2</a> we have <span class="process-math">\(\sum_n |a_n|r^n = \infty\text{,}\)</span> a contradiction.</div></article></details>
+</div></details></div></article></article><span class="incontext"><a class="internal" href="week-5.html#exercise-38">in-context</a></span>
 </body>
 </html>

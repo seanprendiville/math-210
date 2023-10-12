@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -17,14 +17,22 @@
 </h3>
 <article class="proposition theorem-like"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.7</span><span class="period">.</span><span class="space"> </span><span class="title">Series of non-negative terms always exist.</span>
-</h4>Let <span class="process-math">\((a_n)_{n=1}^\infty\)</span> be a non-negative sequence, so that <span class="process-math">\(a_n \geq 0\)</span> for all <span class="process-math">\(n\in \N\text{.}\)</span> Then the series <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> exists, although it may equal <span class="process-math">\(\infty\text{.}\)</span></article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-33-hidden.html" title="Proof 4.7.1"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><article class="remark remark-like"><h4 class="heading">
+</h4>Let <span class="process-math">\((a_n)_{n=1}^\infty\)</span> be a non-negative sequence, so that <span class="process-math">\(a_n \geq 0\)</span> for all <span class="process-math">\(n\in \N\text{.}\)</span> Then the series <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> exists, although it may equal <span class="process-math">\(\infty\text{.}\)</span></article><details class="hiddenproof"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof">Since <span class="process-math">\(a_n \geq 0\)</span> for all <span class="process-math">\(n\in \N\text{,}\)</span> the sequence of partial sums<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-lim.html">
+\begin{equation*}
+a_1 \quad \leq\quad a_1 + a_2 \quad \leq\quad a_1 + a_2 + a_3 \quad \leq\quad \dots 
+\end{equation*}
+</div>is an increasing sequence of real numbers. Hence by the monotone convergence principle (<a href="" class="xref" data-knowl="./knowl/prop-mono-lim.html" title="Proposition 2.3: Monotone convergence principle">Proposition 2.3</a>), the limit<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-lim.html">
+\begin{equation*}
+\sum_{n=1}^\infty a_n = \lim_{N\to \infty} \sum_{n=1}^Na_n
+\end{equation*}
+</div>always exists, but is possibly <span class="process-math">\(\infty\text{.}\)</span></article></details> <article class="remark remark-like"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.8</span><span class="period">.</span>
-</h4>We write<div class="displaymath process-math" data-contains-math-knowls="">
+</h4>We write<div class="displaymath process-math">
 \begin{equation*}
 \sum_{n=1}^\infty a_n \lt  \infty
 \end{equation*}
 </div>to indicate that the series converges to a real number (when the underlying sequence <span class="process-math">\((a_n)\)</span> is non-negative).</article>
 </div>
-<span class="incontext"><a href="week-4.html#solution-59" class="internal">in-context</a></span>
+<span class="incontext"><a class="internal" href="week-4.html#solution-59">in-context</a></span>
 </body>
 </html>

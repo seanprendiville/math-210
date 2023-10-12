@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -13,16 +13,17 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">7.1.c.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.13.c.1</span><span class="period">.</span>
 </h4>
-<article class="corollary theorem-like"><h5 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">7.4</span><span class="period">.</span><span class="space"> </span><span class="title">Quotient rule.</span>
-</h5>Let <span class="process-math">\(f,g : (a,b) \to \R\)</span> both be differentiable at <span class="process-math">\(x_0 \in D\text{.}\)</span> Suppose that <span class="process-math">\(g(x_0) \neq 0\text{.}\)</span> Then the quotient <span class="process-math">\(f/g\)</span> is defined on <span class="process-math">\((x_0-\delta, x_0+\delta)\)</span> for some <span class="process-math">\(\delta \gt 0\)</span> and is differentiable at <span class="process-math">\(x_0\text{.}\)</span> Moreover the derivative satisfies the identity<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation}
-(f/g)'(x_0) = \frac{f'(x_0)g(x_0)-f(x_0)g'(x_0)}{g(x_0)^2}.\tag{7.6}
-\end{equation}
-</div></article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-48-hidden.html" title="Proof 7.4.1"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article>
+<article class="proposition theorem-like"><h5 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.21</span><span class="period">.</span><span class="space"> </span><span class="title">Non-zero point of continuity implies non-zero on a neighbourhood.</span>
+</h5>Let <span class="process-math">\(f : D \to \R\)</span> be a real-valued function on a real domain <span class="process-math">\(D \subset \R\text{.}\)</span> Suppose that <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0 \in D\)</span> and <span class="process-math">\(f(x_0)\gt 0\text{.}\)</span>  Then there exists <span class="process-math">\(\delta \gt 0\)</span> such that for all <span class="process-math">\(x \in D\cap(x_0-\delta, x_0+\delta)\)</span> we have <span class="process-math">\(f(x) \gt 0
+\text{.}\)</span></article><details class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof">Take <span class="process-math">\(\eps := \trecip{2} f(x_0)\)</span> in <a href="" class="xref" data-knowl="./knowl/eq-eps-delta-cts.html" title="Equation 5.4">(5.4)</a>. Then by the triangle inequality, for <span class="process-math">\(x \in D\)</span> satisfying <span class="process-math">\(|x-x_0| \leq \delta = \delta(\eps)\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-eps-delta-cts.html">
+\begin{equation*}
+f(x) = f(x_0) + f(x) - f(x_0) \geq f(x_0)- |f(x)-f(x_0)| \geq f(x_0) - \eps = \trecip{2} f(x_0) \gt 0. 
+\end{equation*}
+</div></article></details>
 </div>
-<span class="incontext"><a href="week-7.html#solution-74" class="internal">in-context</a></span>
+<span class="incontext"><a class="internal" href="week-5.html#solution-74">in-context</a></span>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -13,6 +13,27 @@
 <body class="ignore-math">
 <article class="task exercise-like"><h4 class="heading">
 <span class="type">Task</span><span class="space"> </span><span class="codenumber">3.17.b</span><span class="period">.</span>
-</h4>State and prove how limits are preserved on passing to subsequences.<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-43-hidden.html" title="Solution 3.17.b.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><span class="incontext"><a href="week-3.html#ex-subseq-limit" class="internal">in-context</a></span>
+</h4>State and prove how limits are preserved on passing to subsequences.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="proposition theorem-like"><h5 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.20</span><span class="period">.</span><span class="space"> </span><span class="title">Limits are preserved on passing to subsequences.</span>
+</h5>Let <span class="process-math">\((a_n)_{n=1}^\infty\)</span> be a real sequence with <span class="process-math">\(a_n \to a\text{.}\)</span> Suppose that <span class="process-math">\((k_n)_{n=1}^\infty\)</span> is a sequence of positive integers (not necessarily strictly increasing) such that <span class="process-math">\(k_n \to \infty\text{.}\)</span> Then <span class="process-math">\(a_{k_n} \to a\)</span> as <span class="process-math">\(n \to \infty\text{.}\)</span> In particular, any subsequence  <span class="process-math">\((a_{k_n})_{n =1}^\infty\)</span> of  <span class="process-math">\((a_n)_{n=1}^\infty\)</span> tends to the same limit.</article><details class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof">We prove the result for <span class="process-math">\(a \in \R\)</span> and leave the cases in which <span class="process-math">\(a = \pm \infty\)</span> to the reader. We know that<div class="displaymath process-math">
+\begin{equation*}
+(\forall \eps \gt 0)(\exists N_1 = N_1(\eps) \in \N)(\forall n \geq N_1)[|a-a_n| \leq \eps].
+\end{equation*}
+</div>We are required to prove that<div class="displaymath process-math">
+\begin{equation*}
+(\forall \eps \gt 0)(\exists N_2 = N_2(\eps) \in \N)(\forall n \geq N_2)[|a-a_{k_n}| \leq \eps].
+\end{equation*}
+</div>Since <span class="process-math">\(k_n \to \infty\text{,}\)</span> for any <span class="process-math">\(N \in \N\)</span> there exists <span class="process-math">\(N_0  = N_0(N)\)</span> such that <span class="process-math">\(n \geq N_0\)</span> implies <span class="process-math">\(k_n \geq N\text{.}\)</span> We therefore obtain the required <span class="process-math">\(N_2\)</span> on setting<div class="displaymath process-math">
+\begin{equation*}
+N_2(\eps) := N_0\bigbrac{N_1(\eps)}. 
+\end{equation*}
+</div></article></details> <details class="example example-like"><summary><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.21</span><span class="period">.</span><span class="space"> </span><span class="title">Sequences may not have the same limit as their subsequences.</span>
+</h5></summary><article class="example example-like"> If a subsequence tends to a limit <span class="process-math">\(a_{k_n} \to a\text{,}\)</span> it may not be the case that <span class="process-math">\(a_n\to a\text{.}\)</span> For instance, the sequence <span class="process-math">\(a_n:=(-1)^n\)</span> has a  subsequence tending to 1, but is not itself convergent.</article></details> <article class="remark remark-like"><h5 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.22</span><span class="period">.</span><span class="space"> </span><span class="title">Proving a sequence does not have a limit using subsequences.</span>
+</h5> <div class="para">
+<a href="" class="xref" data-knowl="./knowl/prop-subseq-conv.html" title="Proposition 3.20: Limits are preserved on passing to subsequences">Proposition 3.20</a> is useful if one wants to show that a sequence <span class="process-math">\((a_n)_n\)</span> does not have a limit. Using <a href="" class="xref" data-knowl="./knowl/prop-subseq-conv.html" title="Proposition 3.20: Limits are preserved on passing to subsequences">Proposition 3.20</a>, it suffices to find two subsequences <span class="process-math">\((a_{k_n})_n\)</span> and <span class="process-math">\((a_{l_n})_n\)</span> which have different limits.</div></article>
+</div></details></div></article><span class="incontext"><a class="internal" href="week-3.html#ex-subseq-limit">in-context</a></span>
 </body>
 </html>
