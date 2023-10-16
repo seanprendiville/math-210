@@ -11,28 +11,44 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="exercise exercise-like"><h3 class="heading">
+<article class="exercise exercise-like"><h4 class="heading">
 <span class="type">-</span><span class="space"> </span><span class="codenumber">5.11</span><span class="period">.</span><span class="space"> </span><span class="title">Limits of functions.</span>
-</h3>
-<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>Given a real-valued function <span class="process-math">\(f\)</span> on a real domain<a class="xref" id="fn-7" href="" data-knowl="./knowl/fn-7.html" title="Footnote 5.1"><sup> 1 </sup></a>, define the meaning of the statement:<div class="displaymath process-math">
+</h4>
+<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>Given a real-valued function <span class="process-math">\(f\)</span> on a real domain <span class="process-math">\(D\text{,}\)</span> define the meaning of the statement:<div class="displaymath process-math">
 \begin{equation*}
-f(x) \to y \quad \text{as} \quad x \to x_0.
+f(x) \to y \quad \text{as} \quad x \to x_0\quad \text{through} \quad D.
 \end{equation*}
 </div>
-<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><article class="definition definition-like"><h5 class="heading">
+<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="definition definition-like"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.12</span><span class="period">.</span><span class="space"> </span><span class="title">Sequential definition of function limit.</span>
-</h5> Given a real-valued function <span class="process-math">\(f\)</span> on a real domain, we write<div class="displaymath process-math">
+</h6> Given a real-valued function <span class="process-math">\(f: D \to \R\)</span> on a real domain <span class="process-math">\(D\text{,}\)</span> we write<div class="displaymath process-math">
 \begin{equation*}
-f(x) \to y \quad \text{as} \quad x \to x_0
+f(x) \to y \quad \text{as} \quad x \to x_0 \quad \text{through} \quad D
 \end{equation*}
-</div>if, for any sequence <span class="process-math">\((a_n)_n\)</span> in the domain<a class="xref" id="fn-8" href="" data-knowl="./knowl/fn-8.html" title="Footnote 5.2"><sup> 2 </sup></a> of <span class="process-math">\(f\)</span> we have the implication<div class="displaymath process-math">
+</div>if, for any sequence <span class="process-math">\((a_n)_n\)</span> in <span class="process-math">\(D\)</span> we<a class="xref" id="fn-7" href="" data-knowl="./knowl/fn-7.html" title="Footnote 5.1"><sup> 1 </sup></a> have the implication<div class="displaymath process-math">
 \begin{equation}
 a_n \to x_0 \quad \implies \quad f(a_n) \to y.\tag{5.3}
 \end{equation}
-</div>If there is only <em class="emphasis">one</em> such value of <span class="process-math">\(y\text{,}\)</span> then we write<div class="displaymath process-math">
+</div>We also denote this as<div class="displaymath process-math">
+\begin{equation*}
+y = \lim_{x\to x_0; x \in D} f(x)
+\end{equation*}
+</div></article> <article class="remark remark-like"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">5.13</span><span class="period">.</span>
+</h6>If the domain <span class="process-math">\(D\)</span> is clear from the context, then we may drop the "through <span class="process-math">\(D\)</span>" part, and simply write<div class="displaymath process-math">
+\begin{equation*}
+f(x) \to y \quad \text{as} \quad x \to x_0,
+\end{equation*}
+</div>or<div class="displaymath process-math">
 \begin{equation*}
 y = \lim_{x\to x_0} f(x)
 \end{equation*}
-</div></article></div></details></div></article></article><span class="incontext"><a class="internal" href="week-5.html#exercise-41">in-context</a></span>
+</div></article> <article class="remark remark-like"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">5.14</span><span class="period">.</span>
+</h6>
+<div class="para">Notice that our definition of the limit is <em class="emphasis">not</em> the epsilon-delta definition which you may be more familiar with. If you are asked to define the limit, you should use the sequential definition above. Our reason for preferring the sequential definition is that it builds on the theory of sequences which begins this course, and also allows for the limit point <span class="process-math">\(x_0\)</span> to be <span class="process-math">\(\pm\infty\text{.}\)</span> The epsilon-delta definition does not include the latter possibility.</div> <div class="para">We will eventually deduce that the epsilon-delta definition is equivalent to the sequential definition when <span class="process-math">\(x_0\in \R\text{.}\)</span>
+</div></article>
+</div></details></div></article></article><span class="incontext"><a class="internal" href="week-5.html#exercise-41">in-context</a></span>
 </body>
 </html>

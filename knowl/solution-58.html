@@ -12,12 +12,12 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h3 class="heading">
+<h4 class="heading">
 <span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span>
-</h3>
-<article class="definition definition-like"><h4 class="heading">
+</h4>
+<article class="definition definition-like"><h5 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Infinite series.</span>
-</h4> <div class="para logical">
+</h5> <div class="para logical">
 <div class="para">Given a sequence of real numbers <span class="process-math">\((a_n)_{n=1}^\infty\)</span> and <span class="process-math">\(N\in \N\text{,}\)</span> the <em class="emphasis"><span class="process-math">\(N\)</span>th partial sum</em> is given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -32,14 +32,14 @@
 </div>
 <div class="para">The <em class="emphasis">terms</em> of the infinite series <span class="process-math">\(\displaystyle \sum_{n=1}^\infty a_n\)</span> are the summands <span class="process-math">\(a_n\text{.}\)</span>
 </div>
-</div> <div class="para">If the limit  <span class="process-math">\(\displaystyle\sum_{n=1}^\infty a_n=\lim_{N\to \infty} \sum_{n=1}^N a_n\)</span> exists and equals a <em class="emphasis">finite real number</em>, then we say that the series <span class="process-math">\(\displaystyle\sum_{n=1}^\infty a_n \)</span> is <em class="emphasis">convergent</em>.</div></article> <details class="example example-like"><summary><h4 class="heading">
+</div> <div class="para">If the limit  <span class="process-math">\(\displaystyle\sum_{n=1}^\infty a_n=\lim_{N\to \infty} \sum_{n=1}^N a_n\)</span> exists and equals a <em class="emphasis">finite real number</em>, then we say that the series <span class="process-math">\(\displaystyle\sum_{n=1}^\infty a_n \)</span> is <em class="emphasis">convergent</em>.</div></article> <details class="example example-like"><summary><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Geometric series.</span>
-</h4></summary><article class="example example-like"> If <span class="process-math">\(|x|\lt 1\text{,}\)</span> then<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-exp-poly.html ./knowl/prop-inf-recip-rule.html ./knowl/prop-add-rule.html ./knowl/prop-mult-rule.html ./knowl/prop-recip-rule.html">
+</h5></summary><article class="example example-like"> If <span class="process-math">\(|x|\lt 1\text{,}\)</span> then<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-exp-poly.html ./knowl/prop-inf-recip-rule.html ./knowl/prop-add-rule.html ./knowl/prop-mult-rule.html ./knowl/prop-recip-rule.html">
 \begin{equation*}
 \sum_{n=0}^\infty x^n = \frac{1}{1-x}.
 \end{equation*}
 </div>
-<details class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof">We have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-exp-poly.html ./knowl/prop-inf-recip-rule.html ./knowl/prop-add-rule.html ./knowl/prop-mult-rule.html ./knowl/prop-recip-rule.html">
+<details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">We have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-exp-poly.html ./knowl/prop-inf-recip-rule.html ./knowl/prop-add-rule.html ./knowl/prop-mult-rule.html ./knowl/prop-recip-rule.html">
 \begin{equation*}
 \sum_{n=0}^N x^n  = 1 + \brac{x\sum_{n=0}^{N-1} x^n}  =  1+ \brac{x\sum_{n=0}^N x^n}- x^{N+1} .
 \end{equation*}
@@ -51,9 +51,9 @@
 \begin{equation*}
 \lim_{N \to \infty} \sum_{n=0}^N x^n = \lim_{N \to \infty} \frac{1-x^{N+1}}{1-x} = \frac{1 - x\displaystyle\lim_{N\to \infty} x^N}{1-x} = \frac{1}{1-x}.
 \end{equation*}
-</div></article></details></article></details> <details class="example example-like"><summary><h4 class="heading">
+</div></article></details></article></details> <details class="example example-like"><summary><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4</span><span class="period">.</span><span class="space"> </span><span class="title">A series which does not converge but which exists.</span>
-</h4></summary><article class="example example-like"> <div class="para logical">
+</h5></summary><article class="example example-like"> <div class="para logical">
 <div class="para">Set <span class="process-math">\(a_n := 1/2\)</span> for <span class="process-math">\(n=1, 2, \dots\text{.}\)</span> Then the partial sums satisfy</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -61,9 +61,9 @@
 \end{equation*}
 </div>
 <div class="para">Thus <span class="process-math">\(\sum_{n=1}^\infty 1/2\)</span> exists, but is not convergent (it equals <span class="process-math">\(\infty\)</span>).</div>
-</div></article></details> <details class="example example-like"><summary><h4 class="heading">
+</div></article></details> <details class="example example-like"><summary><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.5</span><span class="period">.</span><span class="space"> </span><span class="title">A series which does not exist.</span>
-</h4></summary><article class="example example-like"> <div class="para">Set <span class="process-math">\(a_n := (-1)^n\)</span> for <span class="process-math">\(n=1, 2, \dots\text{.}\)</span> Then the partial sums satisfy <span class="process-math">\(\sum_{n=1}^N a_n = -1\)</span> if <span class="process-math">\(N\)</span> is odd and <span class="process-math">\(\sum_{n=1}^N a_n = 0\)</span> if <span class="process-math">\(N\)</span> is even. It follows that the sequence of partial sums has a subsequence with limit <span class="process-math">\(-1\)</span> and a subsequence with limit <span class="process-math">\(0\text{.}\)</span> Therefore the sequence of partial sums cannot tend to a limit, since if a sequence has a limit all its subsequences tend to the same limit (<a href="" class="xref" data-knowl="./knowl/prop-subseq-conv.html" title="Proposition 3.20: Limits are preserved on passing to subsequences">Proposition 3.20</a>). Thus <span class="process-math">\(\sum_{n=1}^\infty (-1)^n\)</span> does not exist.</div></article></details>
+</h5></summary><article class="example example-like"> <div class="para">Set <span class="process-math">\(a_n := (-1)^n\)</span> for <span class="process-math">\(n=1, 2, \dots\text{.}\)</span> Then the partial sums satisfy <span class="process-math">\(\sum_{n=1}^N a_n = -1\)</span> if <span class="process-math">\(N\)</span> is odd and <span class="process-math">\(\sum_{n=1}^N a_n = 0\)</span> if <span class="process-math">\(N\)</span> is even. It follows that the sequence of partial sums has a subsequence with limit <span class="process-math">\(-1\)</span> and a subsequence with limit <span class="process-math">\(0\text{.}\)</span> Therefore the sequence of partial sums cannot tend to a limit, since if a sequence has a limit all its subsequences tend to the same limit (<a href="" class="xref" data-knowl="./knowl/prop-subseq-conv.html" title="Proposition 3.20: Limits are preserved on passing to subsequences">Proposition 3.20</a>). Thus <span class="process-math">\(\sum_{n=1}^\infty (-1)^n\)</span> does not exist.</div></article></details>
 </div>
 <span class="incontext"><a class="internal" href="week-4.html#solution-58">in-context</a></span>
 </body>
