@@ -15,9 +15,10 @@
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.24</span><span class="period">.</span><span class="space"> </span><span class="title">Non-zero point of continuity implies non-zero on a neighbourhood.</span>
 </h5>Let <span class="process-math">\(f : D \to \R\)</span> be a real-valued function on a real domain <span class="process-math">\(D \subset \R\text{.}\)</span> Suppose that <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0 \in D\)</span> and <span class="process-math">\(f(x_0)\gt 0\text{.}\)</span>  Then there exists <span class="process-math">\(\delta \gt 0\)</span> such that for all <span class="process-math">\(x \in D\cap(x_0-\delta, x_0+\delta)\)</span> we have <span class="process-math">\(f(x) \gt 0
 \text{.}\)</span></article><details class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof">Take <span class="process-math">\(\eps := \trecip{2} f(x_0)\)</span> in <a href="" class="xref" data-knowl="./knowl/eq-eps-delta-cts.html" title="Equation 5.4">(5.4)</a>. Then by the triangle inequality, for <span class="process-math">\(x \in D\)</span> satisfying <span class="process-math">\(|x-x_0| \leq \delta = \delta(\eps)\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-eps-delta-cts.html">
-\begin{equation*}
-f(x) = f(x_0) + f(x) - f(x_0) \geq f(x_0)- |f(x)-f(x_0)| \geq f(x_0) - \eps = \trecip{2} f(x_0) \gt 0. 
-\end{equation*}
+\begin{align*}
+f(x) = f(x_0) + f(x) - f(x_0) \geq f(x_0)- |f(x)-f(x_0)| \amp \geq f(x_0) - \eps\\
+\amp = \trecip{2} f(x_0) \gt 0. 
+\end{align*}
 </div></article></details><span class="incontext"><a class="internal" href="week-5.html#cor-non-zero-cts">in-context</a></span>
 </body>
 </html>

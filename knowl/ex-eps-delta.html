@@ -15,7 +15,7 @@
 <span class="type">Task</span><span class="space"> </span><span class="codenumber">5.15.b</span><span class="period">.</span>
 </h5>State and prove the "epsilon-delta" characterisation of continuity at a point.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
 <article class="proposition theorem-like"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.22</span><span class="period">.</span><span class="space"> </span><span class="title">Epsilon-delta characterisation of continuity.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.21</span><span class="period">.</span><span class="space"> </span><span class="title">Epsilon-delta characterisation of continuity.</span>
 </h6>Let <span class="process-math">\(f : D \to \R\)</span> be a real valued function on a real domain <span class="process-math">\(D \subset \R\)</span> and let <span class="process-math">\(x_0\in D\text{.}\)</span> Then <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0\)</span> if and only if<div class="displaymath process-math">
 \begin{align}
 (\forall \eps \gt 0)(\exists \delta=\delta(x_0,\eps)  \gt 0)\amp(\forall x \in D)\notag\\
@@ -31,7 +31,13 @@
 \end{align*}
 </div>
 <div class="para">Taking <span class="process-math">\(\delta = 1/n\)</span> in the above negation, set <span class="process-math">\(a_1:= x(1)\text{,}\)</span> <span class="process-math">\(a_2:=x(1/2)\text{,}\)</span> <span class="process-math">\(a_3 := x(1/3)\text{,}\)</span> etc. Then <span class="process-math">\(a_n \in D\text{,}\)</span> <span class="process-math">\(|a_n - x_0| \leq 1/n\)</span> and <span class="process-math">\(|f(a_n)-f(x_0)| \geq \eps\text{.}\)</span> Hence <span class="process-math">\((a_n)_n\)</span> is a sequence in <span class="process-math">\(D\)</span> with <span class="process-math">\(a_n \to x_0\)</span> and <span class="process-math">\(f(a_n) \not\to f(x_0)\)</span> (as required).</div>
-</div></article></details>
+</div></article></details> <details class="example example-like"><summary><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.22</span><span class="period">.</span><span class="space"> </span><span class="title">The absolute value function is continuous.</span>
+</h6></summary><article class="example example-like"> By the triangle inequality, for any <span class="process-math">\(x, x_0 \in \R\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-eps-delta-cts.html">
+\begin{equation*}
+|x-x_0| \leq \eps \implies ||x|-|x_0|| \leq \eps.
+\end{equation*}
+</div>Hence <a href="" class="xref" data-knowl="./knowl/eq-eps-delta-cts.html" title="Equation 5.4">(5.4)</a> holds for the function <span class="process-math">\(x \mapsto |x|\)</span> on taking <span class="process-math">\(\delta(x_0, \eps) := \eps\text{.}\)</span></article></details>
 </div></details></div></article><span class="incontext"><a class="internal" href="week-5.html#ex-eps-delta">in-context</a></span>
 </body>
 </html>
