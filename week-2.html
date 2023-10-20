@@ -211,7 +211,7 @@ window.MathJax = {
 <span class="type">-</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Monotone convergence principle.</span>
 </h4></summary><article class="exercise exercise-like"><article class="task exercise-like" id="task-increasing"><h5 class="heading"><span class="codenumber">(a)</span></h5>Define what it means for a real-valued function/sequence to be increasing/decreasing.<div class="solutions"><details id="solution-26" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><article class="definition definition-like" id="def-monotone"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Increasing/decreasing/monotone.</span>
-</h6> <div class="para logical" id="p-41">
+</h6> <div class="para logical" id="p-40">
 <div class="para">Let <span class="process-math">\(f : D \to\R\)</span> be a real-valued function with domain <span class="process-math">\(D\subset \R\text{.}\)</span> We say that <span class="process-math">\(f\)</span> is <em class="emphasis">increasing on <span class="process-math">\(D\)</span></em> if</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -237,7 +237,7 @@ window.MathJax = {
 \end{equation*}
 </div>
 <div class="para">We say that <span class="process-math">\(f\)</span> is <em class="emphasis">monotone</em> if it is either increasing or decreasing.</div>
-</div> <div class="para logical" id="p-42">
+</div> <div class="para logical" id="p-41">
 <div class="para">Recall that a sequence of reals <span class="process-math">\((a_n)_{n=1}^\infty\)</span> is a function <span class="process-math">\(f : \N \to \R\)</span> where <span class="process-math">\(f(n) := a_n\)</span> for each <span class="process-math">\(n \in \N\text{.}\)</span> One can check that such a  sequence <span class="process-math">\((a_n)_{n=1}^\infty\)</span> is increasing (as defined above) if and only if</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -263,9 +263,9 @@ n \geq N \implies |a-a_n| \leq \eps.
 <article class="proposition theorem-like" id="prop-ineq-rule"><h5 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.5</span><span class="period">.</span>
 </h5>
-<div class="para" id="p-43">Let <span class="process-math">\((a_n)_n\)</span> and <span class="process-math">\((b_n)_n\)</span> be sequences of real numbers such that <span class="process-math">\(a_n\to a\)</span> and <span class="process-math">\(b_n\to b\)</span> as <span class="process-math">\(n\to\infty\text{.}\)</span> Suppose that  <span class="process-math">\(a_n \leq b_n\)</span> for all <span class="process-math">\(n\text{.}\)</span> Then <span class="process-math">\(a \leq b\text{.}\)</span>
-</div> <div class="para" id="p-44">The conclusion of this result still holds if one relaxes the assumption <em class="emphasis">"<span class="process-math">\(a_n \leq b_n\)</span> for all <span class="process-math">\(n\)</span>’’</em> to <em class="emphasis">"<span class="process-math">\(a_n \leq b_n\)</span> for all but finitely<a class="xref" id="fn-2" href="" data-knowl="./knowl/fn-2.html" title="Footnote 2.1"><sup> 1 </sup></a> many <span class="process-math">\(n\)</span>’’</em>.</div></article><details id="proof-13" class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof"><div class="para" id="p-45">We shall derive a contradiction from the assumption that <span class="process-math">\(a \gt b\text{.}\)</span>
-</div> <div class="para logical" id="p-46">
+<div class="para" id="p-42">Let <span class="process-math">\((a_n)_n\)</span> and <span class="process-math">\((b_n)_n\)</span> be sequences of real numbers such that <span class="process-math">\(a_n\to a\)</span> and <span class="process-math">\(b_n\to b\)</span> as <span class="process-math">\(n\to\infty\text{.}\)</span> Suppose that  <span class="process-math">\(a_n \leq b_n\)</span> for all <span class="process-math">\(n\text{.}\)</span> Then <span class="process-math">\(a \leq b\text{.}\)</span>
+</div> <div class="para" id="p-43">The conclusion of this result still holds if one relaxes the assumption <em class="emphasis">"<span class="process-math">\(a_n \leq b_n\)</span> for all <span class="process-math">\(n\)</span>’’</em> to <em class="emphasis">"<span class="process-math">\(a_n \leq b_n\)</span> for all but finitely<a class="xref" id="fn-2" href="" data-knowl="./knowl/fn-2.html" title="Footnote 2.1"><sup> 1 </sup></a> many <span class="process-math">\(n\)</span>’’</em>.</div></article><details id="proof-13" class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof"><div class="para" id="p-44">We shall derive a contradiction from the assumption that <span class="process-math">\(a \gt b\text{.}\)</span>
+</div> <div class="para logical" id="p-45">
 <div class="para">By definition of the limit (<a href="" class="xref" data-knowl="./knowl/def-seq-limit.html" title="Definition 1.23: Limit of convergent sequence">Definition 1.23</a>,) we have that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/def-seq-limit.html ./knowl/eq-lim-def-4.html ./knowl/eq-lim-def-5.html" id="mdn-1">
 \begin{align}
@@ -449,15 +449,15 @@ N(\eps) := \max\set{N_1\brac{\tfrac{\eps}{|b|+M}}, N_2\brac{\tfrac{\eps}{|b|+M}}
 <article class="proposition theorem-like" id="prop-eventually-non-zero"><h5 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.19</span><span class="period">.</span>
 </h5>
-<div class="para" id="p-47">Let <span class="process-math">\((a_n)_{n=1}^\infty\)</span> be a convergent sequence with <span class="process-math">\(\lim_{n\to\infty} a_n \neq 0\text{.}\)</span> Then there exists <span class="process-math">\(N \in \N\)</span> such that for all <span class="process-math">\(n\geq N\)</span> we have <span class="process-math">\(a_n\neq 0\text{.}\)</span>
-</div> <div class="para logical" id="p-48">
+<div class="para" id="p-46">Let <span class="process-math">\((a_n)_{n=1}^\infty\)</span> be a convergent sequence with <span class="process-math">\(\lim_{n\to\infty} a_n \neq 0\text{.}\)</span> Then there exists <span class="process-math">\(N \in \N\)</span> such that for all <span class="process-math">\(n\geq N\)</span> we have <span class="process-math">\(a_n\neq 0\text{.}\)</span>
+</div> <div class="para logical" id="p-47">
 <div class="para">Furthermore, if <span class="process-math">\(\lim_{n\to\infty} a_n \gt 0\)</span> then the terms are (eventually) uniformly bounded away from zero, in that</div>
 <div class="displaymath process-math">
 \begin{equation*}
 (\exists \eps \gt 0)(\exists N \in \N)(\forall n\geq N)[a_n\geq \eps]\text{.}
 \end{equation*}
 </div>
-</div></article><details id="proof-18" class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof"><div class="para" id="p-49">Set <span class="process-math">\(a:= \lim_{n\to\infty} a_n\text{.}\)</span> Taking <span class="process-math">\(\eps := |a|/2 \gt 0\)</span> in the definition of convergence (<a href="" class="xref" data-knowl="./knowl/def-seq-limit.html" title="Definition 1.23: Limit of convergent sequence">Definition 1.23</a>), there exists <span class="process-math">\(N = N(\eps)\)</span> such that for all <span class="process-math">\(n\geq N\)</span> we have <span class="process-math">\(a_n \in [a-\eps, a+\eps]\text{.}\)</span> We claim that this neighbourhood of <span class="process-math">\(a\)</span> does not contain 0. We prove this by splitting into cases, depending on whether <span class="process-math">\(a\gt 0\)</span> or <span class="process-math">\(a\lt 0\text{.}\)</span> We give details for the former case and leave the latter case to the reader.</div> <div class="para logical" id="p-50">
+</div></article><details id="proof-18" class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof"><div class="para" id="p-48">Set <span class="process-math">\(a:= \lim_{n\to\infty} a_n\text{.}\)</span> Taking <span class="process-math">\(\eps := |a|/2 \gt 0\)</span> in the definition of convergence (<a href="" class="xref" data-knowl="./knowl/def-seq-limit.html" title="Definition 1.23: Limit of convergent sequence">Definition 1.23</a>), there exists <span class="process-math">\(N = N(\eps)\)</span> such that for all <span class="process-math">\(n\geq N\)</span> we have <span class="process-math">\(a_n \in [a-\eps, a+\eps]\text{.}\)</span> We claim that this neighbourhood of <span class="process-math">\(a\)</span> does not contain 0. We prove this by splitting into cases, depending on whether <span class="process-math">\(a\gt 0\)</span> or <span class="process-math">\(a\lt 0\text{.}\)</span> We give details for the former case and leave the latter case to the reader.</div> <div class="para logical" id="p-49">
 <div class="para">Supposing that <span class="process-math">\(a\gt 0\text{,}\)</span> we have that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eventually-non-zero.html">
 \begin{equation*}

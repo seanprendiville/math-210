@@ -13,19 +13,13 @@
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraph</span></h6>
 <div class="para logical">
-<div class="para">We say that <span class="process-math">\(k \in \N\)</span> is a <em class="emphasis">viewpoint</em><a class="xref" id="fn-5" href="" data-knowl="./knowl/fn-5.html" title="Footnote 3.2"><sup> 2 </sup></a> if <span class="process-math">\((\forall n \geq k)[a_k\geq a_n]\text{.}\)</span> If there are infinitely many viewpoints <span class="process-math">\(k_1 \lt  k_2 \lt  k_3 \lt  \dots\)</span> then the subsequence <span class="process-math">\((a_{k_n})_{n=1}^\infty\)</span> is decreasing. We may therefore suppose that there are only finitely many viewpoints. In particular, there exists <span class="process-math">\(k_0\geq 0\)</span> such that no <span class="process-math">\(n \gt k_0\)</span> is a viewpoint, so that there exists a higher point <span class="process-math">\(a_m\)</span> to the right of <span class="process-math">\(a_n\text{.}\)</span> More precisely:</div>
-<div class="displaymath process-math">
+<div class="para">Let us first prove the "only if" or "<span class="process-math">\(\impliedby\)</span>" direction. Fix <span class="process-math">\(\eps \gt 0\text{.}\)</span> By definition of convergence (<a href="" class="xref" data-knowl="./knowl/def-seq-limit.html" title="Definition 1.23: Limit of convergent sequence">Definition 1.23</a>) there exists <span class="process-math">\(N = N(\eps/2) \in \N\)</span> such that for all <span class="process-math">\(n \geq N\)</span> we have <span class="process-math">\(|a_n - a| \leq \eps/2\text{.}\)</span> Thus by the triangle inequality, if <span class="process-math">\(n, m\geq N\)</span> then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-seq-limit.html">
 \begin{equation*}
-(\forall n \gt k_0)(\exists m(n) \gt n)[ a_{m(n)} \gt a_n  ].
+|a_n -a_m| \leq |a_n-a| + |a-a_m| \leq \eps/2 + \eps/2 = \eps.
 \end{equation*}
 </div>
-<div class="para">Let us recursively define <span class="process-math">\(k_n\)</span> as follows: <span class="process-math">\(k_1 := k_0+1\)</span> and if <span class="process-math">\(k_n\)</span> has been defined then we set <span class="process-math">\(k_{n+1} := m(k_n)\text{.}\)</span> Then <span class="process-math">\(k_1 \lt  k_2 \lt  \dots\)</span> is strictly increasing and for each <span class="process-math">\(n\in \N\)</span> we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-a_{k_{n+1}} = a_{m(k_n)} \gt a_{k_n}.
-\end{equation*}
-</div>
-<div class="para">Hence <span class="process-math">\((a_{k_n})_{n=1}^\infty\)</span> is an increasing sequence.</div>
+<div class="para">Hence the sequence is Cauchy.</div>
 </div>
 <span class="incontext"><a class="internal" href="week-3.html#p-58">in-context</a></span>
 </body>

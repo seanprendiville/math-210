@@ -12,21 +12,24 @@
 </head>
 <body class="ignore-math">
 <article class="task exercise-like"><h5 class="heading">
-<span class="type">Task</span><span class="space"> </span><span class="codenumber">5.1.a</span><span class="period">.</span>
-</h5>Define the <em class="emphasis">power series</em> associated to a real sequence.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
-<article class="definition definition-like"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Power series and radius of convergence.</span>
-</h6> Given <span class="process-math">\(x \in \R\text{,}\)</span> the <em class="emphasis">power series</em> associated to the sequence <span class="process-math">\((a_n)_{n=0}^\infty\)</span> is the series<div class="displaymath process-math">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">5.8.b</span><span class="period">.</span>
+</h5>State and prove the multiplication rule for the exponential function.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="proposition theorem-like"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.10</span><span class="period">.</span>
+</h6> The exponential function satisfies the identity<div class="displaymath process-math">
 \begin{equation*}
-\sum_{n=0}^\infty a_n x^n,
+\exp(x+y) = \exp(x)\exp(y), \qquad (\forall x,y \in \R).
 \end{equation*}
-</div>provided that this limit exists.</article> <details class="example example-like"><summary><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3</span><span class="period">.</span><span class="space"> </span><span class="title">The geometric power series.</span>
-</h6></summary><article class="example example-like"> The power series associated to the constant sequence <span class="process-math">\(a_n :=1\)</span> is<div class="displaymath process-math">
+</div></article><details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">By the Cauchy product formula for multiplying absolutely convergent series (<a href="" class="xref" data-knowl="./knowl/thm-mult-series.html" title="Theorem 5.9: Multiplying series">Theorem 5.9</a>) we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mult-series.html">
 \begin{equation*}
-\sum_{n=0}^\infty x^n.
+\exp(x)\exp(y) = \sum_{n=0}^\infty \sum_{r+s= n} \frac{x^ry^s}{r!s!}
 \end{equation*}
-</div>This converges absolutely (and is equal to <span class="process-math">\((1-x)^{-1}\)</span>) when <span class="process-math">\(|x|\lt 1\text{.}\)</span> It does not converge when <span class="process-math">\(|x| \geq 1\text{.}\)</span></article></details>
+</div>By the binomial theorem<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mult-series.html">
+\begin{equation*}
+\sum_{r+s = n} \frac{x^ry^s}{r!s!} = \sum_{r=0}^n \frac{x^r y^{n-r}}{r!(n-r)!}= 
+\recip{n!}\sum_{r=0}^n \binom{n}{r}x^r y^{n-r} = \recip{n!} (x+y)^n.
+\end{equation*}
+</div></article></details>
 </div></details></div></article><span class="incontext"><a class="internal" href="week-5.html#task-81">in-context</a></span>
 </body>
 </html>
