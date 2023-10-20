@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">-</span><span class="space"> </span><span class="codenumber">5.30</span><span class="period">.</span><span class="space"> </span><span class="title">Exam-style self-test question for workshop.</span>
+</h4>
+<div class="introduction"><div class="para">The purpose of this question is to use the sequential definition of the limit to give an alternative proof of the fact that a function with a positive limit at a point must be positive on a neighbourhood of that point. Let <span class="process-math">\(f: D \to \R\)</span> be a real-valued function on a real domain <span class="process-math">\(D \subset \R\)</span> and let <span class="process-math">\(x_0\in D\text{.}\)</span>
+</div></div>
+<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para">Let <span class="process-math">\(y \in \R\text{.}\)</span> Give the (sequential) definition of what it means to have <span class="process-math">\(f(x) \to y\)</span> as <span class="process-math">\(x\to x_0\)</span> through <span class="process-math">\(D\text{.}\)</span>
+</div>
+<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para">This is <a href="" class="xref" data-knowl="./knowl/task-lim-def.html" title="Task 5.11.a">Task 5.11.a</a>.</div></div></details></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para logical">
+<div class="para">Suppose that <span class="process-math">\(f:D\to \R\)</span> has domain <span class="process-math">\(D = \R\text{.}\)</span> What is the logical negation of the statement:</div>
+<div class="displaymath process-math">
+\begin{equation}
+(\exists \delta \gt 0)(\forall x \in [-\delta,\delta])[f(x) \gt 0]\tag{5.5}
+\end{equation}
+</div>
+</div>
+<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical"><div class="displaymath process-math">
+\begin{equation}
+(\forall \delta \gt 0)(\exists x \in [-\delta,\delta])[f(x) \leq 0]\tag{5.6}
+\end{equation}
+</div></div></div></details></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para">Using the notation and assumptions from the previous part, suppose that <a href="" class="xref" data-knowl="./knowl/eq-positive-on-nbhd.html" title="Equation 5.5">(5.5)</a> does <em class="emphasis">not</em> hold. Justify why for any <span class="process-math">\(n \in \N\)</span> there exists <span class="process-math">\(|x_n|\leq 1/n\)</span> such that <span class="process-math">\(f(x_n)\leq 0\text{.}\)</span>
+</div>
+<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para">Set <span class="process-math">\(\delta:=1/n\)</span> in <a href="" class="xref" data-knowl="./knowl/eq-positive-on-nbhd-negation.html" title="Equation 5.6">(5.6)</a>.</div></div></details></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para">Using the notation and assumptions from the previous part, suppose that <a href="" class="xref" data-knowl="./knowl/eq-positive-on-nbhd.html" title="Equation 5.5">(5.5)</a> does <em class="emphasis">not</em> hold and that (in addition) <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(0\text{.}\)</span> Deduce that it is <em class="emphasis">not</em> the case that <span class="process-math">\(f(0) \gt 0\text{.}\)</span>
+</div>
+<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical">
+<div class="para">Using the previous part, we obtain a sequence <span class="process-math">\((x_n)_{n=1}^\infty\)</span> such that <span class="process-math">\(x_n \to 0\)</span> (by the sandwich rule) and <span class="process-math">\(f(x_n)\leq 0\)</span> for all <span class="process-math">\(n\in \N\text{.}\)</span> By continuity and the inequality rule for sequential limits, we thereby deduce that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(0) = \lim_{n\to \infty} f(x_n) \leq 0.
+\end{equation*}
+</div>
+</div></div></details></div></article></article><span class="incontext"><a class="internal" href="week-5.html#exercise-48">in-context</a></span>
+</body>
+</html>

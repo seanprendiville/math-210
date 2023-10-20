@@ -46,8 +46,30 @@ y = \lim_{x\to x_0} f(x)
 </div></article> <article class="remark remark-like"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">5.14</span><span class="period">.</span>
 </h6>
-<div class="para">Notice that our definition of the limit is <em class="emphasis">not</em> the epsilon-delta definition which you may be more familiar with. If you are asked to define the limit, you should use the sequential definition above. Our reason for preferring the sequential definition is that it builds on the theory of sequences which begins this course, and also allows for the limit point <span class="process-math">\(x_0\)</span> to be <span class="process-math">\(\pm\infty\text{.}\)</span> The epsilon-delta definition does not include the latter possibility.</div> <div class="para">We will eventually deduce that the epsilon-delta definition is equivalent to the sequential definition when <span class="process-math">\(x_0\in \R\text{.}\)</span>
-</div></article>
+<div class="para">Notice that our definition of the limit is <em class="emphasis">not</em> the epsilon-delta definition which you may be more familiar with. If you are asked to define the limit, you should use the sequential definition above. Our reason for preferring the sequential definition is that it builds on the theory of sequences which begins this course, and also allows for the limit point <span class="process-math">\(x_0\)</span> to be <span class="process-math">\(\pm\infty\text{.}\)</span> The epsilon-delta definition does not include the latter possibility.</div> <div class="para">We will soon deduce that the epsilon-delta characterisation is equivalent to the sequential definition when <span class="process-math">\(x_0,y\in \R\)</span> are both finite, but the epsilon-delta characterisation is not as general.</div></article> <details class="example example-like"><summary><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.15</span><span class="period">.</span>
+</h6></summary><article class="example example-like"><div class="para logical">
+<div class="para">Consider <span class="process-math">\(f:(0, \infty) \to \R\)</span> given by <span class="process-math">\(f(x):=1/x\text{.}\)</span> We claim that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-inf-recip-rule.html">
+\begin{equation*}
+f(x) \to \infty \quad \text{as}\quad x\to 0  \quad \text{through}\quad (0, \infty).
+\end{equation*}
+</div>
+<div class="para">To establish this claim, let <span class="process-math">\((a_n)_n\)</span> be a sequence in <span class="process-math">\((0, \infty)\)</span> with <span class="process-math">\(a_n \to 0\)</span> as <span class="process-math">\(n\to \infty\text{.}\)</span> We must verify that <span class="process-math">\(1/a_n\to \infty\)</span> as <span class="process-math">\(n \to \infty\text{.}\)</span> The latter follows from the reciprocal rule for sequences of positive numbers tending to infinity (<a href="" class="xref" data-knowl="./knowl/prop-inf-recip-rule.html" title="Proposition 3.11: Infinite reciprocal rule">Proposition 3.11</a>).</div>
+</div> <div class="para logical">
+<div class="para">Notice, however, that it is <em class="emphasis">not</em> the case that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{x} \to \infty \quad \text{as}\quad x\to 0 \quad \text{through}\quad \R\setminus\set{0}.
+\end{equation*}
+</div>
+<div class="para">This is because, for instance, the sequences <span class="process-math">\((1/n)_n\)</span> and <span class="process-math">\((-1/n)_n\)</span> are both contained in <span class="process-math">\(\R\setminus\set{0}\)</span> and both tend to <span class="process-math">\(0\text{,}\)</span> yet</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{1/n} \to +\infty \qquad \text{and}\qquad \frac{1}{-1/n} \to -\infty\text{.}
+\end{equation*}
+</div>
+</div></article></details>
 </div></details></div></article><span class="incontext"><a class="internal" href="week-5.html#task-lim-def">in-context</a></span>
 </body>
 </html>

@@ -13,16 +13,23 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.23.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.25.1</span><span class="period">.</span>
 </h4>
 <article class="proposition theorem-like"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.24</span><span class="period">.</span><span class="space"> </span><span class="title">Non-zero point of continuity implies non-zero on a neighbourhood.</span>
-</h5>Let <span class="process-math">\(f : D \to \R\)</span> be a real-valued function on a real domain <span class="process-math">\(D \subset \R\text{.}\)</span> Suppose that <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0 \in D\)</span> and <span class="process-math">\(f(x_0)\gt 0\text{.}\)</span>  Then there exists <span class="process-math">\(\delta \gt 0\)</span> such that for all <span class="process-math">\(x \in D\cap(x_0-\delta, x_0+\delta)\)</span> we have <span class="process-math">\(f(x) \gt 0
-\text{.}\)</span></article><details class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof">Take <span class="process-math">\(\eps := \trecip{2} f(x_0)\)</span> in <a href="" class="xref" data-knowl="./knowl/eq-eps-delta-cts.html" title="Equation 5.4">(5.4)</a>. Then by the triangle inequality, for <span class="process-math">\(x \in D\)</span> satisfying <span class="process-math">\(|x-x_0| \leq \delta = \delta(\eps)\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-eps-delta-cts.html">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.26</span><span class="period">.</span><span class="space"> </span><span class="title">Non-zero limit implies non-zero on a neighbourhood.</span>
+</h5>Let <span class="process-math">\(f : D \to \R\)</span> be a real-valued function on a real domain <span class="process-math">\(D \subset \R\)</span> and let <span class="process-math">\(x_0 \in \R\text{.}\)</span> Suppose that there exists <span class="process-math">\(y\gt 0\)</span> such that<div class="displaymath process-math">
+\begin{equation*}
+f(x)\to y\quad\text{as}\quad x\to x_0 \quad\text{through}\quad D.
+\end{equation*}
+</div>Then there exists <span class="process-math">\(\delta \gt 0\)</span> such that for all <span class="process-math">\(x \in D\cap[x_0-\delta, x_0+\delta]\)</span> we have <span class="process-math">\(f(x) \gt 0
+\text{.}\)</span></article><details class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof"><div class="para">We prove the case in which <span class="process-math">\(y\lt \infty\)</span> and leave the infinite case to the reader.</div> <div class="para logical">
+<div class="para">Take <span class="process-math">\(\eps := \trecip{2} y\)</span> in <a href="" class="xref" data-knowl="./knowl/eq-eps-delta-cts.html" title="Equation 5.4">(5.4)</a>. Then by the triangle inequality, for <span class="process-math">\(x \in D\)</span> satisfying <span class="process-math">\(|x-x_0| \leq \delta = \delta(\eps)\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-eps-delta-cts.html">
 \begin{align*}
-f(x) = f(x_0) + f(x) - f(x_0) \geq f(x_0)- |f(x)-f(x_0)| \amp \geq f(x_0) - \eps\\
-\amp = \trecip{2} f(x_0) \gt 0. 
+f(x) = y + f(x) - y \geq y- |f(x)-y| \amp \geq y - \eps\\
+\amp = \trecip{2} y \gt 0. 
 \end{align*}
+</div>
 </div></article></details>
 </div>
 <span class="incontext"><a class="internal" href="week-5.html#solution-74">in-context</a></span>
