@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,10 +11,103 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="proposition theorem-like"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.2</span><span class="period">.</span><span class="space"> </span><span class="title">Algebra of continuity.</span>
-</h5>
-<p>Let <span class="process-math">\(f, g : D \to \R\)</span> with <span class="process-math">\(D \subset \R\text{.}\)</span> Let <span class="process-math">\(x_0 \in D\text{.}\)</span> Suppose that <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are continuous at <span class="process-math">\(x_0\text{.}\)</span> Then the sum <span class="process-math">\(f+g\)</span> and product <span class="process-math">\(f\cdot g\)</span> are both continuous at <span class="process-math">\(x_0\text{.}\)</span></p>
-<p>If in addition <span class="process-math">\(g(x_0) \neq 0\text{,}\)</span> then the quotient <span class="process-math">\(f/g\)</span> is continuous at <span class="process-math">\(x_0\)</span> (the quotient may not be defined on all of <span class="process-math">\(D\text{,}\)</span> but it is defined on <span class="process-math">\(D \cap (x_0-\delta, x_0+\delta)\)</span> for some <span class="process-math">\(\delta \gt 0\text{,}\)</span> see <a href="" class="xref" data-knowl="./knowl/cor-non-zero-cts.html" title="Proposition 5.20: Non-zero point of continuity implies non-zero on a neighbourhood">Proposition 5.20</a>).</p></article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-34-hidden.html" title="Proof 6.2.1"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><span class="incontext"><a href="week-6.html#prop-alg-cts" class="internal">in-context</a></span>
+<article class="proposition theorem-like"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.2</span><span class="period">.</span><span class="space"> </span><span class="title">Algebra of (finite) function limits.</span>
+</h6>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(f_1, f_2 : D \to \R\)</span> with <span class="process-math">\(D \subset \R\text{.}\)</span> Let <span class="process-math">\(x_0 \in [-\infty, \infty]\)</span> and <span class="process-math">\(y_1,y_2\in \R\text{.}\)</span> Suppose that for <span class="process-math">\(i=1,2\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation}
+f_i(x) \to y_i \quad \text{as}\quad x \to x_0\quad\text{through}\quad D\text{.}\tag{6.1}
+\end{equation}
+</div>
+<div class="para">Then</div>
+</div>
+<ol class="decimal">
+<li>
+<span class="heading"><span class="title">Addition rule.</span></span><div class="para"><div class="displaymath process-math">
+\begin{equation*}
+f_1(x)+f_2(x) \to y_1+y_2 \quad \text{as}\quad x \to x_0\quad\text{through}\quad D
+\end{equation*}
+</div></div>
+</li>
+<li>
+<span class="heading"><span class="title">Multiplication rule.</span></span><div class="para"><div class="displaymath process-math">
+\begin{equation*}
+f_1(x)f_2(x) \to y_1y_2 \quad \text{as}\quad x \to x_0\quad\text{through}\quad D
+\end{equation*}
+</div></div>
+</li>
+<li>
+<span class="heading"><span class="title">Division rule.</span></span><div class="para"> If <span class="process-math">\(y_2\neq 0\)</span> then there exists a neighbourhood<a class="xref" id="fn-10" href="" data-knowl="./knowl/fn-10.html" title="Footnote 6.1"><sup> 1 </sup></a> <span class="process-math">\(N\)</span> of <span class="process-math">\(x_0\)</span> such that<div class="displaymath process-math">
+\begin{equation*}
+\frac{f_1(x)}{f_2(x)} \to \frac{y_1}{y_2} \quad \text{as}\quad x \to x_0\quad\text{through}\quad D\cap N\text{.}
+\end{equation*}
+</div>
+</div>
+</li>
+<li>
+<span class="heading"><span class="title">Composition rule.</span></span><div class="para"> If <span class="process-math">\(g :f_1(D)\to \R\)</span> satisfies<div class="displaymath process-math">
+\begin{equation*}
+g(y) \to z \quad \text{as}\quad y \to y_1 \quad\text{through}\quad f_1(D)\text{,}
+\end{equation*}
+</div>then<div class="displaymath process-math">
+\begin{equation*}
+g(f_1(x)) \to z \quad \text{as}\quad x \to x_0\quad\text{through}\quad D\text{.}
+\end{equation*}
+</div>
+</div>
+</li>
+<li>
+<span class="heading"><span class="title">Absolute value rule.</span></span><div class="para"> If <span class="process-math">\(y_1\in \R\)</span> then<div class="displaymath process-math">
+\begin{equation*}
+|f_1(x)| \to |y_1| \quad \text{as}\quad x \to x_0\quad\text{through}\quad D
+\end{equation*}
+</div>
+</div>
+</li>
+<li>
+<span class="heading"><span class="title">Min/max rule.</span></span><div class="para"> If <span class="process-math">\(y_1,y_2\in \R\)</span> then<div class="displaymath process-math">
+\begin{equation*}
+\min\set{f_1(x),f_2(x)} \to \min\set{y_1,y_2} \quad \text{as}\quad x \to x_0\quad\text{through}\quad D\text{,}
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\max\set{f_1(x),f_2(x)} \to \max\set{y_1,y_2} \quad \text{as}\quad x \to x_0\quad\text{through}\quad D\text{.}
+\end{equation*}
+</div>
+</div>
+</li>
+</ol></article><details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof"><div class="para">We first prove the result for the division rule, the arguments for the addition rule and the multiplication rule being similar (and easier, hence left to the reader).</div> <div class="para logical">
+<div class="para">Since inequalities spread around a limit (<a href="" class="xref" data-knowl="./knowl/cor-non-zero-cts.html" title="Proposition 5.19: Inequalities spread around a limit">Proposition 5.19</a>), there exists a neighbourhood <span class="process-math">\(N\)</span> of <span class="process-math">\(x_0\)</span> such that for all <span class="process-math">\(x\in D\cap N\)</span> we have <span class="process-math">\(f_2(x)\neq 0\text{.}\)</span> Let <span class="process-math">\((a_n)_n\)</span> be a sequence in <span class="process-math">\(D \cap N\)</span> with <span class="process-math">\(a_n\to x_0\text{.}\)</span> By definition of function limits (<a href="" class="xref" data-knowl="./knowl/def-fn-lim.html" title="Definition 5.12: Sequential definition of function limit">Definition 5.12</a>), we are required to show that <span class="process-math">\(f_1(a_n)/f_2(a_n)\to y_1/y_2\)</span> as <span class="process-math">\(n\to\infty\text{.}\)</span> By our assumption <a href="" class="xref" data-knowl="./knowl/eq-finite-fn-lim.html" title="Equation 6.1">(6.1)</a> and the definition of function limit (<a href="" class="xref" data-knowl="./knowl/def-fn-lim.html" title="Definition 5.12: Sequential definition of function limit">Definition 5.12</a>), we have <span class="process-math">\(f_i(a_n)\to y_i\)</span> for both <span class="process-math">\(i=1,2\text{.}\)</span> Hence combining the multiplication rule (<a href="" class="xref" data-knowl="./knowl/prop-mult-rule.html" title="Proposition 2.17: Multiplication rule">Proposition 2.17</a>) and reciprocal rule (<a href="" class="xref" data-knowl="./knowl/prop-recip-rule.html" title="Proposition 2.21: Reciprocal rule">Proposition 2.21</a>) for sequential limits, we obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-non-zero-cts.html ./knowl/def-fn-lim.html ./knowl/eq-finite-fn-lim.html ./knowl/def-fn-lim.html ./knowl/prop-mult-rule.html ./knowl/prop-recip-rule.html">
+\begin{equation*}
+\lim_{n\to \infty}\frac{f_1(a_n)}{f_2(a_n)} =  \lim_{n\to \infty}f_1(a_n)\lim_{n\to \infty}\frac{1}{f_2(a_n)}= y_1\frac{1}{y_2}					\text{,}
+\end{equation*}
+</div>
+<div class="para">as required.</div>
+</div> <div class="para">Next we prove the composition rule. Let <span class="process-math">\((a_n)_n\)</span> be a sequence in <span class="process-math">\(D\)</span> which tends to <span class="process-math">\(x_0\)</span> through <span class="process-math">\(D\text{.}\)</span> By definition of the function limit (<a href="" class="xref" data-knowl="./knowl/def-fn-lim.html" title="Definition 5.12: Sequential definition of function limit">Definition 5.12</a>), we are required to prove that <span class="process-math">\(g( f_1(a_n))\to z\)</span> as <span class="process-math">\(n\to\infty\text{.}\)</span> By our assumption <a href="" class="xref" data-knowl="./knowl/eq-finite-fn-lim.html" title="Equation 6.1">(6.1)</a> and the definition of function limit (<a href="" class="xref" data-knowl="./knowl/def-fn-lim.html" title="Definition 5.12: Sequential definition of function limit">Definition 5.12</a>), we have <span class="process-math">\(f_1(a_n)\to y_1\text{.}\)</span> Since <span class="process-math">\(g\)</span> tends to <span class="process-math">\(z\)</span> as <span class="process-math">\(y\)</span> tends to <span class="process-math">\(y_1\)</span> through <span class="process-math">\(f_1(D)\text{,}\)</span> it follows that <span class="process-math">\(g \brac{f_1(a_n)}\to z\)</span> as <span class="process-math">\(n\to\infty\text{,}\)</span> as required.</div> <div class="para">The absolute value rule follows from the composition rule, taking <span class="process-math">\(g\)</span> to be the absolute value function <span class="process-math">\(g(y) := |y|\text{,}\)</span> which is continuous (<a href="" class="xref" data-knowl="./knowl/eg-abs-cts.html" title="Example 5.25: The absolute value function is continuous">Example 5.25</a>), hence <span class="process-math">\(g(y)\to |y_1|\)</span> as <span class="process-math">\(y\to y_1\)</span> through <span class="process-math">\(f_1(D)\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">For the minimum rule, we first observe that the function <span class="process-math">\(g(x) := \min\set{x,0}\)</span> is continuous on <span class="process-math">\(\R\text{.}\)</span> To prove this one can establish the inequality <span class="process-math">\(|g(x_1)-g(x_2)|\leq |x_1-x_2|\)</span> then (e.g.) take <span class="process-math">\(\delta(\eps) = \eps\)</span> in the definition of uniform continuity. By the addition and multiplication rules, we have that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f_1(x) - f_2(x) \to y_1-y_2 \quad \text{as} \quad x\to x_0\quad\text{through}\quad D.
+\end{equation*}
+</div>
+<div class="para">Hence, using the composition rule with <span class="process-math">\(g\text{,}\)</span> we see that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\min\set{f_1(x) - f_2(x),0} \to \min\set{y_1-y_2,0} \quad \text{as} \quad x\to x_0\quad\text{through}\quad D.
+\end{equation*}
+</div>
+<div class="para">Using the identity</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\min\set{a,b} = \min{a-b,0}+b\text{,}
+\end{equation*}
+</div>
+<div class="para">together with the addition/multiplication rules, we deduce the minimum rule. The maximum rule follows from a similar argument.</div>
+</div></article></details><span class="incontext"><a class="internal" href="week-6.html#prop-alg-cts">in-context</a></span>
 </body>
 </html>

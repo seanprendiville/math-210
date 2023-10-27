@@ -12,21 +12,21 @@
 </head>
 <body class="ignore-math">
 <article class="exercise exercise-like"><h4 class="heading">
-<span class="type">-</span><span class="space"> </span><span class="codenumber">5.25</span><span class="period">.</span><span class="space"> </span><span class="title">Positivity spreads around a positive limit.</span>
-</h4>State and prove how a function which has a positive limit inherits positivity on a neighbourhood of that point.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<span class="type">-</span><span class="space"> </span><span class="codenumber">5.18</span><span class="period">.</span><span class="space"> </span><span class="title">Inequalities spread around a limit.</span>
+</h4>State and prove how a function whose limit at a point satisfies an inequality  also satisfies the inequality on a neighbourhood of that point.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
 <article class="proposition theorem-like"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.26</span><span class="period">.</span><span class="space"> </span><span class="title">Non-zero limit implies non-zero on a neighbourhood.</span>
-</h5>Let <span class="process-math">\(f : D \to \R\)</span> be a real-valued function on a real domain <span class="process-math">\(D \subset \R\)</span> and let <span class="process-math">\(x_0 \in \R\text{.}\)</span> Suppose that there exists <span class="process-math">\(y\gt 0\)</span> such that<div class="displaymath process-math">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.19</span><span class="period">.</span><span class="space"> </span><span class="title">Inequalities spread around a limit.</span>
+</h5>Let <span class="process-math">\(f : D \to \R\)</span> be a real-valued function on a real domain <span class="process-math">\(D \subset \R\)</span> and let <span class="process-math">\(x_0 \in [-\infty, \infty]\text{.}\)</span> Suppose that there exists <span class="process-math">\(y\)</span> such that<div class="displaymath process-math">
 \begin{equation*}
 f(x)\to y\quad\text{as}\quad x\to x_0 \quad\text{through}\quad D.
 \end{equation*}
-</div>Then there exists <span class="process-math">\(\delta \gt 0\)</span> such that for all <span class="process-math">\(x \in D\cap[x_0-\delta, x_0+\delta]\)</span> we have <span class="process-math">\(f(x) \gt 0
-\text{.}\)</span></article><details class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof"><div class="para">We prove the case in which <span class="process-math">\(y\lt \infty\)</span> and leave the infinite case to the reader.</div> <div class="para logical">
-<div class="para">Take <span class="process-math">\(\eps := \trecip{2} y\)</span> in <a href="" class="xref" data-knowl="./knowl/eq-eps-delta-cts.html" title="Equation 5.4">(5.4)</a>. Then by the triangle inequality, for <span class="process-math">\(x \in D\)</span> satisfying <span class="process-math">\(|x-x_0| \leq \delta = \delta(\eps)\)</span> we have</div>
+</div>If <span class="process-math">\(y\gt z\)</span> then there exists a <em class="emphasis">neighbourhood</em><a class="xref" id="fn-8" href="" data-knowl="./knowl/fn-8.html" title="Footnote 5.2"><sup> 2 </sup></a> <span class="process-math">\(N\)</span> of <span class="process-math">\(x_0\)</span> such that for all <span class="process-math">\(x \in D\cap N\)</span> we have <span class="process-math">\(f(x) \gt z
+\text{.}\)</span> (An analogous result hold if <span class="process-math">\(y \lt z\text{,}\)</span> with inequalities reversed.)</article><details class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof"><div class="para">We prove the case in which <span class="process-math">\(x_0, y, z \in \R\)</span> and leave the infinite cases to the reader.</div> <div class="para logical">
+<div class="para">Take <span class="process-math">\(\eps := \frac{y-z}{2}\)</span> in <a href="" class="xref" data-knowl="./knowl/eq-eps-delta-cts.html" title="Equation 5.4">(5.4)</a>. Then by the triangle inequality, for <span class="process-math">\(x \in D\)</span> satisfying <span class="process-math">\(|x-x_0| \leq \delta = \delta(\eps)\)</span> we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-eps-delta-cts.html">
 \begin{align*}
 f(x) = y + f(x) - y \geq y- |f(x)-y| \amp \geq y - \eps\\
-\amp = \trecip{2} y \gt 0. 
+\amp = z + \eps \gt z. 
 \end{align*}
 </div>
 </div></article></details>

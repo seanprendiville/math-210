@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,18 +11,10 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>Since differentiability implies continuity (<a href="" class="xref" data-knowl="./knowl/prop-diff-cts.html" title="Proposition 6.24: Differentiable implies continuous">Proposition 6.24</a>), the function <span class="process-math">\(g\)</span> is continuous at <span class="process-math">\(x_0\text{.}\)</span> Since <span class="process-math">\(g(x_0) \neq 0\text{,}\)</span> and non-zero points of continuity yield a non-zero neighbourhood (<a href="" class="xref" data-knowl="./knowl/cor-non-zero-cts.html" title="Proposition 5.20: Non-zero point of continuity implies non-zero on a neighbourhood">Proposition 5.20</a>), there exists <span class="process-math">\(\delta \gt0\)</span>  such that <span class="process-math">\(g(x) \neq 0\)</span> for all <span class="process-math">\(x \in  (a,b)\cap (x_0-\delta, x_0+\delta)\text{.}\)</span> Decreasing <span class="process-math">\(\delta\)</span> if necessary, we may assume that <span class="process-math">\((x_0-\delta, x_0+\delta)\subset (a,b)\text{.}\)</span> Hence the quotient <span class="process-math">\(x \mapsto f(x)/g(x)\)</span> is defined on <span class="process-math">\((x_0-\delta, x_0+\delta)\text{.}\)</span> Composing the reciprocal function <span class="process-math">\(y \mapsto 1/y\)</span> with <span class="process-math">\(g\text{,}\)</span> the chain rule (<a href="" class="xref" data-knowl="./knowl/thm-chain-rule.html" title="Theorem 7.3: Chain rule">Theorem 7.3</a>) and <a href="" class="xref" data-knowl="./knowl/eg-recip-diff.html" title="Example 6.27: The reciprocal function is differentiable">Example 6.27</a> together give that the function<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/cor-non-zero-cts.html ./knowl/thm-chain-rule.html ./knowl/eg-recip-diff.html ./knowl/prop-alg-diff.html">
+<article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>The identity function <span class="process-math">\(x \mapsto x\)</span> is continuous, since denoting this function by <span class="process-math">\(f\text{,}\)</span> we have <span class="process-math">\(a_n \to x_0\)</span> implies <span class="process-math">\(f(a_n) \to f(x_0)\text{.}\)</span> By the multiplication rule (<a href="" class="xref" data-knowl="./knowl/prop-mult-rule.html" title="Proposition 2.17: Multiplication rule">Proposition 2.17</a>) it follows that <span class="process-math">\(x^2\)</span> is continuous. Iterating this argument, we see that <span class="process-math">\(x^3 = x\cdot x^2\)</span> is continuous. It follows from induction that <span class="process-math">\(x^n\)</span> is continuous for any <span class="process-math">\(n \in \N\text{.}\)</span> Since constant functions are continuous (<a href="" class="xref" data-knowl="./knowl/eg-const-cts.html" title="Example 5.22: Constant functions are continuous">Example 5.22</a>), it again follows from the multiplication rule that <span class="process-math">\(c_n x^n\)</span> is continuous for any <span class="process-math">\(c_n \in \R\text{.}\)</span> By the addition rule (<a href="" class="xref" data-knowl="./knowl/prop-add-rule.html" title="Proposition 2.14: Addition rule">Proposition 2.14</a>), the sum<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/eg-const-cts.html ./knowl/prop-add-rule.html">
 \begin{equation*}
-x\mapsto \recip{g(x)}
+c_0 + c_1x+ \dots + c_n x^n
 \end{equation*}
-</div>is differentiable at <span class="process-math">\(x_0\text{.}\)</span> Moreover, the derivative satisfies<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/cor-non-zero-cts.html ./knowl/thm-chain-rule.html ./knowl/eg-recip-diff.html ./knowl/prop-alg-diff.html">
-\begin{equation*}
-\brac{\recip{g(x_0)}}' = -\frac{g'(x_0)}{g(x_0)^2}.
-\end{equation*}
-</div>Hence by the product rule (<a href="" class="xref" data-knowl="./knowl/prop-alg-diff.html" title="Proposition 7.2: Algebra of differentiation">Proposition 7.2</a>) the quotient <span class="process-math">\(f/g = f \cdot\brac{1/g}\)</span> is differentiable at <span class="process-math">\(x_0\)</span> with derivative<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/cor-non-zero-cts.html ./knowl/thm-chain-rule.html ./knowl/eg-recip-diff.html ./knowl/prop-alg-diff.html">
-\begin{equation*}
-\frac{f'(x_0)}{g(x_0)} - \frac{f(x_0)g'(x_0)}{g(x_0)^2}.
-\end{equation*}
-</div>This completes the proof of the quotient rule.</article><span class="incontext"><a href="week-7.html#proof-48" class="internal">in-context</a></span>
+</div>is continuous. Hence polynomials are continuous.</article><span class="incontext"><a class="internal" href="week-6.html#proof-48">in-context</a></span>
 </body>
 </html>

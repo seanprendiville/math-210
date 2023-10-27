@@ -5,57 +5,106 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Week 6</title>
+<title>\ Week 6</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="article">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
   },
-  chtml: {
-    scale: 0.88,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-},
+  }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.32/pretext_search.js"></script><link href="https://pretextbook.org/css/0.82/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.32</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.32/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.32/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.32/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.82/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="pretext-article ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb{N}}
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="self-test-210.html"><span class="title">MATH210 Real Analysis:</span> <span class="subtitle">Self-Test Questions</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="week-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="self-test-210.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="workshop-instructions.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
@@ -98,134 +147,223 @@ window.MathJax = {
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="self-test-210.html"><span class="title">MATH210 Real Analysis:</span> <span class="subtitle">Self-Test Questions</span></a></h1>
-<p class="byline">Sean Prendiville</p>
-</div>
-</div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="week-5.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="self-test-210.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="week-7.html" title="Next">Next</a></span></div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="week-5.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="self-test-210.html" title="Up">Up</a><a class="next-button button toolbar-item" href="week-7.html" title="Next">Next</a>
-</div>
-</div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter"><a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Introduction</span></a></li>
-<li class="link"><a href="week-1.html" data-scroll="week-1" class="internal"><span class="codenumber">1</span> <span class="title">Week 1</span></a></li>
-<li class="link"><a href="week-2.html" data-scroll="week-2" class="internal"><span class="codenumber">2</span> <span class="title">Week 2</span></a></li>
-<li class="link"><a href="week-3.html" data-scroll="week-3" class="internal"><span class="codenumber">3</span> <span class="title">Week 3</span></a></li>
-<li class="link"><a href="week-4.html" data-scroll="week-4" class="internal"><span class="codenumber">4</span> <span class="title">Week 4</span></a></li>
-<li class="link"><a href="week-5.html" data-scroll="week-5" class="internal"><span class="codenumber">5</span> <span class="title">Week 5</span></a></li>
-<li class="link active"><a href="week-6.html" data-scroll="week-6" class="internal"><span class="codenumber">6</span> <span class="title">Week 6</span></a></li>
-<li class="link"><a href="week-7.html" data-scroll="week-7" class="internal"><span class="codenumber">7</span> <span class="title">Week 7</span></a></li>
-<li class="link"><a href="week-8.html" data-scroll="week-8" class="internal"><span class="codenumber">8</span> <span class="title">Week 8</span></a></li>
-<li class="link"><a href="week-9.html" data-scroll="week-9" class="internal"><span class="codenumber">9</span> <span class="title">Week 9</span></a></li>
-<li class="link"><a href="week-10.html" data-scroll="week-10" class="internal"><span class="codenumber">10</span> <span class="title">Week 10</span></a></li>
-</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content">
-<section class="section" id="week-6"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">6</span> <span class="title">Week 6</span>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth1"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="week-1.html" class="internal"><span class="codenumber">1</span> <span class="title"><span class="process-math">\(\ \)</span>Week 1</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-1.html#subsection-1" class="internal"><span class="codenumber">1.1</span> <span class="title">Self-test questions for lecture 1</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-1.html#subsection-2" class="internal"><span class="codenumber">1.2</span> <span class="title">Self-test questions for lecture 2</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-1.html#subsection-3" class="internal"><span class="codenumber">1.3</span> <span class="title">Workshop questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="week-2.html" class="internal"><span class="codenumber">2</span> <span class="title"><span class="process-math">\(\ \)</span>Week 2</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-2.html#subsection-4" class="internal"><span class="codenumber">2.1</span> <span class="title">Self-test questions for lecture 3</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-2.html#subsection-5" class="internal"><span class="codenumber">2.2</span> <span class="title">Self-test questions for lecture 4</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="week-3.html" class="internal"><span class="codenumber">3</span> <span class="title"><span class="process-math">\(\ \)</span>Week 3</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-3.html#subsection-6" class="internal"><span class="codenumber">3.1</span> <span class="title">Self-test questions for lecture 5</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-3.html#subsection-7" class="internal"><span class="codenumber">3.2</span> <span class="title">Self-test questions for lecture 6</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-3.html#subsection-8" class="internal"><span class="codenumber">3.3</span> <span class="title">Workshop questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="week-4.html" class="internal"><span class="codenumber">4</span> <span class="title"><span class="process-math">\(\ \)</span>Week 4</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-4.html#subsection-9" class="internal"><span class="codenumber">4.1</span> <span class="title">Self-test questions for lecture 7</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-4.html#subsection-10" class="internal"><span class="codenumber">4.2</span> <span class="title">Self-test questions for lecture 8</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="week-5.html" class="internal"><span class="codenumber">5</span> <span class="title"><span class="process-math">\(\ \)</span>Week 5</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-5.html#subsection-11" class="internal"><span class="codenumber">5.1</span> <span class="title">Self-test questions for lecture 9</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-5.html#subsection-12" class="internal"><span class="codenumber">5.2</span> <span class="title">Self-test questions for lecture 10</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-5.html#subsection-13" class="internal"><span class="codenumber">5.3</span> <span class="title">Workshop questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="week-6.html" class="internal"><span class="codenumber">6</span> <span class="title"><span class="process-math">\(\ \)</span>Week 6</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-6.html#subsection-14" class="internal"><span class="codenumber">6.1</span> <span class="title">Self-test questions for lecture 11</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-6.html#subsection-15" class="internal"><span class="codenumber">6.2</span> <span class="title">Self-test questions for lecture 12</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="workshop-instructions.html" class="internal"><span class="codenumber">A</span> <span class="title"><span class="process-math">\(\ \)</span>Workshop instructions</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="assessment.html" class="internal"><span class="codenumber">B</span> <span class="title"><span class="process-math">\(\ \)</span>Assessment</span></a></div></li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="study-instructions.html" class="internal"><span class="codenumber">C</span> <span class="title"><span class="process-math">\(\ \)</span>How to study this module</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="study-instructions.html#thoughts-on-learning" class="internal"><span class="codenumber">C.1</span> <span class="title">Some thoughts on learning mathematics</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="module-purpose.html" class="internal"><span class="codenumber">D</span> <span class="title"><span class="process-math">\(\ \)</span>The purpose of this module</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="module-purpose.html#learning-outcomes" class="internal"><span class="codenumber">D.1</span> <span class="title">Learning outcomes</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="exam-backmatter.html" class="internal"><span class="codenumber">E</span> <span class="title"><span class="process-math">\(\ \)</span>Exam information sheet</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="pdf-link.html" class="internal"><span class="codenumber">F</span> <span class="title"><span class="process-math">\(\ \)</span>Questions in pdf format</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="anonymous-questions.html" class="internal"><span class="codenumber">G</span> <span class="title"><span class="process-math">\(\ \)</span>Anonymous questions form</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="week-6"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">6</span><span class="space"> </span><span class="title"><span class="process-math">\(\ \)</span>Week 6</span>
 </h2>
-<article class="exercise exercise-like" id="exercise-23"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-23"><h3 class="heading">
-<span class="type">Lecture</span><span class="space"> </span><span class="codenumber">6.1</span><span class="period">.</span><span class="space"> </span><span class="title">Classes of continuous functions.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-23"><article class="exercise exercise-like"><article class="task exercise-like" id="task-55"><h4 class="heading"><span class="codenumber">(a)</span></h4>State and prove how continuity is preserved under addition, multiplication and taking reciprocals.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-55" id="solution-55"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-55"><div class="solution solution-like">
-<article class="proposition theorem-like" id="prop-alg-cts"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.2</span><span class="period">.</span><span class="space"> </span><span class="title">Algebra of continuity.</span>
-</h5>
-<p id="p-76">Let <span class="process-math">\(f, g : D \to \R\)</span> with <span class="process-math">\(D \subset \R\text{.}\)</span> Let <span class="process-math">\(x_0 \in D\text{.}\)</span> Suppose that <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are continuous at <span class="process-math">\(x_0\text{.}\)</span> Then the sum <span class="process-math">\(f+g\)</span> and product <span class="process-math">\(f\cdot g\)</span> are both continuous at <span class="process-math">\(x_0\text{.}\)</span></p>
-<p id="p-77">If in addition <span class="process-math">\(g(x_0) \neq 0\text{,}\)</span> then the quotient <span class="process-math">\(f/g\)</span> is continuous at <span class="process-math">\(x_0\)</span> (the quotient may not be defined on all of <span class="process-math">\(D\text{,}\)</span> but it is defined on <span class="process-math">\(D \cap (x_0-\delta, x_0+\delta)\)</span> for some <span class="process-math">\(\delta \gt 0\text{,}\)</span> see <a href="" class="xref" data-knowl="./knowl/cor-non-zero-cts.html" title="Proposition 5.20: Non-zero point of continuity implies non-zero on a neighbourhood">Proposition 5.20</a>).</p></article><article class="hiddenproof" id="proof-34"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-34"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-34"><article class="hiddenproof">We prove the result for the sum, the remaining arguments being similar (and left to the reader). By definition of function limits (<a href="" class="xref" data-knowl="./knowl/def-fn-lim.html" title="Definition 5.11: Sequential definition of function limit">Definition 5.11</a>) and definition of continuity (<a href="" class="xref" data-knowl="./knowl/def-cts.html" title="Definition 5.13: Continuous">Definition 5.13</a>), we are required to show that if <span class="process-math">\((a_n)_n\)</span> is a sequence in <span class="process-math">\(D\)</span> with <span class="process-math">\(a_n\to x_0\)</span> then <span class="process-math">\(f(a_n)+g(a_n)\to f(x_0)+g(x_0)\)</span> as <span class="process-math">\(n\to\infty\text{.}\)</span> Since both <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are continuous at <span class="process-math">\(x_0\text{,}\)</span> we have <span class="process-math">\(f(a_n)\to f(x_0)\)</span> and <span class="process-math">\(g(a_n)\to g(x_0)\)</span> as <span class="process-math">\(n\to\infty\text{.}\)</span> Thus by the addition rule for sequential limits (<a href="" class="xref" data-knowl="./knowl/prop-add-rule.html" title="Proposition 2.8: Addition rule">Proposition 2.8</a>) we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-fn-lim.html ./knowl/def-cts.html ./knowl/prop-add-rule.html">
+<section class="subsection" id="subsection-14"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">6.1</span><span class="space"> </span><span class="title">Self-test questions for lecture 11</span>
+</h3>
+<details id="exercise-49" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">-</span><span class="space"> </span><span class="codenumber">6.1</span><span class="period">.</span><span class="space"> </span><span class="title">Algebra of (finite) function limits.</span>
+</h4></summary><article class="exercise exercise-like"><article class="task exercise-like" id="task-114"><h5 class="heading"><span class="codenumber">(a)</span></h5>State and prove how (finite) function limits respect addition, multiplication, division, composition, absolute value and min/max.<div class="solutions"><details id="solution-87" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="proposition theorem-like" id="prop-alg-cts"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.2</span><span class="period">.</span><span class="space"> </span><span class="title">Algebra of (finite) function limits.</span>
+</h6>
+<div class="para logical" id="p-129">
+<div class="para">Let <span class="process-math">\(f_1, f_2 : D \to \R\)</span> with <span class="process-math">\(D \subset \R\text{.}\)</span> Let <span class="process-math">\(x_0 \in [-\infty, \infty]\)</span> and <span class="process-math">\(y_1,y_2\in \R\text{.}\)</span> Suppose that for <span class="process-math">\(i=1,2\)</span> we have</div>
+<div class="displaymath process-math" id="eq-finite-fn-lim">
+\begin{equation}
+f_i(x) \to y_i \quad \text{as}\quad x \to x_0\quad\text{through}\quad D\text{.}\tag{6.1}
+\end{equation}
+</div>
+<div class="para">Then</div>
+</div>
+<ol class="decimal">
+<li id="li-28">
+<span class="heading"><span class="title">Addition rule.</span></span><div class="para" id="p-derived-li-28"><div class="displaymath process-math">
 \begin{equation*}
-\lim_{n\to \infty} \brac{f(a_n)+g(a_n)} = \lim_{n\to \infty} f(a_n)+\lim_{n\to \infty} g(a_n) = f(x_0) + g(x_0)\text{,}
+f_1(x)+f_2(x) \to y_1+y_2 \quad \text{as}\quad x \to x_0\quad\text{through}\quad D
 \end{equation*}
-</div>as required.</article></div>
 </div></div>
-</div></article><article class="task exercise-like" id="task-56"><h4 class="heading"><span class="codenumber">(b)</span></h4>Define what it means to be a polynomial function, and prove that they are continuous.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-56" id="solution-56"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-56"><div class="solution solution-like">
-<article class="definition definition-like" id="definition-14"><h5 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.3</span><span class="period">.</span><span class="space"> </span><span class="title">Polynomial.</span>
-</h5> Let <span class="process-math">\(D \subset \R\text{.}\)</span> We say that a function <span class="process-math">\(f : D \to \R\)</span> is a <em class="emphasis">polynomial with real coefficients</em> if there exist <span class="process-math">\(c_0, c_1, \dots, c_n \in \R\)</span> such that for all <span class="process-math">\(x \in D\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="">
+</li>
+<li id="li-29">
+<span class="heading"><span class="title">Multiplication rule.</span></span><div class="para" id="p-derived-li-29"><div class="displaymath process-math">
 \begin{equation*}
-f(x) = c_0 + c_1 x + \dots + c_n x^n.
+f_1(x)f_2(x) \to y_1y_2 \quad \text{as}\quad x \to x_0\quad\text{through}\quad D
 \end{equation*}
-</div>We call <span class="process-math">\(n\)</span> the <em class="emphasis">degree</em> of the polynomial.</article><article class="proposition theorem-like" id="prop-poly-cts"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.4</span><span class="period">.</span>
-</h5>Polynomials are continuous functions.</article><article class="hiddenproof" id="proof-35"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-35"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-35"><article class="hiddenproof">The identity function <span class="process-math">\(x \mapsto x\)</span> is continuous, since denoting this function by <span class="process-math">\(f\text{,}\)</span> we have <span class="process-math">\(a_n \to x_0\)</span> implies <span class="process-math">\(f(a_n) \to f(x_0)\text{.}\)</span> By the multiplication rule (<a href="" class="xref" data-knowl="./knowl/prop-mult-rule.html" title="Proposition 2.10: Multiplication rule">Proposition 2.10</a>) it follows that <span class="process-math">\(x^2\)</span> is continuous. Iterating this argument, we see that <span class="process-math">\(x^3 = x\cdot x^2\)</span> is continuous. It follows from induction that <span class="process-math">\(x^n\)</span> is continuous for any <span class="process-math">\(n \in \N\text{.}\)</span> Since constant functions are continuous (<a href="" class="xref" data-knowl="./knowl/eg-const-cts.html" title="Example 5.14: Constant functions are continuous">Example 5.14</a>), it again follows from the multiplication rule that <span class="process-math">\(c_n x^n\)</span> is continuous for any <span class="process-math">\(c_n \in \R\text{.}\)</span> By the addition rule (<a href="" class="xref" data-knowl="./knowl/prop-add-rule.html" title="Proposition 2.8: Addition rule">Proposition 2.8</a>), the sum<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/eg-const-cts.html ./knowl/prop-add-rule.html">
+</div></div>
+</li>
+<li id="li-30">
+<span class="heading"><span class="title">Division rule.</span></span><div class="para" id="p-derived-li-30"> If <span class="process-math">\(y_2\neq 0\)</span> then there exists a neighbourhood<a class="xref" id="fn-10" href="" data-knowl="./knowl/fn-10.html" title="Footnote 6.1"><sup> 1 </sup></a> <span class="process-math">\(N\)</span> of <span class="process-math">\(x_0\)</span> such that<div class="displaymath process-math">
+\begin{equation*}
+\frac{f_1(x)}{f_2(x)} \to \frac{y_1}{y_2} \quad \text{as}\quad x \to x_0\quad\text{through}\quad D\cap N\text{.}
+\end{equation*}
+</div>
+</div>
+</li>
+<li id="li-31">
+<span class="heading"><span class="title">Composition rule.</span></span><div class="para" id="p-derived-li-31"> If <span class="process-math">\(g :f_1(D)\to \R\)</span> satisfies<div class="displaymath process-math">
+\begin{equation*}
+g(y) \to z \quad \text{as}\quad y \to y_1 \quad\text{through}\quad f_1(D)\text{,}
+\end{equation*}
+</div>then<div class="displaymath process-math">
+\begin{equation*}
+g(f_1(x)) \to z \quad \text{as}\quad x \to x_0\quad\text{through}\quad D\text{.}
+\end{equation*}
+</div>
+</div>
+</li>
+<li id="li-32">
+<span class="heading"><span class="title">Absolute value rule.</span></span><div class="para" id="p-derived-li-32"> If <span class="process-math">\(y_1\in \R\)</span> then<div class="displaymath process-math">
+\begin{equation*}
+|f_1(x)| \to |y_1| \quad \text{as}\quad x \to x_0\quad\text{through}\quad D
+\end{equation*}
+</div>
+</div>
+</li>
+<li id="li-33">
+<span class="heading"><span class="title">Min/max rule.</span></span><div class="para" id="p-derived-li-33"> If <span class="process-math">\(y_1,y_2\in \R\)</span> then<div class="displaymath process-math">
+\begin{equation*}
+\min\set{f_1(x),f_2(x)} \to \min\set{y_1,y_2} \quad \text{as}\quad x \to x_0\quad\text{through}\quad D\text{,}
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\max\set{f_1(x),f_2(x)} \to \max\set{y_1,y_2} \quad \text{as}\quad x \to x_0\quad\text{through}\quad D\text{.}
+\end{equation*}
+</div>
+</div>
+</li>
+</ol></article><details id="proof-47" class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof"><div class="para" id="p-130">We first prove the result for the division rule, the arguments for the addition rule and the multiplication rule being similar (and easier, hence left to the reader).</div> <div class="para logical" id="p-131">
+<div class="para">Since inequalities spread around a limit (<a href="" class="xref" data-knowl="./knowl/cor-non-zero-cts.html" title="Proposition 5.19: Inequalities spread around a limit">Proposition 5.19</a>), there exists a neighbourhood <span class="process-math">\(N\)</span> of <span class="process-math">\(x_0\)</span> such that for all <span class="process-math">\(x\in D\cap N\)</span> we have <span class="process-math">\(f_2(x)\neq 0\text{.}\)</span> Let <span class="process-math">\((a_n)_n\)</span> be a sequence in <span class="process-math">\(D \cap N\)</span> with <span class="process-math">\(a_n\to x_0\text{.}\)</span> By definition of function limits (<a href="" class="xref" data-knowl="./knowl/def-fn-lim.html" title="Definition 5.12: Sequential definition of function limit">Definition 5.12</a>), we are required to show that <span class="process-math">\(f_1(a_n)/f_2(a_n)\to y_1/y_2\)</span> as <span class="process-math">\(n\to\infty\text{.}\)</span> By our assumption <a href="" class="xref" data-knowl="./knowl/eq-finite-fn-lim.html" title="Equation 6.1">(6.1)</a> and the definition of function limit (<a href="" class="xref" data-knowl="./knowl/def-fn-lim.html" title="Definition 5.12: Sequential definition of function limit">Definition 5.12</a>), we have <span class="process-math">\(f_i(a_n)\to y_i\)</span> for both <span class="process-math">\(i=1,2\text{.}\)</span> Hence combining the multiplication rule (<a href="" class="xref" data-knowl="./knowl/prop-mult-rule.html" title="Proposition 2.17: Multiplication rule">Proposition 2.17</a>) and reciprocal rule (<a href="" class="xref" data-knowl="./knowl/prop-recip-rule.html" title="Proposition 2.21: Reciprocal rule">Proposition 2.21</a>) for sequential limits, we obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-non-zero-cts.html ./knowl/def-fn-lim.html ./knowl/eq-finite-fn-lim.html ./knowl/def-fn-lim.html ./knowl/prop-mult-rule.html ./knowl/prop-recip-rule.html">
+\begin{equation*}
+\lim_{n\to \infty}\frac{f_1(a_n)}{f_2(a_n)} =  \lim_{n\to \infty}f_1(a_n)\lim_{n\to \infty}\frac{1}{f_2(a_n)}= y_1\frac{1}{y_2}					\text{,}
+\end{equation*}
+</div>
+<div class="para">as required.</div>
+</div> <div class="para" id="p-132">Next we prove the composition rule. Let <span class="process-math">\((a_n)_n\)</span> be a sequence in <span class="process-math">\(D\)</span> which tends to <span class="process-math">\(x_0\)</span> through <span class="process-math">\(D\text{.}\)</span> By definition of the function limit (<a href="" class="xref" data-knowl="./knowl/def-fn-lim.html" title="Definition 5.12: Sequential definition of function limit">Definition 5.12</a>), we are required to prove that <span class="process-math">\(g( f_1(a_n))\to z\)</span> as <span class="process-math">\(n\to\infty\text{.}\)</span> By our assumption <a href="" class="xref" data-knowl="./knowl/eq-finite-fn-lim.html" title="Equation 6.1">(6.1)</a> and the definition of function limit (<a href="" class="xref" data-knowl="./knowl/def-fn-lim.html" title="Definition 5.12: Sequential definition of function limit">Definition 5.12</a>), we have <span class="process-math">\(f_1(a_n)\to y_1\text{.}\)</span> Since <span class="process-math">\(g\)</span> tends to <span class="process-math">\(z\)</span> as <span class="process-math">\(y\)</span> tends to <span class="process-math">\(y_1\)</span> through <span class="process-math">\(f_1(D)\text{,}\)</span> it follows that <span class="process-math">\(g \brac{f_1(a_n)}\to z\)</span> as <span class="process-math">\(n\to\infty\text{,}\)</span> as required.</div> <div class="para" id="p-133">The absolute value rule follows from the composition rule, taking <span class="process-math">\(g\)</span> to be the absolute value function <span class="process-math">\(g(y) := |y|\text{,}\)</span> which is continuous (<a href="" class="xref" data-knowl="./knowl/eg-abs-cts.html" title="Example 5.25: The absolute value function is continuous">Example 5.25</a>), hence <span class="process-math">\(g(y)\to |y_1|\)</span> as <span class="process-math">\(y\to y_1\)</span> through <span class="process-math">\(f_1(D)\text{.}\)</span>
+</div> <div class="para logical" id="p-134">
+<div class="para">For the minimum rule, we first observe that the function <span class="process-math">\(g(x) := \min\set{x,0}\)</span> is continuous on <span class="process-math">\(\R\text{.}\)</span> To prove this one can establish the inequality <span class="process-math">\(|g(x_1)-g(x_2)|\leq |x_1-x_2|\)</span> then (e.g.) take <span class="process-math">\(\delta(\eps) = \eps\)</span> in the definition of uniform continuity. By the addition and multiplication rules, we have that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f_1(x) - f_2(x) \to y_1-y_2 \quad \text{as} \quad x\to x_0\quad\text{through}\quad D.
+\end{equation*}
+</div>
+<div class="para">Hence, using the composition rule with <span class="process-math">\(g\text{,}\)</span> we see that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\min\set{f_1(x) - f_2(x),0} \to \min\set{y_1-y_2,0} \quad \text{as} \quad x\to x_0\quad\text{through}\quad D.
+\end{equation*}
+</div>
+<div class="para">Using the identity</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\min\set{a,b} = \min{a-b,0}+b\text{,}
+\end{equation*}
+</div>
+<div class="para">together with the addition/multiplication rules, we deduce the minimum rule. The maximum rule follows from a similar argument.</div>
+</div></article></details> <article class="corollary theorem-like" id="corollary-3"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">6.3</span><span class="period">.</span>
+</h6>Let <span class="process-math">\(f,g : D\to \R\)</span> and <span class="process-math">\(h:f(D) \to \R\)</span> all be continuous. Then <span class="process-math">\(f+g, fg, h\circ f, |f|, \min\set{f,g}, \max\set{f,g}\)</span> are all continuous.</article> <details id="prop-poly-cts" class="example example-like"><summary><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.4</span><span class="period">.</span><span class="space"> </span><span class="title">Polynomials are continuous.</span>
+</h6></summary><article class="example example-like"> Given <span class="process-math">\(c_0, c_1, \dots, c_n \in \R\)</span> define<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/eg-const-cts.html ./knowl/prop-add-rule.html">
+\begin{equation*}
+f(x) = c_0 + c_1 x + \dots + c_n x^n\text{.}
+\end{equation*}
+</div>Then the polynomial <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\(\R\text{.}\)</span> <details id="proof-48" class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">The identity function <span class="process-math">\(x \mapsto x\)</span> is continuous, since denoting this function by <span class="process-math">\(f\text{,}\)</span> we have <span class="process-math">\(a_n \to x_0\)</span> implies <span class="process-math">\(f(a_n) \to f(x_0)\text{.}\)</span> By the multiplication rule (<a href="" class="xref" data-knowl="./knowl/prop-mult-rule.html" title="Proposition 2.17: Multiplication rule">Proposition 2.17</a>) it follows that <span class="process-math">\(x^2\)</span> is continuous. Iterating this argument, we see that <span class="process-math">\(x^3 = x\cdot x^2\)</span> is continuous. It follows from induction that <span class="process-math">\(x^n\)</span> is continuous for any <span class="process-math">\(n \in \N\text{.}\)</span> Since constant functions are continuous (<a href="" class="xref" data-knowl="./knowl/eg-const-cts.html" title="Example 5.22: Constant functions are continuous">Example 5.22</a>), it again follows from the multiplication rule that <span class="process-math">\(c_n x^n\)</span> is continuous for any <span class="process-math">\(c_n \in \R\text{.}\)</span> By the addition rule (<a href="" class="xref" data-knowl="./knowl/prop-add-rule.html" title="Proposition 2.14: Addition rule">Proposition 2.14</a>), the sum<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mult-rule.html ./knowl/eg-const-cts.html ./knowl/prop-add-rule.html">
 \begin{equation*}
 c_0 + c_1x+ \dots + c_n x^n
 \end{equation*}
-</div>is continuous. Hence polynomials are continuous.</article></div>
-</div></div>
-</div></article><article class="task exercise-like" id="task-57"><h4 class="heading"><span class="codenumber">(c)</span></h4>Define what it means to be a rational function, and prove that they are continuous.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-57" id="solution-57"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-57"><div class="solution solution-like">
-<article class="definition definition-like" id="def-rational"><h5 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.5</span><span class="period">.</span><span class="space"> </span><span class="title">Rational function.</span>
-</h5> Let <span class="process-math">\(D \subset \R\text{.}\)</span> We say that <span class="process-math">\(f : D \to \R\)</span> is a <em class="emphasis">rational</em> function if there exist polynomials <span class="process-math">\(P, Q : D\to \R\)</span> such that: <span class="process-math">\((\forall x \in D)[Q(x) \neq 0]\text{;}\)</span> <span class="process-math">\((\forall x \in D)\sqbrac{f(x) = \frac{P(x)}{Q(x)}}\text{.}\)</span></article><article class="proposition theorem-like" id="prop-rational"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.6</span><span class="period">.</span>
-</h5>Rational functions are continuous.</article><article class="hiddenproof" id="proof-36"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-36"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-36"><article class="hiddenproof">This follows from the fact that polynomials are continuous and the fact that continuity is preserved on taking quotients, provided that the denominator is non-zero (<a href="" class="xref" data-knowl="./knowl/prop-alg-cts.html" title="Proposition 6.2: Algebra of continuity">Proposition 6.2</a>). The fact that the denominator is not zero at any point in the domain of a rational function follows from <a href="" class="xref" data-knowl="./knowl/def-rational.html" title="Definition 6.5: Rational function">Definition 6.5</a> (the rational function would not be defined at a point at which the denominator is zero).</article></div>
-</div></div>
-</div></article><article class="task exercise-like" id="task-58"><h4 class="heading"><span class="codenumber">(d)</span></h4>State and prove how continuity is preserved under composition of functions.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-58" id="solution-58"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-58"><div class="solution solution-like">
-<article class="proposition theorem-like" id="prop-comp-cts"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.7</span><span class="period">.</span><span class="space"> </span><span class="title">Composition preserves continuity.</span>
-</h5>Let <span class="process-math">\(f_1 : D_1 \to D_2\)</span> with <span class="process-math">\(D_1, D_2 \subset \R\text{.}\)</span> Let <span class="process-math">\(f_2 : D_2 \to \R\text{.}\)</span> Suppose that <span class="process-math">\(f_1\)</span> is continuous at <span class="process-math">\(x_0 \in D_1\text{.}\)</span> Suppose that <span class="process-math">\(f_2\)</span> is continuous at <span class="process-math">\(f_1(x_0)\text{.}\)</span> Then the composition<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-19" id="fn-19"><sup> 1 </sup></a><span class="process-math">\(f_2 \circ f_1\)</span> is continuous at <span class="process-math">\(x_0\text{.}\)</span></article><article class="hiddenproof" id="proof-37"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-37"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-37"><article class="hiddenproof">Let <span class="process-math">\((a_n)_n\)</span> be a sequence in <span class="process-math">\(D_1\)</span> which tends to <span class="process-math">\(x_0\text{.}\)</span> By definition of the function limit (<a href="" class="xref" data-knowl="./knowl/def-fn-lim.html" title="Definition 5.11: Sequential definition of function limit">Definition 5.11</a>), we are required to prove that <span class="process-math">\(f_2 \circ f_1(a_n)\to f_2 \circ f_1(x_0)\)</span> as <span class="process-math">\(n\to\infty\text{.}\)</span> Since <span class="process-math">\(f_1\)</span> is continuous at <span class="process-math">\(x_0\)</span> we have <span class="process-math">\(f_1(a_n)\to  f_1(x_0)\)</span> as <span class="process-math">\(n\to\infty\text{.}\)</span> The continuity of <span class="process-math">\(f_2\)</span> at <span class="process-math">\(f_1(x_0)\)</span> then gives that <span class="process-math">\(f_2 \brac{f_1(a_n)}\to f_2 \brac{ f_1(x_0)}\)</span> as <span class="process-math">\(n\to\infty\text{,}\)</span> as required.</article></div>
-</div></div>
-</div></article><article class="task exercise-like" id="task-59"><h4 class="heading"><span class="codenumber">(e)</span></h4>State and prove how continuity is preserved under taking absolute values and min/max.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-59" id="solution-59"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-59"><div class="solution solution-like">
-<article class="proposition theorem-like" id="cor-abs-cts"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.8</span><span class="period">.</span>
-</h5>Let <span class="process-math">\(f : D \to \R\)</span> with <span class="process-math">\(D \subset \R\text{.}\)</span> Suppose that <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0 \in D\text{.}\)</span> Then <span class="process-math">\(|f|\)</span> is continuous at <span class="process-math">\(x_0 \in D\text{.}\)</span></article><article class="hiddenproof" id="proof-38"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-38"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-38"><article class="hiddenproof">This follows from the fact that continuity is preserved under composition of functions (<a href="" class="xref" data-knowl="./knowl/prop-comp-cts.html" title="Proposition 6.7: Composition preserves continuity">Proposition 6.7</a>), and the fact that the absolute value function <span class="process-math">\(x\mapsto |x|\)</span> is continuous on <span class="process-math">\(\R\)</span> (<a href="" class="xref" data-knowl="./knowl/eg-abs-cts.html" title="Example 5.16: The absolute value function is continuous">Example 5.16</a>).</article></div>
-<article class="proposition theorem-like" id="proposition-30"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.9</span><span class="period">.</span><span class="space"> </span><span class="title">Min/max of two continuous functions is continuous.</span>
-</h5>Let <span class="process-math">\(f, g: D \to \R\)</span> be real valued functions on a real domain <span class="process-math">\(D \subset \R\text{.}\)</span> Suppose that both <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are continuous at <span class="process-math">\(x_0 \in D\text{.}\)</span> Then both <span class="process-math">\(\min\set{f,g}\)</span> and <span class="process-math">\(\max\set{f,g}\)</span> are continuous at <span class="process-math">\(x_0 \in D\text{.}\)</span></article><article class="hiddenproof" id="proof-39"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-39"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-39"><article class="hiddenproof">We first observe that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-alg-cts.html ./knowl/cor-abs-cts.html ./knowl/prop-alg-cts.html">
-\begin{equation*}
-\max\set{f, 0} = \frac{ f+ |f|}{2}.
-\end{equation*}
-</div>The latter function is continuous at <span class="process-math">\(x_0\)</span> on combining <a href="" class="xref" data-knowl="./knowl/prop-alg-cts.html" title="Proposition 6.2: Algebra of continuity">Proposition 6.2</a> and <a href="" class="xref" data-knowl="./knowl/cor-abs-cts.html" title="Proposition 6.8">Proposition 6.8</a>. Next observe that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-alg-cts.html ./knowl/cor-abs-cts.html ./knowl/prop-alg-cts.html">
-\begin{equation*}
-\max\set{f,g}= \max\set{f-g,0} + g.
-\end{equation*}
-</div>The latter function is continuous at <span class="process-math">\(x_0\)</span> on combining our previous observation with the fact that the sum of two continuous functions is continuous (<a href="" class="xref" data-knowl="./knowl/prop-alg-cts.html" title="Proposition 6.2: Algebra of continuity">Proposition 6.2</a>). The argument for <span class="process-math">\(\min\)</span> is similar.</article></div>
-</div></div>
-</div></article></article></div>
-<article class="exercise exercise-like" id="exercise-24"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-24"><h3 class="heading">
-<span class="type">Lecture</span><span class="space"> </span><span class="codenumber">6.10</span><span class="period">.</span><span class="space"> </span><span class="title">Uniform continuity.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-24"><article class="exercise exercise-like"><article class="task exercise-like" id="ex-unif-cts"><h4 class="heading"><span class="codenumber">(a)</span></h4>Define what it means for a real-valued function on a real domain to be <em class="emphasis">uniformly</em> continuous.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-60" id="solution-60"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-60"><div class="solution solution-like"><article class="definition definition-like" id="def-unif-cts"><h5 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.11</span><span class="period">.</span><span class="space"> </span><span class="title">Uniformly continuous.</span>
-</h5> Let <span class="process-math">\(f : D \to \R\)</span> be a real valued function on a real domain <span class="process-math">\(D \subset \R\text{.}\)</span> We say that <span class="process-math">\(f\)</span> is <em class="emphasis">uniformly continuous on <span class="process-math">\(D\)</span></em> if<div class="displaymath process-math" data-contains-math-knowls="" id="mdn-6">
+</div>is continuous. Hence polynomials are continuous.</article></details></article></details>
+</div></details></div></article></article></details><details id="exercise-50" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">-</span><span class="space"> </span><span class="codenumber">6.5</span><span class="period">.</span><span class="space"> </span><span class="title">Uniform continuity.</span>
+</h4></summary><article class="exercise exercise-like"><article class="task exercise-like" id="ex-unif-cts"><h5 class="heading"><span class="codenumber">(a)</span></h5>Define what it means for a real-valued function on a real domain to be <em class="emphasis">uniformly</em> continuous.<div class="solutions"><details id="solution-88" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><article class="definition definition-like" id="def-unif-cts"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.6</span><span class="period">.</span><span class="space"> </span><span class="title">Uniformly continuous.</span>
+</h6> Let <span class="process-math">\(f : D \to \R\)</span> be a real valued function on a real domain <span class="process-math">\(D \subset \R\text{.}\)</span> We say that <span class="process-math">\(f\)</span> is <em class="emphasis">uniformly continuous on <span class="process-math">\(D\)</span></em> if<div class="displaymath process-math" id="mdn-5">
 \begin{align}
 (\forall \eps \gt 0)(\exists \delta = \delta(\eps) \gt 0)\amp (\forall x_1,x_2 \in D)\notag\\
-\amp\bigsqbrac{\ |x_1-x_2| \leq \delta \implies |f(x_1)-f(x_2)| \leq \eps\ }.\tag{6.1}
+\amp\bigsqbrac{\ |x_1-x_2| \leq \delta \implies |f(x_1)-f(x_2)| \leq \eps\ }.\tag{6.2}
 \end{align}
-</div></article></div></div>
-</div></article><article class="task exercise-like" id="task-61"><h4 class="heading"><span class="codenumber">(b)</span></h4>Justify why uniform continuity implies continuity, but not vice versa.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-61" id="solution-61"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-61"><div class="solution solution-like">
-<article class="remark remark-like" id="remark-4"><h5 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">6.12</span><span class="period">.</span><span class="space"> </span><span class="title">Uniform continuity implies continuity.</span>
-</h5> It is important to compare the definition of uniform continuity <a href="" class="xref" data-knowl="./knowl/eq-unif-cts.html" title="Equation 6.1">(6.1)</a> with that of continuity <a href="" class="xref" data-knowl="./knowl/eq-eps-delta-cts.html" title="Equation 5.5">(5.5)</a>, the latter being:<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-unif-cts.html ./knowl/eq-eps-delta-cts.html ./knowl/eq-eps-delta-cts-2.html ./knowl/eq-unif-cts.html" id="mdn-7">
-\begin{align}
-(\forall x_0 \in D)(\forall \eps \gt 0)(\exists \delta = \delta(x_0,\eps) \gt 0)\amp (\forall x \in D)\notag\\
-\bigsqbrac{\ |x-x_0| \leq \delta \implies |f(x)-f(x_0)| \leq \eps\ }.\tag{6.2}
-\end{align}
-</div>The only difference is the order of the quantifiers: for continuity <a href="" class="xref" data-knowl="./knowl/eq-eps-delta-cts-2.html" title="Equation 6.2">(6.2)</a> the parameter <span class="process-math">\(\delta= \delta(x_0, \eps)\)</span>  is allowed to depend on the point of continuity <span class="process-math">\(x_0\text{,}\)</span> however for uniformity continuity <a href="" class="xref" data-knowl="./knowl/eq-unif-cts.html" title="Equation 6.1">(6.1)</a> the same <span class="process-math">\(\delta = \delta(\eps)\)</span> has to work for <em class="emphasis">all</em> points <span class="process-math">\(x_0\)</span> in the domain <span class="process-math">\(D\text{.}\)</span> If <span class="process-math">\(f\)</span> is uniformly continuous then it is therefore continuous, on taking <span class="process-math">\(\delta(x_0, \eps) := \delta(\eps)\)</span> for any <span class="process-math">\(x_0 \in D\text{.}\)</span> However, the <a class="external" href="https://en.wikipedia.org/wiki/Converse_(logic)" target="_blank">converse</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-20" id="fn-20"><sup> 2 </sup></a> is not always true, as the next example illustrates.</article><article class="example example-like" id="example-12"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-12"><h5 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.13</span><span class="period">.</span><span class="space"> </span><span class="title">Continuity does not imply uniform continuity.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-12"><article class="example example-like"> Define <span class="process-math">\(f : \R \to \R\)</span> at each <span class="process-math">\(x \in \R\)</span> by <span class="process-math">\(f(x) := x^2\text{.}\)</span> Then <span class="process-math">\(f\)</span> is a polynomial, so is continuous on <span class="process-math">\(\R\)</span> by <a href="" class="xref" data-knowl="./knowl/prop-poly-cts.html" title="Proposition 6.4">Proposition 6.4</a>. By way of contradiction, suppose that <span class="process-math">\(f\)</span> were uniformly continuous on <span class="process-math">\(\R\text{.}\)</span> Taking <span class="process-math">\(\eps := 1\)</span> in the definition of uniform continuity (<a href="" class="xref" data-knowl="./knowl/def-unif-cts.html" title="Definition 6.11: Uniformly continuous">Definition 6.11</a>),  there exists <span class="process-math">\(\delta \gt 0\)</span> such that if <span class="process-math">\(|x_1 - x_2| \leq \delta\)</span> then <span class="process-math">\(|x_1^2 - x_2^2| \leq 1\text{.}\)</span> Setting <span class="process-math">\(x_2 := x_1 + \delta\text{,}\)</span> we deduce that for any <span class="process-math">\(x_1 \gt 0\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-poly-cts.html ./knowl/def-unif-cts.html ./knowl/thm-unif-cts.html">
+</div></article></div></details></div></article><article class="task exercise-like" id="task-116"><h5 class="heading"><span class="codenumber">(b)</span></h5>Justify why uniform continuity implies continuity, but not vice versa.<div class="solutions"><details id="solution-89" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="proposition theorem-like" id="proposition-29"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.7</span><span class="period">.</span><span class="space"> </span><span class="title">Uniform continuity implies continuity.</span>
+</h6>Let <span class="process-math">\(D \subset \R\)</span> and <span class="process-math">\(f:D\to\R\text{.}\)</span> If <span class="process-math">\(f\)</span> is uniformly continuous on <span class="process-math">\(D\text{,}\)</span> then it is also continuous on <span class="process-math">\(D\text{.}\)</span></article><details id="proof-49" class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">By the definition of continuity (<a href="" class="xref" data-knowl="./knowl/def-cts.html" title="Definition 5.21: Continuous">Definition 5.21</a>) and the epsilon-delta characterisation of the limit (<a href="" class="xref" data-knowl="./knowl/cor-eps-delta-cts.html" title="Proposition 5.17: Epsilon-delta characterisation of the limit">Proposition 5.17</a>), it suffices to prove that<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-cts.html ./knowl/cor-eps-delta-cts.html ./knowl/def-unif-cts.html" id="md-9">
+\begin{align*}
+(\forall x_0 \in D)(\forall \eps \gt 0)(\exists \delta_1 = \delta_1(x_0,\eps) \gt 0)\amp (\forall x \in D)\\
+\amp \bigsqbrac{\ |x-x_0| \leq \delta_1 \implies |f(x)-f(x_0)| \leq \eps\ }.
+\end{align*}
+</div>By the definition of uniform continuity <a href="" class="xref" data-knowl="./knowl/def-unif-cts.html" title="Definition 6.6: Uniformly continuous">Definition 6.6</a>, we know that<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-cts.html ./knowl/cor-eps-delta-cts.html ./knowl/def-unif-cts.html" id="md-10">
+\begin{align*}
+(\forall \eps \gt 0)(\exists \delta_2 = \delta_2(\eps) \gt 0)\amp (\forall x_1,x_2 \in D)\\
+\amp\bigsqbrac{\ |x_1-x_2| \leq \delta_2 \implies |f(x_1)-f(x_2)| \leq \eps\ }.
+\end{align*}
+</div>Fixing <span class="process-math">\(x_0\in D\)</span> and <span class="process-math">\(\eps \gt 0\text{,}\)</span> set <span class="process-math">\(\delta_1(x_0,\eps) := \delta_2(\eps)\text{.}\)</span> Then for <span class="process-math">\(x\in D\)</span> with <span class="process-math">\(|x-x_0|\leq \delta_1 = \delta_2\text{,}\)</span> we have <span class="process-math">\(|f(x)-f(x_0)|\leq \eps\text{,}\)</span> as required.</article></details> <details id="example-32" class="example example-like"><summary><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.8</span><span class="period">.</span><span class="space"> </span><span class="title">Continuity does not imply uniform continuity.</span>
+</h6></summary><article class="example example-like"> <div class="para logical" id="p-135">
+<div class="para">Define <span class="process-math">\(f : \R \to \R\)</span> at each <span class="process-math">\(x \in \R\)</span> by <span class="process-math">\(f(x) := x^2\text{.}\)</span> Then <span class="process-math">\(f\)</span> is a polynomial, so is continuous on <span class="process-math">\(\R\)</span> by <a href="" class="xref" data-knowl="./knowl/prop-poly-cts.html" title="Example 6.4: Polynomials are continuous">Example 6.4</a>. By way of contradiction, suppose that <span class="process-math">\(f\)</span> were uniformly continuous on <span class="process-math">\(\R\text{.}\)</span> Taking <span class="process-math">\(\eps := 1\)</span> in the definition of uniform continuity (<a href="" class="xref" data-knowl="./knowl/def-unif-cts.html" title="Definition 6.6: Uniformly continuous">Definition 6.6</a>),  there exists <span class="process-math">\(\delta \gt 0\)</span> such that if <span class="process-math">\(|x_1 - x_2| \leq \delta\)</span> then <span class="process-math">\(|x_1^2 - x_2^2| \leq 1\text{.}\)</span> Setting <span class="process-math">\(x_2 := x_1 + \delta\text{,}\)</span> we deduce that for any <span class="process-math">\(x_1 \gt 0\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-poly-cts.html ./knowl/def-unif-cts.html">
 \begin{equation*}
 1 \geq |x_1^2 - x_2^2| = |x_1-x_2||x_1+x_2| = \delta (2x_1+\delta) \geq \delta x_1.
 \end{equation*}
-</div>Taking, say, <span class="process-math">\(x_1 = 2/\delta\)</span> then yields a contradiction. The domain of a function is important for uniform continuity: the function <span class="process-math">\(f(x) = x^2\)</span> is not uniformly continuous on <span class="process-math">\(\R\text{,}\)</span> yet one can show that it is uniformly continuous on any closed interval <span class="process-math">\([a,b]\)</span> (see <a href="" class="xref" data-knowl="./knowl/thm-unif-cts.html" title="Theorem 6.14: Continuous on closed interval implies uniformly continuous">Theorem 6.14</a>).</article></div>
-</div></div>
-</div></article><article class="task exercise-like" id="task-62"><h4 class="heading"><span class="codenumber">(c)</span></h4>State and prove how a continuous function on a closed interval is uniformly continuous.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-62" id="solution-62"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-62"><div class="solution solution-like">
-<article class="theorem theorem-like" id="thm-unif-cts"><h5 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.14</span><span class="period">.</span><span class="space"> </span><span class="title">Continuous on closed interval implies uniformly continuous.</span>
-</h5>Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a real valued function on a <em class="emphasis">closed interval</em><span class="process-math">\([a,b] \subset \R\text{.}\)</span> Suppose that <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a,b]\text{.}\)</span> Then <span class="process-math">\(f\)</span> is uniformly continuous on <span class="process-math">\([a,b]\text{.}\)</span></article><article class="hiddenproof" id="proof-40"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-40"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-40"><article class="hiddenproof">By way of contradiction, suppose that <span class="process-math">\(f\)</span> is not uniformly continuous on <span class="process-math">\([a,b]\text{.}\)</span> Negating the definition of uniform continuity <a href="" class="xref" data-knowl="./knowl/eq-unif-cts.html" title="Equation 6.1">(6.1)</a>, we deduce that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-unif-cts.html ./knowl/cor-bolzano.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-add-rule.html">
+</div>
+<div class="para">Taking, say, <span class="process-math">\(x_1 = 2/\delta\)</span> then yields a contradiction.</div>
+</div> <div class="para" id="p-136">The domain of a function is important for uniform continuity: the function <span class="process-math">\(f(x) = x^2\)</span> is not uniformly continuous on <span class="process-math">\(\R\text{,}\)</span> yet one can show that it is uniformly continuous on any closed interval <span class="process-math">\([a,b]\)</span> (see <a href="" class="xref" data-knowl="./knowl/thm-unif-cts.html" title="Theorem 6.9: Continuous on closed interval implies uniformly continuous">Theorem 6.9</a>).</div></article></details>
+</div></details></div></article><article class="task exercise-like" id="task-117"><h5 class="heading"><span class="codenumber">(c)</span></h5>State how a continuous function on a closed interval is uniformly continuous (the proof is non-examinable).<div class="solutions"><details id="solution-90" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="theorem theorem-like" id="thm-unif-cts"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.9</span><span class="period">.</span><span class="space"> </span><span class="title">Continuous on closed interval implies uniformly continuous.</span>
+</h6>Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a real valued function on a <em class="emphasis">closed interval</em>  <span class="process-math">\([a,b] \subset \R\text{.}\)</span> Suppose that <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a,b]\text{.}\)</span> Then <span class="process-math">\(f\)</span> is uniformly continuous on <span class="process-math">\([a,b]\text{.}\)</span></article><details id="proof-50" class="hiddenproof"><summary><h6 class="heading"><span class="title">Proof (non-examinable).</span></h6></summary><article class="hiddenproof"> By way of contradiction, suppose that <span class="process-math">\(f\)</span> is not uniformly continuous on <span class="process-math">\([a,b]\text{.}\)</span> Negating the definition of uniform continuity <a href="" class="xref" data-knowl="./knowl/eq-unif-cts.html" title="Equation 6.2">(6.2)</a>, we deduce that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-unif-cts.html ./knowl/cor-bolzano.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-add-rule.html">
 \begin{equation*}
 (\exists \eps \gt 0)(\forall \delta  \gt 0)(\exists x,y \in [a,b])
 \bigsqbrac{\ |x-y| \leq \delta \quad \text{and} \quad |f(x)-f(y)| \gt \eps\ }.
@@ -235,232 +373,87 @@ c_0 + c_1x+ \dots + c_n x^n
 (\forall n  \in \N)(\exists x_n,y_n \in [a,b])
 \bigsqbrac{\ |x_n-y_n| \leq \trecip{n} \quad \text{and} \quad |f(x_n)-f(y_n)| \gt \eps\ }.
 \end{equation*}
-</div>By the Bolzano-Weierstrass theorem (<a href="" class="xref" data-knowl="./knowl/cor-bolzano.html" title="Corollary 3.14: Bolzano-Weierstrass theorem">Corollary 3.14</a>) and the inequality rule for limits (<a href="" class="xref" data-knowl="./knowl/prop-ineq-rule.html" title="Proposition 2.2">Proposition 2.2</a>) there exists <span class="process-math">\(x_0\in [a,b]\)</span> and  <span class="process-math">\(k(1) \lt  k(2) \lt  \dots\)</span> such that <span class="process-math">\(x_{k(n)} \to x_0\)</span> as <span class="process-math">\(n \to \infty\text{.}\)</span> Applying the same argument to the sequence <span class="process-math">\((y_{k(n)})_n\text{,}\)</span> there exists <span class="process-math">\(y_0\in [a,b]\)</span> and  <span class="process-math">\(\ell_1 \lt  \ell_2 \lt  \dots\)</span> such that <span class="process-math">\(y_{k(\ell_n)} \to y_0\)</span> as <span class="process-math">\(n \to \infty\text{.}\)</span> Since subsequences of convergent sequence tend to the same limit (<a href="" class="xref" data-knowl="./knowl/prop-subseq-conv.html" title="Proposition 3.11: Limits are preserved on passing to subsequences">Proposition 3.11</a>), we also have <span class="process-math">\(x_{k(\ell_n)} \to x_0\)</span> as <span class="process-math">\(n \to \infty\text{.}\)</span> Notice that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-unif-cts.html ./knowl/cor-bolzano.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-add-rule.html" id="md-8">
+</div>By the Bolzano-Weierstrass theorem (<a href="" class="xref" data-knowl="./knowl/cor-bolzano.html" title="Corollary 3.25: Bolzano-Weierstrass theorem">Corollary 3.25</a>) there exists <span class="process-math">\(x_0\in \R\)</span> and  <span class="process-math">\(k(1) \lt  k(2) \lt  \dots\)</span> such that <span class="process-math">\(x_{k(n)} \to x_0\)</span> as <span class="process-math">\(n \to \infty\text{.}\)</span> By the inequality rule for limits (<a href="" class="xref" data-knowl="./knowl/prop-ineq-rule.html" title="Proposition 2.5">Proposition 2.5</a>) we see that <span class="process-math">\(x_0 \in [a,b]\text{.}\)</span> Applying the same argument to the sequence <span class="process-math">\((y_{k(n)})_n\text{,}\)</span> there exists <span class="process-math">\(y_0\in [a,b]\)</span> and  <span class="process-math">\(\ell_1 \lt  \ell_2 \lt  \dots\)</span> such that <span class="process-math">\(y_{k(\ell_n)} \to y_0\)</span> as <span class="process-math">\(n \to \infty\text{.}\)</span> Since subsequences of convergent sequence tend to the same limit (<a href="" class="xref" data-knowl="./knowl/prop-subseq-conv.html" title="Proposition 3.20: Limits are preserved on passing to subsequences">Proposition 3.20</a>), we also have <span class="process-math">\(x_{k(\ell_n)} \to x_0\)</span> as <span class="process-math">\(n \to \infty\text{.}\)</span> Notice that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-unif-cts.html ./knowl/cor-bolzano.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-add-rule.html" id="md-11">
 \begin{align*}
 |x_0 - y_0| \amp \leq |x_0-x_{k(\ell_n)}| + |x_{k(\ell_n)}- y_{k(\ell_n)}| + |y_{k(\ell_n)} -y_0|\\
 \amp \leq |x_0-x_{k(\ell_n)}| + \recip{k(\ell_n)} + |y_{k(\ell_n)} -y_0|\\
 \amp \to 0 \quad \text{as}\quad n \to \infty.
 \end{align*}
-</div>Therefore <span class="process-math">\(x_0 = y_0\text{.}\)</span> Yet continuity of <span class="process-math">\(f\text{,}\)</span> continuity of the absolute value and the addition rule (<a href="" class="xref" data-knowl="./knowl/prop-add-rule.html" title="Proposition 2.8: Addition rule">Proposition 2.8</a>) together give that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-unif-cts.html ./knowl/cor-bolzano.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-add-rule.html">
+</div>Therefore <span class="process-math">\(x_0 = y_0\text{.}\)</span> Yet continuity of <span class="process-math">\(f\text{,}\)</span> continuity of the absolute value and the addition rule (<a href="" class="xref" data-knowl="./knowl/prop-add-rule.html" title="Proposition 2.14: Addition rule">Proposition 2.14</a>) together give that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-unif-cts.html ./knowl/cor-bolzano.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-add-rule.html">
 \begin{equation*}
 \eps \lt  |f(x_{k(\ell_n)}) - f(y_{k(\ell_n)})| \to |f(x_0)-f(y_0)| = 0.
 \end{equation*}
-</div>Since this is a contradiction, it follows that <span class="process-math">\(f\)</span> must indeed be uniformly continuous.</article></div>
-</div></div>
-</div></article></article></div>
-<article class="exercise exercise-like" id="exercise-25"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-25"><h3 class="heading">
-<span class="type">Lecture</span><span class="space"> </span><span class="codenumber">6.15</span><span class="period">.</span><span class="space"> </span><span class="title">The intermediate value theorem.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-25"><article class="exercise exercise-like"><article class="task exercise-like" id="task-63"><h4 class="heading"><span class="codenumber">(a)</span></h4>State and prove the intermediate value theorem.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-63" id="solution-63"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-63"><div class="solution solution-like">
-<article class="theorem theorem-like" id="thm-IVT"><h5 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.16</span><span class="period">.</span><span class="space"> </span><span class="title">Intermediate value theorem.</span>
-</h5>Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a continuous function on a closed interval <span class="process-math">\([a,b] \subset \R\text{.}\)</span> For any real number <span class="process-math">\(y\)</span> between<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-21" id="fn-21"><sup> 3 </sup></a><span class="process-math">\(f(a)\)</span> and <span class="process-math">\(f(b)\text{,}\)</span> there exists <span class="process-math">\(x \in [a,b]\)</span> such that <span class="process-math">\(f(x) = y\text{.}\)</span></article><article class="hiddenproof" id="proof-41"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-41"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-41"><article class="hiddenproof"><p id="p-78">We prove the result assuming that <span class="process-math">\(f(a) \leq y \leq f(b)\text{;}\)</span> if <span class="process-math">\(f(a) \geq y \geq f(b)\)</span> then we reduce to the former case on considering <span class="process-math">\(-f\text{.}\)</span> Set</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+</div>Since this is a contradiction, it follows that <span class="process-math">\(f\)</span> must indeed be uniformly continuous.</article></details>
+</div></details></div></article></article></details></section><section class="subsection" id="subsection-15"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">6.2</span><span class="space"> </span><span class="title">Self-test questions for lecture 12</span>
+</h3>
+<details id="exercise-51" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">-</span><span class="space"> </span><span class="codenumber">6.10</span><span class="period">.</span><span class="space"> </span><span class="title">The intermediate value theorem.</span>
+</h4></summary><article class="exercise exercise-like"><article class="task exercise-like" id="task-118"><h5 class="heading"><span class="codenumber">(a)</span></h5>State and prove the intermediate value theorem.<div class="solutions"><details id="solution-91" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="theorem theorem-like" id="thm-IVT"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.11</span><span class="period">.</span><span class="space"> </span><span class="title">Intermediate value theorem.</span>
+</h6>Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a continuous function on a closed interval <span class="process-math">\([a,b] \subset \R\text{.}\)</span> For any real number <span class="process-math">\(y\)</span> between<a class="xref" id="fn-11" href="" data-knowl="./knowl/fn-11.html" title="Footnote 6.2"><sup> 2 </sup></a> <span class="process-math">\(f(a)\)</span> and <span class="process-math">\(f(b)\text{,}\)</span> there exists <span class="process-math">\(x \in [a,b]\)</span> such that <span class="process-math">\(f(x) = y\text{.}\)</span></article><details id="proof-51" class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof"><div class="para logical" id="p-137">
+<div class="para">We prove the result assuming that <span class="process-math">\(f(a) \leq y \leq f(b)\text{;}\)</span> if <span class="process-math">\(f(a) \geq y \geq f(b)\)</span> then we reduce to the former case on considering <span class="process-math">\(-f\text{.}\)</span> Set</div>
+<div class="displaymath process-math">
 \begin{equation*}
-x := \sup\set{t \in [a,b] : f(t) \leq y}.
+x := \inf\set{t \in [a,b] : f(t) \geq y}.
 \end{equation*}
 </div>
-<p class="continuation">The above supremum exists because the set is non-empty (it contains <span class="process-math">\(a\)</span>) and is bounded above by <span class="process-math">\(b\text{.}\)</span> In particular, <span class="process-math">\(a \leq x \leq b\text{.}\)</span> We claim that <span class="process-math">\(f(x) = y\text{.}\)</span></p>
-<p id="p-79">We first observe that for any <span class="process-math">\(n\in \N\)</span> the number <span class="process-math">\(x-1/n\)</span> is smaller than the supremum, so cannot be an upper bound. Hence there exists <span class="process-math">\(t_n \in [a,b]\)</span> with <span class="process-math">\(f(t_n) \leq y\)</span> and <span class="process-math">\(x-1/n \lt t_n \leq x\text{.}\)</span> By the sandwich rule we have <span class="process-math">\(t_n \to x\)</span> as <span class="process-math">\(n\to\infty\text{,}\)</span> so by continuity and the inequality rule, we get that <span class="process-math">\(f(x)= \lim_{n\to \infty} f(t_n) \leq y\text{.}\)</span></p>
-<p id="p-80">It remains to show that <span class="process-math">\(f(x_0) \geq y\text{.}\)</span> By way of contradiction, suppose that <span class="process-math">\(f(x_0) \lt y\text{.}\)</span> Then <span class="process-math">\(x_0 \lt b\)</span> (since <span class="process-math">\(f(b) \geq y \)</span>). Continuous functions which are positive at a point are positive on a neighbourhood of that point (see <a href="" class="xref" data-knowl="./knowl/cor-non-zero-cts.html" title="Proposition 5.20: Non-zero point of continuity implies non-zero on a neighbourhood">Proposition 5.20</a>). Hence there exists <span class="process-math">\(\delta \gt 0\)</span> such that for all <span class="process-math">\(x\in [a,b]\cap(x_0-\delta, x_0+\delta)\)</span> we have <span class="process-math">\(y-f(x) \gt 0\text{.}\)</span> On setting</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-non-zero-cts.html">
-\begin{equation*}
-\eps := \min\set{b-x_0, \delta/2} \gt 0,
-\end{equation*}
+<div class="para">The above infimum exists because the set is non-empty (it contains <span class="process-math">\(b\)</span>) and is bounded below by <span class="process-math">\(a\text{.}\)</span> In particular, <span class="process-math">\(a \leq x \leq b\text{.}\)</span> We claim that <span class="process-math">\(f(x) = y\text{.}\)</span>
 </div>
-<p class="continuation">we obtain <span class="process-math">\(x+\eps \in [a,b]\)</span> with <span class="process-math">\(f(x+\eps) \leq y\text{.}\)</span> Yet, since <span class="process-math">\(x+\eps\)</span> exceeds <span class="process-math">\(x\text{,}\)</span> this contradicts the definition of <span class="process-math">\(x\)</span> as the least upper bound of the set of <span class="process-math">\(t \in [a,b]\)</span> with <span class="process-math">\(f(t) \leq y\text{.}\)</span></p></article></div>
-</div></div>
-</div></article><article class="task exercise-like" id="task-64"><h4 class="heading"><span class="codenumber">(b)</span></h4>Use the intermediate value theorem to state and prove the existence of positive <span class="process-math">\(n\)</span>th roots.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-64" id="solution-64"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-64"><div class="solution solution-like">
-<article class="corollary theorem-like" id="cor-exist-roots"><h5 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">6.17</span><span class="period">.</span><span class="space"> </span><span class="title">Existence of roots.</span>
-</h5>Let <span class="process-math">\(n \in \N\text{.}\)</span> Let <span class="process-math">\(a \in [0, \infty)\text{.}\)</span> Then there exists a unique <span class="process-math">\(x \in [0, \infty)\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="">
+</div> <div class="para" id="p-138">We first observe that for any <span class="process-math">\(n\in \N\)</span> the number <span class="process-math">\(x+1/n\)</span> is larger than the infimum, so cannot be a lower bound. Hence there exists <span class="process-math">\(t_n \in [a,b]\)</span> with <span class="process-math">\(f(t_n) \geq y\)</span> and <span class="process-math">\(t_n \lt x+1/n \text{.}\)</span> Notice that if <span class="process-math">\(t_n\lt x\)</span> then we contradict the fact that <span class="process-math">\(x\)</span> is a lower bound for the set of <span class="process-math">\(t\)</span> satisfying <span class="process-math">\(f(t)\geq y\text{.}\)</span> Thus for all <span class="process-math">\(n\in \N\)</span> we have <span class="process-math">\(x \leq t_n\leq x+\recip{n}\text{.}\)</span> It follows from the sandwich rule that <span class="process-math">\(t_n \to x\)</span> as <span class="process-math">\(n\to\infty\text{,}\)</span> so by continuity and the inequality rule, we get that <span class="process-math">\(f(x)= \lim_{n\to \infty} f(t_n) \geq y\text{.}\)</span>
+</div> <div class="para" id="p-139">It remains to show that <span class="process-math">\(f(x) \leq y\text{.}\)</span> By way of contradiction, suppose that <span class="process-math">\(f(x) \gt y\text{.}\)</span> Since inequalities spread around a point of continuity (<a href="" class="xref" data-knowl="./knowl/cor-non-zero-cts.html" title="Proposition 5.19: Inequalities spread around a limit">Proposition 5.19</a>), there exists <span class="process-math">\(\delta \gt 0\)</span> such that for all <span class="process-math">\(t\in [a,b]\cap[x-\delta, x+\delta]\)</span> we have <span class="process-math">\(f(x) \gt y\text{.}\)</span> Notice that if <span class="process-math">\(a\geq x-\delta\text{,}\)</span> then <span class="process-math">\(a \in [a,b]\cap[x-\delta, x+\delta]\)</span> and hence <span class="process-math">\(f(a)\gt y\text{,}\)</span> which is a contradiction. Thus <span class="process-math">\(a\lt x-\delta\text{.}\)</span> In particular, <span class="process-math">\(x-\delta \in [a,b]\cap[x-\delta, x+\delta]\)</span> and so <span class="process-math">\(f(x-\delta) \gt y\text{.}\)</span> However the latter contradicts the fact that <span class="process-math">\(x\)</span> is a lower bound for the set of <span class="process-math">\(t\in [a,b]\)</span> satisfying <span class="process-math">\(f(t)\geq y\text{.}\)</span> Thus <span class="process-math">\(f(x)\leq y\text{,}\)</span> as required.</div></article></details>
+</div></details></div></article><article class="task exercise-like" id="task-119"><h5 class="heading"><span class="codenumber">(b)</span></h5>Use the intermediate value theorem to state and prove the existence of positive <span class="process-math">\(n\)</span>th roots.<div class="solutions"><details id="solution-92" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="corollary theorem-like" id="cor-exist-roots"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">6.12</span><span class="period">.</span><span class="space"> </span><span class="title">Existence of roots.</span>
+</h6>Let <span class="process-math">\(n \in \N\text{.}\)</span> Let <span class="process-math">\(a \in [0, \infty)\text{.}\)</span> Then there exists a unique <span class="process-math">\(x \in [0, \infty)\)</span> such that<div class="displaymath process-math">
 \begin{equation*}
 x^n = a.
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-42"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-42"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-42"><article class="hiddenproof">The function <span class="process-math">\(x \mapsto x^n\)</span> is continuous on the closed interval <span class="process-math">\([0, 1+a]\text{,}\)</span> by <a href="" class="xref" data-knowl="./knowl/prop-poly-cts.html" title="Proposition 6.4">Proposition 6.4</a>. One can check that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-poly-cts.html ./knowl/thm-IVT.html">
+</div></article><details id="proof-52" class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">The function <span class="process-math">\(x \mapsto x^n\)</span> is continuous on the closed interval <span class="process-math">\([0, 1+a]\text{,}\)</span> by <a href="" class="xref" data-knowl="./knowl/prop-poly-cts.html" title="Example 6.4: Polynomials are continuous">Example 6.4</a>. One can check that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-poly-cts.html ./knowl/thm-IVT.html">
 \begin{equation*}
 0^n \leq a \leq (1+a)^n.
 \end{equation*}
-</div>Hence by the intermediate value theorem (<a href="" class="xref" data-knowl="./knowl/thm-IVT.html" title="Theorem 6.16: Intermediate value theorem">Theorem 6.16</a>), there exists <span class="process-math">\(x \in [0, 1+a]\)</span> such that <span class="process-math">\(x^n = a\text{.}\)</span> For uniqueness, suppose that <span class="process-math">\(\tilde x \in [0,\infty)\)</span> also satisfies <span class="process-math">\(\tilde x^n = a\text{.}\)</span> Factorising, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-poly-cts.html ./knowl/thm-IVT.html">
+</div>Hence by the intermediate value theorem (<a href="" class="xref" data-knowl="./knowl/thm-IVT.html" title="Theorem 6.11: Intermediate value theorem">Theorem 6.11</a>), there exists <span class="process-math">\(x \in [0, 1+a]\)</span> such that <span class="process-math">\(x^n = a\text{.}\)</span> For uniqueness, suppose that <span class="process-math">\(\tilde x \in [0,\infty)\)</span> also satisfies <span class="process-math">\(\tilde x^n = a\text{.}\)</span> Factorising, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-poly-cts.html ./knowl/thm-IVT.html">
 \begin{equation*}
 (x-\tilde x)(x^{n-1} + x^{n-2}\tilde x + \dots + x \tilde x^{n-2} + \tilde x^{n-1}) = x^n - \tilde x^n = 0.
 \end{equation*}
-</div>If <span class="process-math">\(x \neq \tilde x\)</span> then the factor <span class="process-math">\(x^{n-1}  + \dots  + \tilde x^{n-1}\)</span> must be zero. Since <span class="process-math">\(x, \tilde x \geq 0\text{,}\)</span> the only way this can happen is if <span class="process-math">\(x = \tilde x\text{.}\)</span></article></div>
-<article class="definition definition-like" id="def-root"><h5 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.18</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(n\)</span>th root function.</span>
-</h5> Let <span class="process-math">\(n \in \N\text{.}\)</span> We define the function <span class="process-math">\(\sqrt[n]{} : [0, \infty) \to [0, \infty)\)</span> by setting <span class="process-math">\(\sqrt[n]{a}\)</span> to be the unique non-negative real number <span class="process-math">\(x \in [0, \infty)\)</span> such that <span class="process-math">\(x^n= a\text{.}\)</span> The existence and uniqueness of <span class="process-math">\(x\)</span> are guaranteed by <a href="" class="xref" data-knowl="./knowl/cor-exist-roots.html" title="Corollary 6.17: Existence of roots">Corollary 6.17</a>.</article>
-</div></div>
-</div></article></article></div>
-<article class="exercise exercise-like" id="exercise-26"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-26"><h3 class="heading">
-<span class="type">Lecture</span><span class="space"> </span><span class="codenumber">6.19</span><span class="period">.</span><span class="space"> </span><span class="title">The extreme value theorem.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-26"><article class="exercise exercise-like"><article class="task exercise-like" id="task-65"><h4 class="heading"><span class="codenumber">(a)</span></h4>State and prove the extreme value theorem.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-65" id="solution-65"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-65"><div class="solution solution-like">
-<article class="theorem theorem-like" id="thm-extreme"><h5 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.20</span><span class="period">.</span><span class="space"> </span><span class="title">Extreme value theorem.</span>
-</h5>Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a continuous function. Then there exist <span class="process-math">\(x_1,x_2 \in [a,b]\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="">
+</div>If <span class="process-math">\(x \neq \tilde x\)</span> then the factor <span class="process-math">\(x^{n-1}  + \dots  + \tilde x^{n-1}\)</span> must be zero. Since <span class="process-math">\(x, \tilde x \geq 0\text{,}\)</span> the only way this can happen is if <span class="process-math">\(x = \tilde x\text{.}\)</span></article></details> <article class="definition definition-like" id="def-root"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.13</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(n\)</span>th root function.</span>
+</h6> Let <span class="process-math">\(n \in \N\text{.}\)</span> We define the function <span class="process-math">\(\sqrt[n]{} : [0, \infty) \to [0, \infty)\)</span> by setting <span class="process-math">\(\sqrt[n]{a}\)</span> to be the unique non-negative real number <span class="process-math">\(x \in [0, \infty)\)</span> such that <span class="process-math">\(x^n= a\text{.}\)</span> The existence and uniqueness of <span class="process-math">\(x\)</span> are guaranteed by <a href="" class="xref" data-knowl="./knowl/cor-exist-roots.html" title="Corollary 6.12: Existence of roots">Corollary 6.12</a>.</article>
+</div></details></div></article></article></details><details id="exercise-52" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">-</span><span class="space"> </span><span class="codenumber">6.14</span><span class="period">.</span><span class="space"> </span><span class="title">The extreme value theorem.</span>
+</h4></summary><article class="exercise exercise-like"><article class="task exercise-like" id="task-120"><h5 class="heading"><span class="codenumber">(a)</span></h5>State the extreme value theorem (the proof is non-examinable).<div class="solutions"><details id="solution-93" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="theorem theorem-like" id="thm-extreme"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.15</span><span class="period">.</span><span class="space"> </span><span class="title">Extreme value theorem.</span>
+</h6>Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a continuous function. Then there exist <span class="process-math">\(x_1,x_2 \in [a,b]\)</span> such that<div class="displaymath process-math">
 \begin{equation*}
 f(x_1) = \inf_{[a,b]} f \quad \text{and} \quad f(x_2) = \sup_{[a,b]} f.
 \end{equation*}
-</div>In particular, a continuous function on a closed interval is bounded.</article><article class="hiddenproof" id="proof-43"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-43"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-43"><article class="hiddenproof">We prove the result for the supremum, the argument for the infimum being similar. Notice that the supremum <span class="process-math">\(\sup_{[a,b]} f\)</span> is either real or equal to <span class="process-math">\(\infty\text{.}\)</span> We first discount the latter situation. If <span class="process-math">\(\sup_{[a,b]} f = \infty\)</span> then for any <span class="process-math">\(n \in \N\)</span> there exist <span class="process-math">\(x_n \in [a,b]\)</span> with <span class="process-math">\(f(x_n) \gt n\)</span> (otherwise <span class="process-math">\(n\)</span> is a finite upper bound for <span class="process-math">\(f\)</span>). By the Bolzano-Weierstrass theorem, there exists <span class="process-math">\(k_1 \lt  k_2 \lt  \dots\)</span> such that the subsequence <span class="process-math">\(x_{k_n}\)</span> tends to a real limit <span class="process-math">\(x_0\)</span> for some <span class="process-math">\(x_0 \in \R\text{.}\)</span> By the inequality rule (<a href="" class="xref" data-knowl="./knowl/prop-ineq-rule.html" title="Proposition 2.2">Proposition 2.2</a>) we have <span class="process-math">\(x_0 \in [a,b]\text{.}\)</span> By continuity (<a href="" class="xref" data-knowl="./knowl/def-cts.html" title="Definition 5.13: Continuous">Definition 5.13</a>) and the inequality rule (<a href="" class="xref" data-knowl="./knowl/prop-ineq-rule.html" title="Proposition 2.2">Proposition 2.2</a>) we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-ineq-rule.html ./knowl/def-cts.html ./knowl/prop-ineq-rule.html ./knowl/prop-alt-sup.html ./knowl/cor-bolzano.html ./knowl/def-cts.html ./knowl/prop-sandwich.html">
+</div>In particular, a continuous function on a closed interval is bounded.</article><details id="proof-53" class="hiddenproof"><summary><h6 class="heading"><span class="title">Proof (non-examinable).</span></h6></summary><article class="hiddenproof"> We prove the result for the supremum, the argument for the infimum being similar. Notice that the supremum <span class="process-math">\(\sup_{[a,b]} f\)</span> is either real or equal to <span class="process-math">\(\infty\text{.}\)</span> We first discount the latter situation. If <span class="process-math">\(\sup_{[a,b]} f = \infty\)</span> then for any <span class="process-math">\(n \in \N\)</span> there exist <span class="process-math">\(x_n \in [a,b]\)</span> with <span class="process-math">\(f(x_n) \gt n\)</span> (otherwise <span class="process-math">\(n\)</span> is a finite upper bound for <span class="process-math">\(f\)</span>). By the Bolzano-Weierstrass theorem, there exists <span class="process-math">\(k_1 \lt  k_2 \lt  \dots\)</span> such that the subsequence <span class="process-math">\(x_{k_n}\)</span> tends to a real limit <span class="process-math">\(x_0\)</span> for some <span class="process-math">\(x_0 \in \R\text{.}\)</span> By the inequality rule (<a href="" class="xref" data-knowl="./knowl/prop-ineq-rule.html" title="Proposition 2.5">Proposition 2.5</a>) we have <span class="process-math">\(x_0 \in [a,b]\text{.}\)</span> By continuity (<a href="" class="xref" data-knowl="./knowl/def-cts.html" title="Definition 5.21: Continuous">Definition 5.21</a>) and the inequality rule (<a href="" class="xref" data-knowl="./knowl/prop-ineq-rule.html" title="Proposition 2.5">Proposition 2.5</a>) we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-ineq-rule.html ./knowl/def-cts.html ./knowl/prop-ineq-rule.html ./knowl/prop-alt-sup.html ./knowl/cor-bolzano.html ./knowl/def-cts.html ./knowl/prop-sandwich.html">
 \begin{equation*}
 f(x_0) = \lim_{n \to \infty} f(x_{k_n}) \geq \lim_{n \to \infty} k_n = \infty.
 \end{equation*}
-</div>This is a contradiction, since <span class="process-math">\(f(x_0)\)</span> is a real number. It follows that the supremum is finite. Since decreasing a supremum gives a non upper bound (<a href="" class="xref" data-knowl="./knowl/prop-alt-sup.html" title="Proposition 1.7: Epsilon characterisation of the supremum">Proposition 1.7</a>), for each <span class="process-math">\(n \in \N\)</span> there exists <span class="process-math">\(x_n \in [a,b]\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-ineq-rule.html ./knowl/def-cts.html ./knowl/prop-ineq-rule.html ./knowl/prop-alt-sup.html ./knowl/cor-bolzano.html ./knowl/def-cts.html ./knowl/prop-sandwich.html">
+</div>This is a contradiction, since <span class="process-math">\(f(x_0)\)</span> is a real number. It follows that the supremum is finite. Since decreasing a supremum gives a non upper bound (<a href="" class="xref" data-knowl="./knowl/prop-alt-sup.html" title="Lemma 1.9: Decreasing a sup gives a non-upper bound">Lemma 1.9</a>), for each <span class="process-math">\(n \in \N\)</span> there exists <span class="process-math">\(x_n \in [a,b]\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-ineq-rule.html ./knowl/def-cts.html ./knowl/prop-ineq-rule.html ./knowl/prop-alt-sup.html ./knowl/cor-bolzano.html ./knowl/def-cts.html ./knowl/prop-sandwich.html">
 \begin{equation*}
 \brac{\sup_{[a,b]} f}-\recip n \lt  f(x_n) \leq \sup_{[a,b]} f.
 \end{equation*}
-</div>Since the set <span class="process-math">\([a,b]\)</span> is bounded, the Bolzano-Weierstrass theorem (<a href="" class="xref" data-knowl="./knowl/cor-bolzano.html" title="Corollary 3.14: Bolzano-Weierstrass theorem">Corollary 3.14</a>) gives the existence of <span class="process-math">\(k_1 \lt  k_2 \lt  k_3 \lt  \dots\)</span> such that the subsequence <span class="process-math">\(x_{k_n}\)</span> converges to some <span class="process-math">\(x_0 \in [a,b]\text{.}\)</span> Since <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0\text{,}\)</span> the sequential definition of continuity (<a href="" class="xref" data-knowl="./knowl/def-cts.html" title="Definition 5.13: Continuous">Definition 5.13</a>) gives that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-ineq-rule.html ./knowl/def-cts.html ./knowl/prop-ineq-rule.html ./knowl/prop-alt-sup.html ./knowl/cor-bolzano.html ./knowl/def-cts.html ./knowl/prop-sandwich.html">
+</div>Since the set <span class="process-math">\([a,b]\)</span> is bounded, the Bolzano-Weierstrass theorem (<a href="" class="xref" data-knowl="./knowl/cor-bolzano.html" title="Corollary 3.25: Bolzano-Weierstrass theorem">Corollary 3.25</a>) gives the existence of <span class="process-math">\(k_1 \lt  k_2 \lt  k_3 \lt  \dots\)</span> such that the subsequence <span class="process-math">\(x_{k_n}\)</span> converges to some <span class="process-math">\(x_0 \in [a,b]\text{.}\)</span> Since <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0\text{,}\)</span> the sequential definition of continuity (<a href="" class="xref" data-knowl="./knowl/def-cts.html" title="Definition 5.21: Continuous">Definition 5.21</a>) gives that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-ineq-rule.html ./knowl/def-cts.html ./knowl/prop-ineq-rule.html ./knowl/prop-alt-sup.html ./knowl/cor-bolzano.html ./knowl/def-cts.html ./knowl/prop-sandwich.html">
 \begin{equation*}
 f(x_0) = \lim_{n\to \infty} f(x_{k_n}).
 \end{equation*}
-</div>By the sandwich rule (<a href="" class="xref" data-knowl="./knowl/prop-sandwich.html" title="Proposition 2.6: Sandwich rule">Proposition 2.6</a>), we deduce that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-ineq-rule.html ./knowl/def-cts.html ./knowl/prop-ineq-rule.html ./knowl/prop-alt-sup.html ./knowl/cor-bolzano.html ./knowl/def-cts.html ./knowl/prop-sandwich.html">
+</div>By the sandwich rule (<a href="" class="xref" data-knowl="./knowl/prop-sandwich.html" title="Proposition 2.10: Sandwich rule">Proposition 2.10</a>), we deduce that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-ineq-rule.html ./knowl/def-cts.html ./knowl/prop-ineq-rule.html ./knowl/prop-alt-sup.html ./knowl/cor-bolzano.html ./knowl/def-cts.html ./knowl/prop-sandwich.html">
 \begin{equation*}
 f(x_0) = \sup_{[a,b]} f.
 \end{equation*}
-</div></article></div>
-</div></div>
-</div></article></article></div>
-<article class="exercise exercise-like" id="exercise-27"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-27"><h3 class="heading">
-<span class="type">Lecture</span><span class="space"> </span><span class="codenumber">6.21</span><span class="period">.</span><span class="space"> </span><span class="title">Differentiability.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-27"><article class="exercise exercise-like"><article class="task exercise-like" id="task-66"><h4 class="heading"><span class="codenumber">(a)</span></h4>Define what it means for a real-valued function on an open interval to be <em class="emphasis">differentiable</em> at a point and define the <em class="emphasis">derivative</em> at that point. State what it means for such a function to be differentiable.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-66" id="solution-66"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-66"><div class="solution solution-like"><article class="definition definition-like" id="def-differentiable"><h5 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.22</span><span class="period">.</span><span class="space"> </span><span class="title">Differentiable.</span>
-</h5> Let <span class="process-math">\(f : (a,b)\to \R\)</span> and <span class="process-math">\(x_0 \in (a,b)\text{.}\)</span> We say that <span class="process-math">\(f\)</span> is <em class="emphasis">differentiable</em> at <span class="process-math">\(x_0\)</span> if<div class="displaymath process-math" data-contains-math-knowls="" id="mdn-8">
-\begin{align}
-(\exists y \in \R)(\forall \eps \gt 0)\amp(\exists \delta\gt 0)(\forall x \in (a,b))\notag\\
-\amp\sqbrac{0\lt |x-x_0| \leq \delta \implies \abs{\frac{f(x)-f(x_0)}{x-x_0}-y} \leq \eps}.\tag{6.3}
-\end{align}
-</div>Should such a value of <span class="process-math">\(y\)</span> exist, one can check that it is unique, and we call it the <em class="emphasis">derivative</em> of <span class="process-math">\(f\)</span> at <span class="process-math">\(x_0\text{,}\)</span> denoted <span class="process-math">\(f'(x_0)\text{.}\)</span></article></div></div>
-</div></article><article class="task exercise-like" id="task-67"><h4 class="heading"><span class="codenumber">(b)</span></h4>State and prove the "sequential characterisation" of differentiability.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-67" id="solution-67"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-67"><div class="solution solution-like">
-<article class="proposition theorem-like" id="prop-seq-diff"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.23</span><span class="period">.</span><span class="space"> </span><span class="title">Sequential characterisation of differentiability.</span>
-</h5>Let <span class="process-math">\(f : (a,b) \to \R\)</span> and <span class="process-math">\(x_0 \in (a,b)\text{.}\)</span> Then <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(x_0\)</span> with derivative <span class="process-math">\(y\)</span> if and only if for any sequence <span class="process-math">\((a_n)_n\)</span> in <span class="process-math">\((a,b)\setminus\set{x_0}\)</span> with <span class="process-math">\(a_n\to x_0\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="" id="eq-seq-diff">
-\begin{equation}
-\frac{f(a_n)-f(x_0)}{a_n-x_0} \to y \text{ as } n \to \infty\text{.}\tag{6.4}
-\end{equation}
-</div></article><article class="hiddenproof" id="proof-44"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-44"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-44"><article class="hiddenproof"><p id="p-81">This is essentially the same argument as that given in the proof of <a href="" class="xref" data-knowl="./knowl/cor-eps-delta-cts.html" title="Proposition 5.19: Epsilon-delta characterisation of continuity">Proposition 5.19</a>.</p>
-<p id="p-82">We first prove the "<span class="process-math">\(\implies\)</span>" direction. Let <span class="process-math">\((a_n)_n\)</span> be a sequence in <span class="process-math">\((a,b)\setminus\set{x_0}\)</span> such that <span class="process-math">\(a_n \to x_0\)</span> as <span class="process-math">\(n \to \infty\text{.}\)</span> We are required to prove <a href="" class="xref" data-knowl="./knowl/eq-seq-diff.html" title="Equation 6.4">(6.4)</a>, assuming <a href="" class="xref" data-knowl="./knowl/eq-eps-diff.html" title="Equation 6.3">(6.3)</a>. Fix <span class="process-math">\(\eps \gt0\text{.}\)</span> Then by <a href="" class="xref" data-knowl="./knowl/eq-eps-diff.html" title="Equation 6.3">(6.3)</a> there exists <span class="process-math">\(\delta = \delta(\eps) \gt 0\)</span> such that if <span class="process-math">\(x \in (a,b)\)</span> and <span class="process-math">\(0\lt |x-x_0| \leq \delta\)</span> then</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-seq-diff.html ./knowl/eq-eps-diff.html ./knowl/eq-eps-diff.html ./knowl/eq-seq-diff.html">
-\begin{equation*}
-\abs{\frac{f(x)-f(x_0)}{x-x_0} - y}\leq \eps\text{.}
-\end{equation*}
-</div>
-<p class="continuation">Since <span class="process-math">\(a_n \to x_0\)</span> there exists <span class="process-math">\(N = N(\delta)\)</span> such that for all <span class="process-math">\(n\geq N\)</span> we have <span class="process-math">\(0\lt |a_n - x_0| \leq \delta\text{.}\)</span> Hence if <span class="process-math">\(n \geq N(\delta)\)</span> then</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-seq-diff.html ./knowl/eq-eps-diff.html ./knowl/eq-eps-diff.html ./knowl/eq-seq-diff.html">
-\begin{equation*}
-\abs{\frac{f(a_n)-f(x_0)}{a_n-x_0} - y}\leq \eps\text{.}
-\end{equation*}
-</div>
-<p class="continuation">This establishes <a href="" class="xref" data-knowl="./knowl/eq-seq-diff.html" title="Equation 6.4">(6.4)</a>.</p>
-<p id="p-83">Next we prove the "<span class="process-math">\(\impliedby\)</span>" direction. To do so we prove the contrapositive. Hence, suppose that the negation of <a href="" class="xref" data-knowl="./knowl/eq-eps-diff.html" title="Equation 6.3">(6.3)</a> holds:</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-eps-diff.html" id="md-9">
-\begin{align*}
-(\exists \eps \gt 0)(\forall \delta  \gt 0)\amp(\exists x= x(\delta) \in (a,b))\\
-\bigsqbrac{\ 0\lt |x-x_0| \leq \delta\quad \text{and}\quad \abs{\frac{f(x)-f(x_0)}{x-x_0} - y} \gt \eps\ }\text{.}
-\end{align*}
-</div>
-<p class="continuation">Taking <span class="process-math">\(\delta = 1/n\)</span> in the above negation, set <span class="process-math">\(a_1:= x(1)\text{,}\)</span> <span class="process-math">\(a_2:=x(1/2)\text{,}\)</span> <span class="process-math">\(a_3 := x(1/3)\text{,}\)</span> etc. Then <span class="process-math">\(a_n \in (a,b)\setminus\set{x_0}\text{,}\)</span> <span class="process-math">\(|a_n - x_0| \leq 1/n\)</span> and</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-eps-diff.html">
-\begin{equation*}
-\abs{\frac{f(a_n)-f(x_0)}{a_n-x_0} - y} \geq \eps\text{.}
-\end{equation*}
-</div>
-<p class="continuation">Hence <span class="process-math">\((a_n)_n\)</span> is a sequence in <span class="process-math">\((a,b)\setminus\set{x_0}\)</span> with <span class="process-math">\(a_n \to x_0\)</span> and</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-eps-diff.html">
-\begin{equation*}
-\frac{f(a_n)-f(x_0)}{a_n-x_0} \not\to y\text{,}
-\end{equation*}
-</div>
-<p class="continuation">(as required).</p></article></div>
-</div></div>
-</div></article><article class="task exercise-like" id="task-68"><h4 class="heading"><span class="codenumber">(c)</span></h4>State and prove how a function which is differentiable at a point is continuous at that point.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-68" id="solution-68"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-68"><div class="solution solution-like">
-<article class="proposition theorem-like" id="prop-diff-cts"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.24</span><span class="period">.</span><span class="space"> </span><span class="title">Differentiable implies continuous.</span>
-</h5>Let <span class="process-math">\(f : (a,b) \to \R\)</span> be differentiable at <span class="process-math">\(x_0 \in (a,b)\text{.}\)</span> Then <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0\text{.}\)</span></article><article class="hiddenproof" id="proof-45"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-45"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-45"><article class="hiddenproof">By the epsilon-delta definition of continuity (see <a href="" class="xref" data-knowl="./knowl/cor-eps-delta-cts.html" title="Proposition 5.19: Epsilon-delta characterisation of continuity">Proposition 5.19</a>) we are required to verify that<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/def-differentiable.html ./knowl/eq-cts-to-verify.html" id="mdn-9">
-\begin{align}
-(\forall \eps \gt 0)(\exists \delta_1 = \delta_1(x_0,\eps) \gt 0)\amp(\forall x \in (a,b))\notag\\
-\amp \bigsqbrac{\ |x-x_0| \leq \delta_1 \implies |f(x)-f(x_0)| \leq \eps\ }.\tag{6.5}
-\end{align}
-</div>By the definition of differentiability (see <a href="" class="xref" data-knowl="./knowl/def-differentiable.html" title="Definition 6.22: Differentiable">Definition 6.22</a>) we have that<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/def-differentiable.html ./knowl/eq-cts-to-verify.html" id="md-10">
-\begin{align*}
-(\forall \eps \gt 0)(\exists \delta_2 = \delta_2(x_0,\eps) \gt 0)\amp (\forall x \in (a,b))\\
-\sqbrac{\ 0\lt |x-x_0| \leq \delta_2 \implies \abs{\frac{f(x)-f(x_0)}{x-x_0}-f'(x_0)} \leq \eps\ }.
-\end{align*}
-</div>In particular, if <span class="process-math">\(x \in (a,b) \)</span> and <span class="process-math">\(0\lt|x-x_0| \leq \delta_2\)</span> then<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/def-differentiable.html ./knowl/eq-cts-to-verify.html">
-\begin{equation*}
-\abs{f(x)-f(x_0)} \leq \eps \abs{x-x_0} + \abs{f'(x_0)}|x-x_0|.
-\end{equation*}
-</div>Let us assume that <span class="process-math">\(f'(x_0) \neq 0\text{,}\)</span> the remaining case being simpler. We therefore obtain <a href="" class="xref" data-knowl="./knowl/eq-cts-to-verify.html" title="Equation 6.5">(6.5)</a> on taking<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/def-differentiable.html ./knowl/eq-cts-to-verify.html">
-\begin{equation*}
-\delta_1(\eps) := \min\set{\delta_2(\eps), \recip{2}, \frac{\eps}{2\abs{f'(x_0)}}}.
-\end{equation*}
-</div></article></div>
-</div></div>
-</div></article><article class="task exercise-like" id="task-69"><h4 class="heading"><span class="codenumber">(d)</span></h4>Give examples (with proof) of differentiable and non-differentiable functions.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-69" id="solution-69"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-69"><div class="solution solution-like">
-<article class="example example-like" id="eg-const-diff"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-const-diff"><h5 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.25</span><span class="period">.</span><span class="space"> </span><span class="title">Constant functions are differentiable.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-const-diff"><article class="example example-like"> Let <span class="process-math">\(f : (a,b) \to \R\text{.}\)</span> Suppose that <span class="process-math">\(f\)</span> is constant. In other words, there exists <span class="process-math">\(c \in \R\)</span> such that for all <span class="process-math">\(x \in (a,b)\)</span> we have <span class="process-math">\(f(x) = c\text{.}\)</span> Then for <span class="process-math">\(h\neq 0\)</span> and <span class="process-math">\(x \in (a,b)\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\frac{f(x+h)-f(x)}{h} = \frac{c-c}{h} = 0 \to 0 \quad \text{as} \quad h \to 0.
-\end{equation*}
-</div>Hence <span class="process-math">\(f\)</span> is differentiable on <span class="process-math">\((a,b)\text{.}\)</span> Moreover <span class="process-math">\(f' = 0\)</span> on <span class="process-math">\((a,b)\text{.}\)</span></article></div>
-<article class="example example-like" id="eg-id-diff"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-id-diff"><h5 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.26</span><span class="period">.</span><span class="space"> </span><span class="title">The identity function is differentiable.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-id-diff"><article class="example example-like"> Let <span class="process-math">\(f : (a,b) \to \R\)</span> be given by <span class="process-math">\(f(x):=x\)</span> for all <span class="process-math">\(x \in (a,b)\text{.}\)</span> Then for <span class="process-math">\(h\neq 0\)</span> and <span class="process-math">\(x \in (a,b)\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\frac{f(x+h)-f(x)}{h} = \frac{(x+h)-x}{h} = 1 \to 1 \quad \text{as} \quad h \to 0.
-\end{equation*}
-</div>Hence <span class="process-math">\(f\)</span> is differentiable on <span class="process-math">\((a,b)\text{.}\)</span> Moreover <span class="process-math">\(f' =1\)</span> on <span class="process-math">\((a,b)\text{.}\)</span></article></div>
-<article class="example example-like" id="eg-recip-diff"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-recip-diff"><h5 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.27</span><span class="period">.</span><span class="space"> </span><span class="title">The reciprocal function is differentiable.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-recip-diff"><article class="example example-like"> Let <span class="process-math">\(f : \R\setminus\set{0} \to \R\)</span> be given by <span class="process-math">\(f(x):=1/x\)</span> for all <span class="process-math">\(x \in \R\setminus\set{0}\text{.}\)</span> Then for <span class="process-math">\(h\neq 0\)</span> and <span class="process-math">\(x \in \R\setminus\set{0}\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\frac{f(x+h)-f(x)}{h} = \frac{\recip{x+h}-\recip{x}}{h} =  -\recip{(x+h)x}  \to -\recip{x^2} \quad \text{as} \quad h \to 0.
-\end{equation*}
-</div>Hence <span class="process-math">\(f\)</span> is differentiable on <span class="process-math">\(\R\setminus\set{0}\text{.}\)</span> Moreover <span class="process-math">\(f'(x) =-1/x^2\)</span> on <span class="process-math">\(\R\setminus\set{0}\text{.}\)</span></article></div> Since differentiable functions are continuous, any example of a non-continuous function is also an example of a non-differentiable function. For instance, the function <a href="" class="xref" data-knowl="./knowl/eg-dis-cont.html" title="Example 5.17: A function discontinuous at a point">Example 5.17</a> is discontinuous at <span class="process-math">\(x=0\text{,}\)</span> so is not differentiable at <span class="process-math">\(x=0\text{.}\)</span> Similarly, <a href="" class="xref" data-knowl="./knowl/eg-dis-cont-everywhere.html" title="Example 5.18: A function discontinuous everywhere">Example 5.18</a> is discontinuous everywhere, so is also nowhere differentiable.</div></div>
-</div></article><article class="task exercise-like" id="task-70"><h4 class="heading"><span class="codenumber">(e)</span></h4>Give an example (with proof) of a function which is continuous at a point, but not differentiable there.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-70" id="solution-70"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-70"><div class="solution solution-like">
-<article class="example example-like" id="abs-not-diff"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-abs-not-diff"><h5 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.28</span><span class="period">.</span><span class="space"> </span><span class="title">A continuous function which is not differentiable.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-abs-not-diff"><article class="example example-like"> The function <span class="process-math">\(x \mapsto |x|\)</span>  is an example of a function which is continuous at a point, but not differentiable there (namely at <span class="process-math">\(x_0 = 0\)</span>). Hence continuity does not imply differentiability. To see that this function is not differentiable at <span class="process-math">\(x_0=0\text{,}\)</span> we must prove the negation of <a href="" class="xref" data-knowl="./knowl/def-differentiable.html" title="Definition 6.22: Differentiable">Definition 6.22</a>, namely<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-differentiable.html ./knowl/diff-negation-to-prove.html" id="mdn-10">
-\begin{align}
-(\forall y \in \R)(\exists \eps \gt 0)(\forall \delta\gt 0)\amp(\exists x \in \R)\notag\\
-\amp\sqbrac{0\lt |x-0| \leq \delta \text{ and } \abs{\frac{|x|-|0|}{x-0}-y} \gt \eps}\text{.}\tag{6.6}
-\end{align}
-</div>Simplifying, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-differentiable.html ./knowl/diff-negation-to-prove.html">
-\begin{equation*}
-\frac{|x|-|0|}{x-0} = \begin{cases} 1 \amp \text{ if } x \gt 0,\\ -1\amp \text{ if } x \lt 0.\end{cases}
-\end{equation*}
-</div>Hence, for fixed <span class="process-math">\(y\in \R\)</span> we let <span class="process-math">\(\eps := 1/2\)</span> and for any <span class="process-math">\(\delta &gt; 0\)</span> we let<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-differentiable.html ./knowl/diff-negation-to-prove.html">
-\begin{equation*}
-x = x(y,\delta) = \begin{cases} -\delta \amp \text{ if } y \geq 0,\\ \delta \amp \text{ if } y \lt 0.\end{cases}
-\end{equation*}
-</div>Then <span class="process-math">\(|x-0| = \delta\)</span> and<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-differentiable.html ./knowl/diff-negation-to-prove.html">
-\begin{equation*}
-\abs{\frac{|x|-|0|}{x-0}-y} = 1+|y| \geq 1\gt \eps\text{.}
-\end{equation*}
-</div>This yields <a href="" class="xref" data-knowl="./knowl/diff-negation-to-prove.html" title="Equation 6.6">(6.6)</a></article></div>
-</div></div>
-</div></article><article class="task exercise-like" id="task-71"><h4 class="heading"><span class="codenumber">(f)</span></h4>Give and example of a function which is differentiable at a point, but not twice differentiable at that point.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-71" id="solution-71"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-71"><div class="solution solution-like">
-<article class="example example-like" id="example-17"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-17"><h5 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.29</span><span class="period">.</span><span class="space"> </span><span class="title">A function which is once but not twice differentiable.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-17"><article class="example example-like"> Define <span class="process-math">\(f : \R \to \R\)</span>  at <span class="process-math">\(x \in \R\)</span> by <span class="process-math">\(f(x) := \trecip{2}x|x|\text{.}\)</span> One can check that this function is differentiable on <span class="process-math">\(\R\text{.}\)</span> Moreover, for all <span class="process-math">\(x \in \R\)</span> we have (check this!)<div class="displaymath process-math" data-contains-math-knowls="./knowl/abs-not-diff.html">
-\begin{equation*}
-f'(x) = |x|.
-\end{equation*}
-</div>Hence <span class="process-math">\(f^{(2)}(x)\)</span> exists at all <span class="process-math">\(x \in \R\setminus\set{0}\text{,}\)</span> but not at <span class="process-math">\(x = 0\)</span> by <a href="" class="xref" data-knowl="./knowl/abs-not-diff.html" title="Example 6.28: A continuous function which is not differentiable">Example 6.28</a>.</article></div>
-</div></div>
-</div></article></article></div></section><div class="hidden-content tex2jax_ignore" id="hk-fn-19"><div class="fn">This is defined by <span class="process-math">\(f_2\circ f_1 (x) := f_2(f_1(x))\)</span> for each <span class="process-math">\(x \in D_1\text{.}\)</span>
-</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-20"><div class="fn"><code class="code-inline tex2jax_ignore">en.wikipedia.org/wiki/Converse_(logic)</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-21"><div class="fn">i.e. if <span class="process-math">\(f(a) \leq f(b)\)</span> then <span class="process-math">\(f(a) \leq y \leq f(b)\text{,}\)</span> whilst if <span class="process-math">\(f(a) \gt f(b)\)</span> then <span class="process-math">\(f(a) \geq y \geq f(b)\text{.}\)</span>
-</div></div>
+</div></article></details>
+</div></details></div></article></article></details></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="week-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="workshop-instructions.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>
 </html>

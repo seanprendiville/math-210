@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,8 +11,32 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="task exercise-like"><h4 class="heading">
-<span class="type">Task</span><span class="space"> </span><span class="codenumber">9.8.e</span><span class="period">.</span>
-</h4>State and prove how the set of Riemann integrable functions is closed under multiplication.<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-116-hidden.html" title="Solution 9.8.e.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><span class="incontext"><a href="week-9.html#task-116" class="internal">in-context</a></span>
+<article class="task exercise-like"><h5 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">6.5.b</span><span class="period">.</span>
+</h5>Justify why uniform continuity implies continuity, but not vice versa.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="proposition theorem-like"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.7</span><span class="period">.</span><span class="space"> </span><span class="title">Uniform continuity implies continuity.</span>
+</h6>Let <span class="process-math">\(D \subset \R\)</span> and <span class="process-math">\(f:D\to\R\text{.}\)</span> If <span class="process-math">\(f\)</span> is uniformly continuous on <span class="process-math">\(D\text{,}\)</span> then it is also continuous on <span class="process-math">\(D\text{.}\)</span></article><details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">By the definition of continuity (<a href="" class="xref" data-knowl="./knowl/def-cts.html" title="Definition 5.21: Continuous">Definition 5.21</a>) and the epsilon-delta characterisation of the limit (<a href="" class="xref" data-knowl="./knowl/cor-eps-delta-cts.html" title="Proposition 5.17: Epsilon-delta characterisation of the limit">Proposition 5.17</a>), it suffices to prove that<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-cts.html ./knowl/cor-eps-delta-cts.html ./knowl/def-unif-cts.html">
+\begin{align*}
+(\forall x_0 \in D)(\forall \eps \gt 0)(\exists \delta_1 = \delta_1(x_0,\eps) \gt 0)\amp (\forall x \in D)\\
+\amp \bigsqbrac{\ |x-x_0| \leq \delta_1 \implies |f(x)-f(x_0)| \leq \eps\ }.
+\end{align*}
+</div>By the definition of uniform continuity <a href="" class="xref" data-knowl="./knowl/def-unif-cts.html" title="Definition 6.6: Uniformly continuous">Definition 6.6</a>, we know that<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-cts.html ./knowl/cor-eps-delta-cts.html ./knowl/def-unif-cts.html">
+\begin{align*}
+(\forall \eps \gt 0)(\exists \delta_2 = \delta_2(\eps) \gt 0)\amp (\forall x_1,x_2 \in D)\\
+\amp\bigsqbrac{\ |x_1-x_2| \leq \delta_2 \implies |f(x_1)-f(x_2)| \leq \eps\ }.
+\end{align*}
+</div>Fixing <span class="process-math">\(x_0\in D\)</span> and <span class="process-math">\(\eps \gt 0\text{,}\)</span> set <span class="process-math">\(\delta_1(x_0,\eps) := \delta_2(\eps)\text{.}\)</span> Then for <span class="process-math">\(x\in D\)</span> with <span class="process-math">\(|x-x_0|\leq \delta_1 = \delta_2\text{,}\)</span> we have <span class="process-math">\(|f(x)-f(x_0)|\leq \eps\text{,}\)</span> as required.</article></details> <details class="example example-like"><summary><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.8</span><span class="period">.</span><span class="space"> </span><span class="title">Continuity does not imply uniform continuity.</span>
+</h6></summary><article class="example example-like"> <div class="para logical">
+<div class="para">Define <span class="process-math">\(f : \R \to \R\)</span> at each <span class="process-math">\(x \in \R\)</span> by <span class="process-math">\(f(x) := x^2\text{.}\)</span> Then <span class="process-math">\(f\)</span> is a polynomial, so is continuous on <span class="process-math">\(\R\)</span> by <a href="" class="xref" data-knowl="./knowl/prop-poly-cts.html" title="Example 6.4: Polynomials are continuous">Example 6.4</a>. By way of contradiction, suppose that <span class="process-math">\(f\)</span> were uniformly continuous on <span class="process-math">\(\R\text{.}\)</span> Taking <span class="process-math">\(\eps := 1\)</span> in the definition of uniform continuity (<a href="" class="xref" data-knowl="./knowl/def-unif-cts.html" title="Definition 6.6: Uniformly continuous">Definition 6.6</a>),  there exists <span class="process-math">\(\delta \gt 0\)</span> such that if <span class="process-math">\(|x_1 - x_2| \leq \delta\)</span> then <span class="process-math">\(|x_1^2 - x_2^2| \leq 1\text{.}\)</span> Setting <span class="process-math">\(x_2 := x_1 + \delta\text{,}\)</span> we deduce that for any <span class="process-math">\(x_1 \gt 0\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-poly-cts.html ./knowl/def-unif-cts.html">
+\begin{equation*}
+1 \geq |x_1^2 - x_2^2| = |x_1-x_2||x_1+x_2| = \delta (2x_1+\delta) \geq \delta x_1.
+\end{equation*}
+</div>
+<div class="para">Taking, say, <span class="process-math">\(x_1 = 2/\delta\)</span> then yields a contradiction.</div>
+</div> <div class="para">The domain of a function is important for uniform continuity: the function <span class="process-math">\(f(x) = x^2\)</span> is not uniformly continuous on <span class="process-math">\(\R\text{,}\)</span> yet one can show that it is uniformly continuous on any closed interval <span class="process-math">\([a,b]\)</span> (see <a href="" class="xref" data-knowl="./knowl/thm-unif-cts.html" title="Theorem 6.9: Continuous on closed interval implies uniformly continuous">Theorem 6.9</a>).</div></article></details>
+</div></details></div></article><span class="incontext"><a class="internal" href="week-6.html#task-116">in-context</a></span>
 </body>
 </html>

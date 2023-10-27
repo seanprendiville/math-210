@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">-</span><span class="space"> </span><span class="codenumber">6.5</span><span class="period">.</span><span class="space"> </span><span class="title">Uniform continuity.</span>
+</h4>
+<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>Define what it means for a real-valued function on a real domain to be <em class="emphasis">uniformly</em> continuous.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><article class="definition definition-like"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.6</span><span class="period">.</span><span class="space"> </span><span class="title">Uniformly continuous.</span>
+</h6> Let <span class="process-math">\(f : D \to \R\)</span> be a real valued function on a real domain <span class="process-math">\(D \subset \R\text{.}\)</span> We say that <span class="process-math">\(f\)</span> is <em class="emphasis">uniformly continuous on <span class="process-math">\(D\)</span></em> if<div class="displaymath process-math">
+\begin{align}
+(\forall \eps \gt 0)(\exists \delta = \delta(\eps) \gt 0)\amp (\forall x_1,x_2 \in D)\notag\\
+\amp\bigsqbrac{\ |x_1-x_2| \leq \delta \implies |f(x_1)-f(x_2)| \leq \eps\ }.\tag{6.2}
+\end{align}
+</div></article></div></details></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>Justify why uniform continuity implies continuity, but not vice versa.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="proposition theorem-like"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.7</span><span class="period">.</span><span class="space"> </span><span class="title">Uniform continuity implies continuity.</span>
+</h6>Let <span class="process-math">\(D \subset \R\)</span> and <span class="process-math">\(f:D\to\R\text{.}\)</span> If <span class="process-math">\(f\)</span> is uniformly continuous on <span class="process-math">\(D\text{,}\)</span> then it is also continuous on <span class="process-math">\(D\text{.}\)</span></article><details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">By the definition of continuity (<a href="" class="xref" data-knowl="./knowl/def-cts.html" title="Definition 5.21: Continuous">Definition 5.21</a>) and the epsilon-delta characterisation of the limit (<a href="" class="xref" data-knowl="./knowl/cor-eps-delta-cts.html" title="Proposition 5.17: Epsilon-delta characterisation of the limit">Proposition 5.17</a>), it suffices to prove that<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-cts.html ./knowl/cor-eps-delta-cts.html ./knowl/def-unif-cts.html">
+\begin{align*}
+(\forall x_0 \in D)(\forall \eps \gt 0)(\exists \delta_1 = \delta_1(x_0,\eps) \gt 0)\amp (\forall x \in D)\\
+\amp \bigsqbrac{\ |x-x_0| \leq \delta_1 \implies |f(x)-f(x_0)| \leq \eps\ }.
+\end{align*}
+</div>By the definition of uniform continuity <a href="" class="xref" data-knowl="./knowl/def-unif-cts.html" title="Definition 6.6: Uniformly continuous">Definition 6.6</a>, we know that<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-cts.html ./knowl/cor-eps-delta-cts.html ./knowl/def-unif-cts.html">
+\begin{align*}
+(\forall \eps \gt 0)(\exists \delta_2 = \delta_2(\eps) \gt 0)\amp (\forall x_1,x_2 \in D)\\
+\amp\bigsqbrac{\ |x_1-x_2| \leq \delta_2 \implies |f(x_1)-f(x_2)| \leq \eps\ }.
+\end{align*}
+</div>Fixing <span class="process-math">\(x_0\in D\)</span> and <span class="process-math">\(\eps \gt 0\text{,}\)</span> set <span class="process-math">\(\delta_1(x_0,\eps) := \delta_2(\eps)\text{.}\)</span> Then for <span class="process-math">\(x\in D\)</span> with <span class="process-math">\(|x-x_0|\leq \delta_1 = \delta_2\text{,}\)</span> we have <span class="process-math">\(|f(x)-f(x_0)|\leq \eps\text{,}\)</span> as required.</article></details> <details class="example example-like"><summary><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.8</span><span class="period">.</span><span class="space"> </span><span class="title">Continuity does not imply uniform continuity.</span>
+</h6></summary><article class="example example-like"> <div class="para logical">
+<div class="para">Define <span class="process-math">\(f : \R \to \R\)</span> at each <span class="process-math">\(x \in \R\)</span> by <span class="process-math">\(f(x) := x^2\text{.}\)</span> Then <span class="process-math">\(f\)</span> is a polynomial, so is continuous on <span class="process-math">\(\R\)</span> by <a href="" class="xref" data-knowl="./knowl/prop-poly-cts.html" title="Example 6.4: Polynomials are continuous">Example 6.4</a>. By way of contradiction, suppose that <span class="process-math">\(f\)</span> were uniformly continuous on <span class="process-math">\(\R\text{.}\)</span> Taking <span class="process-math">\(\eps := 1\)</span> in the definition of uniform continuity (<a href="" class="xref" data-knowl="./knowl/def-unif-cts.html" title="Definition 6.6: Uniformly continuous">Definition 6.6</a>),  there exists <span class="process-math">\(\delta \gt 0\)</span> such that if <span class="process-math">\(|x_1 - x_2| \leq \delta\)</span> then <span class="process-math">\(|x_1^2 - x_2^2| \leq 1\text{.}\)</span> Setting <span class="process-math">\(x_2 := x_1 + \delta\text{,}\)</span> we deduce that for any <span class="process-math">\(x_1 \gt 0\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-poly-cts.html ./knowl/def-unif-cts.html">
+\begin{equation*}
+1 \geq |x_1^2 - x_2^2| = |x_1-x_2||x_1+x_2| = \delta (2x_1+\delta) \geq \delta x_1.
+\end{equation*}
+</div>
+<div class="para">Taking, say, <span class="process-math">\(x_1 = 2/\delta\)</span> then yields a contradiction.</div>
+</div> <div class="para">The domain of a function is important for uniform continuity: the function <span class="process-math">\(f(x) = x^2\)</span> is not uniformly continuous on <span class="process-math">\(\R\text{,}\)</span> yet one can show that it is uniformly continuous on any closed interval <span class="process-math">\([a,b]\)</span> (see <a href="" class="xref" data-knowl="./knowl/thm-unif-cts.html" title="Theorem 6.9: Continuous on closed interval implies uniformly continuous">Theorem 6.9</a>).</div></article></details>
+</div></details></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(c)</span></h5>State how a continuous function on a closed interval is uniformly continuous (the proof is non-examinable).<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="theorem theorem-like"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.9</span><span class="period">.</span><span class="space"> </span><span class="title">Continuous on closed interval implies uniformly continuous.</span>
+</h6>Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a real valued function on a <em class="emphasis">closed interval</em>  <span class="process-math">\([a,b] \subset \R\text{.}\)</span> Suppose that <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a,b]\text{.}\)</span> Then <span class="process-math">\(f\)</span> is uniformly continuous on <span class="process-math">\([a,b]\text{.}\)</span></article><details class="hiddenproof"><summary><h6 class="heading"><span class="title">Proof (non-examinable).</span></h6></summary><article class="hiddenproof"> By way of contradiction, suppose that <span class="process-math">\(f\)</span> is not uniformly continuous on <span class="process-math">\([a,b]\text{.}\)</span> Negating the definition of uniform continuity <a href="" class="xref" data-knowl="./knowl/eq-unif-cts.html" title="Equation 6.2">(6.2)</a>, we deduce that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-unif-cts.html ./knowl/cor-bolzano.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-add-rule.html">
+\begin{equation*}
+(\exists \eps \gt 0)(\forall \delta  \gt 0)(\exists x,y \in [a,b])
+\bigsqbrac{\ |x-y| \leq \delta \quad \text{and} \quad |f(x)-f(y)| \gt \eps\ }.
+\end{equation*}
+</div>Taking <span class="process-math">\(\delta := 1/n\text{,}\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-unif-cts.html ./knowl/cor-bolzano.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-add-rule.html">
+\begin{equation*}
+(\forall n  \in \N)(\exists x_n,y_n \in [a,b])
+\bigsqbrac{\ |x_n-y_n| \leq \trecip{n} \quad \text{and} \quad |f(x_n)-f(y_n)| \gt \eps\ }.
+\end{equation*}
+</div>By the Bolzano-Weierstrass theorem (<a href="" class="xref" data-knowl="./knowl/cor-bolzano.html" title="Corollary 3.25: Bolzano-Weierstrass theorem">Corollary 3.25</a>) there exists <span class="process-math">\(x_0\in \R\)</span> and  <span class="process-math">\(k(1) \lt  k(2) \lt  \dots\)</span> such that <span class="process-math">\(x_{k(n)} \to x_0\)</span> as <span class="process-math">\(n \to \infty\text{.}\)</span> By the inequality rule for limits (<a href="" class="xref" data-knowl="./knowl/prop-ineq-rule.html" title="Proposition 2.5">Proposition 2.5</a>) we see that <span class="process-math">\(x_0 \in [a,b]\text{.}\)</span> Applying the same argument to the sequence <span class="process-math">\((y_{k(n)})_n\text{,}\)</span> there exists <span class="process-math">\(y_0\in [a,b]\)</span> and  <span class="process-math">\(\ell_1 \lt  \ell_2 \lt  \dots\)</span> such that <span class="process-math">\(y_{k(\ell_n)} \to y_0\)</span> as <span class="process-math">\(n \to \infty\text{.}\)</span> Since subsequences of convergent sequence tend to the same limit (<a href="" class="xref" data-knowl="./knowl/prop-subseq-conv.html" title="Proposition 3.20: Limits are preserved on passing to subsequences">Proposition 3.20</a>), we also have <span class="process-math">\(x_{k(\ell_n)} \to x_0\)</span> as <span class="process-math">\(n \to \infty\text{.}\)</span> Notice that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-unif-cts.html ./knowl/cor-bolzano.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-add-rule.html">
+\begin{align*}
+|x_0 - y_0| \amp \leq |x_0-x_{k(\ell_n)}| + |x_{k(\ell_n)}- y_{k(\ell_n)}| + |y_{k(\ell_n)} -y_0|\\
+\amp \leq |x_0-x_{k(\ell_n)}| + \recip{k(\ell_n)} + |y_{k(\ell_n)} -y_0|\\
+\amp \to 0 \quad \text{as}\quad n \to \infty.
+\end{align*}
+</div>Therefore <span class="process-math">\(x_0 = y_0\text{.}\)</span> Yet continuity of <span class="process-math">\(f\text{,}\)</span> continuity of the absolute value and the addition rule (<a href="" class="xref" data-knowl="./knowl/prop-add-rule.html" title="Proposition 2.14: Addition rule">Proposition 2.14</a>) together give that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-unif-cts.html ./knowl/cor-bolzano.html ./knowl/prop-ineq-rule.html ./knowl/prop-subseq-conv.html ./knowl/prop-add-rule.html">
+\begin{equation*}
+\eps \lt  |f(x_{k(\ell_n)}) - f(y_{k(\ell_n)})| \to |f(x_0)-f(y_0)| = 0.
+\end{equation*}
+</div>Since this is a contradiction, it follows that <span class="process-math">\(f\)</span> must indeed be uniformly continuous.</article></details>
+</div></details></div></article></article><span class="incontext"><a class="internal" href="week-6.html#exercise-50">in-context</a></span>
+</body>
+</html>

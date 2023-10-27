@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,10 +11,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>Let us first suppose that <span class="process-math">\((\forall x \in (a,b))[f'(x) \geq 0]\text{.}\)</span> Let <span class="process-math">\(x_1, x_2 \in [a,b]\)</span> with <span class="process-math">\(x_1 \lt  x_2\text{.}\)</span> Our task is to prove that <span class="process-math">\(f(x_1) \leq f(x_2)\text{.}\)</span> Applying the mean value theorem to the function <span class="process-math">\(f: [x_1, x_2] \to \R\text{,}\)</span> there exists <span class="process-math">\(x_0 \in (x_1, x_2)\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="">
+<article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>The function <span class="process-math">\(x \mapsto x^n\)</span> is continuous on the closed interval <span class="process-math">\([0, 1+a]\text{,}\)</span> by <a href="" class="xref" data-knowl="./knowl/prop-poly-cts.html" title="Example 6.4: Polynomials are continuous">Example 6.4</a>. One can check that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-poly-cts.html ./knowl/thm-IVT.html">
 \begin{equation*}
-f(x_2)-f(x_1) = f'(x_0)(x_2-x_1) \geq 0,
+0^n \leq a \leq (1+a)^n.
 \end{equation*}
-</div>as required. Notice that if <span class="process-math">\((\forall x \in (a,b))[f'(x) \gt 0]\)</span> then  <span class="process-math">\(f(x_2) -f(x_1) = f'(x_0)(x_2-x_1) \gt 0\text{,}\)</span> which implies that the function is strictly increasing. The conclusions involving decreasing functions follow on applying the increasing results to <span class="process-math">\(-f\text{.}\)</span> If <span class="process-math">\((\forall x \in (a,b))[f'(x) = 0]\)</span> then <span class="process-math">\(f\)</span> is both increasing and decreasing, hence for all <span class="process-math">\(x \in [a,b]\)</span> we have <span class="process-math">\(f(x) = f(b)\text{.}\)</span> Thus in the latter case <span class="process-math">\(f\)</span> is constant.</article><span class="incontext"><a href="week-7.html#proof-52" class="internal">in-context</a></span>
+</div>Hence by the intermediate value theorem (<a href="" class="xref" data-knowl="./knowl/thm-IVT.html" title="Theorem 6.11: Intermediate value theorem">Theorem 6.11</a>), there exists <span class="process-math">\(x \in [0, 1+a]\)</span> such that <span class="process-math">\(x^n = a\text{.}\)</span> For uniqueness, suppose that <span class="process-math">\(\tilde x \in [0,\infty)\)</span> also satisfies <span class="process-math">\(\tilde x^n = a\text{.}\)</span> Factorising, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-poly-cts.html ./knowl/thm-IVT.html">
+\begin{equation*}
+(x-\tilde x)(x^{n-1} + x^{n-2}\tilde x + \dots + x \tilde x^{n-2} + \tilde x^{n-1}) = x^n - \tilde x^n = 0.
+\end{equation*}
+</div>If <span class="process-math">\(x \neq \tilde x\)</span> then the factor <span class="process-math">\(x^{n-1}  + \dots  + \tilde x^{n-1}\)</span> must be zero. Since <span class="process-math">\(x, \tilde x \geq 0\text{,}\)</span> the only way this can happen is if <span class="process-math">\(x = \tilde x\text{.}\)</span></article><span class="incontext"><a class="internal" href="week-6.html#proof-52">in-context</a></span>
 </body>
 </html>
