@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h3 class="heading">
+<span class="type">-</span><span class="space"> </span><span class="codenumber">7.9</span><span class="period">.</span><span class="space"> </span><span class="title">Rules for differentiation.</span>
+</h3>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>State and prove both the addition and product rules for differentiation.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="proposition theorem-like"><h5 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">7.10</span><span class="period">.</span><span class="space"> </span><span class="title">Algebra of differentiation.</span>
+</h5>Let <span class="process-math">\(f,g: (a,b)\to \R\)</span> be differentiable at <span class="process-math">\(x_0 \in (a,b)\text{.}\)</span> Then the sum <span class="process-math">\(f+g\)</span> and product <span class="process-math">\(f\cdot g\)</span> are differentiable at <span class="process-math">\(x_0\text{.}\)</span> Moreover, their derivatives satisfy the identities<div class="displaymath process-math">
+\begin{align*}
+(f+g)'(x_0) \amp = f'(x_0) + g'(x_0), \amp \text{(addition rule)}\\
+(f\cdot g)'(x_0) \amp = f'(x_0)g(x_0) + f(x_0)g'(x_0).\amp \text{(product rule)}
+\end{align*}
+</div></article><details class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof">We verify both identities using the sequential characterisation of differentiability (<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop-seq-diff" missing or not unique]</code>) together with the addition and product rules for sequence limits (<a href="" class="xref" data-knowl="./knowl/prop-add-rule.html" title="Proposition 2.14: Addition rule">Proposition 2.14</a> and <a href="" class="xref" data-knowl="./knowl/prop-mult-rule.html" title="Proposition 2.17: Multiplication rule">Proposition 2.17</a>). To this end, let <span class="process-math">\((a_n)_n\)</span> be a sequence in <span class="process-math">\((a,b)\setminus\set{x_0}\)</span> with <span class="process-math">\(a_n \to x_0\text{.}\)</span> Then the addition rule follows from the addition rule for sequence limits, since<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/prop-add-rule.html ./knowl/prop-mult-rule.html ./knowl/prop-mult-rule.html">
+\begin{align*}
+\lim_{n \to \infty} \amp \frac{(f+g)(a_n)-(f+g)(x_0)}{a_n-x_0}\\
+\amp = \lim_{n\to \infty} \frac{f(a_n)-f(x_0)}{a_n-x_0}+ \lim_{n \to \infty} \frac{g(a_n)-g(x_0)}{x-x_0}.
+\end{align*}
+</div>The product rule uses the identity<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/prop-add-rule.html ./knowl/prop-mult-rule.html ./knowl/prop-mult-rule.html">
+\begin{align*}
+\amp f(a_n)g(a_n) - f(x_0)g(x_0)  = \sqbrac{f(a_n)-f(x_0)}g(a_n) + f(x_0)\sqbrac{g(a_n)-g(x_0)}\\
+\amp =\sqbrac{f(a_n)-f(x_0)}\sqbrac{g(a_n)-g(x_0)} + \sqbrac{f(a_n)-f(x_0)}g(x_0)+ f(x_0)\sqbrac{g(a_n)-g(x_0)}. 
+\end{align*}
+</div>By the multiplication rule for sequence limits (<a href="" class="xref" data-knowl="./knowl/prop-mult-rule.html" title="Proposition 2.17: Multiplication rule">Proposition 2.17</a>), we have<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/prop-add-rule.html ./knowl/prop-mult-rule.html ./knowl/prop-mult-rule.html">
+\begin{gather*}
+\lim_{n \to \infty}\frac{\sqbrac{f(a_n)-f(x_0)}g(x_0)}{a_n-x_0} = f'(x_0)g(x_0),\\
+\lim_{n \to \infty}\frac{f(x_0)\sqbrac{g(a_n)-g(x_0)}}{a_n-x_0} = f(x_0)g'(x_0).
+\end{gather*}
+</div>Similarly<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/prop-add-rule.html ./knowl/prop-mult-rule.html ./knowl/prop-mult-rule.html">
+\begin{align*}
+\amp \lim_{n\to\infty}\frac{\sqbrac{f(a_n)-f(x_0)}\sqbrac{g(a_n)-g(x_0)}}{a_n-x_0}\\
+\amp = \lim_{n\to\infty}\frac{\sqbrac{f(a_n)-f(x_0)}}{a_n-x_0}\lim_{n\to\infty}\frac{\sqbrac{g(a_n)-g(x_0)}}{a_n-x_0}\lim_{n\to\infty}(a_n-x_0)\\
+\amp = f'(x_0)\cdot g'(x_0)\cdot 0 = 0.
+\end{align*}
+</div></article></details>
+</div></details></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>State and prove the chain rule for differentiation.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="theorem theorem-like"><h5 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.11</span><span class="period">.</span><span class="space"> </span><span class="title">Chain rule.</span>
+</h5>Let <span class="process-math">\(f : (a,b) \to (c,d)\)</span> and <span class="process-math">\(g:  (c,d) \to \R\text{.}\)</span> Suppose that <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(x_0\)</span> and that <span class="process-math">\(g\)</span> is differentiable at <span class="process-math">\(f(x_0)\text{.}\)</span> Then the composition <span class="process-math">\(g\circ f\)</span> is differentiable at <span class="process-math">\(x_0\text{.}\)</span> Moreover the derivative satisfies the identity<div class="displaymath process-math">
+\begin{equation*}
+(g\circ f)'(x_0) = g'\bigbrac{f(x_0)} \cdot f'(x_0).
+\end{equation*}
+</div></article><details class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof">Let <span class="process-math">\((x_n)_{n=1}^\infty\)</span> be a sequence in <span class="process-math">\((a,b) \setminus\set{x_0}\)</span> with <span class="process-math">\(x_n \to x_0\text{.}\)</span> By <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop-seq-diff" missing or not unique]</code>, we wish to prove that<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/prop-diff-cts.html  ./knowl/prop-mult-rule.html ./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation}
+\lim_{n\to \infty} \frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{x_n-x_0} = g'\bigbrac{f(x_0)}f'(x_0).\tag{7.2}
+\end{equation}
+</div>We have<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/prop-diff-cts.html  ./knowl/prop-mult-rule.html ./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation}
+\frac{g\bigbrac{f( x_n)} - g\bigbrac{f(x_0)}}{ x_n-x_0} = 
+\begin{cases}
+0, \amp \text{if } f( x_n) = f(x_0);\\
+\frac{g\brac{f( x_n)}-g\brac{f(x_0)}}{f( x_n)-f(x_0)}\cdot \frac{f( x_n)-f(x_0)}{ x_n-x_0}, \amp \text{otherwise.}
+\end{cases}\tag{7.3}
+\end{equation}
+</div>
+<div class="para logical">
+<div class="para">First, let us suppose that <span class="process-math">\(f(x_n) = f(x_0)\)</span> for only finitely many values of <span class="process-math">\(n\text{.}\)</span> Then there exists <span class="process-math">\(N_0\in \N\)</span> such that for all <span class="process-math">\(n \geq N_0\)</span> we have <span class="process-math">\(f(x_n)\neq f(x_0)\text{.}\)</span> Hence for all <span class="process-math">\(n \geq N_0\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html  ./knowl/prop-mult-rule.html">
+\begin{equation*}
+\frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{x_n-x_0} = \frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{f(x_n)-f(x_0)}\cdot \frac{f(x_n)-f(x_0)}{x_n-x_0} . 
+\end{equation*}
+</div>
+<div class="para">Since differentiability implies continuity (<a href="" class="xref" data-knowl="./knowl/prop-diff-cts.html" title="Proposition 7.7: Differentiable implies continuous">Proposition 7.7</a>), we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html  ./knowl/prop-mult-rule.html">
+\begin{equation*}
+\lim_{n \to \infty} f(x_n) = f(x_0).
+\end{equation*}
+</div>
+<div class="para">Thus by the sequential characterisation of differentiability (<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop-seq-diff" missing or not unique]</code>) we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html  ./knowl/prop-mult-rule.html">
+\begin{equation}
+\lim_{\substack{n\to \infty\\ n \geq N_0}} \frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{f(x_n)-f(x_0)} = g'\bigbrac{f(x_0)}.\tag{7.4}
+\end{equation}
+</div>
+<div class="para">We may therefore use the multiplication rule for sequential limits (<a href="" class="xref" data-knowl="./knowl/prop-mult-rule.html" title="Proposition 2.17: Multiplication rule">Proposition 2.17</a>) to deduce that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html  ./knowl/prop-mult-rule.html">
+\begin{align*}
+\lim_{n \to \infty} \frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{x_n-x_0} \amp = \lim_{\substack{n\to \infty\\ n \geq N_0}}\brac{ \frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{f(x_n)-f(x_0)}\cdot \frac{f(x_n)-f(x_0)}{x_n-x_0}}\\
+\amp = \lim_{\substack{n\to \infty\\ n \geq N_0}}\frac{g\bigbrac{f(x_n)}-g\bigbrac{f(x_0)}}{f(x_n)-f(x_0)}\lim_{n\to \infty} \frac{f(x_n)-f(x_0)}{x_n-x_0}\\
+\amp = g'\bigbrac{f(x_0)}f'(x_0).
+\end{align*}
+</div>
+</div> <div class="para logical">
+<div class="para">Next, let us suppose that <span class="process-math">\(f(x_n)  = f(x_0)\)</span> for infinitely many values of <span class="process-math">\(n\text{.}\)</span> Write <span class="process-math">\(k_1 \lt  k_2 \lt  \dots\)</span> for those indices for which  <span class="process-math">\(f(x_{k_n}) = f(x_0)\text{.}\)</span> Write <span class="process-math">\(\ell_1 \lt  \ell_2 \lt  \dots\)</span> for the (possibly finite) remaining indices with <span class="process-math">\(f(x_{l_n}) \neq f(x_0)\text{.}\)</span> The sequence</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation}
+n\mapsto \frac{g\bigbrac{f(x_{\ell_n})}-g\bigbrac{f(x_0)}}{f(x_{\ell_n})-f(x_0)}\tag{7.5}
+\end{equation}
+</div>
+<div class="para">is either a finite sequence, or converges as in the proof of <a href="" class="xref" data-knowl="./knowl/eq-comp-subseq.html" title="Equation 7.4">(7.4)</a>. In either case, the sequence is bounded, so there exists <span class="process-math">\(M \in \R\)</span> such that for all <span class="process-math">\(\ell_n\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation*}
+\abs{\frac{g\bigbrac{f(x_{\ell_n})}-g\bigbrac{f(x_0)}}{f(x_{\ell_n})-f(x_0)}
+} \leq M.
+\end{equation*}
+</div>
+<div class="para">Combining this with <a href="" class="xref" data-knowl="./knowl/eq-chain-alt.html" title="Equation 7.3">(7.3)</a>, for any <span class="process-math">\(n \in \N\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation}
+\abs{\frac{g\bigbrac{f( x_n)} - g\bigbrac{f(x_0)}}{ x_n-x_0}} \leq M\abs{\frac{f(x_{n}) - f(x_0)}{x_{n} - x_0}}.\tag{7.6}
+\end{equation}
+</div>
+<div class="para">Since <span class="process-math">\(x_{k_n} \to x_0\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation*}
+f'(x_0) = \lim_{n \to \infty} \frac{f(x_{k_n}) - f(x_0)}{x_{k_n} - x_0} = 0.
+\end{equation*}
+</div>
+<div class="para">So it follows that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation*}
+\lim_{n \to \infty} \frac{f(x_{n}) - f(x_0)}{x_{n} - x_0} = f'(x_0) = 0.
+\end{equation*}
+</div>
+<div class="para">Combining this with <a href="" class="xref" data-knowl="./knowl/eq-alt-chain-ineq.html" title="Equation 7.6">(7.6)</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation*}
+\lim_{n\to \infty}\abs{\frac{g\bigbrac{f( x_n)} - g\bigbrac{f(x_0)}}{ x_n-x_0}} = 0.
+\end{equation*}
+</div>
+<div class="para">Hence <a href="" class="xref" data-knowl="./knowl/eq-chain-to-prove.html" title="Equation 7.2">(7.2)</a> also follows in this case.</div>
+</div></article></details>
+</div></details></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>State and prove the quotient rule for differentiation.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="corollary theorem-like"><h5 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">7.12</span><span class="period">.</span><span class="space"> </span><span class="title">Quotient rule.</span>
+</h5>Let <span class="process-math">\(f,g : (a,b) \to \R\)</span> both be differentiable at <span class="process-math">\(x_0 \in D\text{.}\)</span> Suppose that <span class="process-math">\(g(x_0) \neq 0\text{.}\)</span> Then the quotient <span class="process-math">\(f/g\)</span> is defined on <span class="process-math">\((x_0-\delta, x_0+\delta)\)</span> for some <span class="process-math">\(\delta \gt 0\)</span> and is differentiable at <span class="process-math">\(x_0\text{.}\)</span> Moreover the derivative satisfies the identity<div class="displaymath process-math">
+\begin{equation}
+(f/g)'(x_0) = \frac{f'(x_0)g(x_0)-f(x_0)g'(x_0)}{g(x_0)^2}.\tag{7.7}
+\end{equation}
+</div></article><details class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof">Since differentiability implies continuity (<a href="" class="xref" data-knowl="./knowl/prop-diff-cts.html" title="Proposition 7.7: Differentiable implies continuous">Proposition 7.7</a>), the function <span class="process-math">\(g\)</span> is continuous at <span class="process-math">\(x_0\text{.}\)</span> Since <span class="process-math">\(g(x_0) \neq 0\text{,}\)</span> and non-zero points of continuity yield a non-zero neighbourhood (<a href="" class="xref" data-knowl="./knowl/cor-non-zero-cts.html" title="Proposition 5.19: Inequalities spread around a limit">Proposition 5.19</a>), there exists <span class="process-math">\(\delta \gt0\)</span>  such that <span class="process-math">\(g(x) \neq 0\)</span> for all <span class="process-math">\(x \in  (a,b)\cap (x_0-\delta, x_0+\delta)\text{.}\)</span> Decreasing <span class="process-math">\(\delta\)</span> if necessary, we may assume that <span class="process-math">\((x_0-\delta, x_0+\delta)\subset (a,b)\text{.}\)</span> Hence the quotient <span class="process-math">\(x \mapsto f(x)/g(x)\)</span> is defined on <span class="process-math">\((x_0-\delta, x_0+\delta)\text{.}\)</span> Composing the reciprocal function <span class="process-math">\(y \mapsto 1/y\)</span> with <span class="process-math">\(g\text{,}\)</span> the chain rule (<a href="" class="xref" data-knowl="./knowl/thm-chain-rule.html" title="Theorem 7.11: Chain rule">Theorem 7.11</a>) and <a href="" class="xref" data-knowl="./knowl/eg-recip-diff.html" title="Example 7.5: The reciprocal function is differentiable">Example 7.5</a> together give that the function<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/cor-non-zero-cts.html ./knowl/thm-chain-rule.html ./knowl/eg-recip-diff.html ./knowl/prop-alg-diff.html">
+\begin{equation*}
+x\mapsto \recip{g(x)}
+\end{equation*}
+</div>is differentiable at <span class="process-math">\(x_0\text{.}\)</span> Moreover, the derivative satisfies<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/cor-non-zero-cts.html ./knowl/thm-chain-rule.html ./knowl/eg-recip-diff.html ./knowl/prop-alg-diff.html">
+\begin{equation*}
+\brac{\recip{g(x_0)}}' = -\frac{g'(x_0)}{g(x_0)^2}.
+\end{equation*}
+</div>Hence by the product rule (<a href="" class="xref" data-knowl="./knowl/prop-alg-diff.html" title="Proposition 7.10: Algebra of differentiation">Proposition 7.10</a>) the quotient <span class="process-math">\(f/g = f \cdot\brac{1/g}\)</span> is differentiable at <span class="process-math">\(x_0\)</span> with derivative<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/cor-non-zero-cts.html ./knowl/thm-chain-rule.html ./knowl/eg-recip-diff.html ./knowl/prop-alg-diff.html">
+\begin{equation*}
+\frac{f'(x_0)}{g(x_0)} - \frac{f(x_0)g'(x_0)}{g(x_0)^2}.
+\end{equation*}
+</div>This completes the proof of the quotient rule.</article></details>
+</div></details></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>Using the above, justify why rational functions are differentiable.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><details class="example example-like"><summary><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.13</span><span class="period">.</span><span class="space"> </span><span class="title">Polynomials and rational functions are differentiable.</span>
+</h5></summary><article class="example example-like"> Since the identity function <span class="process-math">\(x \mapsto x\)</span> is differentiable on <span class="process-math">\(\R\text{,}\)</span> the product rule gives that <span class="process-math">\(x \mapsto x^2\)</span> is differentiable on <span class="process-math">\(\R\text{.}\)</span> Using induction and the product rule, it follows that the for any <span class="process-math">\(n \in \N\)</span> the function <span class="process-math">\(x \mapsto x^n = x\cdot x^{n-1}\)</span> is differentiable on <span class="process-math">\(\R\)</span> with derivative<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-alg-diff.html ./knowl/cor-quotient.html ">
+\begin{equation*}
+(x^n)' = nx^{n-1}.
+\end{equation*}
+</div>Since constant functions <span class="process-math">\(x \mapsto c\)</span> are differentiable on <span class="process-math">\(\R\text{,}\)</span> with zero derivative, it follows from the product rule that the function <span class="process-math">\(x \mapsto c x^n\)</span> is differentiable on <span class="process-math">\(\R\)</span> with derivative<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-alg-diff.html ./knowl/cor-quotient.html ">
+\begin{equation*}
+(cx^n)' = nc x^{n-1}.
+\end{equation*}
+</div>By the addition rule for differentiation (<a href="" class="xref" data-knowl="./knowl/prop-alg-diff.html" title="Proposition 7.10: Algebra of differentiation">Proposition 7.10</a>) it follows that any polynomial<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-alg-diff.html ./knowl/cor-quotient.html ">
+\begin{equation*}
+x \mapsto c_0  + c_1 x + \dots + c_n x^n
+\end{equation*}
+</div>is differentiable on <span class="process-math">\(\R\text{,}\)</span> with derivative<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-alg-diff.html ./knowl/cor-quotient.html ">
+\begin{equation*}
+c_1  + 2c_2x + \dots + n c_n x^{n-1}.
+\end{equation*}
+</div>By the quotient rule for differentiation (<a href="" class="xref" data-knowl="./knowl/cor-quotient.html" title="Corollary 7.12: Quotient rule">Corollary 7.12</a>) we deduce that any rational function (see <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "def-rational" missing or not unique]</code>) is differentiable on its domain of definition.</article></details></div></details></div></article></article><span class="incontext"><a class="internal" href="week-7.html#exercise-55">in-context</a></span>
+</body>
+</html>

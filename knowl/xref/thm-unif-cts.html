@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.9</span><span class="period">.</span><span class="space"> </span><span class="title">Continuous on closed interval implies uniformly continuous.</span>
+</h6>Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a real valued function on a <em class="emphasis">closed interval</em>  <span class="process-math">\([a,b] \subset \R\text{.}\)</span> Suppose that <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a,b]\text{.}\)</span> Then <span class="process-math">\(f\)</span> is uniformly continuous on <span class="process-math">\([a,b]\text{.}\)</span></article><details class="hiddenproof born-hidden-knowl"><summary><h6 class="heading"><span class="title">Proof (non-examinable).</span></h6></summary><article class="hiddenproof"> By way of contradiction, suppose that <span class="process-math">\(f\)</span> is not uniformly continuous on <span class="process-math">\([a,b]\text{.}\)</span> Negating the definition of uniform continuity <a href="" class="xref" data-knowl="./knowl/xref/eq-unif-cts.html" title="Equation 6.2">(6.2)</a>, we deduce that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-unif-cts.html ./knowl/xref/cor-bolzano.html ./knowl/xref/prop-ineq-rule.html ./knowl/xref/prop-subseq-conv.html ./knowl/xref/prop-add-rule.html">
+\begin{equation*}
+(\exists \eps \gt 0)(\forall \delta  \gt 0)(\exists x,y \in [a,b])
+\bigsqbrac{\ |x-y| \leq \delta \quad \text{and} \quad |f(x)-f(y)| \gt \eps\ }.
+\end{equation*}
+</div>Taking <span class="process-math">\(\delta := 1/n\text{,}\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-unif-cts.html ./knowl/xref/cor-bolzano.html ./knowl/xref/prop-ineq-rule.html ./knowl/xref/prop-subseq-conv.html ./knowl/xref/prop-add-rule.html">
+\begin{equation*}
+(\forall n  \in \N)(\exists x_n,y_n \in [a,b])
+\bigsqbrac{\ |x_n-y_n| \leq \trecip{n} \quad \text{and} \quad |f(x_n)-f(y_n)| \gt \eps\ }.
+\end{equation*}
+</div>By the Bolzano-Weierstrass theorem (<a href="" class="xref" data-knowl="./knowl/xref/cor-bolzano.html" title="Corollary 3.25: Bolzano-Weierstrass theorem">Corollary 3.25</a>) there exists <span class="process-math">\(x_0\in \R\)</span> and  <span class="process-math">\(k(1) \lt  k(2) \lt  \dots\)</span> such that <span class="process-math">\(x_{k(n)} \to x_0\)</span> as <span class="process-math">\(n \to \infty\text{.}\)</span> By the inequality rule for limits (<a href="" class="xref" data-knowl="./knowl/xref/prop-ineq-rule.html" title="Proposition 2.5">Proposition 2.5</a>) we see that <span class="process-math">\(x_0 \in [a,b]\text{.}\)</span> Applying the same argument to the sequence <span class="process-math">\((y_{k(n)})_n\text{,}\)</span> there exists <span class="process-math">\(y_0\in [a,b]\)</span> and  <span class="process-math">\(\ell_1 \lt  \ell_2 \lt  \dots\)</span> such that <span class="process-math">\(y_{k(\ell_n)} \to y_0\)</span> as <span class="process-math">\(n \to \infty\text{.}\)</span> Since subsequences of convergent sequence tend to the same limit (<a href="" class="xref" data-knowl="./knowl/xref/prop-subseq-conv.html" title="Proposition 3.20: Limits are preserved on passing to subsequences">Proposition 3.20</a>), we also have <span class="process-math">\(x_{k(\ell_n)} \to x_0\)</span> as <span class="process-math">\(n \to \infty\text{.}\)</span> Notice that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-unif-cts.html ./knowl/xref/cor-bolzano.html ./knowl/xref/prop-ineq-rule.html ./knowl/xref/prop-subseq-conv.html ./knowl/xref/prop-add-rule.html">
+\begin{align*}
+|x_0 - y_0| \amp \leq |x_0-x_{k(\ell_n)}| + |x_{k(\ell_n)}- y_{k(\ell_n)}| + |y_{k(\ell_n)} -y_0|\\
+\amp \leq |x_0-x_{k(\ell_n)}| + \recip{k(\ell_n)} + |y_{k(\ell_n)} -y_0|\\
+\amp \to 0 \quad \text{as}\quad n \to \infty.
+\end{align*}
+</div>Therefore <span class="process-math">\(x_0 = y_0\text{.}\)</span> Yet continuity of <span class="process-math">\(f\text{,}\)</span> continuity of the absolute value and the addition rule (<a href="" class="xref" data-knowl="./knowl/xref/prop-add-rule.html" title="Proposition 2.14: Addition rule">Proposition 2.14</a>) together give that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-unif-cts.html ./knowl/xref/cor-bolzano.html ./knowl/xref/prop-ineq-rule.html ./knowl/xref/prop-subseq-conv.html ./knowl/xref/prop-add-rule.html">
+\begin{equation*}
+\eps \lt  |f(x_{k(\ell_n)}) - f(y_{k(\ell_n)})| \to |f(x_0)-f(y_0)| = 0.
+\end{equation*}
+</div>Since this is a contradiction, it follows that <span class="process-math">\(f\)</span> must indeed be uniformly continuous.</article></details><span class="incontext"><a class="internal" href="week-6.html#thm-unif-cts">in-context</a></span>
+</body>
+</html>

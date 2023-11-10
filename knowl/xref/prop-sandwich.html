@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proposition theorem-like"><h5 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Sandwich rule.</span>
+</h5>Let <span class="process-math">\((a_n)_{n=1}^\infty\text{,}\)</span> <span class="process-math">\((b_n)_{n=1}^\infty\)</span> and <span class="process-math">\((c_n)_{n=1}^\infty\)</span> be sequences of real numbers. Suppose that for all <span class="process-math">\(n \in \N\)</span> we have<div class="displaymath process-math">
+\begin{equation*}
+a_n \leq b_n \leq c_n\text{.}
+\end{equation*}
+</div>If <span class="process-math">\(a_n \to a\)</span> and <span class="process-math">\(c_n \to a\text{,}\)</span> then <span class="process-math">\(b_n \to a\text{.}\)</span></article><details class="hiddenproof born-hidden-knowl"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof">By definition of the limit <a href="" class="xref" data-knowl="./knowl/xref/def-seq-limit.html" title="Definition 1.23: Limit of convergent sequence">Definition 1.23</a>, we have that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-seq-limit.html">
+\begin{align*}
+\amp\forall \eps \gt 0\ \exists N_1 = N_1(\eps)\ \forall n \geq N_1 \text{ we have } a_n \in [a-\eps,a+\eps],\\
+\amp\forall \eps \gt 0\ \exists N_2 = N_2(\eps)\ \forall n \geq N_2 \text{ we have }  c_n \in [a-\eps,a+\eps] .
+\end{align*}
+</div>Fixing <span class="process-math">\(\eps \gt 0\text{,}\)</span> take<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-seq-limit.html">
+\begin{equation*}
+N(\eps) := \max\set{N_1(\eps), N_2(\eps)}.
+\end{equation*}
+</div>Then for any <span class="process-math">\(n \geq N(\eps)\)</span> we have <span class="process-math">\(n \geq N_2(\eps)\)</span> and so<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-seq-limit.html">
+\begin{equation*}
+b_n \leq c_n \leq a+ \eps.
+\end{equation*}
+</div>Similarly, if <span class="process-math">\(n \geq N(\eps)\)</span> then <span class="process-math">\(n \geq N_1(\eps)\text{,}\)</span> hence<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-seq-limit.html">
+\begin{equation*}
+b_n \geq a_n \geq a -\eps.
+\end{equation*}
+</div>Thus for any <span class="process-math">\(n \geq N(\eps)\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-seq-limit.html">
+\begin{equation*}
+b_n \in [a-\eps, a+\eps].
+\end{equation*}
+</div>Equivalently, for any <span class="process-math">\(n \geq N(\eps)\)</span> we have <span class="process-math">\(|b_n -a| \leq \eps.\)</span> Therefore <span class="process-math">\(b_n \to a \)</span> as <span class="process-math">\(n \to \infty\text{.}\)</span></article></details><span class="incontext"><a class="internal" href="week-2.html#prop-sandwich">in-context</a></span>
+</body>
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,12 +11,13 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-nth-power-deriv.html ./knowl/prop-lin-series.html ./knowl/def-differentiable.html ./knowl/cor-eps-delta-cts.html">
 \begin{align*}
-\amp g(x) := f(x) -\\
-\amp  \sqbrac{f(x_0) + (x-x_0)f'(x_0) + \trecip{2} (x-x_0)^2 f''(x_0) + \dots + \trecip{(n-1)!} (x-x_0)^{n-1} f^{(n-1)}(x_0)}
+\abs{x^n-x_0^n-(x-x_0)nx_0^{n-1}} \amp \leq \sum_{k=0}^{n-1} \abs{x^{k}x_0^{n-1-k} - x_0^{n-1}} \\
+\amp = \sum_{k=0}^{n-1} \abs{x^k-x_0^k}|x_0|^{n-1-k} \\
+\amp \leq  \sum_{k=0}^{n-1} k|x-x_0|r^{n-2} \leq n^2 |x-x_0| r^{n-2}
 \end{align*}
 </div>
-<span class="incontext"><a href="week-7.html#md-17" class="internal">in-context</a></span>
+<span class="incontext"><a class="internal" href="week-7.html#md-20">in-context</a></span>
 </body>
 </html>

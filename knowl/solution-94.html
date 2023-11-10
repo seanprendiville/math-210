@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -13,13 +13,39 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">8.5.e.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">7.1.1</span><span class="period">.</span>
 </h4>
-<article class="proposition theorem-like"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.10</span><span class="period">.</span>
-</h5>
-<span class="process-math">\(\log x \to \infty\)</span> as <span class="process-math">\(x\to\infty\text{.}\)</span></article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-63-hidden.html" title="Proof 8.10.1"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article>
+<article class="definition definition-like"><h5 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.2</span><span class="period">.</span><span class="space"> </span><span class="title">Differentiable.</span>
+</h5> <div class="para logical">
+<div class="para">Let <span class="process-math">\(f : (a,b)\to \R\)</span> and <span class="process-math">\(x_0 \in (a,b)\text{.}\)</span> We say that <span class="process-math">\(f\)</span> is <em class="emphasis">differentiable</em> at <span class="process-math">\(x_0\)</span> if there exists <span class="process-math">\(y_0 \in \R\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{f(x)-f(x_0)}{x-x_0} \to y_0 \quad \text{as}\quad x\to x_0 \quad \text{through} \quad (a,b)\setminus\set{x_0}.
+\end{equation*}
 </div>
-<span class="incontext"><a href="week-8.html#solution-94" class="internal">in-context</a></span>
+</div> <div class="para">Should such a value of <span class="process-math">\(y_0\)</span> exist, one can check that it is unique, and we call it the <em class="emphasis">derivative</em> of <span class="process-math">\(f\)</span> at <span class="process-math">\(x_0\text{,}\)</span> denoted <span class="process-math">\(f'(x_0)\text{.}\)</span>
+</div> <div class="para">We say that <span class="process-math">\(f : (a,b)\to \R\)</span> is <em class="emphasis">differentiable</em> if it is differentiable at every point <span class="process-math">\(x_0 \in (a,b)\text{.}\)</span>
+</div></article> <details class="example example-like"><summary><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.3</span><span class="period">.</span><span class="space"> </span><span class="title">Constant functions are differentiable.</span>
+</h5></summary><article class="example example-like"> Let <span class="process-math">\(f : (a,b) \to \R\text{.}\)</span> Suppose that <span class="process-math">\(f\)</span> is constant. In other words, there exists <span class="process-math">\(c \in \R\)</span> such that for all <span class="process-math">\(x \in (a,b)\)</span> we have <span class="process-math">\(f(x) = c\text{.}\)</span> Then for <span class="process-math">\(x \in (a,b)\setminus\set{x_0}\)</span> we have<div class="displaymath process-math">
+\begin{equation*}
+\frac{f(x)-f(x_0)}{x-x_0} = \frac{c-c}{x-x_0} = 0 \to 0 \quad \text{as} \quad x \to x_0\quad\text{through}\quad (a,b)\setminus\set{x_0}.
+\end{equation*}
+</div>Hence <span class="process-math">\(f\)</span> is differentiable on <span class="process-math">\((a,b)\text{.}\)</span> Moreover <span class="process-math">\(f' = 0\)</span> on <span class="process-math">\((a,b)\text{.}\)</span></article></details> <details class="example example-like"><summary><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.4</span><span class="period">.</span><span class="space"> </span><span class="title">The identity function is differentiable.</span>
+</h5></summary><article class="example example-like"> Let <span class="process-math">\(f : (a,b) \to \R\)</span> be given by <span class="process-math">\(f(x):=x\)</span> for all <span class="process-math">\(x \in (a,b)\text{.}\)</span> Then for <span class="process-math">\(x_0 \in (a,b)\)</span> and <span class="process-math">\(x\in(a,b)\setminus\set{ x_0}\)</span> we have<div class="displaymath process-math">
+\begin{equation*}
+\frac{f(x)-f(x_0)}{x-x_0} = \frac{x-x_0}{x-x_0} = 1 \to 1 \quad \text{as} \quad x \to x_0\quad\text{through}\quad (a,b)\setminus\set{x_0}.
+\end{equation*}
+</div>Hence <span class="process-math">\(f\)</span> is differentiable on <span class="process-math">\((a,b)\text{.}\)</span> Moreover <span class="process-math">\(f' =1\)</span> on <span class="process-math">\((a,b)\text{.}\)</span></article></details> <details class="example example-like"><summary><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.5</span><span class="period">.</span><span class="space"> </span><span class="title">The reciprocal function is differentiable.</span>
+</h5></summary><article class="example example-like"> Let <span class="process-math">\(f : (0,\infty) \to \R\)</span> be given by <span class="process-math">\(f(x):=1/x\)</span> for all <span class="process-math">\(x \in (0,\infty)\text{.}\)</span> Then for <span class="process-math">\(x_0 \in (0,\infty)\)</span> and <span class="process-math">\(x\in(0,\infty)\setminus\set{ x_0}\)</span> we have<div class="displaymath process-math">
+\begin{equation*}
+\frac{f(x)-f(x_0)}{x-x_0} = \frac{\recip{x}-\recip{x_0}}{x-x_0} =  -\recip{xx_0}  \to -\recip{x_0^2} \quad \text{as} \quad x \to x_0\quad\text{through}\quad (0,\infty)\setminus\set{x_0}.
+\end{equation*}
+</div>Hence <span class="process-math">\(f\)</span> is differentiable on <span class="process-math">\((0, \infty)\text{.}\)</span> Moreover <span class="process-math">\(f'(x) =-1/x^2\)</span> on <span class="process-math">\((0, \infty)\text{.}\)</span> One can also check that <span class="process-math">\(1/x\)</span> is differentiable on <span class="process-math">\((-\infty, 0)\)</span> with derivative <span class="process-math">\(-1/x^2\text{.}\)</span></article></details>
+</div>
+<span class="incontext"><a class="internal" href="week-7.html#solution-94">in-context</a></span>
 </body>
 </html>

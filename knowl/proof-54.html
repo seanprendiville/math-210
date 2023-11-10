@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,22 +11,24 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>By the sequential characterisation of differentiability (<a href="" class="xref" data-knowl="./knowl/prop-seq-diff.html" title="Proposition 6.23: Sequential characterisation of differentiability">Proposition 6.23</a>), we are required to prove that if <span class="process-math">\((y_n)_{n=1}^\infty\)</span> is a sequence in <span class="process-math">\((c,d)\setminus\set{y_0}\)</span> with <span class="process-math">\(y_n \to y_0\text{,}\)</span> then<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-seq-diff.html ./knowl/prop-recip-rule.html">
+<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>By the epsilon-delta characterisation of a finite limit at a finite point (see <a href="" class="xref" data-knowl="./knowl/cor-eps-delta-cts.html" title="Proposition 5.17: Epsilon-delta characterisation of the limit">Proposition 5.17</a>) we are required to verify that<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/def-differentiable.html ./knowl/eq-cts-to-verify.html">
+\begin{align}
+(\forall \eps \gt 0)(\exists \delta_1 \amp= \delta_1(x_0,\eps) \gt 0)(\forall x \in (a,b))\notag\\
+\amp \bigsqbrac{\ |x-x_0| \leq \delta_1 \implies |f(x)-f(x_0)| \leq \eps\ }.\tag{7.1}
+\end{align}
+</div>By the definition of differentiability (see <a href="" class="xref" data-knowl="./knowl/def-differentiable.html" title="Definition 7.2: Differentiable">Definition 7.2</a>) we know that<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/def-differentiable.html ./knowl/eq-cts-to-verify.html">
+\begin{align*}
+(\forall \eps \gt 0)\amp(\exists \delta_2 = \delta_2(x_0,\eps) \gt 0) (\forall x \in (a,b))\\
+\amp \sqbrac{\ 0\lt |x-x_0| \leq \delta_2 \implies \abs{\frac{f(x)-f(x_0)}{x-x_0}-f'(x_0)} \leq \eps\ }.
+\end{align*}
+</div>In particular, if <span class="process-math">\(x \in (a,b) \)</span> and <span class="process-math">\(0\lt|x-x_0| \leq \delta_2\)</span> then<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/def-differentiable.html ./knowl/eq-cts-to-verify.html">
 \begin{equation*}
-\frac{f^{-1}(y_n) - f^{-1}(y_0)}{y_n-y_0} \to \recip{f'(x_0)}.
+\abs{f(x)-f(x_0)} \leq \eps \abs{x-x_0} + \abs{f'(x_0)}|x-x_0|.
 \end{equation*}
-</div>Since <span class="process-math">\(f\)</span> is bijective, for each <span class="process-math">\(y_n\in (c,d)\setminus\set{y_0}\)</span> there exists <span class="process-math">\(x_n \in (a,b)\setminus\set{x_0}\)</span> such that <span class="process-math">\(f(x_n) = y_n\text{.}\)</span> Thus <span class="process-math">\((x_n)_{n=1}^\infty\)</span> is a sequence in <span class="process-math">\((a,b)\setminus\set{x_0}\text{.}\)</span> Since <span class="process-math">\(f^{-1}\)</span> is continuous at <span class="process-math">\(y_0\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-seq-diff.html ./knowl/prop-recip-rule.html">
+</div>We therefore obtain <a href="" class="xref" data-knowl="./knowl/eq-cts-to-verify.html" title="Equation 7.1">(7.1)</a> on taking<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/def-differentiable.html ./knowl/eq-cts-to-verify.html">
 \begin{equation*}
-x_n = f^{-1}(y_n) \to f^{-1}(y_0) = x_0.
+\delta_1(x_0,\eps) := \min\set{\delta_2(x_0,\eps),\frac{\eps}{\eps+\abs{f'(x_0)}}}.
 \end{equation*}
-</div>Since <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(x_0\text{,}\)</span> it follows that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-seq-diff.html ./knowl/prop-recip-rule.html">
-\begin{equation*}
-\frac{f(x_n)-f(x_0)}{x_n-x_0} \to f'(x_0).
-\end{equation*}
-</div>Since <span class="process-math">\(f'(x_0) \neq 0\text{,}\)</span> it follows from the reciprocal rule for limits (<a href="" class="xref" data-knowl="./knowl/prop-recip-rule.html" title="Proposition 2.12: Reciprocal rule">Proposition 2.12</a>) that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-seq-diff.html ./knowl/prop-recip-rule.html">
-\begin{equation*}
-\frac{f^{-1}(y_n)-f^{-1}(y_0)}{y_n-y_0} = \frac{x_n-x_0}{f(x_n)-f(x_0)}\to \recip{f'(x_0)}.
-\end{equation*}
-</div></article><span class="incontext"><a href="week-7.html#proof-54" class="internal">in-context</a></span>
+</div></article><span class="incontext"><a class="internal" href="week-7.html#proof-54">in-context</a></span>
 </body>
 </html>

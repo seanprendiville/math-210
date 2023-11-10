@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -12,17 +12,37 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">8.14.a.1</span><span class="period">.</span>
-</h4>
-<article class="definition definition-like"><h5 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.15</span><span class="period">.</span><span class="space"> </span><span class="title">Subdivision.</span>
-</h5> Let <span class="process-math">\(a,b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> A <em class="emphasis">subdivision</em> of the interval <span class="process-math">\([a,b]\)</span> is a strictly increasing finite sequence of the form<div class="displaymath process-math" data-contains-math-knowls="">
+<h5 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">7.15.a.1</span><span class="period">.</span>
+</h5>
+<article class="theorem theorem-like"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.16</span><span class="period">.</span><span class="space"> </span><span class="title">Inverse function theorem.</span>
+</h6>Let <span class="process-math">\(f: (a,b) \to (c,d)\)</span> be a bijective function and let  <span class="process-math">\(x_0 \in (a,b)\text{.}\)</span> Suppose that <span class="process-math">\(f^{-1}\)</span> is continuous at <span class="process-math">\(y_0:=f(x_0)\)</span> and that <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(x_0\)</span> with<div class="displaymath process-math">
 \begin{equation*}
-a= x_0 \lt  x_1 \lt  \dots \lt  x_N = b
+f'(x_0) \neq 0.
 \end{equation*}
-</div>for some <span class="process-math">\(N \in \N\text{.}\)</span> We sometimes denote such a subdivision by <span class="process-math">\((x_n)_{n=0}^N = (x_0, x_1, \dots, x_N)\text{.}\)</span></article>
+</div>Then <span class="process-math">\(f^{-1}\)</span> is differentiable at <span class="process-math">\(y_0\)</span> with derivative<div class="displaymath process-math">
+\begin{equation}
+\brac{f^{-1}}'(y_0) = \recip{f'(x_0)}.\tag{7.8}
+\end{equation}
+</div></article><details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">We are required to prove that if <span class="process-math">\((y_n)_{n=1}^\infty\)</span> is a sequence in <span class="process-math">\((c,d)\setminus\set{y_0}\)</span> with <span class="process-math">\(y_n \to y_0\text{,}\)</span> then<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-recip-rule.html">
+\begin{equation*}
+\frac{f^{-1}(y_n) - f^{-1}(y_0)}{y_n-y_0} \to \recip{f'(x_0)}.
+\end{equation*}
+</div>Since <span class="process-math">\(f\)</span> is bijective, for each <span class="process-math">\(y_n\in (c,d)\setminus\set{y_0}\)</span> there exists <span class="process-math">\(x_n \in (a,b)\setminus\set{x_0}\)</span> such that <span class="process-math">\(f(x_n) = y_n\text{.}\)</span> Thus <span class="process-math">\((x_n)_{n=1}^\infty\)</span> is a sequence in <span class="process-math">\((a,b)\setminus\set{x_0}\text{.}\)</span> Since <span class="process-math">\(f^{-1}\)</span> is continuous at <span class="process-math">\(y_0\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-recip-rule.html">
+\begin{equation*}
+x_n = f^{-1}(y_n) \to f^{-1}(y_0) = x_0.
+\end{equation*}
+</div>Since <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(x_0\text{,}\)</span> it follows that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-recip-rule.html">
+\begin{equation*}
+\frac{f(x_n)-f(x_0)}{x_n-x_0} \to f'(x_0).
+\end{equation*}
+</div>Since <span class="process-math">\(f'(x_0) \neq 0\text{,}\)</span> it follows from the reciprocal rule for limits (<a href="" class="xref" data-knowl="./knowl/prop-recip-rule.html" title="Proposition 2.21: Reciprocal rule">Proposition 2.21</a>) that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-recip-rule.html">
+\begin{equation*}
+\frac{f^{-1}(y_n)-f^{-1}(y_0)}{y_n-y_0} = \frac{x_n-x_0}{f(x_n)-f(x_0)}\to \recip{f'(x_0)}.
+\end{equation*}
+</div></article></details>
 </div>
-<span class="incontext"><a href="week-8.html#solution-99" class="internal">in-context</a></span>
+<span class="incontext"><a class="internal" href="week-7.html#solution-99">in-context</a></span>
 </body>
 </html>

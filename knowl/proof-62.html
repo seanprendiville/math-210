@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,10 +11,31 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>This follows from the inverse function theorem (<a href="" class="xref" data-knowl="./knowl/thm-inverse-fn-1.html" title="Theorem 7.17: Inverse function theorem">Theorem 7.17</a>) with <span class="process-math">\(f := \exp\text{,}\)</span> since the hypotheses of that theorem are met, namely: <ul class="disc">
-<li><p><span class="process-math">\(\exp : \R \to (0,\infty)\)</span> is bijective  (this follows from <a href="" class="xref" data-knowl="./knowl/prop-exp-bij.html" title="Proposition 8.4">Proposition 8.4</a>).</p></li>
-<li><p><span class="process-math">\(\exp^{-1}= \log\)</span> is continuous at every <span class="process-math">\(x_0 \in (0,\infty)\)</span> (this follows from <a href="" class="xref" data-knowl="./knowl/prop-log-cts.html" title="Proposition 8.8">Proposition 8.8</a>).</p></li>
-<li><p><span class="process-math">\(\exp\)</span> is differentiable at every <span class="process-math">\(x_0\in \R\)</span> with non-zero derivative (this follows from <a href="" class="xref" data-knowl="./knowl/prop-exp-properties.html" title="Proposition 8.2">Proposition 8.2</a>).</p></li>
-</ul></article><span class="incontext"><a href="week-8.html#proof-62" class="internal">in-context</a></span>
+<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>Set<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html">
+\begin{align*}
+\amp g(x) := f(x) -\\
+\amp  \sqbrac{f(x_0) + (x-x_0)f'(x_0) + \trecip{2} (x-x_0)^2 f''(x_0) + \dots + \trecip{(n-1)!} (x-x_0)^{n-1} f^{(n-1)}(x_0)}\text{.}
+\end{align*}
+</div>Our aim is to prove that there exists <span class="process-math">\(x_n\)</span> between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html">
+\begin{equation}
+\abs{g(x)} \leq |x-x_0|^n \abs{g^{(n)}(x_n)}.\tag{7.10}
+\end{equation}
+</div>We do this by induction on <span class="process-math">\(n \geq 0\text{,}\)</span> the base case <span class="process-math">\(n=0\)</span> being automatic. Suppose then that <a href="" class="xref" data-knowl="./knowl/eq-taylor-to-prove.html" title="Equation 7.10">(7.10)</a> holds for <span class="process-math">\(n-1\text{,}\)</span> so that there exists <span class="process-math">\(x_{n-1}\)</span> between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html">
+\begin{equation*}
+\abs{g(x)} \leq |x-x_0|^{n-1} \abs{g^{(n-1)}(x_{n-1})}.
+\end{equation*}
+</div>Applying the mean value theorem to <span class="process-math">\(g^{(n-1)}\text{,}\)</span> there exists <span class="process-math">\(x_{n}\)</span> between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x_{n-1}\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html">
+\begin{equation*}
+g^{(n-1)}(x_{n-1}) = g^{(n-1)}(x_{0}) + (x_{n-1}-x_0) g^{(n)}(x_n) = (x_{n-1}-x_0) g^{(n)}(x_n).
+\end{equation*}
+</div>Since <span class="process-math">\(x_{n-1}\)</span> is between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x\text{,}\)</span> we must have that <span class="process-math">\(x_{n}\)</span> is between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x\)</span> and<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html">
+\begin{equation*}
+|x_{n-1}-x_0|\leq |x-x_0|\text{.}
+\end{equation*}
+</div>Therefore<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html">
+\begin{equation*}
+\abs{g(x)} \leq |x-x_0|^{n-1} \abs{(x_{n-1}-x_0) g^{(n)}(x_n)} \leq |x-x_0|^{n} \abs{g^{(n)}(x_n)},
+\end{equation*}
+</div>as required.</article><span class="incontext"><a class="internal" href="week-7.html#proof-62">in-context</a></span>
 </body>
 </html>

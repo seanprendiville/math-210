@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">-</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span><span class="space"> </span><span class="title">Completeness principle.</span>
+</h4>
+<div class="para">State (but don’t prove) the "<em class="emphasis">completeness principle</em>" for the real numbers.</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="theorem theorem-like"><h5 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span><span class="space"> </span><span class="title">The completeness principle.</span>
+</h5>
+<div class="para logical">
+<div class="para">Suppose that a set of real numbers <span class="process-math">\(S\subset \R\)</span> is</div>
+<ul class="disc">
+<li><div class="para">non-empty</div></li>
+<li><div class="para">bounded above,</div></li>
+</ul>
+<div class="para">then <span class="process-math">\(S\)</span> has a supremum, <span class="process-math">\(\sup S\in \R\text{.}\)</span>
+</div>
+</div>
+<div class="para">In other words, any set with an upper bound has a <em class="emphasis">least</em> upper bound (provided that the set is non-empty).</div></article><details class="hiddenproof born-hidden-knowl"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof"><em class="emphasis">NON-EXAMINABLE</em>. The proof depends on how one constructs the real numbers, of which there are many alternative constructions (e.g. Dedekind cuts of rationals, decimal expansions, equivalence classes of Cauchy sequences, etc). See <a class="external" href="https://en.wikipedia.org/wiki/Completeness_of_the_real_numbers" target="_blank">en.wikipedia.org/wiki/Completeness_of_the_real_numbers</a><a class="xref" id="completeness-principle-4-3" href="" data-knowl="./knowl/fn/completeness-principle-4-3.html" title="Footnote 1.1"><sup> 1 </sup></a>.</article></details> <article class="remark remark-like"><h5 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.16</span><span class="period">.</span>
+</h5>In this course, the completeness principle is the main result we use (repeatedly, sometimes in a hidden manner) in order to show that certain limits exist. For instance all of the following involve a limit in their construction, and the existence of this limit is guaranteed (under certain conditions) by the completeness principle:<div class="displaymath process-math">
+\begin{equation*}
+\lim_{n\to\infty} a_n, \qquad \sum_{n=1}^\infty a_n, \qquad \lim_{x\to x_0} f(x),\qquad f'(x_0), \qquad \int_a^b f.
+\end{equation*}
+</div></article> <article class="remark remark-like"><h5 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.17</span><span class="period">.</span>
+</h5>The completeness principle is equivalent to the following statement involving the <em class="emphasis">infimum</em>: <article class="corollary theorem-like"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">1.18</span><span class="period">.</span>
+</h6>
+<div class="para logical">
+<div class="para">Suppose that a set of real numbers <span class="process-math">\(S\subset \R\)</span> is</div>
+<ul class="disc">
+<li><div class="para">non-empty</div></li>
+<li><div class="para">bounded below,</div></li>
+</ul>
+<div class="para">then <span class="process-math">\(S\)</span> has an infimum, <span class="process-math">\(\inf S\in \R\text{.}\)</span>
+</div>
+</div>
+<div class="para">In other words, any set with a lower bound has a <em class="emphasis">greatest</em> lower bound (provided that the set is non-empty).</div></article> The second statement can be derived from the first by reflecting the set through zero to obtain <span class="process-math">\(-S:=\set{-x: x\in S}\text{,}\)</span> then observing that <span class="process-math">\(\sup(-S) = -\inf S\text{.}\)</span></article> <details class="example example-like born-hidden-knowl"><summary><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span>
+</h5></summary><article class="example example-like"><div class="para">As an example of how the completeness principle can be used, we outline how to construct a square-root of two from the rational numbers.</div> <div class="para logical">
+<div class="para">First observe that the set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\set{a/b \in \Q : (a/b)^2 \leq 2}
+\end{equation*}
+</div>
+<div class="para">is bounded above (e.g. by 100) and non-empty (e.g. it contains 1). Hence by the completeness principle, it has a supremum</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x :=\sup\set{a/b \in \Q : (a/b)^2 \leq 2}.
+\end{equation*}
+</div>
+<div class="para">We leave it as an exercise for the enthusiastic reader to demonstrate that <span class="process-math">\(x^2 = 2\text{,}\)</span> so that <span class="process-math">\(x\)</span> is a square-root of two.</div>
+</div></article></details>
+</div></details></div></article><span class="incontext"><a class="internal" href="week-1.html#ex-complete">in-context</a></span>
+</body>
+</html>

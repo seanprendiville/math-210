@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proposition theorem-like"><h5 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.13</span><span class="period">.</span><span class="space"> </span><span class="title">Linearity of series.</span>
+</h5>Suppose that the series <span class="process-math">\(\displaystyle\sum_{n=1}^\infty a_n\)</span> and <span class="process-math">\(\displaystyle\sum_{n=1}^\infty b_n\)</span> both converge. Let <span class="process-math">\(\lambda, \mu \in \R\text{.}\)</span> Then the  series <span class="process-math">\(\displaystyle\sum_{n=1}^\infty (\lambda a_n + \mu b_n)\)</span> converges and satisfies the identity<div class="displaymath process-math">
+\begin{equation*}
+\sum_{n=1}^\infty (\lambda a_n + \mu b_n) = \lambda \sum_{n=1}^\infty a_n + \mu \sum_{n=1}^\infty b_n.
+\end{equation*}
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof">This is an application of the addition and multiplication rules for sequences (<a href="" class="xref" data-knowl="./knowl/xref/prop-add-rule.html" title="Proposition 2.14: Addition rule">Proposition 2.14</a> and <a href="" class="xref" data-knowl="./knowl/xref/prop-mult-rule.html" title="Proposition 2.17: Multiplication rule">Proposition 2.17</a>), as follows:<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-add-rule.html ./knowl/xref/prop-mult-rule.html">
+\begin{align*}
+\sum_{n=1}^\infty (\lambda a_n + \mu b_n) \amp = \lim_{N \to \infty} \sum_{n=1}^N (\lambda a_n + \mu b_n)\qquad \text{[definition of series]}\\
+\amp = \lim_{N \to \infty}\brac{ \lambda {\sum_{n=1}^N a_n} + \mu{\sum_{n=1}^N b_n}}\qquad \text{[linearity of finite sums]}\\
+\amp =  \lim_{N \to \infty}\brac{ \lambda\sum_{n=1}^N a_n} + \lim_{N \to \infty}\brac{\mu\sum_{n=1}^N b_n} \qquad \text{[addition rule]}\\
+\amp = \lambda \lim_{N \to \infty}\sum_{n=1}^N a_n + \mu \lim_{N \to \infty}\sum_{n=1}^N b_n\qquad \text{[multiplication rule]}.
+\end{align*}
+</div></article></details><span class="incontext"><a class="internal" href="week-4.html#prop-lin-series">in-context</a></span>
+</body>
+</html>

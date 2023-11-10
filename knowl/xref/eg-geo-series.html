@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Geometric series.</span>
+</h5> If <span class="process-math">\(|x|\lt 1\text{,}\)</span> then<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-exp-poly.html ./knowl/xref/prop-inf-recip-rule.html ./knowl/xref/prop-add-rule.html ./knowl/xref/prop-mult-rule.html ./knowl/xref/prop-recip-rule.html">
+\begin{equation*}
+\sum_{n=0}^\infty x^n = \frac{1}{1-x}.
+\end{equation*}
+</div>
+<details class="hiddenproof born-hidden-knowl"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">We have<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-exp-poly.html ./knowl/xref/prop-inf-recip-rule.html ./knowl/xref/prop-add-rule.html ./knowl/xref/prop-mult-rule.html ./knowl/xref/prop-recip-rule.html">
+\begin{equation*}
+\sum_{n=0}^N x^n  = 1 + \brac{x\sum_{n=0}^{N-1} x^n}  =  1+ \brac{x\sum_{n=0}^N x^n}- x^{N+1} .
+\end{equation*}
+</div>Re-arranging (provided that <span class="process-math">\(x \neq 1\)</span>) gives<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-exp-poly.html ./knowl/xref/prop-inf-recip-rule.html ./knowl/xref/prop-add-rule.html ./knowl/xref/prop-mult-rule.html ./knowl/xref/prop-recip-rule.html">
+\begin{equation*}
+\sum_{n=0}^N x^n = \frac{1-x^{N+1}}{1-x}.
+\end{equation*}
+</div>If <span class="process-math">\(|x| \lt  1\)</span> then <span class="process-math">\(x^N \to 0\)</span> as <span class="process-math">\(N\to \infty\)</span>  by <a href="" class="xref" data-knowl="./knowl/xref/prop-exp-poly.html" title="Proposition 3.14: Exponential beats polynomial">Proposition 3.14</a> and <a href="" class="xref" data-knowl="./knowl/xref/prop-inf-recip-rule.html" title="Proposition 3.11: Infinite reciprocal rule">Proposition 3.11</a>. By the algebra of limits (<a href="" class="xref" data-knowl="./knowl/xref/prop-add-rule.html" title="Proposition 2.14: Addition rule">Proposition 2.14</a>, <a href="" class="xref" data-knowl="./knowl/xref/prop-mult-rule.html" title="Proposition 2.17: Multiplication rule">Proposition 2.17</a> and <a href="" class="xref" data-knowl="./knowl/xref/prop-recip-rule.html" title="Proposition 2.21: Reciprocal rule">Proposition 2.21</a>) we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-exp-poly.html ./knowl/xref/prop-inf-recip-rule.html ./knowl/xref/prop-add-rule.html ./knowl/xref/prop-mult-rule.html ./knowl/xref/prop-recip-rule.html">
+\begin{equation*}
+\lim_{N \to \infty} \sum_{n=0}^N x^n = \lim_{N \to \infty} \frac{1-x^{N+1}}{1-x} = \frac{1 - x\displaystyle\lim_{N\to \infty} x^N}{1-x} = \frac{1}{1-x}.
+\end{equation*}
+</div></article></details></article><span class="incontext"><a class="internal" href="week-4.html#eg-geo-series">in-context</a></span>
+</body>
+</html>

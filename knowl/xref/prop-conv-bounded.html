@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proposition theorem-like"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.30</span><span class="period">.</span><span class="space"> </span><span class="title">Convergent sequences are bounded.</span>
+</h6>
+<div class="para">Suppose that <span class="process-math">\((a_n)\)</span> is a convergent sequence of reals. Then <span class="process-math">\((a_n)\)</span> is a bounded sequence.</div></article><details class="hiddenproof born-hidden-knowl"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">By definition of a bounded function (<a href="" class="xref" data-knowl="./knowl/xref/def-upper-bound.html" title="Definition 1.2: Upper/lower bound">Definition 1.2</a>) we must show that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-upper-bound.html ./knowl/xref/def-seq-limit.html">
+\begin{equation*}
+(\exists M \in \R)(\forall n \in \N)[|a_n| \leq M].
+\end{equation*}
+</div>Since the sequence is convergent, there exists <span class="process-math">\(a \in \R\)</span> such that <span class="process-math">\(a_n \to a\text{.}\)</span> Taking <span class="process-math">\(\eps :=1\)</span> in the definition of the limit (<a href="" class="xref" data-knowl="./knowl/xref/def-seq-limit.html" title="Definition 1.23: Limit of convergent sequence">Definition 1.23</a>), there exists <span class="process-math">\(N = N(1)\)</span> such that for all <span class="process-math">\(n \geq N\)</span> we have <span class="process-math">\(|a_n - a| \leq 1\text{.}\)</span> Therefore, when <span class="process-math">\(n \geq N\text{,}\)</span> the triangle inequality gives<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-upper-bound.html ./knowl/xref/def-seq-limit.html">
+\begin{equation*}
+|a_n| = |a_n - a + a| \leq |a_n-a| + |a| \leq 1 + |a|.
+\end{equation*}
+</div>Rounding up if necessary, we may assume that <span class="process-math">\(N \in \N\text{,}\)</span> so we can set<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-upper-bound.html ./knowl/xref/def-seq-limit.html">
+\begin{equation*}
+M:= \max\set{|a_1|, \dots, |a_{N}|, 1+|a|}.
+\end{equation*}
+</div>Then for all <span class="process-math">\(n \in \N\)</span> we have <span class="process-math">\(|a_n| \leq M\text{.}\)</span></article></details><span class="incontext"><a class="internal" href="week-1.html#prop-conv-bounded">in-context</a></span>
+</body>
+</html>

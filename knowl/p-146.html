@@ -11,9 +11,57 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">
-<em class="emphasis">Summer Examination</em>. Worth <span class="process-math">\(70\%\)</span> of your final mark. All examination questions are variants of self-test questions.</div>
-<span class="incontext"><a class="internal" href="assessment.html#p-146">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<div class="para logical">
+<div class="para">With the above facts on absolute convergence established, we are able to prove <a href="" class="xref" data-knowl="./knowl/eq-nth-power-deriv.html" title="Equation 7.10">(7.10)</a>. By linearity of series (<a href="" class="xref" data-knowl="./knowl/prop-lin-series.html" title="Proposition 4.13: Linearity of series">Proposition 4.13</a>), for <span class="process-math">\(x \in [-r,r]\)</span> with <span class="process-math">\(x\neq x_0\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-nth-power-deriv.html ./knowl/prop-lin-series.html ./knowl/def-differentiable.html ./knowl/cor-eps-delta-cts.html">
+\begin{equation*}
+\frac{f(x) - f(x_0)}{x-x_0} - \sum_{n=1}^\infty na_n x_0^{n-1} 
+= \recip{x-x_0}\sum_{n=2}^\infty a_n \sqbrac{x^n-x_0^n-(x-x_0)nx_0^{n-1}}\text{.}
+\end{equation*}
+</div>
+<div class="para">For <span class="process-math">\(n\in \N\)</span> we have the identity</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-nth-power-deriv.html ./knowl/prop-lin-series.html ./knowl/def-differentiable.html ./knowl/cor-eps-delta-cts.html">
+\begin{equation*}
+x^n-x_0^n = (x-x_0)\brac{x^{n-1} + x^{n-2}x_0 + \dots + xx_0^{n-2} + x_0^{n-1}}\text{.}
+\end{equation*}
+</div>
+<div class="para">Hence for <span class="process-math">\(x,x_0 \in [-r,r]\)</span> and <span class="process-math">\(k \in \N\cup\set{0}\)</span> we obtain the bound</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-nth-power-deriv.html ./knowl/prop-lin-series.html ./knowl/def-differentiable.html ./knowl/cor-eps-delta-cts.html">
+\begin{equation*}
+|x^k-x_0^k| \leq |x-x_0|kr^{k-1}\text{.}
+\end{equation*}
+</div>
+<div class="para">Hence for <span class="process-math">\(x,x_0 \in [-r,r]\)</span> and <span class="process-math">\(n\in \N\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-nth-power-deriv.html ./knowl/prop-lin-series.html ./knowl/def-differentiable.html ./knowl/cor-eps-delta-cts.html">
+\begin{align*}
+\abs{x^n-x_0^n-(x-x_0)nx_0^{n-1}} \amp \leq \sum_{k=0}^{n-1} \abs{x^{k}x_0^{n-1-k} - x_0^{n-1}} \\
+\amp = \sum_{k=0}^{n-1} \abs{x^k-x_0^k}|x_0|^{n-1-k} \\
+\amp \leq  \sum_{k=0}^{n-1} k|x-x_0|r^{n-2} \leq n^2 |x-x_0| r^{n-2}\text{.}
+\end{align*}
+</div>
+<div class="para">Therefore</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-nth-power-deriv.html ./knowl/prop-lin-series.html ./knowl/def-differentiable.html ./knowl/cor-eps-delta-cts.html">
+\begin{equation*}
+\abs{\frac{f(x) - f(x_0)}{x-x_0} - \sum_{n=1}^\infty na_n x_0^{n-1}}
+\leq \abs{x-x_0}\sum_{n=2}^\infty n^2|a_n|r^{n-2}\text{.}
+\end{equation*}
+</div>
+<div class="para">On taking</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-nth-power-deriv.html ./knowl/prop-lin-series.html ./knowl/def-differentiable.html ./knowl/cor-eps-delta-cts.html">
+\begin{equation*}
+\delta(x_0, \eps) := \min\set{\frac{\eps}{\sum_{n=2}^\infty n^2|a_n|r^{n-2}}, r-|x_0|} \gt 0
+\end{equation*}
+</div>
+<div class="para">and <span class="process-math">\(y_0 := \sum_{n=1}^\infty n a_n x_0^{n-1}\text{,}\)</span> we deduce that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-nth-power-deriv.html ./knowl/prop-lin-series.html ./knowl/def-differentiable.html ./knowl/cor-eps-delta-cts.html">
+\begin{align*}
+(\forall \eps \gt 0)\amp(\exists \delta \gt 0)(\forall x \in (-R, R)\setminus\set{x_0})\\
+\amp \sqbrac{ |x-x_0| \leq \delta \implies \abs{\tfrac{f(x)-f(x_0)}{x-x_0} - y_0}\leq \eps}\text{.}
+\end{align*}
+</div>
+<div class="para">So we have established the definition of differentiability (<a href="" class="xref" data-knowl="./knowl/def-differentiable.html" title="Definition 7.2: Differentiable">Definition 7.2</a>) via the epsilon-delta characterisation (<a href="" class="xref" data-knowl="./knowl/cor-eps-delta-cts.html" title="Proposition 5.17: Epsilon-delta characterisation of the limit">Proposition 5.17</a>) of a finite limit at a finite point.</div>
+</div>
+<span class="incontext"><a class="internal" href="week-7.html#p-146">in-context</a></span>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -12,7 +12,25 @@
 </head>
 <body class="ignore-math">
 <article class="proposition theorem-like"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.24</span><span class="period">.</span><span class="space"> </span><span class="title">Differentiable implies continuous.</span>
-</h5>Let <span class="process-math">\(f : (a,b) \to \R\)</span> be differentiable at <span class="process-math">\(x_0 \in (a,b)\text{.}\)</span> Then <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0\text{.}\)</span></article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-45-hidden.html" title="Proof 6.24.1"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><span class="incontext"><a href="week-6.html#prop-diff-cts" class="internal">in-context</a></span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">7.7</span><span class="period">.</span><span class="space"> </span><span class="title">Differentiable implies continuous.</span>
+</h5>Let <span class="process-math">\(f : (a,b) \to \R\)</span> be differentiable at <span class="process-math">\(x_0 \in (a,b)\text{.}\)</span> Then <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0\text{.}\)</span></article><details class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof">By the epsilon-delta characterisation of a finite limit at a finite point (see <a href="" class="xref" data-knowl="./knowl/cor-eps-delta-cts.html" title="Proposition 5.17: Epsilon-delta characterisation of the limit">Proposition 5.17</a>) we are required to verify that<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/def-differentiable.html ./knowl/eq-cts-to-verify.html">
+\begin{align}
+(\forall \eps \gt 0)(\exists \delta_1 \amp= \delta_1(x_0,\eps) \gt 0)(\forall x \in (a,b))\notag\\
+\amp \bigsqbrac{\ |x-x_0| \leq \delta_1 \implies |f(x)-f(x_0)| \leq \eps\ }.\tag{7.1}
+\end{align}
+</div>By the definition of differentiability (see <a href="" class="xref" data-knowl="./knowl/def-differentiable.html" title="Definition 7.2: Differentiable">Definition 7.2</a>) we know that<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/def-differentiable.html ./knowl/eq-cts-to-verify.html">
+\begin{align*}
+(\forall \eps \gt 0)\amp(\exists \delta_2 = \delta_2(x_0,\eps) \gt 0) (\forall x \in (a,b))\\
+\amp \sqbrac{\ 0\lt |x-x_0| \leq \delta_2 \implies \abs{\frac{f(x)-f(x_0)}{x-x_0}-f'(x_0)} \leq \eps\ }.
+\end{align*}
+</div>In particular, if <span class="process-math">\(x \in (a,b) \)</span> and <span class="process-math">\(0\lt|x-x_0| \leq \delta_2\)</span> then<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/def-differentiable.html ./knowl/eq-cts-to-verify.html">
+\begin{equation*}
+\abs{f(x)-f(x_0)} \leq \eps \abs{x-x_0} + \abs{f'(x_0)}|x-x_0|.
+\end{equation*}
+</div>We therefore obtain <a href="" class="xref" data-knowl="./knowl/eq-cts-to-verify.html" title="Equation 7.1">(7.1)</a> on taking<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/def-differentiable.html ./knowl/eq-cts-to-verify.html">
+\begin{equation*}
+\delta_1(x_0,\eps) := \min\set{\delta_2(x_0,\eps),\frac{\eps}{\eps+\abs{f'(x_0)}}}.
+\end{equation*}
+</div></article></details><span class="incontext"><a class="internal" href="week-7.html#prop-diff-cts">in-context</a></span>
 </body>
 </html>

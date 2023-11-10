@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proposition theorem-like"><h5 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.5</span><span class="period">.</span>
+</h5>
+<div class="para">Let <span class="process-math">\((a_n)_n\)</span> and <span class="process-math">\((b_n)_n\)</span> be sequences of real numbers such that <span class="process-math">\(a_n\to a\)</span> and <span class="process-math">\(b_n\to b\)</span> as <span class="process-math">\(n\to\infty\text{.}\)</span> Suppose that  <span class="process-math">\(a_n \leq b_n\)</span> for all <span class="process-math">\(n\text{.}\)</span> Then <span class="process-math">\(a \leq b\text{.}\)</span>
+</div> <div class="para">The conclusion of this result still holds if one relaxes the assumption <em class="emphasis">"<span class="process-math">\(a_n \leq b_n\)</span> for all <span class="process-math">\(n\)</span>’’</em> to <em class="emphasis">"<span class="process-math">\(a_n \leq b_n\)</span> for all but finitely<a class="xref" id="prop-ineq-rule-1-2-2-2" href="" data-knowl="./knowl/fn/prop-ineq-rule-1-2-2-2.html" title="Footnote 2.1"><sup> 1 </sup></a> many <span class="process-math">\(n\)</span>’’</em>.</div></article><details class="hiddenproof born-hidden-knowl"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof"><div class="para">We shall derive a contradiction from the assumption that <span class="process-math">\(a \gt b\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">By definition of the limit (<a href="" class="xref" data-knowl="./knowl/xref/def-seq-limit.html" title="Definition 1.23: Limit of convergent sequence">Definition 1.23</a>,) we have that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-seq-limit.html ./knowl/xref/eq-lim-def-4.html ./knowl/xref/eq-lim-def-5.html">
+\begin{align}
+\amp\forall \eps \gt 0\ \exists N_1 = N_1(\eps)\ \forall n \geq N_1 \text{ we have } \abs{a - a_n} \leq \eps,\tag{2.1}\\
+\amp\forall \eps \gt 0\ \exists N_2 = N_2(\eps)\ \forall n \geq N_2 \text{ we have } \abs{b - b_n} \leq \eps .\tag{2.2}
+\end{align}
+</div>
+<div class="para">Set</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-seq-limit.html ./knowl/xref/eq-lim-def-4.html ./knowl/xref/eq-lim-def-5.html">
+\begin{equation*}
+\eps:= \trecip 3 (a-b) \gt 0 \qquad \text{and} \qquad n := \max\set{N_1(\eps),  N_2(\eps)}.
+\end{equation*}
+</div>
+<div class="para">Then by <a href="" class="xref" data-knowl="./knowl/xref/eq-lim-def-4.html" title="Equation 2.1">(2.1)</a>,  <a href="" class="xref" data-knowl="./knowl/xref/eq-lim-def-5.html" title="Equation 2.2">(2.2)</a> and the triangle inequality</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-seq-limit.html ./knowl/xref/eq-lim-def-4.html ./knowl/xref/eq-lim-def-5.html">
+\begin{align*}
+a_n = a + (a_n-a)\amp = b + (a-b) + (a_n-a)\\
+\amp = b_n + (b-b_n) + (a-b) + (a_n-a)\\
+\amp \geq  b_n +(a-b) - |b-b_n| - |a_n-a|\\
+\amp \geq b_n + 3 \eps - \eps - \eps\\
+\amp \gt b_n.
+\end{align*}
+</div>
+<div class="para">This contradicts our assumption that <span class="process-math">\(a_n \leq b_n\)</span> for all <span class="process-math">\(n\text{,}\)</span> completing our proof.</div>
+</div></article></details><span class="incontext"><a class="internal" href="week-2.html#prop-ineq-rule">in-context</a></span>
+</body>
+</html>

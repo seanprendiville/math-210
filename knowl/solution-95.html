@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -13,13 +13,40 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">8.11.a.1</span><span class="period">.</span>
-</h4>By our conventions for integer powers, if <span class="process-math">\(a \in (0,\infty)\)</span> and <span class="process-math">\(n \in \Z\)</span> then the addition rule <span class="process-math">\(\exp(x)\exp(y) = \exp(x+y)\)</span> gives <span class="process-math">\(\exp(x)^n = \exp(nx)\text{,}\)</span> hence<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-exist-roots.html">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">7.6.1</span><span class="period">.</span>
+</h4>
+<article class="proposition theorem-like"><h5 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">7.7</span><span class="period">.</span><span class="space"> </span><span class="title">Differentiable implies continuous.</span>
+</h5>Let <span class="process-math">\(f : (a,b) \to \R\)</span> be differentiable at <span class="process-math">\(x_0 \in (a,b)\text{.}\)</span> Then <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0\text{.}\)</span></article><details class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof">By the epsilon-delta characterisation of a finite limit at a finite point (see <a href="" class="xref" data-knowl="./knowl/cor-eps-delta-cts.html" title="Proposition 5.17: Epsilon-delta characterisation of the limit">Proposition 5.17</a>) we are required to verify that<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/def-differentiable.html ./knowl/eq-cts-to-verify.html">
+\begin{align}
+(\forall \eps \gt 0)(\exists \delta_1 \amp= \delta_1(x_0,\eps) \gt 0)(\forall x \in (a,b))\notag\\
+\amp \bigsqbrac{\ |x-x_0| \leq \delta_1 \implies |f(x)-f(x_0)| \leq \eps\ }.\tag{7.1}
+\end{align}
+</div>By the definition of differentiability (see <a href="" class="xref" data-knowl="./knowl/def-differentiable.html" title="Definition 7.2: Differentiable">Definition 7.2</a>) we know that<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/def-differentiable.html ./knowl/eq-cts-to-verify.html">
+\begin{align*}
+(\forall \eps \gt 0)\amp(\exists \delta_2 = \delta_2(x_0,\eps) \gt 0) (\forall x \in (a,b))\\
+\amp \sqbrac{\ 0\lt |x-x_0| \leq \delta_2 \implies \abs{\frac{f(x)-f(x_0)}{x-x_0}-f'(x_0)} \leq \eps\ }.
+\end{align*}
+</div>In particular, if <span class="process-math">\(x \in (a,b) \)</span> and <span class="process-math">\(0\lt|x-x_0| \leq \delta_2\)</span> then<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/def-differentiable.html ./knowl/eq-cts-to-verify.html">
 \begin{equation*}
-a^n = \brac{\exp(\log a)}^n = \exp(n\log a).
+\abs{f(x)-f(x_0)} \leq \eps \abs{x-x_0} + \abs{f'(x_0)}|x-x_0|.
 \end{equation*}
-</div>We observe that <span class="process-math">\(\exp\brac{\recip{n} \log a}^n = \exp(\log a) = a\text{.}\)</span> Hence <span class="process-math">\(\exp\brac{\recip{n} \log a}\)</span> is a positive <span class="process-math">\(n\)</span>th root of <span class="process-math">\(a\text{.}\)</span> By uniqueness of positive roots (<a href="" class="xref" data-knowl="./knowl/cor-exist-roots.html" title="Corollary 6.17: Existence of roots">Corollary 6.17</a>) we have <span class="process-math">\(\sqrt[n]{a} = \exp\brac{\recip{n} \log a}\text{.}\)</span>
+</div>We therefore obtain <a href="" class="xref" data-knowl="./knowl/eq-cts-to-verify.html" title="Equation 7.1">(7.1)</a> on taking<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/def-differentiable.html ./knowl/eq-cts-to-verify.html">
+\begin{equation*}
+\delta_1(x_0,\eps) := \min\set{\delta_2(x_0,\eps),\frac{\eps}{\eps+\abs{f'(x_0)}}}.
+\end{equation*}
+</div></article></details> <details class="example example-like"><summary><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.8</span><span class="period">.</span><span class="space"> </span><span class="title">A continuous function which is not differentiable.</span>
+</h5></summary><article class="example example-like"> The function <span class="process-math">\(x \mapsto |x|\)</span>  is an example of a function which is continuous at a point, but not differentiable there (namely at <span class="process-math">\(x_0 = 0\)</span>). Hence continuity does not imply differentiability. To see that this function is not differentiable at <span class="process-math">\(x_0=0\text{,}\)</span> consider the sequences <span class="process-math">\((1/n)_{n=1}^\infty\)</span> and <span class="process-math">\((-1/n)_{n=1}^\infty\text{.}\)</span> Both are sequences in the set <span class="process-math">\(\R\setminus\set{0}\)</span> and both converge to 0, yet<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-differentiable.html">
+\begin{equation*}
+\frac{|1/n|-|0|}{(1/n)-0} = 1 \to 1 \quad\text{as}\quad n \to \infty
+\end{equation*}
+</div>whilst<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-differentiable.html">
+\begin{equation*}
+\frac{|-1/n|-|0|}{(-1/n)-0} = -1 \to 1 \quad\text{as}\quad n \to \infty\text{.}
+\end{equation*}
+</div>It follows that <span class="process-math">\(x \mapsto |x|\)</span> does not satisfy the definition (<a href="" class="xref" data-knowl="./knowl/def-differentiable.html" title="Definition 7.2: Differentiable">Definition 7.2</a>) of being differentiable at <span class="process-math">\(x_0 = 0\text{,}\)</span> since if <span class="process-math">\(y_0\)</span> were the derivative then we get the contradiction that <span class="process-math">\(-1 = y_0= 1\text{.}\)</span></article></details>
 </div>
-<span class="incontext"><a href="week-8.html#solution-95" class="internal">in-context</a></span>
+<span class="incontext"><a class="internal" href="week-7.html#solution-95">in-context</a></span>
 </body>
 </html>

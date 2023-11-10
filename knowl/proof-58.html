@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,10 +11,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>By the definition of function limits (<a href="" class="xref" data-knowl="./knowl/def-fn-lim.html" title="Definition 5.11: Sequential definition of function limit">Definition 5.11</a>), we are required to show that if <span class="process-math">\(a_n\to \infty\)</span> then <span class="process-math">\(\exp(a_n)\to \infty\text{.}\)</span> We note that by definition of tending to infinity (<a href="" class="xref" data-knowl="./knowl/def-seq-div-inf.html" title="Definition 1.17: Tending to \infty">Definition 1.17</a>) there exists <span class="process-math">\(N\in \N\)</span> such that for all <span class="process-math">\(n\geq N\)</span> we have <span class="process-math">\(a_n\geq 0\text{.}\)</span> For <span class="process-math">\(n\geq N\)</span> we therefore have the inequality<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-fn-lim.html ./knowl/def-seq-div-inf.html ./knowl/cor-sandwich.html">
+<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>Since differentiability implies continuity (<a href="" class="xref" data-knowl="./knowl/prop-diff-cts.html" title="Proposition 7.7: Differentiable implies continuous">Proposition 7.7</a>), the function <span class="process-math">\(g\)</span> is continuous at <span class="process-math">\(x_0\text{.}\)</span> Since <span class="process-math">\(g(x_0) \neq 0\text{,}\)</span> and non-zero points of continuity yield a non-zero neighbourhood (<a href="" class="xref" data-knowl="./knowl/cor-non-zero-cts.html" title="Proposition 5.19: Inequalities spread around a limit">Proposition 5.19</a>), there exists <span class="process-math">\(\delta \gt0\)</span>  such that <span class="process-math">\(g(x) \neq 0\)</span> for all <span class="process-math">\(x \in  (a,b)\cap (x_0-\delta, x_0+\delta)\text{.}\)</span> Decreasing <span class="process-math">\(\delta\)</span> if necessary, we may assume that <span class="process-math">\((x_0-\delta, x_0+\delta)\subset (a,b)\text{.}\)</span> Hence the quotient <span class="process-math">\(x \mapsto f(x)/g(x)\)</span> is defined on <span class="process-math">\((x_0-\delta, x_0+\delta)\text{.}\)</span> Composing the reciprocal function <span class="process-math">\(y \mapsto 1/y\)</span> with <span class="process-math">\(g\text{,}\)</span> the chain rule (<a href="" class="xref" data-knowl="./knowl/thm-chain-rule.html" title="Theorem 7.12: Chain rule">Theorem 7.12</a>) and <a href="" class="xref" data-knowl="./knowl/eg-recip-diff.html" title="Example 7.5: The reciprocal function is differentiable">Example 7.5</a> together give that the function<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/cor-non-zero-cts.html ./knowl/thm-chain-rule.html ./knowl/eg-recip-diff.html ./knowl/prop-alg-diff.html">
 \begin{equation*}
-\exp(a_n) = 1+a_n+\trecip{2} a_n^2 + \dots \geq  a_n .
+x\mapsto \recip{g(x)}
 \end{equation*}
-</div>Since <span class="process-math">\(a_n\to \infty\)</span> the one-sided sandwich rule for sequence limits (<a href="" class="xref" data-knowl="./knowl/cor-sandwich.html" title="Proposition 2.5: One-sided sandwich">Proposition 2.5</a>) gives that <span class="process-math">\(\exp(a_n)\to \infty\text{.}\)</span></article><span class="incontext"><a href="week-8.html#proof-58" class="internal">in-context</a></span>
+</div>is differentiable at <span class="process-math">\(x_0\text{.}\)</span> Moreover, the derivative satisfies<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/cor-non-zero-cts.html ./knowl/thm-chain-rule.html ./knowl/eg-recip-diff.html ./knowl/prop-alg-diff.html">
+\begin{equation*}
+\brac{\recip{g(x_0)}}' = -\frac{g'(x_0)}{g(x_0)^2}.
+\end{equation*}
+</div>Hence by the product rule (<a href="" class="xref" data-knowl="./knowl/prop-alg-diff.html" title="Proposition 7.10: Algebra of differentiation">Proposition 7.10</a>) the quotient <span class="process-math">\(f/g = f \cdot\brac{1/g}\)</span> is differentiable at <span class="process-math">\(x_0\)</span> with derivative<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/cor-non-zero-cts.html ./knowl/thm-chain-rule.html ./knowl/eg-recip-diff.html ./knowl/prop-alg-diff.html">
+\begin{equation*}
+\frac{f'(x_0)}{g(x_0)} - \frac{f(x_0)g'(x_0)}{g(x_0)^2}.
+\end{equation*}
+</div>This completes the proof of the quotient rule.</article><span class="incontext"><a class="internal" href="week-7.html#proof-58">in-context</a></span>
 </body>
 </html>

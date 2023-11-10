@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.4</span><span class="period">.</span><span class="space"> </span><span class="title">Existence of radius of convergence.</span>
+</h6>Let <span class="process-math">\((a_n)_{n=0}^\infty\)</span> be a sequence of real numbers. There exists <span class="process-math">\(R \in [0, \infty]\text{,}\)</span> the <em class="emphasis">radius of convergence</em>, for which both of the following hold. <ol class="decimal">
+<li><div class="para">If <span class="process-math">\(|x| \lt  R\)</span> then the power series <span class="process-math">\(\displaystyle \sum_{n=0}^\infty a_n x^n\)</span> is absolutely convergent.</div></li>
+<li><div class="para">If <span class="process-math">\(|x| \gt R\)</span> then the power series <span class="process-math">\(\displaystyle \sum_{n=0}^\infty a_n x^n\)</span> does not converge.</div></li>
+</ol> </article><details class="hiddenproof born-hidden-knowl"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof"><div class="para logical">
+<div class="para">Notice that the set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\set{|x| : \sum_{n=0}^\infty a_n x^n \text{ converges}}
+\end{equation*}
+</div>
+<div class="para">is non-empty, as it contains <span class="process-math">\(x=0\text{.}\)</span> If this set <em class="emphasis">is not</em> bounded above, set <span class="process-math">\(R:=\infty\text{.}\)</span> If this set <em class="emphasis">is</em> bounded above, we can use the completeness principle to take <span class="process-math">\(R\)</span> to be its supremum.</div>
+</div> <div class="para">If <span class="process-math">\(\sum_n a_n x^n\)</span> converges then (by definition) <span class="process-math">\(|x|\leq R\text{.}\)</span> Taking the contrapositive of this implication, we see that if <span class="process-math">\(|x| \gt R\)</span> then <span class="process-math">\(\sum_n a_n x^n\)</span> does not converge.</div> <div class="para logical">
+<div class="para">Suppose that <span class="process-math">\(|x| \lt  R\text{.}\)</span> Since decreasing a supremum gives a non upper bound  (<a href="" class="xref" data-knowl="./knowl/xref/prop-alt-sup.html" title="Lemma 1.9: Decreasing a sup gives a non-upper bound">Lemma 1.9</a>), there exists <span class="process-math">\(|y| \gt |x|\)</span> such that <span class="process-math">\(\sum_n a_n y^n\)</span> converges. Hence, by the <span class="process-math">\(n\)</span>th term test (<a href="" class="xref" data-knowl="./knowl/xref/prop-tail.html" title="Proposition 4.23: nth term test">Proposition 4.23</a>), we have <span class="process-math">\(|a_n| |y|^n \to 0\)</span> as <span class="process-math">\(n\to \infty\text{.}\)</span> In particular, as convergence implies boundedness (<a href="" class="xref" data-knowl="./knowl/xref/prop-conv-bounded.html" title="Proposition 1.30: Convergent sequences are bounded">Proposition 1.30</a>), there exists <span class="process-math">\(M\)</span> such that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-alt-sup.html ./knowl/xref/prop-tail.html ./knowl/xref/prop-conv-bounded.html ./knowl/xref/eg-geo-series.html ./knowl/xref/prop-oh-test.html">
+\begin{equation*}
+|a_n| |y|^n \leq M \qquad (\forall n \in \N)\text{.}
+\end{equation*}
+</div>
+<div class="para">It follows that for all <span class="process-math">\(n\in \N\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-alt-sup.html ./knowl/xref/prop-tail.html ./knowl/xref/prop-conv-bounded.html ./knowl/xref/eg-geo-series.html ./knowl/xref/prop-oh-test.html">
+\begin{equation*}
+|a_n x^n| = |a_n| |y|^n \brac{|x|/|y|}^n \leq M\brac{|x|/|y|}^n.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(|x|/|y| \lt  1\text{,}\)</span> the geometric series <span class="process-math">\(\sum_n (|x|/|y|)^n\)</span> is  convergent (<a href="" class="xref" data-knowl="./knowl/xref/eg-geo-series.html" title="Example 4.3: Geometric series">Example 4.3</a>). Hence by the comparison test (<a href="" class="xref" data-knowl="./knowl/xref/prop-oh-test.html" title="Proposition 4.15: Comparison test">Proposition 4.15</a>) the series <span class="process-math">\(\sum_n a_n x^n\)</span> is absolutely convergent.</div>
+</div></article></details><span class="incontext"><a class="internal" href="week-5.html#thm-radius">in-context</a></span>
+</body>
+</html>

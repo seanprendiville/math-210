@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,10 +11,85 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>The addition law <span class="process-math">\(\exp(x+y) = \exp(x)\exp(y)\)</span> is established in <a href="" class="xref" data-knowl="./knowl/prop-exp-add-law.html" title="Proposition 5.9">Proposition 5.9</a>. From the addition law, it follows that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-exp-add-law.html">
+<article class="hiddenproof"><h5 class="heading"><span class="title">Proof of the general case (non-examinable).</span></h5> Let <span class="process-math">\((a_n)_{n=1}^\infty\)</span> be a sequence in <span class="process-math">\((a,b) \setminus\set{x_0}\)</span> with <span class="process-math">\(a_n \to x_0\text{.}\)</span> We wish to prove that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/prop-mult-rule.html ./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation}
+\lim_{n\to \infty} \frac{g\bigbrac{f(a_n)}-g\bigbrac{f(x_0)}}{a_n-x_0} = g'\bigbrac{f(x_0)}f'(x_0).\tag{7.2}
+\end{equation}
+</div>We have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/prop-mult-rule.html ./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation}
+\frac{g\bigbrac{f( a_n)} - g\bigbrac{f(x_0)}}{ a_n-x_0} = 
+\begin{cases}
+0, \amp \text{if } f( a_n) = f(x_0);\\
+\frac{g\brac{f( a_n)}-g\brac{f(x_0)}}{f( a_n)-f(x_0)}\cdot \frac{f( a_n)-f(x_0)}{ a_n-x_0}, \amp \text{otherwise.}
+\end{cases}\tag{7.3}
+\end{equation}
+</div>
+<div class="para logical">
+<div class="para">First, let us suppose that <span class="process-math">\(f(a_n) = f(x_0)\)</span> for only finitely many values of <span class="process-math">\(n\text{.}\)</span> Then there exists <span class="process-math">\(N_0\in \N\)</span> such that for all <span class="process-math">\(n \geq N_0\)</span> we have <span class="process-math">\(f(a_n)\neq f(x_0)\text{.}\)</span> Hence for all <span class="process-math">\(n \geq N_0\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/prop-mult-rule.html">
 \begin{equation*}
-\exp(x)\exp(-x) = \exp(0) = 1.
+\frac{g\bigbrac{f(a_n)}-g\bigbrac{f(x_0)}}{a_n-x_0} = \frac{g\bigbrac{f(a_n)}-g\bigbrac{f(x_0)}}{f(a_n)-f(x_0)}\cdot \frac{f(a_n)-f(x_0)}{a_n-x_0} . 
 \end{equation*}
-</div>Thus <span class="process-math">\(\exp(-x) = 1/\exp(x)\text{.}\)</span></article><span class="incontext"><a href="week-8.html#proof-57" class="internal">in-context</a></span>
+</div>
+<div class="para">Since differentiability implies continuity (<a href="" class="xref" data-knowl="./knowl/prop-diff-cts.html" title="Proposition 7.7: Differentiable implies continuous">Proposition 7.7</a>), we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/prop-mult-rule.html">
+\begin{equation*}
+\lim_{n \to \infty} f(a_n) = f(x_0).
+\end{equation*}
+</div>
+<div class="para">Thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/prop-mult-rule.html">
+\begin{equation}
+\lim_{n\to \infty} \frac{g\bigbrac{f(a_n)}-g\bigbrac{f(x_0)}}{f(a_n)-f(x_0)} = g'\bigbrac{f(x_0)}.\tag{7.4}
+\end{equation}
+</div>
+<div class="para">We may therefore use the multiplication rule for sequential limits (<a href="" class="xref" data-knowl="./knowl/prop-mult-rule.html" title="Proposition 2.17: Multiplication rule">Proposition 2.17</a>) to deduce that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-diff-cts.html ./knowl/prop-mult-rule.html">
+\begin{align*}
+\lim_{n \to \infty} \frac{g\bigbrac{f(a_n)}-g\bigbrac{f(x_0)}}{a_n-x_0} \amp = \lim_{n\to\infty}\brac{ \frac{g\bigbrac{f(a_n)}-g\bigbrac{f(x_0)}}{f(a_n)-f(x_0)}\cdot \frac{f(a_n)-f(x_0)}{a_n-x_0}}\\
+\amp = \lim_{n\to\infty}\frac{g\bigbrac{f(a_n)}-g\bigbrac{f(x_0)}}{f(a_n)-f(x_0)}\lim_{n\to \infty} \frac{f(a_n)-f(x_0)}{a_n-x_0}\\
+\amp = g'\bigbrac{f(x_0)}f'(x_0).
+\end{align*}
+</div>
+</div> <div class="para logical">
+<div class="para">Next, let us suppose that <span class="process-math">\(f(a_n)  = f(x_0)\)</span> for infinitely many values of <span class="process-math">\(n\text{.}\)</span> Write <span class="process-math">\(k_1 \lt  k_2 \lt  \dots\)</span> for those indices for which  <span class="process-math">\(f(x_{k_n}) = f(x_0)\text{.}\)</span> Write <span class="process-math">\(\ell_1 \lt  \ell_2 \lt  \dots\)</span> for the (possibly finite) remaining indices with <span class="process-math">\(f(x_{l_n}) \neq f(x_0)\text{.}\)</span> The sequence</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation}
+n\mapsto \frac{g\bigbrac{f(x_{\ell_n})}-g\bigbrac{f(x_0)}}{f(x_{\ell_n})-f(x_0)}\tag{7.5}
+\end{equation}
+</div>
+<div class="para">is either a finite sequence, or converges as in the proof of <a href="" class="xref" data-knowl="./knowl/eq-comp-subseq.html" title="Equation 7.4">(7.4)</a>. In either case, the sequence is bounded, so there exists <span class="process-math">\(M \in \R\)</span> such that for all <span class="process-math">\(\ell_n\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation*}
+\abs{\frac{g\bigbrac{f(x_{\ell_n})}-g\bigbrac{f(x_0)}}{f(x_{\ell_n})-f(x_0)}
+} \leq M.
+\end{equation*}
+</div>
+<div class="para">Combining this with <a href="" class="xref" data-knowl="./knowl/eq-chain-alt.html" title="Equation 7.3">(7.3)</a>, for any <span class="process-math">\(n \in \N\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation}
+\abs{\frac{g\bigbrac{f( a_n)} - g\bigbrac{f(x_0)}}{ a_n-x_0}} \leq M\abs{\frac{f(x_{n}) - f(x_0)}{x_{n} - x_0}}.\tag{7.6}
+\end{equation}
+</div>
+<div class="para">Since <span class="process-math">\(x_{k_n} \to x_0\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation*}
+f'(x_0) = \lim_{n \to \infty} \frac{f(x_{k_n}) - f(x_0)}{x_{k_n} - x_0} = 0.
+\end{equation*}
+</div>
+<div class="para">So it follows that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation*}
+\lim_{n \to \infty} \frac{f(x_{n}) - f(x_0)}{x_{n} - x_0} = f'(x_0) = 0.
+\end{equation*}
+</div>
+<div class="para">Combining this with <a href="" class="xref" data-knowl="./knowl/eq-alt-chain-ineq.html" title="Equation 7.6">(7.6)</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-comp-subseq.html ./knowl/eq-chain-alt.html ./knowl/eq-alt-chain-ineq.html ./knowl/eq-chain-to-prove.html">
+\begin{equation*}
+\lim_{n\to \infty}\abs{\frac{g\bigbrac{f( a_n)} - g\bigbrac{f(x_0)}}{ a_n-x_0}} = 0.
+\end{equation*}
+</div>
+<div class="para">Hence <a href="" class="xref" data-knowl="./knowl/eq-chain-to-prove.html" title="Equation 7.2">(7.2)</a> also follows in this case.</div>
+</div></article><span class="incontext"><a class="internal" href="week-7.html#proof-57">in-context</a></span>
 </body>
 </html>
