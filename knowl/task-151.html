@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="task exercise-like"><h5 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">8.1.b</span><span class="period">.</span>
+</h5>State and prove how a derivative must be zero at a local max/min.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="proposition theorem-like"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.3</span><span class="period">.</span><span class="space"> </span><span class="title">The derivative is zero at a local max/min.</span>
+</h6>Suppose that <span class="process-math">\(f : (a,b) \to \R\)</span> is differentiable at <span class="process-math">\(x_0 \in (a,b)\text{.}\)</span> Suppose that <span class="process-math">\(x_0\)</span> is a local maximum or local minimum for <span class="process-math">\(f\text{.}\)</span> Then <span class="process-math">\(f'(x_0) = 0\text{.}\)</span></article><details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">Let us suppose that <span class="process-math">\(x_0\)</span> is a local maximum for <span class="process-math">\(f\text{;}\)</span> the argument for the local minimum is similar. By definition of a local maximum (see <a href="" class="xref" data-knowl="./knowl/def-local-max-min.html" title="Definition 8.2: Local max/min">Definition 8.2</a>) there exists <span class="process-math">\(\delta \gt 0\)</span> such that for all <span class="process-math">\(x \in (a,b)\cap [x_0-\delta, x_0+\delta]\)</span> we have <span class="process-math">\(f(x_0) \geq f(x)\text{.}\)</span> Decreasing <span class="process-math">\(\delta \gt 0\)</span> if necessary<a class="xref" id="fn-12" href="" data-knowl="./knowl/fn-12.html" title="Footnote 8.1"><sup> 1 </sup></a>, we may assume that<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-local-max-min.html ./knowl/def-fn-lim.html ./knowl/def-differentiable.html ./knowl/prop-ineq-rule.html">
+\begin{equation*}
+[x_0-\delta, x_0+\delta] \subset (a,b)\text{.}
+\end{equation*}
+</div>Hence<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-local-max-min.html ./knowl/def-fn-lim.html ./knowl/def-differentiable.html ./knowl/prop-ineq-rule.html">
+\begin{equation*}
+\frac{f(x)-f(x_0)}{x-x_0}  \begin{cases} \geq 0 \amp \text{ if } x_0-\delta \leq  x \lt  x_0,\\
+\leq 0 \amp \text{ if } x_0 \lt  x \leq  x_0+\delta.\end{cases}
+\end{equation*}
+</div>Setting <span class="process-math">\(a_n := x_0-\trecip{n}\delta\text{,}\)</span> the sequential definition of the limit <a href="" class="xref" data-knowl="./knowl/def-fn-lim.html" title="Definition 5.12: Sequential definition of function limit">Definition 5.12</a>, the definition of the derivative (<a href="" class="xref" data-knowl="./knowl/def-differentiable.html" title="Definition 7.2: Differentiable">Definition 7.2</a>) and the inequality rule (<a href="" class="xref" data-knowl="./knowl/prop-ineq-rule.html" title="Proposition 2.5">Proposition 2.5</a>) give that<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-local-max-min.html ./knowl/def-fn-lim.html ./knowl/def-differentiable.html ./knowl/prop-ineq-rule.html">
+\begin{equation*}
+f'(x_0) = \lim_{n\to \infty}\frac{f(a_n)-f(x_0)}{a_n-x_0} \geq 0.
+\end{equation*}
+</div>Similarly, setting <span class="process-math">\(b_0:= x_0+\trecip{n}\delta\)</span> gives<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-local-max-min.html ./knowl/def-fn-lim.html ./knowl/def-differentiable.html ./knowl/prop-ineq-rule.html">
+\begin{equation*}
+f'(x_0) = \lim_{n\to \infty}\frac{f(b_n)-f(x_0)}{a_n-x_0} \leq 0.
+\end{equation*}
+</div>Thus <span class="process-math">\(f'(x_0) = 0\text{.}\)</span></article></details>
+</div></details></div></article><span class="incontext"><a class="internal" href="week-8.html#task-151">in-context</a></span>
+</body>
+</html>

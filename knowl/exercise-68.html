@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">-</span><span class="space"> </span><span class="codenumber">8.10</span><span class="period">.</span><span class="space"> </span><span class="title">The exponential function.</span>
+</h4>
+<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>Prove that the exponential function is infinitely differentiable and calculate its derivative.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="proposition theorem-like"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.11</span><span class="period">.</span>
+</h6>The exponential function <span class="process-math">\(\exp : \R \to \R\text{,}\)</span> given by<div class="displaymath process-math">
+\begin{equation*}
+\exp(x) := \sum_{n=0}^\infty \frac{x^n}{n!}
+\end{equation*}
+</div>is infinitely differentiable with first derivative<div class="displaymath process-math">
+\begin{equation}
+\exp'(x) = \exp(x).\tag{8.2}
+\end{equation}
+</div></article><details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">The infinite radius of convergence of the power series is proved in <a href="" class="xref" data-knowl="./knowl/prop-exp-radius.html" title="Proposition 5.7: Radius of convergence for the exponential function">Proposition 5.7</a>. Infinite differentiability and the formula <a href="" class="xref" data-knowl="./knowl/eq-exp-deriv.html" title="Equation 8.2">(8.2)</a> then both follow from <a href="" class="xref" data-knowl="./knowl/cor-power-diff.html" title="Theorem 7.18: Power series are differentiable within their radius of convergence">Theorem 7.18</a>.</article></details>
+</div></details></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>State and prove a formula for the reciprocal of the exponential function.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="proposition theorem-like"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.12</span><span class="period">.</span>
+</h6>For all  <span class="process-math">\(x \in \R\)</span> we have the formula<div class="displaymath process-math">
+\begin{equation*}
+\exp(-x) = \recip{\exp(x)}.
+\end{equation*}
+</div></article><details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">The addition law <span class="process-math">\(\exp(x+y) = \exp(x)\exp(y)\)</span> is established in <a href="" class="xref" data-knowl="./knowl/prop-exp-add-law.html" title="Proposition 5.10">Proposition 5.10</a>. From the addition law, it follows that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-exp-add-law.html">
+\begin{equation*}
+\exp(x)\exp(-x) = \exp(0) = 1.
+\end{equation*}
+</div>Thus <span class="process-math">\(\exp(-x) = 1/\exp(x)\text{.}\)</span></article></details>
+</div></details></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(c)</span></h5>Justify why the exponential function is positive everywhere.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">By the inequality rule for sequences (<a href="" class="xref" data-knowl="./knowl/prop-ineq-rule.html" title="Proposition 2.5">Proposition 2.5</a>), when <span class="process-math">\(x \geq 0\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-ineq-rule.html">
+\begin{equation*}
+\exp(x) = \lim_{N\to \infty} \brac{1 + x + \trecip{2} x^2 + \dots + \trecip{N!} x^N} \geq 1.
+\end{equation*}
+</div>Hence <span class="process-math">\(\exp(x) \geq 1\)</span> when <span class="process-math">\(x \geq 0\text{.}\)</span> If <span class="process-math">\(x \geq 0\)</span> then <span class="process-math">\(\exp(-x) = \recip{\exp(x)} \gt0\text{.}\)</span> Thus for all <span class="process-math">\(x \in \R\)</span> we have <span class="process-math">\(\exp(x) \gt 0\text{.}\)</span>
+</div></details></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(d)</span></h5>State and prove the limit of the exponential function as its argument tends to infinity.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<span class="process-math">\(\exp(x) \to \infty\)</span> as <span class="process-math">\(x\to \infty\text{.}\)</span> <details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">By the definition of function limits (<a href="" class="xref" data-knowl="./knowl/def-fn-lim.html" title="Definition 5.12: Sequential definition of function limit">Definition 5.12</a>), we are required to show that if <span class="process-math">\(a_n\to \infty\)</span> then <span class="process-math">\(\exp(a_n)\to \infty\text{.}\)</span> We note that by definition of tending to infinity (<a href="" class="xref" data-knowl="./knowl/def-seq-div-inf.html" title="Definition 3.2: Tending to \pm\infty">Definition 3.2</a>) there exists <span class="process-math">\(N\in \N\)</span> such that for all <span class="process-math">\(n\geq N\)</span> we have <span class="process-math">\(a_n\geq 0\text{.}\)</span> For <span class="process-math">\(n\geq N\)</span> we therefore have the inequality<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-fn-lim.html ./knowl/def-seq-div-inf.html ./knowl/cor-sandwich.html">
+\begin{equation*}
+\exp(a_n) = 1+a_n+\trecip{2} a_n^2 + \dots \geq  a_n .
+\end{equation*}
+</div>Since <span class="process-math">\(a_n\to \infty\)</span> the one-sided sandwich rule for sequence limits (<a href="" class="xref" data-knowl="./knowl/cor-sandwich.html" title="Proposition 3.6: One-sided sandwich">Proposition 3.6</a>) gives that <span class="process-math">\(\exp(a_n)\to \infty\text{.}\)</span></article></details>
+</div></details></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(e)</span></h5>Justify why the exponential function is strictly increasing.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">Since <span class="process-math">\(\exp'(x) = \exp(x) \gt0\)</span> and functions with positive derivative are strictly increasing (<a href="" class="xref" data-knowl="./knowl/cor-mono-diff.html" title="Corollary 8.9">Corollary 8.9</a>), we deduce that <span class="process-math">\(\exp\)</span> is strictly increasing on <span class="process-math">\(\R\text{.}\)</span>
+</div></details></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(f)</span></h5>State and prove how the exponential function is a bijection onto its image.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="proposition theorem-like"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.13</span><span class="period">.</span>
+</h6>
+<span class="process-math">\(\exp\)</span> is a bijection from <span class="process-math">\(\R\)</span> to <span class="process-math">\((0, \infty)\text{.}\)</span></article><details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">Strictly increasing functions are injective, hence to show that <span class="process-math">\(\exp\)</span> is bijective <span class="process-math">\(\R \to (0, \infty)\text{,}\)</span> we must establish that every <span class="process-math">\(y\gt 0\)</span> can be represented as <span class="process-math">\(y = \exp(x)\)</span> for some <span class="process-math">\(x \in \R\text{.}\)</span> Since <span class="process-math">\(\exp(x) \to \infty\)</span> as <span class="process-math">\(x \to \infty\text{,}\)</span> we have <span class="process-math">\(\exp(-x) = 1/\exp(x) \to 0\)</span> as <span class="process-math">\(x \to \infty\text{.}\)</span> Thus, for any <span class="process-math">\(y \in (0, \infty)\text{,}\)</span> there exists <span class="process-math">\(x_1 \lt  x_2\)</span> such that<div class="displaymath process-math">
+\begin{equation*}
+\exp(x_1) \leq y\leq \exp(x_2).
+\end{equation*}
+</div>Since differentiable functions are continuous, we may apply the intermediate value theorem to deduce the existence of <span class="process-math">\(x \in [x_1, x_2]\)</span> such that <span class="process-math">\(\exp(x) = y\text{.}\)</span></article></details>
+</div></details></div></article></article><span class="incontext"><a class="internal" href="week-8.html#exercise-68">in-context</a></span>
+</body>
+</html>

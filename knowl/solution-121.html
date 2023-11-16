@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -12,21 +12,18 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">9.14.e.1</span><span class="period">.</span>
-</h4>
-<article class="proposition theorem-like"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.19</span><span class="period">.</span><span class="space"> </span><span class="title">Restricting to a sub-interval preserves integrability.</span>
-</h5>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(c, d \in [a,b]\)</span> with <span class="process-math">\(c \lt  d\text{.}\)</span> Let <span class="process-math">\(f: [a,b] \to \R\)</span> be functions which is Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span> Then <span class="process-math">\(f\)</span> is also Riemann integrable on <span class="process-math">\([c,d]\)</span> and<div class="displaymath process-math" data-contains-math-knowls="">
+<h5 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">8.10.f.1</span><span class="period">.</span>
+</h5>
+<article class="proposition theorem-like"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.13</span><span class="period">.</span>
+</h6>
+<span class="process-math">\(\exp\)</span> is a bijection from <span class="process-math">\(\R\)</span> to <span class="process-math">\((0, \infty)\text{.}\)</span></article><details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">Strictly increasing functions are injective, hence to show that <span class="process-math">\(\exp\)</span> is bijective <span class="process-math">\(\R \to (0, \infty)\text{,}\)</span> we must establish that every <span class="process-math">\(y\gt 0\)</span> can be represented as <span class="process-math">\(y = \exp(x)\)</span> for some <span class="process-math">\(x \in \R\text{.}\)</span> Since <span class="process-math">\(\exp(x) \to \infty\)</span> as <span class="process-math">\(x \to \infty\text{,}\)</span> we have <span class="process-math">\(\exp(-x) = 1/\exp(x) \to 0\)</span> as <span class="process-math">\(x \to \infty\text{.}\)</span> Thus, for any <span class="process-math">\(y \in (0, \infty)\text{,}\)</span> there exists <span class="process-math">\(x_1 \lt  x_2\)</span> such that<div class="displaymath process-math">
 \begin{equation*}
-\int_c^d f = \int_a^b f1_{[c,d]}.
+\exp(x_1) \leq y\leq \exp(x_2).
 \end{equation*}
-</div>Furthermore, if <span class="process-math">\(c \in (a,b)\)</span> then we have the <em class="emphasis">interval additivity</em> property<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation}
-\int_a^b f = \int_a^c f+ \int_c^b f.\tag{9.5}
-\end{equation}
-</div></article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-78-hidden.html" title="Proof 9.19.1"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article>
+</div>Since differentiable functions are continuous, we may apply the intermediate value theorem to deduce the existence of <span class="process-math">\(x \in [x_1, x_2]\)</span> such that <span class="process-math">\(\exp(x) = y\text{.}\)</span></article></details>
 </div>
-<span class="incontext"><a href="week-9.html#solution-121" class="internal">in-context</a></span>
+<span class="incontext"><a class="internal" href="week-8.html#solution-121">in-context</a></span>
 </body>
 </html>

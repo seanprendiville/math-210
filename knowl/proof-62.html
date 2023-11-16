@@ -11,31 +11,6 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>Set<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html">
-\begin{align*}
-\amp g(x) := f(x) -\\
-\amp  \sqbrac{f(x_0) + (x-x_0)f'(x_0) + \trecip{2} (x-x_0)^2 f''(x_0) + \dots + \trecip{(n-1)!} (x-x_0)^{n-1} f^{(n-1)}(x_0)}\text{.}
-\end{align*}
-</div>Our aim is to prove that there exists <span class="process-math">\(x_n\)</span> between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html">
-\begin{equation}
-\abs{g(x)} \leq |x-x_0|^n \abs{g^{(n)}(x_n)}.\tag{7.10}
-\end{equation}
-</div>We do this by induction on <span class="process-math">\(n \geq 0\text{,}\)</span> the base case <span class="process-math">\(n=0\)</span> being automatic. Suppose then that <a href="" class="xref" data-knowl="./knowl/eq-taylor-to-prove.html" title="Equation 7.10">(7.10)</a> holds for <span class="process-math">\(n-1\text{,}\)</span> so that there exists <span class="process-math">\(x_{n-1}\)</span> between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html">
-\begin{equation*}
-\abs{g(x)} \leq |x-x_0|^{n-1} \abs{g^{(n-1)}(x_{n-1})}.
-\end{equation*}
-</div>Applying the mean value theorem to <span class="process-math">\(g^{(n-1)}\text{,}\)</span> there exists <span class="process-math">\(x_{n}\)</span> between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x_{n-1}\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html">
-\begin{equation*}
-g^{(n-1)}(x_{n-1}) = g^{(n-1)}(x_{0}) + (x_{n-1}-x_0) g^{(n)}(x_n) = (x_{n-1}-x_0) g^{(n)}(x_n).
-\end{equation*}
-</div>Since <span class="process-math">\(x_{n-1}\)</span> is between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x\text{,}\)</span> we must have that <span class="process-math">\(x_{n}\)</span> is between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x\)</span> and<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html">
-\begin{equation*}
-|x_{n-1}-x_0|\leq |x-x_0|\text{.}
-\end{equation*}
-</div>Therefore<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html">
-\begin{equation*}
-\abs{g(x)} \leq |x-x_0|^{n-1} \abs{(x_{n-1}-x_0) g^{(n)}(x_n)} \leq |x-x_0|^{n} \abs{g^{(n)}(x_n)},
-\end{equation*}
-</div>as required.</article><span class="incontext"><a class="internal" href="week-7.html#proof-62">in-context</a></span>
+<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>By the extreme value theorem (<a href="" class="xref" data-knowl="./knowl/thm-extreme.html" title="Theorem 6.15: Extreme value theorem">Theorem 6.15</a>), there exists <span class="process-math">\(x_1,x_2 \in [a,b]\)</span> which are minima and maxima (respectively) for <span class="process-math">\(f\)</span> on <span class="process-math">\([a,b]\text{.}\)</span> In particular <span class="process-math">\(x_1\)</span> is a local minimum and <span class="process-math">\(x_2\)</span> is a local maximum. If <span class="process-math">\(x_1 \in (a,b)\)</span> or <span class="process-math">\(x_2 \in (a,b)\text{,}\)</span> then it follows that <span class="process-math">\(f'(x_1) = 0\)</span> or <span class="process-math">\(f'(x_2) = 0\)</span> since local minima/maxima have zero derivative at points of differentiability (<a href="" class="xref" data-knowl="./knowl/lem-zero-deriv.html" title="Proposition 8.3: The derivative is zero at a local max/min">Proposition 8.3</a>). We may therefore assume that <span class="process-math">\(\set{x_1, x_2} \subset \set{a,b}\text{.}\)</span> Hence <span class="process-math">\(f(x_1) = f(x_2)\text{.}\)</span> For any <span class="process-math">\(x \in [a,b]\text{,}\)</span> we have that <span class="process-math">\(f(x)\)</span> is between <span class="process-math">\(f(x_1)\)</span> and <span class="process-math">\(f(x_2)\text{.}\)</span> Since <span class="process-math">\(f(x_1) = f(x_2)\text{,}\)</span> it follows that <span class="process-math">\(f\)</span> is constant on <span class="process-math">\([a,b]\text{.}\)</span> It then follows from <a href="" class="xref" data-knowl="./knowl/eg-const-diff.html" title="Example 7.3: Constant functions are differentiable">Example 7.3</a> that <span class="process-math">\(f'(x)= 0\)</span> at every <span class="process-math">\(x \in (a,b)\text{,}\)</span> e.g. for <span class="process-math">\(x := \frac{a+b}{2}\text{.}\)</span></article><span class="incontext"><a class="internal" href="week-8.html#proof-62">in-context</a></span>
 </body>
 </html>

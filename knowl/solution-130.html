@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -12,17 +12,21 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">10.6.a.1</span><span class="period">.</span>
-</h4>
-<article class="definition definition-like"><h5 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.7</span><span class="period">.</span><span class="space"> </span><span class="title">Pointwise convergence.</span>
-</h5> For each <span class="process-math">\(n \in \N\)</span> let <span class="process-math">\(f_n:S \to \R\)</span> be a real-valued function with domain <span class="process-math">\(S\)</span> (not necessarily a set of real numbers). Let <span class="process-math">\(f : S \to \R\text{.}\)</span> We say that the sequence of functions <span class="process-math">\((f_n)_{n=1}^\infty\)</span><em class="emphasis">converges pointwise to <span class="process-math">\(f\)</span> on <span class="process-math">\(S\)</span></em> if<div class="displaymath process-math" data-contains-math-knowls="">
+<h5 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">8.23.c.1</span><span class="period">.</span>
+</h5>Since <span class="process-math">\(\log\)</span> is injective on <span class="process-math">\((0,\infty)\text{,}\)</span> we have<div class="displaymath process-math">
 \begin{equation*}
-(\forall x \in S)\sqbrac{\lim_{n\to \infty} f_n(x) = f(x)}.
+a^x = b \iff \log(a^x) = \log(b).
 \end{equation*}
-</div></article>
-</div>
-<span class="incontext"><a href="week-10.html#solution-130" class="internal">in-context</a></span>
+</div>By definition we have <span class="process-math">\(a^x := \exp(x\log a)\text{.}\)</span> Since <span class="process-math">\(\log = \exp^{-1}\)</span> we deduce that<div class="displaymath process-math">
+\begin{equation*}
+a^x = b \iff x\log a = \log b.
+\end{equation*}
+</div>Since <span class="process-math">\(a \neq 1\text{,}\)</span> we have <span class="process-math">\(\log a\neq0\text{,}\)</span> thus we may divide by <span class="process-math">\(\log a\)</span> to conclude that<div class="displaymath process-math">
+\begin{equation*}
+a^x = b \iff x = \frac{\log b}{\log a}.
+\end{equation*}
+</div>By definition <span class="process-math">\(\log_a b = \log b / \log a\text{,}\)</span> establishing the claim.</div>
+<span class="incontext"><a class="internal" href="week-8.html#solution-130">in-context</a></span>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -13,20 +13,28 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">9.8.c.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">8.6.1</span><span class="period">.</span>
 </h4>
-<article class="proposition theorem-like"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.11</span><span class="period">.</span><span class="space"> </span><span class="title">Integrability is preserved under taking min, max and absolute values.</span>
-</h5>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(f,g : [a,b] \to \R\)</span> be functions which are Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span> Then the following functions are all Riemann integrable on <span class="process-math">\([a,b]\text{:}\)</span><div class="displaymath process-math" data-contains-math-knowls="">
+<article class="theorem theorem-like"><h5 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.7</span><span class="period">.</span><span class="space"> </span><span class="title">Mean value theorem.</span>
+</h5>Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a continuous function which is differentiable on <span class="process-math">\((a,b)\text{,}\)</span> with <span class="process-math">\(a \lt  b\text{.}\)</span> Then there exists <span class="process-math">\(x_0 \in (a,b)\)</span> such that<div class="displaymath process-math">
+\begin{equation}
+f(b) - f(a) = f'(x_0)(b-a).\tag{8.1}
+\end{equation}
+</div></article><details class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof">We deduce this result from Rolle’s theorem (<a href="" class="xref" data-knowl="./knowl/lem-rolle.html" title="Theorem 8.5: Rolle’s theorem">Theorem 8.5</a>). The idea of the proof is to try and find a continuous function <span class="process-math">\(g:[a,b] \to \R\)</span> which is differentiable on <span class="process-math">\((a,b)\)</span> with <span class="process-math">\(g(a) = g(b)\)</span> and such that the identity <span class="process-math">\(g'(x_0) = 0\)</span> implies <a href="" class="xref" data-knowl="./knowl/eq-mvt.html" title="Equation 8.1">(8.1)</a>. To this end set<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-rolle.html ./knowl/eq-mvt.html ./knowl/eg-const-cts.html ./knowl/eg-id-cts.html ./knowl/prop-alg-cts.html ./knowl/eg-const-diff.html ./knowl/eg-id-diff.html ./knowl/prop-alg-cts.html">
 \begin{equation*}
-\max\set{f,g}, \qquad\min\set{f,g},\qquad f^+,\qquad f^-,\qquad |f|.
+g(x) :=f(x) - \frac{f(b)-f(a)}{b-a} (x-a), \qquad (x \in [a,b]).
 \end{equation*}
-</div>Moreover we have the integral triangle inequality<div class="displaymath process-math" data-contains-math-knowls="">
+</div>This is continuous on <span class="process-math">\([a,b]\)</span> since constant functions are continuous (<a href="" class="xref" data-knowl="./knowl/eg-const-cts.html" title="Example 5.22: Constant functions are continuous">Example 5.22</a>), the identity function is continuous (<a href="" class="xref" data-knowl="./knowl/eg-id-cts.html" title="Example 5.23: The identity function is continuous">Example 5.23</a>) and so is the sum/product of continuous functions (<a href="" class="xref" data-knowl="./knowl/prop-alg-cts.html" title="Proposition 6.2: Algebra of (finite) function limits">Proposition 6.2</a>). The function <span class="process-math">\(g\)</span> is differentiable on <span class="process-math">\((a,b)\)</span> since constant functions are differentiable (<a href="" class="xref" data-knowl="./knowl/eg-const-diff.html" title="Example 7.3: Constant functions are differentiable">Example 7.3</a>), the identity function is differentiable (<a href="" class="xref" data-knowl="./knowl/eg-id-diff.html" title="Example 7.4: The identity function is differentiable">Example 7.4</a>) and so is the sum/product of differentiable functions (<a href="" class="xref" data-knowl="./knowl/prop-alg-cts.html" title="Proposition 6.2: Algebra of (finite) function limits">Proposition 6.2</a>). We have <span class="process-math">\(g(a) = f(a)\)</span> and <span class="process-math">\(g(b)  = f(a)\text{.}\)</span> We may therefore apply Rolle’s theorem to deduce the existence of <span class="process-math">\(x_0 \in (a,b)\)</span> such that <span class="process-math">\(g'(x_0) = 0\text{.}\)</span> Employing the sum/product rules for differentiation, we have that<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-rolle.html ./knowl/eq-mvt.html ./knowl/eg-const-cts.html ./knowl/eg-id-cts.html ./knowl/prop-alg-cts.html ./knowl/eg-const-diff.html ./knowl/eg-id-diff.html ./knowl/prop-alg-cts.html">
 \begin{equation*}
-\abs{\int_a^bf}\leq  \int_a^b|f|.
+g'(x_0) = f'(x_0) -\frac{f(b)-f(a)}{b-a}.
 \end{equation*}
-</div></article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-73-hidden.html" title="Proof 9.11.1"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article>
+</div>The result follows on re-arranging the identity<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-rolle.html ./knowl/eq-mvt.html ./knowl/eg-const-cts.html ./knowl/eg-id-cts.html ./knowl/prop-alg-cts.html ./knowl/eg-const-diff.html ./knowl/eg-id-diff.html ./knowl/prop-alg-cts.html">
+\begin{equation*}
+0 = f'(x_0) -\frac{f(b)-f(a)}{b-a}. 
+\end{equation*}
+</div></article></details>
 </div>
-<span class="incontext"><a href="week-9.html#solution-114" class="internal">in-context</a></span>
+<span class="incontext"><a class="internal" href="week-8.html#solution-114">in-context</a></span>
 </body>
 </html>

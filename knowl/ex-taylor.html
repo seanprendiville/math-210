@@ -11,51 +11,100 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="task exercise-like"><h4 class="heading">
-<span class="type">Task</span><span class="space"> </span><span class="codenumber">7.20.a</span><span class="period">.</span>
-</h4>State and prove Taylor’s theorem.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
-<article class="theorem theorem-like"><h5 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.21</span><span class="period">.</span>
-</h5>Let <span class="process-math">\(f : (a,b) \to \R\)</span> be a function which is <span class="process-math">\(n\)</span>-times differentiable and let <span class="process-math">\(x_0, x \in (a,b)\text{.}\)</span> Then there exists <span class="process-math">\(x_n\)</span> between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x\)</span> such that<div class="displaymath process-math">
-\begin{align}
-\amp \abs{f(x) - \sqbrac{f(x_0) + (x-x_0)f'(x_0) +  \dots + \trecip{(n-1)!} (x-x_0)^{n-1} f^{(n-1)}(x_0)}}\notag\\
-\amp \qquad\qquad\qquad \leq |x-x_0|^n|f^{(n)}(x_n)|.\tag{7.9}
-\end{align}
-</div></article><details class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof">Set<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html">
+<article class="task exercise-like"><h5 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">8.10.a</span><span class="period">.</span>
+</h5>State Taylor’s theorem (the proof is non-examinable).<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="theorem theorem-like"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.11</span><span class="period">.</span><span class="space"> </span><span class="title">Taylor’s theorem.</span>
+</h6>Let <span class="process-math">\(f : (a,b) \to \R\)</span> be a function which is <span class="process-math">\(n\)</span>-times differentiable and let <span class="process-math">\(x_0, x \in (a,b)\text{.}\)</span> Then<div class="displaymath process-math">
 \begin{align*}
-\amp g(x) := f(x) -\\
-\amp  \sqbrac{f(x_0) + (x-x_0)f'(x_0) + \trecip{2} (x-x_0)^2 f''(x_0) + \dots + \trecip{(n-1)!} (x-x_0)^{n-1} f^{(n-1)}(x_0)}\text{.}
+\Bigl|f(x) - \amp\bigl[f(x_0) + (x-x_0)f'(x_0)  + \dots +  \trecip{(n-1)!} (x-x_0)^{n-1} f^{(n-1)}(x_0)\bigr]\Bigr|\\
+\amp \leq \trecip{n!}|x-x_0|^n\sup\set{|f^{(n)}(t)| : t \text{ is between } x \text{ and } x_0}.
 \end{align*}
-</div>Our aim is to prove that there exists <span class="process-math">\(x_n\)</span> between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html">
-\begin{equation}
-\abs{g(x)} \leq |x-x_0|^n \abs{g^{(n)}(x_n)}.\tag{7.10}
-\end{equation}
-</div>We do this by induction on <span class="process-math">\(n \geq 0\text{,}\)</span> the base case <span class="process-math">\(n=0\)</span> being automatic. Suppose then that <a href="" class="xref" data-knowl="./knowl/eq-taylor-to-prove.html" title="Equation 7.10">(7.10)</a> holds for <span class="process-math">\(n-1\text{,}\)</span> so that there exists <span class="process-math">\(x_{n-1}\)</span> between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html">
+</div></article> <div class="para">The following proof of Taylor’s theorem is <em class="emphasis">not</em> examinable.</div> <div class="para">We begin by proving a lemma.</div> <article class="lemma theorem-like"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">8.12</span><span class="period">.</span><span class="space"> </span><span class="title">Key estimate for Taylor’s theorem.</span>
+</h6>Let <span class="process-math">\(f : (a, b) \to \R\)</span> be a differentiable function. Let <span class="process-math">\(c \in [0, \infty)\text{,}\)</span> <span class="process-math">\(n \in \set{0, 1, 2, \dots}\)</span> and <span class="process-math">\(x_0,x \in (a,b)\)</span> with <span class="process-math">\(x_0 \leq x\text{.}\)</span> Suppose that for all <span class="process-math">\(t \in [x_0,x]\)</span> we have<div class="displaymath process-math">
 \begin{equation*}
-\abs{g(x)} \leq |x-x_0|^{n-1} \abs{g^{(n-1)}(x_{n-1})}.
+|f'(t)| \leq c(t-x_0)^n.
 \end{equation*}
-</div>Applying the mean value theorem to <span class="process-math">\(g^{(n-1)}\text{,}\)</span> there exists <span class="process-math">\(x_{n}\)</span> between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x_{n-1}\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html">
+</div>Suppose in addition that <span class="process-math">\(f(x_0) = 0\text{.}\)</span> Then for all <span class="process-math">\(t\in [x_0,x]\)</span> we have<div class="displaymath process-math">
 \begin{equation*}
-g^{(n-1)}(x_{n-1}) = g^{(n-1)}(x_{0}) + (x_{n-1}-x_0) g^{(n)}(x_n) = (x_{n-1}-x_0) g^{(n)}(x_n).
+|f(t)| \leq \trecip{n+1} c (t-x_0)^{n+1}\text{.}
 \end{equation*}
-</div>Since <span class="process-math">\(x_{n-1}\)</span> is between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x\text{,}\)</span> we must have that <span class="process-math">\(x_{n}\)</span> is between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x\)</span> and<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html">
+</div></article> <details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">We are assuming that for all <span class="process-math">\(t \in [x_0,x]\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-mono-diff.html">
 \begin{equation*}
-|x_{n-1}-x_0|\leq |x-x_0|\text{.}
+-c(t-x_0)^n \leq f'(t) \leq  c(t-x_0)^n.
 \end{equation*}
-</div>Therefore<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-taylor-to-prove.html">
+</div>Since functions with non-negative derivative are increasing (<a href="" class="xref" data-knowl="./knowl/cor-mono-diff.html" title="Corollary 8.9">Corollary 8.9</a>), it follows that the functions<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-mono-diff.html">
 \begin{equation*}
-\abs{g(x)} \leq |x-x_0|^{n-1} \abs{(x_{n-1}-x_0) g^{(n)}(x_n)} \leq |x-x_0|^{n} \abs{g^{(n)}(x_n)},
+f(t) + \trecip{n+1}c(t-x_0)^{n+1} \qquad \text{and} \qquad  \trecip{n+1}c(t-x_0)^{n+1} -f(t)
 \end{equation*}
-</div>as required.</article></details> <article class="remark remark-like"><h5 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">7.22</span><span class="period">.</span><span class="space"> </span><span class="title">Taylor with improved remainder.</span>
-</h5> With a slightly longer proof, one can actually improve our statement of Taylor’s theorem to the following. <article class="theorem theorem-like"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.23</span><span class="period">.</span><span class="space"> </span><span class="title">Strong Taylor (non-examinable).</span>
-</h6>Let <span class="process-math">\(f : (a,b) \to \R\)</span> be a function which is <span class="process-math">\(n\)</span>-times differentiable and let <span class="process-math">\(x_0, x \in (a,b)\text{.}\)</span> Then there exists <span class="process-math">\(x_n\)</span> between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(x\)</span> such that<div class="displaymath process-math">
+</div>are increasing as <span class="process-math">\(t\)</span> ranges over <span class="process-math">\([x_0,x]\text{.}\)</span> Both of these functions evaluate to zero at <span class="process-math">\(t=x_0\text{,}\)</span> hence for all <span class="process-math">\(t\in [x_0,x]\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-mono-diff.html">
+\begin{equation*}
+f(t) + \trecip{n+1}c(t-x_0)^{n+1}\geq 0 \geq f(t) - \trecip{n+1}c(t-x_0)^{n+1}.
+\end{equation*}
+</div>Combining inequalities we deduce that for any <span class="process-math">\(t\in [x_0,x]\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-mono-diff.html">
+\begin{equation*}
+-\trecip{n+1} c (t-x_0)^{n+1}\leq f(t) \leq \trecip{n+1} c (t-x_0)^{n+1}.
+\end{equation*}
+</div>This completes our proof.</article></details> We are now in a position to prove Taylor’s theorem. <details class="hiddenproof"><summary><h6 class="heading"><span class="title">Proof of Taylor’s theorem.</span></h6></summary><article class="hiddenproof"> <div class="para">We may assume that <span class="process-math">\(x\geq x_0\text{,}\)</span> for if <span class="process-math">\(x\leq x_0\)</span> we obtain the result on applying the following argument to <span class="process-math">\(g: (-b, -a) \to \R\)</span> given by <span class="process-math">\(g(x):=f(-x)\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Define the following auxiliary function</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mvt.html ./knowl/lem-poly-comp.html ./knowl/lem-poly-comp.html ./knowl/lem-poly-comp.html">
 \begin{align*}
-f(x) = f(x_0) + (x-x_0)f'(x_0)  + \dots + \amp \trecip{(n-1)!} (x-x_0)^{n-1} f^{(n-1)}(x_0)\\
-\amp + \trecip{n!}(x-x_0)^nf^{(n)}(x_n).
+\amp F(x) := f(x)-\\
+\amp \sqbrac{f(x_0) + (x-x_0)f'(x_0) +  \dots + \trecip{(n-1)!} (x-x_0)^{n-1} f^{(n-1)}(x_0)}\text{.}
 \end{align*}
-</div></article></article>
-</div></details></div></article><span class="incontext"><a class="internal" href="week-7.html#ex-taylor">in-context</a></span>
+</div>
+<div class="para">Then <span class="process-math">\(F\)</span> is <span class="process-math">\(n\)</span> times differentiable on <span class="process-math">\((a,b)\text{.}\)</span> Moreover, for each <span class="process-math">\(0 \leq m \lt n\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mvt.html ./knowl/lem-poly-comp.html ./knowl/lem-poly-comp.html ./knowl/lem-poly-comp.html">
+\begin{equation*}
+F^{(m)}(x_0) = 0\text{,}
+\end{equation*}
+</div>
+<div class="para">whilst for <span class="process-math">\(m=n\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mvt.html ./knowl/lem-poly-comp.html ./knowl/lem-poly-comp.html ./knowl/lem-poly-comp.html">
+\begin{equation*}
+F^{(n)}(t) = f^{(n)}(t) \quad \text{for all } t \in (a,b).
+\end{equation*}
+</div>
+<div class="para">Letting <span class="process-math">\(t\in [x_0,x]\text{,}\)</span> the mean value theorem (<a href="" class="xref" data-knowl="./knowl/thm-mvt.html" title="Theorem 8.7: Mean value theorem">Theorem 8.7</a>) gives some <span class="process-math">\(x_t\)</span> between <span class="process-math">\(x_0\)</span> and <span class="process-math">\(t\)</span> such that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mvt.html ./knowl/lem-poly-comp.html ./knowl/lem-poly-comp.html ./knowl/lem-poly-comp.html">
+\begin{equation*}
+|F^{(n-1)}(t)|  \leq (t-x_0) \abs{f^{(n)}(x_t)} .
+\end{equation*}
+</div>
+<div class="para">Write</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mvt.html ./knowl/lem-poly-comp.html ./knowl/lem-poly-comp.html ./knowl/lem-poly-comp.html">
+\begin{equation*}
+c := \sup\set{|f^{(n)}(t)| : t \text{ is between } x \text{ and } x_0}\text{.}
+\end{equation*}
+</div>
+<div class="para">Then we have shown that for all <span class="process-math">\(t \in [x_0,x]\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mvt.html ./knowl/lem-poly-comp.html ./knowl/lem-poly-comp.html ./knowl/lem-poly-comp.html">
+\begin{equation*}
+\abs{F^{(n-1)}(t)} \leq  c(t-x_0).
+\end{equation*}
+</div>
+<div class="para">As a consequence of <a href="" class="xref" data-knowl="./knowl/lem-poly-comp.html" title="Lemma 8.12: Key estimate for Taylor’s theorem">Lemma 8.12</a>, we deduce that for <span class="process-math">\(t \in [x_0,x]\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mvt.html ./knowl/lem-poly-comp.html ./knowl/lem-poly-comp.html ./knowl/lem-poly-comp.html">
+\begin{equation*}
+\abs{F^{(n-2)}(t)} \leq  \trecip{2}c(t-x_0)^2.
+\end{equation*}
+</div>
+<div class="para">Re-applying <a href="" class="xref" data-knowl="./knowl/lem-poly-comp.html" title="Lemma 8.12: Key estimate for Taylor’s theorem">Lemma 8.12</a>, for <span class="process-math">\(t \in [x_0,x]\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mvt.html ./knowl/lem-poly-comp.html ./knowl/lem-poly-comp.html ./knowl/lem-poly-comp.html">
+\begin{equation*}
+\abs{F^{(n-3)}(t)} \leq  \trecip{3!}c(t-x_0)^3.
+\end{equation*}
+</div>
+<div class="para">Iteratively applying <a href="" class="xref" data-knowl="./knowl/lem-poly-comp.html" title="Lemma 8.12: Key estimate for Taylor’s theorem">Lemma 8.12</a>, for <span class="process-math">\(t \in [x_0,x]\)</span> we obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mvt.html ./knowl/lem-poly-comp.html ./knowl/lem-poly-comp.html ./knowl/lem-poly-comp.html">
+\begin{equation*}
+\abs{F(t)} \leq  \trecip{n!}c(t-x_0)^n. 
+\end{equation*}
+</div>
+</div></article></details>
+</div></details></div></article><span class="incontext"><a class="internal" href="week-8.html#ex-taylor">in-context</a></span>
 </body>
 </html>

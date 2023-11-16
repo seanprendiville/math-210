@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,11 +11,13 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>We have <span class="process-math">\(\max\set{f, g} = (f-g)^+ + g\text{.}\)</span> This sum is Riemann integrable by linearity of integration (<a href="" class="xref" data-knowl="./knowl/thm-int-add.html" title="Theorem 9.6: Additivity of integration">Theorem 9.6</a>). Since <span class="process-math">\(\min\set{f,g} = -\max\set{-f,-g}\text{,}\)</span> we deduce that this is also Riemann integrable using the scaling rule (<a href="" class="xref" data-knowl="./knowl/thm-int-add.html" title="Theorem 9.6: Additivity of integration">Theorem 9.6</a>). Similarly, we have Riemann integrability of <span class="process-math">\(f^- = -\max\set{-f, 0}\text{.}\)</span> Finally <span class="process-math">\(|f| = f^+ + f^-\)</span> is integrable by the previous results and the addition rule (<a href="" class="xref" data-knowl="./knowl/thm-int-add.html" title="Theorem 9.6: Additivity of integration">Theorem 9.6</a>). For the triangle inequality, linearity of integration (<a href="" class="xref" data-knowl="./knowl/thm-int-add.html" title="Theorem 9.6: Additivity of integration">Theorem 9.6</a>) gives<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/thm-int-add.html ./knowl/thm-int-add.html ./knowl/thm-int-add.html">
-\begin{equation*}
-\abs{\int_a^b f} = \abs{\int_a^b f^+ - \int_a^b f^-} \leq \int_a^b f^+ + \int_a^b f^-
-=  \int_a^b\brac{ f^+ +  f^-}  = \int_a^b\abs{ f} .
-\end{equation*}
-</div></article><span class="incontext"><a href="week-9.html#proof-73" class="internal">in-context</a></span>
+<article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>This follows from the inverse function theorem (<a href="" class="xref" data-knowl="./knowl/thm-inverse-fn-1.html" title="Theorem 7.16: Inverse function theorem">Theorem 7.16</a>) with <span class="process-math">\(f := \exp\text{,}\)</span> since the hypotheses of that theorem are met, namely: <ul class="disc">
+<li><div class="para">
+<span class="process-math">\(\exp : \R \to (0,\infty)\)</span> is bijective  (this follows from <a href="" class="xref" data-knowl="./knowl/prop-exp-bij.html" title="Proposition 8.16">Proposition 8.16</a>).</div></li>
+<li><div class="para">
+<span class="process-math">\(\exp^{-1}= \log\)</span> is continuous at every <span class="process-math">\(x_0 \in (0,\infty)\)</span> (this follows from <a href="" class="xref" data-knowl="./knowl/prop-log-cts.html" title="Proposition 8.20">Proposition 8.20</a>).</div></li>
+<li><div class="para">
+<span class="process-math">\(\exp\)</span> is differentiable at every <span class="process-math">\(x_0\in \R\)</span> with non-zero derivative (this follows from <a href="" class="xref" data-knowl="./knowl/prop-exp-properties.html" title="Proposition 8.14">Proposition 8.14</a>).</div></li>
+</ul></article><span class="incontext"><a class="internal" href="week-8.html#proof-73">in-context</a></span>
 </body>
 </html>

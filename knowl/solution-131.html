@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -12,17 +12,27 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">10.6.b.1</span><span class="period">.</span>
-</h4>
-<article class="definition definition-like"><h5 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.8</span><span class="period">.</span><span class="space"> </span><span class="title">Uniform convergence.</span>
-</h5> For each <span class="process-math">\(n \in \N\)</span> let <span class="process-math">\(f_n:S \to \R\)</span> be a real-valued function with domain <span class="process-math">\(S\)</span> (not necessarily a set of real numbers). Let <span class="process-math">\(f : S \to \R\text{.}\)</span> We say that the sequence of functions <span class="process-math">\((f_n)_{n=1}^\infty\)</span><em class="emphasis">converges uniformly to <span class="process-math">\(f\)</span> on <span class="process-math">\(S\)</span></em> if<div class="displaymath process-math" data-contains-math-knowls="">
+<h5 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">8.23.d.1</span><span class="period">.</span>
+</h5>
+<div class="para logical">
+<div class="para">By definition of exponentiation and the fact that <span class="process-math">\(\log = \exp^{-1}\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
 \begin{equation*}
-\lim_{n\to \infty} \sup_{S}| f-f_n| = 0.
+\log(a^x) = \log\brac{\exp(x\log a)} = x \log a.
 \end{equation*}
-</div></article>
 </div>
-<span class="incontext"><a href="week-10.html#solution-131" class="internal">in-context</a></span>
+<div class="para">This establishes the first identity.</div>
+</div> <div class="para logical">
+<div class="para">Taking logarithms, the identity <span class="process-math">\(\brac{a^x}^y = a^{x y}\)</span> is equivalent to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\log\brac{\brac{a^x}^y} = \log\brac{a^{x y}}.
+\end{equation*}
+</div>
+<div class="para">This holds on applying our first identity to both sides (twice on the left-hand side).</div>
+</div>
+</div>
+<span class="incontext"><a class="internal" href="week-8.html#solution-131">in-context</a></span>
 </body>
 </html>

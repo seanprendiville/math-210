@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,38 +11,30 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>Fix <span class="process-math">\(\eps \gt 0\text{.}\)</span> By the epsilon characterisation of Riemann integrability, (<a href="" class="xref" data-knowl="./knowl/prop-eps-riemann.html" title="Proposition 8.23: Epsilon characterisation of Riemann integrability">Proposition 8.23</a>) there exists a subdivision <span class="process-math">\(a= y_0 \lt  \dots \lt  y_M = b\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/cor-sub-add.html ./knowl/cor-up-low-finite.html">
+<article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>Let <span class="process-math">\(x_0\in (0, \infty)\text{.}\)</span> Using the epsilon-delta characterisation of continuity (<a href="" class="xref" data-knowl="./knowl/cor-eps-delta-cts.html" title="Proposition 5.17: Epsilon-delta characterisation of the limit">Proposition 5.17</a>), we are required to prove that for each <span class="process-math">\(\eps \gt 0\)</span> there exists <span class="process-math">\(\delta = \delta(x_0,\eps) \gt 0\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/thm-mvt.html ./knowl/eq-log-cts-to-prove.html ./knowl/eq-log-cts-mvt.html">
 \begin{equation*}
-U(f;y_0, \dots, y_M) -\trecip{2}\eps \leq \int_a^b f \leq L(f;y_0, \dots, y_M)+\trecip{2}\eps.
+|x-x_0| \leq \delta \quad \implies \quad |\log(x) - \log(x_0)| \leq \eps.
 \end{equation*}
-</div>Similarly there exists a subdivision <span class="process-math">\(a= z_0 \lt  \dots \lt  z_T = b\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/cor-sub-add.html ./knowl/cor-up-low-finite.html">
+</div>Writing <span class="process-math">\(y:=\log(x)\)</span> and <span class="process-math">\(y_0:=\log(x_0)\)</span> this is equivalent to showing that<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/thm-mvt.html ./knowl/eq-log-cts-to-prove.html ./knowl/eq-log-cts-mvt.html">
+\begin{equation}
+|\exp(y)-\exp(y_0)| \leq \delta \quad \implies \quad |y - y_0| \leq \eps.\tag{8.3}
+\end{equation}
+</div>By the mean value theorem (<a href="" class="xref" data-knowl="./knowl/thm-mvt.html" title="Theorem 8.7: Mean value theorem">Theorem 8.7</a>), there exists <span class="process-math">\(y_1\)</span> between <span class="process-math">\(y\)</span> and <span class="process-math">\(y_0\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/thm-mvt.html ./knowl/eq-log-cts-to-prove.html ./knowl/eq-log-cts-mvt.html">
+\begin{equation}
+|\exp(y)-\exp(y_0)| = \exp(y_1)|y-y_0|.						\tag{8.4}
+\end{equation}
+</div>Since <span class="process-math">\(\exp\)</span> is increasing, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/thm-mvt.html ./knowl/eq-log-cts-to-prove.html ./knowl/eq-log-cts-mvt.html">
 \begin{equation*}
-U(g;z_0, \dots, z_T) -\trecip{2}\eps \leq \int_a^b g \leq L(g;z_0, \dots, z_T)+\trecip{2}\eps.
+\exp(y_1) \geq \exp\brac{\min\set{y_0,y}} = \min\set{x_0,x}\text{.}
 \end{equation*}
-</div>Let <span class="process-math">\(a= x_0 \lt  \dots \lt  x_N = b\)</span> denote the common refinement of <span class="process-math">\((y_0, \dots, y_M)\)</span> and <span class="process-math">\((z_0, \dots, z_T)\text{.}\)</span> Then by monotonicty of Riemann sums under refinements (<a href="" class="xref" data-knowl="./knowl/prop-mono-riemann-refine.html" title="Proposition 8.21: Riemann sums are monotone with respect to refinements">Proposition 8.21</a>) we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/cor-sub-add.html ./knowl/cor-up-low-finite.html">
+</div>Hence we derive <a href="" class="xref" data-knowl="./knowl/eq-log-cts-to-prove.html" title="Equation 8.3">(8.3)</a> on taking<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/thm-mvt.html ./knowl/eq-log-cts-to-prove.html ./knowl/eq-log-cts-mvt.html">
 \begin{equation*}
-U(f;x_0, \dots, x_N) -\trecip{2}\eps \leq \int_a^b f \leq L(f;x_0, \dots, x_N)+\trecip{2}\eps
+\delta(x_0,\eps) :=\min\set{\frac{x_0}{2}, \frac{\eps x_0}{2}},
 \end{equation*}
-</div>and<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/cor-sub-add.html ./knowl/cor-up-low-finite.html">
+</div>since with this choice we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-eps-delta-cts.html ./knowl/thm-mvt.html ./knowl/eq-log-cts-to-prove.html ./knowl/eq-log-cts-mvt.html">
 \begin{equation*}
-U(g;x_0, \dots, x_N) -\trecip{2}\eps \leq \int_a^b g \leq L(g;x_0, \dots, x_N)+\trecip{2}\eps.
+\exp(y_1) \geq  \min\set{x_0,x_0-\tfrac{x_0}{2}}=\tfrac{x_0}{2}\text{,}
 \end{equation*}
-</div>Adding inequalities together and employing the subadditivity of Riemann sums (<a href="" class="xref" data-knowl="./knowl/cor-sub-add.html" title="Corollary 9.5: Subadditivity of Riemann sums">Corollary 9.5</a>) we deduce that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/cor-sub-add.html ./knowl/cor-up-low-finite.html">
-\begin{equation*}
-U(f+g;x_0, \dots, x_N) -\eps \leq \int_a^b f + \int_a^b g \leq L(f+g;x_0, \dots, x_N) +\eps.
-\end{equation*}
-</div>Thus<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/cor-sub-add.html ./knowl/cor-up-low-finite.html">
-\begin{equation*}
-U(f+g;[a,b]) -\eps \leq \int_a^b f + \int_a^b g \leq L(f+g;[a,b]) +\eps.
-\end{equation*}
-</div>Since this holds for all <span class="process-math">\(\eps \gt 0\text{,}\)</span> we conclude that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/cor-sub-add.html ./knowl/cor-up-low-finite.html">
-\begin{equation*}
-U(f+g;[a,b]) \leq \int_a^b f + \int_a^b g \leq L(f+g;[a,b]).
-\end{equation*}
-</div>Since lower Riemann sums are always bounded above by upper Riemann sums <a href="" class="xref" data-knowl="./knowl/cor-up-low-finite.html" title="Equation 8.6">(8.6)</a> we have <span class="process-math">\(L(f+g; [a,b]) \leq U(f+g;[a,b])\text{,}\)</span> so we must have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/cor-sub-add.html ./knowl/cor-up-low-finite.html">
-\begin{equation*}
-U(f+g;[a,b]) =  \int_a^b f + \int_a^b g = L(f+g;[a,b]).
-\end{equation*}
-</div>This establishes the addition rule.</article><span class="incontext"><a href="week-9.html#proof-70" class="internal">in-context</a></span>
+</div>which yields the required implication on substitution into <a href="" class="xref" data-knowl="./knowl/eq-log-cts-mvt.html" title="Equation 8.4">(8.4)</a>.</article><span class="incontext"><a class="internal" href="week-8.html#proof-70">in-context</a></span>
 </body>
 </html>

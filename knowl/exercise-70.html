@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">-</span><span class="space"> </span><span class="codenumber">8.20</span><span class="period">.</span><span class="space"> </span><span class="title">Exponentiation to an arbitrary real.</span>
+</h4>
+<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>Define exponentiation to an arbitrary real and the logarithm to an arbitrary base.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="definition definition-like"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.21</span><span class="period">.</span><span class="space"> </span><span class="title">Exponentiation to an arbitrary real.</span>
+</h6> Given <span class="process-math">\(a \in (0, \infty)\)</span> and <span class="process-math">\(x \in \R\)</span> we define<div class="displaymath process-math" data-contains-math-knowls=" ">
+\begin{equation*}
+a^x := \exp(x\log a).
+\end{equation*}
+</div>We have previously defined <span class="process-math">\(a^n\)</span> when <span class="process-math">\(n \in \Z\text{,}\)</span> and <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop-log-properties-4" missing or not unique]</code> shows that our two definitions coincide when <span class="process-math">\(x = n \in \Z\text{.}\)</span> <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop-log-properties-5" missing or not unique]</code> also shows that <span class="process-math">\(a^{1/n} = \sqrt[n]{a}
+\text{,}\)</span> as we would expect.</article> <article class="definition definition-like"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.22</span><span class="period">.</span><span class="space"> </span><span class="title">Logarithm to an arbitrary base.</span>
+</h6> Given <span class="process-math">\(a \in (0, \infty)\)</span> with <span class="process-math">\(a \neq 1\)</span> and <span class="process-math">\(x \in \R\)</span> we define<div class="displaymath process-math">
+\begin{equation*}
+\log_a(x) := \frac{\log x}{\log a}.
+\end{equation*}
+</div></article>
+</div></details></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>Justify why <span class="process-math">\(a^x = b\)</span> if and only if <span class="process-math">\(\log_a b = x\text{.}\)</span><div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">Since <span class="process-math">\(\log\)</span> is injective on <span class="process-math">\((0,\infty)\text{,}\)</span> we have<div class="displaymath process-math">
+\begin{equation*}
+a^x = b \iff \log(a^x) = \log(b).
+\end{equation*}
+</div>By definition we have <span class="process-math">\(a^x := \exp(x\log a)\text{.}\)</span> Since <span class="process-math">\(\log = \exp^{-1}\)</span> we deduce that<div class="displaymath process-math">
+\begin{equation*}
+a^x = b \iff x\log a = \log b.
+\end{equation*}
+</div>Since <span class="process-math">\(a \neq 1\text{,}\)</span> we have <span class="process-math">\(\log a\neq0\text{,}\)</span> thus we may divide by <span class="process-math">\(\log a\)</span> to conclude that<div class="displaymath process-math">
+\begin{equation*}
+a^x = b \iff x = \frac{\log b}{\log a}.
+\end{equation*}
+</div>By definition <span class="process-math">\(\log_a b = \log b / \log a\text{,}\)</span> establishing the claim.</div></details></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(c)</span></h5>For <span class="process-math">\(a &gt;0\)</span> and <span class="process-math">\(x,y \in \R\text{,}\)</span> prove the identities<div class="displaymath process-math">
+\begin{gather*}
+\log(a^x) = x\log a,\\
+\brac{a^x}^y = a^{x y}.
+\end{gather*}
+</div>
+<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para logical">
+<div class="para">By definition of exponentiation and the fact that <span class="process-math">\(\log = \exp^{-1}\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\log(a^x) = \log\brac{\exp(x\log a)} = x \log a.
+\end{equation*}
+</div>
+<div class="para">This establishes the first identity.</div>
+</div> <div class="para logical">
+<div class="para">Taking logarithms, the identity <span class="process-math">\(\brac{a^x}^y = a^{x y}\)</span> is equivalent to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\log\brac{\brac{a^x}^y} = \log\brac{a^{x y}}.
+\end{equation*}
+</div>
+<div class="para">This holds on applying our first identity to both sides (twice on the left-hand side).</div>
+</div>
+</div></details></div></article></article><span class="incontext"><a class="internal" href="week-8.html#exercise-70">in-context</a></span>
+</body>
+</html>

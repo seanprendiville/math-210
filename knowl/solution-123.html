@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -12,17 +12,23 @@
 </head>
 <body class="ignore-math">
 <div class="solution solution-like">
-<h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">9.20.b.1</span><span class="period">.</span>
-</h4>
-<article class="proposition theorem-like"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.22</span><span class="period">.</span><span class="space"> </span><span class="title">Integral test.</span>
-</h5>Let <span class="process-math">\(a,b \in \Z\)</span> with <span class="process-math">\(a \lt  b\text{.}\)</span> Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a decreasing function, hence Riemann integrable by <a href="" class="xref" data-knowl="./knowl/prop-mono-riemann.html" title="Proposition 9.21: Monotone functions are integrable">Proposition 9.21</a>. Then<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann.html">
+<h5 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">8.14.b.1</span><span class="period">.</span>
+</h5>
+<article class="proposition theorem-like"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.16</span><span class="period">.</span>
+</h6>
+<span class="process-math">\(\log\)</span> is a strictly increasing bijection from <span class="process-math">\((0,\infty)\)</span> to <span class="process-math">\(\R\text{.}\)</span></article><details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof"><div class="para">The fact that <span class="process-math">\(\log\)</span> is a bijection from <span class="process-math">\((0,\infty)\)</span> to <span class="process-math">\(\R\)</span> follows from its definition as the inverse of the bijection <span class="process-math">\(\exp : \R \to (0,\infty)\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">To prove that it is strictly increasing, we argue by contradiction. Let <span class="process-math">\(x_1, x_2 \in (0, \infty)\)</span> with <span class="process-math">\(x_1 \lt  x_2\)</span> and suppose that <span class="process-math">\(\log(x_1) \geq \log(x_2)\text{.}\)</span> The increasing nature of the exponential function (<a href="" class="xref" data-knowl="./knowl/prop-exp-properties.html" title="Proposition 8.11">Proposition 8.11</a>) gives that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-exp-properties.html">
 \begin{equation*}
-f(a)+ \int_a^b f(n) \geq    \sum_{n=a}^b f(n) \geq f(b)+ \int_a^b f(n).
+x_1 = \exp\brac{\log x_1} \geq \exp\brac{\log x_2} = x_2.
 \end{equation*}
-</div></article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-80-hidden.html" title="Proof 9.22.1"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article>
 </div>
-<span class="incontext"><a href="week-9.html#solution-123" class="internal">in-context</a></span>
+<div class="para">This is a contradiction, hence the logarithm is strictly increasing.</div>
+</div></article></details>
+</div>
+<span class="incontext"><a class="internal" href="week-8.html#solution-123">in-context</a></span>
 </body>
 </html>

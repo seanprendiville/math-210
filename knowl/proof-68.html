@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,18 +11,10 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>If <span class="process-math">\(x_0 \in S\)</span> then we have that<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-sup.html">
+<article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>Strictly increasing functions are injective, hence to show that <span class="process-math">\(\exp\)</span> is bijective <span class="process-math">\(\R \to (0, \infty)\text{,}\)</span> we must establish that every <span class="process-math">\(y\gt 0\)</span> can be represented as <span class="process-math">\(y = \exp(x)\)</span> for some <span class="process-math">\(x \in \R\text{.}\)</span> Since <span class="process-math">\(\exp(x) \to \infty\)</span> as <span class="process-math">\(x \to \infty\text{,}\)</span> we have <span class="process-math">\(\exp(-x) = 1/\exp(x) \to 0\)</span> as <span class="process-math">\(x \to \infty\text{.}\)</span> Thus, for any <span class="process-math">\(y \in (0, \infty)\text{,}\)</span> there exists <span class="process-math">\(x_1 \lt  x_2\)</span> such that<div class="displaymath process-math">
 \begin{equation*}
-f(x_0) \leq \sup_{ S} f\quad \text{and} \quad g(x_0) \leq \sup_{S} g.
+\exp(x_1) \leq y\leq \exp(x_2).
 \end{equation*}
-</div>Hence the sum<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-sup.html">
-\begin{equation*}
-\sup_{S} f +\sup_{ S}  g
-\end{equation*}
-</div>is an upper bound for the set<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-sup.html">
-\begin{equation*}
-\set{f(x_0) + g(x_0) : x_0 \in S}.
-\end{equation*}
-</div>By definition of the supremum as the least upper bound (<a href="" class="xref" data-knowl="./knowl/def-sup.html" title="Definition 1.5: Supremum">Definition 1.5</a>) we deduce the subadditivity of the supremum. The argument for the infimum is analogous.</article><span class="incontext"><a href="week-9.html#proof-68" class="internal">in-context</a></span>
+</div>Since differentiable functions are continuous, we may apply the intermediate value theorem to deduce the existence of <span class="process-math">\(x \in [x_1, x_2]\)</span> such that <span class="process-math">\(\exp(x) = y\text{.}\)</span></article><span class="incontext"><a class="internal" href="week-8.html#proof-68">in-context</a></span>
 </body>
 </html>
