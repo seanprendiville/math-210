@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,12 +11,13 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
-\begin{gather*}
-s_i := \inf_{ [x_{i-1}, x_i]} f, \quad S_i := \sup_{[x_{i-1}, x_i]} f,\\
-t_i := \inf_{ [x_{i-1}, x_i]} g, \quad T_i := \sup_{[x_{i-1}, x_i]} g.
-\end{gather*}
+<div class="displaymath process-math">
+\begin{align*}
+|f(x)-f(x_0)| \amp \leq |f(x)-f_n(x)| + |f_n(x)-f_n(x_0)| + |f_n(x_0) - f(x_0)|\\
+\amp \leq \sup_D |f_n-f| + |f_n(x)-f_n(x_0)| + \sup_D |f_n-f|\\
+\amp \leq \trecip{3} \eps +\trecip{3} \eps +\trecip{3} \eps = \eps. 
+\end{align*}
 </div>
-<span class="incontext"><a href="week-9.html#md-25" class="internal">in-context</a></span>
+<span class="incontext"><a class="internal" href="week-10.html#md-30">in-context</a></span>
 </body>
 </html>

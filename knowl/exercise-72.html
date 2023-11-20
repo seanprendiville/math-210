@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">-</span><span class="space"> </span><span class="codenumber">9.6</span><span class="period">.</span><span class="space"> </span><span class="title">Riemann sums are monotone with respect to refinements.</span>
+</h4>
+<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>Define what it means to be a refinement of a subdivision.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><article class="definition definition-like"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.7</span><span class="period">.</span><span class="space"> </span><span class="title">Refinement of a subdivision.</span>
+</h6> Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> We say that the subdivision <span class="process-math">\(a = y_0 \lt  \dots \lt  y_{M} = b\)</span> is a <em class="emphasis">refinement</em> of the subdivision <span class="process-math">\(a =  x_0 \lt  \dots \lt   x_{ N} = b\)</span> if<div class="displaymath process-math">
+\begin{equation*}
+\set{x_0, x_1, \dots, x_N} \subset \set{y_0, y_1,\dots, y_{M}}.
+\end{equation*}
+</div>Given subdivisions <span class="process-math">\(a =  x_0 \lt  \dots \lt   x_{ N} = b\)</span> and <span class="process-math">\(a = y_0 \lt  \dots \lt  y_{M} = b\)</span>  (not necessarily refinements of each other) their <em class="emphasis">common refinement</em> is the subdivision <span class="process-math">\(a = z_0 \lt  \dots \lt  z_T = b\)</span> obtained by ordering the union<div class="displaymath process-math">
+\begin{equation*}
+\set{x_0, \dots , x_N} \cup \set{y_0, \dots, y_M}  = \set{z_0, \dots, z_T}.
+\end{equation*}
+</div></article></div></details></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>State and prove how Riemann sums are monotone with respect to refinements.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="proposition theorem-like"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.8</span><span class="period">.</span><span class="space"> </span><span class="title">Riemann sums are monotone with respect to refinements.</span>
+</h6>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a bounded function. Let <span class="process-math">\(a = y_0 \lt  \dots \lt  y_M = b\)</span>  be a refinement of <span class="process-math">\(a= x_0 \lt  \dots \lt  x_N = b\text{.}\)</span> Then<div class="displaymath process-math">
+\begin{align*}
+L(f;x_0,\dots, x_N)\amp \leq L(f; y_0, \dots, y_M)\\
+\amp \leq U(f; y_0, \dots, y_M) \leq U(f;x_0,\dots, x_N).
+\end{align*}
+</div></article><details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">Let <span class="process-math">\(x_1, x_2, x_3 \in [a,b]\)</span> with <span class="process-math">\(x_1 \lt  x_2 \lt  x_3\text{.}\)</span> Since taking a supremum over a larger set does not decrease the supremum, we have<div class="displaymath process-math">
+\begin{equation*}
+\sup_{t \in [x_1, x_2]} f(t) \leq \sup_{t \in [x_1, x_3]} f(t) \quad \text{and} \quad \sup_{t \in [x_2, x_3]} f(t) \leq \sup_{t \in [x_1, x_3]} f(t).
+\end{equation*}
+</div>Therefore<div class="displaymath process-math">
+\begin{align*}
+\amp(x_2 - x_1) \sup_{t \in [x_1, x_2]} f(t) + (x_3 - x_2)  \sup_{t \in [x_2, x_3]} f(t)\\
+\amp\leq (x_2 - x_1) \sup_{t \in [x_1, x_3]} f(t) + (x_3 - x_2) \sup_{t \in [x_1, x_3]} f(t)
+=
+(x_3 - x_1) \sup_{t \in [x_1, x_3]} f(t).
+\end{align*}
+</div>It follows that adding a point to a subdivision does not increase the value of the upper Riemann sum. Repeatedly applying this fact a finite number of times, we deduce that adding a finite number of points to a subdivision does not increase the value of the corresponding Riemann sum. This proves the inequality<div class="displaymath process-math">
+\begin{equation*}
+U(f; y_0, \dots, y_M) \leq U(f;x_0,\dots, x_N).
+\end{equation*}
+</div>The argument for the inequality<div class="displaymath process-math">
+\begin{equation*}
+L(f;x_0,\dots, x_N)\leq L(f; y_0, \dots, y_M)
+\end{equation*}
+</div>is similar (try it!). The inequality<div class="displaymath process-math">
+\begin{equation*}
+L(f; y_0, \dots, y_M) \leq U(f; y_0, \dots, y_M)
+\end{equation*}
+</div>follows from the fact that<div class="displaymath process-math">
+\begin{equation*}
+\inf_{ [y_{n-1}, y_n]} f \leq \sup_{ [y_{n-1}, y_n]} f.
+\end{equation*}
+</div></article></details>
+</div></details></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(c)</span></h5>Deduce how lower Riemann sums never exceed upper Riemann sums<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="corollary theorem-like"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">9.9</span><span class="period">.</span><span class="space"> </span><span class="title">Lower Riemann sums never exceed upper Riemann sums.</span>
+</h6>
+<span class="process-math">\(a, b\in \R\)</span><span class="process-math">\(a\lt  b\)</span><span class="process-math">\(f : [a,b] \to \R\)</span><span class="process-math">\(a = y_0 \lt  \dots \lt  y_M = b\)</span><span class="process-math">\(a= x_0 \lt  \dots \lt  x_N = b\)</span><div class="displaymath process-math">
+\begin{equation*}
+L(f;y_0, \dots, y_M)\leq U(f;x_0, \dots, x_N)\text{.}
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+L(f;[a,b])\leq U(f;[a,b])\text{.}
+\end{equation*}
+</div></article> <details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">Let <span class="process-math">\(a = z_0 \lt \dots \lt z_T = b\)</span> be the common refinement of <span class="process-math">\(a = y_0 \lt  \dots \lt  y_M = b\)</span> and <span class="process-math">\(a= x_0 \lt  \dots \lt  x_N = b\text{,}\)</span> so that<div class="displaymath process-math">
+\begin{equation*}
+\set{x_0, \dots , x_N} \cup \set{y_0, \dots, y_M}  = \set{z_0, \dots, z_T}\text{.}
+\end{equation*}
+</div>Since Riemann sums are monotone with respect to refinements, and since <span class="process-math">\(\inf_{[z_{n-1},z_n]}f \leq \sup_{[z_{n-1},z_n]}f\text{,}\)</span> we have<div class="displaymath process-math">
+\begin{equation*}
+L(f;y_0, \dots, y_M) \leq L(f;z_0, \dots, z_T) \leq U(f;z_0, \dots, z_T) \leq U(f; x_0, \dots, x_N)\text{.}
+\end{equation*}
+</div>Taking a supremum over the all possible <span class="process-math">\(a = y_0 \lt  \dots \lt  y_M = b\)</span> gives that<div class="displaymath process-math">
+\begin{equation*}
+L(f;[a,b]) \leq  U(f; x_0, \dots, x_N)\text{.}
+\end{equation*}
+</div>Taking an infimum over all possible <span class="process-math">\(a= x_0 \lt  \dots \lt  x_N = b\)</span> gives that<div class="displaymath process-math">
+\begin{equation*}
+L(f;[a,b]) \leq  U(f; [a,b])\text{.}
+\end{equation*}
+</div></article></details>
+</div></details></div></article></article><span class="incontext"><a class="internal" href="week-9.html#exercise-72">in-context</a></span>
+</body>
+</html>

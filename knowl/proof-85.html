@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,10 +11,10 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>By the product rule for differentiation (<a href="" class="xref" data-knowl="./knowl/prop-alg-diff.html" title="Proposition 7.2: Algebra of differentiation">Proposition 7.2</a>) we have <span class="process-math">\((fg)' = f'g + fg'\text{.}\)</span> Both <span class="process-math">\(f'g\)</span> and <span class="process-math">\(fg'\)</span> are integrable on <span class="process-math">\([x,y]\text{,}\)</span> as they are products of Riemann integrable functions (<a href="" class="xref" data-knowl="./knowl/thm-int-mult.html" title="Theorem 9.13: Riemann integrable functions are closed under multiplication">Theorem 9.13</a>). Therefore <span class="process-math">\((fg)'\)</span> is also integrable on <span class="process-math">\([x,y]\text{,}\)</span> by linearity of integration (<a href="" class="xref" data-knowl="./knowl/thm-int-add.html" title="Theorem 9.6: Additivity of integration">Theorem 9.6</a>). Hence by the fundamental theorem of calculus (<a href="" class="xref" data-knowl="./knowl/thm-ftc-int-of-deriv.html" title="Theorem 10.3: Fundamental theorem of calculus - integral of derivative">Theorem 10.3</a>), we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-alg-diff.html ./knowl/thm-int-mult.html ./knowl/thm-int-add.html ./knowl/thm-ftc-int-of-deriv.html ./knowl/thm-int-add.html">
+<article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>Fix <span class="process-math">\(x \in S\text{.}\)</span> Then<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor-sandwich.html">
 \begin{equation*}
-\int_x^y \brac{f'g + fg'} = \int_x^y \brac{fg}' = f(y)g(y) - f(x)g(x).
+|f_n(x) - f(x)| \leq \sup_{S} |f_n-f| \to 0 \quad \text{as} \quad n \to \infty.
 \end{equation*}
-</div>The result now follows from linearity of integration (<a href="" class="xref" data-knowl="./knowl/thm-int-add.html" title="Theorem 9.6: Additivity of integration">Theorem 9.6</a>).</article><span class="incontext"><a href="week-10.html#proof-85" class="internal">in-context</a></span>
+</div>Hence by the sandwich rule (<a href="" class="xref" data-knowl="./knowl/cor-sandwich.html" title="Proposition 3.6: One-sided sandwich">Proposition 3.6</a>) we have <span class="process-math">\(f_n(x) \to f(x)\)</span> as <span class="process-math">\(n \to \infty\text{.}\)</span></article><span class="incontext"><a class="internal" href="week-10.html#proof-85">in-context</a></span>
 </body>
 </html>

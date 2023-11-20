@@ -11,8 +11,25 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Each workshop contributes <span class="process-math">\(6\%\)</span> towards your final mark. Your mark for each workshop is scored out of 3. You will receive 1 mark for each of the following:</div>
-<span class="incontext"><a class="internal" href="workshop-instructions.html#p-159">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<div class="para logical">
+<div class="para">Next let us show that <span class="process-math">\(L(f;[a,b]) = U(f;[a,b])\text{.}\)</span> For any <span class="process-math">\(N \in \N\)</span> consider the subdivision</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{0}{N} \lt  \frac{1}{N} \lt  \frac{2}{N} \lt  \dots \lt  \frac{N}{N}.
+\end{equation*}
+</div>
+<div class="para">Then we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+0\leq U(f;[a,b]) - L(f;[a,b])\amp \leq U\brac{f; \tfrac{0}{N}, \tfrac{1}{N}, \dots, \tfrac{N}{N}} -  L\brac{f; \tfrac{0}{N}, \tfrac{1}{N}, \dots, \tfrac{N}{N}} \\
+\amp = \sum_{n=1}^N \frac{f\brac{\frac{n}{N}}}{N} - \sum_{n=1}^{N} \frac{f\brac{\frac{n-1}{N}}}{N}\\
+\amp = \frac{f\brac{1}}{N} - \frac{f\brac{0}}{N} .
+\end{align*}
+</div>
+<div class="para">Since the latter quantity tends to zero as <span class="process-math">\(N \to \infty\text{,}\)</span> we have that <span class="process-math">\(U(f;[a,b]) = L(f;[a,b])\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a class="internal" href="week-9.html#p-159">in-context</a></span>
 </body>
 </html>

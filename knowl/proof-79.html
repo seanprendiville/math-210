@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,20 +11,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>Let us suppose that <span class="process-math">\(f\)</span> is increasing and that <span class="process-math">\([a,b] = [0,1]\text{,}\)</span> the  general case being similar. Since <span class="process-math">\(f\)</span> is increasing, for any sub-interval <span class="process-math">\([c,d]\subset [0,1]\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html">
+<article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>Let us suppose that <span class="process-math">\([a,b] = [0, 1]\text{,}\)</span> the general case being similar. Since <span class="process-math">\(f\)</span> is a continuous function on a closed interval, it is uniformly continuous (<a href="" class="xref" data-knowl="./knowl/thm-unif-cts.html" title="Theorem 6.9: Continuous on closed interval implies uniformly continuous">Theorem 6.9</a>). Hence by definition of uniform continuity (<a href="" class="xref" data-knowl="./knowl/def-unif-cts.html" title="Definition 6.6: Uniformly continuous">Definition 6.6</a>):<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-unif-cts.html ./knowl/def-unif-cts.html ">
 \begin{equation*}
-\sup_{[c,d]} f = f(d) \quad \text{and}\quad \inf_{[c,d]} f= f(c).
+(\forall \eps \gt 0)(\exists \delta = \delta(\eps) \gt 0)(\forall x,y\in [a,b]) 
+[|x-y| \leq \delta \implies |f(x)-f(y)| \leq \eps].
 \end{equation*}
-</div>In particular, <span class="process-math">\(f\)</span> is bounded on <span class="process-math">\([0,1]\text{,}\)</span> with <span class="process-math">\(\sup_{[0,1]} f = f(1)\)</span> and <span class="process-math">\(\inf_{[0,1]}f= f(0)\text{.}\)</span> For any <span class="process-math">\(N \in \N\)</span> consider the subdivision<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html">
+</div>Set<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-unif-cts.html ./knowl/def-unif-cts.html ">
 \begin{equation*}
-\frac{0}{N} \lt  \frac{1}{N} \lt  \frac{2}{N} \lt  \dots \lt  \frac{N}{N}.
+\delta := \delta\brac{\eps} \qquad \text{and} \qquad N := \ceil{\delta^{-1}}.
 \end{equation*}
-</div>For this subdivision, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html">
-\begin{align*}
-U\brac{f; \tfrac{0}{N}, \tfrac{1}{N}, \dots, \tfrac{N}{N}} - \amp L\brac{f; \tfrac{0}{N}, \tfrac{1}{N}, \dots, \tfrac{N}{N}} \\
-\amp = \sum_{n=1}^N \frac{f\brac{\frac{n}{N}}}{N} - \sum_{n=1}^{N} \frac{f\brac{\frac{n-1}{N}}}{N}\\
-\amp = \frac{f\brac{1}}{N} - \frac{f\brac{0}}{N} .
-\end{align*}
-</div>Since the latter quantity tends to zero as <span class="process-math">\(N \to \infty\text{,}\)</span> we have that <span class="process-math">\(f\)</span> is integrable by <a href="" class="xref" data-knowl="./knowl/prop-eps-riemann.html" title="Proposition 8.23: Epsilon characterisation of Riemann integrability">Proposition 8.23</a>.</article><span class="incontext"><a href="week-9.html#proof-79" class="internal">in-context</a></span>
+</div>Then for any <span class="process-math">\(n\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-unif-cts.html ./knowl/def-unif-cts.html ">
+\begin{equation*}
+\sup_{[\frac{n-1}{N}, \frac{n}{N}]} f - \inf_{[\frac{n-1}{N}, \frac{n}{N}]} f \leq \eps.
+\end{equation*}
+</div>Hence with respect to the subdivision <span class="process-math">\(0/N \lt  1/N \lt  \dots \lt  N/N\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-unif-cts.html ./knowl/def-unif-cts.html ">
+\begin{equation*}
+U\brac{f;\tfrac{0}{N}, \tfrac{1}{N} , \dots , \tfrac{N}{N}} - L\brac{f;\tfrac{0}{N}, \tfrac{1}{N} , \dots , \tfrac{N}{N}} \leq  \sum_{n=1}^N \tfrac{\eps}{N} = \eps.
+\end{equation*}
+</div>It follows that <span class="process-math">\(f\)</span> is integrable by <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop-eps-riemann" missing or not unique]</code>.</article><span class="incontext"><a class="internal" href="week-10.html#proof-79">in-context</a></span>
 </body>
 </html>

@@ -5,57 +5,106 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Week 9</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="article">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
   },
-  chtml: {
-    scale: 0.88,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-},
+  }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.32/pretext_search.js"></script><link href="https://pretextbook.org/css/0.82/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.32</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.32/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.32/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.32/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.82/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="pretext-article ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb{N}}
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="self-test-210.html"><span class="title">MATH210 Real Analysis:</span> <span class="subtitle">Self-Test Questions</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="week-8.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="self-test-210.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="workshop-instructions.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
@@ -98,609 +147,471 @@ window.MathJax = {
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="self-test-210.html"><span class="title">MATH210 Real Analysis:</span> <span class="subtitle">Self-Test Questions</span></a></h1>
-<p class="byline">Sean Prendiville</p>
-</div>
-</div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="week-8.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="self-test-210.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="week-10.html" title="Next">Next</a></span></div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="week-8.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="self-test-210.html" title="Up">Up</a><a class="next-button button toolbar-item" href="week-10.html" title="Next">Next</a>
-</div>
-</div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter"><a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Introduction</span></a></li>
-<li class="link"><a href="week-1.html" data-scroll="week-1" class="internal"><span class="codenumber">1</span> <span class="title">Week 1</span></a></li>
-<li class="link"><a href="week-2.html" data-scroll="week-2" class="internal"><span class="codenumber">2</span> <span class="title">Week 2</span></a></li>
-<li class="link"><a href="week-3.html" data-scroll="week-3" class="internal"><span class="codenumber">3</span> <span class="title">Week 3</span></a></li>
-<li class="link"><a href="week-4.html" data-scroll="week-4" class="internal"><span class="codenumber">4</span> <span class="title">Week 4</span></a></li>
-<li class="link"><a href="week-5.html" data-scroll="week-5" class="internal"><span class="codenumber">5</span> <span class="title">Week 5</span></a></li>
-<li class="link"><a href="week-6.html" data-scroll="week-6" class="internal"><span class="codenumber">6</span> <span class="title">Week 6</span></a></li>
-<li class="link"><a href="week-7.html" data-scroll="week-7" class="internal"><span class="codenumber">7</span> <span class="title">Week 7</span></a></li>
-<li class="link"><a href="week-8.html" data-scroll="week-8" class="internal"><span class="codenumber">8</span> <span class="title">Week 8</span></a></li>
-<li class="link active"><a href="week-9.html" data-scroll="week-9" class="internal"><span class="codenumber">9</span> <span class="title">Week 9</span></a></li>
-<li class="link"><a href="week-10.html" data-scroll="week-10" class="internal"><span class="codenumber">10</span> <span class="title">Week 10</span></a></li>
-</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="section" id="week-9"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">9</span> <span class="title">Week 9</span>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth1"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="week-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Week 1</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-1.html#subsection-1" class="internal"><span class="codenumber">1.1</span> <span class="title">Self-test questions for lecture 1</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-1.html#subsection-2" class="internal"><span class="codenumber">1.2</span> <span class="title">Self-test questions for lecture 2</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-1.html#subsection-3" class="internal"><span class="codenumber">1.3</span> <span class="title">Workshop questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="week-2.html" class="internal"><span class="codenumber">2</span> <span class="title">Week 2</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-2.html#subsection-4" class="internal"><span class="codenumber">2.1</span> <span class="title">Self-test questions for lecture 3</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-2.html#subsection-5" class="internal"><span class="codenumber">2.2</span> <span class="title">Self-test questions for lecture 4</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="week-3.html" class="internal"><span class="codenumber">3</span> <span class="title">Week 3</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-3.html#subsection-6" class="internal"><span class="codenumber">3.1</span> <span class="title">Self-test questions for lecture 5</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-3.html#subsection-7" class="internal"><span class="codenumber">3.2</span> <span class="title">Self-test questions for lecture 6</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-3.html#subsection-8" class="internal"><span class="codenumber">3.3</span> <span class="title">Workshop questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="week-4.html" class="internal"><span class="codenumber">4</span> <span class="title">Week 4</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-4.html#subsection-9" class="internal"><span class="codenumber">4.1</span> <span class="title">Self-test questions for lecture 7</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-4.html#subsection-10" class="internal"><span class="codenumber">4.2</span> <span class="title">Self-test questions for lecture 8</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="week-5.html" class="internal"><span class="codenumber">5</span> <span class="title">Week 5</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-5.html#subsection-11" class="internal"><span class="codenumber">5.1</span> <span class="title">Self-test questions for lecture 9</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-5.html#subsection-12" class="internal"><span class="codenumber">5.2</span> <span class="title">Self-test questions for lecture 10</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-5.html#subsection-13" class="internal"><span class="codenumber">5.3</span> <span class="title">Workshop questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="week-6.html" class="internal"><span class="codenumber">6</span> <span class="title">Week 6</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-6.html#subsection-14" class="internal"><span class="codenumber">6.1</span> <span class="title">Self-test questions for lecture 11</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-6.html#subsection-15" class="internal"><span class="codenumber">6.2</span> <span class="title">Self-test questions for lecture 12</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="week-7.html" class="internal"><span class="codenumber">7</span> <span class="title">Week 7</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-7.html#subsection-16" class="internal"><span class="codenumber">7.1</span> <span class="title">Self-test questions for lecture 13</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-7.html#subsection-17" class="internal"><span class="codenumber">7.2</span> <span class="title">Self-test questions for lecture 14</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-7.html#subsection-18" class="internal"><span class="codenumber">7.3</span> <span class="title">Workshop questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="week-8.html" class="internal"><span class="codenumber">8</span> <span class="title">Week 8</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-8.html#subsection-19" class="internal"><span class="codenumber">8.1</span> <span class="title">Self-test questions for lecture 15</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-8.html#subsection-20" class="internal"><span class="codenumber">8.2</span> <span class="title">Self-test questions for lecture 16</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="week-9.html" class="internal"><span class="codenumber">9</span> <span class="title">Week 9</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-9.html#subsection-21" class="internal"><span class="codenumber">9.1</span> <span class="title">Self-test questions for lecture 17</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-9.html#subsection-22" class="internal"><span class="codenumber">9.2</span> <span class="title">Self-test questions for lecture 18</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-9.html#subsection-23" class="internal"><span class="codenumber">9.3</span> <span class="title">Workshop questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="workshop-instructions.html" class="internal"><span class="codenumber">A</span> <span class="title">Workshop instructions</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="assessment.html" class="internal"><span class="codenumber">B</span> <span class="title">Assessment</span></a></div></li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="study-instructions.html" class="internal"><span class="codenumber">C</span> <span class="title">How to study this module</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="study-instructions.html#thoughts-on-learning" class="internal"><span class="codenumber">C.1</span> <span class="title">Some thoughts on learning mathematics</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="module-purpose.html" class="internal"><span class="codenumber">D</span> <span class="title">The purpose of this module</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="module-purpose.html#learning-outcomes" class="internal"><span class="codenumber">D.1</span> <span class="title">Learning outcomes</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="exam-backmatter.html" class="internal"><span class="codenumber">E</span> <span class="title">Exam information sheet</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="pdf-link.html" class="internal"><span class="codenumber">F</span> <span class="title">Questions in pdf format</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="anonymous-questions.html" class="internal"><span class="codenumber">G</span> <span class="title">Anonymous questions form</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="week-9"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">9</span><span class="space"> </span><span class="title">Week 9</span>
 </h2>
-<article class="exercise exercise-like" id="exercise-39"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-39"><h3 class="heading">
-<span class="type">Lecture</span><span class="space"> </span><span class="codenumber">9.1</span><span class="period">.</span><span class="space"> </span><span class="title">Linearity of integration.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-39"><article class="exercise exercise-like"><article class="task exercise-like" id="task-106"><h4 class="heading"><span class="codenumber">(a)</span></h4>State and prove how suprema/infima of functions behave under scalar multiplication.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-106" id="solution-106"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-106"><div class="solution solution-like">
-<article class="lemma theorem-like" id="lem-dilation-sup"><h5 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">9.2</span><span class="period">.</span><span class="space"> </span><span class="title">Scaling rule for suprema and infima.</span>
-</h5>Let <span class="process-math">\(f : S \to \R\)</span> be a bounded function on an arbitrary non-empty set <span class="process-math">\(S\text{.}\)</span> Let <span class="process-math">\(c \in \R\text{.}\)</span> Then:<div class="displaymath process-math" data-contains-math-knowls="">
+<section class="subsection" id="subsection-21"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">9.1</span><span class="space"> </span><span class="title">Self-test questions for lecture 17</span>
+</h3>
+<details id="task-riemann-int" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">-</span><span class="space"> </span><span class="codenumber">9.1</span><span class="period">.</span><span class="space"> </span><span class="title">Definition of the Riemann integral.</span>
+</h4></summary><article class="exercise exercise-like"><article class="task exercise-like" id="task-166"><h5 class="heading"><span class="codenumber">(a)</span></h5>Define a subdivision of a closed interval.<div class="solutions"><details id="solution-130" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><article class="definition definition-like" id="def-subdiv"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.2</span><span class="period">.</span><span class="space"> </span><span class="title">Subdivision.</span>
+</h6> Let <span class="process-math">\(a,b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> A <em class="emphasis">subdivision</em> of the interval <span class="process-math">\([a,b]\)</span> is a strictly increasing finite sequence of the form<div class="displaymath process-math">
 \begin{equation*}
-\sup_{S} \brac{cf}  =
-\begin{cases}
-\displaystyle c \sup_{ S} f \amp \text{ if } c \geq 0, \\
-\displaystyle c \inf_{ S} f \amp \text{ if } c \lt  0.
-\end{cases}
+a= x_0 \lt  x_1 \lt  \dots \lt  x_N = b
 \end{equation*}
-</div>Similarly<div class="displaymath process-math" data-contains-math-knowls="">
+</div>for some <span class="process-math">\(N \in \N\text{.}\)</span> We sometimes denote such a subdivision by <span class="process-math">\((x_n)_{n=0}^N = (x_0, x_1, \dots, x_N)\text{.}\)</span></article></div></details></div></article><article class="task exercise-like" id="task-167"><h5 class="heading"><span class="codenumber">(b)</span></h5>Define the upper/lower Riemann sum of a function with respect to a subdivision.<div class="solutions"><details id="solution-131" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><article class="definition definition-like" id="def-riemann-sum"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.3</span><span class="period">.</span><span class="space"> </span><span class="title">Riemann sum.</span>
+</h6> Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a bounded<a class="xref" id="fn-13" href="" data-knowl="./knowl/fn-13.html" title="Footnote 9.1"><sup> 1 </sup></a> function. Let <span class="process-math">\(a = x_0 \lt  x_1\lt  \dots \lt  x_N = b\)</span> be a subdivision of <span class="process-math">\([a,b]\text{.}\)</span> We define the <em class="emphasis">upper Riemann sum</em> of <span class="process-math">\(f\)</span> with respect to this subdivision by<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-upper-bound.html">
 \begin{equation*}
-\inf_{ S} \brac{cf}  =
-\begin{cases}
-\displaystyle c \inf_{ S} f \amp \text{ if } c \geq 0, \\
-\displaystyle c \sup_{ S} f \amp \text{ if } c \lt  0.
-\end{cases}
+U(f; x_0, \dots, x_N) := \sum_{n=1}^N (x_n-x_{n-1}) \sup_{ [x_{n-1}, x_n]} f.
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-66"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-66"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-66"><article class="hiddenproof"><p id="p-96">If <span class="process-math">\(c \gt 0\)</span> then both claims follows from the fact that</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+</div>We define the <em class="emphasis">lower Riemann sum</em> of <span class="process-math">\(f\)</span> with respect to this subdivision by<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-upper-bound.html">
 \begin{equation*}
-\set{M : M \text{ is an upper bound for } cf} = \set{cM : M \text{ is an upper bound for } f},
+L(f; x_0, \dots, x_N) := \sum_{n=1}^N (x_n-x_{n-1}) \inf_{ [x_{n-1}, x_n]} f.
 \end{equation*}
-</div>
-<p class="continuation">and similarly for lower bounds.</p>
-<p id="p-97">For <span class="process-math">\(c \lt  0\)</span> we use the result for <span class="process-math">\(c\gt0\)</span> as follows</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\sup_{S} \brac{cf} = \sup_{S} \brac{-(-c)f} = -\inf_S \brac{(-c) f} = -(-c)\inf_S f = c\inf_S f,
-\end{equation*}
-</div>
-<p class="continuation">and similarly for the infimum.</p></article></div>
-</div></div>
-</div></article><article class="task exercise-like" id="task-107"><h4 class="heading"><span class="codenumber">(b)</span></h4>State and prove how the Riemann integral respects scaling.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-107" id="solution-107"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-107"><div class="solution solution-like">
-<article class="theorem theorem-like" id="thm-int-scale"><h5 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.3</span><span class="period">.</span><span class="space"> </span><span class="title">The Riemann integral scales appropriately.</span>
-</h5>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(f: [a,b] \to \R\)</span> be Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span> Let <span class="process-math">\(c \in \R\text{.}\)</span> Then <span class="process-math">\(cf\)</span> is  Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span> Moreover<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\int_a^b cf = c\int_a^b f. \qquad \text{[scaling rule]}
-\end{equation*}
-</div></article><article class="hiddenproof" id="proof-67"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-67"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-67"><article class="hiddenproof">We first employ the scaling rule for suprema/infima (<a href="" class="xref" data-knowl="./knowl/lem-dilation-sup.html" title="Lemma 9.2: Scaling rule for suprema and infima">Lemma 9.2</a>) to deduce that<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-dilation-sup.html ./knowl/lem-dilation-sup.html">
-\begin{equation*}
-U(cf;x_0,\dots, x_N) = 
-\begin{cases} 
-c U(f;x_0,\dots, x_N) \amp \text{ if } c \geq 0,\\
-c L(f;x_0,\dots, x_N) \amp \text{ if } c \lt  0.
-\end{cases}
-\end{equation*}
-</div>Similarly<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-dilation-sup.html ./knowl/lem-dilation-sup.html">
-\begin{equation*}
-L(cf;x_0,\dots, x_N) = 
-\begin{cases} 
-c L(f;x_0,\dots, x_N) \amp \text{ if } c \geq 0,\\
-c U(f;x_0,\dots, x_N) \amp \text{ if } c \lt  0.
-\end{cases}
-\end{equation*}
-</div>Employing the scaling rule (<a href="" class="xref" data-knowl="./knowl/lem-dilation-sup.html" title="Lemma 9.2: Scaling rule for suprema and infima">Lemma 9.2</a>) a second time, as we take sup/inf over all subdivisions, we obtain<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-dilation-sup.html ./knowl/lem-dilation-sup.html">
-\begin{equation*}
-U(cf;[a,b]) = 
-\begin{cases} 
-c U(f;[a,b]) \amp \text{ if } c \geq 0,\\
-c L(f;[a,b]) \amp \text{ if } c \lt  0.
-\end{cases}
-\end{equation*}
-</div>Similarly<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-dilation-sup.html ./knowl/lem-dilation-sup.html">
-\begin{equation*}
-L(cf;[a,b]) = 
-\begin{cases} 
-c L(f;[a,b]) \amp \text{ if } c \geq 0,\\
-c U(f;[a,b]) \amp \text{ if } c \lt  0.
-\end{cases}
-\end{equation*}
-</div>Regardless of whether <span class="process-math">\(c \geq 0\)</span> or <span class="process-math">\(c \lt  0\text{,}\)</span> the fact that <span class="process-math">\(U(f;[a,b]) = L(f;[a,b])\)</span> gives that<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-dilation-sup.html ./knowl/lem-dilation-sup.html">
-\begin{equation*}
-U(cf;[a,b]) = L(cf;[a,b]) = c\int_a^b f.
-\end{equation*}
-</div></article></div>
-</div></div>
-</div></article><article class="task exercise-like" id="task-108"><h4 class="heading"><span class="codenumber">(c)</span></h4>State and prove how suprema/infima of functions behave under addition.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-108" id="solution-108"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-108"><div class="solution solution-like">
-<article class="lemma theorem-like" id="lem-sub-add-sup"><h5 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">9.4</span><span class="period">.</span><span class="space"> </span><span class="title">Subadditivity of sup and inf.</span>
-</h5>
-<span class="process-math">\(f,g : S \to \R\)</span><span class="process-math">\(S\text{.}\)</span><div class="displaymath process-math" data-contains-math-knowls="./knowl/def-sup.html" id="md-22">
-\begin{align*}
-\sup_{ S} \brac{f + g}\amp \leq \sup_{ S} f +\sup_{ S}  g;\\
-\inf_{ S} \brac{f + g} \amp \geq \inf_{ S} f +\inf_{ S}  g.
-\end{align*}
-</div></article><article class="hiddenproof" id="proof-68"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-68"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-68"><article class="hiddenproof">If <span class="process-math">\(x_0 \in S\)</span> then we have that<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-sup.html">
-\begin{equation*}
-f(x_0) \leq \sup_{ S} f\quad \text{and} \quad g(x_0) \leq \sup_{S} g.
-\end{equation*}
-</div>Hence the sum<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-sup.html">
-\begin{equation*}
-\sup_{S} f +\sup_{ S}  g
-\end{equation*}
-</div>is an upper bound for the set<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-sup.html">
-\begin{equation*}
-\set{f(x_0) + g(x_0) : x_0 \in S}.
-\end{equation*}
-</div>By definition of the supremum as the least upper bound (<a href="" class="xref" data-knowl="./knowl/def-sup.html" title="Definition 1.5: Supremum">Definition 1.5</a>) we deduce the subadditivity of the supremum. The argument for the infimum is analogous.</article></div>
-</div></div>
-</div></article><article class="task exercise-like" id="task-109"><h4 class="heading"><span class="codenumber">(d)</span></h4>State and prove how Riemann sums behave under addition of functions.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-109" id="solution-109"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-109"><div class="solution solution-like">
-<article class="corollary theorem-like" id="cor-sub-add"><h5 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">9.5</span><span class="period">.</span><span class="space"> </span><span class="title">Subadditivity of Riemann sums.</span>
-</h5>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(f,g : [a,b] \to \R\)</span> be bounded. Let <span class="process-math">\(a = x_0 \lt  \dots \lt  x_N = b\)</span> be a subdivision of <span class="process-math">\([a,b]\text{.}\)</span> Then<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-U(f+g; x_0, \dots, x_N) \leq U(f;x_0, \dots, x_N) + U(g;x_0, \dots, x_N)
-\end{equation*}
-</div>and<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-L(f+g; x_0, \dots, x_N) \geq L(f;x_0, \dots, x_N) + L(g;x_0, \dots, x_N) . 
-\end{equation*}
-</div></article><article class="hiddenproof" id="proof-69"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-69"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-69"><article class="hiddenproof">This is a direct consequence of sub-additivity of suprema and infima (<a href="" class="xref" data-knowl="./knowl/lem-sub-add-sup.html" title="Lemma 9.4: Subadditivity of sup and inf">Lemma 9.4</a>).</article></div>
-</div></div>
-</div></article><article class="task exercise-like" id="task-110"><h4 class="heading"><span class="codenumber">(e)</span></h4>State and prove how the Riemann integral respects addition.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-110" id="solution-110"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-110"><div class="solution solution-like">
-<article class="theorem theorem-like" id="thm-int-add"><h5 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.6</span><span class="period">.</span><span class="space"> </span><span class="title">Additivity of integration.</span>
-</h5>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(f,g : [a,b] \to \R\)</span> be functions which are Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span> Then  <span class="process-math">\(f+g\)</span> is  Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span> Moreover<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\int_a^b\brac{f+g}= \int_a^bf+\int_a^bg\qquad\text{[addition rule]}\text{.}
-\end{equation*}
-</div></article><article class="hiddenproof" id="proof-70"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-70"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-70"><article class="hiddenproof">Fix <span class="process-math">\(\eps \gt 0\text{.}\)</span> By the epsilon characterisation of Riemann integrability, (<a href="" class="xref" data-knowl="./knowl/prop-eps-riemann.html" title="Proposition 8.23: Epsilon characterisation of Riemann integrability">Proposition 8.23</a>) there exists a subdivision <span class="process-math">\(a= y_0 \lt  \dots \lt  y_M = b\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/cor-sub-add.html ./knowl/cor-up-low-finite.html">
-\begin{equation*}
-U(f;y_0, \dots, y_M) -\trecip{2}\eps \leq \int_a^b f \leq L(f;y_0, \dots, y_M)+\trecip{2}\eps.
-\end{equation*}
-</div>Similarly there exists a subdivision <span class="process-math">\(a= z_0 \lt  \dots \lt  z_T = b\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/cor-sub-add.html ./knowl/cor-up-low-finite.html">
-\begin{equation*}
-U(g;z_0, \dots, z_T) -\trecip{2}\eps \leq \int_a^b g \leq L(g;z_0, \dots, z_T)+\trecip{2}\eps.
-\end{equation*}
-</div>Let <span class="process-math">\(a= x_0 \lt  \dots \lt  x_N = b\)</span> denote the common refinement of <span class="process-math">\((y_0, \dots, y_M)\)</span> and <span class="process-math">\((z_0, \dots, z_T)\text{.}\)</span> Then by monotonicty of Riemann sums under refinements (<a href="" class="xref" data-knowl="./knowl/prop-mono-riemann-refine.html" title="Proposition 8.21: Riemann sums are monotone with respect to refinements">Proposition 8.21</a>) we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/cor-sub-add.html ./knowl/cor-up-low-finite.html">
-\begin{equation*}
-U(f;x_0, \dots, x_N) -\trecip{2}\eps \leq \int_a^b f \leq L(f;x_0, \dots, x_N)+\trecip{2}\eps
-\end{equation*}
-</div>and<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/cor-sub-add.html ./knowl/cor-up-low-finite.html">
-\begin{equation*}
-U(g;x_0, \dots, x_N) -\trecip{2}\eps \leq \int_a^b g \leq L(g;x_0, \dots, x_N)+\trecip{2}\eps.
-\end{equation*}
-</div>Adding inequalities together and employing the subadditivity of Riemann sums (<a href="" class="xref" data-knowl="./knowl/cor-sub-add.html" title="Corollary 9.5: Subadditivity of Riemann sums">Corollary 9.5</a>) we deduce that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/cor-sub-add.html ./knowl/cor-up-low-finite.html">
-\begin{equation*}
-U(f+g;x_0, \dots, x_N) -\eps \leq \int_a^b f + \int_a^b g \leq L(f+g;x_0, \dots, x_N) +\eps.
-\end{equation*}
-</div>Thus<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/cor-sub-add.html ./knowl/cor-up-low-finite.html">
-\begin{equation*}
-U(f+g;[a,b]) -\eps \leq \int_a^b f + \int_a^b g \leq L(f+g;[a,b]) +\eps.
-\end{equation*}
-</div>Since this holds for all <span class="process-math">\(\eps \gt 0\text{,}\)</span> we conclude that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/cor-sub-add.html ./knowl/cor-up-low-finite.html">
-\begin{equation*}
-U(f+g;[a,b]) \leq \int_a^b f + \int_a^b g \leq L(f+g;[a,b]).
-\end{equation*}
-</div>Since lower Riemann sums are always bounded above by upper Riemann sums <a href="" class="xref" data-knowl="./knowl/cor-up-low-finite.html" title="Equation 8.6">(8.6)</a> we have <span class="process-math">\(L(f+g; [a,b]) \leq U(f+g;[a,b])\text{,}\)</span> so we must have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/cor-sub-add.html ./knowl/cor-up-low-finite.html">
-\begin{equation*}
-U(f+g;[a,b]) =  \int_a^b f + \int_a^b g = L(f+g;[a,b]).
-\end{equation*}
-</div>This establishes the addition rule.</article></div>
-</div></div>
-</div></article><article class="task exercise-like" id="task-111"><h4 class="heading"><span class="codenumber">(f)</span></h4>Deduce how the Riemann integral respects pointwise inequalities.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-111" id="solution-111"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-111"><div class="solution solution-like">
-<article class="corollary theorem-like" id="cor-int-ineq"><h5 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">9.7</span><span class="period">.</span><span class="space"> </span><span class="title">Inequality rule.</span>
-</h5>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(f,g : [a,b] \to \R\)</span> be functions which are Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span> Suppose that <span class="process-math">\(f \leq g\)</span> everywhere on <span class="process-math">\([a,b]\text{.}\)</span> Then<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\int_a^bf\leq \int_a^bg.
-\end{equation*}
-</div></article><article class="hiddenproof" id="proof-71"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-71"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-71"><article class="hiddenproof">By the addition and scaling rules (<a href="" class="xref" data-knowl="./knowl/thm-int-scale.html" title="Theorem 9.3: The Riemann integral scales appropriately">Theorem 9.3</a> and <a href="" class="xref" data-knowl="./knowl/thm-int-add.html" title="Theorem 9.6: Additivity of integration">Theorem 9.6</a>) the function <span class="process-math">\(g-f\)</span> is Riemann integrable. Using the addition and scaling rules, and the trivial lower bound for the integral <a href="" class="xref" data-knowl="./knowl/cor-up-low-finite.html" title="Equation 8.6">(8.6)</a>, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-scale.html ./knowl/thm-int-add.html ./knowl/cor-up-low-finite.html">
-\begin{equation*}
-\int_a^bg - \int_a^bf =\int_a^b(g-f) \geq (b-a)\inf_{[a,b]} (g-f). 
-\end{equation*}
-</div>Since <span class="process-math">\(g-f\geq 0\)</span> on <span class="process-math">\([a,b]\text{,}\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-scale.html ./knowl/thm-int-add.html ./knowl/cor-up-low-finite.html">
-\begin{equation*}
-(b-a)\inf_{[a,b]} (g-f) \geq 0.
-\end{equation*}
-</div>This yields the required inequality.</article></div>
-</div></div>
-</div></article></article></div>
-<article class="exercise exercise-like" id="exercise-40"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-40"><h3 class="heading">
-<span class="type">Lecture</span><span class="space"> </span><span class="codenumber">9.8</span><span class="period">.</span><span class="space"> </span><span class="title">Riemann integrable functions are closed under multiplication.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-40"><article class="exercise exercise-like"><article class="task exercise-like" id="task-112"><h4 class="heading"><span class="codenumber">(a)</span></h4>Define the positive and negative part of a real number.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-112" id="solution-112"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-112"><div class="solution solution-like"><article class="definition definition-like" id="def-positive-part"><h5 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.9</span><span class="period">.</span><span class="space"> </span><span class="title">Positive and negative parts.</span>
-</h5> Given a real number <span class="process-math">\(x \in \R\)</span> define the <em class="emphasis">positive part</em> by<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-x^+ := \max\set{0, x}.
-\end{equation*}
-</div>Using this notation, define the <em class="emphasis">negative part</em> by<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-x^-:= -\min\set{x,0} = |\min\set{x,0}| = (-x)^+.
-\end{equation*}
-</div>One may check that<div class="displaymath process-math" data-contains-math-knowls="" id="eq-positive-part">
-\begin{equation}
-x = x^+ - x^- \quad\text{and}\quad |x| = x^+ + x^-.\tag{9.1}
-\end{equation}
-</div></article></div></div>
-</div></article><article class="task exercise-like" id="task-113"><h4 class="heading"><span class="codenumber">(b)</span></h4>State and prove how being Riemann integrable is preserved under taking positive parts.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-113" id="solution-113"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-113"><div class="solution solution-like">
-<article class="lemma theorem-like" id="lem-int-ineq"><h5 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">9.10</span><span class="period">.</span><span class="space"> </span><span class="title">Integrability is preserved under taking positive parts.</span>
-</h5>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(f : [a,b] \to \R\)</span> be Riemann integrable. Then <span class="process-math">\(f^+\)</span> is Riemann integrable on <span class="process-math">\([a,b]\text{:}\)</span></article><article class="hiddenproof" id="proof-72"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-72"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-72"><article class="hiddenproof">Approximating the integral with a Riemann sum (see <a href="" class="xref" data-knowl="./knowl/prop-eps-riemann.html" title="Proposition 8.23: Epsilon characterisation of Riemann integrability">Proposition 8.23</a>), for any <span class="process-math">\(\eps \gt 0\)</span> there exists a subdivision <span class="process-math">\(a = x_0 \lt  \dots \lt  x_N = b\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-eps-riemann.html ./knowl/eq-u-contraction.html ./knowl/prop-alt-sup.html ./knowl/eq-contraction.html ./knowl/eq-u-contraction.html">
-\begin{equation*}
-U(f;x_0, \dots, x_N)-L(f;x_0, \dots, x_N) \leq \eps.
-\end{equation*}
-</div>We claim that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-eps-riemann.html ./knowl/eq-u-contraction.html ./knowl/prop-alt-sup.html ./knowl/eq-contraction.html ./knowl/eq-u-contraction.html" id="mdn-14">
+</div>Notice that both the upper and lower Riemann sums are finite real numbers, since the fact that  <span class="process-math">\(f\)</span> is bounded implies that<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-upper-bound.html" id="mdn-7">
 \begin{align}
-U(f^+;x_0, \dots, x_N)- \amp L(f^+;x_0, \dots, x_N)\notag\\
-\amp \leq U(f;x_0, \dots, x_N)- L(f;x_0, \dots, x_N),\tag{9.2}
+-\infty \amp \lt (b-a)\inf_{[a,b]} f = \sum_{n=1}^N (x_n-x_{n-1}) \inf_{ [a,b]} f\notag\\
+\amp \leq \sum_{n=1}^N (x_n-x_{n-1}) \inf_{ [x_{n-1}, x_n]} f = L(f; x_0, \dots, x_N)\notag\\
+\amp\leq  \sum_{n=1}^N (x_n-x_{n-1}) \sup_{ [x_{n-1}, x_n]} f = U(f; x_0, \dots, x_N)\notag\\
+\amp \leq  \sum_{n=1}^N (x_n-x_{n-1}) \sup_{ [a,b]} f \notag\\
+\amp = (b-a)\sup_{[a,b]} f\lt  \infty.\tag{9.1}
 \end{align}
-</div>from which it follows that <span class="process-math">\(f^+\)</span> is integrable by the existence of arbitrarily close upper and lower Riemann sums (<a href="" class="xref" data-knowl="./knowl/prop-eps-riemann.html" title="Proposition 8.23: Epsilon characterisation of Riemann integrability">Proposition 8.23</a>). To establish our claim <a href="" class="xref" data-knowl="./knowl/eq-u-contraction.html" title="Equation 9.2">(9.2)</a>, we first observe that for <span class="process-math">\(x \geq 0\)</span> and <span class="process-math">\(y \leq 0\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-eps-riemann.html ./knowl/eq-u-contraction.html ./knowl/prop-alt-sup.html ./knowl/eq-contraction.html ./knowl/eq-u-contraction.html" id="eq-contraction">
-\begin{equation}
-|x^+-y^+| = |x| = x \leq x+(-y) = |x-y|.\tag{9.3}
-\end{equation}
-</div>Checking the remaining cases, one may verify that <span class="process-math">\(|x^+-y^+| \leq |x-y|\)</span> for any choice of <span class="process-math">\(x, y \in \R\text{.}\)</span> Since decreasing a supremum gives a non upper bound (see <a href="" class="xref" data-knowl="./knowl/prop-alt-sup.html" title="Proposition 1.7: Epsilon characterisation of the supremum">Proposition 1.7</a>), for any <span class="process-math">\(\eps \gt 0\)</span> there exist <span class="process-math">\(y \in [x_{n-1}, x_n]\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-eps-riemann.html ./knowl/eq-u-contraction.html ./knowl/prop-alt-sup.html ./knowl/eq-contraction.html ./knowl/eq-u-contraction.html">
+</div></article></div></details></div></article><article class="task exercise-like" id="task-168"><h5 class="heading"><span class="codenumber">(c)</span></h5>Define the upper/lower Riemann integral of a function.<div class="solutions"><details id="solution-132" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><article class="definition definition-like" id="def-up-low-riemann-integral"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.4</span><span class="period">.</span><span class="space"> </span><span class="title">Upper/lower Riemann integral.</span>
+</h6> Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a bounded function. We define the <em class="emphasis">upper Riemann integral</em> of <span class="process-math">\(f\)</span> to be the infimum of the upper Riemann sum over all possible subdivisions:<div class="displaymath process-math">
 \begin{equation*}
-\sup_{ [x_{n-1}, x_n]} f^+ - \eps \leq f^+(y) \leq \sup_{ [x_{n-1}, x_n]} f^+.
+U(f;[a,b]) 
+:= \inf\set{U(f;x_0,\dots, x_N): a= x_0 \lt  \dots \lt  x_N = b,\ N \in \N}.
 \end{equation*}
-</div>Similarly there exists <span class="process-math">\(z \in [x_{n-1}, x_n]\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-eps-riemann.html ./knowl/eq-u-contraction.html ./knowl/prop-alt-sup.html ./knowl/eq-contraction.html ./knowl/eq-u-contraction.html">
+</div>We define the <em class="emphasis">lower Riemann integral</em> of <span class="process-math">\(f\)</span> to be the supremum of the lower Riemann sum over all possible subdivisions:<div class="displaymath process-math">
 \begin{equation*}
-\inf_{ [x_{n-1}, x_n]} f^+ \leq f^+(z) \leq \inf_{ [x_{n-1}, x_n]} f^+ +  \eps.
+L(f;[a,b]) 
+:= \sup\set{L(f;x_0,\dots, x_N): a= x_0 \lt  \dots \lt  x_N = b,\ N \in \N}.
 \end{equation*}
-</div>Hence by the triangle inequality and <a href="" class="xref" data-knowl="./knowl/eq-contraction.html" title="Equation 9.3">(9.3)</a> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html ./knowl/prop-eps-riemann.html ./knowl/eq-u-contraction.html ./knowl/prop-alt-sup.html ./knowl/eq-contraction.html ./knowl/eq-u-contraction.html" id="md-23">
+</div></article></div></details></div></article><article class="task exercise-like" id="task-169"><h5 class="heading"><span class="codenumber">(d)</span></h5>Define what it means for a function to be Riemann integrable and define the Riemann integral.<div class="solutions"><details id="solution-133" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><article class="definition definition-like" id="def-riemann-integral"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.5</span><span class="period">.</span><span class="space"> </span><span class="title">Riemann integrable and Riemann integral.</span>
+</h6> Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a bounded function. We say that <span class="process-math">\(f\)</span> is <em class="emphasis">Riemann</em><a class="xref" id="fn-14" href="" data-knowl="./knowl/fn-14.html" title="Footnote 9.2"><sup> 2 </sup></a> <em class="emphasis">integrable on <span class="process-math">\([a,b]\)</span>}</em> if the upper and lower Riemann integrals coincide, so that<div class="displaymath process-math">
+\begin{equation*}
+U(f;[a,b]) = L(f;[a,b]).
+\end{equation*}
+</div>In this case we define the <em class="emphasis">Riemann integral of <span class="process-math">\(f\)</span> on <span class="process-math">\([a,b]\)</span></em> to be this common value, denoted<div class="displaymath process-math">
+\begin{equation*}
+\int_a^b f \qquad \text{or} \qquad \int_a^b f(x) \intd x.
+\end{equation*}
+</div>We also define<div class="displaymath process-math">
+\begin{equation*}
+\int_b^a f := -\int_a^b f.
+\end{equation*}
+</div></article></div></details></div></article></article></details><details id="exercise-72" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">-</span><span class="space"> </span><span class="codenumber">9.6</span><span class="period">.</span><span class="space"> </span><span class="title">Riemann sums are monotone with respect to refinements.</span>
+</h4></summary><article class="exercise exercise-like"><article class="task exercise-like" id="task-170"><h5 class="heading"><span class="codenumber">(a)</span></h5>Define what it means to be a refinement of a subdivision.<div class="solutions"><details id="solution-134" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><article class="definition definition-like" id="def-refinement"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.7</span><span class="period">.</span><span class="space"> </span><span class="title">Refinement of a subdivision.</span>
+</h6> Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> We say that the subdivision <span class="process-math">\(a = y_0 \lt  \dots \lt  y_{M} = b\)</span> is a <em class="emphasis">refinement</em> of the subdivision <span class="process-math">\(a =  x_0 \lt  \dots \lt   x_{ N} = b\)</span> if<div class="displaymath process-math">
+\begin{equation*}
+\set{x_0, x_1, \dots, x_N} \subset \set{y_0, y_1,\dots, y_{M}}.
+\end{equation*}
+</div>Given subdivisions <span class="process-math">\(a =  x_0 \lt  \dots \lt   x_{ N} = b\)</span> and <span class="process-math">\(a = y_0 \lt  \dots \lt  y_{M} = b\)</span>  (not necessarily refinements of each other) their <em class="emphasis">common refinement</em> is the subdivision <span class="process-math">\(a = z_0 \lt  \dots \lt  z_T = b\)</span> obtained by ordering the union<div class="displaymath process-math">
+\begin{equation*}
+\set{x_0, \dots , x_N} \cup \set{y_0, \dots, y_M}  = \set{z_0, \dots, z_T}.
+\end{equation*}
+</div></article></div></details></div></article><article class="task exercise-like" id="task-171"><h5 class="heading"><span class="codenumber">(b)</span></h5>State and prove how Riemann sums are monotone with respect to refinements.<div class="solutions"><details id="solution-135" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="proposition theorem-like" id="prop-mono-riemann-refine"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.8</span><span class="period">.</span><span class="space"> </span><span class="title">Riemann sums are monotone with respect to refinements.</span>
+</h6>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a bounded function. Let <span class="process-math">\(a = y_0 \lt  \dots \lt  y_M = b\)</span>  be a refinement of <span class="process-math">\(a= x_0 \lt  \dots \lt  x_N = b\text{.}\)</span> Then<div class="displaymath process-math" id="md-23">
 \begin{align*}
-\sup_{ [x_{n-1}, x_n]} f^+ - \inf_{ [x_{n-1}, x_n]} f^+
-\amp \leq |f^+(y) - f^+(z)| +2\eps\\
-\amp\leq |f(y)-f(z)| + 2\eps\\\\
-\amp\leq \sup_{ [x_{n-1}, x_n]} f - \inf_{ [x_{n-1}, x_n]} f+2\eps.
+L(f;x_0,\dots, x_N)\amp \leq L(f; y_0, \dots, y_M)\\
+\amp \leq U(f; y_0, \dots, y_M) \leq U(f;x_0,\dots, x_N).
 \end{align*}
-</div>Since this holds for arbitrary <span class="process-math">\(\eps \gt 0\text{,}\)</span> we deduce <a href="" class="xref" data-knowl="./knowl/eq-u-contraction.html" title="Equation 9.2">(9.2)</a>.</article></div>
-</div></div>
-</div></article><article class="task exercise-like" id="task-114"><h4 class="heading"><span class="codenumber">(c)</span></h4>State and prove how being Riemann integrable is preserved under taking min, max and absolute values.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-114" id="solution-114"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-114"><div class="solution solution-like">
-<article class="proposition theorem-like" id="prop-int-ineq"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.11</span><span class="period">.</span><span class="space"> </span><span class="title">Integrability is preserved under taking min, max and absolute values.</span>
-</h5>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(f,g : [a,b] \to \R\)</span> be functions which are Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span> Then the following functions are all Riemann integrable on <span class="process-math">\([a,b]\text{:}\)</span><div class="displaymath process-math" data-contains-math-knowls="">
+</div></article><details id="proof-73" class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">Let <span class="process-math">\(x_1, x_2, x_3 \in [a,b]\)</span> with <span class="process-math">\(x_1 \lt  x_2 \lt  x_3\text{.}\)</span> Since taking a supremum over a larger set does not decrease the supremum, we have<div class="displaymath process-math">
 \begin{equation*}
-\max\set{f,g}, \qquad\min\set{f,g},\qquad f^+,\qquad f^-,\qquad |f|.
+\sup_{t \in [x_1, x_2]} f(t) \leq \sup_{t \in [x_1, x_3]} f(t) \quad \text{and} \quad \sup_{t \in [x_2, x_3]} f(t) \leq \sup_{t \in [x_1, x_3]} f(t).
 \end{equation*}
-</div>Moreover we have the integral triangle inequality<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\abs{\int_a^bf}\leq  \int_a^b|f|.
-\end{equation*}
-</div></article><article class="hiddenproof" id="proof-73"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-73"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-73"><article class="hiddenproof">We have <span class="process-math">\(\max\set{f, g} = (f-g)^+ + g\text{.}\)</span> This sum is Riemann integrable by linearity of integration (<a href="" class="xref" data-knowl="./knowl/thm-int-add.html" title="Theorem 9.6: Additivity of integration">Theorem 9.6</a>). Since <span class="process-math">\(\min\set{f,g} = -\max\set{-f,-g}\text{,}\)</span> we deduce that this is also Riemann integrable using the scaling rule (<a href="" class="xref" data-knowl="./knowl/thm-int-add.html" title="Theorem 9.6: Additivity of integration">Theorem 9.6</a>). Similarly, we have Riemann integrability of <span class="process-math">\(f^- = -\max\set{-f, 0}\text{.}\)</span> Finally <span class="process-math">\(|f| = f^+ + f^-\)</span> is integrable by the previous results and the addition rule (<a href="" class="xref" data-knowl="./knowl/thm-int-add.html" title="Theorem 9.6: Additivity of integration">Theorem 9.6</a>). For the triangle inequality, linearity of integration (<a href="" class="xref" data-knowl="./knowl/thm-int-add.html" title="Theorem 9.6: Additivity of integration">Theorem 9.6</a>) gives<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/thm-int-add.html ./knowl/thm-int-add.html ./knowl/thm-int-add.html">
-\begin{equation*}
-\abs{\int_a^b f} = \abs{\int_a^b f^+ - \int_a^b f^-} \leq \int_a^b f^+ + \int_a^b f^-
-=  \int_a^b\brac{ f^+ +  f^-}  = \int_a^b\abs{ f} .
-\end{equation*}
-</div></article></div>
-</div></div>
-</div></article><article class="task exercise-like" id="task-115"><h4 class="heading"><span class="codenumber">(d)</span></h4>State and prove the sub-multiplicativity of suprema/infima.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-115" id="solution-115"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-115"><div class="solution solution-like">
-<article class="lemma theorem-like" id="lem-sub-mult-sup"><h5 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">9.12</span><span class="period">.</span><span class="space"> </span><span class="title">Sub-multiplicativity of <span class="process-math">\(\sup\)</span> and <span class="process-math">\(\inf\)</span>.</span>
-</h5>Let <span class="process-math">\(f,g : S \to [0,\infty)\)</span> be bounded <em class="emphasis">non-negative</em> functions on an arbitrary set <span class="process-math">\(S\text{.}\)</span> Then:<div class="displaymath process-math" data-contains-math-knowls="" id="md-24">
+</div>Therefore<div class="displaymath process-math" id="md-24">
 \begin{align*}
-\sup_{ S} \brac{f \cdot g} \amp\leq \sup_{ S} f \cdot \sup_{ S}  g;\\
-\inf_{ S} \brac{f \cdot g}\amp \geq \inf_{ S} f \cdot \inf_{ S}  g.
+\amp(x_2 - x_1) \sup_{t \in [x_1, x_2]} f(t) + (x_3 - x_2)  \sup_{t \in [x_2, x_3]} f(t)\\
+\amp\leq (x_2 - x_1) \sup_{t \in [x_1, x_3]} f(t) + (x_3 - x_2) \sup_{t \in [x_1, x_3]} f(t)
+=
+(x_3 - x_1) \sup_{t \in [x_1, x_3]} f(t).
 \end{align*}
-</div></article><article class="hiddenproof" id="proof-74"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-74"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-74"><article class="hiddenproof">The argument is analogous to the proof of sub-additivity (<a href="" class="xref" data-knowl="./knowl/lem-sub-add-sup.html" title="Lemma 9.4: Subadditivity of sup and inf">Lemma 9.4</a>) and is left to the reader.</article></div>
-</div></div>
-</div></article><article class="task exercise-like" id="task-116"><h4 class="heading"><span class="codenumber">(e)</span></h4>State and prove how the set of Riemann integrable functions is closed under multiplication.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-116" id="solution-116"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-116"><div class="solution solution-like">
-<article class="theorem theorem-like" id="thm-int-mult"><h5 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.13</span><span class="period">.</span><span class="space"> </span><span class="title">Riemann integrable functions are closed under multiplication.</span>
-</h5>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(f,g : [a,b] \to \R\)</span> be functions which are Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span> Then <span class="process-math">\(f\cdot g\)</span> is Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span></article><article class="hiddenproof" id="proof-75"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-75"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-75"><article class="hiddenproof">Splitting into positive and negative parts, we have that<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
+</div>It follows that adding a point to a subdivision does not increase the value of the upper Riemann sum. Repeatedly applying this fact a finite number of times, we deduce that adding a finite number of points to a subdivision does not increase the value of the corresponding Riemann sum. This proves the inequality<div class="displaymath process-math">
 \begin{equation*}
-f g = (f^+-f^-)(g^+-g^-) = f^+g^+ + f^-g^- - f^+g^- - f^-g^+.
+U(f; y_0, \dots, y_M) \leq U(f;x_0,\dots, x_N).
 \end{equation*}
-</div>Using linearity of integration (<a href="" class="xref" data-knowl="./knowl/thm-int-add.html" title="Theorem 9.6: Additivity of integration">Theorem 9.6</a>) and the fact that integrability is preserved under taking positive/negative parts (<a href="" class="xref" data-knowl="./knowl/prop-int-ineq.html" title="Proposition 9.11: Integrability is preserved under taking min, max and absolute values">Proposition 9.11</a>), it therefore suffices to establish that <span class="process-math">\(f g\)</span> is Riemann integrable when <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are non-negative. Let us therefore assume that  for all <span class="process-math">\(x\in [a,b]\)</span> we have <span class="process-math">\(f(x)\geq 0\)</span> and <span class="process-math">\(g(x) \geq 0\text{.}\)</span> Write<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
+</div>The argument for the inequality<div class="displaymath process-math">
 \begin{equation*}
-S := \sup_{ [a,b]} f\quad \text{and}\quad T:= \sup_{ [a,b]} g. 
+L(f;x_0,\dots, x_N)\leq L(f; y_0, \dots, y_M)
 \end{equation*}
-</div>Fix <span class="process-math">\(\eps  \gt 0\text{.}\)</span> Since a Riemann integral can be approximated by Riemann sums (<a href="" class="xref" data-knowl="./knowl/prop-eps-riemann.html" title="Proposition 8.23: Epsilon characterisation of Riemann integrability">Proposition 8.23</a>) there exists a subdivision <span class="process-math">\(a= y_0 \lt  \dots \lt  y_M = b\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
+</div>is similar (try it!). The inequality<div class="displaymath process-math">
 \begin{equation*}
-U(f;y_0, \dots, y_M) -\trecip{2}\eps \leq \int_a^b f \leq L(f;y_0, \dots, y_M)+\trecip{2}\eps.
+L(f; y_0, \dots, y_M) \leq U(f; y_0, \dots, y_M)
 \end{equation*}
-</div>Similarly there exists a subdivision <span class="process-math">\(a= z_0 \lt  \dots \lt  z_T = b\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
+</div>follows from the fact that<div class="displaymath process-math">
 \begin{equation*}
-U(g;z_0, \dots, z_T) -\trecip{2}\eps \leq \int_a^b g \leq L(g;z_0, \dots, z_T)+\trecip{2}\eps.
+\inf_{ [y_{n-1}, y_n]} f \leq \sup_{ [y_{n-1}, y_n]} f.
 \end{equation*}
-</div>Let <span class="process-math">\(a= x_0 \lt  \dots \lt  x_N = b\)</span> denote the common refinement of <span class="process-math">\((y_0, \dots, y_M)\)</span> and <span class="process-math">\((z_0, \dots, z_T)\text{.}\)</span> Then by monotonicty of Riemann sums under refinements (<a href="" class="xref" data-knowl="./knowl/prop-mono-riemann-refine.html" title="Proposition 8.21: Riemann sums are monotone with respect to refinements">Proposition 8.21</a>) we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
+</div></article></details>
+</div></details></div></article><article class="task exercise-like" id="task-172"><h5 class="heading"><span class="codenumber">(c)</span></h5>Deduce how lower Riemann sums never exceed upper Riemann sums<div class="solutions"><details id="solution-136" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="corollary theorem-like" id="cor-lower-upper"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">9.9</span><span class="period">.</span><span class="space"> </span><span class="title">Lower Riemann sums never exceed upper Riemann sums.</span>
+</h6>
+<span class="process-math">\(a, b\in \R\)</span><span class="process-math">\(a\lt  b\)</span><span class="process-math">\(f : [a,b] \to \R\)</span><span class="process-math">\(a = y_0 \lt  \dots \lt  y_M = b\)</span><span class="process-math">\(a= x_0 \lt  \dots \lt  x_N = b\)</span><div class="displaymath process-math">
 \begin{equation*}
-U(f;x_0, \dots, x_N) -\trecip{2}\eps \leq \int_a^b f \leq L(f;x_0, \dots, x_N)+\trecip{2}\eps
-\end{equation*}
-</div>and<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
-\begin{equation*}
-U(g;x_0, \dots, x_N) -\trecip{2}\eps \leq \int_a^b g \leq L(g;x_0, \dots, x_N)+\trecip{2}\eps.
-\end{equation*}
-</div>To ease notation, write<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html" id="md-25">
-\begin{gather*}
-s_i := \inf_{ [x_{i-1}, x_i]} f, \quad S_i := \sup_{[x_{i-1}, x_i]} f,\\
-t_i := \inf_{ [x_{i-1}, x_i]} g, \quad T_i := \sup_{[x_{i-1}, x_i]} g.
-\end{gather*}
-</div>Then for each <span class="process-math">\(i\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
-\begin{equation*}
-S_iT_i - s_it_i = (S_i-s_i)T_i + s_i(T_i-t_i) \leq (S_i-s_i)T + S(T_i-t_i).
-\end{equation*}
-</div>By sub-multiplicativity of <span class="process-math">\(\sup\)</span> and <span class="process-math">\(\inf\)</span> (<a href="" class="xref" data-knowl="./knowl/lem-sub-mult-sup.html" title="Lemma 9.12: Sub-multiplicativity of \sup and \inf">Lemma 9.12</a>) we see that<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
-\begin{equation*}
-\sup_{ [x_{i-1}, x_i]} (fg)\leq S_i T_i \quad \text{and}\quad \inf_{ [x_{i-1}, x_i]} (fg) \geq s_i t_i.
-\end{equation*}
-</div>Hence<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html" id="md-26">
-\begin{align*}
-\amp U(fg;x_0, \dots, x_N) - L(fg;x_0,\dots, x_N) \leq \sum_{i=1}^N  \brac{S_iT_i - s_it_i} (x_i-x_{i-1})\\
-\amp \leq T \sum_{i=1}^N \brac{S_i - s_i} (x_i-x_{i-1}) + S \sum_{i=1}^N \brac{T_i - t_i} (x_i-x_{i-1})
-\leq \eps.
-\end{align*}
-</div></article></div>
-</div></div>
-</div></article></article></div>
-<article class="exercise exercise-like" id="exercise-41"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-41"><h3 class="heading">
-<span class="type">Lecture</span><span class="space"> </span><span class="codenumber">9.14</span><span class="period">.</span><span class="space"> </span><span class="title">Integrating on a sub-interval.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-41"><article class="exercise exercise-like"><article class="task exercise-like" id="task-117"><h4 class="heading"><span class="codenumber">(a)</span></h4>Define an indicator function.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-117" id="solution-117"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-117"><div class="solution solution-like"><article class="definition definition-like" id="def-indicator"><h5 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.15</span><span class="period">.</span><span class="space"> </span><span class="title">Indicator function.</span>
-</h5> Given a set <span class="process-math">\(S\subset \R\)</span> we define the indicator function <span class="process-math">\(1_S : \R \to \R\)</span> by<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-1_S(x) :=
-\begin{cases}
-1 \amp \text{ if } x \in S;\\
-0 \amp \text{ if } x \notin S.
-\end{cases}
-\end{equation*}
-</div></article></div></div>
-</div></article><article class="task exercise-like" id="task-118"><h4 class="heading"><span class="codenumber">(b)</span></h4>Prove that the indicator function of a set with one element is Riemann integrable.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-118" id="solution-118"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-118"><div class="solution solution-like">
-<article class="example example-like" id="eg-indicator-point"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-eg-indicator-point"><h5 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.16</span><span class="period">.</span><span class="space"> </span><span class="title">Indicator of a point.</span>
-</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-eg-indicator-point"><article class="example example-like"> Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(c \in (a,b)\)</span>  and consider the indicator function <span class="process-math">\(1_{\set{c}} :[a,b]\to\R\text{.}\)</span> We will show that  <span class="process-math">\(1_{\set{c}}\)</span> is Riemann integrable on <span class="process-math">\([a,b]\)</span> with integral 0. For any <span class="process-math">\(0 \lt  \eps \lt  \min\set{c-a, b-c}\)</span> we have a subdivision <span class="process-math">\(a \lt  c-\eps  \lt  c+\eps \lt  b\)</span> satisfying<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-point-int-0.html">
-\begin{equation*}
-U(f;[a,b]) \leq U(1_{\set{c}};a , c-\eps  ,c+\eps , b) = 2\eps.
-\end{equation*}
-</div>Letting <span class="process-math">\(\eps \to 0\text{,}\)</span> we deduce that <span class="process-math">\(U(1_{\set{c}}; [a,b]) =0\text{.}\)</span> Since <span class="process-math">\(1_{\set{c}}\)</span> is non-negative everywhere, it follows that<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-point-int-0.html">
-\begin{equation*}
-0 \leq L(1_{\set{c}}; [a,b])  \leq U(1_{\set{c}}; [a,b]) =0.
-\end{equation*}
-</div>Thus<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-point-int-0.html" id="eq-point-int-0">
-\begin{equation}
-\int_a^b 1_{\set{c}}= 0.\tag{9.4}
-\end{equation}
-</div>A similar argument yields <a href="" class="xref" data-knowl="./knowl/eq-point-int-0.html" title="Equation 9.4">(9.4)</a> in the case when <span class="process-math">\(c=a\)</span> or <span class="process-math">\(c = b\text{.}\)</span></article></div>
-</div></div>
-</div></article><article class="task exercise-like" id="task-119"><h4 class="heading"><span class="codenumber">(c)</span></h4>State and prove how altering a function on a finite set does not affect the value of its integral.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-119" id="solution-119"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-119"><div class="solution solution-like">
-<article class="proposition theorem-like" id="prop-int-finite-points"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.17</span><span class="period">.</span><span class="space"> </span><span class="title">Integrals agree up to finite point sets.</span>
-</h5>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(f,g : [a,b] \to \R\)</span> be functions which are Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span> Suppose that <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> differ at only finitely many points, so that the set<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\set{x \in [a,b] : f(x) \neq g(x)}
-\end{equation*}
-</div>is finite. Then<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\int_a^b f = \int_a^b g.
-\end{equation*}
-</div></article><article class="hiddenproof" id="proof-76"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-76"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-76"><article class="hiddenproof">Our hypothesis implies that there exist finitely many points <span class="process-math">\(x_1, \dots, x_n \in [a,b]\)</span> and <span class="process-math">\(c_1, \dots, c_n \in \R\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-f-g = \sum_{i=1}^n c_i 1_{\set{x_i}}.
-\end{equation*}
-</div>By linearity of the integral we deduce that<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\int_a^b f - \int_a^b g = \sum_{i=1}^n c_i \int_a^b1_{\set{x_i}} =\sum_{i=1}^n c_i \cdot 0 =  0.
-\end{equation*}
-</div></article></div>
-</div></div>
-</div></article><article class="task exercise-like" id="task-120"><h4 class="heading"><span class="codenumber">(d)</span></h4>State and prove how the indicator function of an interval is Riemann integrable.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-120" id="solution-120"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-120"><div class="solution solution-like">
-<article class="proposition theorem-like" id="prop-indicator-interval"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.18</span><span class="period">.</span><span class="space"> </span><span class="title">Indicator of an interval.</span>
-</h5>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(c, d \in [a,b]\)</span> with <span class="process-math">\(c \leq d\text{.}\)</span> For any interval<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-I \in \set{(c,d), [c,d), (c,d], [c,d]}
-\end{equation*}
-</div>we have<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\int_a^b 1_I = d- c = \mathrm{Length}(I).
-\end{equation*}
-</div></article><article class="hiddenproof" id="proof-77"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-77"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-77"><article class="hiddenproof">We prove the result when <span class="process-math">\(a \lt  c\lt  d\lt  b\text{,}\)</span> the remaining cases being similar. We may also assume that <span class="process-math">\(I = (c,d)\text{,}\)</span> since  we can change the value of a function on a finite set of points without affecting the integral (<a href="" class="xref" data-knowl="./knowl/prop-int-finite-points.html" title="Proposition 9.17: Integrals agree up to finite point sets">Proposition 9.17</a>). Consider the subdivision <span class="process-math">\(a \lt  c \lt  d \lt  b\text{.}\)</span> Then<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-int-finite-points.html">
-\begin{equation*}
-U(1_{(c,d)}; a,c,d,b) = (c-a)\cdot 0 + (d-c)\cdot 1 + (b-d)\cdot 0 = d-c .
-\end{equation*}
-</div>Similarly<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-int-finite-points.html">
-\begin{equation*}
-L(1_{(c,d)}; a,c,d,b) = d-c.
-\end{equation*}
-</div>It therefore follows that <span class="process-math">\(1_{(c,d)}\)</span> is Riemann integrable on <span class="process-math">\([a,b]\)</span> with integral <span class="process-math">\(d-c\text{.}\)</span></article></div>
-</div></div>
-</div></article><article class="task exercise-like" id="task-121"><h4 class="heading"><span class="codenumber">(e)</span></h4>State and prove how the Riemann integral behaves on restricting to a sub-interval.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-121" id="solution-121"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-121"><div class="solution solution-like">
-<article class="proposition theorem-like" id="prop-int-subinterval"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.19</span><span class="period">.</span><span class="space"> </span><span class="title">Restricting to a sub-interval preserves integrability.</span>
-</h5>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(c, d \in [a,b]\)</span> with <span class="process-math">\(c \lt  d\text{.}\)</span> Let <span class="process-math">\(f: [a,b] \to \R\)</span> be functions which is Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span> Then <span class="process-math">\(f\)</span> is also Riemann integrable on <span class="process-math">\([c,d]\)</span> and<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\int_c^d f = \int_a^b f1_{[c,d]}.
-\end{equation*}
-</div>Furthermore, if <span class="process-math">\(c \in (a,b)\)</span> then we have the <em class="emphasis">interval additivity</em> property<div class="displaymath process-math" data-contains-math-knowls="" id="eq-split-integral">
-\begin{equation}
-\int_a^b f = \int_a^c f+ \int_c^b f.\tag{9.5}
-\end{equation}
-</div></article><article class="hiddenproof" id="proof-78"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-78"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-78"><article class="hiddenproof"><p id="p-98">Since products of Riemann integrable functions are integrable (<a href="" class="xref" data-knowl="./knowl/thm-int-mult.html" title="Theorem 9.13: Riemann integrable functions are closed under multiplication">Theorem 9.13</a>) and indicators of intervals are integrable (<a href="" class="xref" data-knowl="./knowl/prop-indicator-interval.html" title="Proposition 9.18: Indicator of an interval">Proposition 9.18</a>), the function <span class="process-math">\(f1_{(c,d)}\)</span> is Riemann integrable on <span class="process-math">\([a, b]\text{.}\)</span> By Riemann sum approximation (<a href="" class="xref" data-knowl="./knowl/prop-eps-riemann.html" title="Proposition 8.23: Epsilon characterisation of Riemann integrability">Proposition 8.23</a>), for any <span class="process-math">\(\eps \gt 0\)</span> there exists a subdivision <span class="process-math">\(a = x_0 \lt  \dots \lt  x_N = b\)</span> such that</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-mult.html ./knowl/prop-indicator-interval.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/prop-int-finite-points.html" id="eq-up-low-eps">
-\begin{equation}
-U(f1_{(c,d)}; x_0, \dots, x_N) - \eps \leq \int_a^bf1_{(c,d)}  \leq L(f1_{(c,d)}; x_0, \dots, x_N) + \eps.\tag{9.6}
-\end{equation}
-</div>
-<p class="continuation">Since refining a subdivision does not increase the upper sum and does not decrease the lower sum (<a href="" class="xref" data-knowl="./knowl/prop-mono-riemann-refine.html" title="Proposition 8.21: Riemann sums are monotone with respect to refinements">Proposition 8.21</a>), we may assume that the subdivision <span class="process-math">\(a = x_0 \lt  \dots \lt  x_N = b\)</span> contains <span class="process-math">\(c\)</span> and <span class="process-math">\(d\text{.}\)</span> Let <span class="process-math">\(m \lt  n\)</span> be such that <span class="process-math">\(x_m = c\)</span> and <span class="process-math">\(x_n = d\text{.}\)</span> Notice that <span class="process-math">\(c= x_m \lt  \dots \lt  x_n = d\)</span> is a subdivision of <span class="process-math">\([c,d]\text{.}\)</span> Moreover</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-mult.html ./knowl/prop-indicator-interval.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/prop-int-finite-points.html" id="md-27">
-\begin{gather*}
-U(f1_{(c,d)}; x_0, \dots, x_N) = U(f1_{(c,d)};x_n, \dots, x_m),\\
-L(f1_{(c,d)}; x_0, \dots, x_N) = L(f1_{(c,d)};x_n, \dots, x_m).
-\end{gather*}
-</div>
-<p class="continuation">Thus for every <span class="process-math">\(\eps \gt 0\)</span> we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-mult.html ./knowl/prop-indicator-interval.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/prop-int-finite-points.html">
-\begin{equation*}
-U(f1_{(c,d)}; [c,d])-\eps \leq \int_a^b f1_{(c,d)} \leq L(f1_{(c,d)}; [c,d])+\eps
+L(f;y_0, \dots, y_M)\leq U(f;x_0, \dots, x_N)\text{.}
 \end{equation*}
 </div>
-<p class="continuation">Since this holds for every <span class="process-math">\(\eps \gt 0\text{,}\)</span> we deduce that <span class="process-math">\(f1_{(c,d)}\)</span> is Riemann integrable on <span class="process-math">\([c,d]\)</span> with</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-mult.html ./knowl/prop-indicator-interval.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/prop-int-finite-points.html">
+<div class="displaymath process-math">
 \begin{equation*}
-\int_c^df1_{(c,d)} = \int_a^b f1_{(c,d)}
+L(f;[a,b])\leq U(f;[a,b])\text{.}
 \end{equation*}
-</div>
-<p class="continuation">Since altering a function on a finite set of points does not affect the integral (<a href="" class="xref" data-knowl="./knowl/prop-int-finite-points.html" title="Proposition 9.17: Integrals agree up to finite point sets">Proposition 9.17</a>) we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-mult.html ./knowl/prop-indicator-interval.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/prop-int-finite-points.html">
+</div></article> <details id="proof-74" class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">Let <span class="process-math">\(a = z_0 \lt \dots \lt z_T = b\)</span> be the common refinement of <span class="process-math">\(a = y_0 \lt  \dots \lt  y_M = b\)</span> and <span class="process-math">\(a= x_0 \lt  \dots \lt  x_N = b\text{,}\)</span> so that<div class="displaymath process-math">
 \begin{equation*}
-\int_a^b f1_{[c,d]} = \int_a^b f1_{(c,d)} = \int_c^d f1_{(c,d)} =  \int_c^d f .
+\set{x_0, \dots , x_N} \cup \set{y_0, \dots, y_M}  = \set{z_0, \dots, z_T}\text{.}
 \end{equation*}
-</div>
-<p id="p-99">To deduce <a href="" class="xref" data-knowl="./knowl/eq-split-integral.html" title="Equation 9.5">(9.5)</a> we use the above, together with linearity of integration (<a href="" class="xref" data-knowl="./knowl/thm-int-add.html" title="Theorem 9.6: Additivity of integration">Theorem 9.6</a>) and the fact that indicators of points have zero integral (<a href="" class="xref" data-knowl="./knowl/prop-int-finite-points.html" title="Proposition 9.17: Integrals agree up to finite point sets">Proposition 9.17</a>) to yield</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-split-integral.html ./knowl/thm-int-add.html ./knowl/prop-int-finite-points.html" id="md-28">
-\begin{align*}
-\int_a^b f \amp = \int_a^b f(1_{[a,c)} + 1_{[c,b]}) = \int_a^b f1_{[a,c)} + \int_a^b1_{[c,b]}\\
-\amp = \int_a^b f1_{[a,c]} + \int_a^b1_{[c,b]} = \int_a^c f + \int_c^bf. 
-\end{align*}
-</div></article></div>
-</div></div>
-</div></article></article></div>
-<article class="exercise exercise-like" id="exercise-42"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-42"><h3 class="heading">
-<span class="type">Lecture</span><span class="space"> </span><span class="codenumber">9.20</span><span class="period">.</span><span class="space"> </span><span class="title">Classes of Riemann integrable functions.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-42"><article class="exercise exercise-like"><article class="task exercise-like" id="ex-mono-riemann"><h4 class="heading"><span class="codenumber">(a)</span></h4>State and prove how a monotone function on a closed interval is integrable.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-122" id="solution-122"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-122"><div class="solution solution-like">
+</div>Since Riemann sums are monotone with respect to refinements, and since <span class="process-math">\(\inf_{[z_{n-1},z_n]}f \leq \sup_{[z_{n-1},z_n]}f\text{,}\)</span> we have<div class="displaymath process-math">
+\begin{equation*}
+L(f;y_0, \dots, y_M) \leq L(f;z_0, \dots, z_T) \leq U(f;z_0, \dots, z_T) \leq U(f; x_0, \dots, x_N)\text{.}
+\end{equation*}
+</div>Taking a supremum over the all possible <span class="process-math">\(a = y_0 \lt  \dots \lt  y_M = b\)</span> gives that<div class="displaymath process-math">
+\begin{equation*}
+L(f;[a,b]) \leq  U(f; x_0, \dots, x_N)\text{.}
+\end{equation*}
+</div>Taking an infimum over all possible <span class="process-math">\(a= x_0 \lt  \dots \lt  x_N = b\)</span> gives that<div class="displaymath process-math">
+\begin{equation*}
+L(f;[a,b]) \leq  U(f; [a,b])\text{.}
+\end{equation*}
+</div></article></details>
+</div></details></div></article></article></details><details id="ex-mono-riemann" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">-</span><span class="space"> </span><span class="codenumber">9.10</span><span class="period">.</span><span class="space"> </span><span class="title">Monotone functions are Riemann integrable.</span>
+</h4></summary><article class="exercise exercise-like">State and prove how a monotone function on a closed interval is integrable.<div class="solutions"><details id="solution-137" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
 <article class="proposition theorem-like" id="prop-mono-riemann"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.21</span><span class="period">.</span><span class="space"> </span><span class="title">Monotone functions are integrable.</span>
-</h5>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a \lt  b\text{.}\)</span> Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a monotone function. Then <span class="process-math">\(f\)</span> is Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span></article><article class="hiddenproof" id="proof-79"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-79"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-79"><article class="hiddenproof">Let us suppose that <span class="process-math">\(f\)</span> is increasing and that <span class="process-math">\([a,b] = [0,1]\text{,}\)</span> the  general case being similar. Since <span class="process-math">\(f\)</span> is increasing, for any sub-interval <span class="process-math">\([c,d]\subset [0,1]\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.11</span><span class="period">.</span><span class="space"> </span><span class="title">Monotone functions are integrable.</span>
+</h5>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a \lt  b\text{.}\)</span> Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a monotone function. Then <span class="process-math">\(f\)</span> is Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span></article><details id="proof-75" class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof"><div class="para" id="p-157">We are required to prove that <span class="process-math">\(f\)</span> is bounded (so that the upper/lower Riemann sums/integrals are defined) and that <span class="process-math">\(L(f;[a,b]) = U(f;[a,b])\text{.}\)</span> Let us suppose that <span class="process-math">\(f\)</span> is increasing and that <span class="process-math">\([a,b] = [0,1]\text{,}\)</span> the  general case being similar.</div> <div class="para logical" id="p-158">
+<div class="para">Since <span class="process-math">\(f\)</span> is increasing, for any sub-interval <span class="process-math">\([c,d]\subset [0,1]\)</span> we have</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \sup_{[c,d]} f = f(d) \quad \text{and}\quad \inf_{[c,d]} f= f(c).
 \end{equation*}
-</div>In particular, <span class="process-math">\(f\)</span> is bounded on <span class="process-math">\([0,1]\text{,}\)</span> with <span class="process-math">\(\sup_{[0,1]} f = f(1)\)</span> and <span class="process-math">\(\inf_{[0,1]}f= f(0)\text{.}\)</span> For any <span class="process-math">\(N \in \N\)</span> consider the subdivision<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html">
+</div>
+<div class="para">In particular, since <span class="process-math">\(\sup_{[0,1]} f = f(1)\)</span> and <span class="process-math">\(\inf_{[0,1]}f= f(0)\text{,}\)</span> we see that <span class="process-math">\(f\)</span> is bounded on <span class="process-math">\([0,1]\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="p-159">
+<div class="para">Next let us show that <span class="process-math">\(L(f;[a,b]) = U(f;[a,b])\text{.}\)</span> For any <span class="process-math">\(N \in \N\)</span> consider the subdivision</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \frac{0}{N} \lt  \frac{1}{N} \lt  \frac{2}{N} \lt  \dots \lt  \frac{N}{N}.
 \end{equation*}
-</div>For this subdivision, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html" id="md-29">
+</div>
+<div class="para">Then we have</div>
+<div class="displaymath process-math" id="md-25">
 \begin{align*}
-U\brac{f; \tfrac{0}{N}, \tfrac{1}{N}, \dots, \tfrac{N}{N}} - \amp L\brac{f; \tfrac{0}{N}, \tfrac{1}{N}, \dots, \tfrac{N}{N}} \\
+0\leq U(f;[a,b]) - L(f;[a,b])\amp \leq U\brac{f; \tfrac{0}{N}, \tfrac{1}{N}, \dots, \tfrac{N}{N}} -  L\brac{f; \tfrac{0}{N}, \tfrac{1}{N}, \dots, \tfrac{N}{N}} \\
 \amp = \sum_{n=1}^N \frac{f\brac{\frac{n}{N}}}{N} - \sum_{n=1}^{N} \frac{f\brac{\frac{n-1}{N}}}{N}\\
 \amp = \frac{f\brac{1}}{N} - \frac{f\brac{0}}{N} .
 \end{align*}
-</div>Since the latter quantity tends to zero as <span class="process-math">\(N \to \infty\text{,}\)</span> we have that <span class="process-math">\(f\)</span> is integrable by <a href="" class="xref" data-knowl="./knowl/prop-eps-riemann.html" title="Proposition 8.23: Epsilon characterisation of Riemann integrability">Proposition 8.23</a>.</article></div>
-</div></div>
-</div></article><article class="task exercise-like" id="task-123"><h4 class="heading"><span class="codenumber">(b)</span></h4>State and prove the integral test for finite series.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-123" id="solution-123"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-123"><div class="solution solution-like">
-<article class="proposition theorem-like" id="prop-int-test-2"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.22</span><span class="period">.</span><span class="space"> </span><span class="title">Integral test.</span>
-</h5>Let <span class="process-math">\(a,b \in \Z\)</span> with <span class="process-math">\(a \lt  b\text{.}\)</span> Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a decreasing function, hence Riemann integrable by <a href="" class="xref" data-knowl="./knowl/prop-mono-riemann.html" title="Proposition 9.21: Monotone functions are integrable">Proposition 9.21</a>. Then<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann.html">
+</div>
+<div class="para">Since the latter quantity tends to zero as <span class="process-math">\(N \to \infty\text{,}\)</span> we have that <span class="process-math">\(U(f;[a,b]) = L(f;[a,b])\text{.}\)</span>
+</div>
+</div></article></details>
+</div></details></div></article></details></section><section class="subsection" id="subsection-22"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">9.2</span><span class="space"> </span><span class="title">Self-test questions for lecture 18</span>
+</h3>
+<details id="exercise-74" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">-</span><span class="space"> </span><span class="codenumber">9.12</span><span class="period">.</span><span class="space"> </span><span class="title">Linearity of integration.</span>
+</h4></summary><article class="exercise exercise-like"><article class="task exercise-like" id="task-173"><h5 class="heading"><span class="codenumber">(a)</span></h5>State and prove how the Riemann integral respects addition and scaling.<div class="solutions"><details id="solution-138" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="theorem theorem-like" id="thm-int-add"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.13</span><span class="period">.</span><span class="space"> </span><span class="title">Linearity of integration.</span>
+</h6>Let <span class="process-math">\(a, b,c\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(f,g : [a,b] \to \R\)</span> be functions which are Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span> Then  <span class="process-math">\(f+g\)</span> and <span class="process-math">\(cf\)</span> are both Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span> Moreover<div class="displaymath process-math">
 \begin{equation*}
-f(a)+ \int_a^b f(n) \geq    \sum_{n=a}^b f(n) \geq f(b)+ \int_a^b f(n).
+\int_a^b\brac{f+g}= \int_a^bf+\int_a^bg \quad\text{and}\quad \int_a^b(cf) = c\int_a^bf\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-80"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-80"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-80"><article class="hiddenproof">Consider the subdivision of <span class="process-math">\([a,b]\)</span> given by <span class="process-math">\(x_n := a + n\)</span> for <span class="process-math">\(n = 0,1,\dots, b-a\text{.}\)</span> Since <span class="process-math">\(f\)</span> is decreasing, for each <span class="process-math">\(1\leq n\leq b-a\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="">
+</div></article><details id="proof-76" class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">Let us proof the claim about addition (the claim about scaling follows a similar argument). Fix <span class="process-math">\(\eps \gt 0\text{.}\)</span> Since increasing an infimum gives a non-lower bound, there exist subdivisions <span class="process-math">\(a= x_0 \lt  \dots \lt  x_N = b\)</span> and <span class="process-math">\(a = y_0 \lt  \dots \lt  y_M = b\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann-refine.html ./knowl/cor-lower-upper.html">
 \begin{equation*}
-\sup_{[x_{n-1}, x_n]} f = f(x_{n-1})\quad \text{and}\quad \inf_{[x_{n-1}, x_n]} f = f(x_{n}).
+U(f;x_0, \dots, x_N) \leq \int_a^bf+\eps \quad\text{and}\quad U(g;y_0, \dots, y_M) \leq \int_a^bg+\eps.
 \end{equation*}
-</div>Therefore<div class="displaymath process-math" data-contains-math-knowls="" id="md-30">
+</div>Letting <span class="process-math">\(a= z_0 \lt  \dots \lt  z_T = b\)</span> denote the common refinement of <span class="process-math">\((x_0, \dots, x_N)\)</span> and <span class="process-math">\((y_0, \dots, y_M)\text{,}\)</span> monotonicty of Riemann sums under refinements (<a href="" class="xref" data-knowl="./knowl/prop-mono-riemann-refine.html" title="Proposition 9.8: Riemann sums are monotone with respect to refinements">Proposition 9.8</a>) gives that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann-refine.html ./knowl/cor-lower-upper.html">
+\begin{equation*}
+U(f;z_0,\dots, z_T) + U(g;z_0, \dots, z_T) \leq \int_a^b f + \int_a^b g + 2\eps\text{.}
+\end{equation*}
+</div>Since<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann-refine.html ./knowl/cor-lower-upper.html">
+\begin{equation*}
+\sup_{[z_{n-1}, z_n]} f + \sup_{[z_{n-1}, z_n]} g
+\end{equation*}
+</div>is an upper bound for the set<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann-refine.html ./knowl/cor-lower-upper.html">
+\begin{equation*}
+\set{f(x)+g(x) : x \in [z_{n-1}, z_n]}\text{,}
+\end{equation*}
+</div>we have that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann-refine.html ./knowl/cor-lower-upper.html">
+\begin{equation*}
+\sup_{[z_{n-1}, z_n]} (f + g) \leq\sup_{[z_{n-1}, z_n]} f + \sup_{[z_{n-1}, z_n]} g\text{.}
+\end{equation*}
+</div>Therefore<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann-refine.html ./knowl/cor-lower-upper.html">
+\begin{equation*}
+U(f+g;z_0, \dots, z_T)\leq U(f;z_0,\dots, z_T) + U(g;z_0, \dots, z_T)\text{,}
+\end{equation*}
+</div>and thus<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann-refine.html ./knowl/cor-lower-upper.html">
+\begin{equation*}
+U(f+g;[a,b]) \leq \int_a^b f + \int_a^b g + 2\eps\text{.}
+\end{equation*}
+</div>A similar argument shows that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann-refine.html ./knowl/cor-lower-upper.html">
+\begin{equation*}
+L(f+g;[a,b]) \geq \int_a^b f + \int_a^b g - 2\eps.
+\end{equation*}
+</div>Letting <span class="process-math">\(\eps \to 0\)</span> and using the inequality <span class="process-math">\(L(f+g;[a,b]) \leq U(f+g;[a,b])\)</span> (proved in <a href="" class="xref" data-knowl="./knowl/cor-lower-upper.html" title="Corollary 9.9: Lower Riemann sums never exceed upper Riemann sums">Corollary 9.9</a>), the sandwich rule then yields that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann-refine.html ./knowl/cor-lower-upper.html">
+\begin{equation*}
+U(f+g;[a,b]) = L(f+g;[a,b]) = \int_a^b f + \int_a^b g\text{.}
+\end{equation*}
+</div></article></details>
+</div></details></div></article><article class="task exercise-like" id="task-174"><h5 class="heading"><span class="codenumber">(b)</span></h5>Deduce how the Riemann integral respects pointwise inequalities.<div class="solutions"><details id="solution-139" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="corollary theorem-like" id="cor-int-ineq"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">9.14</span><span class="period">.</span><span class="space"> </span><span class="title">Inequality rule for the Riemann integral.</span>
+</h6>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(f,g : [a,b] \to \R\)</span> be functions which are Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span> Suppose that <span class="process-math">\(f \leq g\)</span> everywhere on <span class="process-math">\([a,b]\text{.}\)</span> Then<div class="displaymath process-math">
+\begin{equation*}
+\int_a^bf\leq \int_a^bg.
+\end{equation*}
+</div></article><details id="proof-77" class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">By the addition and scaling rules (<a href="" class="xref" data-knowl="./knowl/thm-int-add.html" title="Theorem 9.13: Linearity of integration">Theorem 9.13</a>) the function <span class="process-math">\(g-f\)</span> is Riemann integrable. Using the addition and scaling rules, and the definition of the Riemann integral, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html">
+\begin{equation*}
+\int_a^bg - \int_a^bf =\int_a^b(g-f) \geq L(g-f;a,b) = (b-a)\inf_{[a,b]} (g-f). 
+\end{equation*}
+</div>Since <span class="process-math">\(g-f\geq 0\)</span> on <span class="process-math">\([a,b]\text{,}\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html">
+\begin{equation*}
+(b-a)\inf_{[a,b]} (g-f) \geq 0.
+\end{equation*}
+</div>This yields the required inequality.</article></details>
+</div></details></div></article></article></details><details id="exercise-75" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">-</span><span class="space"> </span><span class="codenumber">9.15</span><span class="period">.</span><span class="space"> </span><span class="title">Integrating on a sub-interval.</span>
+</h4></summary><article class="exercise exercise-like">State and prove how a Riemann integrable function is still Riemann integrable on any closed subinterval of its domain.<div class="solutions"><details id="solution-140" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="proposition theorem-like" id="proposition-42"><h5 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.16</span><span class="period">.</span>
+</h5>Let <span class="process-math">\(a,b\in \R\)</span> with <span class="process-math">\(a\lt b\)</span> and let <span class="process-math">\(f :[a,b]\to \R\)</span> be Riemann integrable. Then for any <span class="process-math">\(x\in [a,b]\)</span> we have that <span class="process-math">\(f\)</span> is Riemann integrable on both <span class="process-math">\([a,x]\)</span> and <span class="process-math">\([x,b]\)</span> with<div class="displaymath process-math">
+\begin{equation*}
+\int_a^b f = \int_a^x f+ \int_x^b f.
+\end{equation*}
+</div></article><details id="proof-78" class="hiddenproof"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof"><div class="para logical" id="p-160">
+<div class="para">Since increasing an infimum gives a non-lower bound, there exist a subdivision <span class="process-math">\(a= x_0 \lt  \dots \lt  x_N = b\)</span> such that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann-refine.html">
+\begin{equation*}
+U(f;x_0, \dots, x_N) \leq \int_a^bf+\eps\text{.}
+\end{equation*}
+</div>
+<div class="para">Since decreasing a supremum gives a non-upper bound, there exist a subdivision <span class="process-math">\(a= y_0 \lt  \dots \lt  y_M = b\)</span> such that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann-refine.html">
+\begin{equation*}
+L(f;y_0, \dots, y_M) \geq \int_a^bf-\eps\text{.}
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(a= z_0 \lt  \dots \lt  z_T = b\)</span> denote a common refinement of <span class="process-math">\((x_0, \dots, x_N)\)</span> and <span class="process-math">\((y_0, \dots, y_M)\)</span> which also contains the point <span class="process-math">\(x = z_m\)</span> for some <span class="process-math">\(m\text{.}\)</span> Then monotonicty of Riemann sums under refinements (<a href="" class="xref" data-knowl="./knowl/prop-mono-riemann-refine.html" title="Proposition 9.8: Riemann sums are monotone with respect to refinements">Proposition 9.8</a>) gives that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann-refine.html">
+\begin{equation*}
+0\leq U(f;z_0,\dots, z_T) - L(f;z_0, \dots, z_T) \leq  2\eps.\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(a= z_0 \lt \dots \lt z_m = x\)</span> is a subdivision of <span class="process-math">\([a,x]\)</span> we have that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann-refine.html" id="md-26">
 \begin{align*}
-U(f;x_0, \dots, x_{b-a})\amp =  \sum_{n=1}^{b-a} f(a+n-1),\\
-L(f;x_0, \dots, x_{b-a}) \amp =\sum_{n=1}^{b-a} f(a+n).
+0\amp \leq U(f; [a,x])-L(f;[a,x])\leq U(f;z_0,\dots, z_m) - L(f;z_0, \dots, z_m) \leq\\
+\amp  U(f;z_0,\dots, z_m) - L(f;z_0, \dots, z_m) + U(f;z_m,\dots, z_T) - L(f;z_m, \dots, z_T)  \\
+\amp =  U(f;z_0,\dots, z_T) - L(f;z_0, \dots, z_T) \leq  2\eps\text{.}
 \end{align*}
-</div>Taking an infimum gives<div class="displaymath process-math" data-contains-math-knowls="">
+</div>
+<div class="para">Letting <span class="process-math">\(\eps \to 0\)</span> then establishes that <span class="process-math">\(U(f;[a,x])= L(f;[a,x])\text{,}\)</span> so that <span class="process-math">\(f\)</span> is Riemann integrable on <span class="process-math">\([a,x]\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-161">A similar argument to that given above shows that <span class="process-math">\(f\)</span> is Riemann integrable on <span class="process-math">\([x,b]\text{.}\)</span>
+</div> <div class="para logical" id="p-162">
+<div class="para">For the addition formula, we may use the same subdivision <span class="process-math">\(a= z_0 \lt  \dots \lt  z_T = b\)</span> constructed above to see that</div>
+<div class="displaymath process-math" id="md-27">
+\begin{align*}
+\int_a^xf + \int_x^bf \amp \leq U(f;z_0,\dots, z_m)+U(f;z_m,\dots, z_T)\\
+\amp = U(f; z_0, \dots, z_T) \leq \int_a^b f + \eps\text{.}
+\end{align*}
+</div>
+<div class="para">Similarly</div>
+<div class="displaymath process-math">
 \begin{equation*}
-\int_a^b f = U(f;[a,b]) \leq \sum_{n=a}^{b-1} f(n).
-\end{equation*}
-</div>Taking a supremum gives<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\int_a^b f = L(f;[a,b]) \geq \sum_{n=a+1}^{b} f(n).
-\end{equation*}
-</div>The desired inequalities follow.</article></div>
-</div></div>
-</div></article><article class="task exercise-like" id="ex-cts-riemann"><h4 class="heading"><span class="codenumber">(c)</span></h4>State and prove that a continuous function on a closed interval is integrable.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-124" id="solution-124"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-124"><div class="solution solution-like">
-<article class="proposition theorem-like" id="prop-cts-riemann"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.23</span><span class="period">.</span><span class="space"> </span><span class="title">Continuous functions are integrable.</span>
-</h5>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a \lt  b\text{.}\)</span> Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a continuous function. Then <span class="process-math">\(f\)</span> is Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span></article><article class="hiddenproof" id="proof-81"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-81"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-81"><article class="hiddenproof">Let us suppose that <span class="process-math">\([a,b] = [0, 1]\text{,}\)</span> the general case being similar. Since <span class="process-math">\(f\)</span> is a continuous function on a closed interval, it is uniformly continuous (<a href="" class="xref" data-knowl="./knowl/thm-unif-cts.html" title="Theorem 6.14: Continuous on closed interval implies uniformly continuous">Theorem 6.14</a>). Hence by definition of uniform continuity (<a href="" class="xref" data-knowl="./knowl/def-unif-cts.html" title="Definition 6.11: Uniformly continuous">Definition 6.11</a>):<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-unif-cts.html ./knowl/def-unif-cts.html ./knowl/prop-eps-riemann.html">
-\begin{equation*}
-(\forall \eps \gt 0)(\exists \delta = \delta(\eps) \gt 0)(\forall x,y\in [a,b]) 
-[|x-y| \leq \delta \implies |f(x)-f(y)| \leq \eps].
-\end{equation*}
-</div>Set<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-unif-cts.html ./knowl/def-unif-cts.html ./knowl/prop-eps-riemann.html">
-\begin{equation*}
-\delta := \delta\brac{\eps} \qquad \text{and} \qquad N := \ceil{\delta^{-1}}.
-\end{equation*}
-</div>Then for any <span class="process-math">\(n\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-unif-cts.html ./knowl/def-unif-cts.html ./knowl/prop-eps-riemann.html">
-\begin{equation*}
-\sup_{[\frac{n-1}{N}, \frac{n}{N}]} f - \inf_{[\frac{n-1}{N}, \frac{n}{N}]} f \leq \eps.
-\end{equation*}
-</div>Hence with respect to the subdivision <span class="process-math">\(0/N \lt  1/N \lt  \dots \lt  N/N\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-unif-cts.html ./knowl/def-unif-cts.html ./knowl/prop-eps-riemann.html">
-\begin{equation*}
-U\brac{f;\tfrac{0}{N}, \tfrac{1}{N} , \dots , \tfrac{N}{N}} - L\brac{f;\tfrac{0}{N}, \tfrac{1}{N} , \dots , \tfrac{N}{N}} \leq  \sum_{n=1}^N \tfrac{\eps}{N} = \eps.
-\end{equation*}
-</div>It follows that <span class="process-math">\(f\)</span> is integrable by <a href="" class="xref" data-knowl="./knowl/prop-eps-riemann.html" title="Proposition 8.23: Epsilon characterisation of Riemann integrability">Proposition 8.23</a>.</article></div>
-</div></div>
-</div></article><article class="task exercise-like" id="task-125"><h4 class="heading"><span class="codenumber">(d)</span></h4>Give an example of a bounded function on a closed interval which is not Riemann integrable. Justify this.<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-125" id="solution-125"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-125"><div class="solution solution-like">
-<article class="proposition theorem-like" id="eg-non-int"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.24</span><span class="period">.</span>
-</h5>The function <span class="process-math">\(1_{\Q \cap [0,1]}\)</span> is not Riemann integrable on <span class="process-math">\([0,1]\text{.}\)</span></article><article class="hiddenproof" id="proof-82"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-82"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-82"><article class="hiddenproof"><p id="p-100">As in <a href="" class="xref" data-knowl="./knowl/eg-dis-cont-everywhere.html" title="Example 5.18: A function discontinuous everywhere">Example 5.18</a>, the key observation in establishing our claim is to note that every real number <span class="process-math">\(x_0\)</span> has a sequence of rationals <span class="process-math">\(q_n \in \Q\)</span> such that <span class="process-math">\(q_n \to x_0\text{.}\)</span> For instance, one may take</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eg-dis-cont-everywhere.html ./knowl/prop-sandwich.html">
-\begin{equation*}
-q_n := \frac{\floor{nx_0}}{n} \in \left(x_0 -\frac{1}{n}, x_0\right]\text{,}
+\int_a^x f+\int_x^bf \geq \int_a^b f-\eps\text{.}
 \end{equation*}
 </div>
-<p class="continuation">and employ the two-sided sandwich rule (<a href="" class="xref" data-knowl="./knowl/prop-sandwich.html" title="Proposition 2.6: Sandwich rule">Proposition 2.6</a>).</p>
-<p id="p-101">One consequence of this observation any non-empty open interval contains a rational number, since one may approximate the mid-point by a rational. It follows that if <span class="process-math">\(0 \leq x \lt  y \leq 1\)</span> then  <span class="process-math">\((x,y)\)</span> contains a rational <span class="process-math">\(q\in \Q\)</span> and <span class="process-math">\((x+\sqrt{2},y+\sqrt{2})\)</span> also contains a rational <span class="process-math">\(\tilde q \in \Q\text{.}\)</span> Hence <span class="process-math">\((x,y)\)</span> contains both a rational <span class="process-math">\(q\)</span> and an irrational <span class="process-math">\(q-\sqrt{2}\text{.}\)</span> It follows that</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html">
+<div class="para">Again letting <span class="process-math">\(\eps \to 0\)</span> then gives the addition formula.</div>
+</div></article></details>
+</div></details></div></article></details></section><section class="subsection" id="subsection-23"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">9.3</span><span class="space"> </span><span class="title">Workshop questions</span>
+</h3>
+<details id="exercise-76" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">-</span><span class="space"> </span><span class="codenumber">9.17</span><span class="period">.</span><span class="space"> </span><span class="title">True/false workshop quiz.</span>
+</h4></summary><article class="exercise exercise-like"><div class="introduction" id="introduction-13">In your workshop, you will vote on whether you think each of the following statements is true (thumbs up) or false (thumbs down). For each question, your workshop tutor will ask one of you to briefly justify your vote. This justification can involve giving a counterexample (if false) or outlining which definition/theorem the statement  follows from (if true).</div>
+<article class="task exercise-like" id="task-175"><h5 class="heading"><span class="codenumber">(a)</span></h5>Consider the function<div class="displaymath process-math">
 \begin{equation*}
-\sup_{[x,y]} 1_{\Q\cap [0,1]} = 1 \quad \text{and}\quad \inf_{[x,y]} 1_{\Q\cap [0,1]} = 0.
+f(x):= \begin{cases} x  \amp \text{ if } x\leq 0,\\
+0 \amp \text{ if } 0 \lt x \lt 1,\\
+x-1 \amp \text{ if } x \geq 1.
+\end{cases}
 \end{equation*}
-</div>
-<p class="continuation">Hence for any subdivision <span class="process-math">\(0 = x_0 \lt  \dots \lt  x_N = 1\)</span> we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html">
+</div>Then <span class="process-math">\(f\)</span> has a local maximum at <span class="process-math">\(x=1/2\text{.}\)</span></article><article class="task exercise-like" id="task-176"><h5 class="heading"><span class="codenumber">(b)</span></h5>If a function <span class="process-math">\(f\)</span> has a local minimum at <span class="process-math">\(x_0\text{,}\)</span> then <span class="process-math">\(f'(x_0) = 0\text{.}\)</span></article><article class="task exercise-like" id="task-177"><h5 class="heading"><span class="codenumber">(c)</span></h5>If a function <span class="process-math">\(f:\R\to\R\)</span> has a maximum at <span class="process-math">\(x_0\text{,}\)</span> then for any <span class="process-math">\(x\lt x_0\)</span> we have<div class="displaymath process-math">
 \begin{equation*}
-U(f;x_0,\dots, x_N) = \sum_{n=1}^N (x_n-x_{n-1}) \sup_{[x_{n-1}, x_n]} 1_{\Q\cap [0,1]} = \sum_{n=1}^N (x_n-x_{n-1}) = 1.
+\frac{f(x)-f(x_0)}{x-x_0} \geq 0\text{.}
 \end{equation*}
-</div>
-<p class="continuation">Similarly</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html">
+</div></article><article class="task exercise-like" id="task-178"><h5 class="heading"><span class="codenumber">(d)</span></h5>There exists a function <span class="process-math">\(f:[0,1]\to \R\)</span> which is differentiable on <span class="process-math">\((0,1)\)</span> and has <span class="process-math">\(f(0) = f(1)\text{,}\)</span> yet the derivative of <span class="process-math">\(f\)</span> is never zero on <span class="process-math">\((0,1)\text{.}\)</span></article><article class="task exercise-like" id="task-179"><h5 class="heading"><span class="codenumber">(e)</span></h5>It follows from the mean value theorem that if <span class="process-math">\(f:\R\to \R\)</span>  is differentiable with <span class="process-math">\(|f'(x)|\leq 100\)</span> for all <span class="process-math">\(x\text{,}\)</span> then for all <span class="process-math">\(x_1,x_2 \in \R\)</span> we have<div class="displaymath process-math">
 \begin{equation*}
-L(f;x_0, \dots, x_N) = 0.
+|f(x_1)-f(x_2)|\leq 100|x_1-x_2|\text{.}
 \end{equation*}
-</div>
-<p class="continuation">Therefore for any subdivision we have</p>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-eps-riemann.html">
+</div></article><article class="task exercise-like" id="task-180"><h5 class="heading"><span class="codenumber">(f)</span></h5>If a function <span class="process-math">\(f:[a,b]\to \R\)</span>  is Riemann integrable then for any subdivision <span class="process-math">\(a=x_0\lt \dots\lt x_N=b\)</span> we have<div class="displaymath process-math">
 \begin{equation*}
-U(f;x_0,\dots, x_N) - L(f;x_0, \dots, x_N) \geq 1.
+L(f;x_0, \dots, x_N) = U(f;x_0, \dots, x_N)\text{.}
 \end{equation*}
+</div></article><article class="task exercise-like" id="task-181"><h5 class="heading"><span class="codenumber">(g)</span></h5>For any bounded function <span class="process-math">\(f:[a,b]\to \R\)</span> we have<div class="displaymath process-math">
+\begin{equation*}
+U(f;a, \tfrac{a+b}{2}, b) \leq U(f;a,b)\text{.}
+\end{equation*}
+</div></article><article class="task exercise-like" id="task-182"><h5 class="heading"><span class="codenumber">(h)</span></h5>For any bounded function <span class="process-math">\(f:[a,b]\to \R\)</span> we have<div class="displaymath process-math">
+\begin{equation*}
+U(f;[a,b]) \leq L(f;[a,b])\text{.}
+\end{equation*}
+</div></article><article class="task exercise-like" id="task-183"><h5 class="heading"><span class="codenumber">(i)</span></h5>If <span class="process-math">\(f:[a,b]\to \R\)</span> is a monotone function then<div class="displaymath process-math">
+\begin{equation*}
+\int_a^b f = f(b)-f(a)\text{.}
+\end{equation*}
+</div></article><article class="task exercise-like" id="task-184"><h5 class="heading"><span class="codenumber">(j)</span></h5>If <span class="process-math">\(f:[a,b]\to \R\)</span> is a Riemann integrable then the function<div class="displaymath process-math">
+\begin{equation*}
+F(x) := \int_a^x f
+\end{equation*}
+</div>is defined at every  <span class="process-math">\(x \in [a,b]\text{.}\)</span></article></article></details><details id="exercise-77" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">-</span><span class="space"> </span><span class="codenumber">9.18</span><span class="period">.</span><span class="space"> </span><span class="title">Exam-style self-test question for workshop.</span>
+</h4></summary><article class="exercise exercise-like"><div class="introduction" id="introduction-14">Let <span class="process-math">\(f :[0,1] \to \R\)</span> be bounded.</div>
+<article class="task exercise-like" id="task-185"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para logical" id="p-163">
+<div class="para">Define what it means to be:</div>
+<ol class="decimal">
+<li id="li-43"><div class="para" id="p-derived-li-43">a subdivision of <span class="process-math">\([0,1]\text{;}\)</span>
+</div></li>
+<li id="li-44"><div class="para" id="p-derived-li-44">the upper and lower Riemann sums of <span class="process-math">\(f\)</span> with respect to a subdivision;</div></li>
+<li id="li-45"><div class="para" id="p-derived-li-45">the upper and lower Riemann integrals of <span class="process-math">\(f\)</span> and what it means for <span class="process-math">\(f\)</span> to be Riemann integrable.</div></li>
+</ol>
 </div>
-<p class="continuation">By <a href="" class="xref" data-knowl="./knowl/prop-eps-riemann.html" title="Proposition 8.23: Epsilon characterisation of Riemann integrability">Proposition 8.23</a> the function <span class="process-math">\(1_{\Q\cap [0,1]}\)</span> is not Riemann integrable.</p></article></div>
-</div></div>
-</div></article></article></div>
-<p id="p-102">In this week's <em class="emphasis">workshop</em> you will be asked to write-up (under exam conditions) two of the following:</p>
-<ul class="disc">
-<li id="li-88"><p id="p-derived-li-88">The following is a variant of <a href="" class="xref" data-knowl="./knowl/ex-eps-riemann.html" title="Task 8.22.a">Task 8.22.a</a>. By modifying the proof of <a href="" class="xref" data-knowl="./knowl/ex-eps-riemann.html" title="Task 8.22.a">Task 8.22.a</a>, prove that if <span class="process-math">\(f:[0,1]\to\R\)</span> is bounded then there exist subdivisions <span class="process-math">\(0=a_0 \lt a_1 \lt \dots \lt a_P = 1\)</span> and  <span class="process-math">\(0=b_0 \lt b_1 \lt \dots \lt b_Q = 1\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-eps-riemann.html ./knowl/ex-eps-riemann.html" id="md-31">
+<div class="solutions"><details id="solution-141" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-164">This is <a href="" class="xref" data-knowl="./knowl/task-riemann-int.html" title="- 9.1: Definition of the Riemann integral">- 9.1</a>.</div></div></details></div></article><article class="task exercise-like" id="task-186"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para logical" id="p-165">
+<div class="para">Prove that there exist subdivisions <span class="process-math">\(0=a_0 \lt a_1 \lt \dots \lt a_P = 1\)</span> and  <span class="process-math">\(0=b_0 \lt b_1 \lt \dots \lt b_Q = 1\)</span> such that</div>
+<div class="displaymath process-math" id="md-28">
 \begin{gather*}
 L(f;[0,1]) - 0.05 \leq L(f;a_0, \dots, a_P),\\
 U(f;b_0, \dots, b_Q) \leq U(f;[0,1]) + 0.05.
 \end{gather*}
-</div>Explain how this implies that, if <span class="process-math">\(f:[0,1]\to\R\)</span> is Riemann integrable, then there exists a subdivision <span class="process-math">\(0=x_0 \lt \dots \lt x_N = 1\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-eps-riemann.html ./knowl/ex-eps-riemann.html">
+</div>
+</div>
+<div class="solutions"><details id="solution-142" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-166">This is a special case of the argument given at the start of the proof of  <a href="" class="xref" data-knowl="./knowl/prop-mono-riemann-refine.html" title="Proposition 9.8: Riemann sums are monotone with respect to refinements">Proposition 9.8</a>.</div></div></details></div></article><article class="task exercise-like" id="task-187"><h5 class="heading"><span class="codenumber">(c)</span></h5>Using the previous part and clearly stating any results from the course which you use, explain how if <span class="process-math">\(f\)</span> is Riemann integrable, then there exists a subdivision <span class="process-math">\(0=x_0 \lt \dots \lt x_N = 1\)</span> such that<div class="displaymath process-math">
 \begin{equation*}
 |U(f;x_0, \dots, x_N) - L(f;x_0, \dots, x_N)| \leq 0.1.
 \end{equation*}
-</div></p></li>
-<li id="li-89"><p id="p-derived-li-89">The following is a variant of <a href="" class="xref" data-knowl="./knowl/ex-mono-riemann.html" title="Task 9.20.a">Task 9.20.a</a>. Let <span class="process-math">\(f : [0,1] \to \R\)</span> be a decreasing function. By modifying the proof of <a href="" class="xref" data-knowl="./knowl/ex-mono-riemann.html" title="Task 9.20.a">Task 9.20.a</a>, prove that <span class="process-math">\(f\)</span> is Riemann integrable on <span class="process-math">\([0,1]\text{.}\)</span></p></li>
-<li id="li-90"><p id="p-derived-li-90">The following is a variant of <a href="" class="xref" data-knowl="./knowl/ex-cts-riemann.html" title="Task 9.20.c">Task 9.20.c</a>. Let <span class="process-math">\(f : [0,1] \to \R\)</span> be a function satisfying the following<div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-cts-riemann.html ./knowl/ex-cts-riemann.html">
+</div>
+<div class="solutions"><details id="solution-143" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-167">This is a special case of the argument given in the proof of  <a href="" class="xref" data-knowl="./knowl/prop-mono-riemann-refine.html" title="Proposition 9.8: Riemann sums are monotone with respect to refinements">Proposition 9.8</a>.</div></div></details></div></article></article></details><details id="exercise-78" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">-</span><span class="space"> </span><span class="codenumber">9.19</span><span class="period">.</span><span class="space"> </span><span class="title">Exam-style self-test question for workshop.</span>
+</h4></summary><article class="exercise exercise-like">Let <span class="process-math">\(f : [0,1] \to \R\)</span> be a decreasing function. Prove that <span class="process-math">\(f\)</span> is Riemann integrable on <span class="process-math">\([0,1]\text{.}\)</span> (In your proof, you may assume the inequality <span class="process-math">\(U(f;[0,1]) \geq L(f;[0,1])\text{.}\)</span>)<div class="solutions"><details id="solution-144" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-168">This is a variant of the proof of <a href="" class="xref" data-knowl="./knowl/ex-mono-riemann.html" title="- 9.10: Monotone functions are Riemann integrable">- 9.10</a>.</div></div></details></div></article></details><details id="exercise-79" class="exercise exercise-like"><summary><h4 class="heading">
+<span class="type">-</span><span class="space"> </span><span class="codenumber">9.20</span><span class="period">.</span><span class="space"> </span><span class="title">Exam-style self-test question for workshop.</span>
+</h4></summary><article class="exercise exercise-like"><article class="task exercise-like" id="task-188"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-169">State both Rolle’s theorem and the mean value theorem.</div>
+<div class="solutions"><details id="solution-145" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-170">This is part of <a href="" class="xref" data-knowl="./knowl/ex-rolle.html" title="- 8.4: Rolle’s theorem">- 8.4</a> and <a href="" class="xref" data-knowl="./knowl/ex-mvt.html" title="- 8.6: The mean value theorem">- 8.6</a>.</div></div></details></div></article><article class="task exercise-like" id="task-189"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para logical" id="p-171">
+<div class="para">Let <span class="process-math">\(f:[a,b]\to \R\)</span> be a continuous function which is differentiable on <span class="process-math">\((a,b)\text{.}\)</span> Explain why the function</div>
+<div class="displaymath process-math">
 \begin{equation*}
-(\forall x_1, x_2 \in [0,1])[|f(x_1)-f(x_2)| \leq 9|x_1-x_2|]\text{.}
+g(x) := f(x) - \frac{f(b)-f(a)}{b-a}(x-a)
 \end{equation*}
-</div>By modifying the proof of  <a href="" class="xref" data-knowl="./knowl/ex-cts-riemann.html" title="Task 9.20.c">Task 9.20.c</a>, prove that <span class="process-math">\(f\)</span> is Riemann integrable on <span class="process-math">\([0,1]\text{.}\)</span></p></li>
-</ul></section></div></main>
+</div>
+<div class="para">is continuous on <span class="process-math">\([a,b]\)</span> and differentiable on <span class="process-math">\((a,b)\text{.}\)</span>
+</div>
+</div>
+<div class="solutions"><details id="solution-146" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-172">This is part of the proof in  <a href="" class="xref" data-knowl="./knowl/ex-mvt.html" title="- 8.6: The mean value theorem">- 8.6</a>.</div></div></details></div></article><article class="task exercise-like" id="task-190"><h5 class="heading"><span class="codenumber">(c)</span></h5>Using the previous part or otherwise, prove the mean value theorem assuming Rolle’s theorem.<div class="solutions"><details id="solution-147" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-173">This is part of the proof in  <a href="" class="xref" data-knowl="./knowl/ex-mvt.html" title="- 8.6: The mean value theorem">- 8.6</a>.</div></div></details></div></article></article></details></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="week-8.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="workshop-instructions.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>
 </html>

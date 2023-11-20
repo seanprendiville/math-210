@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,19 +11,20 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>Let <span class="process-math">\(\eps \gt 0\text{.}\)</span> By uniform convergence, there exists <span class="process-math">\(N \in \N\)</span> such that for all <span class="process-math">\(n \geq N\)</span> and all <span class="process-math">\(x \in [a,b]\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-sandwich.html ./knowl/prop-sandwich.html">
+<article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>To show that <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0\)</span> it suffices to establish that<div class="displaymath process-math">
 \begin{equation*}
-f_n(x)-\eps \leq f(x) \leq f_n(x) + \eps.
+(\forall \eps \gt 0)(\exists \delta= \delta(\eps) \gt 0)(\forall x \in D)[|x-x_0|\leq \delta \implies |f(x)-f(x_0)| \leq \eps].
 \end{equation*}
-</div>In particular, since <span class="process-math">\(f_n\)</span> is bounded on <span class="process-math">\([a,b]\text{,}\)</span> so is <span class="process-math">\(f\text{.}\)</span> It follows that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-sandwich.html ./knowl/prop-sandwich.html">
+</div>Since <span class="process-math">\(f_n\)</span> converges to <span class="process-math">\(f\)</span> uniformly, there exists <span class="process-math">\(n\)</span> for which<div class="displaymath process-math">
+\begin{equation*}
+\sup_D |f_n-f| \leq \trecip{3} \eps.
+\end{equation*}
+</div>Since <span class="process-math">\(f_n\)</span> is continuous at <span class="process-math">\(x_0\text{,}\)</span> there exists <span class="process-math">\(\delta \gt 0\)</span> such that if <span class="process-math">\(x \in D\)</span> satisfies <span class="process-math">\(|x-x_0| \leq \delta\)</span> then <span class="process-math">\(|f_n(x)-f_n(x_0)| \leq \trecip{3}\eps\text{.}\)</span> Hence<div class="displaymath process-math">
 \begin{align*}
-\int_a^bf_n-\eps(b-a) = \int_a^b(f_n-\eps) \leq L(f;[a,b]) \leq U(f; \amp [a,b]) \leq \int_a^b(f_n+\eps)\\
-\amp = \int_a^bf_n+\eps(b-a) .
+|f(x)-f(x_0)| \amp \leq |f(x)-f_n(x)| + |f_n(x)-f_n(x_0)| + |f_n(x_0) - f(x_0)|\\
+\amp \leq \sup_D |f_n-f| + |f_n(x)-f_n(x_0)| + \sup_D |f_n-f|\\
+\amp \leq \trecip{3} \eps +\trecip{3} \eps +\trecip{3} \eps = \eps. 
 \end{align*}
-</div>Hence by two applications of the sandwich rule (<a href="" class="xref" data-knowl="./knowl/prop-sandwich.html" title="Proposition 2.6: Sandwich rule">Proposition 2.6</a> and <a href="" class="xref" data-knowl="./knowl/prop-sandwich.html" title="Proposition 2.6: Sandwich rule">Proposition 2.6</a>) we deduce that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-sandwich.html ./knowl/prop-sandwich.html">
-\begin{equation*}
-U(f;[a,b]) \leq \lim_{n \to \infty} \int_a^b f_n \leq L(f;[a,b]).
-\end{equation*}
-</div>The claimed result follows.</article><span class="incontext"><a href="week-10.html#proof-90" class="internal">in-context</a></span>
+</div></article><span class="incontext"><a class="internal" href="week-10.html#proof-90">in-context</a></span>
 </body>
 </html>

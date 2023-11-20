@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="task exercise-like"><h5 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">10.4.d</span><span class="period">.</span>
+</h5>Using the fundamental theorem of calculus, state and prove  the change of variables formula, also known as integration by substitution.<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="corollary theorem-like"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">10.8</span><span class="period">.</span>
+</h6>Change of variables formula<a class="xref" id="fn-16" href="" data-knowl="./knowl/fn-16.html" title="Footnote 10.2"><sup> 2 </sup></a>Let <span class="process-math">\(\phi: (a,b) \to (c,d)\)</span> be a differentiable function with continuous derivative <span class="process-math">\(\phi'\text{.}\)</span> Let <span class="process-math">\(f : (c,d) \to \R\)</span> be continuous. Given <span class="process-math">\(x,y \in (a,b)\)</span> we have<a class="xref" id="fn-17" href="" data-knowl="./knowl/fn-17.html" title="Footnote 10.3"><sup> 3 </sup></a><div class="displaymath process-math">
+\begin{equation*}
+\int_{\phi(x)}^{\phi(y)} f = \int_x^y \brac{f\circ \phi} \phi'.
+\end{equation*}
+</div></article><details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">The function <span class="process-math">\(f\circ \phi\)</span> is integrable on any closed interval in <span class="process-math">\((a,b)\text{,}\)</span> since the composition of continuous functions is continuous (<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop-comp-cts" missing or not unique]</code>). Hence the function <span class="process-math">\((f\circ \phi)\phi'\)</span> is integrable on any closed interval in <span class="process-math">\((a,b)\text{,}\)</span> as it is the product of Riemann integrable functions (<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm-int-mult" missing or not unique]</code>). Define the functions<div class="displaymath process-math" data-contains-math-knowls="  ./knowl/thm-ftc-deriv-of-int.html ./knowl/thm-chain-rule.html ./knowl/cor-mono-diff.html">
+\begin{equation*}
+F(s):=\int_{\phi(x)}^{s} f \quad\text{and}\quad G(t) :=\int_x^t \brac{f\circ \phi}\phi'.
+\end{equation*}
+</div>We would like to show that <span class="process-math">\(F(\phi(y)) = G(y)\text{.}\)</span> By the fundamental theorem of calculus (<a href="" class="xref" data-knowl="./knowl/thm-ftc-deriv-of-int.html" title="Theorem 10.5: Fundamental theorem of calculus - derivative of integral">Theorem 10.5</a>)  we have<div class="displaymath process-math" data-contains-math-knowls="  ./knowl/thm-ftc-deriv-of-int.html ./knowl/thm-chain-rule.html ./knowl/cor-mono-diff.html">
+\begin{equation*}
+F'(s) = f(s) \quad \text{and} \quad  G'(t) = f(\phi(t))\phi'(t).
+\end{equation*}
+</div>By the chain rule (<a href="" class="xref" data-knowl="./knowl/thm-chain-rule.html" title="Theorem 7.12: Chain rule">Theorem 7.12</a>) we have<div class="displaymath process-math" data-contains-math-knowls="  ./knowl/thm-ftc-deriv-of-int.html ./knowl/thm-chain-rule.html ./knowl/cor-mono-diff.html">
+\begin{equation*}
+(F\circ\phi)'(t) = f(\phi(t))\phi'(t).
+\end{equation*}
+</div>Since functions on an interval with zero derivative are constant (<a href="" class="xref" data-knowl="./knowl/cor-mono-diff.html" title="Corollary 8.9">Corollary 8.9</a>) there exists <span class="process-math">\(C \in \R\)</span> such that for all <span class="process-math">\(t\in (a,b)\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="  ./knowl/thm-ftc-deriv-of-int.html ./knowl/thm-chain-rule.html ./knowl/cor-mono-diff.html">
+\begin{equation*}
+(F\circ\phi)(t)-G(t) = C.
+\end{equation*}
+</div>Since <span class="process-math">\((F\circ \phi) (x) = 0\)</span> and <span class="process-math">\(G(x) = 0\text{,}\)</span> we deduce that <span class="process-math">\(C = 0\text{.}\)</span> The required identity follows.</article></details>
+</div></details></div></article><span class="incontext"><a class="internal" href="week-10.html#task-195">in-context</a></span>
+</body>
+</html>

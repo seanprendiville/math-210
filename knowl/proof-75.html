@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,49 +11,33 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>Splitting into positive and negative parts, we have that<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
+<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>
+<div class="para">We are required to prove that <span class="process-math">\(f\)</span> is bounded (so that the upper/lower Riemann sums/integrals are defined) and that <span class="process-math">\(L(f;[a,b]) = U(f;[a,b])\text{.}\)</span> Let us suppose that <span class="process-math">\(f\)</span> is increasing and that <span class="process-math">\([a,b] = [0,1]\text{,}\)</span> the  general case being similar.</div> <div class="para logical">
+<div class="para">Since <span class="process-math">\(f\)</span> is increasing, for any sub-interval <span class="process-math">\([c,d]\subset [0,1]\)</span> we have</div>
+<div class="displaymath process-math">
 \begin{equation*}
-f g = (f^+-f^-)(g^+-g^-) = f^+g^+ + f^-g^- - f^+g^- - f^-g^+.
+\sup_{[c,d]} f = f(d) \quad \text{and}\quad \inf_{[c,d]} f= f(c).
 \end{equation*}
-</div>Using linearity of integration (<a href="" class="xref" data-knowl="./knowl/thm-int-add.html" title="Theorem 9.6: Additivity of integration">Theorem 9.6</a>) and the fact that integrability is preserved under taking positive/negative parts (<a href="" class="xref" data-knowl="./knowl/prop-int-ineq.html" title="Proposition 9.11: Integrability is preserved under taking min, max and absolute values">Proposition 9.11</a>), it therefore suffices to establish that <span class="process-math">\(f g\)</span> is Riemann integrable when <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are non-negative. Let us therefore assume that  for all <span class="process-math">\(x\in [a,b]\)</span> we have <span class="process-math">\(f(x)\geq 0\)</span> and <span class="process-math">\(g(x) \geq 0\text{.}\)</span> Write<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
+</div>
+<div class="para">In particular, since <span class="process-math">\(\sup_{[0,1]} f = f(1)\)</span> and <span class="process-math">\(\inf_{[0,1]}f= f(0)\text{,}\)</span> we see that <span class="process-math">\(f\)</span> is bounded on <span class="process-math">\([0,1]\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Next let us show that <span class="process-math">\(L(f;[a,b]) = U(f;[a,b])\text{.}\)</span> For any <span class="process-math">\(N \in \N\)</span> consider the subdivision</div>
+<div class="displaymath process-math">
 \begin{equation*}
-S := \sup_{ [a,b]} f\quad \text{and}\quad T:= \sup_{ [a,b]} g. 
+\frac{0}{N} \lt  \frac{1}{N} \lt  \frac{2}{N} \lt  \dots \lt  \frac{N}{N}.
 \end{equation*}
-</div>Fix <span class="process-math">\(\eps  \gt 0\text{.}\)</span> Since a Riemann integral can be approximated by Riemann sums (<a href="" class="xref" data-knowl="./knowl/prop-eps-riemann.html" title="Proposition 8.23: Epsilon characterisation of Riemann integrability">Proposition 8.23</a>) there exists a subdivision <span class="process-math">\(a= y_0 \lt  \dots \lt  y_M = b\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
-\begin{equation*}
-U(f;y_0, \dots, y_M) -\trecip{2}\eps \leq \int_a^b f \leq L(f;y_0, \dots, y_M)+\trecip{2}\eps.
-\end{equation*}
-</div>Similarly there exists a subdivision <span class="process-math">\(a= z_0 \lt  \dots \lt  z_T = b\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
-\begin{equation*}
-U(g;z_0, \dots, z_T) -\trecip{2}\eps \leq \int_a^b g \leq L(g;z_0, \dots, z_T)+\trecip{2}\eps.
-\end{equation*}
-</div>Let <span class="process-math">\(a= x_0 \lt  \dots \lt  x_N = b\)</span> denote the common refinement of <span class="process-math">\((y_0, \dots, y_M)\)</span> and <span class="process-math">\((z_0, \dots, z_T)\text{.}\)</span> Then by monotonicty of Riemann sums under refinements (<a href="" class="xref" data-knowl="./knowl/prop-mono-riemann-refine.html" title="Proposition 8.21: Riemann sums are monotone with respect to refinements">Proposition 8.21</a>) we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
-\begin{equation*}
-U(f;x_0, \dots, x_N) -\trecip{2}\eps \leq \int_a^b f \leq L(f;x_0, \dots, x_N)+\trecip{2}\eps
-\end{equation*}
-</div>and<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
-\begin{equation*}
-U(g;x_0, \dots, x_N) -\trecip{2}\eps \leq \int_a^b g \leq L(g;x_0, \dots, x_N)+\trecip{2}\eps.
-\end{equation*}
-</div>To ease notation, write<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
-\begin{gather*}
-s_i := \inf_{ [x_{i-1}, x_i]} f, \quad S_i := \sup_{[x_{i-1}, x_i]} f,\\
-t_i := \inf_{ [x_{i-1}, x_i]} g, \quad T_i := \sup_{[x_{i-1}, x_i]} g.
-\end{gather*}
-</div>Then for each <span class="process-math">\(i\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
-\begin{equation*}
-S_iT_i - s_it_i = (S_i-s_i)T_i + s_i(T_i-t_i) \leq (S_i-s_i)T + S(T_i-t_i).
-\end{equation*}
-</div>By sub-multiplicativity of <span class="process-math">\(\sup\)</span> and <span class="process-math">\(\inf\)</span> (<a href="" class="xref" data-knowl="./knowl/lem-sub-mult-sup.html" title="Lemma 9.12: Sub-multiplicativity of \sup and \inf">Lemma 9.12</a>) we see that<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
-\begin{equation*}
-\sup_{ [x_{i-1}, x_i]} (fg)\leq S_i T_i \quad \text{and}\quad \inf_{ [x_{i-1}, x_i]} (fg) \geq s_i t_i.
-\end{equation*}
-</div>Hence<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html ./knowl/prop-eps-riemann.html ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
+</div>
+<div class="para">Then we have</div>
+<div class="displaymath process-math">
 \begin{align*}
-\amp U(fg;x_0, \dots, x_N) - L(fg;x_0,\dots, x_N) \leq \sum_{i=1}^N  \brac{S_iT_i - s_it_i} (x_i-x_{i-1})\\
-\amp \leq T \sum_{i=1}^N \brac{S_i - s_i} (x_i-x_{i-1}) + S \sum_{i=1}^N \brac{T_i - t_i} (x_i-x_{i-1})
-\leq \eps.
+0\leq U(f;[a,b]) - L(f;[a,b])\amp \leq U\brac{f; \tfrac{0}{N}, \tfrac{1}{N}, \dots, \tfrac{N}{N}} -  L\brac{f; \tfrac{0}{N}, \tfrac{1}{N}, \dots, \tfrac{N}{N}} \\
+\amp = \sum_{n=1}^N \frac{f\brac{\frac{n}{N}}}{N} - \sum_{n=1}^{N} \frac{f\brac{\frac{n-1}{N}}}{N}\\
+\amp = \frac{f\brac{1}}{N} - \frac{f\brac{0}}{N} .
 \end{align*}
-</div></article><span class="incontext"><a href="week-9.html#proof-75" class="internal">in-context</a></span>
+</div>
+<div class="para">Since the latter quantity tends to zero as <span class="process-math">\(N \to \infty\text{,}\)</span> we have that <span class="process-math">\(U(f;[a,b]) = L(f;[a,b])\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a class="internal" href="week-9.html#proof-75">in-context</a></span>
 </body>
 </html>

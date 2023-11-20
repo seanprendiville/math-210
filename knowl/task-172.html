@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="task exercise-like"><h5 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">9.6.c</span><span class="period">.</span>
+</h5>Deduce how lower Riemann sums never exceed upper Riemann sums<div class="solutions"><details class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="corollary theorem-like"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">9.9</span><span class="period">.</span><span class="space"> </span><span class="title">Lower Riemann sums never exceed upper Riemann sums.</span>
+</h6>
+<span class="process-math">\(a, b\in \R\)</span><span class="process-math">\(a\lt  b\)</span><span class="process-math">\(f : [a,b] \to \R\)</span><span class="process-math">\(a = y_0 \lt  \dots \lt  y_M = b\)</span><span class="process-math">\(a= x_0 \lt  \dots \lt  x_N = b\)</span><div class="displaymath process-math">
+\begin{equation*}
+L(f;y_0, \dots, y_M)\leq U(f;x_0, \dots, x_N)\text{.}
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+L(f;[a,b])\leq U(f;[a,b])\text{.}
+\end{equation*}
+</div></article> <details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">Let <span class="process-math">\(a = z_0 \lt \dots \lt z_T = b\)</span> be the common refinement of <span class="process-math">\(a = y_0 \lt  \dots \lt  y_M = b\)</span> and <span class="process-math">\(a= x_0 \lt  \dots \lt  x_N = b\text{,}\)</span> so that<div class="displaymath process-math">
+\begin{equation*}
+\set{x_0, \dots , x_N} \cup \set{y_0, \dots, y_M}  = \set{z_0, \dots, z_T}\text{.}
+\end{equation*}
+</div>Since Riemann sums are monotone with respect to refinements, and since <span class="process-math">\(\inf_{[z_{n-1},z_n]}f \leq \sup_{[z_{n-1},z_n]}f\text{,}\)</span> we have<div class="displaymath process-math">
+\begin{equation*}
+L(f;y_0, \dots, y_M) \leq L(f;z_0, \dots, z_T) \leq U(f;z_0, \dots, z_T) \leq U(f; x_0, \dots, x_N)\text{.}
+\end{equation*}
+</div>Taking a supremum over the all possible <span class="process-math">\(a = y_0 \lt  \dots \lt  y_M = b\)</span> gives that<div class="displaymath process-math">
+\begin{equation*}
+L(f;[a,b]) \leq  U(f; x_0, \dots, x_N)\text{.}
+\end{equation*}
+</div>Taking an infimum over all possible <span class="process-math">\(a= x_0 \lt  \dots \lt  x_N = b\)</span> gives that<div class="displaymath process-math">
+\begin{equation*}
+L(f;[a,b]) \leq  U(f; [a,b])\text{.}
+\end{equation*}
+</div></article></details>
+</div></details></div></article><span class="incontext"><a class="internal" href="week-9.html#task-172">in-context</a></span>
+</body>
+</html>

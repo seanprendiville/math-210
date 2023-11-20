@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proposition theorem-like"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">10.14</span><span class="period">.</span><span class="space"> </span><span class="title">Continuity is preserved under uniform convergence.</span>
+</h6>Let <span class="process-math">\(f, f_1, f_2, \dots:D \to \R\)</span> be real-valued functions on a real domain <span class="process-math">\(D \subset \R\text{.}\)</span> Suppose that the <span class="process-math">\(f_n\)</span> converge uniformly to <span class="process-math">\(f\)</span> on <span class="process-math">\(D\text{.}\)</span> Suppose that each <span class="process-math">\(f_n\)</span> is continuous at  <span class="process-math">\(x_0 \in D\text{.}\)</span> Then <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0\text{.}\)</span></article><details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">To show that <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0\)</span> it suffices to establish that<div class="displaymath process-math">
+\begin{equation*}
+(\forall \eps \gt 0)(\exists \delta= \delta(\eps) \gt 0)(\forall x \in D)[|x-x_0|\leq \delta \implies |f(x)-f(x_0)| \leq \eps].
+\end{equation*}
+</div>Since <span class="process-math">\(f_n\)</span> converges to <span class="process-math">\(f\)</span> uniformly, there exists <span class="process-math">\(n\)</span> for which<div class="displaymath process-math">
+\begin{equation*}
+\sup_D |f_n-f| \leq \trecip{3} \eps.
+\end{equation*}
+</div>Since <span class="process-math">\(f_n\)</span> is continuous at <span class="process-math">\(x_0\text{,}\)</span> there exists <span class="process-math">\(\delta \gt 0\)</span> such that if <span class="process-math">\(x \in D\)</span> satisfies <span class="process-math">\(|x-x_0| \leq \delta\)</span> then <span class="process-math">\(|f_n(x)-f_n(x_0)| \leq \trecip{3}\eps\text{.}\)</span> Hence<div class="displaymath process-math">
+\begin{align*}
+|f(x)-f(x_0)| \amp \leq |f(x)-f_n(x)| + |f_n(x)-f_n(x_0)| + |f_n(x_0) - f(x_0)|\\
+\amp \leq \sup_D |f_n-f| + |f_n(x)-f_n(x_0)| + \sup_D |f_n-f|\\
+\amp \leq \trecip{3} \eps +\trecip{3} \eps +\trecip{3} \eps = \eps. 
+\end{align*}
+</div></article></details><span class="incontext"><a class="internal" href="week-10.html#proposition-45">in-context</a></span>
+</body>
+</html>

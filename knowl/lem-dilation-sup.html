@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,9 +11,9 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="lemma theorem-like"><h5 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">9.2</span><span class="period">.</span><span class="space"> </span><span class="title">Scaling rule for suprema and infima.</span>
-</h5>Let <span class="process-math">\(f : S \to \R\)</span> be a bounded function on an arbitrary non-empty set <span class="process-math">\(S\text{.}\)</span> Let <span class="process-math">\(c \in \R\text{.}\)</span> Then:<div class="displaymath process-math" data-contains-math-knowls="">
+<article class="lemma theorem-like"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">9.13</span><span class="period">.</span><span class="space"> </span><span class="title">Scaling rule for suprema and infima.</span>
+</h6>Let <span class="process-math">\(f : S \to \R\)</span> be a bounded function on an arbitrary non-empty set <span class="process-math">\(S\text{.}\)</span> Let <span class="process-math">\(c \in \R\text{.}\)</span> Then:<div class="displaymath process-math">
 \begin{equation*}
 \sup_{S} \brac{cf}  =
 \begin{cases}
@@ -21,7 +21,7 @@
 \displaystyle c \inf_{ S} f \amp \text{ if } c \lt  0.
 \end{cases}
 \end{equation*}
-</div>Similarly<div class="displaymath process-math" data-contains-math-knowls="">
+</div>Similarly<div class="displaymath process-math">
 \begin{equation*}
 \inf_{ S} \brac{cf}  =
 \begin{cases}
@@ -29,6 +29,22 @@
 \displaystyle c \sup_{ S} f \amp \text{ if } c \lt  0.
 \end{cases}
 \end{equation*}
-</div></article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-66-hidden.html" title="Proof 9.2.1"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><span class="incontext"><a href="week-9.html#lem-dilation-sup" class="internal">in-context</a></span>
+</div></article><details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof"><div class="para logical">
+<div class="para">If <span class="process-math">\(c \gt 0\)</span> then both claims follows from the fact that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\set{M : M \text{ is an upper bound for } cf} = \set{cM : M \text{ is an upper bound for } f},
+\end{equation*}
+</div>
+<div class="para">and similarly for lower bounds.</div>
+</div> <div class="para logical">
+<div class="para">For <span class="process-math">\(c \lt  0\)</span> we use the result for <span class="process-math">\(c\gt0\)</span> as follows</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sup_{S} \brac{cf} = \sup_{S} \brac{-(-c)f} = -\inf_S \brac{(-c) f} = -(-c)\inf_S f = c\inf_S f,
+\end{equation*}
+</div>
+<div class="para">and similarly for the infimum.</div>
+</div></article></details><span class="incontext"><a class="internal" href="week-9.html#lem-dilation-sup">in-context</a></span>
 </body>
 </html>

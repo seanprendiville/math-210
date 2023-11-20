@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,16 +11,45 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="theorem theorem-like"><h5 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.2</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental theorem of calculus - derivative of integral.</span>
-</h5>Let <span class="process-math">\(a, b \in \R\)</span> with <span class="process-math">\(a \lt  b\text{.}\)</span> Let <span class="process-math">\(f : [a,b] \to \R\)</span> be Riemann integrable. Define the function <span class="process-math">\(F : [a,b] \to \R\)</span> at <span class="process-math">\(x \in [a,b]\)</span> by<a href="" class="fn-knowl original" data-knowl="./knowl/fn-24-hidden.html" title="Footnote 10.1"><sup> 1 </sup></a><div class="displaymath process-math" data-contains-math-knowls="">
+<article class="theorem theorem-like"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.5</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental theorem of calculus - derivative of integral.</span>
+</h6>Let <span class="process-math">\(a, b \in \R\)</span> with <span class="process-math">\(a \lt  b\text{.}\)</span> Let <span class="process-math">\(f : [a,b] \to \R\)</span> be Riemann integrable. Define the function <span class="process-math">\(F : [a,b] \to \R\)</span> at <span class="process-math">\(x \in [a,b]\)</span> by<a class="xref" id="fn-15" href="" data-knowl="./knowl/fn-15.html" title="Footnote 10.1"><sup> 1 </sup></a><div class="displaymath process-math">
 \begin{equation*}
 F(x) := \int_a^x f.
 \end{equation*}
-</div>Then <span class="process-math">\(F\)</span> is continuous on <span class="process-math">\([a,b]\)</span> Moreover, if <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0 \in (a,b)\)</span> then <span class="process-math">\(F\)</span> is differentiable at <span class="process-math">\(x_0\)</span> and we have<div class="displaymath process-math" data-contains-math-knowls="">
+</div>Then <span class="process-math">\(F\)</span> is continuous on <span class="process-math">\([a,b]\)</span> Moreover, if <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0 \in (a,b)\)</span> then <span class="process-math">\(F\)</span> is differentiable at <span class="process-math">\(x_0\)</span> and we have<div class="displaymath process-math">
 \begin{equation*}
 F'(x_0) = f(x_0).
 \end{equation*}
-</div></article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-83-hidden.html" title="Proof 10.2.1"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><span class="incontext"><a href="week-10.html#thm-ftc-deriv-of-int" class="internal">in-context</a></span>
+</div></article><details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">For <span class="process-math">\(x,y \in [a,b]\)</span> with <span class="process-math">\(x \lt  y\text{,}\)</span> the interval additivity property (<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop-int-subinterval" missing or not unique]</code>) gives that<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/cor-up-low-finite.html  ./knowl/prop-sandwich.html ./knowl/thm-int-add.html  ./knowl/def-differentiable.html">
+\begin{equation*}
+\abs{\int_a^x f - \int_a^{y} f} = \abs{\int_x^y f}.
+\end{equation*}
+</div>By the trivial upper bound for the integral (<a href="" class="xref" data-knowl="./knowl/cor-up-low-finite.html" title="Equation 9.1">(9.1)</a>) and the integral triangle inequality (<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop-int-ineq" missing or not unique]</code>) we have<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/cor-up-low-finite.html  ./knowl/prop-sandwich.html ./knowl/thm-int-add.html  ./knowl/def-differentiable.html">
+\begin{equation*}
+\abs{\int_x^y f} \leq \int_x^y \abs{f} \leq (y-x)\sup_{[x,y]} |f|.
+\end{equation*}
+</div>It follows that for <span class="process-math">\(x, x_0 \in [a,b]\)</span> we have<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/cor-up-low-finite.html  ./knowl/prop-sandwich.html ./knowl/thm-int-add.html  ./knowl/def-differentiable.html">
+\begin{equation*}
+|F(x)-F(x_0)| \leq \abs{x-x_0} \sup_{[a,b]} |f|.
+\end{equation*}
+</div>Since <span class="process-math">\(\sup_{[a,b]} |f| \lt  \infty\text{,}\)</span> the sandwich rule (<a href="" class="xref" data-knowl="./knowl/prop-sandwich.html" title="Proposition 2.10: Sandwich rule">Proposition 2.10</a>) gives that<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/cor-up-low-finite.html  ./knowl/prop-sandwich.html ./knowl/thm-int-add.html  ./knowl/def-differentiable.html">
+\begin{equation*}
+|F(x)-F(x_0)| \to 0 \quad \text{as}\quad   x \to x_0 \quad \text{through} \quad [a,b].
+\end{equation*}
+</div>Thus <span class="process-math">\(F\)</span> is continuous at <span class="process-math">\(x_0\text{.}\)</span> Next, suppose that <span class="process-math">\(f \)</span> is continuous at <span class="process-math">\(x_0 \in (a,b)\text{.}\)</span> Letting <span class="process-math">\(\eps \gt 0\text{,}\)</span> there exists <span class="process-math">\(\delta = \delta(\eps) \gt 0\)</span> such that if <span class="process-math">\(x \in [a,b]\)</span> and <span class="process-math">\(|x-x_0| \leq \delta\)</span> then <span class="process-math">\(|f(x)-f(x_0)| \leq \eps\text{.}\)</span> Notice that for <span class="process-math">\(h \gt0\)</span> we have<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/cor-up-low-finite.html  ./knowl/prop-sandwich.html ./knowl/thm-int-add.html  ./knowl/def-differentiable.html">
+\begin{equation*}
+h^{-1} \int_{x_0}^{x_0+h} f(x_0) \intd x = f(x_0)h^{-1} \int_{x_0}^{x_0+h} 1 = f(x_0).
+\end{equation*}
+</div>It follows that if <span class="process-math">\(0 \lt  h \leq \delta\)</span> then by linearity of integration (<a href="" class="xref" data-knowl="./knowl/thm-int-add.html" title="Theorem 9.13: Linearity of integration">Theorem 9.13</a>) and the integral triangle inequality (<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop-int-ineq" missing or not unique]</code>) we have<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/cor-up-low-finite.html  ./knowl/prop-sandwich.html ./knowl/thm-int-add.html  ./knowl/def-differentiable.html">
+\begin{align*}
+\abs{\frac{\int_a^{x_0+h} f - \int_a^{x_0}f}{h} - f(x_0)}\amp \leq h^{-1}\int_{x_0}^{x_0+h} \abs{f(x)-f(x_0)}\intd x \\
+\amp \leq h^{-1}\int_{x_0}^{x_0+h}\eps  = \eps.
+\end{align*}
+</div>Hence for <span class="process-math">\(0 \lt  h \leq \delta\)</span> we have<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/cor-up-low-finite.html  ./knowl/prop-sandwich.html ./knowl/thm-int-add.html  ./knowl/def-differentiable.html">
+\begin{equation*}
+\abs{\frac{F(x_0 + h)-F(x_0)}{h} - f(x_0)} \leq \eps.
+\end{equation*}
+</div>A similar argument proves the same inequality when <span class="process-math">\(-\delta \lt  h \lt  0\text{.}\)</span> It follows from the definition of differentiability (<a href="" class="xref" data-knowl="./knowl/def-differentiable.html" title="Definition 7.2: Differentiable">Definition 7.2</a>) that <span class="process-math">\(F'(x_0) = f(x_0)\text{.}\)</span></article></details><span class="incontext"><a class="internal" href="week-10.html#thm-ftc-deriv-of-int">in-context</a></span>
 </body>
 </html>

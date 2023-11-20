@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,8 +11,51 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="theorem theorem-like"><h5 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.13</span><span class="period">.</span><span class="space"> </span><span class="title">Riemann integrable functions are closed under multiplication.</span>
-</h5>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(f,g : [a,b] \to \R\)</span> be functions which are Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span> Then <span class="process-math">\(f\cdot g\)</span> is Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span></article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-75-hidden.html" title="Proof 9.13.1"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><span class="incontext"><a href="week-9.html#thm-int-mult" class="internal">in-context</a></span>
+<article class="theorem theorem-like"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.24</span><span class="period">.</span><span class="space"> </span><span class="title">Riemann integrable functions are closed under multiplication.</span>
+</h6>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(f,g : [a,b] \to \R\)</span> be functions which are Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span> Then <span class="process-math">\(f\cdot g\)</span> is Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span></article><details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">Splitting into positive and negative parts, we have that<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html  ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
+\begin{equation*}
+f g = (f^+-f^-)(g^+-g^-) = f^+g^+ + f^-g^- - f^+g^- - f^-g^+.
+\end{equation*}
+</div>Using linearity of integration (<a href="" class="xref" data-knowl="./knowl/thm-int-add.html" title="Theorem 9.17: Additivity of integration">Theorem 9.17</a>) and the fact that integrability is preserved under taking positive/negative parts (<a href="" class="xref" data-knowl="./knowl/prop-int-ineq.html" title="Proposition 9.22: Integrability is preserved under taking min, max and absolute values">Proposition 9.22</a>), it therefore suffices to establish that <span class="process-math">\(f g\)</span> is Riemann integrable when <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are non-negative. Let us therefore assume that  for all <span class="process-math">\(x\in [a,b]\)</span> we have <span class="process-math">\(f(x)\geq 0\)</span> and <span class="process-math">\(g(x) \geq 0\text{.}\)</span> Write<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html  ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
+\begin{equation*}
+S := \sup_{ [a,b]} f\quad \text{and}\quad T:= \sup_{ [a,b]} g. 
+\end{equation*}
+</div>Fix <span class="process-math">\(\eps  \gt 0\text{.}\)</span> Since a Riemann integral can be approximated by Riemann sums (<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "prop-eps-riemann" missing or not unique]</code>) there exists a subdivision <span class="process-math">\(a= y_0 \lt  \dots \lt  y_M = b\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html  ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
+\begin{equation*}
+U(f;y_0, \dots, y_M) -\trecip{2}\eps \leq \int_a^b f \leq L(f;y_0, \dots, y_M)+\trecip{2}\eps.
+\end{equation*}
+</div>Similarly there exists a subdivision <span class="process-math">\(a= z_0 \lt  \dots \lt  z_T = b\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html  ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
+\begin{equation*}
+U(g;z_0, \dots, z_T) -\trecip{2}\eps \leq \int_a^b g \leq L(g;z_0, \dots, z_T)+\trecip{2}\eps.
+\end{equation*}
+</div>Let <span class="process-math">\(a= x_0 \lt  \dots \lt  x_N = b\)</span> denote the common refinement of <span class="process-math">\((y_0, \dots, y_M)\)</span> and <span class="process-math">\((z_0, \dots, z_T)\text{.}\)</span> Then by monotonicty of Riemann sums under refinements (<a href="" class="xref" data-knowl="./knowl/prop-mono-riemann-refine.html" title="Proposition 9.8: Riemann sums are monotone with respect to refinements">Proposition 9.8</a>) we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html  ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
+\begin{equation*}
+U(f;x_0, \dots, x_N) -\trecip{2}\eps \leq \int_a^b f \leq L(f;x_0, \dots, x_N)+\trecip{2}\eps
+\end{equation*}
+</div>and<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html  ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
+\begin{equation*}
+U(g;x_0, \dots, x_N) -\trecip{2}\eps \leq \int_a^b g \leq L(g;x_0, \dots, x_N)+\trecip{2}\eps.
+\end{equation*}
+</div>To ease notation, write<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html  ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
+\begin{gather*}
+s_i := \inf_{ [x_{i-1}, x_i]} f, \quad S_i := \sup_{[x_{i-1}, x_i]} f,\\
+t_i := \inf_{ [x_{i-1}, x_i]} g, \quad T_i := \sup_{[x_{i-1}, x_i]} g.
+\end{gather*}
+</div>Then for each <span class="process-math">\(i\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html  ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
+\begin{equation*}
+S_iT_i - s_it_i = (S_i-s_i)T_i + s_i(T_i-t_i) \leq (S_i-s_i)T + S(T_i-t_i).
+\end{equation*}
+</div>By sub-multiplicativity of <span class="process-math">\(\sup\)</span> and <span class="process-math">\(\inf\)</span> (<a href="" class="xref" data-knowl="./knowl/lem-sub-mult-sup.html" title="Lemma 9.23: Sub-multiplicativity of \sup and \inf">Lemma 9.23</a>) we see that<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html  ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
+\begin{equation*}
+\sup_{ [x_{i-1}, x_i]} (fg)\leq S_i T_i \quad \text{and}\quad \inf_{ [x_{i-1}, x_i]} (fg) \geq s_i t_i.
+\end{equation*}
+</div>Hence<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/prop-int-ineq.html  ./knowl/prop-mono-riemann-refine.html ./knowl/lem-sub-mult-sup.html">
+\begin{align*}
+\amp U(fg;x_0, \dots, x_N) - L(fg;x_0,\dots, x_N) \leq \sum_{i=1}^N  \brac{S_iT_i - s_it_i} (x_i-x_{i-1})\\
+\amp \leq T \sum_{i=1}^N \brac{S_i - s_i} (x_i-x_{i-1}) + S \sum_{i=1}^N \brac{T_i - t_i} (x_i-x_{i-1})
+\leq \eps.
+\end{align*}
+</div></article></details><span class="incontext"><a class="internal" href="week-9.html#thm-int-mult">in-context</a></span>
 </body>
 </html>

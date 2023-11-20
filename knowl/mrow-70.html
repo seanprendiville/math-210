@@ -11,12 +11,15 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mvt.html ./knowl/lem-poly-comp.html ./knowl/lem-poly-comp.html ./knowl/lem-poly-comp.html">
-\begin{align*}
-\amp F(x) := f(x)-\\
-\amp \sqbrac{f(x_0) + (x-x_0)f'(x_0) +  \dots + \trecip{(n-1)!} (x-x_0)^{n-1} f^{(n-1)}(x_0)}
-\end{align*}
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-upper-bound.html">
+\begin{align}
+-\infty \amp \lt (b-a)\inf_{[a,b]} f = \sum_{n=1}^N (x_n-x_{n-1}) \inf_{ [a,b]} f\notag\\
+\amp \leq \sum_{n=1}^N (x_n-x_{n-1}) \inf_{ [x_{n-1}, x_n]} f = L(f; x_0, \dots, x_N)\notag\\
+\amp\leq  \sum_{n=1}^N (x_n-x_{n-1}) \sup_{ [x_{n-1}, x_n]} f = U(f; x_0, \dots, x_N)\notag\\
+\amp \leq  \sum_{n=1}^N (x_n-x_{n-1}) \sup_{ [a,b]} f \notag\\
+\amp = (b-a)\sup_{[a,b]} f\lt  \infty.\tag{9.1}
+\end{align}
 </div>
-<span class="incontext"><a class="internal" href="week-8.html#md-23">in-context</a></span>
+<span class="incontext"><a class="internal" href="week-9.html#mdn-7">in-context</a></span>
 </body>
 </html>

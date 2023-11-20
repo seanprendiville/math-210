@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,16 +11,21 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="proposition theorem-like"><h5 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.11</span><span class="period">.</span><span class="space"> </span><span class="title">Integrability is preserved under taking min, max and absolute values.</span>
-</h5>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(f,g : [a,b] \to \R\)</span> be functions which are Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span> Then the following functions are all Riemann integrable on <span class="process-math">\([a,b]\text{:}\)</span><div class="displaymath process-math" data-contains-math-knowls="">
+<article class="proposition theorem-like"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.22</span><span class="period">.</span><span class="space"> </span><span class="title">Integrability is preserved under taking min, max and absolute values.</span>
+</h6>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a\lt  b\text{.}\)</span> Let <span class="process-math">\(f,g : [a,b] \to \R\)</span> be functions which are Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span> Then the following functions are all Riemann integrable on <span class="process-math">\([a,b]\text{:}\)</span><div class="displaymath process-math">
 \begin{equation*}
 \max\set{f,g}, \qquad\min\set{f,g},\qquad f^+,\qquad f^-,\qquad |f|.
 \end{equation*}
-</div>Moreover we have the integral triangle inequality<div class="displaymath process-math" data-contains-math-knowls="">
+</div>Moreover we have the integral triangle inequality<div class="displaymath process-math">
 \begin{equation*}
 \abs{\int_a^bf}\leq  \int_a^b|f|.
 \end{equation*}
-</div></article><article class="hiddenproof"><a href="" class="proof-knowl original" data-knowl="./knowl/proof-73-hidden.html" title="Proof 9.11.1"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></a></article><span class="incontext"><a href="week-9.html#prop-int-ineq" class="internal">in-context</a></span>
+</div></article><details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">We have <span class="process-math">\(\max\set{f, g} = (f-g)^+ + g\text{.}\)</span> This sum is Riemann integrable by linearity of integration (<a href="" class="xref" data-knowl="./knowl/thm-int-add.html" title="Theorem 9.17: Additivity of integration">Theorem 9.17</a>). Since <span class="process-math">\(\min\set{f,g} = -\max\set{-f,-g}\text{,}\)</span> we deduce that this is also Riemann integrable using the scaling rule (<a href="" class="xref" data-knowl="./knowl/thm-int-add.html" title="Theorem 9.17: Additivity of integration">Theorem 9.17</a>). Similarly, we have Riemann integrability of <span class="process-math">\(f^- = -\max\set{-f, 0}\text{.}\)</span> Finally <span class="process-math">\(|f| = f^+ + f^-\)</span> is integrable by the previous results and the addition rule (<a href="" class="xref" data-knowl="./knowl/thm-int-add.html" title="Theorem 9.17: Additivity of integration">Theorem 9.17</a>). For the triangle inequality, linearity of integration (<a href="" class="xref" data-knowl="./knowl/thm-int-add.html" title="Theorem 9.17: Additivity of integration">Theorem 9.17</a>) gives<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-int-add.html ./knowl/thm-int-add.html ./knowl/thm-int-add.html ./knowl/thm-int-add.html">
+\begin{equation*}
+\abs{\int_a^b f} = \abs{\int_a^b f^+ - \int_a^b f^-} \leq \int_a^b f^+ + \int_a^b f^-
+=  \int_a^b\brac{ f^+ +  f^-}  = \int_a^b\abs{ f} .
+\end{equation*}
+</div></article></details><span class="incontext"><a class="internal" href="week-9.html#prop-int-ineq">in-context</a></span>
 </body>
 </html>

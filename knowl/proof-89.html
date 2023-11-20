@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,20 +11,6 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>To show that <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0\)</span> it suffices to establish that<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-(\forall \eps \gt 0)(\exists \delta= \delta(\eps) \gt 0)(\forall x \in D)[|x-x_0|\leq \delta \implies |f(x)-f(x_0)| \leq \eps].
-\end{equation*}
-</div>Since <span class="process-math">\(f_n\)</span> converges to <span class="process-math">\(f\)</span> uniformly, there exists <span class="process-math">\(n\)</span> for which<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\sup_D |f_n-f| \leq \trecip{3} \eps.
-\end{equation*}
-</div>Since <span class="process-math">\(f_n\)</span> is continuous at <span class="process-math">\(x_0\text{,}\)</span> there exists <span class="process-math">\(\delta \gt 0\)</span> such that if <span class="process-math">\(x \in D\)</span> satisfies <span class="process-math">\(|x-x_0| \leq \delta\)</span> then <span class="process-math">\(|f_n(x)-f_n(x_0)| \leq \trecip{3}\eps\text{.}\)</span> Hence<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-|f(x)-f(x_0)| \amp \leq |f(x)-f_n(x)| + |f_n(x)-f_n(x_0)| + |f_n(x_0) - f(x_0)|\\
-\amp \leq \sup_D |f_n-f| + |f_n(x)-f_n(x_0)| + \sup_D |f_n-f|\\
-\amp \leq \trecip{3} \eps +\trecip{3} \eps +\trecip{3} \eps = \eps. 
-\end{align*}
-</div></article><span class="incontext"><a href="week-10.html#proof-89" class="internal">in-context</a></span>
+<article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>It suffices to show that the <span class="process-math">\(f_n\)</span> converge pointwise to <span class="process-math">\(f\)</span> on <span class="process-math">\([0,1]\text{.}\)</span> Let <span class="process-math">\(x \in [0,1]\text{.}\)</span> If <span class="process-math">\(x \notin \Q\)</span> then <span class="process-math">\(f_n(x) = 0\)</span> for all <span class="process-math">\(n\)</span> and <span class="process-math">\(f(x) = 0\text{.}\)</span> Hence <span class="process-math">\(f_n(x) \to f(x)\)</span> as <span class="process-math">\(n \to \infty\)</span> when <span class="process-math">\(x \notin \Q\text{.}\)</span> Next suppose that <span class="process-math">\(x \in \Q\text{.}\)</span> Then <span class="process-math">\(x = q_N\)</span> for some <span class="process-math">\(N \in \N\text{.}\)</span> Hence <span class="process-math">\(f_n(x) = 1\)</span> for all <span class="process-math">\(n \geq N\text{.}\)</span> Also <span class="process-math">\(f(x) = 1\text{.}\)</span> Therefore <span class="process-math">\(f_n(x) \to f(x)\)</span> as <span class="process-math">\(n \to \infty\)</span> when <span class="process-math">\(x \in \Q\text{.}\)</span></article><span class="incontext"><a class="internal" href="week-10.html#proof-89">in-context</a></span>
 </body>
 </html>

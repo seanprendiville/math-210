@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h5 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">10.4.b.1</span><span class="period">.</span>
+</h5>
+<article class="theorem theorem-like"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.6</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental theorem of calculus - integral of derivative.</span>
+</h6>Let <span class="process-math">\(f : (a,b) \to \R\text{.}\)</span> Suppose that <span class="process-math">\(f\)</span> is differentiable on <span class="process-math">\((a,b)\text{.}\)</span> Given <span class="process-math">\(x,y \in (a,b)\)</span> with <span class="process-math">\(x \lt  y\text{,}\)</span> suppose that <span class="process-math">\(f'\)</span> is Riemann integrable on <span class="process-math">\([x,y]\text{.}\)</span> Then<div class="displaymath process-math">
+\begin{equation*}
+\int_x^y f' = f(y) - f(x). 
+\end{equation*}
+</div></article><details class="hiddenproof"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">Let <span class="process-math">\(x = x_0 \lt  \dots \lt  x_N = y\)</span> denote a subdivision of <span class="process-math">\([x,y]\text{.}\)</span> For each <span class="process-math">\(n\text{,}\)</span> the mean value theorem (<a href="" class="xref" data-knowl="./knowl/thm-mvt.html" title="Theorem 8.7: Mean value theorem">Theorem 8.7</a>) gives <span class="process-math">\(y_n \in (x_{n-1}, x_n)\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mvt.html ./knowl/def-up-low-riemann-integral.html">
+\begin{equation*}
+f(x_n) - f(x_{n-1})  = f'(y_n)(x_n-x_{n-1}).
+\end{equation*}
+</div>Hence<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mvt.html ./knowl/def-up-low-riemann-integral.html">
+\begin{equation*}
+f(y) - f(x) = \sum_{n=1}^N \sqbrac{f(x_n)-f(x_{n-1})} = \sum_{n=1}^N (x_n-x_{n-1})f'(y_n).
+\end{equation*}
+</div>Thus<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mvt.html ./knowl/def-up-low-riemann-integral.html">
+\begin{equation*}
+L(f';x_0, \dots, x_N) \leq f(y)-f(x) \leq U(f';x_0, \dots, x_N).
+\end{equation*}
+</div>Since this holds for all subdivisions <span class="process-math">\(x = x_0 \lt  \dots \lt  x_N = y\text{,}\)</span> it follows from the definition of the upper and lower Riemann integrals (<a href="" class="xref" data-knowl="./knowl/def-up-low-riemann-integral.html" title="Definition 9.4: Upper/lower Riemann integral">Definition 9.4</a>) that<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-mvt.html ./knowl/def-up-low-riemann-integral.html">
+\begin{equation*}
+L(f'; [a,b]) \leq f(y)-f(x) \leq U(f';[a,b]).
+\end{equation*}
+</div>Since <span class="process-math">\(f'\)</span> is Riemann integrable on <span class="process-math">\([x,y]\text{,}\)</span> we have <span class="process-math">\(L(f';[x,y]) = U(f';[x,y]) = \int_x^y f'\text{.}\)</span> We deduce that <span class="process-math">\(f(y)-f(x) = \int_x^y f'\text{.}\)</span></article></details>
+</div>
+<span class="incontext"><a class="internal" href="week-10.html#solution-150">in-context</a></span>
+</body>
+</html>

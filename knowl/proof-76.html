@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,14 +11,42 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5>Our hypothesis implies that there exist finitely many points <span class="process-math">\(x_1, \dots, x_n \in [a,b]\)</span> and <span class="process-math">\(c_1, \dots, c_n \in \R\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="">
+<article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>Let us proof the claim about addition (the claim about scaling follows a similar argument). Fix <span class="process-math">\(\eps \gt 0\text{.}\)</span> Since increasing an infimum gives a non-lower bound, there exist subdivisions <span class="process-math">\(a= x_0 \lt  \dots \lt  x_N = b\)</span> and <span class="process-math">\(a = y_0 \lt  \dots \lt  y_M = b\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann-refine.html ./knowl/cor-lower-upper.html">
 \begin{equation*}
-f-g = \sum_{i=1}^n c_i 1_{\set{x_i}}.
+U(f;x_0, \dots, x_N) \leq \int_a^bf+\eps \quad\text{and}\quad U(g;y_0, \dots, y_M) \leq \int_a^bg+\eps.
 \end{equation*}
-</div>By linearity of the integral we deduce that<div class="displaymath process-math" data-contains-math-knowls="">
+</div>Letting <span class="process-math">\(a= z_0 \lt  \dots \lt  z_T = b\)</span> denote the common refinement of <span class="process-math">\((x_0, \dots, x_N)\)</span> and <span class="process-math">\((y_0, \dots, y_M)\text{,}\)</span> monotonicty of Riemann sums under refinements (<a href="" class="xref" data-knowl="./knowl/prop-mono-riemann-refine.html" title="Proposition 9.8: Riemann sums are monotone with respect to refinements">Proposition 9.8</a>) gives that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann-refine.html ./knowl/cor-lower-upper.html">
 \begin{equation*}
-\int_a^b f - \int_a^b g = \sum_{i=1}^n c_i \int_a^b1_{\set{x_i}} =\sum_{i=1}^n c_i \cdot 0 =  0.
+U(f;z_0,\dots, z_T) + U(g;z_0, \dots, z_T) \leq \int_a^b f + \int_a^b g + 2\eps\text{.}
 \end{equation*}
-</div></article><span class="incontext"><a href="week-9.html#proof-76" class="internal">in-context</a></span>
+</div>Since<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann-refine.html ./knowl/cor-lower-upper.html">
+\begin{equation*}
+\sup_{[z_{n-1}, z_n]} f + \sup_{[z_{n-1}, z_n]} g
+\end{equation*}
+</div>is an upper bound for the set<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann-refine.html ./knowl/cor-lower-upper.html">
+\begin{equation*}
+\set{f(x)+g(x) : x \in [z_{n-1}, z_n]}\text{,}
+\end{equation*}
+</div>we have that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann-refine.html ./knowl/cor-lower-upper.html">
+\begin{equation*}
+\sup_{[z_{n-1}, z_n]} (f + g) \leq\sup_{[z_{n-1}, z_n]} f + \sup_{[z_{n-1}, z_n]} g\text{.}
+\end{equation*}
+</div>Therefore<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann-refine.html ./knowl/cor-lower-upper.html">
+\begin{equation*}
+U(f+g;z_0, \dots, z_T)\leq U(f;z_0,\dots, z_T) + U(g;z_0, \dots, z_T)\text{,}
+\end{equation*}
+</div>and thus<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann-refine.html ./knowl/cor-lower-upper.html">
+\begin{equation*}
+U(f+g;[a,b]) \leq \int_a^b f + \int_a^b g + 2\eps\text{.}
+\end{equation*}
+</div>A similar argument shows that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann-refine.html ./knowl/cor-lower-upper.html">
+\begin{equation*}
+L(f+g;[a,b]) \geq \int_a^b f + \int_a^b g - 2\eps.
+\end{equation*}
+</div>Letting <span class="process-math">\(\eps \to 0\)</span> and using the inequality <span class="process-math">\(L(f+g;[a,b]) \leq U(f+g;[a,b])\)</span> (proved in <a href="" class="xref" data-knowl="./knowl/cor-lower-upper.html" title="Corollary 9.9: Lower Riemann sums never exceed upper Riemann sums">Corollary 9.9</a>), the sandwich rule then yields that<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-mono-riemann-refine.html ./knowl/cor-lower-upper.html">
+\begin{equation*}
+U(f+g;[a,b]) = L(f+g;[a,b]) = \int_a^b f + \int_a^b g\text{.}
+\end{equation*}
+</div></article><span class="incontext"><a class="internal" href="week-9.html#proof-76">in-context</a></span>
 </body>
 </html>
