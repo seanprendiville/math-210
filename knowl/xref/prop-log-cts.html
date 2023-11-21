@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proposition theorem-like"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.17</span><span class="period">.</span>
+</h6>
+<span class="process-math">\(\log\)</span> is continuous on <span class="process-math">\((0,\infty)\text{.}\)</span></article><details class="hiddenproof born-hidden-knowl"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">Let <span class="process-math">\(x_0\in (0, \infty)\text{.}\)</span> Using the epsilon-delta characterisation of continuity (<a href="" class="xref" data-knowl="./knowl/xref/cor-eps-delta-cts.html" title="Proposition 5.17: Epsilon-delta characterisation of the limit">Proposition 5.17</a>), we are required to prove that for each <span class="process-math">\(\eps \gt 0\)</span> there exists <span class="process-math">\(\delta = \delta(x_0,\eps) \gt 0\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-eps-delta-cts.html ./knowl/xref/thm-mvt.html ./knowl/xref/eq-log-cts-to-prove.html ./knowl/xref/eq-log-cts-mvt.html">
+\begin{equation*}
+|x-x_0| \leq \delta \quad \implies \quad |\log(x) - \log(x_0)| \leq \eps.
+\end{equation*}
+</div>Writing <span class="process-math">\(y:=\log(x)\)</span> and <span class="process-math">\(y_0:=\log(x_0)\)</span> this is equivalent to showing that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-eps-delta-cts.html ./knowl/xref/thm-mvt.html ./knowl/xref/eq-log-cts-to-prove.html ./knowl/xref/eq-log-cts-mvt.html">
+\begin{equation}
+|\exp(y)-\exp(y_0)| \leq \delta \quad \implies \quad |y - y_0| \leq \eps.\tag{8.3}
+\end{equation}
+</div>By the mean value theorem (<a href="" class="xref" data-knowl="./knowl/xref/thm-mvt.html" title="Theorem 8.7: Mean value theorem">Theorem 8.7</a>), there exists <span class="process-math">\(y_1\)</span> between <span class="process-math">\(y\)</span> and <span class="process-math">\(y_0\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-eps-delta-cts.html ./knowl/xref/thm-mvt.html ./knowl/xref/eq-log-cts-to-prove.html ./knowl/xref/eq-log-cts-mvt.html">
+\begin{equation}
+|\exp(y)-\exp(y_0)| = \exp(y_1)|y-y_0|.						\tag{8.4}
+\end{equation}
+</div>Since <span class="process-math">\(\exp\)</span> is increasing, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-eps-delta-cts.html ./knowl/xref/thm-mvt.html ./knowl/xref/eq-log-cts-to-prove.html ./knowl/xref/eq-log-cts-mvt.html">
+\begin{equation*}
+\exp(y_1) \geq \exp\brac{\min\set{y_0,y}} = \min\set{x_0,x}\text{.}
+\end{equation*}
+</div>Hence we derive <a href="" class="xref" data-knowl="./knowl/xref/eq-log-cts-to-prove.html" title="Equation 8.3">(8.3)</a> on taking<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-eps-delta-cts.html ./knowl/xref/thm-mvt.html ./knowl/xref/eq-log-cts-to-prove.html ./knowl/xref/eq-log-cts-mvt.html">
+\begin{equation*}
+\delta(x_0,\eps) :=\min\set{\frac{x_0}{2}, \frac{\eps x_0}{2}},
+\end{equation*}
+</div>since with this choice we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-eps-delta-cts.html ./knowl/xref/thm-mvt.html ./knowl/xref/eq-log-cts-to-prove.html ./knowl/xref/eq-log-cts-mvt.html">
+\begin{equation*}
+\exp(y_1) \geq  \min\set{x_0,x_0-\tfrac{x_0}{2}}=\tfrac{x_0}{2}\text{,}
+\end{equation*}
+</div>which yields the required implication on substitution into <a href="" class="xref" data-knowl="./knowl/xref/eq-log-cts-mvt.html" title="Equation 8.4">(8.4)</a>.</article></details><span class="incontext"><a class="internal" href="week-8.html#prop-log-cts">in-context</a></span>
+</body>
+</html>

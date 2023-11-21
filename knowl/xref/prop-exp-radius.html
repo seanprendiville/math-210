@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proposition theorem-like"><h5 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.7</span><span class="period">.</span><span class="space"> </span><span class="title">Radius of convergence for the exponential function.</span>
+</h5>
+<div class="para logical">
+<div class="para">The power series</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{n=0}^\infty \frac{x^n}{n!}
+\end{equation*}
+</div>
+<div class="para">has infinite radius of convergence.</div>
+</div> <div class="para">In particular, the exponential function <span class="process-math">\(\exp(x)\)</span> is well-defined at all <span class="process-math">\(x \in \R\text{.}\)</span>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof">Let <span class="process-math">\(N\geq 2|x|\text{.}\)</span> Then for any <span class="process-math">\(n\)</span> we have<div class="displaymath process-math">
+\begin{equation*}
+\frac{|x|^{N+n}}{(N+n)!} \leq \frac{|x|^{N}}{N!} \times \frac{|x|^n}{N^n} \leq \frac{|x|^{N}}{N!}\times \brac{\frac{1}{2}}^n.
+\end{equation*}
+</div>Absolute convergence then follows from the comparison test, as in the following:<div class="displaymath process-math">
+\begin{equation*}
+\sum_{n=0}^\infty \frac{|x|^n}{n!} = \sum_{n=0}^N \frac{|x|^n}{n!} + \sum_{n=1}^\infty \frac{|x|^{N+n}}{(N+n)!} \leq \sum_{n=0}^N \frac{|x|^n}{n!} +\frac{|x|^N}{N!} \sum_{n=1}^\infty 2^{-n} \lt \infty.
+\end{equation*}
+</div></article></details><span class="incontext"><a class="internal" href="week-5.html#prop-exp-radius">in-context</a></span>
+</body>
+</html>

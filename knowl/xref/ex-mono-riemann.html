@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">-</span><span class="space"> </span><span class="codenumber">9.10</span><span class="period">.</span><span class="space"> </span><span class="title">Monotone functions are Riemann integrable.</span>
+</h4>State and prove how a monotone function on a closed interval is integrable.<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<article class="proposition theorem-like"><h5 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.11</span><span class="period">.</span><span class="space"> </span><span class="title">Monotone functions are integrable.</span>
+</h5>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a \lt  b\text{.}\)</span> Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a monotone function. Then <span class="process-math">\(f\)</span> is Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span></article><details class="hiddenproof born-hidden-knowl"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof"><div class="para">We are required to prove that <span class="process-math">\(f\)</span> is bounded (so that the upper/lower Riemann sums/integrals are defined) and that <span class="process-math">\(L(f;[a,b]) = U(f;[a,b])\text{.}\)</span> Let us suppose that <span class="process-math">\(f\)</span> is increasing and that <span class="process-math">\([a,b] = [0,1]\text{,}\)</span> the  general case being similar.</div> <div class="para logical">
+<div class="para">Since <span class="process-math">\(f\)</span> is increasing, for any sub-interval <span class="process-math">\([c,d]\subset [0,1]\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sup_{[c,d]} f = f(d) \quad \text{and}\quad \inf_{[c,d]} f= f(c).
+\end{equation*}
+</div>
+<div class="para">In particular, since <span class="process-math">\(\sup_{[0,1]} f = f(1)\)</span> and <span class="process-math">\(\inf_{[0,1]}f= f(0)\text{,}\)</span> we see that <span class="process-math">\(f\)</span> is bounded on <span class="process-math">\([0,1]\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Next let us show that <span class="process-math">\(L(f;[a,b]) = U(f;[a,b])\text{.}\)</span> For any <span class="process-math">\(N \in \N\)</span> consider the subdivision</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{0}{N} \lt  \frac{1}{N} \lt  \frac{2}{N} \lt  \dots \lt  \frac{N}{N}.
+\end{equation*}
+</div>
+<div class="para">Then we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+0\leq U(f;[a,b]) - L(f;[a,b])\amp \leq U\brac{f; \tfrac{0}{N}, \tfrac{1}{N}, \dots, \tfrac{N}{N}} -  L\brac{f; \tfrac{0}{N}, \tfrac{1}{N}, \dots, \tfrac{N}{N}} \\
+\amp = \sum_{n=1}^N \frac{f\brac{\frac{n}{N}}}{N} - \sum_{n=1}^{N} \frac{f\brac{\frac{n-1}{N}}}{N}\\
+\amp = \frac{f\brac{1}}{N} - \frac{f\brac{0}}{N} .
+\end{align*}
+</div>
+<div class="para">Since the latter quantity tends to zero as <span class="process-math">\(N \to \infty\text{,}\)</span> we have that <span class="process-math">\(U(f;[a,b]) = L(f;[a,b])\text{.}\)</span>
+</div>
+</div></article></details>
+</div></details></div></article><span class="incontext"><a class="internal" href="week-9.html#ex-mono-riemann">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proposition theorem-like"><h5 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.16</span><span class="period">.</span>
+</h5>Let <span class="process-math">\(a,b\in \R\)</span> with <span class="process-math">\(a\lt b\)</span> and let <span class="process-math">\(f :[a,b]\to \R\)</span> be Riemann integrable. Then for any <span class="process-math">\(x\in [a,b]\)</span> we have that <span class="process-math">\(f\)</span> is Riemann integrable on both <span class="process-math">\([a,x]\)</span> and <span class="process-math">\([x,b]\)</span> with<div class="displaymath process-math">
+\begin{equation*}
+\int_a^b f = \int_a^x f+ \int_x^b f.
+\end{equation*}
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof"><div class="para logical">
+<div class="para">Since increasing an infimum gives a non-lower bound, there exist a subdivision <span class="process-math">\(a= x_0 \lt  \dots \lt  x_N = b\)</span> such that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-mono-riemann-refine.html">
+\begin{equation*}
+U(f;x_0, \dots, x_N) \leq \int_a^bf+\eps\text{.}
+\end{equation*}
+</div>
+<div class="para">Since decreasing a supremum gives a non-upper bound, there exist a subdivision <span class="process-math">\(a= y_0 \lt  \dots \lt  y_M = b\)</span> such that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-mono-riemann-refine.html">
+\begin{equation*}
+L(f;y_0, \dots, y_M) \geq \int_a^bf-\eps\text{.}
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(a= z_0 \lt  \dots \lt  z_T = b\)</span> denote a common refinement of <span class="process-math">\((x_0, \dots, x_N)\)</span> and <span class="process-math">\((y_0, \dots, y_M)\)</span> which also contains the point <span class="process-math">\(x = z_m\)</span> for some <span class="process-math">\(m\text{.}\)</span> Then monotonicty of Riemann sums under refinements (<a href="" class="xref" data-knowl="./knowl/xref/prop-mono-riemann-refine.html" title="Proposition 9.8: Riemann sums are monotone with respect to refinements">Proposition 9.8</a>) gives that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-mono-riemann-refine.html">
+\begin{equation*}
+0\leq U(f;z_0,\dots, z_T) - L(f;z_0, \dots, z_T) \leq  2\eps.\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(a= z_0 \lt \dots \lt z_m = x\)</span> is a subdivision of <span class="process-math">\([a,x]\)</span> we have that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-mono-riemann-refine.html">
+\begin{align*}
+0\amp \leq U(f; [a,x])-L(f;[a,x])\leq U(f;z_0,\dots, z_m) - L(f;z_0, \dots, z_m) \leq\\
+\amp  U(f;z_0,\dots, z_m) - L(f;z_0, \dots, z_m) + U(f;z_m,\dots, z_T) - L(f;z_m, \dots, z_T)  \\
+\amp =  U(f;z_0,\dots, z_T) - L(f;z_0, \dots, z_T) \leq  2\eps\text{.}
+\end{align*}
+</div>
+<div class="para">Letting <span class="process-math">\(\eps \to 0\)</span> then establishes that <span class="process-math">\(U(f;[a,x])= L(f;[a,x])\text{,}\)</span> so that <span class="process-math">\(f\)</span> is Riemann integrable on <span class="process-math">\([a,x]\text{.}\)</span>
+</div>
+</div> <div class="para">A similar argument to that given above shows that <span class="process-math">\(f\)</span> is Riemann integrable on <span class="process-math">\([x,b]\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">For the addition formula, we may use the same subdivision <span class="process-math">\(a= z_0 \lt  \dots \lt  z_T = b\)</span> constructed above to see that</div>
+<div class="displaymath process-math">
+\begin{align*}
+\int_a^xf + \int_x^bf \amp \leq U(f;z_0,\dots, z_m)+U(f;z_m,\dots, z_T)\\
+\amp = U(f; z_0, \dots, z_T) \leq \int_a^b f + \eps\text{.}
+\end{align*}
+</div>
+<div class="para">Similarly</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_a^x f+\int_x^bf \geq \int_a^b f-\eps\text{.}
+\end{equation*}
+</div>
+<div class="para">Again letting <span class="process-math">\(\eps \to 0\)</span> then gives the addition formula.</div>
+</div></article></details><span class="incontext"><a class="internal" href="week-9.html#prop-int-sub">in-context</a></span>
+</body>
+</html>
