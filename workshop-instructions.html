@@ -55,7 +55,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "https://pretextbook.org/js/lib"
+      "pretext": "_static/pretext/js/lib"
     }
   },
   "startup": {
@@ -67,8 +67,8 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
@@ -76,16 +76,27 @@ window.MathJax = {
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#thm-radius-2-4 { counter-set: thm-radius-2-4 0; }
+#thm-radius-2-4 > li::marker { content: ""counter(thm-radius-2-4,decimal)"."; }
+#thm-radius-2-4 > li { counter-increment: thm-radius-2-4; }
+#prop-alg-cts-3 { counter-set: prop-alg-cts-3 0; }
+#prop-alg-cts-3 > li::marker { content: ""counter(prop-alg-cts-3,decimal)"."; }
+#prop-alg-cts-3 > li { counter-increment: prop-alg-cts-3; }
+#cor-mono-diff-1-4 { counter-set: cor-mono-diff-1-4 0; }
+#cor-mono-diff-1-4 > li::marker { content: ""counter(cor-mono-diff-1-4,decimal)"."; }
+#cor-mono-diff-1-4 > li { counter-increment: cor-mono-diff-1-4; }
+</style>
 </head>
 <body class="pretext article ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -242,21 +253,21 @@ window.MathJax = {
 <span class="type">Appendix</span><span class="space"> </span><span class="codenumber">A</span><span class="space"> </span><span class="title">Workshop instructions</span>
 </h2>
 <div class="para" id="workshop-instructions-2">Workshops take place every fortnight, in odd-numbered weeks (see your timetable for details of where and when). Each workshop lasts up to two hours.</div>
-<ul class="disc">
+<ul class="disc" id="workshop-instructions-3">
 <li id="workshop-instructions-3-1"><div class="para" id="p-derived-workshop-instructions-3-1">
-<em class="emphasis">0-30 minutes:</em> During the first 30 minutes of your workshop, your tutor will facilitate a true/false quiz reviewing material covered in the previous fortnight. The questions will be selected by your tutor from those listed (for Week 1) here <a href="" class="xref" data-knowl="./knowl/xref/week-1-true-false.html" title="- 1.31: True/false workshop quiz">- 1.31</a>. You will vote on whether you think a statement is true (thumbs up) or false (thumbs down). For each question, your workshop tutor will select one or two of you to  justify your vote. This justification can involve giving a counterexample (if false) or outlining which definition/theorem you think the statement follows from (if true). Your participation in this activity will go towards your "individual mark" for the workshop (see <a href="assessment.html" class="internal" title="Appendix B: Assessment">Appendix B</a>).</div></li>
+<em class="emphasis">0 minutes:</em> Your tutor may choose to start your workshop with a true/false quiz reviewing material covered in the previous fortnight. The questions will be selected by your tutor from those listed (for Week 1) here <a href="week-1.html#week-1-true-false" class="xref" data-knowl="./knowl/xref/week-1-true-false.html" data-reveal-label="Reveal" data-close-label="Close" title="- 1.31: True/false workshop quiz">- 1.31</a>. You will vote on whether you think a statement is true (thumbs up) or false (thumbs down). For each question, your workshop tutor will select one or two of you to  justify your vote. This justification can involve giving a counterexample (if false) or outlining which definition/theorem you think the statement follows from (if true). Your participation in this activity will go towards your "group mark" for the workshop (see <a href="assessment.html" class="internal" title="Appendix B: Assessment">Appendix B</a>).</div></li>
 <li id="workshop-instructions-3-2"><div class="para" id="p-derived-workshop-instructions-3-2">
-<em class="emphasis">30-60 minutes:</em> During the next 30 minutes of the workshop, you will break into groups in order to collaboratively write-up an answer to an exam-style self-test question. You will be given marker pens and a large sheet of A1 paper on which to do this.  Your participation in this activity will go towards both your "individual mark" and "group mark" for the workshop (see <a href="assessment.html" class="internal" title="Appendix B: Assessment">Appendix B</a>). The question (for Week 1) will be selected from those listed here: <a href="" class="xref" data-knowl="./knowl/xref/exam-style-week-1-1.html" title="- 1.32: Exam-style self-test question for workshop">- 1.32</a>, <a href="" class="xref" data-knowl="./knowl/xref/exam-style-week-1-2.html" title="- 1.33: Exam-style self-test question for workshop">- 1.33</a> and <a href="" class="xref" data-knowl="./knowl/xref/exam-style-week-1-3.html" title="- 1.34: Exam-style self-test question for workshop">- 1.34</a>. During this group activity, you are free to consult your notes, the self-test questions and any other resources you find useful.</div></li>
+<em class="emphasis">0-60 minutes:</em> You will break into groups of 2-3 in order to collaboratively write-up an answer to at least one workshop question. Your tutor will assign your group a question from those listed <a class="external" href="https://bit.ly/47EDKDn" target="_blank">here</a><details class="ptx-footnote" aria-live="polite" id="workshop-instructions-3-2-3"><summary class="ptx-footnote__number" title="Footnote A.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="workshop-instructions-3-2-3"><code class="code-inline tex2jax_ignore">Questions for Workshop 1</code></div></details> (for Week 1). You will be given marker pens and a large sheet of A1 paper on which to do this.  Your participation in this activity will go towards your "group mark" for the workshop (see <a href="assessment.html" class="internal" title="Appendix B: Assessment">Appendix B</a>). During this group activity, you are free to consult your notes and any other resources you find useful.</div></li>
 <li id="workshop-instructions-3-3"><div class="para" id="p-derived-workshop-instructions-3-3">
 <em class="emphasis">60 minutes:</em> Comfort break.</div></li>
 <li id="workshop-instructions-3-4"><div class="para" id="p-derived-workshop-instructions-3-4">
-<em class="emphasis">60-90 minutes:</em> On the whiteboard, your tutor will outline a model solution to the question you have attempted in your group. Your group will mark the work of another group, indicating any mistakes/gaps, and giving them an indicative grade (see below). Your participation in this activity will go towards both your "individual mark" and "group mark" for the workshop (see <a href="assessment.html" class="internal" title="Appendix B: Assessment">Appendix B</a>).</div></li>
+<em class="emphasis">60-80 minutes:</em> Your tutor will select groups to present both their question and solution on the whiteboard.</div></li>
 <li id="workshop-instructions-3-5">
 <div class="para" id="workshop-instructions-3-5-1">
-<em class="emphasis">90-120 minutes:</em> Your tutor will select one of the remaining two exam-style self-test questions and you will write-up a solution under exam conditions. The purpose of this is for you to receive  feedback on how to improve your answers in real analysis.</div>
-<ul class="circle">
+<em class="emphasis">80-120 minutes:</em> Your tutor will select a workshop question (one which has not been assigned to a group) and you will write-up a solution under exam conditions. The purpose of this is for you to receive feedback on how to improve your answers in real analysis.</div>
+<ul class="circle" id="workshop-instructions-3-5-2">
 <li id="workshop-instructions-3-5-2-1"><div class="para" id="p-derived-workshop-instructions-3-5-2-1">The question should take you at most 20 minutes - the extra   time is  for those who require this in exams. However, everyone should feel free to use the extra time if needed.</div></li>
-<li id="workshop-instructions-3-5-2-2"><div class="para" id="p-derived-workshop-instructions-3-5-2-2">You may not consult anyone else during the final 30 minutes.</div></li>
+<li id="workshop-instructions-3-5-2-2"><div class="para" id="p-derived-workshop-instructions-3-5-2-2">You may not consult your notes or anyone else during this final period.</div></li>
 <li id="workshop-instructions-3-5-2-3"><div class="para" id="p-derived-workshop-instructions-3-5-2-3">You must include full details of your proofs and calculations.</div></li>
 <li id="workshop-instructions-3-5-2-4"><div class="para" id="p-derived-workshop-instructions-3-5-2-4">The only results which you may use without further justification are those contained in the notes or other course materials, provided that you clearly paraphrase them.</div></li>
 <li id="workshop-instructions-3-5-2-5"><div class="para" id="p-derived-workshop-instructions-3-5-2-5">Once you are finished, you should hand your attempt to your workshop tutor and leave quietly.</div></li>
@@ -264,41 +275,23 @@ window.MathJax = {
 </ul>
 </li>
 </ul>
-<div class="para" id="workshop-instructions-4">Each workshop contributes <span class="process-math">\(6\%\)</span> towards your final mark. Your mark for each workshop is scored out of 3. You will receive 1 mark for each of the following:</div>
-<ul class="disc">
-<li id="workshop-instructions-5-1">
-<div class="para" id="workshop-instructions-5-1-1">
-<em class="emphasis">Group mark</em>. Your tutor will assign all members of your group 1 mark if your group:</div>
-<ul class="circle">
-<li id="workshop-instructions-5-1-2-1"><div class="para" id="p-derived-workshop-instructions-5-1-2-1">writes up an answer to the self-test question assigned by your tutor for the group activity;</div></li>
-<li id="workshop-instructions-5-1-2-2"><div class="para" id="p-derived-workshop-instructions-5-1-2-2">provides feedback and an indicative grade to another group.</div></li>
+<div class="para" id="workshop-instructions-4">Each workshop contributes <span class="process-math">\(6\%\)</span> towards your final mark. Your mark for each workshop is scored out of 6. You will receive marks for each of the following:</div>
+<ul class="disc" id="workshop-instructions-5">
+<li id="workshop-instructions-5-1"><div class="para" id="workshop-instructions-5-1-1">
+<em class="emphasis">Group mark</em>. If you meaningfully participate in all group activities you will receive all of the group marks available for that week. There are 6 group marks available in the first workshop, and 2 group marks available in all subsequent workshops. The group activities comprise: true/false quiz, answering group question, presenting group answer.</div></li>
+<li id="workshop-instructions-5-2">
+<div class="para" id="workshop-instructions-5-2-1">
+<em class="emphasis">Individual mark</em>. In Weeks 3, 5, 7, 9 you will attempt a workshop question individually under exam conditions. Your tutor will provide feedback on this work and award it a mark out of 4 according to the following criteria:</div>
+<ul class="circle" id="workshop-instructions-5-2-2">
+<li id="workshop-instructions-5-2-2-1"><div class="para" id="p-derived-workshop-instructions-5-2-2-1">0 marks : Answer does not demonstrate any of the relevant knowledge required for a solution; no attempt or little in the way of an attempt.</div></li>
+<li id="workshop-instructions-5-2-2-2"><div class="para" id="p-derived-workshop-instructions-5-2-2-2">1 mark (3rd class degree level): Answer demonstrates little of the relevant knowledge required for a solution; major gaps and poor writing.</div></li>
+<li id="workshop-instructions-5-2-2-3"><div class="para" id="p-derived-workshop-instructions-5-2-2-3">2 marks (2:2 degree level): Answer demonstrates some of the relevant knowledge required for a solution; only partial progress and/or large errors and/or poor writing.</div></li>
+<li id="workshop-instructions-5-2-2-4"><div class="para" id="p-derived-workshop-instructions-5-2-2-4">3 marks (2:1 degree level): Almost complete solution, with a small number of gaps, logical errors or imprecision in the writing.</div></li>
+<li id="workshop-instructions-5-2-2-5"><div class="para" id="p-derived-workshop-instructions-5-2-2-5">4 marks (1st class degree level): Complete solution, very well written, with no gaps or logical errors.</div></li>
 </ul>
 </li>
-<li id="workshop-instructions-5-2"><div class="para" id="p-derived-workshop-instructions-5-2">
-<em class="emphasis">Individual mark</em>.  This assesses your participation in the group activities and the true/false quiz. Your tutor will assign you 1 mark if you demonstrate your ability to discuss new mathematical ideas with your peers or tutors.</div></li>
-<li id="workshop-instructions-5-3">
-<div class="para" id="workshop-instructions-5-3-1">
-<em class="emphasis">Mark for self-test submission</em>. Your tutor will assign you 1 mark if you submit a reasonable attempt at the exam-style self-test question which your tutor asks you to complete at the end of the workshop. If you are unable to answer this question, you will still receive 1 mark if your submission clearly explains the unsuccessful strategies you have attempted. You will not receive a mark if you do not attempt the question and do not explain the strategies attempted.</div>
-<ul class="circle">
-<li id="workshop-instructions-5-3-2-1"><div class="para" id="p-derived-workshop-instructions-5-3-2-1">At your next workshop, your tutor will return your answer with formative feedback.</div></li>
-<li id="workshop-instructions-5-3-2-2">
-<div class="para" id="workshop-instructions-5-3-2-2-1">To help you get a sense of what your answer would achieve in an exam, your workshop tutor will also give you an <em class="emphasis">indicative grade</em>:</div>
-<ul class="square">
-<li id="workshop-instructions-5-3-2-2-2-1"><div class="para" id="p-derived-workshop-instructions-5-3-2-2-2-1">
-<em class="emphasis">1st.</em> Complete solution with no gaps or logical errors.</div></li>
-<li id="workshop-instructions-5-3-2-2-2-2"><div class="para" id="p-derived-workshop-instructions-5-3-2-2-2-2">
-<em class="emphasis">2nd.</em> Almost complete solution, with a small number of gaps or logical errors</div></li>
-<li id="workshop-instructions-5-3-2-2-2-3"><div class="para" id="p-derived-workshop-instructions-5-3-2-2-2-3">
-<em class="emphasis">3rd.</em> Answer demonstrates some of the relevant knowledge required for a solution.</div></li>
-<li id="workshop-instructions-5-3-2-2-2-4"><div class="para" id="p-derived-workshop-instructions-5-3-2-2-2-4">
-<em class="emphasis">4th.</em> Answer does not demonstrate any of the relevant knowledge required for a solution.</div></li>
 </ul>
-</li>
-<li id="workshop-instructions-5-3-2-3"><div class="para" id="p-derived-workshop-instructions-5-3-2-3">The indicative grade will not count towards your final mark.</div></li>
-<li id="workshop-instructions-5-3-2-4"><div class="para" id="p-derived-workshop-instructions-5-3-2-4">Do not attend a workshop if you feel ill or are self-isolating. Email the <a class="external" href="mailto:mathsteaching@lancaster.ac.uk" target="_blank">teaching office</a><a class="xref" id="workshop-instructions-5-3-2-4-2" href="" data-knowl="./knowl/fn/workshop-instructions-5-3-2-4-2.html" title="Footnote A.2"><sup> 2 </sup></a> to report your absence.</div></li>
-</ul>
-</li>
-</ul></section></div>
+<div class="para" id="workshop-instructions-6">If you cannot attend your workshop due to illness or otherwise then email the <a class="external" href="mailto:mathsteaching@lancaster.ac.uk" target="_blank">teaching office</a><details class="ptx-footnote" aria-live="polite" id="workshop-instructions-6-2"><summary class="ptx-footnote__number" title="Footnote A.3"><sup> 3 </sup></summary><div class="ptx-footnote__contents" id="workshop-instructions-6-2"><code class="code-inline tex2jax_ignore">mathsteaching@lancaster.ac.uk</code></div></details> to explain your absence.</div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="week-10.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="assessment.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
