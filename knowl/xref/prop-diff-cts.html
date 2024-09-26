@@ -13,12 +13,12 @@
 <body class="ignore-math">
 <article class="proposition theorem-like"><h5 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">7.7</span><span class="period">.</span><span class="space"> </span><span class="title">Differentiable implies continuous.</span>
-</h5>Let <span class="process-math">\(f : (a,b) \to \R\)</span> be differentiable at <span class="process-math">\(x_0 \in (a,b)\text{.}\)</span> Then <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0\text{.}\)</span></article><details class="hiddenproof born-hidden-knowl"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof">By the epsilon-delta characterisation of a finite limit at a finite point (see <a href="" class="xref" data-knowl="./knowl/xref/cor-eps-delta-cts.html" title="Proposition 5.17: Epsilon-delta characterisation of the limit">Proposition 5.17</a>) we are required to verify that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-eps-delta-cts.html ./knowl/xref/def-differentiable.html ./knowl/xref/eq-cts-to-verify.html">
+</h5>Let <span class="process-math">\(f : (a,b) \to \R\)</span> be differentiable at <span class="process-math">\(x_0 \in (a,b)\text{.}\)</span> Then <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0\text{.}\)</span></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof knowl__content">By the epsilon-delta characterisation of a finite limit at a finite point (see <a href="week-5.html#cor-eps-delta-cts" class="xref" data-knowl="./knowl/xref/cor-eps-delta-cts.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 5.17: Epsilon-delta characterisation of the limit">Proposition 5.17</a>) we are required to verify that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-eps-delta-cts.html ./knowl/xref/def-differentiable.html ./knowl/xref/eq-cts-to-verify.html">
 \begin{align}
 (\forall \eps \gt 0)(\exists \delta_1 \amp= \delta_1(x_0,\eps) \gt 0)(\forall x \in (a,b))\notag\\
 \amp \bigsqbrac{\ |x-x_0| \leq \delta_1 \implies |f(x)-f(x_0)| \leq \eps\ }.\tag{7.1}
 \end{align}
-</div>By the definition of differentiability (see <a href="" class="xref" data-knowl="./knowl/xref/def-differentiable.html" title="Definition 7.2: Differentiable">Definition 7.2</a>) we know that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-eps-delta-cts.html ./knowl/xref/def-differentiable.html ./knowl/xref/eq-cts-to-verify.html">
+</div>By the definition of differentiability (see <a href="week-7.html#def-differentiable" class="xref" data-knowl="./knowl/xref/def-differentiable.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2: Differentiable">Definition 7.2</a>) we know that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-eps-delta-cts.html ./knowl/xref/def-differentiable.html ./knowl/xref/eq-cts-to-verify.html">
 \begin{align*}
 (\forall \eps \gt 0)\amp(\exists \delta_2 = \delta_2(x_0,\eps) \gt 0) (\forall x \in (a,b))\\
 \amp \sqbrac{\ 0\lt |x-x_0| \leq \delta_2 \implies \abs{\frac{f(x)-f(x_0)}{x-x_0}-f'(x_0)} \leq \eps\ }.
@@ -27,7 +27,7 @@
 \begin{equation*}
 \abs{f(x)-f(x_0)} \leq \eps \abs{x-x_0} + \abs{f'(x_0)}|x-x_0|.
 \end{equation*}
-</div>We therefore obtain <a href="" class="xref" data-knowl="./knowl/xref/eq-cts-to-verify.html" title="Equation 7.1">(7.1)</a> on taking<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-eps-delta-cts.html ./knowl/xref/def-differentiable.html ./knowl/xref/eq-cts-to-verify.html">
+</div>We therefore obtain <a href="week-7.html#prop-diff-cts-3-2" class="xref" data-knowl="./knowl/xref/eq-cts-to-verify.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.1">(7.1)</a> on taking<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-eps-delta-cts.html ./knowl/xref/def-differentiable.html ./knowl/xref/eq-cts-to-verify.html">
 \begin{equation*}
 \delta_1(x_0,\eps) := \min\set{\delta_2(x_0,\eps),\frac{\eps}{\eps+\abs{f'(x_0)}}}.
 \end{equation*}

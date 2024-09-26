@@ -55,7 +55,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "https://pretextbook.org/js/lib"
+      "pretext": "_static/pretext/js/lib"
     }
   },
   "startup": {
@@ -67,8 +67,8 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
@@ -76,16 +76,27 @@ window.MathJax = {
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#thm-radius-2-4 { counter-set: thm-radius-2-4 0; }
+#thm-radius-2-4 > li::marker { content: ""counter(thm-radius-2-4,decimal)"."; }
+#thm-radius-2-4 > li { counter-increment: thm-radius-2-4; }
+#prop-alg-cts-3 { counter-set: prop-alg-cts-3 0; }
+#prop-alg-cts-3 > li::marker { content: ""counter(prop-alg-cts-3,decimal)"."; }
+#prop-alg-cts-3 > li { counter-increment: prop-alg-cts-3; }
+#cor-mono-diff-1-4 { counter-set: cor-mono-diff-1-4 0; }
+#cor-mono-diff-1-4 > li::marker { content: ""counter(cor-mono-diff-1-4,decimal)"."; }
+#cor-mono-diff-1-4 > li { counter-increment: cor-mono-diff-1-4; }
+</style>
 </head>
 <body class="pretext article ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -224,27 +235,21 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-10.html#week-10-3" class="internal"><span class="codenumber">10.2</span> <span class="title">Self-test questions for lecture 20</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="workshop-instructions.html" class="internal"><span class="codenumber">A</span> <span class="title">Workshop instructions</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="assessment.html" class="internal"><span class="codenumber">B</span> <span class="title">Assessment</span></a></div></li>
 <li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="study-instructions.html" class="internal"><span class="codenumber">C</span> <span class="title">How to study this module</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="study-instructions.html#thoughts-on-learning" class="internal"><span class="codenumber">C.1</span> <span class="title">Some thoughts on learning mathematics</span></a></div></li></ul>
+<div class="toc-title-box"><a href="module-purpose.html" class="internal"><span class="codenumber">A</span> <span class="title">The purpose of this module</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="module-purpose.html#learning-outcomes" class="internal"><span class="codenumber">A.1</span> <span class="title">Learning outcomes</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="module-purpose.html" class="internal"><span class="codenumber">D</span> <span class="title">The purpose of this module</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="module-purpose.html#learning-outcomes" class="internal"><span class="codenumber">D.1</span> <span class="title">Learning outcomes</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-appendix active"><div class="toc-title-box"><a href="exam-backmatter.html" class="internal"><span class="codenumber">E</span> <span class="title">Exam information sheet</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="pdf-link.html" class="internal"><span class="codenumber">F</span> <span class="title">Questions in pdf format</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="anonymous-questions.html" class="internal"><span class="codenumber">G</span> <span class="title">Anonymous questions form</span></a></div></li>
+<li class="toc-item toc-appendix active"><div class="toc-title-box"><a href="exam-backmatter.html" class="internal"><span class="codenumber">B</span> <span class="title">Exam information sheet</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="pdf-link.html" class="internal"><span class="codenumber">C</span> <span class="title">Questions in pdf format</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="anonymous-questions.html" class="internal"><span class="codenumber">D</span> <span class="title">Anonymous questions form</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="appendix" id="exam-backmatter"><h2 class="heading">
-<span class="type">Appendix</span><span class="space"> </span><span class="codenumber">E</span><span class="space"> </span><span class="title">Exam information sheet</span>
+<span class="type">Appendix</span><span class="space"> </span><span class="codenumber">B</span><span class="space"> </span><span class="title">Exam information sheet</span>
 </h2>
 <div class="para" id="exam-backmatter-2">The following key information will be included in your summer examination paper.</div>
 <div class="para logical" id="exam-backmatter-3">
-<ul class="disc"><li id="exam-backmatter-3-1-1"><div class="para" id="p-derived-exam-backmatter-3-1-1">
-<em class="emphasis">Notation</em><ul class="circle">
+<ul class="disc" id="exam-backmatter-3-1"><li id="exam-backmatter-3-1-1"><div class="para" id="p-derived-exam-backmatter-3-1-1">
+<em class="emphasis">Notation</em><ul class="circle" id="exam-backmatter-3-1-1-2">
 <li id="exam-backmatter-3-1-1-2-1"><div class="para" id="p-derived-exam-backmatter-3-1-1-2-1">"<span class="process-math">\(P \iff Q\)</span>": "the proposition <span class="process-math">\(P\)</span> holds if and only if the proposition <span class="process-math">\(Q\)</span> holds".</div></li>
 <li id="exam-backmatter-3-1-1-2-2"><div class="para" id="p-derived-exam-backmatter-3-1-1-2-2">"<span class="process-math">\(\neg P\)</span>": "the proposition <span class="process-math">\(P\)</span> does not hold".</div></li>
 <li id="exam-backmatter-3-1-1-2-3"><div class="para" id="p-derived-exam-backmatter-3-1-1-2-3">"<span class="process-math">\(P \implies Q\)</span>": "it is not the case that the proposition <span class="process-math">\(P\)</span> holds and the proposition <span class="process-math">\(Q\)</span> does not hold", equivalently <span class="process-math">\(\neg(P\&amp; \neg Q)\text{.}\)</span>
@@ -275,10 +280,10 @@ window.MathJax = {
 <li id="exam-backmatter-3-1-1-2-23"><div class="para" id="p-derived-exam-backmatter-3-1-1-2-23"><span class="process-math">\(\displaystyle[a,b]  := \set{x \in  \R : a \leq x \leq b}\text{.}\)</span></div></li>
 </ul>
 </div></li></ul>
-<ul class="disc"><li id="exam-backmatter-3-2-1"><div class="para" id="p-derived-exam-backmatter-3-2-1">
-<em class="emphasis">Key properties of <span class="process-math">\(\R\)</span></em><ul class="circle">
+<ul class="disc" id="exam-backmatter-3-2"><li id="exam-backmatter-3-2-1"><div class="para" id="p-derived-exam-backmatter-3-2-1">
+<em class="emphasis">Key properties of <span class="process-math">\(\R\)</span></em><ul class="circle" id="exam-backmatter-3-2-1-2">
 <li id="exam-backmatter-3-2-1-2-1"><div class="para" id="p-derived-exam-backmatter-3-2-1-2-1">
-<em class="emphasis">Additive axioms:</em><ul class="square">
+<em class="emphasis">Additive axioms:</em><ul class="square" id="exam-backmatter-3-2-1-2-1-2">
 <li id="exam-backmatter-3-2-1-2-1-2-1"><div class="para" id="p-derived-exam-backmatter-3-2-1-2-1-2-1">Additive closure: <span class="process-math">\((\forall x,y \in \R)[x+y \in \R]\text{.}\)</span>
 </div></li>
 <li id="exam-backmatter-3-2-1-2-1-2-2"><div class="para" id="p-derived-exam-backmatter-3-2-1-2-1-2-2">Additive associativity: <span class="process-math">\((\forall x,y,z \in \R)[(x+y)+z = x+(y+z) \in \R]\text{.}\)</span>
@@ -292,7 +297,7 @@ window.MathJax = {
 </ul>
 </div></li>
 <li id="exam-backmatter-3-2-1-2-2"><div class="para" id="p-derived-exam-backmatter-3-2-1-2-2">
-<em class="emphasis">Multiplicative axioms:</em><ul class="square">
+<em class="emphasis">Multiplicative axioms:</em><ul class="square" id="exam-backmatter-3-2-1-2-2-2">
 <li id="exam-backmatter-3-2-1-2-2-2-1"><div class="para" id="p-derived-exam-backmatter-3-2-1-2-2-2-1">Multiplicative closure: <span class="process-math">\((\forall x, y \in \R)[x\cdot y \in \R]\text{.}\)</span>
 </div></li>
 <li id="exam-backmatter-3-2-1-2-2-2-2"><div class="para" id="p-derived-exam-backmatter-3-2-1-2-2-2-2">Multiplicative associativity: <span class="process-math">\((\forall x,y,z \in \R)[(x\cdot y)\cdot z = x\cdot (y\cdot z) \in \R]\text{.}\)</span>
@@ -306,11 +311,11 @@ window.MathJax = {
 </ul>
 </div></li>
 <li id="exam-backmatter-3-2-1-2-3"><div class="para" id="p-derived-exam-backmatter-3-2-1-2-3">
-<em class="emphasis">Interaction of addition and multiplication:</em><ul class="square"><li id="exam-backmatter-3-2-1-2-3-2-1"><div class="para" id="p-derived-exam-backmatter-3-2-1-2-3-2-1">Distributivity: <span class="process-math">\((\forall x,y,z \in \R)[x\cdot(y+z) = xy + xz]\text{.}\)</span>
+<em class="emphasis">Interaction of addition and multiplication:</em><ul class="square" id="exam-backmatter-3-2-1-2-3-2"><li id="exam-backmatter-3-2-1-2-3-2-1"><div class="para" id="p-derived-exam-backmatter-3-2-1-2-3-2-1">Distributivity: <span class="process-math">\((\forall x,y,z \in \R)[x\cdot(y+z) = xy + xz]\text{.}\)</span>
 </div></li></ul>
 </div></li>
 <li id="exam-backmatter-3-2-1-2-4"><div class="para" id="p-derived-exam-backmatter-3-2-1-2-4">
-<em class="emphasis">Order axioms:</em><ul class="square">
+<em class="emphasis">Order axioms:</em><ul class="square" id="exam-backmatter-3-2-1-2-4-2">
 <li id="exam-backmatter-3-2-1-2-4-2-1"><div class="para" id="p-derived-exam-backmatter-3-2-1-2-4-2-1">Reflexivity: <span class="process-math">\((\forall x \in \R)[x \leq x]\text{.}\)</span>
 </div></li>
 <li id="exam-backmatter-3-2-1-2-4-2-2"><div class="para" id="p-derived-exam-backmatter-3-2-1-2-4-2-2">Anti-symmetry: <span class="process-math">\((\forall x, y \in \R)\sqbrac{(x \leq y\ \&amp;\ y \leq x)\implies x = y}\text{.}\)</span>
@@ -322,7 +327,7 @@ window.MathJax = {
 </ul>
 </div></li>
 <li id="exam-backmatter-3-2-1-2-5"><div class="para" id="p-derived-exam-backmatter-3-2-1-2-5">
-<em class="emphasis">Interaction of order and addition/multiplication:</em><ul class="square">
+<em class="emphasis">Interaction of order and addition/multiplication:</em><ul class="square" id="exam-backmatter-3-2-1-2-5-2">
 <li id="exam-backmatter-3-2-1-2-5-2-1"><div class="para" id="p-derived-exam-backmatter-3-2-1-2-5-2-1">Additive invariance: <span class="process-math">\((\forall x, y, z \in \R)[ x \leq y \implies x+z \leq y + z]\text{.}\)</span>
 </div></li>
 <li id="exam-backmatter-3-2-1-2-5-2-2"><div class="para" id="p-derived-exam-backmatter-3-2-1-2-5-2-2">Non-negative multiplicative invariance:\\ <span class="process-math">\((\forall x, y, z \in \R)[(x \leq y \ \&amp; \ 0 \leq z) \implies xz \leq yz]\text{.}\)</span>
@@ -331,8 +336,8 @@ window.MathJax = {
 </div></li>
 </ul>
 </div></li></ul>
-<ul class="disc"><li id="exam-backmatter-3-3-1"><div class="para" id="p-derived-exam-backmatter-3-3-1">
-<em class="emphasis">Triangle inequalities</em><ul class="circle">
+<ul class="disc" id="exam-backmatter-3-3"><li id="exam-backmatter-3-3-1"><div class="para" id="p-derived-exam-backmatter-3-3-1">
+<em class="emphasis">Triangle inequalities</em><ul class="circle" id="exam-backmatter-3-3-1-2">
 <li id="exam-backmatter-3-3-1-2-1"><div class="para" id="p-derived-exam-backmatter-3-3-1-2-1"><span class="process-math">\((\forall x, y \in \R)[\ |x\pm y| \leq |x| + |y|\ ]\text{.}\)</span></div></li>
 <li id="exam-backmatter-3-3-1-2-2"><div class="para" id="p-derived-exam-backmatter-3-3-1-2-2"><span class="process-math">\((\forall x, y \in \R)[\ |x\pm y| \geq |x| - |y|\ ]\text{.}\)</span></div></li>
 </ul>

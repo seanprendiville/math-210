@@ -55,7 +55,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "https://pretextbook.org/js/lib"
+      "pretext": "_static/pretext/js/lib"
     }
   },
   "startup": {
@@ -67,8 +67,8 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
@@ -76,16 +76,27 @@ window.MathJax = {
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#thm-radius-2-4 { counter-set: thm-radius-2-4 0; }
+#thm-radius-2-4 > li::marker { content: ""counter(thm-radius-2-4,decimal)"."; }
+#thm-radius-2-4 > li { counter-increment: thm-radius-2-4; }
+#prop-alg-cts-3 { counter-set: prop-alg-cts-3 0; }
+#prop-alg-cts-3 > li::marker { content: ""counter(prop-alg-cts-3,decimal)"."; }
+#prop-alg-cts-3 > li { counter-increment: prop-alg-cts-3; }
+#cor-mono-diff-1-4 { counter-set: cor-mono-diff-1-4 0; }
+#cor-mono-diff-1-4 > li::marker { content: ""counter(cor-mono-diff-1-4,decimal)"."; }
+#cor-mono-diff-1-4 > li { counter-increment: cor-mono-diff-1-4; }
+</style>
 </head>
 <body class="pretext article ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -104,7 +115,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="week-9.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="self-test-210.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="workshop-instructions.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb{N}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="week-9.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="self-test-210.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="module-purpose.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
@@ -224,19 +235,13 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="week-10.html#week-10-3" class="internal"><span class="codenumber">10.2</span> <span class="title">Self-test questions for lecture 20</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="workshop-instructions.html" class="internal"><span class="codenumber">A</span> <span class="title">Workshop instructions</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="assessment.html" class="internal"><span class="codenumber">B</span> <span class="title">Assessment</span></a></div></li>
 <li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="study-instructions.html" class="internal"><span class="codenumber">C</span> <span class="title">How to study this module</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="study-instructions.html#thoughts-on-learning" class="internal"><span class="codenumber">C.1</span> <span class="title">Some thoughts on learning mathematics</span></a></div></li></ul>
+<div class="toc-title-box"><a href="module-purpose.html" class="internal"><span class="codenumber">A</span> <span class="title">The purpose of this module</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="module-purpose.html#learning-outcomes" class="internal"><span class="codenumber">A.1</span> <span class="title">Learning outcomes</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="module-purpose.html" class="internal"><span class="codenumber">D</span> <span class="title">The purpose of this module</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="module-purpose.html#learning-outcomes" class="internal"><span class="codenumber">D.1</span> <span class="title">Learning outcomes</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="exam-backmatter.html" class="internal"><span class="codenumber">E</span> <span class="title">Exam information sheet</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="pdf-link.html" class="internal"><span class="codenumber">F</span> <span class="title">Questions in pdf format</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="anonymous-questions.html" class="internal"><span class="codenumber">G</span> <span class="title">Anonymous questions form</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="exam-backmatter.html" class="internal"><span class="codenumber">B</span> <span class="title">Exam information sheet</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="pdf-link.html" class="internal"><span class="codenumber">C</span> <span class="title">Questions in pdf format</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="anonymous-questions.html" class="internal"><span class="codenumber">D</span> <span class="title">Anonymous questions form</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="week-10"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">10</span><span class="space"> </span><span class="title">Week 10</span>
@@ -244,12 +249,12 @@ window.MathJax = {
 <section class="subsection" id="week-10-2"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">10.1</span><span class="space"> </span><span class="title">Self-test questions for lecture 19</span>
 </h3>
-<details id="ex-cts-riemann" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<details id="ex-cts-riemann" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">-</span><span class="space"> </span><span class="codenumber">10.1</span><span class="period">.</span><span class="space"> </span><span class="title">Continuous functions are Riemann integrable.</span>
-</h4></summary><article class="exercise exercise-like">State and prove how a continuous function on a closed interval is Riemann integrable.<div class="solutions"><details id="ex-cts-riemann-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+</h4></summary><article class="exercise exercise-like knowl__content">State and prove how a continuous function on a closed interval is Riemann integrable.<div class="solutions"><details id="ex-cts-riemann-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <article class="proposition theorem-like" id="prop-cts-riemann"><h5 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">10.2</span><span class="period">.</span><span class="space"> </span><span class="title">Continuous functions are Riemann integrable.</span>
-</h5>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a \lt  b\text{.}\)</span> Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a continuous function. Then <span class="process-math">\(f\)</span> is Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span></article><details id="prop-cts-riemann-3" class="hiddenproof born-hidden-knowl"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof">Let us suppose that <span class="process-math">\([a,b] = [0, 1]\text{,}\)</span> the general case being similar. Since <span class="process-math">\(f\)</span> is a continuous function on a closed interval, it is uniformly continuous (<a href="" class="xref" data-knowl="./knowl/xref/thm-unif-cts.html" title="Theorem 6.9: Continuous on closed interval implies uniformly continuous">Theorem 6.9</a>). Hence by definition of uniform continuity (<a href="" class="xref" data-knowl="./knowl/xref/def-unif-cts.html" title="Definition 6.6: Uniformly continuous">Definition 6.6</a>):<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-unif-cts.html ./knowl/xref/def-unif-cts.html">
+</h5>Let <span class="process-math">\(a, b\in \R\)</span> with <span class="process-math">\(a \lt  b\text{.}\)</span> Let <span class="process-math">\(f : [a,b] \to \R\)</span> be a continuous function. Then <span class="process-math">\(f\)</span> is Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span></article><details id="prop-cts-riemann-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof knowl__content">Let us suppose that <span class="process-math">\([a,b] = [0, 1]\text{,}\)</span> the general case being similar. Since <span class="process-math">\(f\)</span> is a continuous function on a closed interval, it is uniformly continuous (<a href="week-6.html#thm-unif-cts" class="xref" data-knowl="./knowl/xref/thm-unif-cts.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.9: Continuous on closed interval implies uniformly continuous">Theorem 6.9</a>). Hence by definition of uniform continuity (<a href="week-6.html#def-unif-cts" class="xref" data-knowl="./knowl/xref/def-unif-cts.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.6: Uniformly continuous">Definition 6.6</a>):<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-unif-cts.html ./knowl/xref/def-unif-cts.html">
 \begin{equation*}
 (\forall \eps \gt 0)(\exists \delta = \delta(\eps) \gt 0)(\forall x,y\in [a,b]) 
 [|x-y| \leq \delta \implies |f(x)-f(y)| \leq \eps].
@@ -267,17 +272,17 @@ window.MathJax = {
 0 \amp \leq U(f;[0,1])-L(f;[0,1])\\
 \amp \leq U\brac{f;\tfrac{0}{N}, \tfrac{1}{N} , \dots , \tfrac{N}{N}} - L\brac{f;\tfrac{0}{N}, \tfrac{1}{N} , \dots , \tfrac{N}{N}} \leq  \sum_{n=1}^N \tfrac{\eps}{N} = \eps.
 \end{align*}
-</div>Letting <span class="process-math">\(\eps \to 0\text{,}\)</span> it follows that <span class="process-math">\(U(f;[0,1]) = L(f;[0,1])\)</span> by the inequality rule for function limits.</article></details> <details id="eg-non-int" class="example example-like born-hidden-knowl"><summary><h5 class="heading">
+</div>Letting <span class="process-math">\(\eps \to 0\text{,}\)</span> it follows that <span class="process-math">\(U(f;[0,1]) = L(f;[0,1])\)</span> by the inequality rule for function limits.</article></details> <details id="eg-non-int" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.3</span><span class="period">.</span>
-</h5></summary><article class="example example-like"><div class="para" id="eg-non-int-1">The function <span class="process-math">\(1_{\Q \cap [0,1]}\)</span> is not Riemann integrable on <span class="process-math">\([0,1]\text{.}\)</span>
+</h5></summary><article class="example example-like knowl__content"><div class="para" id="eg-non-int-1">The function <span class="process-math">\(1_{\Q \cap [0,1]}\)</span> is not Riemann integrable on <span class="process-math">\([0,1]\text{.}\)</span>
 </div> <div class="para logical" id="eg-non-int-2">
-<div class="para">As in <a href="" class="xref" data-knowl="./knowl/xref/eg-dis-cont-everywhere.html" title="Example 5.26: A function discontinuous everywhere">Example 5.26</a>, the key observation in establishing our claim is to note that every real number <span class="process-math">\(x_0\)</span> has a sequence of rationals <span class="process-math">\(q_n \in \Q\)</span> such that <span class="process-math">\(q_n \to x_0\text{.}\)</span> For instance, one may take</div>
+<div class="para">As in <a href="week-5.html#eg-dis-cont-everywhere" class="xref" data-knowl="./knowl/xref/eg-dis-cont-everywhere.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.26: A function discontinuous everywhere">Example 5.26</a>, the key observation in establishing our claim is to note that every real number <span class="process-math">\(x_0\)</span> has a sequence of rationals <span class="process-math">\(q_n \in \Q\)</span> such that <span class="process-math">\(q_n \to x_0\text{.}\)</span> For instance, one may take</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg-dis-cont-everywhere.html ./knowl/xref/prop-sandwich.html">
 \begin{equation*}
 q_n := \frac{\floor{nx_0}}{n} \in \left(x_0 -\frac{1}{n}, x_0\right]\text{,}
 \end{equation*}
 </div>
-<div class="para">and employ the two-sided sandwich rule (<a href="" class="xref" data-knowl="./knowl/xref/prop-sandwich.html" title="Proposition 2.10: Sandwich rule">Proposition 2.10</a>).</div>
+<div class="para">and employ the two-sided sandwich rule (<a href="week-2.html#prop-sandwich" class="xref" data-knowl="./knowl/xref/prop-sandwich.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 2.10: Sandwich rule">Proposition 2.10</a>).</div>
 </div> <div class="para logical" id="eg-non-int-3">
 <div class="para">One consequence of this observation is that any non-empty open interval contains a rational number, since one may approximate the mid-point by a rational. It follows that if <span class="process-math">\(0 \leq x \lt  y \leq 1\)</span> then  <span class="process-math">\((x,y)\)</span> contains a rational <span class="process-math">\(q\in \Q\)</span> and <span class="process-math">\((x+\sqrt{2},y+\sqrt{2})\)</span> also contains a rational <span class="process-math">\(\tilde q \in \Q\text{.}\)</span> Hence <span class="process-math">\((x,y)\)</span> contains both a rational <span class="process-math">\(q\)</span> and an irrational <span class="process-math">\(q-\sqrt{2}\text{.}\)</span> It follows that</div>
 <div class="displaymath process-math">
@@ -299,16 +304,16 @@ L(f;[0,1]) = 0.
 </div>
 <div class="para">Therefore the function <span class="process-math">\(1_{\Q\cap [0,1]}\)</span> is not Riemann integrable.</div>
 </div></article></details>
-</div></details></div></article></details><details id="week-10-2-3" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+</div></details></div></article></details><details id="week-10-2-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">-</span><span class="space"> </span><span class="codenumber">10.4</span><span class="period">.</span><span class="space"> </span><span class="title">Integral of derivative fundamental theorem of calculus.</span>
-</h4></summary><article class="exercise exercise-like">State and prove the "integral of derivative" version of the fundamental theorem of calculus.<div class="solutions"><details id="week-10-2-3-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+</h4></summary><article class="exercise exercise-like knowl__content">State and prove the "integral of derivative" version of the fundamental theorem of calculus.<div class="solutions"><details id="week-10-2-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <article class="theorem theorem-like" id="thm-ftc-int-of-deriv"><h5 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.5</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental theorem of calculus - integral of derivative.</span>
 </h5>Let <span class="process-math">\(f : (a,b) \to \R\text{.}\)</span> Suppose that <span class="process-math">\(f\)</span> is differentiable on <span class="process-math">\((a,b)\text{.}\)</span> Given <span class="process-math">\(x,y \in (a,b)\)</span> with <span class="process-math">\(x \lt  y\text{,}\)</span> suppose that <span class="process-math">\(f'\)</span> is Riemann integrable on <span class="process-math">\([x,y]\text{.}\)</span> Then<div class="displaymath process-math">
 \begin{equation*}
 \int_x^y f' = f(y) - f(x). 
 \end{equation*}
-</div></article><details id="thm-ftc-int-of-deriv-3" class="hiddenproof born-hidden-knowl"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof">Let <span class="process-math">\(x = x_0 \lt  \dots \lt  x_N = y\)</span> denote a subdivision of <span class="process-math">\([x,y]\text{.}\)</span> For each <span class="process-math">\(n\text{,}\)</span> the mean value theorem (<a href="" class="xref" data-knowl="./knowl/xref/thm-mvt.html" title="Theorem 8.7: Mean value theorem">Theorem 8.7</a>) gives <span class="process-math">\(y_n \in (x_{n-1}, x_n)\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-mvt.html ./knowl/xref/def-up-low-riemann-integral.html">
+</div></article><details id="thm-ftc-int-of-deriv-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof knowl__content">Let <span class="process-math">\(x = x_0 \lt  \dots \lt  x_N = y\)</span> denote a subdivision of <span class="process-math">\([x,y]\text{.}\)</span> For each <span class="process-math">\(n\text{,}\)</span> the mean value theorem (<a href="week-8.html#thm-mvt" class="xref" data-knowl="./knowl/xref/thm-mvt.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 8.7: Mean value theorem">Theorem 8.7</a>) gives <span class="process-math">\(y_n \in (x_{n-1}, x_n)\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-mvt.html ./knowl/xref/def-up-low-riemann-integral.html">
 \begin{equation*}
 f(x_n) - f(x_{n-1})  = f'(y_n)(x_n-x_{n-1}).
 \end{equation*}
@@ -320,17 +325,17 @@ f(y) - f(x) = \sum_{n=1}^N \sqbrac{f(x_n)-f(x_{n-1})} = \sum_{n=1}^N (x_n-x_{n-1
 \begin{equation*}
 L(f';x_0, \dots, x_N) \leq f(y)-f(x) \leq U(f';x_0, \dots, x_N).
 \end{equation*}
-</div>Since this holds for all subdivisions <span class="process-math">\(x = x_0 \lt  \dots \lt  x_N = y\text{,}\)</span> it follows from the definition of the upper and lower Riemann integrals (<a href="" class="xref" data-knowl="./knowl/xref/def-up-low-riemann-integral.html" title="Definition 9.4: Upper/lower Riemann integral">Definition 9.4</a>) that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-mvt.html ./knowl/xref/def-up-low-riemann-integral.html">
+</div>Since this holds for all subdivisions <span class="process-math">\(x = x_0 \lt  \dots \lt  x_N = y\text{,}\)</span> it follows from the definition of the upper and lower Riemann integrals (<a href="week-9.html#def-up-low-riemann-integral" class="xref" data-knowl="./knowl/xref/def-up-low-riemann-integral.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 9.4: Upper/lower Riemann integral">Definition 9.4</a>) that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-mvt.html ./knowl/xref/def-up-low-riemann-integral.html">
 \begin{equation*}
 L(f'; [a,b]) \leq f(y)-f(x) \leq U(f';[a,b]).
 \end{equation*}
 </div>Since <span class="process-math">\(f'\)</span> is Riemann integrable on <span class="process-math">\([x,y]\text{,}\)</span> we have <span class="process-math">\(L(f';[x,y]) = U(f';[x,y]) = \int_x^y f'\text{.}\)</span> We deduce that <span class="process-math">\(f(y)-f(x) = \int_x^y f'\text{.}\)</span></article></details>
-</div></details></div></article></details><details id="week-10-2-4" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+</div></details></div></article></details><details id="week-10-2-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">-</span><span class="space"> </span><span class="codenumber">10.6</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative of integral fundamental theorem of calculus.</span>
-</h4></summary><article class="exercise exercise-like">State and prove the "derivative of integral" version of the fundamental theorem of calculus.<div class="solutions"><details id="week-10-2-4-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+</h4></summary><article class="exercise exercise-like knowl__content">State and prove the "derivative of integral" version of the fundamental theorem of calculus.<div class="solutions"><details id="week-10-2-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <article class="theorem theorem-like" id="thm-ftc-deriv-of-int"><h5 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.7</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental theorem of calculus - derivative of integral.</span>
-</h5>Let <span class="process-math">\(a, b \in \R\)</span> with <span class="process-math">\(a \lt  b\text{.}\)</span> Let <span class="process-math">\(f : [a,b] \to \R\)</span> be Riemann integrable. Define the function <span class="process-math">\(F : [a,b] \to \R\)</span> at <span class="process-math">\(x \in [a,b]\)</span> by<a class="xref" id="thm-ftc-deriv-of-int-2-6" href="" data-knowl="./knowl/fn/thm-ftc-deriv-of-int-2-6.html" title="Footnote 10.1"><sup> 1 </sup></a><div class="displaymath process-math">
+</h5>Let <span class="process-math">\(a, b \in \R\)</span> with <span class="process-math">\(a \lt  b\text{.}\)</span> Let <span class="process-math">\(f : [a,b] \to \R\)</span> be Riemann integrable. Define the function <span class="process-math">\(F : [a,b] \to \R\)</span> at <span class="process-math">\(x \in [a,b]\)</span> by<details class="ptx-footnote" aria-live="polite" id="thm-ftc-deriv-of-int-2-6"><summary class="ptx-footnote__number" title="Footnote 10.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="thm-ftc-deriv-of-int-2-6">Here we interpret <span class="process-math">\(\int_a^a f\)</span> as 0.</div></details><div class="displaymath process-math">
 \begin{equation*}
 F(x) := \int_a^x f.
 \end{equation*}
@@ -338,8 +343,8 @@ F(x) := \int_a^x f.
 \begin{equation*}
 F'(x_0) = f(x_0).
 \end{equation*}
-</div></article><details id="thm-ftc-deriv-of-int-3" class="hiddenproof born-hidden-knowl"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof"><div class="para logical" id="thm-ftc-deriv-of-int-3-1">
-<div class="para">For <span class="process-math">\(x,y \in [a,b]\)</span> with <span class="process-math">\(x \lt  y\text{,}\)</span> the interval additivity property (<a href="" class="xref" data-knowl="./knowl/xref/prop-int-sub.html" title="Proposition 9.16">Proposition 9.16</a>) gives that</div>
+</div></article><details id="thm-ftc-deriv-of-int-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-ftc-deriv-of-int-3-1">
+<div class="para">For <span class="process-math">\(x,y \in [a,b]\)</span> with <span class="process-math">\(x \lt  y\text{,}\)</span> the interval additivity property (<a href="week-9.html#prop-int-sub" class="xref" data-knowl="./knowl/xref/prop-int-sub.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 9.16">Proposition 9.16</a>) gives that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-int-sub.html ./knowl/xref/cor-up-low-finite.html ./knowl/xref/def-unif-cts.html">
 \begin{equation*}
 \abs{\int_a^x f - \int_a^{y} f} = \abs{\int_x^y f}.
@@ -351,15 +356,15 @@ F'(x_0) = f(x_0).
 -M \leq \inf_{[a,b]}f \leq \sup_{[a,b]} f\leq M\text{.}
 \end{equation*}
 </div>
-<div class="para">Hence trivial bounds for the integral <a href="" class="xref" data-knowl="./knowl/xref/cor-up-low-finite.html" title="Equation 9.1">(9.1)</a> give that</div>
+<div class="para">Hence trivial bounds for the integral <a href="week-9.html#def-riemann-sum-15" class="xref" data-knowl="./knowl/xref/cor-up-low-finite.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.1">(9.1)</a> give that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-int-sub.html ./knowl/xref/cor-up-low-finite.html ./knowl/xref/def-unif-cts.html">
 \begin{equation*}
 \abs{F(x)-F(y)} = \abs{\int_x^y f}  \leq (y-x)M.
 \end{equation*}
 </div>
-<div class="para">It follows that <span class="process-math">\(F\)</span> is uniformly continuous on taking <span class="process-math">\(\delta(\eps):= \eps/M\)</span> in the definition of uniform continuity (<a href="" class="xref" data-knowl="./knowl/xref/def-unif-cts.html" title="Definition 6.6: Uniformly continuous">Definition 6.6</a>).</div>
+<div class="para">It follows that <span class="process-math">\(F\)</span> is uniformly continuous on taking <span class="process-math">\(\delta(\eps):= \eps/M\)</span> in the definition of uniform continuity (<a href="week-6.html#def-unif-cts" class="xref" data-knowl="./knowl/xref/def-unif-cts.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.6: Uniformly continuous">Definition 6.6</a>).</div>
 </div> <div class="para logical" id="thm-ftc-deriv-of-int-3-2">
-<div class="para">Next, suppose that <span class="process-math">\(f \)</span> is continuous at <span class="process-math">\(x_0 \in (a,b)\text{.}\)</span> Letting <span class="process-math">\(\eps \gt 0\text{,}\)</span> there exists <span class="process-math">\(\delta = \delta(\eps) \gt 0\)</span> such that if <span class="process-math">\(x \in [a,b]\)</span> and <span class="process-math">\(|x-x_0| \leq \delta\)</span> then <span class="process-math">\(|f(x)-f(x_0)| \leq \eps\text{.}\)</span> It follows that if <span class="process-math">\(x\in [a,b]\)</span> with <span class="process-math">\(x_0 \lt x\lt x_0+\delta\)</span> then by linearity of integration (<a href="" class="xref" data-knowl="./knowl/xref/thm-int-add.html" title="Theorem 9.13: Linearity of integration">Theorem 9.13</a>) we have</div>
+<div class="para">Next, suppose that <span class="process-math">\(f \)</span> is continuous at <span class="process-math">\(x_0 \in (a,b)\text{.}\)</span> Letting <span class="process-math">\(\eps \gt 0\text{,}\)</span> there exists <span class="process-math">\(\delta = \delta(\eps) \gt 0\)</span> such that if <span class="process-math">\(x \in [a,b]\)</span> and <span class="process-math">\(|x-x_0| \leq \delta\)</span> then <span class="process-math">\(|f(x)-f(x_0)| \leq \eps\text{.}\)</span> It follows that if <span class="process-math">\(x\in [a,b]\)</span> with <span class="process-math">\(x_0 \lt x\lt x_0+\delta\)</span> then by linearity of integration (<a href="week-9.html#thm-int-add" class="xref" data-knowl="./knowl/xref/thm-int-add.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.13: Linearity of integration">Theorem 9.13</a>) we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-int-add.html ./knowl/xref/def-differentiable.html" id="thm-ftc-deriv-of-int-3-2-11">
 \begin{align*}
 \abs{\frac{F(x) - F(x_0)}{x-x_0} - f(x_0)}\amp = \recip{x-x_0}\abs{\int_{x_0}^{x} \brac{f(t)-f(x_0)}\intd t }\\
@@ -372,42 +377,42 @@ F'(x_0) = f(x_0).
 \abs{\frac{F(x) - F(x_0)}{x-x_0} - f(x_0)} = \recip{x_0-x}\abs{\int_{x}^{x_0} \brac{f(t)-f(x_0)}\intd t} \leq \eps.
 \end{equation*}
 </div>
-<div class="para">Hence by the definition of differentiability (<a href="" class="xref" data-knowl="./knowl/xref/def-differentiable.html" title="Definition 7.2: Differentiable">Definition 7.2</a>) we have <span class="process-math">\(F'(x_0) = f(x_0)\text{.}\)</span>
+<div class="para">Hence by the definition of differentiability (<a href="week-7.html#def-differentiable" class="xref" data-knowl="./knowl/xref/def-differentiable.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2: Differentiable">Definition 7.2</a>) we have <span class="process-math">\(F'(x_0) = f(x_0)\text{.}\)</span>
 </div>
 </div></article></details>
 </div></details></div></article></details></section><section class="subsection" id="week-10-3"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">10.2</span><span class="space"> </span><span class="title">Self-test questions for lecture 20</span>
 </h3>
-<details id="week-10-3-2" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<details id="week-10-3-2" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">-</span><span class="space"> </span><span class="codenumber">10.8</span><span class="period">.</span><span class="space"> </span><span class="title">Uniform convergence.</span>
-</h4></summary><article class="exercise exercise-like"><article class="task exercise-like" id="week-10-3-2-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>Define what it means for a sequence of functions to converge pointwise.<div class="solutions"><details id="week-10-3-2-2-2" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><article class="definition definition-like" id="def-ptws-conv"><h6 class="heading">
+</h4></summary><article class="exercise exercise-like knowl__content"><article class="task exercise-like" id="week-10-3-2-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>Define what it means for a sequence of functions to converge pointwise.<div class="solutions"><details id="week-10-3-2-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><article class="definition definition-like" id="def-ptws-conv"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.9</span><span class="period">.</span><span class="space"> </span><span class="title">Pointwise convergence.</span>
 </h6> For each <span class="process-math">\(n \in \N\)</span> let <span class="process-math">\(f_n:S \to \R\)</span> be a real-valued function with domain <span class="process-math">\(S\)</span> (not necessarily a set of real numbers). Let <span class="process-math">\(f : S \to \R\text{.}\)</span> We say that the sequence of functions <span class="process-math">\((f_n)_{n=1}^\infty\)</span> <em class="emphasis">converges pointwise to <span class="process-math">\(f\)</span> on <span class="process-math">\(S\)</span></em> if<div class="displaymath process-math">
 \begin{equation*}
 (\forall x \in S)\sqbrac{\lim_{n\to \infty} f_n(x) = f(x)}.
 \end{equation*}
-</div></article></div></details></div></article><article class="task exercise-like" id="week-10-3-2-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>Define what it means for a sequence of functions to converge uniformly.<div class="solutions"><details id="week-10-3-2-3-2" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><article class="definition definition-like" id="def-unif-conv"><h6 class="heading">
+</div></article></div></details></div></article><article class="task exercise-like" id="week-10-3-2-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>Define what it means for a sequence of functions to converge uniformly.<div class="solutions"><details id="week-10-3-2-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><article class="definition definition-like" id="def-unif-conv"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.10</span><span class="period">.</span><span class="space"> </span><span class="title">Uniform convergence.</span>
 </h6> For each <span class="process-math">\(n \in \N\)</span> let <span class="process-math">\(f_n:S \to \R\)</span> be a real-valued function with domain <span class="process-math">\(S\)</span> (not necessarily a set of real numbers). Let <span class="process-math">\(f : S \to \R\text{.}\)</span> We say that the sequence of functions <span class="process-math">\((f_n)_{n=1}^\infty\)</span> <em class="emphasis">converges uniformly to <span class="process-math">\(f\)</span> on <span class="process-math">\(S\)</span></em> if<div class="displaymath process-math">
 \begin{equation*}
 \lim_{n\to \infty} \sup_{S}| f-f_n| = 0.
 \end{equation*}
-</div></article></div></details></div></article><article class="task exercise-like" id="week-10-3-2-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>State and prove how uniform convergence implies pointwise convergence.<div class="solutions"><details id="week-10-3-2-4-2" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+</div></article></div></details></div></article><article class="task exercise-like" id="week-10-3-2-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>State and prove how uniform convergence implies pointwise convergence.<div class="solutions"><details id="week-10-3-2-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <article class="proposition theorem-like" id="week-10-3-2-4-2-1"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">10.11</span><span class="period">.</span><span class="space"> </span><span class="title">Uniform convergence implies pointwise convergence.</span>
-</h6>Suppose that the <span class="process-math">\(f_n\)</span> converge uniformly to <span class="process-math">\(f\)</span> on <span class="process-math">\(S\text{.}\)</span> Then the <span class="process-math">\(f_n\)</span> converge pointwise to <span class="process-math">\(f\)</span> on <span class="process-math">\(S\text{.}\)</span></article><details id="week-10-3-2-4-2-1-3" class="hiddenproof born-hidden-knowl"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">Fix <span class="process-math">\(x \in S\text{.}\)</span> Then<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-sandwich.html">
+</h6>Suppose that the <span class="process-math">\(f_n\)</span> converge uniformly to <span class="process-math">\(f\)</span> on <span class="process-math">\(S\text{.}\)</span> Then the <span class="process-math">\(f_n\)</span> converge pointwise to <span class="process-math">\(f\)</span> on <span class="process-math">\(S\text{.}\)</span></article><details id="week-10-3-2-4-2-1-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof knowl__content">Fix <span class="process-math">\(x \in S\text{.}\)</span> Then<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-sandwich.html">
 \begin{equation*}
 |f_n(x) - f(x)| \leq \sup_{S} |f_n-f| \to 0 \quad \text{as} \quad n \to \infty.
 \end{equation*}
-</div>Hence by the sandwich rule (<a href="" class="xref" data-knowl="./knowl/xref/cor-sandwich.html" title="Proposition 3.6: One-sided sandwich">Proposition 3.6</a>) we have <span class="process-math">\(f_n(x) \to f(x)\)</span> as <span class="process-math">\(n \to \infty\text{.}\)</span></article></details>
-</div></details></div></article><article class="task exercise-like" id="week-10-3-2-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>Give an example to show that pointwise convergence does not necessarily imply uniform convergence.<div class="solutions"><details id="week-10-3-2-5-2" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
-<details id="week-10-3-2-5-2-1" class="example example-like born-hidden-knowl"><summary><h6 class="heading">
+</div>Hence by the sandwich rule (<a href="week-3.html#cor-sandwich" class="xref" data-knowl="./knowl/xref/cor-sandwich.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.6: One-sided sandwich">Proposition 3.6</a>) we have <span class="process-math">\(f_n(x) \to f(x)\)</span> as <span class="process-math">\(n \to \infty\text{.}\)</span></article></details>
+</div></details></div></article><article class="task exercise-like" id="week-10-3-2-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>Give an example to show that pointwise convergence does not necessarily imply uniform convergence.<div class="solutions"><details id="week-10-3-2-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<details id="week-10-3-2-5-2-1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.12</span><span class="period">.</span><span class="space"> </span><span class="title">Pointwise convergence does not imply uniform convergence.</span>
-</h6></summary><article class="example example-like"> Define <span class="process-math">\(f_n : (0, 1) \to \R\)</span> by<div class="displaymath process-math">
+</h6></summary><article class="example example-like knowl__content"> Define <span class="process-math">\(f_n : (0, 1) \to \R\)</span> by<div class="displaymath process-math">
 \begin{equation*}
 f_n(x) = 1_{[\frac{1}{n}, 1)}.
 \end{equation*}
-</div>Then the <span class="process-math">\(f_n\)</span> converge pointwise to <span class="process-math">\(1_{(0,1)}\text{,}\)</span> but not uniformly.</article></details> <details id="week-10-3-2-5-2-2" class="hiddenproof born-hidden-knowl"><summary><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof">Fix <span class="process-math">\(x \in (0,1)\text{.}\)</span> Setting <span class="process-math">\(N = N(x) := \ceil{1/x}\text{,}\)</span> if <span class="process-math">\(n \geq N\)</span> then <span class="process-math">\(1/n \leq x\)</span> so<div class="displaymath process-math">
+</div>Then the <span class="process-math">\(f_n\)</span> converge pointwise to <span class="process-math">\(1_{(0,1)}\text{,}\)</span> but not uniformly.</article></details> <details id="week-10-3-2-5-2-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></summary><article class="hiddenproof knowl__content">Fix <span class="process-math">\(x \in (0,1)\text{.}\)</span> Setting <span class="process-math">\(N = N(x) := \ceil{1/x}\text{,}\)</span> if <span class="process-math">\(n \geq N\)</span> then <span class="process-math">\(1/n \leq x\)</span> so<div class="displaymath process-math">
 \begin{equation*}
 f_n(x) = 1 = 1_{(0,1)}(x).
 \end{equation*}
@@ -416,16 +421,16 @@ f_n(x) = 1 = 1_{(0,1)}(x).
 \sup_{(0,1)} |f_n-1_{(0,1)}| = 1.
 \end{equation*}
 </div>This supremum does not tend to 0 as <span class="process-math">\(n \to \infty\text{.}\)</span></article></details>
-</div></details></div></article></article></details><details id="week-10-3-3" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+</div></details></div></article></article></details><details id="week-10-3-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">-</span><span class="space"> </span><span class="codenumber">10.13</span><span class="period">.</span><span class="space"> </span><span class="title">Riemann integrability is preserved under uniform convergence.</span>
-</h4></summary><article class="exercise exercise-like">State and prove how Riemann integrability is preserved under uniform convergence.<div class="solutions"><details id="week-10-3-3-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+</h4></summary><article class="exercise exercise-like knowl__content">State and prove how Riemann integrability is preserved under uniform convergence.<div class="solutions"><details id="week-10-3-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <article class="proposition theorem-like" id="week-10-3-3-3-1"><h5 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">10.14</span><span class="period">.</span><span class="space"> </span><span class="title">Integrability is preserved under uniform convergence.</span>
 </h5>Let <span class="process-math">\(f, f_1, f_2, \dots:[a,b] \to \R\text{.}\)</span> Suppose that the <span class="process-math">\(f_n\)</span> converge uniformly to <span class="process-math">\(f\)</span> on <span class="process-math">\([a,b]\text{.}\)</span> Suppose that each <span class="process-math">\(f_n\)</span> is Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span> Then <span class="process-math">\(f\)</span> is Riemann integrable on <span class="process-math">\([a,b]\text{.}\)</span> Furthermore<div class="displaymath process-math">
 \begin{equation*}
 \int_a^b f = \lim_{n\to \infty} \int_a^b f_n.
 \end{equation*}
-</div></article><details id="week-10-3-3-3-1-3" class="hiddenproof born-hidden-knowl"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof">Let <span class="process-math">\(\eps \gt 0\text{.}\)</span> By uniform convergence, there exists <span class="process-math">\(N \in \N\)</span> such that for all <span class="process-math">\(n \geq N\)</span> and all <span class="process-math">\(x \in [a,b]\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-sandwich.html ./knowl/xref/prop-sandwich.html">
+</div></article><details id="week-10-3-3-3-1-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof knowl__content">Let <span class="process-math">\(\eps \gt 0\text{.}\)</span> By uniform convergence, there exists <span class="process-math">\(N \in \N\)</span> such that for all <span class="process-math">\(n \geq N\)</span> and all <span class="process-math">\(x \in [a,b]\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-sandwich.html ./knowl/xref/prop-sandwich.html">
 \begin{equation*}
 f_n(x)-\eps \leq f(x) \leq f_n(x) + \eps.
 \end{equation*}
@@ -434,13 +439,13 @@ f_n(x)-\eps \leq f(x) \leq f_n(x) + \eps.
 \int_a^bf_n-\eps(b-a) = \int_a^b(f_n-\eps) \leq L(f;[a,b]) \leq U(f; \amp [a,b]) \leq \int_a^b(f_n+\eps)\\
 \amp = \int_a^bf_n+\eps(b-a) .
 \end{align*}
-</div>Hence by two applications of the sandwich rule (<a href="" class="xref" data-knowl="./knowl/xref/prop-sandwich.html" title="Proposition 2.10: Sandwich rule">Proposition 2.10</a> and <a href="" class="xref" data-knowl="./knowl/xref/prop-sandwich.html" title="Proposition 2.10: Sandwich rule">Proposition 2.10</a>) we deduce that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-sandwich.html ./knowl/xref/prop-sandwich.html">
+</div>Hence by two applications of the sandwich rule (<a href="week-2.html#prop-sandwich" class="xref" data-knowl="./knowl/xref/prop-sandwich.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 2.10: Sandwich rule">Proposition 2.10</a> and <a href="week-2.html#prop-sandwich" class="xref" data-knowl="./knowl/xref/prop-sandwich.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 2.10: Sandwich rule">Proposition 2.10</a>) we deduce that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-sandwich.html ./knowl/xref/prop-sandwich.html">
 \begin{equation*}
 U(f;[a,b]) \leq \lim_{n \to \infty} \int_a^b f_n \leq L(f;[a,b]).
 \end{equation*}
-</div>The claimed result follows.</article></details> <details id="week-10-3-3-3-2" class="example example-like born-hidden-knowl"><summary><h5 class="heading">
+</div>The claimed result follows.</article></details> <details id="week-10-3-3-3-2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.15</span><span class="period">.</span><span class="space"> </span><span class="title">Pointwise convergence does not imply convergence of integrals.</span>
-</h5></summary><article class="example example-like"> Define <span class="process-math">\(f_n : [0, 1] \to \R\)</span> by<div class="displaymath process-math">
+</h5></summary><article class="example example-like knowl__content"> Define <span class="process-math">\(f_n : [0, 1] \to \R\)</span> by<div class="displaymath process-math">
 \begin{equation*}
 f_n(x) = n1_{(0,\frac{1}{n})}.
 \end{equation*}
@@ -448,7 +453,7 @@ f_n(x) = n1_{(0,\frac{1}{n})}.
 \begin{equation*}
 \lim_{n\to \infty}\int_0^1 f_n \neq \int_0^1\brac{\lim_{n\to\infty} f_n(x)} \intd x
 \end{equation*}
-</div></article></details> <details id="week-10-3-3-3-3" class="hiddenproof born-hidden-knowl"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof"><div class="para" id="week-10-3-3-3-3-1">Fix <span class="process-math">\(x \in (0,1]\text{.}\)</span> Taking <span class="process-math">\(N=N(x) =1/x\text{,}\)</span> if <span class="process-math">\(n \geq N\)</span> then <span class="process-math">\(1/n \leq x\)</span> so <span class="process-math">\(f_n(x) = 0
+</div></article></details> <details id="week-10-3-3-3-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para" id="week-10-3-3-3-3-1">Fix <span class="process-math">\(x \in (0,1]\text{.}\)</span> Taking <span class="process-math">\(N=N(x) =1/x\text{,}\)</span> if <span class="process-math">\(n \geq N\)</span> then <span class="process-math">\(1/n \leq x\)</span> so <span class="process-math">\(f_n(x) = 0
 \text{.}\)</span> Thus <span class="process-math">\(f_n(x) \to 0\)</span> on <span class="process-math">\([0,1]\)</span> (checking convergence at the endpoint <span class="process-math">\(x=0\)</span> is trivial).</div> <div class="para logical" id="week-10-3-3-3-3-2">
 <div class="para">By evaluating lower/upper Riemann sums, one can check that</div>
 <div class="displaymath process-math">
@@ -463,12 +468,12 @@ f_n(x) = n1_{(0,\frac{1}{n})}.
 \end{equation*}
 </div>
 </div></article></details>
-</div></details></div></article></details><details id="week-10-3-4" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+</div></details></div></article></details><details id="week-10-3-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">-</span><span class="space"> </span><span class="codenumber">10.16</span><span class="period">.</span><span class="space"> </span><span class="title">Continuity is preserved under uniform convergence.</span>
-</h4></summary><article class="exercise exercise-like">State how continuity is preserved under uniform convergence (the proof is non-examinable).<div class="solutions"><details id="week-10-3-4-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+</h4></summary><article class="exercise exercise-like knowl__content">State how continuity is preserved under uniform convergence (the proof is non-examinable).<div class="solutions"><details id="week-10-3-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <article class="proposition theorem-like" id="week-10-3-4-3-1"><h5 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">10.17</span><span class="period">.</span><span class="space"> </span><span class="title">Continuity is preserved under uniform convergence.</span>
-</h5>Let <span class="process-math">\(f, f_1, f_2, \dots:D \to \R\)</span> be real-valued functions on a real domain <span class="process-math">\(D \subset \R\text{.}\)</span> Suppose that the <span class="process-math">\(f_n\)</span> converge uniformly to <span class="process-math">\(f\)</span> on <span class="process-math">\(D\text{.}\)</span> Suppose that each <span class="process-math">\(f_n\)</span> is continuous at  <span class="process-math">\(x_0 \in D\text{.}\)</span> Then <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0\text{.}\)</span></article><details id="week-10-3-4-3-1-3" class="hiddenproof born-hidden-knowl"><summary><h5 class="heading"><span class="title">Proof (non-examinable).</span></h5></summary><article class="hiddenproof"> To show that <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0\)</span> it suffices to establish that<div class="displaymath process-math">
+</h5>Let <span class="process-math">\(f, f_1, f_2, \dots:D \to \R\)</span> be real-valued functions on a real domain <span class="process-math">\(D \subset \R\text{.}\)</span> Suppose that the <span class="process-math">\(f_n\)</span> converge uniformly to <span class="process-math">\(f\)</span> on <span class="process-math">\(D\text{.}\)</span> Suppose that each <span class="process-math">\(f_n\)</span> is continuous at  <span class="process-math">\(x_0 \in D\text{.}\)</span> Then <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0\text{.}\)</span></article><details id="week-10-3-4-3-1-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="title">Proof (non-examinable).</span></h5></summary><article class="hiddenproof knowl__content"> To show that <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x_0\)</span> it suffices to establish that<div class="displaymath process-math">
 \begin{equation*}
 (\forall \eps \gt 0)(\exists \delta= \delta(\eps) \gt 0)(\forall x \in D)[|x-x_0|\leq \delta \implies |f(x)-f(x_0)| \leq \eps].
 \end{equation*}
@@ -485,7 +490,7 @@ f_n(x) = n1_{(0,\frac{1}{n})}.
 </div></article></details>
 </div></details></div></article></details></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="week-9.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="workshop-instructions.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="week-9.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="module-purpose.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

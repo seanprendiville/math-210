@@ -17,7 +17,7 @@
 \begin{equation*}
 (g\circ f)'(x_0) = g'\bigbrac{f(x_0)} \cdot f'(x_0).
 \end{equation*}
-</div></article><details class="hiddenproof born-hidden-knowl"><summary><h5 class="heading"><span class="title">Proof in the case that <span class="process-math">\(f\)</span> is injective.</span></h5></summary><article class="hiddenproof"> Let <span class="process-math">\((a_n)_{n=1}^\infty\)</span> be a sequence in <span class="process-math">\((a,b) \setminus\set{x_0}\)</span> with <span class="process-math">\(a_n \to x_0\text{.}\)</span> We wish to prove that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-diff-cts.html ./knowl/xref/prop-mult-rule.html">
+</div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="title">Proof in the case that <span class="process-math">\(f\)</span> is injective.</span></h5></summary><article class="hiddenproof knowl__content"> Let <span class="process-math">\((a_n)_{n=1}^\infty\)</span> be a sequence in <span class="process-math">\((a,b) \setminus\set{x_0}\)</span> with <span class="process-math">\(a_n \to x_0\text{.}\)</span> We wish to prove that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-diff-cts.html ./knowl/xref/prop-mult-rule.html">
 \begin{equation*}
 \lim_{n\to \infty} \frac{g\bigbrac{f(a_n)}-g\bigbrac{f(x_0)}}{a_n-x_0} = g'\bigbrac{f(x_0)}f'(x_0).
 \end{equation*}
@@ -25,7 +25,7 @@
 \begin{equation*}
 \frac{g\bigbrac{f(a_n)}-g\bigbrac{f(x_0)}}{a_n-x_0} = \frac{g\bigbrac{f(a_n)}-g\bigbrac{f(x_0)}}{f(a_n)-f(x_0)}\cdot \frac{f(a_n)-f(x_0)}{a_n-x_0} . 
 \end{equation*}
-</div>Since differentiability implies continuity (<a href="" class="xref" data-knowl="./knowl/xref/prop-diff-cts.html" title="Proposition 7.7: Differentiable implies continuous">Proposition 7.7</a>), we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-diff-cts.html ./knowl/xref/prop-mult-rule.html">
+</div>Since differentiability implies continuity (<a href="week-7.html#prop-diff-cts" class="xref" data-knowl="./knowl/xref/prop-diff-cts.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 7.7: Differentiable implies continuous">Proposition 7.7</a>), we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-diff-cts.html ./knowl/xref/prop-mult-rule.html">
 \begin{equation*}
 \lim_{n \to \infty} f(a_n) = f(x_0).
 \end{equation*}
@@ -33,13 +33,13 @@
 \begin{equation*}
 \lim_{n\to \infty} \frac{g\bigbrac{f(a_n)}-g\bigbrac{f(x_0)}}{f(a_n)-f(x_0)} = g'\bigbrac{f(x_0)}.
 \end{equation*}
-</div>We may therefore use the multiplication rule for sequential limits (<a href="" class="xref" data-knowl="./knowl/xref/prop-mult-rule.html" title="Proposition 2.17: Multiplication rule">Proposition 2.17</a>) to deduce that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-diff-cts.html ./knowl/xref/prop-mult-rule.html">
+</div>We may therefore use the multiplication rule for sequential limits (<a href="week-2.html#prop-mult-rule" class="xref" data-knowl="./knowl/xref/prop-mult-rule.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 2.17: Multiplication rule">Proposition 2.17</a>) to deduce that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-diff-cts.html ./knowl/xref/prop-mult-rule.html">
 \begin{align*}
 \lim_{n \to \infty} \frac{g\bigbrac{f(a_n)}-g\bigbrac{f(x_0)}}{a_n-x_0} \amp = \lim_{n\to\infty}\brac{ \frac{g\bigbrac{f(a_n)}-g\bigbrac{f(x_0)}}{f(a_n)-f(x_0)}\cdot \frac{f(a_n)-f(x_0)}{a_n-x_0}}\\
 \amp = \lim_{n\to\infty}\frac{g\bigbrac{f(a_n)}-g\bigbrac{f(x_0)}}{f(a_n)-f(x_0)}\lim_{n\to \infty} \frac{f(a_n)-f(x_0)}{a_n-x_0}\\
 \amp = g'\bigbrac{f(x_0)}f'(x_0).
 \end{align*}
-</div></article></details><details class="hiddenproof born-hidden-knowl"><summary><h5 class="heading"><span class="title">Proof of the general case (non-examinable).</span></h5></summary><article class="hiddenproof"> Let <span class="process-math">\((a_n)_{n=1}^\infty\)</span> be a sequence in <span class="process-math">\((a,b) \setminus\set{x_0}\)</span> with <span class="process-math">\(a_n \to x_0\text{.}\)</span> We wish to prove that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-diff-cts.html ./knowl/xref/prop-mult-rule.html ./knowl/xref/eq-comp-subseq.html ./knowl/xref/eq-chain-alt.html ./knowl/xref/eq-alt-chain-ineq.html ./knowl/xref/eq-chain-to-prove.html">
+</div></article></details><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="title">Proof of the general case (non-examinable).</span></h5></summary><article class="hiddenproof knowl__content"> Let <span class="process-math">\((a_n)_{n=1}^\infty\)</span> be a sequence in <span class="process-math">\((a,b) \setminus\set{x_0}\)</span> with <span class="process-math">\(a_n \to x_0\text{.}\)</span> We wish to prove that<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-diff-cts.html ./knowl/xref/prop-mult-rule.html ./knowl/xref/eq-comp-subseq.html ./knowl/xref/eq-chain-alt.html ./knowl/xref/eq-alt-chain-ineq.html ./knowl/xref/eq-chain-to-prove.html">
 \begin{equation}
 \lim_{n\to \infty} \frac{g\bigbrac{f(a_n)}-g\bigbrac{f(x_0)}}{a_n-x_0} = g'\bigbrac{f(x_0)}f'(x_0).\tag{7.2}
 \end{equation}
@@ -59,7 +59,7 @@
 \frac{g\bigbrac{f(a_n)}-g\bigbrac{f(x_0)}}{a_n-x_0} = \frac{g\bigbrac{f(a_n)}-g\bigbrac{f(x_0)}}{f(a_n)-f(x_0)}\cdot \frac{f(a_n)-f(x_0)}{a_n-x_0} . 
 \end{equation*}
 </div>
-<div class="para">Since differentiability implies continuity (<a href="" class="xref" data-knowl="./knowl/xref/prop-diff-cts.html" title="Proposition 7.7: Differentiable implies continuous">Proposition 7.7</a>), we have</div>
+<div class="para">Since differentiability implies continuity (<a href="week-7.html#prop-diff-cts" class="xref" data-knowl="./knowl/xref/prop-diff-cts.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 7.7: Differentiable implies continuous">Proposition 7.7</a>), we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-diff-cts.html ./knowl/xref/prop-mult-rule.html">
 \begin{equation*}
 \lim_{n \to \infty} f(a_n) = f(x_0).
@@ -71,7 +71,7 @@
 \lim_{n\to \infty} \frac{g\bigbrac{f(a_n)}-g\bigbrac{f(x_0)}}{f(a_n)-f(x_0)} = g'\bigbrac{f(x_0)}.\tag{7.4}
 \end{equation}
 </div>
-<div class="para">We may therefore use the multiplication rule for sequential limits (<a href="" class="xref" data-knowl="./knowl/xref/prop-mult-rule.html" title="Proposition 2.17: Multiplication rule">Proposition 2.17</a>) to deduce that</div>
+<div class="para">We may therefore use the multiplication rule for sequential limits (<a href="week-2.html#prop-mult-rule" class="xref" data-knowl="./knowl/xref/prop-mult-rule.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 2.17: Multiplication rule">Proposition 2.17</a>) to deduce that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-diff-cts.html ./knowl/xref/prop-mult-rule.html">
 \begin{align*}
 \lim_{n \to \infty} \frac{g\bigbrac{f(a_n)}-g\bigbrac{f(x_0)}}{a_n-x_0} \amp = \lim_{n\to\infty}\brac{ \frac{g\bigbrac{f(a_n)}-g\bigbrac{f(x_0)}}{f(a_n)-f(x_0)}\cdot \frac{f(a_n)-f(x_0)}{a_n-x_0}}\\
@@ -86,14 +86,14 @@
 n\mapsto \frac{g\bigbrac{f(x_{\ell_n})}-g\bigbrac{f(x_0)}}{f(x_{\ell_n})-f(x_0)}\tag{7.5}
 \end{equation}
 </div>
-<div class="para">is either a finite sequence, or converges as in the proof of <a href="" class="xref" data-knowl="./knowl/xref/eq-comp-subseq.html" title="Equation 7.4">(7.4)</a>. In either case, the sequence is bounded, so there exists <span class="process-math">\(M \in \R\)</span> such that for all <span class="process-math">\(\ell_n\)</span> we have</div>
+<div class="para">is either a finite sequence, or converges as in the proof of <a href="week-7.html#eq-comp-subseq" class="xref" data-knowl="./knowl/xref/eq-comp-subseq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.4">(7.4)</a>. In either case, the sequence is bounded, so there exists <span class="process-math">\(M \in \R\)</span> such that for all <span class="process-math">\(\ell_n\)</span> we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-comp-subseq.html ./knowl/xref/eq-chain-alt.html ./knowl/xref/eq-alt-chain-ineq.html ./knowl/xref/eq-chain-to-prove.html">
 \begin{equation*}
 \abs{\frac{g\bigbrac{f(x_{\ell_n})}-g\bigbrac{f(x_0)}}{f(x_{\ell_n})-f(x_0)}
 } \leq M.
 \end{equation*}
 </div>
-<div class="para">Combining this with <a href="" class="xref" data-knowl="./knowl/xref/eq-chain-alt.html" title="Equation 7.3">(7.3)</a>, for any <span class="process-math">\(n \in \N\)</span> we have</div>
+<div class="para">Combining this with <a href="week-7.html#eq-chain-alt" class="xref" data-knowl="./knowl/xref/eq-chain-alt.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3">(7.3)</a>, for any <span class="process-math">\(n \in \N\)</span> we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-comp-subseq.html ./knowl/xref/eq-chain-alt.html ./knowl/xref/eq-alt-chain-ineq.html ./knowl/xref/eq-chain-to-prove.html">
 \begin{equation}
 \abs{\frac{g\bigbrac{f( a_n)} - g\bigbrac{f(x_0)}}{ a_n-x_0}} \leq M\abs{\frac{f(x_{n}) - f(x_0)}{x_{n} - x_0}}.\tag{7.6}
@@ -111,13 +111,13 @@ f'(x_0) = \lim_{n \to \infty} \frac{f(x_{k_n}) - f(x_0)}{x_{k_n} - x_0} = 0.
 \lim_{n \to \infty} \frac{f(x_{n}) - f(x_0)}{x_{n} - x_0} = f'(x_0) = 0.
 \end{equation*}
 </div>
-<div class="para">Combining this with <a href="" class="xref" data-knowl="./knowl/xref/eq-alt-chain-ineq.html" title="Equation 7.6">(7.6)</a> gives</div>
+<div class="para">Combining this with <a href="week-7.html#eq-alt-chain-ineq" class="xref" data-knowl="./knowl/xref/eq-alt-chain-ineq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6">(7.6)</a> gives</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-comp-subseq.html ./knowl/xref/eq-chain-alt.html ./knowl/xref/eq-alt-chain-ineq.html ./knowl/xref/eq-chain-to-prove.html">
 \begin{equation*}
 \lim_{n\to \infty}\abs{\frac{g\bigbrac{f( a_n)} - g\bigbrac{f(x_0)}}{ a_n-x_0}} = 0.
 \end{equation*}
 </div>
-<div class="para">Hence <a href="" class="xref" data-knowl="./knowl/xref/eq-chain-to-prove.html" title="Equation 7.2">(7.2)</a> also follows in this case.</div>
+<div class="para">Hence <a href="week-7.html#eq-chain-to-prove" class="xref" data-knowl="./knowl/xref/eq-chain-to-prove.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2">(7.2)</a> also follows in this case.</div>
 </div></article></details><span class="incontext"><a class="internal" href="week-7.html#thm-chain-rule">in-context</a></span>
 </body>
 </html>
