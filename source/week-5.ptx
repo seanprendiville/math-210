@@ -4,6 +4,8 @@
 -->
 <section xml:id="week-5" xmlns:xi="http://www.w3.org/2001/XInclude">
 			<title>Week 5</title>
+			<subsection>
+			<title>Self-test questions</title>
 			<exercise>
 				<title>Multiplying series</title>
 				<task>
@@ -403,6 +405,7 @@ f(x) = f(x_0) + f(x) - f(x_0) \geq f(x_0)- |f(x)-f(x_0)| \geq f(x_0) - \eps = \t
 </proposition>					</solution>
 				</task>
 			</exercise>
+		</subsection>
 		<subsection>
 			<title>Quiz</title>
 			<p>
