@@ -403,8 +403,9 @@ f(x) = f(x_0) + f(x) - f(x_0) \geq f(x_0)- |f(x)-f(x_0)| \geq f(x_0) - \eps = \t
 </proposition>					</solution>
 				</task>
 			</exercise>
+		<subsection>
+			<title>Quiz</title>
 			<p>
-			In this week's workshop you will be asked to write-up (under exam conditions) two of the following.
 				<ol>
 					<li>
 					This question is a variant of <xref ref="ex-exp-def"/>. Without assuming convergence of the series <m>\sum_{n=0}^\infty \frac{1}{n!}</m>, justify why we have
@@ -427,4 +428,5 @@ Prove that <m>f(1/n) \to 0</m> as <m>n \to \infty</m> by verifying the definitio
 					</li>
 				</ol>
 			</p>
+		</subsection>
 		</section>
