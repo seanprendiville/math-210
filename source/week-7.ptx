@@ -4,6 +4,8 @@
 -->
 <section xml:id="week-7" xmlns:xi="http://www.w3.org/2001/XInclude">
 			<title>Week 7</title>
+			<subsection>
+			<title>Self-test questions</title>
 			<exercise>
 				<title>Rules for differentiation</title>
 				<task xml:id="ex-alg-diff">
@@ -564,8 +566,10 @@ With the above facts on absolute convergence established, we are able to prove t
 					</solution>
 				</task>
 			</exercise>
+			</subsection>
+<subsection>
+<title>Quiz</title>
 			<p>
-			In this week's <em>workshop</em> you will be asked to write-up (under exam conditions) two of the following:
 				<ul>
 					<li>
 					This question is a variant of <xref ref="ex-alg-diff"/>. Let <m>f,g :\R\to\R</m> be functions which are both differentiable at 0 with <m>f'(0)=1</m> and <m>g'(0)=0</m>. Without using the product rule for differentiation, prove that the product <m>fg</m> satisfies the definition of differentiability at 0, with <m>(fg)'(0) = g(0)</m>.
@@ -585,4 +589,5 @@ With the above facts on absolute convergence established, we are able to prove t
 					</li>
 				</ul>
 			</p>
+</subsection>
 		</section>
