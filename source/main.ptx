@@ -55,7 +55,6 @@
 		<xi:include href="./week-1.ptx" />
 		<xi:include href="./week-2.ptx" />			
 		<xi:include href="./week-3.ptx" />
-<!--		
 		<xi:include href="./week-4.ptx" />
 		<xi:include href="./week-5.ptx" />
 		<xi:include href="./week-6.ptx" />
@@ -63,7 +62,6 @@
 		<xi:include href="./week-8.ptx" />
 		<xi:include href="./week-9.ptx" />	
 		<xi:include href="./week-10.ptx" />
--->		
 		<xi:include href="./exam-backmatter.ptx" />
 
 	</article>
