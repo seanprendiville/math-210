@@ -519,13 +519,13 @@ we deduce that <m>|a_n| \leq M</m> for all <m>n \in \N</m>, so the sequence is b
 				</task>
 			</exercise>
 <subsection>
-<title>Workshop questions</title>
+<title>Quiz</title>
 <exercise>
 <title>
-True/false workshop quiz
+True/false quiz
 </title>
 <p>
-In your workshop, you will vote on whether you think each of the following statements is true (thumbs up) or false (thumbs down). For each question, your workshop tutor will ask one of you to briefly justify your vote. This justification can involve giving a counterexample (if false) or outlining which definition/theorem the statement  follows from (if true).
+Use the following to test your understanding of the above questions. For each question, give a counterexample (if false) or outline which definition/theorem the statement follows from (if true).
 </p>
 	<task>
 	<statement> The monotone convergence principle states that an increasing and bounded sequence is convergent.  
@@ -614,7 +614,7 @@ In your workshop, you will vote on whether you think each of the following state
 	</task>
 </exercise>
 <exercise>
-<title>Exam-style self-test question for workshop</title>
+<title>Exam-style self-test question</title>
 	<p>
 		The purpose of this question is to prove a special case of the monotone convergence principle. Let <m>(a_n)_{n=1}^\infty</m> be an increasing sequence of negative real numbers.
 		</p>
