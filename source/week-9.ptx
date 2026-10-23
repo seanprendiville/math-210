@@ -4,6 +4,8 @@
 -->
 <section xml:id="week-9" xmlns:xi="http://www.w3.org/2001/XInclude">
 			<title>Week 9</title>
+<subsection>
+<title>Self-test questions</title>
 			<exercise>
 				<title>Linearity of integration</title>
 				<task>
@@ -772,8 +774,9 @@ U(f;x_0,\dots, x_N) - L(f;x_0, \dots, x_N) \geq 1.
 					</solution>
 				</task>
 			</exercise>
+</subsection>
+<subsection>
 			<p>
-			In this week's <em>workshop</em> you will be asked to write-up (under exam conditions) two of the following:
 				<ul>
 					<li>
 					The following is a variant of <xref ref="ex-eps-riemann"/>. By modifying the proof of <xref ref="ex-eps-riemann"/>, prove that if <m>f:[0,1]\to\R</m> is bounded then there exist subdivisions <m>0=a_0 \lt a_1 \lt \dots \lt a_P = 1</m> and  <m>0=b_0 \lt b_1 \lt \dots \lt b_Q = 1</m> such that 
@@ -800,4 +803,5 @@ U(f;x_0,\dots, x_N) - L(f;x_0, \dots, x_N) \geq 1.
 					</me>. By modifying the proof of  <xref ref="ex-cts-riemann"/>, prove that <m>f</m> is Riemann integrable on <m>[0,1]</m>.					</li>
 				</ul>
 			</p>
+</subsection>
 			</section>
