@@ -501,7 +501,6 @@ N(\eps) := \max\set{N_1\brac{\tfrac{\eps}{|b|+M}}, N_2\brac{\tfrac{\eps}{|b|+M}}
 							</title>
 							Strictly speaking, <xref ref="eq-recip-rule"/> only makes sense if we know that <m>a_n \neq 0</m> for all <m>n \in \N</m>, so that the reciprocal <m>1/a_n</m> is well-defined for <em>all</em> values of <m>n</m>. However, the limiting value of a sequence does not depend on a finite number of initial terms: if you alter a finite number of terms of a sequence, you do not change the value of the limit. When the limit is non-zero, <xref ref="prop-eventually-non-zero"/> tells us that <m>a_n = 0</m> for only a finite number of <m>n</m>, so we may discard a finite number of initial terms in order for the expression <xref ref="eq-recip-rule"/> to make sense.							</remark>
 							<proof>
-							<title>Non-examinable proof</title>
 							Let <m>\displaystyle a : = \lim_{n \to \infty}a_n</m>.
 								We wish to prove that
 <men xml:id="eq-lim-def-3">
