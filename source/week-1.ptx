@@ -583,13 +583,13 @@ M:= \max\set{|a_1|, \dots, |a_{N}|, 1+|a|}.
 			</exercise>
 		</subsection>
 <subsection>
-<title>Workshop questions</title>
+<title>True/false quiz</title>
 <exercise>
 <title>
-True/false workshop quiz
+True/false quiz
 </title>
 <p>
-In your workshop, you will vote on whether you think each of the following statements is true (thumbs up) or false (thumbs down). For each question, your workshop tutor will ask one of you to briefly justify your vote. This justification can involve giving a counterexample (if false) or outlining which definition/theorem the statement  follows from (if true).
+Use the following to test your understanding of the above questions. For each question, give a counterexample (if false) or outline which definition/theorem the statement follows from (if true).
 </p>
 	<task>
 	<statement> If <m>M\in \R</m> is <em>not</em> an upper bound for <m>S\subset \R</m> then 
